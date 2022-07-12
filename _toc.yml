@@ -2,7 +2,38 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: book/intro
 chapters:
-- file: markdown
-- file: notebooks
+- file: book/comp_thinking
+  sections:
+  - glob: book/module1/*
+
+- file: book/basics
+  sections:
+  - glob: book/module2/*
+
+- file: book/data_structure1
+  sections:
+  - glob: book/module3/*
+
+- file: book/text_file
+  sections:
+  - glob: book/module4/*
+
+- file: book/data_structure2
+  sections:
+  - glob: book/module5/*
+
+- file: book/oop
+  sections:
+  - glob: book/module6/*
+
+- file: book/nlp
+  sections:
+  - glob: book/module7/*
+- file: book/scraping
+  sections:
+  - glob: book/module8/*
+- file: book/pythonic
+  sections:
+  - glob: book/module9/*
