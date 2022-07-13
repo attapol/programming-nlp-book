@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News API &#8212; Programming for NLP</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Programming for Natural Language Processing
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../comp_thinking.html">
+   1. Computational Thinking
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module1/placeholder.html">
+     1.1. Placeholder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basics.html">
+   2. พื้นฐานการเขียนโปรแกรม
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module2/1%20Variable%20and%20Function.html">
+     2.1. Video: ตัวแปรและฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module2/2%20PC3%20Variables%20Functions%20Modules.html">
+     2.2. โจทย์: ตัวแปร และฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module2/3%20Strings.html">
+     2.3. Video: สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module2/4%20PC4%20Strings.html">
+     2.4. โจทย์: สตริง
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_structure1.html">
+   3. Data Structure I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module3/PC5%20Lists.html">
+     3.1. โจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module3/PC6%20Dictionary%20and%20Reading%20from%20Files.html">
+     3.2. โจทย์: ดิกชันนารี
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../text_file.html">
+   4. การอ่านข้อมูลจากไฟล์
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module4/PC7%20Regular%20Expression.html">
+     4.1. โจทย์: Regular Expression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_structure2.html">
+   5. Data Structure II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module5/PC8b%20Set%2C%20List%20of%20x.html">
+     5.1. 1. Unique Words
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../oop.html">
+   6. Object-oriented programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module6/placeholder.html">
+     6.1. Placeholder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../nlp.html">
+   7. Natural Language Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module7/LDA%20workshop.html">
+     7.1. LDA Workshop
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module7/Text%20Processing%20Workshop.html">
+     7.8. ตัดคำ word tokenization ภาษาไทย
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module7/placeholder.html">
+     7.15. Placeholder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../scraping.html">
+   8. การดึงข้อมูลจากอินเตอร์เน็ต
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../placeholder.html">
+     8.1. Placeholder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pythonic.html">
+   9. Advanced Python features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module9/PC9%20Python%20tricks.html">
+     9.1. Problem 1: List comprehension 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/attapol/programming-for-nlp/main?urlpath=tree/book/book/module8/api/2 - News API Exercises examples.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/attapol/programming-for-nlp/blob/main/book/book/module8/api/2 - News API Exercises examples.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/attapol/programming-for-nlp"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module8/api/2 - News API Exercises examples.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/book/module8/api/2 - News API Exercises examples.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-documentation">
+   API Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-api-call-curated-headline">
+   Sample API Call - Curated Headline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">
+     Exercise 1. Get Thailand’s headlines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authentication">
+   Authentication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#endpoints">
+   Endpoints
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-2-news-sources">
+     Exercises 2 - News Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-3-news-search">
+     Exercises 3 - News Search
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-4-news-sentiment">
+     Exercises 4 - News Sentiment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>News API</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-documentation">
+   API Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-api-call-curated-headline">
+   Sample API Call - Curated Headline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">
+     Exercise 1. Get Thailand’s headlines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authentication">
+   Authentication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#endpoints">
+   Endpoints
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-2-news-sources">
+     Exercises 2 - News Sources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-3-news-search">
+     Exercises 3 - News Search
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-4-news-sentiment">
+     Exercises 4 - News Sentiment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="news-api">
+<h1>News API<a class="headerlink" href="#news-api" title="Permalink to this headline">#</a></h1>
+<p>Explore the <a class="reference external" href="https://newsapi.org/">News API</a> website. It is different from the Poke API in the previous exercise in a way that you now need to register for an account before retrieving any data from the website.</p>
+<p>Go ahead and register for an account.</p>
+<p>After that, an <strong>API Key</strong> will be shown. Copy it and save it in a variable because you will need to use it quite often.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;f37d137947df47a39acab6779e0bfece&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, go to your account page. You will see that you are registered for the Developer plan. It’s fine for our use here. Below, you will see how many requests you have made. You are limited to 1,000 requests per 30 minutes, so don’t waste them!</p>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://newsapi.org/docs">Documentation</a> is a good source to look for reference on how to use the API. Different data sources (website) have different API specs, so spend some time in the Documentation section to learn how to use the API.</p>
+</div>
+<div class="section" id="sample-api-call-curated-headline">
+<h2>Sample API Call - Curated Headline<a class="headerlink" href="#sample-api-call-curated-headline" title="Permalink to this headline">#</a></h2>
+<p>Let’s make our first API call. We will get the lastest headlines from the API. Go to the <a class="reference external" href="https://newsapi.org/docs/get-started#top-headlines">Get the current top headlines for a country or category</a> section. You will see on the right side the URL format that you need to construct</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=API_KEY
+</pre></div>
+</div>
+<p>The first word (<code class="docutils literal notranslate"><span class="pre">GET</span></code>) simply tells you what kind of API endpoint it is. Most of the time, you will see two kinds of API endpoint</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span></code> is an endpoint from where you retrieve data such as retrieving news headlines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span></code> is an endpoint to where you submit data such as posting a message to Twitter
+This keyword tells you which function in the <code class="docutils literal notranslate"><span class="pre">requests</span></code> module to call <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> or <code class="docutils literal notranslate"><span class="pre">requests.post</span></code></p></li>
+</ul>
+<p>The second part is the URL. Notice that there are parameters you can or must adjust</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiKey</span></code>
+The sample URL specify “us” as the country. However, it left the <code class="docutils literal notranslate"><span class="pre">apiKey</span></code> as a placeholder, so you have to put your API key here.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use f-string to help construct the URL</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/top-headlines?country=th&amp;apiKey=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://newsapi.org/v2/top-headlines?country=th&amp;apiKey=f37d137947df47a39acab6779e0bfece
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we are ready to “GET” the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;status&quot;:&quot;ok&quot;,&quot;totalResults&quot;:37,&quot;articles&quot;:[{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;45&quot;,&quot;title&quot;:&quot;ระวังอันตราย! กรมอุตุฯ เตือนฉบับ1 ฝนถล่มหนัก15จว.ใต้ เสี่ยงท่วมฉับพลัน - ข่าวสด&quot;,&quot;description&quot;:&quot;กรมอุตุฯ ประกาศฉบับที่ 1 เตือน 15 จังหวัดภาคใต้ ฝนตกหนักถึงหนักมากหลายพื้นที่ ระวังอันตราย เสี่ยงเกิดน้ำท่วมฉับพลัน-น้ำป่าไหลหลาก&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/breaking-news/news_6728173&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/12-กรมอุตุฯเตือนภาคใต้1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:33:00Z&quot;,&quot;content&quot;:&quot;1 15 -\r\n 12 ..2564 “ ( 12-14 2564)” 1 14 .. 64 \r\n 2-3 3 1-2 14 ..2564\r\n http://www.tmd.go.th 0-2399-4012-13 1182 24 12 .. 17.00 .\r\n 1 15&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Sanook.com&quot;},&quot;author&quot;:&quot;Main Stand&quot;,&quot;title&quot;:&quot;เรียนรู้จากกรณีของไทย : สารกระตุ้นมีอิทธิพลกับวงการกีฬาจนต้องลงโทษแบนเลยหรือ? - Sanook&quot;,&quot;description&quot;:&quot;ถือเป็นข่าวใหญ่ในวงการกีฬาไทยรับไตรมาสสุดท้ายปี 2021 เมื่อ องค์กรต่อต้านสารกระตุ้นโลก หรือ WADA ตัดสินลงโทษประเทศไทยเป็นเวลา 1 ปี&quot;,&quot;url&quot;:&quot;https://www.sanook.com/sport/1321593/&quot;,&quot;urlToImage&quot;:&quot;https://s.isanook.com/sp/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3NwLzAvdWQvMjY0LzEzMjE1OTMveHguanBn.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:17:00Z&quot;,&quot;content&quot;:&quot;2021 WADA 1 \r\nMain Stamd WADA \r\n WADA \r\n WADA 7 2021 2021 (World Anti-Doping Code 2021) 5 , , , (DIBF) International Gira Sports Federation (IGSF)\r\nWADA WADA (CRC) 14 2021 8 WADA \r\n 15 2021 WADA 2021… [+435 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;1&quot;,&quot;title&quot;:&quot;น้ำท่วม : ชายผู้ออกแบบเมืองในจีนให้เป็น “ฟองน้ำยักษ์” รับมือน้ำท่วม - ข่าวสด&quot;,&quot;description&quot;:&quot;อวี๋ ข่งเจียน ยังจำเหตุการณ์ตอนที่เขาเกือบจมน้ำที่บ้านเ...&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/bbc-thai/news_6727927&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/121298164_tianjinwetland.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:03:00Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Siamphone.com&quot;},&quot;author&quot;:&quot;Natthanan Taniksunannitima&quot;,&quot;title&quot;:&quot;เผยแฟชั่นเซ็ต ถ่ายทอด Huawei MateBook 14s ตอบโจทย์ทุกไลฟ์สไตล์อย่างลงตัว - Siamphone&quot;,&quot;description&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://news.siamphone.com/news-48945.html&quot;,&quot;urlToImage&quot;:&quot;https://cdn-news.siamphone.com/upload/news/nw48945/000-HUAWEI-MateBook-14s.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:02:22Z&quot;,&quot;content&quot;:&quot;HuaweiVogue ThailandHuawei MateBook 14s  \r\n Vogue Thailand NEW WAY TO WORK Mood &amp;amp; Tone \r\nHuawei MateBook 14s 2.5K Huawei FullView Display 11th Gen Intel Core H-Series Spruce Green[1] \r\n Vogue Tha… [+258 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Ch7.com&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;โควิดชลบุรี ติดอีก 249 คน ผุดคลัสเตอร์แคมป์นักกีฬา \&quot;บ่อวิน อะคาเดมี\&quot; - ช่อง 7&quot;,&quot;description&quot;:&quot;#เกาะติดสถานการณ์โควิด วันนี้ (12 พ.ย.64) มีรายงานผู้ติดเชื้อรายใหม่ 249 คน จำนวนผู้ติดเชื้อสะสมเพิ่มเป็น 104,290 คน ขณะนี้มีผู้ป่วบระหว่างการรักษา 2,846 คน และมีผู้เสียชีวิตเพิ่มขึ้น 3 คน จำนวนผู้เสียชีวิตสะสม 740 คน สำหรับผู้ติดเชื้อรายใหม่…&quot;,&quot;url&quot;:&quot;https://news.ch7.com/detail/528985&quot;,&quot;urlToImage&quot;:&quot;https://cdni-hw.ch7.com/dm/sz-md/i/images/2021/11/12/618debc4377cc0.14529362.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:41:09Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Mxphone.com&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s วันที่ 13 พ.ย.นี้ - mxphone&quot;,&quot;description&quot;:&quot;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s แล้ว สามารถจับจองเป็นเจ้าของได้ก่อนใครแล้วในวันที่ 13 พ.ย. เป็นต้นไป&quot;,&quot;url&quot;:&quot;https://www.mxphone.com/huawei-nova-9-and-huawei-matebook-14s-are-available-for-sale/&quot;,&quot;urlToImage&quot;:&quot;https://www.mxphone.com/wp-content/uploads/2021/11/HUAWEI-nova-9_shelf-break_cover.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:39:13Z&quot;,&quot;content&quot;:&quot;() HUAWEI nova 9 50MP HUAWEI MateBook 14s 2.5K 13 2564 HUAWEI nova 9 16,990 HUAWEI MateBook 14s 40,990 Early Bird HUAWEI nova 9 HUAWEI MateBook 14s ! HUAWEI FreeBuds Pro 5,499 13 2564 30 2564 HUAWEI … [+1192 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;39&quot;,&quot;title&quot;:&quot;&#39;หมอยง&#39; ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก เผยอาจต้องมีเข็ม 4 เข็ม 5 ในปีต่อไป - ข่าวสด&quot;,&quot;description&quot;:&quot;&#39;หมอยง&#39; ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก ย้ำเชื้อตายเป็นวัคซีนปูพื้นที่ดี เผยเข็ม 3 แล้ว อาจยังต้องมีเข็ม 4 เข็ม 5 ในปีต่อๆไป&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/covid-19/news_6727990&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/หมอยง-โควิด-01.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:38:00Z&quot;,&quot;content&quot;:&quot;‘’ mRNA 3 4 5 \r\n 12 ..64 .. -19 \r\n 1 2 3 \r\n prime boost \r\n 2 2 3 2 3-4 2 prime 3 \r\n 2 3-4 2 3-4 AstraZeneca 4 – 12 8 16 4 ( 5 ) 2 \r\n prime 2 \r\n 3 2 prime 3 boost 3 2 3 () 2 6 12 covid-19\r\n Valneva 3 … [+106 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Prachachat.net&quot;},&quot;author&quot;:&quot;https://www.facebook.com/PrachachatOnline/&quot;,&quot;title&quot;:&quot;ศบค.ลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด เลื่อนเปิดสถานบันเทิง 15 ม.ค. 65 - ประชาชาติธุรกิจ&quot;,&quot;description&quot;:&quot;ศบค.ชุดใหญ่ ไฟเขียวปรับลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด ถอด จันทบุรี คงเคอร์ฟิว 23.00 – 03.00 น. ถึงสิ้นเดือน พ.ย. พร้อมเลื่อนเปิดสถานบันเทิง ผับ บาร์จาก&quot;,&quot;url&quot;:&quot;https://www.prachachat.net/prachachat-top-story/news-801004&quot;,&quot;urlToImage&quot;:&quot;https://www.prachachat.net/wp-content/uploads/2021/11/rung-1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:37:11Z&quot;,&quot;content&quot;:&quot;. 6 23.00 03.00 . .. 1 .. 15 .. 2565\r\n 12 2564 -19 (.) 18/2564 .. . .\r\n () 7 6 ()\r\n () 39 () 23 \r\n () 5 \r\n () 4 \r\n. 6 7 \r\n. 1 2564 15 2565 \r\n (.) . / 19 \r\n 16 2565 \r\n1. 100 %\r\n2. /. \r\n3.\r\n4. /. \r\n ()… [+33 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;YouTube&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HD - Ch7HD&quot;,&quot;description&quot;:&quot;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HDดูละคร อตีตา ย้อนหลัง ได้ที่ : https://www.bugaboo.tv/lakorn/atitaเติมเต็มคว...&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=nVdNv6wlh7o&quot;,&quot;urlToImage&quot;:&quot;https://i.ytimg.com/vi/nVdNv6wlh7o/maxresdefault.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:16:13Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Mcot.net&quot;},&quot;author&quot;:&quot;&quot;,&quot;title&quot;:&quot;นักบินอวกาศ 4 คนเดินทางถึงสถานีอวกาศนานาชาติแล้ว - Thai News Agency&quot;,&quot;description&quot;:&quot;นักบินอวกาศ 4 คนที่ทะยานสู่อวกาศเมื่อวันพุธตามเวลาในสหรัฐด้วยแคปซูลครูว์ดรากอนของสเปซเอ็กซ์ บริษัทเทคโนโลยีอวกาศของอีลอน มัสก์ มหาเศรษฐีชาวอเมริกัน เดินทางถึงสถานีอวกาศนานาชาติแล้ว เพื่อปฏิบัติภารกิจด้านวิทยาศาสตร์เป็นเวลา 6 เดือน&quot;,&quot;url&quot;:&quot;https://tna.mcot.net/world-821898&quot;,&quot;urlToImage&quot;:&quot;https://tna.mcot.net/wp-content/uploads/2021/11/Untitlแแแแแed-1-copy.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:32:00Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;YouTube&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;ปล้นลอยฟ้า [Official Teaser] Ver.3 - Ch7HD&quot;,&quot;description&quot;:&quot;ลุ้น...ระทึก 💥 บู๊...ระห่ำกับปฏิบัติการปล้นเพชรพันล้านที่เดิมพันด้วยชีวิต#ปล้นลอยฟ้า 🪂💎 #SKYRAIDERเริ่ม พฤหัสบดีที่ 25 พฤศจิกายนนี้ 20.30 น.เติมเต็มความสุ...&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=ifiyPLzL7KM&quot;,&quot;urlToImage&quot;:&quot;https://i.ytimg.com/vi/ifiyPLzL7KM/maxresdefault.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:28:44Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Prachachat.net&quot;},&quot;author&quot;:&quot;https://www.facebook.com/PrachachatOnline/&quot;,&quot;title&quot;:&quot;บทวิเคราะห์ราคาทองคำวันนี้ (12 พ.ย.) โดย YLG Bullion - ประชาชาติธุรกิจ&quot;,&quot;description&quot;:&quot;บริษัท วายแอลจี บูลเลี่ยน อินเตอร์เนชั่นแนล จำกัด รายงานราคาทองคำประจำวันที่ 12 พฤศจิกายน 2564 สรุป ราคาทองคำวานนี้ปิดปรับตัวเพิ่มขึ้น 12.30&quot;,&quot;url&quot;:&quot;https://www.prachachat.net/finance/news-800926&quot;,&quot;urlToImage&quot;:&quot;https://www.prachachat.net/wp-content/uploads/2021/05/ทอง-2-1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:24:25Z&quot;,&quot;content&quot;:&quot;12 2564\r\n12.30 6 (Veterans Day)\r\n 5 (The Treasury breakeven inflation curve) 4.80% 3.65% 2 3.16% 5 2.68% 10 \r\n () FedWatch Tool CME Group .. 80% 100% .. 2022 1 .. 2022 95 16 95.262 22 .. 2020 SPDR 0.… [+65 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Bangkokbiznews.com&quot;},&quot;author&quot;:&quot;bangkokbiznews&quot;,&quot;title&quot;:&quot;ราคาทองวันนี้ (12พ.ย.) ร่วงแรง 100 บาท - กรุงเทพธุรกิจ&quot;,&quot;description&quot;:&quot;ราคาทองวันศุกร์ (12 พ.ย.) เปิดตลาดร่วง100 บาท ทองรูปพรรณขาย29,350บาท ทองแท่งขาย28,850 บาท ราคาทองคำ Spot เช้านี้เคลื่อนไหวที่บริเวณ 1,859 ดอลลาร์&quot;,&quot;url&quot;:&quot;https://www.bangkokbiznews.com/news/971387&quot;,&quot;urlToImage&quot;:&quot;https://image.bangkokbiznews.com/uploads/images/md/2021/11/eTAIJVp432vl5E6SRKTN.webp&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:24:00Z&quot;,&quot;content&quot;:&quot;Spot 1,859 15.6 1,863.9 (CPI) 30 \r\n 200 17,260&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Kapook.com&quot;},&quot;author&quot;:&quot;43&quot;,&quot;title&quot;:&quot;ประกันโควิด เจอ จ่าย จบ ส่อไปไม่ไหว ทบทวนบอกเลิกกรมธรรม์ ก่อนบริษัทจะล้ม - kapook.com&quot;,&quot;description&quot;:&quot;ยอดเคลมสินไหมทะลุ 40,000 ล้าน&quot;,&quot;url&quot;:&quot;https://covid-19.kapook.com/view248753.html&quot;,&quot;urlToImage&quot;:&quot;https://my.kapook.com/imagescontent/fb_img/500/s_248753_1882.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:11:50Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Pptvhd36.com&quot;},&quot;author&quot;:&quot;PPTV Online&quot;,&quot;title&quot;:&quot;ระทึก! ไฟไหม้ รพ.มงกุฎวัฒนะ เจ้าหน้าที่ตรวจสอบรังสีรั่วไหล - pptvhd36.com&quot;,&quot;description&quot;:&quot;เกิดเหตุไฟไหม้ รพ.มุงกุฎวัฒนะ ห้องเอ็กซ์เรย์วอด เร่งหาสาเหตุ ตรวจสอบรังสีรั่วไหล&quot;,&quot;url&quot;:&quot;https://www.pptvhd36.com/news/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1/160373&quot;,&quot;urlToImage&quot;:&quot;https://img.pptvhd36.com/thumbor/2021/11/12/news-8b6def44e5.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T02:30:00Z&quot;,&quot;content&quot;:&quot;06.42 . 12  2564 199 . 10 1 \r\n 2 \r\n 20 \r\n 2-3 \r\nAdd friend @PPTVOnline&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Sanook.com&quot;},&quot;author&quot;:&quot;Sanook! Regional&quot;,&quot;title&quot;:&quot;จับสึกยกวัด! เจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า ผงะเปิดกุฏิเจอขวดฉี่กองเต็มห้อง - Sanook&quot;,&quot;description&quot;:&quot;ชาวบ้านแจ้งจับเจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า เปิดกุฏิเจอกองขยะ ขวดฉี่เต็มห้อง จับสึกยกวัดไม่เหลือพระสักรูป&quot;,&quot;url&quot;:&quot;https://www.sanook.com/news/8472322/&quot;,&quot;urlToImage&quot;:&quot;https://s.isanook.com/ns/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL25zLzAvdWQvMTY5NC84NDcyMzIyL200LmpwZw==.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T02:00:32Z&quot;,&quot;content&quot;:&quot;- \r\n(11 ..64) 18.00 . ... . .. ... . . . 5 . . .  \r\n 5 . . . 1 . 10 \r\n ()  80 \r\n29   21 28 43  \r\n . () .&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Dailynews.co.th&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;เครื่องบินรบรัสเซียลาดตระเวนเหนือเบลารุสอีก สถานการณ์ผู้อพยพกับโปแลนด์ยังระอุ - เดลีนีวส์&quot;,&quot;description&quot;:&quot;รัสเซียส่งเครื่องบินรบขึ้นลาดตระเวนในเขตน่านฟ้าของเบลารุส ต่อเนื่องเป็นวันที่สอง ท่ามกลางสถานการณ์ตึงเครียดเรื่องผู้อพยพ ระหว่างเบลารุสกับโปแลนด์&quot;,&quot;url&quot;:&quot;https://www.dailynews.co.th/news/467805/&quot;,&quot;urlToImage&quot;:&quot;https://www.dailynews.co.th/wp-content/uploads/2021/11/b970c78dd4334a4bbc2a2b76c2231024-0-f36a67df73f140f68e8e9dc87530c51f_25247889.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:54:00Z&quot;,&quot;content&quot;:&quot;Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Thairath.co.th&quot;},&quot;author&quot;:&quot;Thairath&quot;,&quot;title&quot;:&quot;วิธีตรวจสอบสิทธิ์ รับเงิน \&quot;ประกันรายได้ข้าว ปี 64/65\&quot; ขั้นตอนไม่ยุ่งยาก - ไทยรัฐ&quot;,&quot;description&quot;:&quot;ช่องทางตรวจสอบสิทธิ์รับเงิน \&quot;โครงการประกันรายได้ข้าว ปี 2564/65\&quot; สำหรับเกษตรกรผู้ปลูกข้าว 5 ชนิด ขั้นตอนไม่ยุ่งยาก หลายคนได้รับเงินแล้ว&quot;,&quot;url&quot;:&quot;https://www.thairath.co.th/business/economics/2240474&quot;,&quot;urlToImage&quot;:&quot;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUgzot6YPaUgaiUrYGkbeNCqRdkDO0acQNpLn1z9QHSrjETgpZ.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:35:00Z&quot;,&quot;content&quot;:&quot;(...) ... 2564/65 13,225 -19 5 \r\n 9 .. 2564 530,842 11,230.69 \r\n 2564/65 ... \r\n ... 3 ... A-Mobile 24 LINE Official BAAC Family BAAC Connect\r\n1. \&quot;\&quot; \&quot;\&quot;\r\n2. \&quot;\&quot;\r\n3. \&quot;\&quot; .&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Bangkokbiznews.com&quot;},&quot;author&quot;:&quot;bangkokbiznews&quot;,&quot;title&quot;:&quot;อัพเดท \&quot;น้ำท่วม\&quot; กทม. เตือนน้ำทะเลหนุนกระทบ 11 ชุมชน 239 ครัวเรือน - กรุงเทพธุรกิจ&quot;,&quot;description&quot;:&quot;อัพเดท \&quot;น้ำท่วม\&quot; กรุงเทพมหานคร เร่งแก้ปัญหาน้ำทะเลหนุน เตือน 11 ชุมชนนอกคันกั้นน้ำในพื้นที่ 7 เขตรวม 239 ครัวเรือน เฝ้าระวังผลกระทบจากน้ำทะเลหนุน&quot;,&quot;url&quot;:&quot;https://www.bangkokbiznews.com/news/971375&quot;,&quot;urlToImage&quot;:&quot;https://image.bangkokbiznews.com/uploads/images/md/2021/11/DxgdroTAs4dhA6hmg2iK.webp&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:11:00Z&quot;,&quot;content&quot;:&quot;http://dds.bangkok.go.th/www.prbangkok.com Facebook @BKK_BEST https://www.facebook.com/prbangkok Twitter : @BKK_BEST \r\n () +2.30 .. +2.40 .. +2.80 .. Big Bag 200 5,150 9 ( 15 ) 49,640 4,250 () 4&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Dailynews.co.th&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;โควิดติดเชื้อเพิ่ม7305ราย หายป่วย7900ราย เสียชีวิต51 - เดลีนีวส์&quot;,&quot;description&quot;:&quot;ยอด &#39;โควิด-19&#39; วันนี้ พบเสียชีวิตเพิ่มอีก 51 ราย ขณะที่พบผู้ติดเชื้อใหม่เพิ่มอีก 7,305 ราย ผู้ป่วยยืนยันสะสม 1,975,411 ราย&quot;,&quot;url&quot;:&quot;https://www.dailynews.co.th/news/467757/&quot;,&quot;urlToImage&quot;:&quot;https://www.dailynews.co.th/wp-content/uploads/2021/11/255030149_444927753792221_4768164725903029138_n.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T00:45:00Z&quot;,&quot;content&quot;:null}]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since the response is in JSON format, we can use the JSON module to help convert it into python dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;status&#39;: &#39;ok&#39;, &#39;totalResults&#39;: 37, &#39;articles&#39;: [{&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Khaosod.co.th&#39;}, &#39;author&#39;: &#39;45&#39;, &#39;title&#39;: &#39;ระวังอันตราย! กรมอุตุฯ เตือนฉบับ1 ฝนถล่มหนัก15จว.ใต้ เสี่ยงท่วมฉับพลัน - ข่าวสด&#39;, &#39;description&#39;: &#39;กรมอุตุฯ ประกาศฉบับที่ 1 เตือน 15 จังหวัดภาคใต้ ฝนตกหนักถึงหนักมากหลายพื้นที่ ระวังอันตราย เสี่ยงเกิดน้ำท่วมฉับพลัน-น้ำป่าไหลหลาก&#39;, &#39;url&#39;: &#39;https://www.khaosod.co.th/breaking-news/news_6728173&#39;, &#39;urlToImage&#39;: &#39;https://www.khaosod.co.th/wpapp/uploads/2021/11/12-กรมอุตุฯเตือนภาคใต้1.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T05:33:00Z&#39;, &#39;content&#39;: &#39;1 15 -\r\n 12 ..2564 “ ( 12-14 2564)” 1 14 .. 64 \r\n 2-3 3 1-2 14 ..2564\r\n http://www.tmd.go.th 0-2399-4012-13 1182 24 12 .. 17.00 .\r\n 1 15&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Sanook.com&#39;}, &#39;author&#39;: &#39;Main Stand&#39;, &#39;title&#39;: &#39;เรียนรู้จากกรณีของไทย : สารกระตุ้นมีอิทธิพลกับวงการกีฬาจนต้องลงโทษแบนเลยหรือ? - Sanook&#39;, &#39;description&#39;: &#39;ถือเป็นข่าวใหญ่ในวงการกีฬาไทยรับไตรมาสสุดท้ายปี 2021 เมื่อ องค์กรต่อต้านสารกระตุ้นโลก หรือ WADA ตัดสินลงโทษประเทศไทยเป็นเวลา 1 ปี&#39;, &#39;url&#39;: &#39;https://www.sanook.com/sport/1321593/&#39;, &#39;urlToImage&#39;: &#39;https://s.isanook.com/sp/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3NwLzAvdWQvMjY0LzEzMjE1OTMveHguanBn.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T05:17:00Z&#39;, &#39;content&#39;: &#39;2021 WADA 1 \r\nMain Stamd WADA \r\n WADA \r\n WADA 7 2021 2021 (World Anti-Doping Code 2021) 5 , , , (DIBF) International Gira Sports Federation (IGSF)\r\nWADA WADA (CRC) 14 2021 8 WADA \r\n 15 2021 WADA 2021… [+435 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Khaosod.co.th&#39;}, &#39;author&#39;: &#39;1&#39;, &#39;title&#39;: &#39;น้ำท่วม : ชายผู้ออกแบบเมืองในจีนให้เป็น “ฟองน้ำยักษ์” รับมือน้ำท่วม - ข่าวสด&#39;, &#39;description&#39;: &#39;อวี๋ ข่งเจียน ยังจำเหตุการณ์ตอนที่เขาเกือบจมน้ำที่บ้านเ...&#39;, &#39;url&#39;: &#39;https://www.khaosod.co.th/bbc-thai/news_6727927&#39;, &#39;urlToImage&#39;: &#39;https://www.khaosod.co.th/wpapp/uploads/2021/11/121298164_tianjinwetland.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T05:03:00Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Siamphone.com&#39;}, &#39;author&#39;: &#39;Natthanan Taniksunannitima&#39;, &#39;title&#39;: &#39;เผยแฟชั่นเซ็ต ถ่ายทอด Huawei MateBook 14s ตอบโจทย์ทุกไลฟ์สไตล์อย่างลงตัว - Siamphone&#39;, &#39;description&#39;: &#39;&#39;, &#39;url&#39;: &#39;https://news.siamphone.com/news-48945.html&#39;, &#39;urlToImage&#39;: &#39;https://cdn-news.siamphone.com/upload/news/nw48945/000-HUAWEI-MateBook-14s.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T05:02:22Z&#39;, &#39;content&#39;: &#39;HuaweiVogue ThailandHuawei MateBook 14s \xa0\r\n Vogue Thailand NEW WAY TO WORK Mood &amp;amp; Tone \r\nHuawei MateBook 14s 2.5K Huawei FullView Display 11th Gen Intel Core H-Series Spruce Green[1] \r\n Vogue Tha… [+258 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Ch7.com&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;โควิดชลบุรี ติดอีก 249 คน ผุดคลัสเตอร์แคมป์นักกีฬา &quot;บ่อวิน อะคาเดมี&quot; - ช่อง 7&#39;, &#39;description&#39;: &#39;#เกาะติดสถานการณ์โควิด วันนี้ (12 พ.ย.64) มีรายงานผู้ติดเชื้อรายใหม่ 249 คน จำนวนผู้ติดเชื้อสะสมเพิ่มเป็น 104,290 คน ขณะนี้มีผู้ป่วบระหว่างการรักษา 2,846 คน และมีผู้เสียชีวิตเพิ่มขึ้น 3 คน จำนวนผู้เสียชีวิตสะสม 740 คน สำหรับผู้ติดเชื้อรายใหม่…&#39;, &#39;url&#39;: &#39;https://news.ch7.com/detail/528985&#39;, &#39;urlToImage&#39;: &#39;https://cdni-hw.ch7.com/dm/sz-md/i/images/2021/11/12/618debc4377cc0.14529362.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T04:41:09Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Mxphone.com&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s วันที่ 13 พ.ย.นี้ - mxphone&#39;, &#39;description&#39;: &#39;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s แล้ว สามารถจับจองเป็นเจ้าของได้ก่อนใครแล้วในวันที่\xa013\xa0พ.ย.\xa0เป็นต้นไป&#39;, &#39;url&#39;: &#39;https://www.mxphone.com/huawei-nova-9-and-huawei-matebook-14s-are-available-for-sale/&#39;, &#39;urlToImage&#39;: &#39;https://www.mxphone.com/wp-content/uploads/2021/11/HUAWEI-nova-9_shelf-break_cover.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T04:39:13Z&#39;, &#39;content&#39;: &#39;() HUAWEI nova 9 50MP HUAWEI MateBook 14s 2.5K 13 2564 HUAWEI nova 9 16,990 HUAWEI MateBook 14s 40,990 Early Bird HUAWEI nova 9 HUAWEI MateBook 14s ! HUAWEI FreeBuds Pro 5,499 13 2564 30 2564 HUAWEI … [+1192 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Khaosod.co.th&#39;}, &#39;author&#39;: &#39;39&#39;, &#39;title&#39;: &quot;&#39;หมอยง&#39; ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก เผยอาจต้องมีเข็ม 4 เข็ม 5 ในปีต่อไป - ข่าวสด&quot;, &#39;description&#39;: &quot;&#39;หมอยง&#39;\xa0ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก ย้ำเชื้อตายเป็นวัคซีนปูพื้นที่ดี เผยเข็ม 3 แล้ว อาจยังต้องมีเข็ม 4 เข็ม 5 ในปีต่อๆไป&quot;, &#39;url&#39;: &#39;https://www.khaosod.co.th/covid-19/news_6727990&#39;, &#39;urlToImage&#39;: &#39;https://www.khaosod.co.th/wpapp/uploads/2021/11/หมอยง-โควิด-01.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T04:38:00Z&#39;, &#39;content&#39;: &#39;‘’ mRNA 3 4 5 \r\n 12 ..64 .. -19 \r\n 1 2 3 \r\n prime boost \r\n 2 2 3 2 3-4 2 prime 3 \r\n 2 3-4 2 3-4 AstraZeneca 4 – 12 8 16 4 ( 5 ) 2 \r\n prime 2 \r\n 3 2 prime 3 boost 3 2 3 () 2 6 12 covid-19\r\n Valneva 3 … [+106 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Prachachat.net&#39;}, &#39;author&#39;: &#39;https://www.facebook.com/PrachachatOnline/&#39;, &#39;title&#39;: &#39;ศบค.ลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด เลื่อนเปิดสถานบันเทิง 15 ม.ค. 65 - ประชาชาติธุรกิจ&#39;, &#39;description&#39;: &#39;ศบค.ชุดใหญ่ ไฟเขียวปรับลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด ถอด จันทบุรี คงเคอร์ฟิว 23.00 – 03.00 น. ถึงสิ้นเดือน พ.ย. พร้อมเลื่อนเปิดสถานบันเทิง ผับ บาร์จาก&#39;, &#39;url&#39;: &#39;https://www.prachachat.net/prachachat-top-story/news-801004&#39;, &#39;urlToImage&#39;: &#39;https://www.prachachat.net/wp-content/uploads/2021/11/rung-1.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T04:37:11Z&#39;, &#39;content&#39;: &#39;. 6 23.00 03.00 . .. 1 .. 15 .. 2565\r\n 12 2564 -19 (.) 18/2564 .. . .\r\n () 7 6 ()\r\n () 39 () 23 \r\n () 5 \r\n () 4 \r\n. 6 7 \r\n. 1 2564 15 2565 \r\n (.) . / 19 \r\n 16 2565 \r\n1. 100 %\r\n2. /. \r\n3.\r\n4. /. \r\n ()… [+33 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;YouTube&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HD - Ch7HD&#39;, &#39;description&#39;: &#39;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HDดูละคร อตีตา ย้อนหลัง ได้ที่ : https://www.bugaboo.tv/lakorn/atitaเติมเต็มคว...&#39;, &#39;url&#39;: &#39;https://www.youtube.com/watch?v=nVdNv6wlh7o&#39;, &#39;urlToImage&#39;: &#39;https://i.ytimg.com/vi/nVdNv6wlh7o/maxresdefault.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T04:16:13Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Mcot.net&#39;}, &#39;author&#39;: &#39;&#39;, &#39;title&#39;: &#39;นักบินอวกาศ 4 คนเดินทางถึงสถานีอวกาศนานาชาติแล้ว - Thai News Agency&#39;, &#39;description&#39;: &#39;นักบินอวกาศ 4 คนที่ทะยานสู่อวกาศเมื่อวันพุธตามเวลาในสหรัฐด้วยแคปซูลครูว์ดรากอนของสเปซเอ็กซ์ บริษัทเทคโนโลยีอวกาศของอีลอน มัสก์ มหาเศรษฐีชาวอเมริกัน เดินทางถึงสถานีอวกาศนานาชาติแล้ว เพื่อปฏิบัติภารกิจด้านวิทยาศาสตร์เป็นเวลา 6 เดือน&#39;, &#39;url&#39;: &#39;https://tna.mcot.net/world-821898&#39;, &#39;urlToImage&#39;: &#39;https://tna.mcot.net/wp-content/uploads/2021/11/Untitlแแแแแed-1-copy.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T03:32:00Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;YouTube&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;ปล้นลอยฟ้า [Official Teaser] Ver.3 - Ch7HD&#39;, &#39;description&#39;: &#39;ลุ้น...ระทึก 💥 บู๊...ระห่ำกับปฏิบัติการปล้นเพชรพันล้านที่เดิมพันด้วยชีวิต#ปล้นลอยฟ้า 🪂💎 #SKYRAIDERเริ่ม พฤหัสบดีที่ 25 พฤศจิกายนนี้ 20.30 น.เติมเต็มความสุ...&#39;, &#39;url&#39;: &#39;https://www.youtube.com/watch?v=ifiyPLzL7KM&#39;, &#39;urlToImage&#39;: &#39;https://i.ytimg.com/vi/ifiyPLzL7KM/maxresdefault.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T03:28:44Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Prachachat.net&#39;}, &#39;author&#39;: &#39;https://www.facebook.com/PrachachatOnline/&#39;, &#39;title&#39;: &#39;บทวิเคราะห์ราคาทองคำวันนี้ (12 พ.ย.) โดย YLG Bullion - ประชาชาติธุรกิจ&#39;, &#39;description&#39;: &#39;บริษัท วายแอลจี บูลเลี่ยน อินเตอร์เนชั่นแนล จำกัด รายงานราคาทองคำประจำวันที่ 12 พฤศจิกายน 2564 สรุป ราคาทองคำวานนี้ปิดปรับตัวเพิ่มขึ้น 12.30&#39;, &#39;url&#39;: &#39;https://www.prachachat.net/finance/news-800926&#39;, &#39;urlToImage&#39;: &#39;https://www.prachachat.net/wp-content/uploads/2021/05/ทอง-2-1.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T03:24:25Z&#39;, &#39;content&#39;: &#39;12 2564\r\n12.30 6 (Veterans Day)\r\n 5 (The Treasury breakeven inflation curve) 4.80% 3.65% 2 3.16% 5 2.68% 10 \r\n () FedWatch Tool CME Group .. 80% 100% .. 2022 1 .. 2022 95 16 95.262 22 .. 2020 SPDR 0.… [+65 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Bangkokbiznews.com&#39;}, &#39;author&#39;: &#39;bangkokbiznews&#39;, &#39;title&#39;: &#39;ราคาทองวันนี้ (12พ.ย.) ร่วงแรง 100 บาท - กรุงเทพธุรกิจ&#39;, &#39;description&#39;: &#39;ราคาทองวันศุกร์ (12 พ.ย.) เปิดตลาดร่วง100 บาท ทองรูปพรรณขาย29,350บาท ทองแท่งขาย28,850 บาท ราคาทองคำ Spot เช้านี้เคลื่อนไหวที่บริเวณ 1,859 ดอลลาร์&#39;, &#39;url&#39;: &#39;https://www.bangkokbiznews.com/news/971387&#39;, &#39;urlToImage&#39;: &#39;https://image.bangkokbiznews.com/uploads/images/md/2021/11/eTAIJVp432vl5E6SRKTN.webp&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T03:24:00Z&#39;, &#39;content&#39;: &#39;Spot 1,859 15.6 1,863.9 (CPI) 30 \r\n 200 17,260&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Kapook.com&#39;}, &#39;author&#39;: &#39;43&#39;, &#39;title&#39;: &#39;ประกันโควิด เจอ จ่าย จบ ส่อไปไม่ไหว ทบทวนบอกเลิกกรมธรรม์ ก่อนบริษัทจะล้ม - kapook.com&#39;, &#39;description&#39;: &#39;ยอดเคลมสินไหมทะลุ 40,000 ล้าน&#39;, &#39;url&#39;: &#39;https://covid-19.kapook.com/view248753.html&#39;, &#39;urlToImage&#39;: &#39;https://my.kapook.com/imagescontent/fb_img/500/s_248753_1882.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T03:11:50Z&#39;, &#39;content&#39;: None}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Pptvhd36.com&#39;}, &#39;author&#39;: &#39;PPTV Online&#39;, &#39;title&#39;: &#39;ระทึก! ไฟไหม้ รพ.มงกุฎวัฒนะ เจ้าหน้าที่ตรวจสอบรังสีรั่วไหล - pptvhd36.com&#39;, &#39;description&#39;: &#39;เกิดเหตุไฟไหม้ รพ.มุงกุฎวัฒนะ ห้องเอ็กซ์เรย์วอด เร่งหาสาเหตุ ตรวจสอบรังสีรั่วไหล&#39;, &#39;url&#39;: &#39;https://www.pptvhd36.com/news/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1/160373&#39;, &#39;urlToImage&#39;: &#39;https://img.pptvhd36.com/thumbor/2021/11/12/news-8b6def44e5.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T02:30:00Z&#39;, &#39;content&#39;: &#39;06.42 . 12 \xa02564 199 . 10 1 \r\n 2 \r\n\xa020 \r\n 2-3 \r\nAdd friend @PPTVOnline&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Sanook.com&#39;}, &#39;author&#39;: &#39;Sanook! Regional&#39;, &#39;title&#39;: &#39;จับสึกยกวัด! เจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า ผงะเปิดกุฏิเจอขวดฉี่กองเต็มห้อง - Sanook&#39;, &#39;description&#39;: &#39;ชาวบ้านแจ้งจับเจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า เปิดกุฏิเจอกองขยะ ขวดฉี่เต็มห้อง จับสึกยกวัดไม่เหลือพระสักรูป&#39;, &#39;url&#39;: &#39;https://www.sanook.com/news/8472322/&#39;, &#39;urlToImage&#39;: &#39;https://s.isanook.com/ns/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL25zLzAvdWQvMTY5NC84NDcyMzIyL200LmpwZw==.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T02:00:32Z&#39;, &#39;content&#39;: &#39;- \r\n(11 ..64) 18.00 . ... . .. ... . . . 5 . . .\xa0\xa0\r\n 5 . . . 1 . 10 \r\n ()\xa0 80 \r\n29 \xa0 21 28 43 \xa0\r\n . () .&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Dailynews.co.th&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;เครื่องบินรบรัสเซียลาดตระเวนเหนือเบลารุสอีก สถานการณ์ผู้อพยพกับโปแลนด์ยังระอุ - เดลีนีวส์&#39;, &#39;description&#39;: &#39;รัสเซียส่งเครื่องบินรบขึ้นลาดตระเวนในเขตน่านฟ้าของเบลารุส ต่อเนื่องเป็นวันที่สอง ท่ามกลางสถานการณ์ตึงเครียดเรื่องผู้อพยพ ระหว่างเบลารุสกับโปแลนด์&#39;, &#39;url&#39;: &#39;https://www.dailynews.co.th/news/467805/&#39;, &#39;urlToImage&#39;: &#39;https://www.dailynews.co.th/wp-content/uploads/2021/11/b970c78dd4334a4bbc2a2b76c2231024-0-f36a67df73f140f68e8e9dc87530c51f_25247889.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T01:54:00Z&#39;, &#39;content&#39;: &#39;Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Thairath.co.th&#39;}, &#39;author&#39;: &#39;Thairath&#39;, &#39;title&#39;: &#39;วิธีตรวจสอบสิทธิ์ รับเงิน &quot;ประกันรายได้ข้าว ปี 64/65&quot; ขั้นตอนไม่ยุ่งยาก - ไทยรัฐ&#39;, &#39;description&#39;: &#39;ช่องทางตรวจสอบสิทธิ์รับเงิน &quot;โครงการประกันรายได้ข้าว ปี 2564/65&quot; สำหรับเกษตรกรผู้ปลูกข้าว 5 ชนิด ขั้นตอนไม่ยุ่งยาก หลายคนได้รับเงินแล้ว&#39;, &#39;url&#39;: &#39;https://www.thairath.co.th/business/economics/2240474&#39;, &#39;urlToImage&#39;: &#39;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUgzot6YPaUgaiUrYGkbeNCqRdkDO0acQNpLn1z9QHSrjETgpZ.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T01:35:00Z&#39;, &#39;content&#39;: &#39;(...) ... 2564/65 13,225 -19 5 \r\n 9 .. 2564 530,842 11,230.69 \r\n 2564/65 ... \r\n ... 3 ... A-Mobile 24 LINE Official BAAC Family BAAC Connect\r\n1. &quot;&quot; &quot;&quot;\r\n2. &quot;&quot;\r\n3. &quot;&quot; .&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Bangkokbiznews.com&#39;}, &#39;author&#39;: &#39;bangkokbiznews&#39;, &#39;title&#39;: &#39;อัพเดท &quot;น้ำท่วม&quot; กทม. เตือนน้ำทะเลหนุนกระทบ 11 ชุมชน 239 ครัวเรือน - กรุงเทพธุรกิจ&#39;, &#39;description&#39;: &#39;อัพเดท &quot;น้ำท่วม&quot; กรุงเทพมหานคร เร่งแก้ปัญหาน้ำทะเลหนุน เตือน 11 ชุมชนนอกคันกั้นน้ำในพื้นที่ 7 เขตรวม 239 ครัวเรือน เฝ้าระวังผลกระทบจากน้ำทะเลหนุน&#39;, &#39;url&#39;: &#39;https://www.bangkokbiznews.com/news/971375&#39;, &#39;urlToImage&#39;: &#39;https://image.bangkokbiznews.com/uploads/images/md/2021/11/DxgdroTAs4dhA6hmg2iK.webp&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T01:11:00Z&#39;, &#39;content&#39;: &#39;http://dds.bangkok.go.th/www.prbangkok.com Facebook @BKK_BEST https://www.facebook.com/prbangkok Twitter : @BKK_BEST \r\n () +2.30 .. +2.40 .. +2.80 .. Big Bag 200 5,150 9 ( 15 ) 49,640 4,250 () 4&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Dailynews.co.th&#39;}, &#39;author&#39;: None, &#39;title&#39;: &#39;โควิดติดเชื้อเพิ่ม7305ราย หายป่วย7900ราย เสียชีวิต51 - เดลีนีวส์&#39;, &#39;description&#39;: &quot;ยอด &#39;โควิด-19&#39; วันนี้ พบเสียชีวิตเพิ่มอีก 51 ราย ขณะที่พบผู้ติดเชื้อใหม่เพิ่มอีก 7,305 ราย ผู้ป่วยยืนยันสะสม 1,975,411 ราย&quot;, &#39;url&#39;: &#39;https://www.dailynews.co.th/news/467757/&#39;, &#39;urlToImage&#39;: &#39;https://www.dailynews.co.th/wp-content/uploads/2021/11/255030149_444927753792221_4768164725903029138_n.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-12T00:45:00Z&#39;, &#39;content&#39;: None}]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-1-get-thailand-s-headlines">
+<h3>Exercise 1. Get Thailand’s headlines<a class="headerlink" href="#exercise-1-get-thailand-s-headlines" title="Permalink to this headline">#</a></h3>
+<p>Reconstruct the url to retrieve headlines from Thailand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">#</a></h2>
+<p>Next, let’s look at the <a class="reference external" href="https://newsapi.org/docs/authentication">authentication section</a> of the documentation. Since you have limited number of requests you can make, you have to manage your credential carefully so that other people (hackers!) cannot steal your precious resources.</p>
+<p>Previously, we simply put the our API key in the URL. This is not ideal because hackers can sniff your traffic (especially when you use free public wi-fi) and steal your API key. We will put our API key in the request header instead (the last method mentioned in the documentation.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that we no longer put the API key in the URL</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/top-headlines?country=us&quot;</span>
+
+<span class="c1"># construct header as a dictionary</span>
+<span class="c1"># use the key as specified in the documentation (case-sensitive)</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="n">api_key</span>
+<span class="p">}</span>
+
+<span class="c1"># adjust the function call</span>
+<span class="c1"># pass our dictionary as a parameter to the function</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;status&quot;:&quot;ok&quot;,&quot;totalResults&quot;:37,&quot;articles&quot;:[{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;45&quot;,&quot;title&quot;:&quot;ระวังอันตราย! กรมอุตุฯ เตือนฉบับ1 ฝนถล่มหนัก15จว.ใต้ เสี่ยงท่วมฉับพลัน - ข่าวสด&quot;,&quot;description&quot;:&quot;กรมอุตุฯ ประกาศฉบับที่ 1 เตือน 15 จังหวัดภาคใต้ ฝนตกหนักถึงหนักมากหลายพื้นที่ ระวังอันตราย เสี่ยงเกิดน้ำท่วมฉับพลัน-น้ำป่าไหลหลาก&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/breaking-news/news_6728173&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/12-กรมอุตุฯเตือนภาคใต้1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:33:00Z&quot;,&quot;content&quot;:&quot;1 15 -\r\n 12 ..2564 “ ( 12-14 2564)” 1 14 .. 64 \r\n 2-3 3 1-2 14 ..2564\r\n http://www.tmd.go.th 0-2399-4012-13 1182 24 12 .. 17.00 .\r\n 1 15&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Sanook.com&quot;},&quot;author&quot;:&quot;Main Stand&quot;,&quot;title&quot;:&quot;เรียนรู้จากกรณีของไทย : สารกระตุ้นมีอิทธิพลกับวงการกีฬาจนต้องลงโทษแบนเลยหรือ? - Sanook&quot;,&quot;description&quot;:&quot;ถือเป็นข่าวใหญ่ในวงการกีฬาไทยรับไตรมาสสุดท้ายปี 2021 เมื่อ องค์กรต่อต้านสารกระตุ้นโลก หรือ WADA ตัดสินลงโทษประเทศไทยเป็นเวลา 1 ปี&quot;,&quot;url&quot;:&quot;https://www.sanook.com/sport/1321593/&quot;,&quot;urlToImage&quot;:&quot;https://s.isanook.com/sp/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3NwLzAvdWQvMjY0LzEzMjE1OTMveHguanBn.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:17:00Z&quot;,&quot;content&quot;:&quot;2021 WADA 1 \r\nMain Stamd WADA \r\n WADA \r\n WADA 7 2021 2021 (World Anti-Doping Code 2021) 5 , , , (DIBF) International Gira Sports Federation (IGSF)\r\nWADA WADA (CRC) 14 2021 8 WADA \r\n 15 2021 WADA 2021… [+435 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;1&quot;,&quot;title&quot;:&quot;น้ำท่วม : ชายผู้ออกแบบเมืองในจีนให้เป็น “ฟองน้ำยักษ์” รับมือน้ำท่วม - ข่าวสด&quot;,&quot;description&quot;:&quot;อวี๋ ข่งเจียน ยังจำเหตุการณ์ตอนที่เขาเกือบจมน้ำที่บ้านเ...&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/bbc-thai/news_6727927&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/121298164_tianjinwetland.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:03:00Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Siamphone.com&quot;},&quot;author&quot;:&quot;Natthanan Taniksunannitima&quot;,&quot;title&quot;:&quot;เผยแฟชั่นเซ็ต ถ่ายทอด Huawei MateBook 14s ตอบโจทย์ทุกไลฟ์สไตล์อย่างลงตัว - Siamphone&quot;,&quot;description&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://news.siamphone.com/news-48945.html&quot;,&quot;urlToImage&quot;:&quot;https://cdn-news.siamphone.com/upload/news/nw48945/000-HUAWEI-MateBook-14s.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T05:02:22Z&quot;,&quot;content&quot;:&quot;HuaweiVogue ThailandHuawei MateBook 14s  \r\n Vogue Thailand NEW WAY TO WORK Mood &amp;amp; Tone \r\nHuawei MateBook 14s 2.5K Huawei FullView Display 11th Gen Intel Core H-Series Spruce Green[1] \r\n Vogue Tha… [+258 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Ch7.com&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;โควิดชลบุรี ติดอีก 249 คน ผุดคลัสเตอร์แคมป์นักกีฬา \&quot;บ่อวิน อะคาเดมี\&quot; - ช่อง 7&quot;,&quot;description&quot;:&quot;#เกาะติดสถานการณ์โควิด วันนี้ (12 พ.ย.64) มีรายงานผู้ติดเชื้อรายใหม่ 249 คน จำนวนผู้ติดเชื้อสะสมเพิ่มเป็น 104,290 คน ขณะนี้มีผู้ป่วบระหว่างการรักษา 2,846 คน และมีผู้เสียชีวิตเพิ่มขึ้น 3 คน จำนวนผู้เสียชีวิตสะสม 740 คน สำหรับผู้ติดเชื้อรายใหม่…&quot;,&quot;url&quot;:&quot;https://news.ch7.com/detail/528985&quot;,&quot;urlToImage&quot;:&quot;https://cdni-hw.ch7.com/dm/sz-md/i/images/2021/11/12/618debc4377cc0.14529362.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:41:09Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Mxphone.com&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s วันที่ 13 พ.ย.นี้ - mxphone&quot;,&quot;description&quot;:&quot;หัวเว่ยประกาศวางจำหน่าย HUAWEI nova 9 และ HUAWEI MateBook 14s แล้ว สามารถจับจองเป็นเจ้าของได้ก่อนใครแล้วในวันที่ 13 พ.ย. เป็นต้นไป&quot;,&quot;url&quot;:&quot;https://www.mxphone.com/huawei-nova-9-and-huawei-matebook-14s-are-available-for-sale/&quot;,&quot;urlToImage&quot;:&quot;https://www.mxphone.com/wp-content/uploads/2021/11/HUAWEI-nova-9_shelf-break_cover.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:39:13Z&quot;,&quot;content&quot;:&quot;() HUAWEI nova 9 50MP HUAWEI MateBook 14s 2.5K 13 2564 HUAWEI nova 9 16,990 HUAWEI MateBook 14s 40,990 Early Bird HUAWEI nova 9 HUAWEI MateBook 14s ! HUAWEI FreeBuds Pro 5,499 13 2564 30 2564 HUAWEI … [+1192 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Khaosod.co.th&quot;},&quot;author&quot;:&quot;39&quot;,&quot;title&quot;:&quot;&#39;หมอยง&#39; ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก เผยอาจต้องมีเข็ม 4 เข็ม 5 ในปีต่อไป - ข่าวสด&quot;,&quot;description&quot;:&quot;&#39;หมอยง&#39; ชี้เริ่มต้นฉีด ด้วย mRNA หาวัคซีนกระตุ้นยาก ย้ำเชื้อตายเป็นวัคซีนปูพื้นที่ดี เผยเข็ม 3 แล้ว อาจยังต้องมีเข็ม 4 เข็ม 5 ในปีต่อๆไป&quot;,&quot;url&quot;:&quot;https://www.khaosod.co.th/covid-19/news_6727990&quot;,&quot;urlToImage&quot;:&quot;https://www.khaosod.co.th/wpapp/uploads/2021/11/หมอยง-โควิด-01.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:38:00Z&quot;,&quot;content&quot;:&quot;‘’ mRNA 3 4 5 \r\n 12 ..64 .. -19 \r\n 1 2 3 \r\n prime boost \r\n 2 2 3 2 3-4 2 prime 3 \r\n 2 3-4 2 3-4 AstraZeneca 4 – 12 8 16 4 ( 5 ) 2 \r\n prime 2 \r\n 3 2 prime 3 boost 3 2 3 () 2 6 12 covid-19\r\n Valneva 3 … [+106 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Prachachat.net&quot;},&quot;author&quot;:&quot;https://www.facebook.com/PrachachatOnline/&quot;,&quot;title&quot;:&quot;ศบค.ลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด เลื่อนเปิดสถานบันเทิง 15 ม.ค. 65 - ประชาชาติธุรกิจ&quot;,&quot;description&quot;:&quot;ศบค.ชุดใหญ่ ไฟเขียวปรับลดพื้นที่สีแดงเข้มเหลือ 6 จังหวัด ถอด จันทบุรี คงเคอร์ฟิว 23.00 – 03.00 น. ถึงสิ้นเดือน พ.ย. พร้อมเลื่อนเปิดสถานบันเทิง ผับ บาร์จาก&quot;,&quot;url&quot;:&quot;https://www.prachachat.net/prachachat-top-story/news-801004&quot;,&quot;urlToImage&quot;:&quot;https://www.prachachat.net/wp-content/uploads/2021/11/rung-1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:37:11Z&quot;,&quot;content&quot;:&quot;. 6 23.00 03.00 . .. 1 .. 15 .. 2565\r\n 12 2564 -19 (.) 18/2564 .. . .\r\n () 7 6 ()\r\n () 39 () 23 \r\n () 5 \r\n () 4 \r\n. 6 7 \r\n. 1 2564 15 2565 \r\n (.) . / 19 \r\n 16 2565 \r\n1. 100 %\r\n2. /. \r\n3.\r\n4. /. \r\n ()… [+33 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;YouTube&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HD - Ch7HD&quot;,&quot;description&quot;:&quot;แม่หญิงระจันฝึกดาบ เตรียมรับมือข้าศึกบุกค่าย | ตอกย้ำความสนุก อตีตา EP.17 | Ch7HDดูละคร อตีตา ย้อนหลัง ได้ที่ : https://www.bugaboo.tv/lakorn/atitaเติมเต็มคว...&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=nVdNv6wlh7o&quot;,&quot;urlToImage&quot;:&quot;https://i.ytimg.com/vi/nVdNv6wlh7o/maxresdefault.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T04:16:13Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Mcot.net&quot;},&quot;author&quot;:&quot;&quot;,&quot;title&quot;:&quot;นักบินอวกาศ 4 คนเดินทางถึงสถานีอวกาศนานาชาติแล้ว - Thai News Agency&quot;,&quot;description&quot;:&quot;นักบินอวกาศ 4 คนที่ทะยานสู่อวกาศเมื่อวันพุธตามเวลาในสหรัฐด้วยแคปซูลครูว์ดรากอนของสเปซเอ็กซ์ บริษัทเทคโนโลยีอวกาศของอีลอน มัสก์ มหาเศรษฐีชาวอเมริกัน เดินทางถึงสถานีอวกาศนานาชาติแล้ว เพื่อปฏิบัติภารกิจด้านวิทยาศาสตร์เป็นเวลา 6 เดือน&quot;,&quot;url&quot;:&quot;https://tna.mcot.net/world-821898&quot;,&quot;urlToImage&quot;:&quot;https://tna.mcot.net/wp-content/uploads/2021/11/Untitlแแแแแed-1-copy.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:32:00Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;YouTube&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;ปล้นลอยฟ้า [Official Teaser] Ver.3 - Ch7HD&quot;,&quot;description&quot;:&quot;ลุ้น...ระทึก 💥 บู๊...ระห่ำกับปฏิบัติการปล้นเพชรพันล้านที่เดิมพันด้วยชีวิต#ปล้นลอยฟ้า 🪂💎 #SKYRAIDERเริ่ม พฤหัสบดีที่ 25 พฤศจิกายนนี้ 20.30 น.เติมเต็มความสุ...&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=ifiyPLzL7KM&quot;,&quot;urlToImage&quot;:&quot;https://i.ytimg.com/vi/ifiyPLzL7KM/maxresdefault.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:28:44Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Prachachat.net&quot;},&quot;author&quot;:&quot;https://www.facebook.com/PrachachatOnline/&quot;,&quot;title&quot;:&quot;บทวิเคราะห์ราคาทองคำวันนี้ (12 พ.ย.) โดย YLG Bullion - ประชาชาติธุรกิจ&quot;,&quot;description&quot;:&quot;บริษัท วายแอลจี บูลเลี่ยน อินเตอร์เนชั่นแนล จำกัด รายงานราคาทองคำประจำวันที่ 12 พฤศจิกายน 2564 สรุป ราคาทองคำวานนี้ปิดปรับตัวเพิ่มขึ้น 12.30&quot;,&quot;url&quot;:&quot;https://www.prachachat.net/finance/news-800926&quot;,&quot;urlToImage&quot;:&quot;https://www.prachachat.net/wp-content/uploads/2021/05/ทอง-2-1.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:24:25Z&quot;,&quot;content&quot;:&quot;12 2564\r\n12.30 6 (Veterans Day)\r\n 5 (The Treasury breakeven inflation curve) 4.80% 3.65% 2 3.16% 5 2.68% 10 \r\n () FedWatch Tool CME Group .. 80% 100% .. 2022 1 .. 2022 95 16 95.262 22 .. 2020 SPDR 0.… [+65 chars]&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Bangkokbiznews.com&quot;},&quot;author&quot;:&quot;bangkokbiznews&quot;,&quot;title&quot;:&quot;ราคาทองวันนี้ (12พ.ย.) ร่วงแรง 100 บาท - กรุงเทพธุรกิจ&quot;,&quot;description&quot;:&quot;ราคาทองวันศุกร์ (12 พ.ย.) เปิดตลาดร่วง100 บาท ทองรูปพรรณขาย29,350บาท ทองแท่งขาย28,850 บาท ราคาทองคำ Spot เช้านี้เคลื่อนไหวที่บริเวณ 1,859 ดอลลาร์&quot;,&quot;url&quot;:&quot;https://www.bangkokbiznews.com/news/971387&quot;,&quot;urlToImage&quot;:&quot;https://image.bangkokbiznews.com/uploads/images/md/2021/11/eTAIJVp432vl5E6SRKTN.webp&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:24:00Z&quot;,&quot;content&quot;:&quot;Spot 1,859 15.6 1,863.9 (CPI) 30 \r\n 200 17,260&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Kapook.com&quot;},&quot;author&quot;:&quot;43&quot;,&quot;title&quot;:&quot;ประกันโควิด เจอ จ่าย จบ ส่อไปไม่ไหว ทบทวนบอกเลิกกรมธรรม์ ก่อนบริษัทจะล้ม - kapook.com&quot;,&quot;description&quot;:&quot;ยอดเคลมสินไหมทะลุ 40,000 ล้าน&quot;,&quot;url&quot;:&quot;https://covid-19.kapook.com/view248753.html&quot;,&quot;urlToImage&quot;:&quot;https://my.kapook.com/imagescontent/fb_img/500/s_248753_1882.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T03:11:50Z&quot;,&quot;content&quot;:null},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Pptvhd36.com&quot;},&quot;author&quot;:&quot;PPTV Online&quot;,&quot;title&quot;:&quot;ระทึก! ไฟไหม้ รพ.มงกุฎวัฒนะ เจ้าหน้าที่ตรวจสอบรังสีรั่วไหล - pptvhd36.com&quot;,&quot;description&quot;:&quot;เกิดเหตุไฟไหม้ รพ.มุงกุฎวัฒนะ ห้องเอ็กซ์เรย์วอด เร่งหาสาเหตุ ตรวจสอบรังสีรั่วไหล&quot;,&quot;url&quot;:&quot;https://www.pptvhd36.com/news/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1/160373&quot;,&quot;urlToImage&quot;:&quot;https://img.pptvhd36.com/thumbor/2021/11/12/news-8b6def44e5.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T02:30:00Z&quot;,&quot;content&quot;:&quot;06.42 . 12  2564 199 . 10 1 \r\n 2 \r\n 20 \r\n 2-3 \r\nAdd friend @PPTVOnline&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Sanook.com&quot;},&quot;author&quot;:&quot;Sanook! Regional&quot;,&quot;title&quot;:&quot;จับสึกยกวัด! เจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า ผงะเปิดกุฏิเจอขวดฉี่กองเต็มห้อง - Sanook&quot;,&quot;description&quot;:&quot;ชาวบ้านแจ้งจับเจ้าอาวาส-พระลูกวัด มั่วสุมเสพยาบ้า เปิดกุฏิเจอกองขยะ ขวดฉี่เต็มห้อง จับสึกยกวัดไม่เหลือพระสักรูป&quot;,&quot;url&quot;:&quot;https://www.sanook.com/news/8472322/&quot;,&quot;urlToImage&quot;:&quot;https://s.isanook.com/ns/0/rp/rc/w700h366/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL25zLzAvdWQvMTY5NC84NDcyMzIyL200LmpwZw==.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T02:00:32Z&quot;,&quot;content&quot;:&quot;- \r\n(11 ..64) 18.00 . ... . .. ... . . . 5 . . .  \r\n 5 . . . 1 . 10 \r\n ()  80 \r\n29   21 28 43  \r\n . () .&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Dailynews.co.th&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;เครื่องบินรบรัสเซียลาดตระเวนเหนือเบลารุสอีก สถานการณ์ผู้อพยพกับโปแลนด์ยังระอุ - เดลีนีวส์&quot;,&quot;description&quot;:&quot;รัสเซียส่งเครื่องบินรบขึ้นลาดตระเวนในเขตน่านฟ้าของเบลารุส ต่อเนื่องเป็นวันที่สอง ท่ามกลางสถานการณ์ตึงเครียดเรื่องผู้อพยพ ระหว่างเบลารุสกับโปแลนด์&quot;,&quot;url&quot;:&quot;https://www.dailynews.co.th/news/467805/&quot;,&quot;urlToImage&quot;:&quot;https://www.dailynews.co.th/wp-content/uploads/2021/11/b970c78dd4334a4bbc2a2b76c2231024-0-f36a67df73f140f68e8e9dc87530c51f_25247889.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:54:00Z&quot;,&quot;content&quot;:&quot;Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Thairath.co.th&quot;},&quot;author&quot;:&quot;Thairath&quot;,&quot;title&quot;:&quot;วิธีตรวจสอบสิทธิ์ รับเงิน \&quot;ประกันรายได้ข้าว ปี 64/65\&quot; ขั้นตอนไม่ยุ่งยาก - ไทยรัฐ&quot;,&quot;description&quot;:&quot;ช่องทางตรวจสอบสิทธิ์รับเงิน \&quot;โครงการประกันรายได้ข้าว ปี 2564/65\&quot; สำหรับเกษตรกรผู้ปลูกข้าว 5 ชนิด ขั้นตอนไม่ยุ่งยาก หลายคนได้รับเงินแล้ว&quot;,&quot;url&quot;:&quot;https://www.thairath.co.th/business/economics/2240474&quot;,&quot;urlToImage&quot;:&quot;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUgzot6YPaUgaiUrYGkbeNCqRdkDO0acQNpLn1z9QHSrjETgpZ.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:35:00Z&quot;,&quot;content&quot;:&quot;(...) ... 2564/65 13,225 -19 5 \r\n 9 .. 2564 530,842 11,230.69 \r\n 2564/65 ... \r\n ... 3 ... A-Mobile 24 LINE Official BAAC Family BAAC Connect\r\n1. \&quot;\&quot; \&quot;\&quot;\r\n2. \&quot;\&quot;\r\n3. \&quot;\&quot; .&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Bangkokbiznews.com&quot;},&quot;author&quot;:&quot;bangkokbiznews&quot;,&quot;title&quot;:&quot;อัพเดท \&quot;น้ำท่วม\&quot; กทม. เตือนน้ำทะเลหนุนกระทบ 11 ชุมชน 239 ครัวเรือน - กรุงเทพธุรกิจ&quot;,&quot;description&quot;:&quot;อัพเดท \&quot;น้ำท่วม\&quot; กรุงเทพมหานคร เร่งแก้ปัญหาน้ำทะเลหนุน เตือน 11 ชุมชนนอกคันกั้นน้ำในพื้นที่ 7 เขตรวม 239 ครัวเรือน เฝ้าระวังผลกระทบจากน้ำทะเลหนุน&quot;,&quot;url&quot;:&quot;https://www.bangkokbiznews.com/news/971375&quot;,&quot;urlToImage&quot;:&quot;https://image.bangkokbiznews.com/uploads/images/md/2021/11/DxgdroTAs4dhA6hmg2iK.webp&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T01:11:00Z&quot;,&quot;content&quot;:&quot;http://dds.bangkok.go.th/www.prbangkok.com Facebook @BKK_BEST https://www.facebook.com/prbangkok Twitter : @BKK_BEST \r\n () +2.30 .. +2.40 .. +2.80 .. Big Bag 200 5,150 9 ( 15 ) 49,640 4,250 () 4&quot;},{&quot;source&quot;:{&quot;id&quot;:null,&quot;name&quot;:&quot;Dailynews.co.th&quot;},&quot;author&quot;:null,&quot;title&quot;:&quot;โควิดติดเชื้อเพิ่ม7305ราย หายป่วย7900ราย เสียชีวิต51 - เดลีนีวส์&quot;,&quot;description&quot;:&quot;ยอด &#39;โควิด-19&#39; วันนี้ พบเสียชีวิตเพิ่มอีก 51 ราย ขณะที่พบผู้ติดเชื้อใหม่เพิ่มอีก 7,305 ราย ผู้ป่วยยืนยันสะสม 1,975,411 ราย&quot;,&quot;url&quot;:&quot;https://www.dailynews.co.th/news/467757/&quot;,&quot;urlToImage&quot;:&quot;https://www.dailynews.co.th/wp-content/uploads/2021/11/255030149_444927753792221_4768164725903029138_n.jpg&quot;,&quot;publishedAt&quot;:&quot;2021-11-12T00:45:00Z&quot;,&quot;content&quot;:null}]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the response into JSON</span>
+<span class="c1"># Your implementation here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="endpoints">
+<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">#</a></h2>
+<p>Let’s explore what else the News API offer at the <a class="reference external" href="https://newsapi.org/docs/endpoints">Endpoints</a> section.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<div class="section" id="exercises-2-news-sources">
+<h3>Exercises 2 - News Sources<a class="headerlink" href="#exercises-2-news-sources" title="Permalink to this headline">#</a></h3>
+<p>List all the news sources available in Thailand</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/top-headlines/sources?country=th&quot;</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="n">api_key</span>
+<span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;status&#39;: &#39;ok&#39;, &#39;sources&#39;: []}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercises-3-news-search">
+<h3>Exercises 3 - News Search<a class="headerlink" href="#exercises-3-news-search" title="Permalink to this headline">#</a></h3>
+<p>Find all the news from Thailand that’s about “เปิดประเทศ”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/everything?q=ศาลรัฐธรรมนูญ&quot;</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="n">api_key</span>
+<span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;status&#39;: &#39;ok&#39;, &#39;totalResults&#39;: 5, &#39;articles&#39;: [{&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Thairath.co.th&#39;}, &#39;author&#39;: &#39;Thairath&#39;, &#39;title&#39;: &#39;รุ้ง-23 องค์กรนักศึกษา โต้ ศาลรัฐธรรมนูญ กระบวนการไต่สวน เตือนระวังพายุใหญ่&#39;, &#39;description&#39;: &#39;23 องค์กร นศ. ฮือค้านคำวินิจฉัยศาลรัฐธรรมนูญ ย้ำกระบวนการไต่สวนไม่เป็นธรรม ปราศจากเจตนาล้มล้างการปกครองฯ หมดสิ้นศรัทธาอำนาจตุลาการ-นิติศาสตร์ไทย เตือนระวังกระแสลมจะทวีจนกลายเป็นพายุ&#39;, &#39;url&#39;: &#39;https://www.thairath.co.th/news/politic/2240357&#39;, &#39;urlToImage&#39;: &#39;https://static.thairath.co.th/media/dFQROr7oWzulq5Fa3yvjTA3Mn3HlqRjkw9EqpFbHiPCyNvQEFh6knNTsikwIaDI0Utd.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-11T22:25:00Z&#39;, &#39;content&#39;: &#39;. “” \xa0 23 \r\n 12.30 . 11 .. .. “” 23 “ ” 23 10 5 \r\n 1. 3 \xa0 2. The king can do no wrong \r\n3. “” 2492 ..2490 2475 4. 5. \r\n“ ” \r\n Death Grips Guillotine (It goes Yah) 3.47 “Kangaroo Court” \r\n “” “” \xa0. . … [+303 chars]&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Thairath.co.th&#39;}, &#39;author&#39;: &#39;Thairath&#39;, &#39;title&#39;: &#39;ศาลรธน. ประกาศยกระดับเข้มพื้นที่ รับอ่านคำวินิจฉัยม็อบ 3 นิ้ว พรุ่งนี้&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ แจงเข้มสำนักงาน และศูนย์ราชการเฉลิมพระเกียรติ 80 พรรษา เป็นพื้นที่รักษาความสงบเรียบร้อยวันพรุ่งนี้ ปมเตรียมอ่านคำวินิจฉัย คดีม็อบ 3 นิ้ว เรียกร้องให้ปฏิรูปสถาบัน 10 ข้อ&#39;, &#39;url&#39;: &#39;https://www.thairath.co.th/news/politic/2238489&#39;, &#39;urlToImage&#39;: &#39;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUm4w4GEY5RoVnaQ4rE2z9iZBf19WTajHMNyYN9zA8XmD7dcob.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-09T06:58:00Z&#39;, &#39;content&#39;: &#39;9 .. 2564 () 49 ( 19/2563) 49 10 2564 \r\n1. \r\n2. 10 2564 00.01 23.59 \r\n 80 5 2550 38 .. 2561 4 5 8 (8) .. 2562 16 .. 2562\r\n 9 2564\r\n 49 , , .. , , .. , .. , .. 8 10 2563 10 49 .&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Thairath.co.th&#39;}, &#39;author&#39;: &#39;Thairath&#39;, &#39;title&#39;: &#39;“ไพบูลย์” รอด ศาลรัฐธรรมนูญวินิจฉัยไม่ต้องพ้น ส.ส. ปมเลิกพรรคย้ายซบ พปชร.&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ อ่านคำวินิจฉัย มีมติเสียงข้างมาก “ไพบูลย์ นิติตะวัน” ไม่ต้องพ้นจากสมาชิกภาพ ส.ส. ปมเลิกพรรคประชาชนปฏิรูป แล้วไปเข้าร่วมกับพรรคพลังประชารัฐ ทั้งที่ไม่มีชื่อเป็นปาร์ตี้ลิสต์&#39;, &#39;url&#39;: &#39;https://www.thairath.co.th/news/politic/2223715&#39;, &#39;urlToImage&#39;: &#39;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUoDzvtXRomoOqmd3D8sdT3vNRryPZg4AWML9UrCXqOBNS6A1u.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-10-20T08:41:00Z&#39;, &#39;content&#39;: &#39;(..) 60 82 () ..2560 91 (7) .. (.) 101 (10) 90 91 (5) 22 .. 2564 ..2561 58 20 .. 2564\r\n 15.20 . ( 20 ) 82 101 (10) 90 91 (5) \r\n“ 101 (10) 90 91 (5)”\r\n .\r\n()&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Blognone.com&#39;}, &#39;author&#39;: &#39;sunnywalker&#39;, &#39;title&#39;: &#39;เว็บไซต์ศาล รธน. ถูกแฮ็ก เปลี่ยนชื่อไซต์เป็น Kangaroo Court หน้าเว็บเป็นเพลง Guillotine&#39;, &#39;description&#39;: &#39;ตอนนี้ เว็บไซต์ศาลรัฐธรรมนูญ www.constitutionalcourt.or.th ถูกแฮ็ก และเปลี่ยนหน้สเว็บไซต์เป็นเพลง Death Grips - Guillotine (It goes Yah และยังเปลี่ยนชื่อไซต์เป็น Kangaroo Court ซึ่งมีความหมายว่าศาลเตี้ยด้วย\r\n\nเมื่อวานนนี้ ศาลรัฐธรรมนูญวินิจฉัยชี้ การชุมนุมของ…&#39;, &#39;url&#39;: &#39;https://www.blognone.com/node/125791&#39;, &#39;urlToImage&#39;: &#39;https://www.blognone.com/sites/default/files/externals/859e67f3e634df4f25f067f19db63593.png&#39;, &#39;publishedAt&#39;: &#39;2021-11-11T05:42:10Z&#39;, &#39;content&#39;: &#39;Creative Commons Attribution 3.0©2004-2019\r\nBlognone.com is owned and operated by Blognone Co., Ltd. (LinkedIn Profile)\r\nBlognone is a subsidiary company of wongnai.com&#39;}, {&#39;source&#39;: {&#39;id&#39;: None, &#39;name&#39;: &#39;Thairath.co.th&#39;}, &#39;author&#39;: &#39;Thairath&#39;, &#39;title&#39;: &#39;22 ธ.ค. ศาลรัฐธรรมนูญอ่านคำวินิจฉัยสมาชิกภาพ ส.ส. “สิระ” ปมคดีฉ้อโกง&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ นัดอ่านคำวินิจฉัยสมาชิกภาพ ส.ส. “สิระ” 22 ธ.ค.นี้ ปมเคยต้องคำพิพากษาอันถึงที่สุดคดีฉ้อโกง ทำให้มีลักษณะต้องห้ามลงสมัคร ส.ส.&#39;, &#39;url&#39;: &#39;https://www.thairath.co.th/news/politic/2239545&#39;, &#39;urlToImage&#39;: &#39;https://static.thairath.co.th/media/HCtHFA7ele6Q2dUMyUm4njYYiXWeMTuLmOAuITAheFR5iV9ACKKcLU2eWGVScYIWl2.jpg&#39;, &#39;publishedAt&#39;: &#39;2021-11-10T12:28:00Z&#39;, &#39;content&#39;: &#39;10 .. 2564 82 (..) 101 (6) 98 (10) ( 1/2564)\r\n () () 812/2538 2218/2538 98 (10) .. 101 (6)\r\n 82 .. \r\n .. 2561 58 22 2564 15.00 . 3 .&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercises-4-news-sentiment">
+<h3>Exercises 4 - News Sentiment<a class="headerlink" href="#exercises-4-news-sentiment" title="Permalink to this headline">#</a></h3>
+<p>Based on exercises 3, group the news by each news source. Does each news source present different sentiment about “เปิดประเทศ”?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
+<span class="n">newsBySource</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">news</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;articles&#39;</span><span class="p">]:</span>
+    <span class="n">sourceName</span> <span class="o">=</span> <span class="n">news</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">sourceName</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">newsBySource</span><span class="p">:</span>
+        <span class="n">newsBySource</span><span class="p">[</span><span class="n">sourceName</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">newsBySource</span><span class="p">[</span><span class="n">sourceName</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">news</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">news</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">newsBySource</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Thairath.co.th&#39;: [{&#39;title&#39;: &#39;รุ้ง-23 องค์กรนักศึกษา โต้ ศาลรัฐธรรมนูญ กระบวนการไต่สวน เตือนระวังพายุใหญ่&#39;, &#39;description&#39;: &#39;23 องค์กร นศ. ฮือค้านคำวินิจฉัยศาลรัฐธรรมนูญ ย้ำกระบวนการไต่สวนไม่เป็นธรรม ปราศจากเจตนาล้มล้างการปกครองฯ หมดสิ้นศรัทธาอำนาจตุลาการ-นิติศาสตร์ไทย เตือนระวังกระแสลมจะทวีจนกลายเป็นพายุ&#39;}, {&#39;title&#39;: &#39;ศาลรธน. ประกาศยกระดับเข้มพื้นที่ รับอ่านคำวินิจฉัยม็อบ 3 นิ้ว พรุ่งนี้&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ แจงเข้มสำนักงาน และศูนย์ราชการเฉลิมพระเกียรติ 80 พรรษา เป็นพื้นที่รักษาความสงบเรียบร้อยวันพรุ่งนี้ ปมเตรียมอ่านคำวินิจฉัย คดีม็อบ 3 นิ้ว เรียกร้องให้ปฏิรูปสถาบัน 10 ข้อ&#39;}, {&#39;title&#39;: &#39;“ไพบูลย์” รอด ศาลรัฐธรรมนูญวินิจฉัยไม่ต้องพ้น ส.ส. ปมเลิกพรรคย้ายซบ พปชร.&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ อ่านคำวินิจฉัย มีมติเสียงข้างมาก “ไพบูลย์ นิติตะวัน” ไม่ต้องพ้นจากสมาชิกภาพ ส.ส. ปมเลิกพรรคประชาชนปฏิรูป แล้วไปเข้าร่วมกับพรรคพลังประชารัฐ ทั้งที่ไม่มีชื่อเป็นปาร์ตี้ลิสต์&#39;}, {&#39;title&#39;: &#39;22 ธ.ค. ศาลรัฐธรรมนูญอ่านคำวินิจฉัยสมาชิกภาพ ส.ส. “สิระ” ปมคดีฉ้อโกง&#39;, &#39;description&#39;: &#39;ศาลรัฐธรรมนูญ นัดอ่านคำวินิจฉัยสมาชิกภาพ ส.ส. “สิระ” 22 ธ.ค.นี้ ปมเคยต้องคำพิพากษาอันถึงที่สุดคดีฉ้อโกง ทำให้มีลักษณะต้องห้ามลงสมัคร ส.ส.&#39;}], &#39;Blognone.com&#39;: [{&#39;title&#39;: &#39;เว็บไซต์ศาล รธน. ถูกแฮ็ก เปลี่ยนชื่อไซต์เป็น Kangaroo Court หน้าเว็บเป็นเพลง Guillotine&#39;, &#39;description&#39;: &#39;ตอนนี้ เว็บไซต์ศาลรัฐธรรมนูญ www.constitutionalcourt.or.th ถูกแฮ็ก และเปลี่ยนหน้สเว็บไซต์เป็นเพลง Death Grips - Guillotine (It goes Yah และยังเปลี่ยนชื่อไซต์เป็น Kangaroo Court ซึ่งมีความหมายว่าศาลเตี้ยด้วย\r\n\nเมื่อวานนนี้ ศาลรัฐธรรมนูญวินิจฉัยชี้ การชุมนุมของ…&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">articles</span> <span class="ow">in</span> <span class="n">newsBySource</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">article</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Thairath.co.th
+23 องค์กร นศ. ฮือค้านคำวินิจฉัยศาลรัฐธรรมนูญ ย้ำกระบวนการไต่สวนไม่เป็นธรรม ปราศจากเจตนาล้มล้างการปกครองฯ หมดสิ้นศรัทธาอำนาจตุลาการ-นิติศาสตร์ไทย เตือนระวังกระแสลมจะทวีจนกลายเป็นพายุ
+ศาลรัฐธรรมนูญ แจงเข้มสำนักงาน และศูนย์ราชการเฉลิมพระเกียรติ 80 พรรษา เป็นพื้นที่รักษาความสงบเรียบร้อยวันพรุ่งนี้ ปมเตรียมอ่านคำวินิจฉัย คดีม็อบ 3 นิ้ว เรียกร้องให้ปฏิรูปสถาบัน 10 ข้อ
+ศาลรัฐธรรมนูญ อ่านคำวินิจฉัย มีมติเสียงข้างมาก “ไพบูลย์ นิติตะวัน” ไม่ต้องพ้นจากสมาชิกภาพ ส.ส. ปมเลิกพรรคประชาชนปฏิรูป แล้วไปเข้าร่วมกับพรรคพลังประชารัฐ ทั้งที่ไม่มีชื่อเป็นปาร์ตี้ลิสต์
+ศาลรัฐธรรมนูญ นัดอ่านคำวินิจฉัยสมาชิกภาพ ส.ส. “สิระ” 22 ธ.ค.นี้ ปมเคยต้องคำพิพากษาอันถึงที่สุดคดีฉ้อโกง ทำให้มีลักษณะต้องห้ามลงสมัคร ส.ส.
+
+Blognone.com
+ตอนนี้ เว็บไซต์ศาลรัฐธรรมนูญ www.constitutionalcourt.or.th ถูกแฮ็ก และเปลี่ยนหน้สเว็บไซต์เป็นเพลง Death Grips - Guillotine (It goes Yah และยังเปลี่ยนชื่อไซต์เป็น Kangaroo Court ซึ่งมีความหมายว่าศาลเตี้ยด้วย
+
+เมื่อวานนนี้ ศาลรัฐธรรมนูญวินิจฉัยชี้ การชุมนุมของ…
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/module8/api"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Attapol Thamrongrattanarit<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
