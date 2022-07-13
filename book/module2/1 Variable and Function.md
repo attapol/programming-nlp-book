@@ -1,4 +1,4 @@
-# Variable and Function
+# Video: ตัวแปรและฟังก์ชัน
 ตัวแปร และฟังก์ชัน
 
 

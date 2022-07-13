@@ -1,5 +1,4 @@
-# Computational Thinking
-ตัวแปร และฟังก์ชัน และ สตริง
-
+# Object-oriented programming
+Object-oriented programming (OOP) 
 ```{tableofcontents}
 ```

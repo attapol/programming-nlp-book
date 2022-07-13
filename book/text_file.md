@@ -1,4 +1,4 @@
-# Computational Thinking
+# การอ่านข้อมูลจากไฟล์
 ตัวแปร และฟังก์ชัน และ สตริง
 
 ```{tableofcontents}

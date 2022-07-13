@@ -1,4 +1,4 @@
-# Computational Thinking
+# การดึงข้อมูลจากอินเตอร์เน็ต
 ตัวแปร และฟังก์ชัน และ สตริง
 
 ```{tableofcontents}

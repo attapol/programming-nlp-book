@@ -1,4 +1,4 @@
-# Programming Basics
+# พื้นฐานการเขียนโปรแกรม
 ตัวแปร และฟังก์ชัน และ สตริง
 
 ```{tableofcontents}

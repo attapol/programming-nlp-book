@@ -1,16 +1,8 @@
-# Welcome to your Jupyter Book
+# Programming for Natural Language Processing
 
-This is a small sample book to give you a feel for how book content is
-structured.
+การประมวลผลภาษาธรรมชาติ คือ การทำให้เครื่องคอมพิวเตอร์เข้าใจภาษา
+ทำให้สามารถทำความเข้าใจข้อมูลภาษาที่มีขนาดใหญ่ ๆ และสามารถประยุกต์ไปใช้สร้างเครื่องมือทางปัญญาประดิษฐ์มากมาย
 
-:::{note}
-Here is a note!
-:::
+หนังสือออนไลน์นี้จะสอนการเขียนโปรแกรมโดยเริ่มจากวิธีการคิดเชิงคำนวณ (Computational thinking) 
+จนไปถึงการใช้ภาษา Python ในการประมวลผลข้อมูลที่เป็นภาษา โดยผู้ศึกษาไม่ต้องมีพื้นฐานการเขียนโปรแกรมมาก่อน
 
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.

@@ -1,5 +1,4 @@
-# Computational Thinking
-ตัวแปร และฟังก์ชัน และ สตริง
-
+# Advanced Python features
+Default argument และ list comprehension
 ```{tableofcontents}
 ```
