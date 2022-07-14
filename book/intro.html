@@ -450,12 +450,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   เริ่มต้นกับภาษา Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive">
+   เขียนโปรแกรมแบบตอบโต้ (Interactive)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   เขียนโปรแกรมใส่ไฟล์และสั่งรันรวดเดียว
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -467,6 +501,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   เริ่มต้นกับภาษา Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive">
+   เขียนโปรแกรมแบบตอบโต้ (Interactive)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   เขียนโปรแกรมใส่ไฟล์และสั่งรันรวดเดียว
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -480,6 +537,78 @@ title="Print to PDF"
 ทำให้สามารถทำความเข้าใจข้อมูลภาษาที่มีขนาดใหญ่ ๆ และสามารถประยุกต์ไปใช้สร้างเครื่องมือทางปัญญาประดิษฐ์มากมาย</p>
 <p>หนังสือออนไลน์นี้จะสอนการเขียนโปรแกรมโดยเริ่มจากวิธีการคิดเชิงคำนวณ (Computational thinking)
 จนไปถึงการใช้ภาษา Python ในการประมวลผลข้อมูลที่เป็นภาษา โดยผู้ศึกษาไม่ต้องมีพื้นฐานการเขียนโปรแกรมมาก่อน</p>
+<div class="section" id="python">
+<h2>เริ่มต้นกับภาษา Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจทำตามคำสั่งที่ป้อนเข้าไป</p>
+<p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นนส่วนหนึ่งของโค้ดเราได้ทันที</p>
+<p>เทอร์มินัล (Terminal) เป็นโปรแกรมที่ทำให้เราสั่งคอมพิวเตอร์ให้ทำงานต่าง ๆ ได้โดยการพิมพ์คำสั่งและกดปุ่ม Enter</p>
+</div>
+<p>Python เป็นชื่อภาษาเขียนโปรแกรม (programming language) เป็นภาษาที่ได้รับความนิยมที่สุดในการประมวลผลและวิเคราะห์ข้อมูลต่าง ๆ ไม่ว่าจะเป็นข้อมูลที่เป็นตัวเลข ข้อมูลที่อยู่ในฐานข้อมูลเรียบร้อยแล้ว หรือข้อมูลที่เป็นภาษา  โปรแกรมชิ้นหนึ่งประกอบด้วยชุดคำสั่งที่เราจะเขียนขึ้นเป็นภาษา Python</p>
+<p>ส่วนประกอบต่าง ๆ ที่จำเป็นในการเขียนโปรแกรมเป็นภาษา Python สามารถดาวน์โหลดพร้อมกันเป็นก้อนเดียวโดยการลงโปรแกรม Anaconda ซึ่งมีเครื่องมือต่าง ๆ ดังต่อไปนี้</p>
+<ul class="simple">
+<li><p>Python Interpreter – ตัวแปลคำสั่งที่เขียนเป็นภาษาไพธอน เป็นภาษาที่เครื่องคอมพิวเตอร์เข้าใจ เพื่อจะได้นำไป execute ตามที่เขียนได้ ต้องสังเกตุ version ที่ใช้ด้วย ขณะนี้แนะนำเป็น 3.9 ซึ่งเป็น version ล่าสุด</p></li>
+<li><p>Python library หลาย ๆ ตัวที่มักใช้จะใช้สำหรับการประมวลผล และวิเคราะห์ข้อมูล ทำให้สะดวกสบายในการลงโปรแกรม</p></li>
+<li><p>Anaconda prompt คือ Terminal ประเภทหนึ่ง ซึ่งมักจะประกอบด้วยหน้าจอสีดำ ๆ และข้อความที่แสดงผลให้ผู้ใช้พิมพ์คำสั่งลงไป Anaconda prompt ลงไปโดยตรง เราจะใช้เทอร์มินัลในการรันคำสั่งลง library ต่าง ๆ และรันคำสั่งในการไฟล์โค้ดไพธอน</p></li>
+<li><p>Interactive Development Environment (IDE)  เป็นหน้าบ้านที่ไว้สำหรับอำนวยความสะดวกในการเขียนโค้ด เช่น มีการเปลี่ยนสีตัวอักษรต่าง ๆ เพื่อให้ดูง่ายขึ้น และสามารถปรับหน้าต่างเพื่อแสดงโค้ดตามความพอใจ</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/vscode.png"><img alt="../_images/vscode.png" class="align-center" src="../_images/vscode.png" style="height: 250px;" /></a>
+<ul class="simple">
+<li><p>Visual Studio Code (VSCode) เป็น IDE ที่มี feature และลูกเล่นมากมายสามารถปรับรูปลักษณ์ตามความชอบได้หลายแบบ รวมถึงรองรับภาษาโปรแกรมมิงหลายภาษา เหมาะกับการเขียนโปรแกรมที่ประกอบด้วยหลาย ๆ ไฟล์ และต้องมีการตรวจสอบโค้ดอย่างรัดกุม เป็น IDE ที่ฟรีและเป็นที่แพร่หลายมากในการเขียนโปรแกรมภาษาไพธอน VSCode สามารถเปิด Terminal ขึ้นมาใช้ในโปรแกรมได้อีกด้วย</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/jupyternb.png"><img alt="../_images/jupyternb.png" class="align-center" src="../_images/jupyternb.png" style="height: 250px;" /></a>
+<ul class="simple">
+<li><p>Jupyter notebook เป็น IDE ที่เบาที่สุด ถูกออกแบบมาเพื่อการวิเคราะห์ข้อมูลโดยเฉพาะ เนื่องจากรองรับการรันโค้ดทีละก้อนเล็ก ๆ และแสดงผลการคำนวณออกมาให้เห็นชัดเจน IDE นี้เรียกว่า notebook เพราะเปรียบเสมือนกับนักวิทยาศาสตร์ข้อมูลทำการวิเคราะห์ข้อมูลและจดบันทึกกระบวนการวิเคราะห์และผลวิเคราะห์ไว้ เพื่อให้ทราบที่มาที่ไปของผลสรุปต่าง ๆ ที่ได้จากการวิเคราะห์ ไฟล์ที่จะสามารถเปิดด้วย jupyter notebook ได้นั้นจะต้องมีนามสกุลไฟล์ (file extension) .ipynb</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/jupyterlab.png"><img alt="../_images/jupyterlab.png" class="align-center" src="../_images/jupyterlab.png" style="height: 250px;" /></a>
+<ul class="simple">
+<li><p>Jupyterlab เป็น IDE ที่เบาและ feature น้อยกว่า VSCode ทำให้ใช้ได้ไม่ยากนักสำหรับมือใหม่ ถูกออกแบบมาเพื่อการประมวลผลและวิเคราะห์ข้อมูลเป็นจุดประสงค์หลัก เหมาะกับการจัดการกับงานที่ต้องอาจจะต้องใช้ไฟล์ข้อมูล หลายไฟล์ และไฟล์ jupyter notebook (.ipynb) หลาย ๆ ไฟล์ และใช้ Terminal ควบคู่ไปกับการทำงานด้วย</p></li>
+</ul>
+</div>
+<div class="section" id="interactive">
+<h2>เขียนโปรแกรมแบบตอบโต้ (Interactive)<a class="headerlink" href="#interactive" title="Permalink to this headline">#</a></h2>
+<p>หลังจากที่ลงโปรแกรม Anaconda เรียบร้อยแล้ว เราสามารถเริ่มเขียนโปรแกรมเป็นภาษาไพธอนได้ทันทีเพื่อทดสอบว่าลงโปรแกรมได้โดยสมบูรณ์แล้ว ให้เริ่มจากการเปิด Anaconda Prompt หรือ Anaconda Powershell ก็ได้ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Windows หรือเปิด Terminal App ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Mac จากนั้นให้พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">ipython</span></code> ลงไปเพื่อเปิด Interactive Python Interpreter (ipython) และลองพิมพ์</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>และกด Enter เพื่อทำการส่งคำสั่งที่เขียนเป็นภาษาไพธอนเพื่อให้ Python interpreter  แปลเป็นภาษาเครื่องและรันคำสั่ง จากนั้นหน้าจอจะแสดงผลดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Python 3.7.6 (default, Jan  8 2020, 13:42:34)
+Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
+IPython 7.29.0 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
+
+In [1]: print(&#39;Hello, world!&#39;)
+Hello, world!
+
+In [2]:
+</pre></div>
+</div>
+<p>โปรแกรม <code class="docutils literal notranslate"><span class="pre">ipython</span></code> เป็นโปรแกรมที่ทำให้เราสามารถพิมพ์คำสั่งภาษาไพธอนและกดรันเพื่อเห็นผลลัพท์ได้ทันที ทำให้เราสามารถตอบโต้กับเครื่องไปมาเป็นภาษาไพธอนได้</p>
+</div>
+<div class="section" id="id1">
+<h2>เขียนโปรแกรมใส่ไฟล์และสั่งรันรวดเดียว<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>Editor โปรแกรมที่ใช้สำหรับเปิดแก้ไขไฟล์</p>
+</div>
+<p>เราได้ลองเขียนโปรแกรมแบบตอบโต้ คราวนี้เราจะลองเขียนโปรแกรมโดยการเขียนคำสั่งทั้งหมดใส่ไว้ในไฟล์ก่อน ซึ่งจะต้องมีสกุลไฟล์ <code class="docutils literal notranslate"><span class="pre">.py</span></code> จากนั้นค่อยสั่งให้ Python interpreter แปลและรันคำสั่งรวดเดียวทีละบรรทัด ให้ทำตามดังนี้</p>
+<ol class="simple">
+<li><p>เปิด Anaconda navigator</p></li>
+<li><p>กด Install (ถ้ายังไม่ได้ install) JupyterLab</p></li>
+<li><p>กด Launch JupyterLab</p></li>
+<li><p>กด File -&gt; New -&gt; Python file และตั้งชื่อว่า <code class="docutils literal notranslate"><span class="pre">myfirstprogram.py</span></code> ไฟล์จะถูกเปิดขึ้นบนหน้าต่างใหม่</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">print('Hello,</span> <span class="pre">world!')</span></code> ใส่ในไฟล์และกด Save</p></li>
+<li><p>กด File -&gt; New -&gt; Terminal เพื่อเปิด Terminal เป็นหน้าต่างใหม่บน JupyterLab หรือจะเปิด Anaconda Powershell (Windows) / Terminal App (Mac) อย่างที่เคยทำมาแล้วก็ได้</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myfirstprogram.py</span></code> ลงไปบนเทอร์มินัล จากนั้นให้กด enter</p></li>
+</ol>
+<p>หน้าต่างเทอร์มินัลจะแสดงผล</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>graphite:te te$ python programming-nlp-book/book/module1/myfirstprogram.py
+Hello, world!
+graphite:te te$ 
+</pre></div>
+</div>
+<p>ในบทต่อไปเราจะเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่านเทอร์มินัลในลักษณะเดียวกันนี้ แนะนำให้ใช้ JupyterLab เป็น editor และรันโปรแกรมผ่านทาง Anaconda Powershell/Terminal App</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
