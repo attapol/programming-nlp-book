@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1. Video: ตัวแปรและฟังก์ชัน" href="module2/1%20Variable%20and%20Function.html" />
+    <link rel="next" title="2.1. ตัวแปร" href="module2/1%20variable.html" />
     <link rel="prev" title="1.1. Placeholder" href="module1/placeholder.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -141,23 +141,28 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/1%20Variable%20and%20Function.html">
-     2.1. Video: ตัวแปรและฟังก์ชัน
+    <a class="reference internal" href="module2/1%20variable.html">
+     2.1. ตัวแปร
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/2%20PC3%20Variables%20Functions%20Modules.html">
-     2.2. โจทย์: ตัวแปร และฟังก์ชัน
+    <a class="reference internal" href="module2/2%20video%20variable.html">
+     2.2. Video: ตัวแปรและฟังก์ชัน
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/3%20Strings.html">
-     2.3. Video: สตริง
+    <a class="reference internal" href="module2/3%20PC3%20Variables%20Functions%20Modules.html">
+     2.3. โจทย์: ตัวแปร และฟังก์ชัน
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/4%20PC4%20Strings.html">
-     2.4. โจทย์: สตริง
+    <a class="reference internal" href="module2/5%20video%20string.html">
+     2.4. Video: สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module2/6%20PC4%20Strings.html">
+     2.5. โจทย์: สตริง
     </a>
    </li>
   </ul>
@@ -478,13 +483,23 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1><span class="section-number">2. </span>พื้นฐานการเขียนโปรแกรม<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>ตัวแปร และฟังก์ชัน และ สตริง</p>
+<div class="admonition- admonition">
+<p class="admonition-title">จุดมุ่งหมายของบทนี้</p>
+<ul class="simple">
+<li><p>การประกาศและให้ค่ากับตัวแปร เพื่อใช้เก็บข้อมูลที่เป็นตัวเลข บูลีน และสตริง</p></li>
+<li><p>การเขียนฟังก์ชันที่มีหลายอาร์กิวเมนต์ (argument)</p></li>
+<li><p>การใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> <code class="docutils literal notranslate"><span class="pre">while</span></code> ร่วมกับตัวแปร</p></li>
+<li><p>การใช้ method ของสตริงที่มักใช้บ่อย</p></li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module2/1%20Variable%20and%20Function.html">2.1. Video: ตัวแปรและฟังก์ชัน</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module2/2%20PC3%20Variables%20Functions%20Modules.html">2.2. โจทย์: ตัวแปร และฟังก์ชัน</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module2/3%20Strings.html">2.3. Video: สตริง</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module2/4%20PC4%20Strings.html">2.4. โจทย์: สตริง</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module2/4%20PC4%20Strings.html#id4">2.5. โจทย์: สตริง (ยาก)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/1%20variable.html">2.1. ตัวแปร</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/2%20video%20variable.html">2.2. Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/3%20PC3%20Variables%20Functions%20Modules.html">2.3. โจทย์: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/5%20video%20string.html">2.4. Video: สตริง</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/6%20PC4%20Strings.html">2.5. โจทย์: สตริง</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module2/6%20PC4%20Strings.html#id4">2.6. โจทย์: สตริง (ยาก)</a></li>
 </ul>
 </div>
 </div>
@@ -523,10 +538,10 @@ title="Print to PDF"
             <p class="prev-next-title"><span class="section-number">1.1. </span>Placeholder</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="module2/1%20Variable%20and%20Function.html" title="next page">
+    <a class='right-next' id="next-link" href="module2/1%20variable.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Video: ตัวแปรและฟังก์ชัน</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>ตัวแปร</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -140,23 +140,28 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/1%20Variable%20and%20Function.html">
-     2.1. Video: ตัวแปรและฟังก์ชัน
+    <a class="reference internal" href="module2/1%20variable.html">
+     2.1. ตัวแปร
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/2%20PC3%20Variables%20Functions%20Modules.html">
-     2.2. โจทย์: ตัวแปร และฟังก์ชัน
+    <a class="reference internal" href="module2/2%20video%20variable.html">
+     2.2. Video: ตัวแปรและฟังก์ชัน
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/3%20Strings.html">
-     2.3. Video: สตริง
+    <a class="reference internal" href="module2/3%20PC3%20Variables%20Functions%20Modules.html">
+     2.3. โจทย์: ตัวแปร และฟังก์ชัน
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/4%20PC4%20Strings.html">
-     2.4. โจทย์: สตริง
+    <a class="reference internal" href="module2/5%20video%20string.html">
+     2.4. Video: สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module2/6%20PC4%20Strings.html">
+     2.5. โจทย์: สตริง
     </a>
    </li>
   </ul>
@@ -535,13 +540,13 @@ title="Print to PDF"
 <h1>Programming for Natural Language Processing<a class="headerlink" href="#programming-for-natural-language-processing" title="Permalink to this headline">#</a></h1>
 <p>การประมวลผลภาษาธรรมชาติ คือ การทำให้เครื่องคอมพิวเตอร์เข้าใจภาษา
 ทำให้สามารถทำความเข้าใจข้อมูลภาษาที่มีขนาดใหญ่ ๆ และสามารถประยุกต์ไปใช้สร้างเครื่องมือทางปัญญาประดิษฐ์มากมาย</p>
-<p>หนังสือออนไลน์นี้จะสอนการเขียนโปรแกรมโดยเริ่มจากวิธีการคิดเชิงคำนวณ (Computational thinking)
+<p>หนังสือออนไลน์ชิ้นนี้จะสอนการเขียนโปรแกรมโดยเริ่มจากวิธีการคิดเชิงคำนวณ (Computational thinking)
 จนไปถึงการใช้ภาษา Python ในการประมวลผลข้อมูลที่เป็นภาษา โดยผู้ศึกษาไม่ต้องมีพื้นฐานการเขียนโปรแกรมมาก่อน</p>
 <div class="section" id="python">
 <h2>เริ่มต้นกับภาษา Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
 <div class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจทำตามคำสั่งที่ป้อนเข้าไป</p>
+<p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจและกระทำการ (execute) ตามคำสั่งที่ป้อนเข้าไป</p>
 <p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นนส่วนหนึ่งของโค้ดเราได้ทันที</p>
 <p>เทอร์มินัล (Terminal) เป็นโปรแกรมที่ทำให้เราสั่งคอมพิวเตอร์ให้ทำงานต่าง ๆ ได้โดยการพิมพ์คำสั่งและกดปุ่ม Enter</p>
 </div>
@@ -601,13 +606,12 @@ In [2]:
 <li><p>กด File -&gt; New -&gt; Terminal เพื่อเปิด Terminal เป็นหน้าต่างใหม่บน JupyterLab หรือจะเปิด Anaconda Powershell (Windows) / Terminal App (Mac) อย่างที่เคยทำมาแล้วก็ได้</p></li>
 <li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myfirstprogram.py</span></code> ลงไปบนเทอร์มินัล จากนั้นให้กด enter</p></li>
 </ol>
-<p>หน้าต่างเทอร์มินัลจะแสดงผล</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>graphite:te te$ python programming-nlp-book/book/module1/myfirstprogram.py
+<p>หน้าต่างเทอร์มินัลจะแสดงคำว่า <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code> แต่ว่าเทอร์มินัลของแต่ละเครื่องก็จะต่่างกันไป</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>graphite:te te$ python myfirstprogram.py
 Hello, world!
-graphite:te te$ 
 </pre></div>
 </div>
-<p>ในบทต่อไปเราจะเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่านเทอร์มินัลในลักษณะเดียวกันนี้ แนะนำให้ใช้ JupyterLab เป็น editor และรันโปรแกรมผ่านทาง Anaconda Powershell/Terminal App</p>
+<p>ในบทนี้เราเรียนรู้เกี่ยวกับส่วนประกอบต่าง ๆ ที่รับโค้ดที่เป็นคำสั่งภาษาไพธอน แปลผล และกระทำการตามคำสั่ง เราได้ติดตั้ง Python interpreter และ IDE ต่าง ๆ ที่จะช่วยอำนวยความสะดวกในการเขียนและรันโค้ด ในบทต่อไปเราจะเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่านเทอร์มินัลในลักษณะเดียวกันนี้ แนะนำให้ใช้ JupyterLab เป็น editor และรันโปรแกรมผ่านทาง Anaconda Powershell/Terminal App</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
