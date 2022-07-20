@@ -3,8 +3,6 @@
 
 format: jb-book
 root: book/intro
-options:
-  numbered: true
 chapters:
 - file: book/comp_thinking
   sections:
