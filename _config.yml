@@ -14,7 +14,7 @@ logo                        : book/logo.png  # A path to the book logo
 execute:
   execute_notebooks: off
 
-only_build_toc_files: true
+exclude_patterns: [README.md]
 
 # Define the name of the latex output file for PDF builds
 latex:
