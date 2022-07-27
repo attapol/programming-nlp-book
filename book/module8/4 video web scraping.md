@@ -10,8 +10,8 @@ Web scraping
 ## HTML ขั้นพื้นฐาน
 <iframe width="560" height="315" src="https://www.youtube.com/embed/89Ye0MwyjlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## การใช้งานแพคเกจ BeautifulSoup
+## การใช้งานแพคเกจ `BeautifulSoup`
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_22E74jmYWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## ตัวอย่างการใช้งานแพคเกจ BeautifulSoup บน HTML
+## ตัวอย่างการใช้งานแพคเกจ `BeautifulSoup`บน HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HN595s7Viww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
