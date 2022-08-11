@@ -1,0 +1,1302 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>การคิดเชิงคำนวณ (Computational Thinking) &#8212; Programming for NLP</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="2-videos-karel.html" />
+    <link rel="prev" title="Computational Thinking" href="../comp_thinking.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Programming for Natural Language Processing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../comp_thinking.html">
+   Computational Thinking
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     การคิดเชิงคำนวณ (Computational Thinking)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="placeholder.html">
+     Placeholder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics.html">
+   พื้นฐานการเขียนโปรแกรม
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/1-variable.html">
+     ตัวแปรและฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/2-videos-variable.html">
+     Video: ตัวแปรและฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/3-PC3%20Variables%20Functions%20Modules.html">
+     โจทย์: ตัวแปร และฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/4-string.html">
+     สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/5-videos.string.html">
+     Video: สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/6-PC4%20Strings.html">
+     โจทย์: สตริง
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_structure1.html">
+   Data Structure I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/2%20video%20list.html">
+     Video: List and Data Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/3-PC5%20Lists.html">
+     โจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/5%20video%20dictionary.html">
+     Video: Dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/6-PC6%20Dictionary%20and%20Reading%20from%20Files.html">
+     โจทย์: ดิกชันนารี
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../text_file.html">
+   การอ่านข้อมูลจากไฟล์
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/2%20video%20file.html">
+     Video: file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/4%20video%20Reg%20Ex.html">
+     Video: Regular Expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/PC7%20Regular%20Expression.html">
+     โจทย์: Regular Expression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_structure2.html">
+   Data Structure II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module5/2%20video%20set.html">
+     Video: Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module5/4%20video%20advance%20list.html">
+     Video: Advance list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module5/6%20video%20advance%20dictionary.html">
+     Video: Advance dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module5/PC8b%20Set%2C%20List%20of%20x.html">
+     1. Unique Words
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../oop.html">
+   Object-oriented programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module6/2%20video%20OOP.html">
+     Video: Object-Oriented Programming
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nlp.html">
+   Natural Language Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/2%20video%20NLP.html">
+     Video: Natural Language Processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/LDA%20workshop.html">
+     LDA Workshop
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/Text%20Processing%20Workshop.html">
+     ตัดคำ word tokenization ภาษาไทย
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../scraping.html">
+   การดึงข้อมูลจากอินเตอร์เน็ต
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/2%20video%20API.html">
+     Video: Serialization and API call
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/4%20video%20web%20scraping.html">
+     Video: Web scraping
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pythonic.html">
+   Advanced Python features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/2%20video%20Advance%20Pyhton.html">
+     Video: Advance Python features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/PC9%20Python%20tricks.html">
+     Problem 1: List comprehension 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/attapol/programming-for-nlp"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module1/1-karel.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/book/module1/1-karel.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#karel">
+   Karel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   โปรแกรม ฟังก์ชัน และการย่อยโจทย์
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อควรระวัง
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-for-loop">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-while-loop">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-if-else-elif">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+    <span class="pre">
+     else
+    </span>
+    <span class="pre">
+     elif
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-while">
+     ข้อแตกต่างระหว่าง
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     กับ
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean">
+   Boolean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   การเขียน algorithm
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>การคิดเชิงคำนวณ (Computational Thinking)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#karel">
+   Karel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   โปรแกรม ฟังก์ชัน และการย่อยโจทย์
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อควรระวัง
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-for-loop">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-while-loop">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow-if-else-elif">
+   Control flow -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+    <span class="pre">
+     else
+    </span>
+    <span class="pre">
+     elif
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-while">
+     ข้อแตกต่างระหว่าง
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     กับ
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean">
+   Boolean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithm">
+   การเขียน algorithm
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="computational-thinking">
+<h1>การคิดเชิงคำนวณ (Computational Thinking)<a class="headerlink" href="#computational-thinking" title="Permalink to this headline">#</a></h1>
+<p>หลักสำคัญของการเขียนโปรแกรมไม่ใช่การจำคำสั่งให้ได้ แต่ว่าเป็นการนำคำสั่งมาประกอบรวมกันเพื่อสั่งให้เครื่องทำงานตามที่เราตั้งใจไว้ได้</p>
+<p>เวลาเราได้โจทย์มาหนึ่งโจทย์ เช่น ดึงข้อมูล comment บนโลกโซเชียลลงมาเพื่อวิเคราะห์ว่าคนกำลังสนใจผู้สมัครผู้ว่าฯ คนไหนมากที่สุด จะเห็นว่าเป็นโจทย์ที่ใหญ่มาก ไม่รู้เลยว่าจะเริ่มจากตรงไหนก่อน หลัก Computational thinking เป็นหลักการที่ทำให้เราแก้โจทย์การเขียนโปรแกรมเหล่านี้ ซึ่งประกอบไปด้วย 4 หลัก</p>
+<ol class="simple">
+<li><p>การย่อยโจทย์ (decomposition) คือ การพิจารณาโจทย์แล้วแจกแจงออกมาว่ามีโจทย์ย่อย ๆ อะไรบ้าง เช่น ถ้าเราต้องการประกอบตู้ลิ้นชักใส่เสื้อผ้า เราจะต้องย่อยเป็นการประกอบลิ้นชัก ประกอบโครงตู้ ประกอบขาตู้ และการประกอบส่วนต่าง ๆ มาเป็นส่วนเดียว</p></li>
+<li><p>การสังเกตหาแพทเทิร์น (pattern recognition) คือ การหาสิ่งที่โจทย์ย่อยนั้นมีเหมือน ๆ กัน เช่น ถ้าเราใช้ตัวอย่างการประกอบตู้ลิ้นชักใส่เสื่อผ้า โจทย์การประกอบตัวลิ้นชักเองมีแพทเทิร์นของมันอยู่ ก็คือเป็นกล่องที่เราต้องขันน็อตทั้งสี่ข้าง และต้องขันมือจับข้างหน้า ไม่ว่าจะเป็นลิ้นชักเล็กหรือใหญ่ ก็จะมีแพทเทิร์นการประกอบเหมือนกันอยู่ เพียงแต่เราต้องหามุมในการขันน็อตให้เจอ</p></li>
+<li><p>การมองแบบนามธรรม (abstraction) คือ การแยกออกมาว่าแก่นสำคัญของโจทย์ทั้งหมดนั้นเป็นอย่างไร เช่น ลิ้นชักทั้งหมดที่มีขายอยู่ในท้องตลาดก็มีจะมีส่วนประกอบเหมือนกันหมด คือรูปทรงเป็นกล่องสี่เหลี่ยม ข้างบนเปิด มีที่จับสำหรับดึงออกมาได้ ซึ่งสิ่งเหล่านี้เป็นส่วนประกอบที่เป็นแก่นของโจทย์การประกอบลิ้นชัก แต่ว่าความกว้าง ความยาว วัสดุของลิ้นชักเอง หรือรูปร่างของหูจับจะเป็นอย่างไรนั้นเป็นรายละเอียดของตู้ลิ้นชักแต่ละยีห่้อ แต่ละขนาด แต่ละประเภท ซึ่งไม่ได้เป็นส่วนหนึ่งของแก่นของโจทย์</p></li>
+<li><p>การออกแบบอัลกอริธึม (algorithm) คือกระบวนการแก้ปัญหาที่มีขั้นตอนชัดเจนจนสามารถสั่งให้เครื่องทำแทนเราได้ เช่น อัลกอริธึมของการประกอบตู้ลิ้นชักใส่เสื้อผ้า คือ</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">ไล่ประกอบขาตู้</span> <span class="n">แล้วเอาพักไว้ก่อน</span>
+<span class="mf">2.</span> <span class="n">ประกอบโครงตู้</span> <span class="n">แล้วเอาพักไว้ก่อน</span>
+<span class="mf">3.</span> <span class="n">ประกอบผลลัพท์จาก</span> <span class="mi">1</span> <span class="n">และ</span> <span class="mi">2</span>
+<span class="mf">4.</span> <span class="n">ถ้าตู้มี</span> <span class="n">k</span> <span class="n">ลิ้นชัก</span> <span class="n">ไล่ประกอบตัวลิ้นชักจนครบ</span> <span class="n">k</span> <span class="n">อัน</span>
+<span class="mf">5.</span> <span class="n">สอดลิ้นชักทั้ง</span> <span class="n">k</span> <span class="n">อันเข้าไปในโครงตู้</span>
+</pre></div>
+</div>
+<p>สังเกตว่าอัลกอริธึมข้างบนมีการย่อยโจทย์ออกมาเป็นส่วนๆ เพื่อแยกแก้ และมีการ abstraction ออกมาโดยไม่สนว่าลิ้นชักที่ต้องการประกอบนั้นจะมีกี่อันก็ตาม จะมีขนาดไหนก็ตาม อัลกอริธึมนี้ก็จะสามารถแก้ได้</p>
+<div class="section" id="karel">
+<h2>Karel<a class="headerlink" href="#karel" title="Permalink to this headline">#</a></h2>
+<p>ทักษะการคิดเชิงคำนวณดังตัวอย่างที่ยกขึ้นมานี้เป็นทักษะสำคัญที่สุดในการเขียนโปรแกรมซึ่งเราจะฝึกฝนกันในบทนี้โดยการใช้โปรแกรมที่ชื่อว่าแคเริลตัวแคเริลเป็นหุ่นยนต์ตัวเล็ก ๆ เดินไปเดินมาในโลกสี่เหลี่ยมเล็ก ๆ เราสามารถเขียนภาษาไพธอนให้แคเริลเดินไปตามคำสั่งของเรา เพื่อแก้โจทย์ต่าง ๆ ที่กำหนดได้ เราจะใช้แคเริลเป็นของเล่นในการฝึก computational thinking ก่อนที่จะเร่ิมเขียนเป็นภาษาไพธอนจริง ๆ กับโจทย์จริง ซึ่งจะต้องจำคำสั่งเพ่ิมอีกมาก จุดประสงค์ของการเล่นกับแคเริลช่วยฝึกทักษะการคิดแบบนักเขียนโปรแกรมโดยที่ไม่ต้องจำคำสั่งมากมาย</p>
+<p>Karel สามารถเดินไปข้างหน้าได้ทีละก้าว แต่ไม่สามารถทะลุกำแพงได้ ถ้าเดินชนกำแพงโปรแกรมจะเกิด error ซึ่งก็คือแคเริลพัง โจทย์ในโลกของแคเริลจะวางแคเริลไว้ที่จุดเริ่มต้น และกำหนดว่าโลกที่ให้มาขนาดเท่าไร มีกำแพงตรงไหนบ้าง และตัวกระดิ่ง (beeper) อยู่ตรงไหนบ้าง ซึ่งแคเริลสามารถเก็บขึ้นมาหรือวาง beeper ตามจุดต่าง ๆ ได้ แต่ถ้าหากพยายามหยิบ beeper ในจุดที่ไม่มี beeper โปรแกรมก็จะเกิด error เช่นกัน คำสั่งที่ใช้ในการแก้โจทย์มีดังนี้</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">move()</span></code></p></td>
+<td><p>ส่ังให้แคเริลเดินไปข้างหน้า ถ้าข้างหน้ามีกําแพงมันจะชนและเกิด error</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">turn_left()</span></code></p></td>
+<td><p>สั่งให้แคเริลเลี้ยวซ้าย</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">put_beeper()</span></code></p></td>
+<td><p>วางกระดิ่งหน่ึงอันไว้บนจุดท่ียืนอยู่</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code></p></td>
+<td><p>เก็บกระดิ่งข้ึนมาหน่ึงอันจากจุดท่ียืนอยู่ (ถ้าไม่มีกระดิ่งจะเกิด error</p></td>
+</tr>
+</tbody>
+</table>
+<p>สั่งการหุ่นยนต์แคเริลด้วยภาษาไพธอน</p>
+<a class="reference internal image-reference" href="../../_images/karel-ex1.png"><img alt="../../_images/karel-ex1.png" class="align-center" src="../../_images/karel-ex1.png" style="height: 150px;" /></a>
+<p>วิธีการแก้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">move</span><span class="p">()</span>
+<span class="n">pick_beeper</span><span class="p">()</span>
+<span class="n">turn_left</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">turn_left</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="n">put_beeper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>โปรแกรม ฟังก์ชัน และการย่อยโจทย์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>สมมติว่าเรามีโจทย์คือ ให้แคเริลไปหยิบ beeper ตรงหน้าเนินแล้วเดินข้ามเนินไปวาง beeper ที่คอลัมน์ที่ 5 ตามภาพข้างล่าง (ภาพซ้ายคือจุดเริ่มต้น ภาพขวาคือจุดมุ่งหมาย)</p>
+<a class="reference internal image-reference" href="../../_images/karel-ex2.png"><img alt="../../_images/karel-ex2.png" class="align-center" src="../../_images/karel-ex2.png" style="height: 150px;" /></a>
+<p>เป็นโจทย์ที่ยังไม่ต้องคิดอะไรมากมาย สมมติเราเขียนโค้ดไพธอนเก็บไว้ในไฟล์ <code class="docutils literal notranslate"><span class="pre">my_karel_first.py</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># โปรแกรมสำหรับแก้โจทย์แรกในบทนี้</span>
+<span class="kn">from</span> <span class="nn">stanfordkarel</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">pick_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run_karel_program</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ส่วนประกอบของโปรแกรมในไฟล์นี้มีดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># โปรแกรมสำหรับแก้โจทย์แรกในบทนี้</span>
+</pre></div>
+</div>
+<p>ข้อความที่นำด้วย <code class="docutils literal notranslate"><span class="pre">#</span></code> เรียกว่า comment เขียนเอาไว้เพื่อให้คนอื่นมาอ่าน จะได้ทราบว่าโปรแกรมนี้ทำงานอย่างไร มีข้อควรรู้อะไรบ้าง เผื่อว่าคนอื่นอาจจะนำโปรแกรมของเราไปใช้ต่อ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>`from stanfordkarel import *`
+</pre></div>
+</div>
+<p>บอกให้โปรแกรมนี้ import ทุกคำสั่งมาจากไลบรารี <code class="docutils literal notranslate"><span class="pre">stanfordkarel</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">pick_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ส่วนนี้เรียกว่าฟังก์ชัน ลักษณะที่สำคัญของฟังก์ชันคือมี</p>
+<ul class="simple">
+<li><p>function header ซึ่งประกอบด้วย</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> เป็น keyword ที่ใช้สำหรับประกาศฟังก์ชันใหม่</p></li>
+<li><p>ชื่อฟังก์ชันซึ่งตามมาหลัง <code class="docutils literal notranslate"><span class="pre">def</span></code> และตามด้วย <code class="docutils literal notranslate"><span class="pre">():</span></code></p></li>
+</ul>
+</li>
+<li><p>body ของฟังก์ชัน ซึ่งก็คือรายการคำสั่งต่าง ๆ ซึ่งจะต้องมีการย่อหน้า (indent) เข้ามาในทุกบรรทัด เพื่อบอกให้รู้ว่าคำสั่งใน body เป็นส่วนหนึ่งของฟังก์ชันนี้</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run_karel_program</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ตรงส่วนนี้จะสั่งให้เริ่มต้นที่ฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">main</span></code> และโหลดหน้าต่างที่มีตัวแคเริลแสดงผลอยู่ ส่วนนี้ของโปรแกรมเราอาจจะยังไม่เข้าใจทั้งหมด แต่ว่าให้ข้ามส่วนนี้ไปก่อน</p>
+<p>เราสังเกตอย่างแรกคือว่าโค้ดของเราค่อนข้างยาวและทำความเข้าใจได้ยาก เราต้องมานั่งวาดรูปและไล่ดูว่าแต่ละส่วนของโค้ดมีไว้ทำอะไร ซึ่งตรงนี้ทำให้เราแก้ไขโค้ดได้ยาก จัดว่าเป็นโค้ดที่ไม่ค่อยดี เราจะทำการสร้างฟังก์ชันขึ้นมาใหม่</p>
+<p>ก่อน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">pick_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span> <span class="c1"># &lt;---แทนด้วยฟังก์ชันใหม่</span>
+    <span class="n">turn_left</span><span class="p">()</span> <span class="c1">#</span>
+    <span class="n">turn_left</span><span class="p">()</span> <span class="c1">#</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>หลัง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">pick_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span> <span class="c1"># &lt;---แทนด้วยฟังก์ชันใหม่</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+	<span class="n">turn_left</span><span class="p">()</span>
+	<span class="n">turn_left</span><span class="p">()</span>
+	<span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>การสร้างฟังก์ชัน (function defintion/declaration) คือ เขียนฟังก์ชันขึ้นมาใหม่ และตั้งชื่อของฟังก์ชันเพื่อให้พร้อมกับนำไปใช้</p>
+<p>การเรียกฟังก์ชัน (function call) คือการนำฟังก์ชันที่เราได้สร้างไว้เรียบร้อยแล้วมาใช้</p>
+</div>
+<p>เราได้สร้างฟังก์ชันใหม่ขึ้น <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> ซึ่งทำให้โค้ดอ่านง่ายขึ้นเนื่องจากเราลดปริมาณโค้ดที่อยู่ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> ลงไป</p>
+<p>เมื่อเราสร้างฟังก์ชันแล้ว เราสามารถเรียกฟังก์ชันนั้น (function call) จากฟังก์ชันอื่น ๆ ได้ วิธีการเรียกคือพิมพ์ชื่อของฟังก์ชันตามด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งขาดไม่ได้ ดังนั้นคำสั่ง<code class="docutils literal notranslate"><span class="pre">move()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code> คือการเรียกฟังก์ชันเช่นเดียวกัน แต่ว่าฟังก์ชันเหล่านี้เราไม่ต้องตั้งขึ้นมาใหม่ เพราะเราได้ import เข้ามาแล้ว</p>
+<p>สรุปส่วนต่าง ๆ ของฟังก์ชันมีดังนี้</p>
+<a class="reference internal image-reference" href="../../_images/function.png"><img alt="../../_images/function.png" class="align-center" src="../../_images/function.png" style="height: 150px;" /></a>
+</div>
+<div class="section" id="id2">
+<h2>ข้อควรระวัง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>การสร้างฟังก์ชันต้องมีรูปแบบตามที่ภาษาไพธอนกำหนดทุกประการ เครื่องคอมพิวเตอร์เป็นสิ่งที่ฉลาดแต่ว่าเราต้องสื่อสารกับคอมพิวเตอร์แบบถูกไวยากรณ์ทุกประการ ถ้าหากเราลืมอย่างใดอย่างหนึ่ง จะถือว่าผิดไวยากรณ์และ python interpreter จะโยน error (throw) มาให้เราตอนที่เราพยายามรันโค้ด และหยุดการรันโค้ดทันที เช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_first_karel.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span>
+   <span class="n">move</span><span class="p">()</span>
+      <span class="o">^</span>
+<span class="ne">IndentationError</span><span class="p">:</span> <span class="n">expected</span> <span class="n">an</span> <span class="n">indented</span> <span class="n">block</span>
+</pre></div>
+</div>
+<p>python interpreter โยน <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code> มาให้ถ้าเราลืมกั้นย่อหน้าให้คำสั่ง <code class="docutils literal notranslate"><span class="pre">move()</span></code> ในบรรทัดที่ 5</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_first_karel.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span>
+    <span class="k">def</span> <span class="nf">main</span><span class="p">()</span>
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+<p>python interpreter โยน <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> มาให้ถ้าเราลืม<code class="docutils literal notranslate"><span class="pre">:</span></code> ท้าย function header ในบรรทัดที่ 4 เพื่อแจ้งให้ทราบว่าเราเขียนโค้ดผิดไวยากรณ์ หรือถ้าเราลืม <code class="docutils literal notranslate"><span class="pre">()</span></code> ก็จะได้ <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> เช่นกัน</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_first_karel.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span>
+    <span class="k">def</span> <span class="nf">main</span><span class="p">:</span>
+            <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+<p>พอเราเรียนรู้การใช้คำสั่งใหม่ ๆ เพิ่มขึ้นเราจะเห็น error ชนิดต่าง ๆ เพิ่มขึ้น ซึ่งคนเขียนโปรแกรมควรจะอ่านเป็นว่า python interpreter พยายามนำอะไรมาฟ้องเราเพื่อให้เราแก้ไข ทำให้โค้ดทำงานได้ถูกต้อง</p>
+</div>
+<div class="section" id="id3">
+<h2>การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>ทุกโจทย์การเขียนโปรแกรมที่เราได้มา เราต้องเริ่มจากการทำ decomposition ก่อน เพราะว่าโจทย์เล็กๆ หลายๆ อัน ง่ายกว่าการแก้โจทย์ใหญ่โจทย์เดียว ที่ง่ายกว่าก็เพราะว่าเราสามารถทดสอบ solution ของเราเป็นส่วน ๆ ได้ง่ายขึ้น</p>
+<p>ลองดูตัวอย่างโจทย์ว่าแคเริลยืนอยู่บนถนนที่เป็นหลุมเป็นบ่อที่ต้องเอา beeper ลงไปอุดเพื่อทำให้ถนนเรียบ ๆ เดินง่าย สมมติว่าโลกที่แคเริลเริ่มต้นเป็นแบบภาพซ้ายด้านล่าง พอเรารันโปรแกรมโดยสมบูรณ์แล้วจะออกมาหน้าตาเหมือนกับภาพขวาล่าง</p>
+<a class="reference internal image-reference" href="../../_images/repair-road.png"><img alt="../../_images/repair-road.png" class="align-center" src="../../_images/repair-road.png" style="height: 200px;" /></a>
+<p>จริงๆ แล้วก็ยังเป็นโจทย์ที่ไม่ได้ยากซับซ้อนมากนัก Solution ที่เราได้มาโดยไม่อาศัยการคิดแบบการคิดเชิงคำนวณเลยจะออกมาประมาณนี้ (เราจะดูเฉพาะฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> และ assume ว่าเราได้ import ไลบรารีต่าง ๆ และเก็บโค้ดลงในไฟล์ .py เป็นที่เรียบร้อยแล้ว)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="c1"># ไม่สมบูรณ์ยังมีต่ออีก...	</span>
+</pre></div>
+</div>
+<p>สังเกตอย่างแรกคือ เป็นโค้ดที่ยาวเหยียดมาก และเข้าใจได้ยากถ้าเราเลือกโค้ดขึ้นมาสักบรรทัด เราจะบอกไม่ได้เลยว่า ณ จุดนั้นแคเริลยืนอยู่ในไหนในโลก หันหน้าไปทางไหนอยู่</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>การย่อยโจทย์ เป็นขั้นตอนที่ 1 ของการคิดเขิงคำนวณ</p>
+</div>
+<p>เราจะลองแก้โจทย์นี้ใหม่อีกรอบโดยการใช้การย่อยโจทย์ โจทย์นี่้ที่จริงแล้วสามารถย่อยลงเป็น 3 โจทย์ย่อย</p>
+<ol class="simple">
+<li><p>ซ่อมหลุมแรก</p></li>
+<li><p>เดินไปหน้าหลุมไปที่สอง</p></li>
+<li><p>ซ่อมหลุมที่ 2</p></li>
+</ol>
+<p>เราจะแก้โจทย์ย่อยแต่ละโจทย์นี้โดยการใช้ฟังก์ชัน 3 ฟังก์ชันนี้ตามลำดับ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole1</span><span class="p">():</span>
+	<span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">move_to_next_hole</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">fill_hole2</span><span class="p">():</span>
+	<span class="k">pass</span>
+</pre></div>
+</div>
+<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">pass</span></code> ใส่ไว้เพื่อจองที่ไว้สำหรับการเขียนโค้ดจริงๆ สำหรับฟังก์ชันนั้น ในกรณีนี้เราเขียนโครงของฟังก์ชันทิ้งไว้ก่อนที่จะเริ่มลงรายละเอียดของแต่ละฟังก์ชันจริง ๆ</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>การมองหาแพทเทิร์น เป็นขั้นตอนที่ 2 ของการคิดเขิงคำนวณ</p>
+</div>
+<p>แต่ถ้าเราสังเกตดูดี ๆ เราจะเห็นว่าโจทย์ที่ 1 กับโจทย์ที่ 3 เป็นโจทย์เดียวกัน เพราะเป็นแพทเทิร์นเดียวกัน ตามกรอบสีแดงข้างล่าง</p>
+<a class="reference internal image-reference" href="../../_images/deposed-repair-road.png"><img alt="../../_images/deposed-repair-road.png" class="align-center" src="../../_images/deposed-repair-road.png" style="height: 200px;" /></a>
+<p>เพราะฉะนั้นเราสามารถเรียกใช้ฟังก์ชันได้สองรอบ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">fill_hole</span><span class="p">()</span>
+	<span class="n">move_to_next_hole</span><span class="p">()</span>
+	<span class="n">fill_hole</span><span class="p">()</span>
+	
+<span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
+	<span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">move_to_next_hole</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>ยิ่งประหยัดโค้ดลงแค่ไหน ยิ่งทำให้ลดโอกาสที่จะเขียนโปรแกรมที่ผิดพลาดได้มากขึ้น</p>
+</div>
+<p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> ดูเรียบง่ายและเข้าใจง่ายกว่าของเดิมเยอะมาก เพราะเราย่อยโจทย์อกมาเป็นส่วนย่อย ๆ รวมกับการมองหาแพทเทิร์น ทำให้ปริมาณโค้ดที่เราต้องเขียนน้อยลงด้วย ทำให้เกิดข้อผิดพลาดน้อยลง</p>
+<p>ตอนนี้เท่ากับว่าฟังก์ชันที่ต้องเขียนมีแค่ <code class="docutils literal notranslate"><span class="pre">fill_hole()</span></code> เท่านั้นที่เราจะนำไปใช้ถึง 2 ครั้งโดยที่เราเขียนฟังก์ชันนี้ขึ้นมารอบเดียว ฟังก์ชันนี้เรายังสามารถใช้หลักการย่อยโจทย์เพื่อย่อยลงไปได้อีก</p>
+<ol class="simple">
+<li><p>กระโดดลงไปในหลุม</p></li>
+<li><p>วาง beeper</p></li>
+<li><p>กระโดดออกมานอกหลุม</p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>implement แปลว่า เริ่มเขียนโค้ดจริงๆ หลังจากที่ได้มีคิดคำนวณ วางแผนไว้เรียบร้อยแล้ว ซึ่งตรงกับขั้นตอนที่ 4 ของการคิดเชิงคำนวณ</p>
+</div>
+<p>เราสามารถเริ่ม implement อัลกอริธึมได้เลย</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
+	<span class="n">jump_in</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">jump_out</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">jump_in</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">jump_out</span><span class="p">():</span>
+	<span class="n">turn_around</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>โค้ดข้างบนนี้ทำให้เราเห็นแพทเทิร์นอีกอย่าง นั่นก็คือ <code class="docutils literal notranslate"><span class="pre">jump_in()</span></code> กับ <code class="docutils literal notranslate"><span class="pre">jump_out()</span></code> มีส่วนที่เหมือนกันอยู่ถึงสามบรรทัด นั่นก็คือ <code class="docutils literal notranslate"><span class="pre">move()</span> <span class="pre">turn_right()</span> <span class="pre">move()</span></code> นั่นก็คือการเดินเป็นรูปตัว L ทำให้เราสามารถเขียนฟังก์ชันมาใช้ซ้ำๆ ได้อีก</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
+	<span class="n">move_L</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">jump_out</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">move_L</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_right</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">jump_out</span><span class="p">():</span>
+	<span class="n">turn_around</span><span class="p">()</span>
+	<span class="n">moveL</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ในการแก้โจทย์แคเริลซ่อมถนนข้อนี้ เราได้ใช้การย่อยโจทย์ การมองหาแพทเทิร์น และการเขียนอัลกอริธึม ซึ่งเป็น 3 ใน 4 ของหลักการคิดเชิงคำนวณ เราได้่ข้ามการมองแบบนามธรรมไปในโจทย์ข้อนี้ เราจะมาแก้โจทย์ที่ยากขึ้นเรื่อย ๆ ซึ่งเราจะเห็นต่อไปว่าขั้นตอนการมองแบบนามธรรมจะมีส่วนช่วยอย่างมาก</p>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>control flow เป็นลักษณะพิเศษของภาษาคอมพิวเตอร์ท่ีควบคุมลําดับการรันโปรแกรม ว่าบรรทัดไหนเกิดก่อนหลัง ก่ีคร้ัง</p>
+</div>
+</div>
+<div class="section" id="control-flow-for-loop">
+<h2>Control flow - <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#control-flow-for-loop" title="Permalink to this headline">#</a></h2>
+<p>โปรแกรมที่เราเขียนมาทั้งหมดถึงตอนนี้รันโค้ดจากบรรทัดแรกไปถึงบรรทัดสุดท้าย โดยอาจจะมีการกระโดดไปรันฟังก์ชันย่อยอื่น ๆ บ้าง แต่ว่าก็รันเรียงลำดับจากบรรทัดแรกไปบรรทัดสุดท้าย ภาษาคอมพิวเตอร์มีสิ่งที่เรียกว่า control flow ซึ่งก็คือคำสั่งที่พิเศษที่ทำให้เราเลือกได้ว่าจะรันโค้ดส่วนไหนบ้าง จะรันกี่ครั้ง ทำให้เราเขียนโปรแกรมแก้โจทย์ได้อย่างหลากหลายมากขึ้น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+		<span class="n">put_beeper</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_around</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ซึ่งเท่ากับว่าเรารัน code block ที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ทั้งหมด 5 ครั้ง (นักเขียนโปรแกรมมักเรียกว่า <em>for loop ไป 5 รอบ</em>) หรือเท่ากับรันโค้ดดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">put_beeper</span><span class="p">()</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="n">turn_around</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>การใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ทำให้เรารันคำสั่งซ้ำๆ ได้โดยที่เราไม่ต้องเขียนโค้ดซ้ำ ๆ เท่าจำนวนรอบที่เราต้องการรัน และเราต้องรู้ล่วงหน้าว่าเราต้องการรันทั้งหมดจำนวนกี่รอบโดยระบุเข้าไปในโค้ดเลย เมื่อรันโค้ดที่อยู่ใน loop จนครบรอบที่ต้องการแล้วจึงจะรันคำสั่งถัดไปที่อยู่นอก loop (นักโปรแกรมเมอร์เรียกว่า <em>หลุดออกจาก loop</em>) สรุปแล้ว <code class="docutils literal notranslate"><span class="pre">for</span></code> loop มี syntax ในการใช้ดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">จำนวนครั้งที่จะวนซ้ำ</span><span class="p">):</span>
+	<span class="n">คำสั่ง</span>
+	<span class="n">คำสั่ง</span>
+	<span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
+</pre></div>
+</div>
+<p>code block ที่มีคำสั่งที่ต้องการจะวนซ้ำจำเป็นต้องเคาะย่อหน้า (indentation) คล้าย ๆ กับการตั้งฟังก์ชัน เพื่อแยกให้เห็นชัดเจนว่าคำสั่งอะไรบ้างที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
+</div>
+<div class="section" id="control-flow-while-loop">
+<h2>Control flow - <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#control-flow-while-loop" title="Permalink to this headline">#</a></h2>
+<p>อีก control flow พบได้บ่อยในการเขียนโปรแกรมคือการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ซึ่งเป็นการรันคำสั่งวนซ้ำ ๆ เช่นเดียวกับ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ซึ่งเรากำหนดเงื่อนไขไปเลยว่าให้หลุดออกจาก loop หลังจากวนรันไปแล้วกี่ครั้ง  แต่ว่า <code class="docutils literal notranslate"><span class="pre">while</span></code> loop เรากำหนดเองว่าจะให้หลุดออกจากรูปด้วยเงื่อนไขอะไร</p>
+<p>ตัวอย่าง ถ้าเรามีโจทย์ว่าให้แคเริลวาง beeper บนแถวแรกให้เต็มแต่ยกเว้นริมซ้ายสุด และริมขวาสุด โดยที่จุดเริ่มต้นอยู่ที่มุมซ้ายล่างและแคเริลหันไปทางตะวันออก</p>
+<p>จุดเริ่มต้น</p>
+<a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" class="align-center" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
+<p>จุดหมาย</p>
+<a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" class="align-center" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
+<p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวาง beeper ทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+		<span class="n">put_beeper</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>เราสังเกตแพทเทิร์นที่เราเจอซ้ำ ๆ คือ แคเริลจะต้องมีการวน loop ก้าว วาง ก้าว วาง ไปเรื่อย ๆ ซึ่งเราควรจะใช้การวนโค้ดในการแก้ปัญหาได้  ถ้าเราเปลี่ยนโจทย์ใหม่ว่า เราไม่ทราบว่าขนาดความกว้างของแถวแรก จึงไม่ทราบว่าต้องวาง beeper ทั้งหมดกี่ครั้ง ซึ่งทำให้เราไม่สามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ในการแก้โจทย์นี้ได้  ข้อสังเกตนี้ได้มาจากการมองหาแพทเทิร์น (pattern recognition)</p>
+<div class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>การคิดแบบนามธรรม (abstraction) คือ การคิดแก้ปัญหาโดยหาจุดร่วมของโจทย์ทั้งหมด และละรายละเอียดปลีกย่อยออกไป เพื่อให้เห็นแก่นของโจทย์</p>
+</div>
+<p>ในขั้นตอนต่อไป เราควรจะตั้งคำถามว่าโลกของแคเริลที่มีขนาด 8 ช่อง กับโลกขนาด 3 ช่อง กับโลกขนาด 100 ช่องมีอะไรที่เป็นจุดร่วมกันบ้าง ซึ่งจุดร่วมนี้เป็นแก่นสำคัญของโจทย์นี้ การคิดตั้งคำถามในลักษณะนี้เป็นตัวอย่างการคิดแบบนามธรรม (abstraction) ในโจทย์ข้อนี้ที่จริงแล้วเราต้องการวนโค้ดการก้าวและวางจนกว่าแคเริลจะชนกำแพง แล้วเราจะรู้ได้่อย่างไรว่าแคเริลตอนนี้หน้าปะกับกำแพงอยู่หรือไม่</p>
+<p>แคเริลมีฟังก์ชันที่ใช้ในการตรวจสอบเงื่อนไขสถานะของแคเริลว่าข้างหน้ามีกำแพงขวางอยู่หรือไม่ <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> เราสามารถแก้โจทย์นี้โดยการเปลี่ยนจาก <code class="docutils literal notranslate"><span class="pre">for</span></code> loop เป็น <code class="docutils literal notranslate"><span class="pre">while</span></code> loop พร้อมทั้งกำหนดเงื่อนไขการออกจาก loop ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">move</span><span class="p">()</span>
+	<span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+		<span class="n">put_beeper</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>เราเปลี่ยน <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(6):</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">front_is_clear():</span></code> ซึ่งแปลว่าก่อนรันวนแต่ละรอบให้เช็คว่าข้างหน้าโล่งมั้ย (<code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code>) ถ้าโล่งก็ให้รัน code block ข้างล่าง พอรันจบก็เช็คเงื่อนไขอีกครั้ง ถ้่าโล่งก็ให้รัน code block อีกรอบ ทำเช่นนนี้ไปเรื่อย ๆ จนกว่าเงื่อนไขจะไม่เป็นจริงอีกต่อไป ทั้งหมดนี้สามารถคิดเป็นแผนภูมิได้ดังนี้</p>
+<a class="reference internal image-reference" href="../../_images/while-flow-chart.png"><img alt="../../_images/while-flow-chart.png" class="align-center" src="../../_images/while-flow-chart.png" style="height: 400px;" /></a>
+<p>แคเริลมีฟังก์ชันที่ใช้ในการตรวจสอบเงื่อนไขสถานะของแคเริลทั้งหมดดังนี้</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>คำสั่งตรวจสอบ</p></th>
+<th class="head"><p>คำสั่งที่ตรงข้าม</p></th>
+<th class="head"><p>ตรวจสอบอะไร</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">front_is_blocked()</span></code></p></td>
+<td><p>มีกำแพงอยู่ตรงหน้า  แคเริลมั้ย</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">beepers_present()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">no_beepers_present()</span></code></p></td>
+<td><p>มี   beeper ตรงที่แคเริลยืนอยู่มั้ย</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">left_is_clear()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">left_is_blocked()</span></code></p></td>
+<td><p>มีกำแพงอยู่ทางซ้ายของ  แคเริลมั้ย</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">right_is_clear()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">right_is_blocked()</span></code></p></td>
+<td><p>มีกำแพงอยู่ทางขวาของ  แคเริลมั้ย</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">beepers_in_bag()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">no_beepers_in_bag()</span></code></p></td>
+<td><p>แคเริลมี beeper ในกระเป๋ามั้ย</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">facing_north()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not_facing_north()</span></code></p></td>
+<td><p>แคเริลหันหน้าทางเหนือรึเปล่า</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">facing_south()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not_facing_south()</span></code></p></td>
+<td><p>แคเริลหันหน้าทางใต้รึเปล่า</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">facing_east()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not_facing_east()</span></code></p></td>
+<td><p>แคเริลหันหน้าทางตะวันออกรึเปล่า</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">facing_west()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not_facing_west()</span></code></p></td>
+<td><p>แคเริลหันหน้าทางตะวันตกรึเปล่า</p></td>
+</tr>
+</tbody>
+</table>
+<p>เงื่อนไขเหล่านี้เรียกอีกอย่างว่าบูลีน (boolean) ซึ่งแปลว่าสิ่งที่มีค่าเป็นจริงหรือเท็จ</p>
+<p>สรุปคือ syntax ในการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop มีดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">เงื่อนไข</span><span class="p">:</span>
+	<span class="n">คำสั่ง</span>
+	<span class="n">คำสั่ง</span>
+	<span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-flow-if-else-elif">
+<h2>Control flow - <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code><a class="headerlink" href="#control-flow-if-else-elif" title="Permalink to this headline">#</a></h2>
+<p>Control flow อีกประเภทหนึ่งที่สำคัญมาก ๆ คือ การเลือกว่าจะรัน code block ใดในเงื่อนไขใดบ้าง</p>
+<p>ตัวอย่าง เช่น ถ้าเราอยากให้แคเริลเดินไปข้างหน้าถ้าด้านหน้าไม่มีอะไรกั้น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">safe_move</span><span class="p">():</span>
+	<span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+		<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>เราสามารถใช้เงื่อนไขบูลีนในการกำหนดว่าเราจะรันโค้ดที่อยู่ใน code block ในกรณีใดบ้าง ในส่วนของไวยากรณ์ <code class="docutils literal notranslate"><span class="pre">if</span></code> คล้ายคลึงกับ <code class="docutils literal notranslate"><span class="pre">while</span></code> มาก คือต้องตามด้วยบูลีนที่เป็นเงื่อนไขจากนั้น code block ที่ตามมาต้องมีการเคาะย่อหน้า เพื่อกำหนดให้ชัดเจนว่าคำสั่งส่วนใดบ้างที่ต้องรันถ้าเงื่อนไขเป็นจริง</p>
+<p>ฟังก์ชันข้างต้นสามารถเขียนออกมาเป็นแผนภูมิได้ดังนี้</p>
+<a class="reference internal image-reference" href="../../_images/safe-move-diagram.png"><img alt="../../_images/safe-move-diagram.png" class="align-center" src="../../_images/safe-move-diagram.png" style="height: 150px;" /></a>
+<p>ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> ต่อไปจะเป็นตัวอย่างที่ซับซ้อนขึ้นมาอีกขั้น สมมติว่าเราต้องการให้แคเริลวาง beeper ในช่องที่ไม่มี beeper อยู่ก่อนแล้ว และให้เก็บ beeper ถ้าเกิดว่าในช่องนั้นมี beeper อยู่ก่อนแล้ว เพื่อความง่ายเราจะทำเฉพาะแถวล่างสุดเท่านั้น และแคเริลยืนอยู่แถวล่างสุดอยู่แล้ว</p>
+<a class="reference internal image-reference" href="../../_images/invert-beeper-world.png"><img alt="../../_images/invert-beeper-world.png" class="align-center" src="../../_images/invert-beeper-world.png" style="height: 200px;" /></a>
+<p>เราจะเริ่มแก้ปัญหานี้โดยการย่อยโจทย์และการสังเกตแพทเทิร์นว่า ทุกช่องเราจะทำกระบวนการเดียวกันทั้งหมด เพราะฉะนั้นเราสามารถเขียนฟังก์ชันแยกออกมาเพื่อแก้โจทย์ย่อยในการเก็บและวาง beeper ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert</span><span class="p">():</span>
+   <span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span> <span class="c1"># ถ้ามี beeper</span>
+      <span class="n">pick_beeper</span><span class="p">()</span>		 <span class="c1"># ให้เก็บ beeper</span>
+   <span class="k">else</span><span class="p">:</span>				 <span class="c1"># มิฉะนั้นแล้ว</span>
+      <span class="n">put_beeper</span><span class="p">()</span>		 <span class="c1"># ให้วาง beeper ลงในช่องนั้น 	</span>
+</pre></div>
+</div>
+<p>ในฟังก์ชันนี้เรามีการใช้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งแปลว่าถ้าเงื่อนไขที่ตั้งไว้ใน <code class="docutils literal notranslate"><span class="pre">for</span></code> ไม่เป็นจริง จะรัน code block ที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ข้อควรระวังหนึ่งคือ ถ้าเราไม่ได้ใส่ <code class="docutils literal notranslate"><span class="pre">else</span></code> ไว้โค้ดที่ตามมาจะถูกรันในทุกกรณี เราต้องเลือกใช้ให้ถูกต้อง</p>
+<p>ฟังก์ชันทางด้านบนสามารถเขียนออกมาเป็นแผนภูมิได้ดังนี้</p>
+<a class="reference internal image-reference" href="../../_images/invert-beeper-flow-chart.png"><img alt="../../_images/invert-beeper-flow-chart.png" class="align-center" src="../../_images/invert-beeper-flow-chart.png" style="height: 250px;" /></a>
+<p>ถึงขั้นนี้แล้วเราสามารถแก้โจทย์นี้ต่อไปได้ หากเราเห็นว่าเราไม่ต้องสนใจว่าในช่องนั้นจะมีหรือไม่มี beeper อยู่แล้ว</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">invert</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ตอนนี้เราแก้โจทย์นี้บนช่องแรกได้แล้ว จากนั้นหากเราเห็นว่าเราต้องรัน <code class="docutils literal notranslate"><span class="pre">invert()</span></code> ซ้ำ ๆ ในทุกช่องจนกว่าเราหน้าติดกำแพง ซึ่งแปลว่าเราต้องกำหนดเงื่อนไขที่ทำให้แคเริลรันโค้ดซ้ำ ๆ โดยใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="n">invert</span><span class="p">()</span>
+	<span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+		<span class="n">move</span><span class="p">()</span>
+		<span class="n">invert</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ซึ่งทั้งหมดนี้อยากให้เห็นว่าเป็นการใช้การคิดเชิงคำนวณในการแก้ปัญหาโดยใช้การย่อยโจทย์ การสังเกตหาแพทเทิร์น (ต้องทำซ้ำเหมือนกันทุกช่อง) การมองแบบนามธรรม (หาเงื่อนไขในการวน) และการออกแบบอัลกอริธึม (เริ่มเขียนโค้ดรวมกันทั้งหมด) และเราได้ใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> รวมกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งเป็นเครื่องมือ control flow ที่สำคัญในการเขียนโปรแกรม</p>
+<div class="section" id="if-while">
+<h3>ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#if-while" title="Permalink to this headline">#</a></h3>
+<p>ผู้เรียนโปรแกรมมือใหม่อาจจะสับสนระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code> เนื่องจากไวยากรณ์ค่อนข้างคล้ายกัน แต่ว่าความหมายของทั้งสองคำสั่งนี้ต่างกันพอสมควร กล่าวคือ <code class="docutils literal notranslate"><span class="pre">if</span></code> จะรัน code block ข้างใต้เพียงหนึ่งครั้งเท่านั้น ถ้าเงื่อนไขที่กำหนดเป็นจริง</p>
+<p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> ได้ดังนี้</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" /></a>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
+    <span class="n">คำสั่ง</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">เงื่อนไข</span>
+        <span class="n">คำสั่ง</span> <span class="mi">2</span>
+        <span class="n">คำสั่ง</span> <span class="mi">3</span>
+    <span class="n">คำสั่ง</span> <span class="mi">4</span>
+
+</pre></div>
+</div>
+<p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> ได้ดังนี้ ซึ่ง</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
+    <span class="n">คำสั่ง</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">เงื่อนไข</span>
+        <span class="n">คำสั่ง</span> <span class="mi">2</span>
+        <span class="n">คำสั่ง</span> <span class="mi">3</span>
+    <span class="n">คำสั่ง</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../_images/while-vs-if-flow-chart.png"><img alt="../../_images/while-vs-if-flow-chart.png" src="../../_images/while-vs-if-flow-chart.png" style="width: 215.5px; height: 210.0px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="boolean">
+<h2>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="algorithm">
+<h2>การเขียน algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/module1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../comp_thinking.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Computational Thinking</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2-videos-karel.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Attapol Thamrongrattanarit<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
