@@ -1,6 +1,6 @@
-# Computational Thinking
+# การคิดเชิงคำนวณ และ control flow
 
-การคิดเชิงคำนวณ
+การคิดเชิงคำนวณ และ control flow
 
 ```{admonition} จุดมุ่งหมายของบทนี้
 - ย่อยโจทย์ที่ต้องแก้ออกเป็นส่วนเล็ก ๆ (decomposition)
