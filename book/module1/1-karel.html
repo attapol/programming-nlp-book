@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2-videos-karel.html" />
-    <link rel="prev" title="Computational Thinking" href="../comp_thinking.html" />
+    <link rel="next" title="Computational Thinking" href="2-videos-karel.html" />
+    <link rel="prev" title="การคิดเชิงคำนวณ และ control flow" href="../comp_thinking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../comp_thinking.html">
-   Computational Thinking
+   การคิดเชิงคำนวณ และ control flow
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -124,8 +124,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="placeholder.html">
-     Placeholder
+    <a class="reference internal" href="2-videos-karel.html">
+     Computational Thinking
     </a>
    </li>
   </ul>
@@ -605,13 +605,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean">
-   Boolean
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
-   การเขียน algorithm
+  <a class="reference internal nav-link" href="#id4">
+   บูลีน
   </a>
  </li>
 </ul>
@@ -710,13 +705,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boolean">
-   Boolean
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithm">
-   การเขียน algorithm
+  <a class="reference internal nav-link" href="#id4">
+   บูลีน
   </a>
  </li>
 </ul>
@@ -1072,10 +1062,12 @@ title="Print to PDF"
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#control-flow-while-loop" title="Permalink to this headline">#</a></h2>
 <p>อีก control flow พบได้บ่อยในการเขียนโปรแกรมคือการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ซึ่งเป็นการรันคำสั่งวนซ้ำ ๆ เช่นเดียวกับ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ซึ่งเรากำหนดเงื่อนไขไปเลยว่าให้หลุดออกจาก loop หลังจากวนรันไปแล้วกี่ครั้ง  แต่ว่า <code class="docutils literal notranslate"><span class="pre">while</span></code> loop เรากำหนดเองว่าจะให้หลุดออกจากรูปด้วยเงื่อนไขอะไร</p>
 <p>ตัวอย่าง ถ้าเรามีโจทย์ว่าให้แคเริลวาง beeper บนแถวแรกให้เต็มแต่ยกเว้นริมซ้ายสุด และริมขวาสุด โดยที่จุดเริ่มต้นอยู่ที่มุมซ้ายล่างและแคเริลหันไปทางตะวันออก</p>
-<p>จุดเริ่มต้น</p>
-<a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" class="align-center" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
-<p>จุดหมาย</p>
-<a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" class="align-center" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
+</div>
 <p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวาง beeper ทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 	<span class="n">move</span><span class="p">()</span>
@@ -1199,9 +1191,6 @@ title="Print to PDF"
 <h3>ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#if-while" title="Permalink to this headline">#</a></h3>
 <p>ผู้เรียนโปรแกรมมือใหม่อาจจะสับสนระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code> เนื่องจากไวยากรณ์ค่อนข้างคล้ายกัน แต่ว่าความหมายของทั้งสองคำสั่งนี้ต่างกันพอสมควร กล่าวคือ <code class="docutils literal notranslate"><span class="pre">if</span></code> จะรัน code block ข้างใต้เพียงหนึ่งครั้งเท่านั้น ถ้าเงื่อนไขที่กำหนดเป็นจริง</p>
 <p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> ได้ดังนี้</p>
-<div class="figure align-left">
-<a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" /></a>
-</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
     <span class="n">คำสั่ง</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">เงื่อนไข</span>
@@ -1211,7 +1200,10 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-<p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> ได้ดังนี้ ซึ่ง</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" /></a>
+</div>
+<p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> ได้ดังนี้ เพื่อเปรียบเทียบกันกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งรันคำสั่งเพียงแค่ครั้งเดียว</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
     <span class="n">คำสั่ง</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">เงื่อนไข</span>
@@ -1225,11 +1217,54 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="boolean">
-<h2>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id4">
+<h2>บูลีน<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>การกำหนดเงื่อนไขด้วยบูลีนเป็นเครื่องมือที่สำคัญมากในการเขียนโปรแกรม เราสามารถเขียนเงื่อนไขที่ซับซ้อนขึ้นไปอีกได้โดยใช้โอเปอร์เรเตอร์ทางตรรกศาสตร์ เช่น <code class="docutils literal notranslate"><span class="pre">or</span></code> และ <code class="docutils literal notranslate"><span class="pre">and</span></code> เพื่อให้เห็นการใช้งานที่ชัดขึ้น เราจะลองแก้โจทย์แคเริลอีกหนึ่งข้อ</p>
+<p>สมมติว่าเราต้องการให้แคเริลเอา beeper ที่อยู่รอบรั้วออกไปให้หมด ดังตัวอย่างดังนี้</p>
+<div class="figure align-default" id="id5">
+<img alt="../../_images/boolean-remove-fence.png" src="../../_images/boolean-remove-fence.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
+ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </div>
-<div class="section" id="algorithm">
-<h2>การเขียน algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">#</a></h2>
+<p>เราสามารถสังเกตหาแพทเทิร์นได้ว่าการเก็บ beeper แต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถย่อยโจทย์ออกมาเป็นฟังก์ชันที่เก็บ beeper ของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+		<span class="n">remove_one_side</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>จากนั้นเราสามารถมองแบบนามธรรมไปได้ว่า รั้วจะยาวเท่าไรไม่ได้สำคัญ สำคัญว่าเราเห็นว่ามีเงื่อนไขในการตรวจได้ว่าแคเริลยังไม่สุดรั้ว ซึ่งการตรวจหารั้วคือการตรวจสอบว่าฝั่งซ้ายมีกำแพงหรือไม่โดยคำสั่ง <code class="docutils literal notranslate"><span class="pre">left_is_blocked()</span></code> <em>หรือ</em> อีกเงื่อนไขหนึ่งคือตรงที่ยืนอยู่มี beeper หรือไม่ด้วยโดยคำสั่ง <code class="docutils literal notranslate"><span class="pre">beepers_present()</span></code> ซึ่งการเชื่อมบูลีนสองตัวด้วย <em>หรือ</em> สามารถใช้โอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">or</span></code> ลงไปตรง ๆ แบบภาษาอังกฤษได้เลยดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_one_side</span><span class="p">():</span>
+	<span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
+		<span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
+			<span class="n">pick_beeper</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
+<div class="figure align-default" id="id6">
+<img alt="../../_images/or-operation.png" src="../../_images/or-operation.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</div>
+<p>เงื่อนไขด้านล่างสุดแสดงให้เห็นว่าแคเริลได้เดินมาถึงมุมแล้วหรือถึงช่องที่ไม่ได้อยู่ติดกับรั้วอีกต่อไปแล้ว ทำให้ส่งต่อไปยังรั้วอีกข้างที่เหลือต่อไปได้</p>
+<p>นอกจากนั้นแล้วภาษาไพธอนยังมีโอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">and</span></code> ซึ่งมีการตีค่าบูลีนเหมือนกันกับ <em>และ</em> ในตรรกศาสตร์ ดังนี้</p>
+<div class="figure align-default" id="id7">
+<img alt="../../_images/and-operation.png" src="../../_images/and-operation.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</div>
+<p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้แคเริลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+		<span class="n">remove_one_side</span><span class="p">()</span>
+		<span class="n">turn_left</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">remove_one_side</span><span class="p">():</span>
+	<span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
+		<span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
+			<span class="n">pick_beeper</span><span class="p">()</span>
+		<span class="n">move</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -1264,13 +1299,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Computational Thinking</p>
+            <p class="prev-next-title">การคิดเชิงคำนวณ และ control flow</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="2-videos-karel.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Computational Thinking</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

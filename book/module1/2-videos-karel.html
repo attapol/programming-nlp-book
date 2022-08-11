@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Programming for NLP</title>
+    <title>Computational Thinking &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Placeholder" href="placeholder.html" />
+    <link rel="next" title="พื้นฐานการเขียนโปรแกรม" href="../basics.html" />
     <link rel="prev" title="การคิดเชิงคำนวณ (Computational Thinking)" href="1-karel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -107,25 +107,25 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../comp_thinking.html">
-   Computational Thinking
+   การคิดเชิงคำนวณ และ control flow
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1-karel.html">
      การคิดเชิงคำนวณ (Computational Thinking)
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="placeholder.html">
-     Placeholder
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Computational Thinking
     </a>
    </li>
   </ul>
@@ -527,7 +527,47 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ฟังก์ชั่น
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   การย่อยโจทย์ปัญหาให้เป็นโจทย์เล็กๆ
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For Loop
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loop">
+   While Loop
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-else">
+   If, Else
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-logic">
+   Boolean Logic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   สรุป
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -537,7 +577,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Computational Thinking</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -546,7 +586,47 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ฟังก์ชั่น
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   การย่อยโจทย์ปัญหาให้เป็นโจทย์เล็กๆ
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For Loop
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loop">
+   While Loop
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-else">
+   If, Else
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-logic">
+   Boolean Logic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   สรุป
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -557,7 +637,38 @@ title="Print to PDF"
                 
               <div>
                 
-  
+  <div class="section" id="computational-thinking">
+<h1>Computational Thinking<a class="headerlink" href="#computational-thinking" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f3-K5UqWUQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="id1">
+<h1>ฟังก์ชั่น<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jZj6_yVb5Ys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="id2">
+<h1>การย่อยโจทย์ปัญหาให้เป็นโจทย์เล็กๆ<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oiW1zz0pIlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="for-loop">
+<h1>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vVdd4sm3dPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="while-loop">
+<h1>While Loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JY0Rh1C4at0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="if-else">
+<h1>If, Else<a class="headerlink" href="#if-else" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/26O4PGmf51c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="boolean-logic">
+<h1>Boolean Logic<a class="headerlink" href="#boolean-logic" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WSTLHQJUtdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="id3">
+<h1>สรุป<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MV65VN2r7NA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -592,10 +703,10 @@ title="Print to PDF"
             <p class="prev-next-title">การคิดเชิงคำนวณ (Computational Thinking)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="placeholder.html" title="next page">
+    <a class='right-next' id="next-link" href="../basics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Placeholder</p>
+        <p class="prev-next-title">พื้นฐานการเขียนโปรแกรม</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
