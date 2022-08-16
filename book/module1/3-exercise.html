@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video: file &#8212; Programming for NLP</title>
+    <title>แบบฝึกหัด &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="3-regular-expression.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="1-file.html" />
+    <link rel="next" title="พื้นฐานการเขียนโปรแกรม" href="../basics.html" />
+    <link rel="prev" title="Video: การคิดเชิงคำนวณ และ control flow" href="2-videos-karel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,28 +108,28 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../comp_thinking.html">
    การคิดเชิงคำนวณ และ control flow
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../module1/1-karel.html">
+    <a class="reference internal" href="1-karel.html">
      การคิดเชิงคำนวณ (Computational Thinking)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module1/2-videos-karel.html">
+    <a class="reference internal" href="2-videos-karel.html">
      Video: การคิดเชิงคำนวณ และ control flow
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/3-exercise.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      แบบฝึกหัด
     </a>
    </li>
@@ -209,28 +209,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
    การอ่านข้อมูลจากไฟล์
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/2%20video%20file.html">
      Video: file
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4%20video%20Reg%20Ex.html">
+    <a class="reference internal" href="../module4/4%20video%20Reg%20Ex.html">
      Video: Regular Expression
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="PC7%20Regular%20Expression.html">
+    <a class="reference internal" href="../module4/PC7%20Regular%20Expression.html">
      โจทย์: Regular Expression
     </a>
    </li>
@@ -446,7 +446,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module4/2 video file.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module1/3-exercise.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -474,7 +474,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module4/2 video file.md"
+        <a href="../../_sources/book/module1/3-exercise.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -534,13 +534,50 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   การอ่านไฟล์
+  <a class="reference internal nav-link" href="#id2">
+   ก่อนเริ่ม
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stanfordkarel">
+     ติดตั้งไลบรารี
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       stanfordkarel
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vscode">
+     ทดลองเขียนและรันโปรแกรมบน VSCode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   การเขียนไฟล์
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 5
   </a>
  </li>
 </ul>
@@ -552,7 +589,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Video: file</h1>
+                <h1>แบบฝึกหัด</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -563,13 +600,50 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   การอ่านไฟล์
+  <a class="reference internal nav-link" href="#id2">
+   ก่อนเริ่ม
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stanfordkarel">
+     ติดตั้งไลบรารี
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       stanfordkarel
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vscode">
+     ทดลองเขียนและรันโปรแกรมบน VSCode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   การเขียนไฟล์
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 5
   </a>
  </li>
 </ul>
@@ -582,16 +656,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="video-file">
-<h1>Video: file<a class="headerlink" href="#video-file" title="Permalink to this headline">#</a></h1>
-<p>ไฟล์</p>
-<div class="section" id="id1">
-<h2>การอ่านไฟล์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SpP5Kesdd1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>แบบฝึกหัด<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <div class="section" id="id2">
-<h2>การเขียนไฟล์<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YJNvEfEYgqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>ก่อนเริ่ม<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="section" id="stanfordkarel">
+<h3>ติดตั้งไลบรารี <code class="docutils literal notranslate"><span class="pre">stanfordkarel</span></code><a class="headerlink" href="#stanfordkarel" title="Permalink to this headline">#</a></h3>
+<p>ก่อนเริ่มให้ติดตั้ง แคเริลโดยการ (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal และพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">stanfordkarel</span></code> แล้วกด Enter ถ้าลงโปรแกรมสำเร็จจะขึ้นว่า Successfully installed</p>
+</div>
+<div class="section" id="vscode">
+<h3>ทดลองเขียนและรันโปรแกรมบน VSCode<a class="headerlink" href="#vscode" title="Permalink to this headline">#</a></h3>
+<p>จากนั้นจึงเริ่มดาวน์โหลดไฟล์โค้ดตั้งต้นและลองทดสอบการติดตั้ง โดยมีวิธีดังนี้</p>
+<ol class="simple">
+<li><p>ดาวน์โหลด <a class="reference external" href="https://github.com/attapol/programming-nlp-book/releases/download/v1.0.0/karel-exercise.zip">https://github.com/attapol/programming-nlp-book/releases/download/v1.0.0/karel-exercise.zip</a></p></li>
+<li><p>ขยาย zip file ไปที่โฟลเดอร์ใดก็ได้บนเครื่อง</p></li>
+<li><p>เปิด Visual studio code กด Open Folder .. แล้วเลือกโฟลเดอร์จากขั้นตอนที่แล้ว (karel-exercise)</p></li>
+<li><p>คลิกแถบฟ้ามุมขวาล่างที่เขียนว่า Python 3.x (ให้คลิกตรงตัวเลข) แล้วจะมีแถบด้านบนเด้งออกมาให้เลือกตัว interpreter สำหรับการเขียนโค้ดในโฟลเดอร์นี้ เพราะว่าบางเครื่องอาจจะมี interpreter ติดตั้งไว้แล้วหลายตัว ให้เราเลือก Python interpreter ที่เขียนว่า anaconda3 ซึ่งก็คือ Python interpreter ที่มากับ anaconda ที่เรา install ไว้</p></li>
+<li><p>ทดสอบโดยการรันโค้ด ให้คลิกขวาบนไฟล์ที่ต้องการจะรันที่อยู่ Editor Tab ทางซ้าย เช่น  <code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> แล้วกด Run Python File on Terminal ถ้าหน้าต่างแคเริลเปิดขึ้นมา แสดงว่าติดตั้งโปรแกรมต่าง ๆ สำเร็จ</p></li>
+</ol>
+<p>เมื่อจะเริ่มเขียนโค้ดให้ลบ <code class="docutils literal notranslate"><span class="pre">pass</span></code> ออกไปก่อน และเริ่มแก้ <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">main():</span></code> หรือเพิ่มฟังก์ชันต่าง ๆ เข้าไป ทุกครั้งที่แก้โค้ด ต้องเซฟโค้ดให้เรียบร้อยและปิดหน้าต่างแคเริลก่อนที่จะรันโค้ดใหม่อีกครั้ง
+หากต้องการทดสอบกับ world แบบอื่น ๆ ให้ลองกด Load world เพื่อเลือกไฟล์ที่ต้องการทดสอบ</p>
+<!---
+3. (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal แล้วเปลี่ยนโฟลเดอร์ที่ยืนอยู่โดยการรัน `cd "ที่อยู่ของโฟลเดอร์"`
+	- (Windows) คลิกขวาที่โฟล์เดอร์แล้วกด Copy as path เพื่อหาที่อยู่ของโฟลเดอร์
+	- (Mac) คลิกขวาที่โฟลเดอร์ กดปุ่ม option แช่ไว้แล้วกด Copy ... as pathname
+4. ทดสอบโดยการรัน `python ชื่อไฟล์.py` เช่น `python collect_newspaper_karel.py` และจะมีหน้าต่างใหม่เปิดเพิ่มขึ้นมาที่มีแคเริลอยู่ใน world ที่ระบุไว้ในโค้ด กดรันโปรแกรมโดยการกด Run Program
+!-->
+</div>
+</div>
+<div class="section" id="id3">
+<h2>ข้อ 1<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลหยิบ beeper และเดินกลับมาที่เดิม โดยให้เขียนฟังก์ชันย่อยตามหลักการย่อยโจทย์ (decomposition) เพื่อทำให้โค้ดดูสะอาดตา อ่านง่ายเข้าใจง่ายขึ้น</p>
+</div>
+<div class="section" id="id4">
+<h2>ข้อ 2<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">corner_to_corner_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้แคเริล วิ่งจากจุดเริ่มต้นที่มุมซ้ายล่างไปมุมขวาบน โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
+</div>
+<div class="section" id="id5">
+<h2>ข้อ 3<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">four_corner_karel.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลวาง beeper ไปทั้งสี่มุม มุมละ 3 beeper โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
+</div>
+<div class="section" id="id6">
+<h2>ข้อ 4<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">roomba_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้แคเริลเก็บ beeper ที่กระจัดกระจายอยู่ทั้งห้อง โดยโปรแกรมจะต้องทำงานทั้ง <code class="docutils literal notranslate"><span class="pre">roomba_karel.w</span></code> และ <code class="docutils literal notranslate"><span class="pre">roomba_karel2.w</span></code></p>
+</div>
+<div class="section" id="id7">
+<h2>ข้อ 5<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">alternate_beeper.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลวาง beeper แบบช่องเว้นช่องเฉพาะแถวล่าง โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
 </div>
 </div>
 
@@ -608,7 +719,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./book/module4"
+            path: "./book/module1"
         },
         predefinedOutput: true
     }
@@ -622,17 +733,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1-file.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2-videos-karel.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Video: การคิดเชิงคำนวณ และ control flow</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3-regular-expression.html" title="next page">
+    <a class='right-next' id="next-link" href="../basics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">พื้นฐานการเขียนโปรแกรม</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

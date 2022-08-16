@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Computational Thinking" href="2-videos-karel.html" />
+    <link rel="next" title="Video: การคิดเชิงคำนวณ และ control flow" href="2-videos-karel.html" />
     <link rel="prev" title="การคิดเชิงคำนวณ และ control flow" href="../comp_thinking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -125,7 +125,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2-videos-karel.html">
-     Computational Thinking
+     Video: การคิดเชิงคำนวณ และ control flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-exercise.html">
+     แบบฝึกหัด
     </a>
    </li>
   </ul>
@@ -862,9 +867,9 @@ title="Print to PDF"
     <span class="n">move</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
-	<span class="n">turn_left</span><span class="p">()</span>
-	<span class="n">turn_left</span><span class="p">()</span>
-	<span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="margin sidebar">
@@ -909,18 +914,18 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../../_images/repair-road.png"><img alt="../../_images/repair-road.png" class="align-center" src="../../_images/repair-road.png" style="height: 200px;" /></a>
 <p>จริงๆ แล้วก็ยังเป็นโจทย์ที่ไม่ได้ยากซับซ้อนมากนัก Solution ที่เราได้มาโดยไม่อาศัยการคิดแบบการคิดเชิงคำนวณเลยจะออกมาประมาณนี้ (เราจะดูเฉพาะฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> และ assume ว่าเราได้ import ไลบรารีต่าง ๆ และเก็บโค้ดลงในไฟล์ .py เป็นที่เรียบร้อยแล้ว)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="c1"># ไม่สมบูรณ์ยังมีต่ออีก...	</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="c1"># ไม่สมบูรณ์ยังมีต่ออีก...    </span>
 </pre></div>
 </div>
 <p>สังเกตอย่างแรกคือ เป็นโค้ดที่ยาวเหยียดมาก และเข้าใจได้ยากถ้าเราเลือกโค้ดขึ้นมาสักบรรทัด เราจะบอกไม่ได้เลยว่า ณ จุดนั้นแคเริลยืนอยู่ในไหนในโลก หันหน้าไปทางไหนอยู่</p>
@@ -936,14 +941,14 @@ title="Print to PDF"
 </ol>
 <p>เราจะแก้โจทย์ย่อยแต่ละโจทย์นี้โดยการใช้ฟังก์ชัน 3 ฟังก์ชันนี้ตามลำดับ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole1</span><span class="p">():</span>
-	<span class="k">pass</span>
+    <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">move_to_next_hole</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">fill_hole2</span><span class="p">():</span>
-	<span class="k">pass</span>
+    <span class="k">pass</span>
 </pre></div>
 </div>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">pass</span></code> ใส่ไว้เพื่อจองที่ไว้สำหรับการเขียนโค้ดจริงๆ สำหรับฟังก์ชันนั้น ในกรณีนี้เราเขียนโครงของฟังก์ชันทิ้งไว้ก่อนที่จะเริ่มลงรายละเอียดของแต่ละฟังก์ชันจริง ๆ</p>
@@ -955,16 +960,16 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../../_images/deposed-repair-road.png"><img alt="../../_images/deposed-repair-road.png" class="align-center" src="../../_images/deposed-repair-road.png" style="height: 200px;" /></a>
 <p>เพราะฉะนั้นเราสามารถเรียกใช้ฟังก์ชันได้สองรอบ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">fill_hole</span><span class="p">()</span>
-	<span class="n">move_to_next_hole</span><span class="p">()</span>
-	<span class="n">fill_hole</span><span class="p">()</span>
-	
+    <span class="n">fill_hole</span><span class="p">()</span>
+    <span class="n">move_to_next_hole</span><span class="p">()</span>
+    <span class="n">fill_hole</span><span class="p">()</span>
+    
 <span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
-	<span class="k">pass</span>
+    <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">move_to_next_hole</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="margin sidebar">
@@ -984,36 +989,36 @@ title="Print to PDF"
 </div>
 <p>เราสามารถเริ่ม implement อัลกอริธึมได้เลย</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
-	<span class="n">jump_in</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">jump_out</span><span class="p">()</span>
+    <span class="n">jump_in</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">jump_out</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">jump_in</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">jump_out</span><span class="p">():</span>
-	<span class="n">turn_around</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>โค้ดข้างบนนี้ทำให้เราเห็นแพทเทิร์นอีกอย่าง นั่นก็คือ <code class="docutils literal notranslate"><span class="pre">jump_in()</span></code> กับ <code class="docutils literal notranslate"><span class="pre">jump_out()</span></code> มีส่วนที่เหมือนกันอยู่ถึงสามบรรทัด นั่นก็คือ <code class="docutils literal notranslate"><span class="pre">move()</span> <span class="pre">turn_right()</span> <span class="pre">move()</span></code> นั่นก็คือการเดินเป็นรูปตัว L ทำให้เราสามารถเขียนฟังก์ชันมาใช้ซ้ำๆ ได้อีก</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
-	<span class="n">move_L</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">jump_out</span><span class="p">()</span>
+    <span class="n">move_L</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">jump_out</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">move_L</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_right</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_right</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">jump_out</span><span class="p">():</span>
-	<span class="n">turn_around</span><span class="p">()</span>
-	<span class="n">moveL</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">moveL</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>ในการแก้โจทย์แคเริลซ่อมถนนข้อนี้ เราได้ใช้การย่อยโจทย์ การมองหาแพทเทิร์น และการเขียนอัลกอริธึม ซึ่งเป็น 3 ใน 4 ของหลักการคิดเชิงคำนวณ เราได้่ข้ามการมองแบบนามธรรมไปในโจทย์ข้อนี้ เราจะมาแก้โจทย์ที่ยากขึ้นเรื่อย ๆ ซึ่งเราจะเห็นต่อไปว่าขั้นตอนการมองแบบนามธรรมจะมีส่วนช่วยอย่างมาก</p>
@@ -1026,34 +1031,34 @@ title="Print to PDF"
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#control-flow-for-loop" title="Permalink to this headline">#</a></h2>
 <p>โปรแกรมที่เราเขียนมาทั้งหมดถึงตอนนี้รันโค้ดจากบรรทัดแรกไปถึงบรรทัดสุดท้าย โดยอาจจะมีการกระโดดไปรันฟังก์ชันย่อยอื่น ๆ บ้าง แต่ว่าก็รันเรียงลำดับจากบรรทัดแรกไปบรรทัดสุดท้าย ภาษาคอมพิวเตอร์มีสิ่งที่เรียกว่า control flow ซึ่งก็คือคำสั่งที่พิเศษที่ทำให้เราเลือกได้ว่าจะรันโค้ดส่วนไหนบ้าง จะรันกี่ครั้ง ทำให้เราเขียนโปรแกรมแก้โจทย์ได้อย่างหลากหลายมากขึ้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-		<span class="n">put_beeper</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">put_beeper</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>ซึ่งเท่ากับว่าเรารัน code block ที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ทั้งหมด 5 ครั้ง (นักเขียนโปรแกรมมักเรียกว่า <em>for loop ไป 5 รอบ</em>) หรือเท่ากับรันโค้ดดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">put_beeper</span><span class="p">()</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="n">turn_around</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">put_beeper</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="n">turn_around</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>การใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ทำให้เรารันคำสั่งซ้ำๆ ได้โดยที่เราไม่ต้องเขียนโค้ดซ้ำ ๆ เท่าจำนวนรอบที่เราต้องการรัน และเราต้องรู้ล่วงหน้าว่าเราต้องการรันทั้งหมดจำนวนกี่รอบโดยระบุเข้าไปในโค้ดเลย เมื่อรันโค้ดที่อยู่ใน loop จนครบรอบที่ต้องการแล้วจึงจะรันคำสั่งถัดไปที่อยู่นอก loop (นักโปรแกรมเมอร์เรียกว่า <em>หลุดออกจาก loop</em>) สรุปแล้ว <code class="docutils literal notranslate"><span class="pre">for</span></code> loop มี syntax ในการใช้ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">จำนวนครั้งที่จะวนซ้ำ</span><span class="p">):</span>
-	<span class="n">คำสั่ง</span>
-	<span class="n">คำสั่ง</span>
-	<span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
+    <span class="n">คำสั่ง</span>
+    <span class="n">คำสั่ง</span>
+    <span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
 </pre></div>
 </div>
 <p>code block ที่มีคำสั่งที่ต้องการจะวนซ้ำจำเป็นต้องเคาะย่อหน้า (indentation) คล้าย ๆ กับการตั้งฟังก์ชัน เพื่อแยกให้เห็นชัดเจนว่าคำสั่งอะไรบ้างที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
@@ -1070,10 +1075,10 @@ title="Print to PDF"
 </div>
 <p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวาง beeper ทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-		<span class="n">put_beeper</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">put_beeper</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>เราสังเกตแพทเทิร์นที่เราเจอซ้ำ ๆ คือ แคเริลจะต้องมีการวน loop ก้าว วาง ก้าว วาง ไปเรื่อย ๆ ซึ่งเราควรจะใช้การวนโค้ดในการแก้ปัญหาได้  ถ้าเราเปลี่ยนโจทย์ใหม่ว่า เราไม่ทราบว่าขนาดความกว้างของแถวแรก จึงไม่ทราบว่าต้องวาง beeper ทั้งหมดกี่ครั้ง ซึ่งทำให้เราไม่สามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ในการแก้โจทย์นี้ได้  ข้อสังเกตนี้ได้มาจากการมองหาแพทเทิร์น (pattern recognition)</p>
@@ -1084,10 +1089,10 @@ title="Print to PDF"
 <p>ในขั้นตอนต่อไป เราควรจะตั้งคำถามว่าโลกของแคเริลที่มีขนาด 8 ช่อง กับโลกขนาด 3 ช่อง กับโลกขนาด 100 ช่องมีอะไรที่เป็นจุดร่วมกันบ้าง ซึ่งจุดร่วมนี้เป็นแก่นสำคัญของโจทย์นี้ การคิดตั้งคำถามในลักษณะนี้เป็นตัวอย่างการคิดแบบนามธรรม (abstraction) ในโจทย์ข้อนี้ที่จริงแล้วเราต้องการวนโค้ดการก้าวและวางจนกว่าแคเริลจะชนกำแพง แล้วเราจะรู้ได้่อย่างไรว่าแคเริลตอนนี้หน้าปะกับกำแพงอยู่หรือไม่</p>
 <p>แคเริลมีฟังก์ชันที่ใช้ในการตรวจสอบเงื่อนไขสถานะของแคเริลว่าข้างหน้ามีกำแพงขวางอยู่หรือไม่ <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> เราสามารถแก้โจทย์นี้โดยการเปลี่ยนจาก <code class="docutils literal notranslate"><span class="pre">for</span></code> loop เป็น <code class="docutils literal notranslate"><span class="pre">while</span></code> loop พร้อมทั้งกำหนดเงื่อนไขการออกจาก loop ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">move</span><span class="p">()</span>
-	<span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
-		<span class="n">put_beeper</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">put_beeper</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>เราเปลี่ยน <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(6):</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">front_is_clear():</span></code> ซึ่งแปลว่าก่อนรันวนแต่ละรอบให้เช็คว่าข้างหน้าโล่งมั้ย (<code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code>) ถ้าโล่งก็ให้รัน code block ข้างล่าง พอรันจบก็เช็คเงื่อนไขอีกครั้ง ถ้่าโล่งก็ให้รัน code block อีกรอบ ทำเช่นนนี้ไปเรื่อย ๆ จนกว่าเงื่อนไขจะไม่เป็นจริงอีกต่อไป ทั้งหมดนี้สามารถคิดเป็นแผนภูมิได้ดังนี้</p>
@@ -1142,9 +1147,9 @@ title="Print to PDF"
 <p>เงื่อนไขเหล่านี้เรียกอีกอย่างว่าบูลีน (boolean) ซึ่งแปลว่าสิ่งที่มีค่าเป็นจริงหรือเท็จ</p>
 <p>สรุปคือ syntax ในการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop มีดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">เงื่อนไข</span><span class="p">:</span>
-	<span class="n">คำสั่ง</span>
-	<span class="n">คำสั่ง</span>
-	<span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
+    <span class="n">คำสั่ง</span>
+    <span class="n">คำสั่ง</span>
+    <span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
 </pre></div>
 </div>
 </div>
@@ -1153,8 +1158,8 @@ title="Print to PDF"
 <p>Control flow อีกประเภทหนึ่งที่สำคัญมาก ๆ คือ การเลือกว่าจะรัน code block ใดในเงื่อนไขใดบ้าง</p>
 <p>ตัวอย่าง เช่น ถ้าเราอยากให้แคเริลเดินไปข้างหน้าถ้าด้านหน้าไม่มีอะไรกั้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">safe_move</span><span class="p">():</span>
-	<span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>เราสามารถใช้เงื่อนไขบูลีนในการกำหนดว่าเราจะรันโค้ดที่อยู่ใน code block ในกรณีใดบ้าง ในส่วนของไวยากรณ์ <code class="docutils literal notranslate"><span class="pre">if</span></code> คล้ายคลึงกับ <code class="docutils literal notranslate"><span class="pre">while</span></code> มาก คือต้องตามด้วยบูลีนที่เป็นเงื่อนไขจากนั้น code block ที่ตามมาต้องมีการเคาะย่อหน้า เพื่อกำหนดให้ชัดเจนว่าคำสั่งส่วนใดบ้างที่ต้องรันถ้าเงื่อนไขเป็นจริง</p>
@@ -1165,9 +1170,9 @@ title="Print to PDF"
 <p>เราจะเริ่มแก้ปัญหานี้โดยการย่อยโจทย์และการสังเกตแพทเทิร์นว่า ทุกช่องเราจะทำกระบวนการเดียวกันทั้งหมด เพราะฉะนั้นเราสามารถเขียนฟังก์ชันแยกออกมาเพื่อแก้โจทย์ย่อยในการเก็บและวาง beeper ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert</span><span class="p">():</span>
    <span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span> <span class="c1"># ถ้ามี beeper</span>
-      <span class="n">pick_beeper</span><span class="p">()</span>		 <span class="c1"># ให้เก็บ beeper</span>
-   <span class="k">else</span><span class="p">:</span>				 <span class="c1"># มิฉะนั้นแล้ว</span>
-      <span class="n">put_beeper</span><span class="p">()</span>		 <span class="c1"># ให้วาง beeper ลงในช่องนั้น 	</span>
+      <span class="n">pick_beeper</span><span class="p">()</span>      <span class="c1"># ให้เก็บ beeper</span>
+   <span class="k">else</span><span class="p">:</span>                 <span class="c1"># มิฉะนั้นแล้ว</span>
+      <span class="n">put_beeper</span><span class="p">()</span>       <span class="c1"># ให้วาง beeper ลงในช่องนั้น     </span>
 </pre></div>
 </div>
 <p>ในฟังก์ชันนี้เรามีการใช้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งแปลว่าถ้าเงื่อนไขที่ตั้งไว้ใน <code class="docutils literal notranslate"><span class="pre">for</span></code> ไม่เป็นจริง จะรัน code block ที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ข้อควรระวังหนึ่งคือ ถ้าเราไม่ได้ใส่ <code class="docutils literal notranslate"><span class="pre">else</span></code> ไว้โค้ดที่ตามมาจะถูกรันในทุกกรณี เราต้องเลือกใช้ให้ถูกต้อง</p>
@@ -1175,15 +1180,15 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../../_images/invert-beeper-flow-chart.png"><img alt="../../_images/invert-beeper-flow-chart.png" class="align-center" src="../../_images/invert-beeper-flow-chart.png" style="height: 250px;" /></a>
 <p>ถึงขั้นนี้แล้วเราสามารถแก้โจทย์นี้ต่อไปได้ หากเราเห็นว่าเราไม่ต้องสนใจว่าในช่องนั้นจะมีหรือไม่มี beeper อยู่แล้ว</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">invert</span><span class="p">()</span>
+    <span class="n">invert</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>ตอนนี้เราแก้โจทย์นี้บนช่องแรกได้แล้ว จากนั้นหากเราเห็นว่าเราต้องรัน <code class="docutils literal notranslate"><span class="pre">invert()</span></code> ซ้ำ ๆ ในทุกช่องจนกว่าเราหน้าติดกำแพง ซึ่งแปลว่าเราต้องกำหนดเงื่อนไขที่ทำให้แคเริลรันโค้ดซ้ำ ๆ โดยใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="n">invert</span><span class="p">()</span>
-	<span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
-		<span class="n">move</span><span class="p">()</span>
-		<span class="n">invert</span><span class="p">()</span>
+    <span class="n">invert</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+        <span class="n">invert</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>ซึ่งทั้งหมดนี้อยากให้เห็นว่าเป็นการใช้การคิดเชิงคำนวณในการแก้ปัญหาโดยใช้การย่อยโจทย์ การสังเกตหาแพทเทิร์น (ต้องทำซ้ำเหมือนกันทุกช่อง) การมองแบบนามธรรม (หาเงื่อนไขในการวน) และการออกแบบอัลกอริธึม (เริ่มเขียนโค้ดรวมกันทั้งหมด) และเราได้ใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> รวมกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งเป็นเครื่องมือ control flow ที่สำคัญในการเขียนโปรแกรม</p>
@@ -1228,16 +1233,16 @@ title="Print to PDF"
 </div>
 <p>เราสามารถสังเกตหาแพทเทิร์นได้ว่าการเก็บ beeper แต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถย่อยโจทย์ออกมาเป็นฟังก์ชันที่เก็บ beeper ของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-		<span class="n">remove_one_side</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">remove_one_side</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>จากนั้นเราสามารถมองแบบนามธรรมไปได้ว่า รั้วจะยาวเท่าไรไม่ได้สำคัญ สำคัญว่าเราเห็นว่ามีเงื่อนไขในการตรวจได้ว่าแคเริลยังไม่สุดรั้ว ซึ่งการตรวจหารั้วคือการตรวจสอบว่าฝั่งซ้ายมีกำแพงหรือไม่โดยคำสั่ง <code class="docutils literal notranslate"><span class="pre">left_is_blocked()</span></code> <em>หรือ</em> อีกเงื่อนไขหนึ่งคือตรงที่ยืนอยู่มี beeper หรือไม่ด้วยโดยคำสั่ง <code class="docutils literal notranslate"><span class="pre">beepers_present()</span></code> ซึ่งการเชื่อมบูลีนสองตัวด้วย <em>หรือ</em> สามารถใช้โอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">or</span></code> ลงไปตรง ๆ แบบภาษาอังกฤษได้เลยดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_one_side</span><span class="p">():</span>
-	<span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
-		<span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
-			<span class="n">pick_beeper</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
+            <span class="n">pick_beeper</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
@@ -1253,16 +1258,16 @@ title="Print to PDF"
 </div>
 <p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้แคเริลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-		<span class="n">remove_one_side</span><span class="p">()</span>
-		<span class="n">turn_left</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">remove_one_side</span><span class="p">()</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">remove_one_side</span><span class="p">():</span>
-	<span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
-		<span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
-			<span class="n">pick_beeper</span><span class="p">()</span>
-		<span class="n">move</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">left_is_blocked</span><span class="p">()</span> <span class="ow">or</span> <span class="n">beepers_present</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span>
+            <span class="n">pick_beeper</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1305,7 +1310,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="2-videos-karel.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Computational Thinking</p>
+        <p class="prev-next-title">Video: การคิดเชิงคำนวณ และ control flow</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
