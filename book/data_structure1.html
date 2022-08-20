@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Structure I &#8212; Programming for NLP</title>
+    <title>โครงสร้างข้อมูล (Data Structure I) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="module3/1-list.html" />
-    <link rel="prev" title="โจทย์: สตริง" href="module2/6-PC4%20Strings.html" />
+    <link rel="next" title="ลิสต์ (List)" href="module3/1-list.html" />
+    <link rel="prev" title="โจทย์: สตริง" href="module2/6-exercise-string.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -156,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/3-PC3%20Variables%20Functions%20Modules.html">
+    <a class="reference internal" href="module2/3-exercise-variable-function.html">
      โจทย์: ตัวแปร และฟังก์ชัน
     </a>
    </li>
@@ -166,12 +166,12 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/5-videos.string.html">
+    <a class="reference internal" href="module2/5-videos-string.html">
      Video: สตริง
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module2/6-PC4%20Strings.html">
+    <a class="reference internal" href="module2/6-exercise-string.html">
      โจทย์: สตริง
     </a>
    </li>
@@ -179,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Data Structure I
+   โครงสร้างข้อมูล (Data Structure I)
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -188,17 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="module3/2%20video%20list.html">
+    <a class="reference internal" href="module3/1-list.html">
+     ลิสต์ (List)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module3/2-videos-list.html">
      Video: List and Data Structure
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="module3/3-PC5%20Lists.html">
-     โจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="module3/5%20video%20dictionary.html">
+    <a class="reference internal" href="module3/5-videos-dictionary.html">
      Video: Dictionary
     </a>
    </li>
@@ -523,7 +523,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Structure I</h1>
+                <h1>โครงสร้างข้อมูล (Data Structure I)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -536,13 +536,28 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-structure-i">
-<h1>Data Structure I<a class="headerlink" href="#data-structure-i" title="Permalink to this headline">#</a></h1>
-<p>โครงสร้างข้อมูลลิสต์ (List) และดิกชันนารี (Dictionary)</p>
+<h1>โครงสร้างข้อมูล (Data Structure I)<a class="headerlink" href="#data-structure-i" title="Permalink to this headline">#</a></h1>
+<p>โครงสร้างข้อมูล (Data Structure) เป็นสิ่งที่ใช้เก็บข้อมูล เพื่อให้เราสามารถจัดเก็บ ค้นหา และจัดการนำมาใช้ได้อย่างดี และเป็นสิ่งที่สำคัญมากที่นักเขียนโปรแกรมทุกคนควรเข้าใจเป็นอย่างดี โดยเฉพาะอย่างยิ่งผู้ที่สนใจทางด้านวิทยาการข้อมูล (data science) เพราะต้องทำการจัดเก็บ เคลื่อนย้าย และนำข้อมูลไปคำนวณค่าต่าง ๆ เป็นประจำ</p>
+<p>โครงสร้างข้อมูลมีอยู่หลากหลายแบบซึ่งในบทนี้เราจะเรียนรู้วิธีการใช้ลิสต์ (list) และดิกชันนารี (dictionary) ในการเก็บข้อมูล ในการเลือกใช้โครงสร้างข้อมูล เราต้องคำนึงถึง 3 อย่าง</p>
+<ol class="simple">
+<li><p>ความถูกต้อง กล่าวคือข้อมูลจะต้องไม่สูญหายหรือผิดเพี้ยนไปจากความตั้งใจของเรา เช่น โครงสร้างข้อมูลบางอย่างไม่เก็บข้อมูลที่ซ้ำไว้ หรือโครงสร้างข้อมูลบางอย่างไม่สนใจลำดับในการจัดเก็บข้อมูล</p></li>
+<li><p>ความรวดเร็ว เนื่องจากโครงสร้างข้อมูลแต่ละอย่างมีวิธีการเก็บข้อมูลที่ต่างกัน ทำให้เวลาที่ใช้ในการค้นหาข้อมูลเพื่อดึงเอามาใช้นั้นต่างกันไปด้วย</p></li>
+<li><p>ความสะดวก โครงสร้างข้อมูลมี method ที่ต่างกัน ทำให้งานบางอย่างทำได้สะดวกมากน้อยต่างกัน เช่น ลิสต์เท่านั้นที่รองรับการดึงข้อมูลออกมาตามลำดับตัวอักษรอย่างสะดวก ๆ ขั้นตอนน้อย หากเราจำเป็นต้องดึงข้อมูลในลักษณะนี้เราต้องเลือกใช้ลิสต์ในการเก็บข้อมูล</p></li>
+</ol>
+<p>ในบทนี้และบทที่ 5 เราจะศึกษาวิธีการใช้โครงสร้างข้อมูลหลากหลายแบบ ซึ่งเราจำเป็นต้องทราบ</p>
+<ol class="simple">
+<li><p>วิธีการสร้างโครงสร้างข้อมูล</p></li>
+<li><p>วิธีการเพิ่มข้อมูลเข้าไปในโครงสร้าง</p></li>
+<li><p>วิธีการแก้ไขข้อมูลที่อยู่ในโครงสร้าง</p></li>
+<li><p>วิธีการดึงข้อมูลออกมาโดยการใช้ลูป</p></li>
+<li><p>วิธีการดึงข้อมูลออกมาโดยการใช้ method ต่าง ๆ</p></li>
+<li><p>ข้อดี ข้อเสียของโครงสร้างข้อมูล</p></li>
+</ol>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module3/2%20video%20list.html">Video: List and Data Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module3/3-PC5%20Lists.html">โจทย์: ลิสต์</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module3/5%20video%20dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3/1-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3/2-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module3/5-videos-dictionary.html">Video: Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module3/6-PC6%20Dictionary%20and%20Reading%20from%20Files.html">โจทย์: ดิกชันนารี</a></li>
 </ul>
 </div>
@@ -575,7 +590,7 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="module2/6-PC4%20Strings.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="module2/6-exercise-string.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
@@ -585,7 +600,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="module3/1-list.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">ลิสต์ (List)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
