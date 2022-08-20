@@ -70,7 +70,7 @@ Deny thy father and refuse thy name.
 ```
 
 
-## ดึงตัวอักษรออกมาจากสตริง
+## เข้าถึงตัวอักษรที่อยุ่ในสตริง
 
 ```{image} img/char-index.png
 :height: 150px
@@ -152,7 +152,7 @@ IndexError: string index out of range
 | `in`	    		| เช็คว่ามีสตริงหนึ่งเป็นสตริงย่อยอีกสตริงหนึ่งหรือไม่ | `'a' in 'girl'` --> `False` |
 |					|						   |   `'i' in 'girl'` --> `True`
 | `not in`			| นิเสธของ `in`			  |   `'a' not in 'girl'` --> `True`
-| ==				| เท่ากันเป๊ะหรือไม่			| `'girl' == 'girl` --> `True` |
+| ==				| เท่ากันเป๊ะหรือไม่			| `'girl' == 'girl'` --> `True` |
 |					|							| `'girl' == 'Girl` --> `False`
 | `len(s)`			| return ความยาวสตริง		| `len('girl')` --> 4 
 
