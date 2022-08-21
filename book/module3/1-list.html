@@ -986,8 +986,34 @@ title="Print to PDF"
 </div>
 <div class="section" id="for">
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปบนลิสต์<a class="headerlink" href="#for" title="Permalink to this headline">#</a></h2>
-<p>loop on index</p>
-<p>loop on element</p>
+<p>เราสามารถ iterate ไปบนลิสต์ ด้วยคำสั่งที่คล้ายคลึงกับสตริง</p>
+<p>สมมติว่าเราต้องการนับว่าลิสต์ของคำมีคำที่สะกดด้วยตัวเล็กทั้งหมด</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rick&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">,</span> <span class="s1">&#39;protect&#39;</span><span class="p">,</span> <span class="s1">&#39;Carl&#39;</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)):</span>
+	<span class="n">word</span> <span class="o">=</span> <span class="n">word_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># ลอกคำที่ index i เก็บใส่ตัวแปร</span>
+	<span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">is_lower</span><span class="p">():</span> <span class="c1"># เช็คว่าสะกดด้วยตัวเล็กหรือไม่ </span>
+		<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>เราจะใช้ <code class="docutils literal notranslate"><span class="pre">i</span></code> เป็น index ในการเข้าถึงสมาชิกแต่ละตัวซึ่งจะเขยิบค่า 0 ไปเรื่อย ๆ จนถึง <code class="docutils literal notranslate"><span class="pre">len(word_list)</span></code> แต่ว่าการลูปด้วยวิธีนี้ ซึ่งเรียกว่าลูปไปบน index ไม่ค่อยสะดวกเท่าใดนัก เพราะต้องเรียก <code class="docutils literal notranslate"><span class="pre">len(word_list)</span></code> และต้องเข้าถึงสมาชิกของลิสต์แยกออกมาอีกคำสั่งนึง <code class="docutils literal notranslate"><span class="pre">word_list[i]</span></code> ในภาษาไพธอนเราสามารถ iterate ไปบนสมาชิกได้โดยตรงดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rick&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">,</span> <span class="s1">&#39;protect&#39;</span><span class="p">,</span> <span class="s1">&#39;Carl&#39;</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">is_lower</span><span class="p">():</span> <span class="c1"># เช็คว่าสะกดด้วยตัวเล็กหรือไม่ </span>
+		<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>โค้ดข้างบนนี้ได้ผลออกมาเหมือนกันทุกประการ แต่ว่าเราใช้การ iterate ไปบนสมาชิกแต่ละตัวตรงๆ ในการลูปรอบแรก <code class="docutils literal notranslate"><span class="pre">word</span></code> จะมีค่าเป็น <code class="docutils literal notranslate"><span class="pre">word_list[0]</span></code> ในการลูปรอบที่สอง <code class="docutils literal notranslate"><span class="pre">word</span></code> จะมีค่าเป็น <code class="docutils literal notranslate"><span class="pre">word_list[1]</span></code> และไปเรื่อย ๆ จนลูปครบทุกสมาชิกทุกตัวในลิสต์ จะเห็นได้ว่าเราประหยัดได้ค่อนข้างมาก โค้ดดูสะอาดตา และสะดวกสบายในการเขียนมากกว่าการ iterate บน index</p>
+<p>แต่ในบางกรณีเราต้องการทราบด้วยว่าในลูปนี้เราอยู่ index ที่เท่าไรแล้ว ในกรณีนี้เราจะใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rick&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">,</span> <span class="s1">&#39;protect&#39;</span><span class="p">,</span> <span class="s1">&#39;Carl&#39;</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">word_index</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">is_lower</span><span class="p">():</span> <span class="c1"># เช็คว่าสะกดด้วยตัวเล็กหรือไม่ </span>
+		<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>จากโค้ดข้างบน ในลูปรอบแรก ค่าของ <code class="docutils literal notranslate"><span class="pre">word_index</span></code> จะเท่ากับ 0 และค่าของ <code class="docutils literal notranslate"><span class="pre">word</span></code> จะเท่ากับ <code class="docutils literal notranslate"><span class="pre">'Rick'</span></code> เพราะฉะนั้นเราจะทราบด้วยว่าในแต่ละรอบเราอยู่ที่ index ใดแล้ว วิธีนี้มีประโยชน์มากเวลาประมวลผลแต่ละคำในประโยค และเราต้องพิจารณาด้วยว่าคำที่อยู่รอบ ๆ คือคำว่าอะไรบ้าง จึงจำเป็นต้องใช้ index มาควบคู่ด้วย</p>
 </div>
 <div class="section" id="list-operator-built-in-function">
 <h2>List operator และ built-in function<a class="headerlink" href="#list-operator-built-in-function" title="Permalink to this headline">#</a></h2>
