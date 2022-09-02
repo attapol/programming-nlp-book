@@ -200,12 +200,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4-dictionary.html">
+     ดิกชันนารี (Dictionary)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module3/5-videos-dictionary.html">
      Video: Dictionary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module3/6-PC6%20Dictionary%20and%20Reading%20from%20Files.html">
+    <a class="reference internal" href="../module3/6-exercise-dictionary.html">
      โจทย์: ดิกชันนารี
     </a>
    </li>
@@ -281,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2%20video%20OOP.html">
+    <a class="reference internal" href="../module6/2-videos-OOP.html">
      Video: Object-Oriented Programming
     </a>
    </li>
@@ -298,18 +303,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2%20video%20NLP.html">
+    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
      Video: Natural Language Processing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/LDA%20workshop.html">
-     LDA Workshop
+    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
+     ตัดคำ word tokenization ภาษาไทย
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/Text%20Processing%20Workshop.html">
-     ตัดคำ word tokenization ภาษาไทย
+    <a class="reference internal" href="../module7/4-workshop-LDA.html">
+     LDA Workshop
     </a>
    </li>
   </ul>
@@ -622,17 +627,39 @@ title="Print to PDF"
      ข้อ 7.1
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     ข้อ 7.2
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id10">
+  <a class="reference internal nav-link" href="#id11">
    ข้อ 8
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id11">
-   ข้อ 8.1
+  <a class="reference internal nav-link" href="#id12">
+   ข้อ 9
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   ข้อ 10
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     ข้อ 10.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     ข้อ 10.2
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -693,17 +720,39 @@ title="Print to PDF"
      ข้อ 7.1
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     ข้อ 7.2
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id10">
+  <a class="reference internal nav-link" href="#id11">
    ข้อ 8
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id11">
-   ข้อ 8.1
+  <a class="reference internal nav-link" href="#id12">
+   ข้อ 9
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   ข้อ 10
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     ข้อ 10.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     ข้อ 10.2
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -719,9 +768,9 @@ title="Print to PDF"
 <h1>โจทย์: ตัวแปร และฟังก์ชัน<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <div class="section" id="id2">
 <h2>ข้อ 1<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
-<p>ใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input()</span></code> ซึ่งเป็นฟังก์ชัน built-in ของ python (<a class="reference external" href="https://www.w3schools.com/python/ref_func_input.asp">ศึกษาวิธีการใช้ฟังก์ชันนี้</a>) รับค่าตัวเลข 2 ค่า แล้วแสดงผลบวกของ 2 ค่านี้</p>
-<p><em>Hint:</em> Return value ของ <code class="docutils literal notranslate"><span class="pre">input()</span></code> เป็น string ดังนั้นต้องทำการแปลงเป็นตัวเลขก่อน</p>
-<p><strong>ชวนคิด:</strong> ถ้าไม่แปลง string เป็นตัวเลข แล้วเอา string มาบวกกัน ผลลัพธ์ที่ได้ออกมาคืออะไร</p>
+<p>ใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input()</span></code> ซึ่งเป็นฟังก์ชันบิวท์อิน ของไพธอนรับค่าตัวเลข 2 ค่า แล้วแสดงผลบวกของ 2 ค่านี้</p>
+<p><em>Hint:</em> Return value ของ <code class="docutils literal notranslate"><span class="pre">input()</span></code> เป็นสตริงดังนั้นต้องทำการแปลงเป็นตัวเลขก่อน</p>
+<p><em>ชวนคิด:</em> ถ้าไม่แปลงสตริงเป็นตัวเลข แล้วเอาสตริงมาบวกกัน ผลลัพธ์ที่ได้ออกมาคืออะไร</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Your implementation here</span>
@@ -870,6 +919,8 @@ title="Print to PDF"
 </div>
 <div class="section" id="id8">
 <h2>ข้อ 7<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id9">
+<h3>ข้อ 7.1<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <p>จงสร้าง function ที่รับ integer แล้วคืนจำนวนว่าหาร 2 ได้กี่ครั้งค่าถึงจะกลายเป็น 1</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">divide_two</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="mi">4</span>
@@ -877,6 +928,7 @@ title="Print to PDF"
 <span class="o">&gt;&gt;&gt;</span><span class="mi">2</span>
 </pre></div>
 </div>
+<p>Bonus: ลองเพิ่มเงื่อนไข <code class="docutils literal notranslate"><span class="pre">if</span></code> ที่จับ input ที่หารสองเท่าไรก็ไม่ได้ 1 (หารแล้วกลายเป็นค่าที่น้อยกว่า 1) จากนั้น <code class="docutils literal notranslate"><span class="pre">print</span></code> บอกว่า input ไม่ใช่เลขฐาน 2</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divide_two</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -900,67 +952,128 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="id9">
-<h3>ข้อ 7.1<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
-<p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log</span></code> ทางคณิตศาสตร์ในการช่วยคำนวณข้อ 7. ได้ โดยที่เมื่อ</p>
-<p><span class="math notranslate nohighlight">\(n=2^x\)</span> แล้วจะได้ <span class="math notranslate nohighlight">\(\frac{\log n}{\log 2} = x\)</span></p>
-<p>ในข้อนี้ ให้ลองใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log</span></code> (อยู่ใน module <code class="docutils literal notranslate"><span class="pre">math</span></code>) ในการทำโจทย์จากข้อ 7.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Your implementation here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="id10">
-<h2>ข้อ 8<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
-<p>สร้างฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">random_generator</span></code> ซึ่งรับค่า parameter 2 ตัว <code class="docutils literal notranslate"><span class="pre">j</span></code> และ <code class="docutils literal notranslate"><span class="pre">k</span></code> (<code class="docutils literal notranslate"><span class="pre">j</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">k</span></code> เสมอ) โดยฟังก์ชัน return ตัวเลขสุ่มตั้งแต่ <code class="docutils literal notranslate"><span class="pre">j</span></code> - <code class="docutils literal notranslate"><span class="pre">k</span></code></p>
-<p>เช่น ถ้า <code class="docutils literal notranslate"><span class="pre">j</span></code>=2 และ <code class="docutils literal notranslate"><span class="pre">k</span></code>=10 ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">random_generator</span></code> จะพิมพ์ตัวเลขที่สุ่มจากตัวเลขตั้งแต่ 2-10</p>
-<p><em>python มี module ชื่อ <a class="reference external" href="https://docs.python.org/3/library/random.html"><code class="docutils literal notranslate"><span class="pre">random</span></code></a> ที่ใช้ในการสุ่มตัวเลข</em></p>
+<h3>ข้อ 7.2<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log</span></code> ทางคณิตศาสตร์ในการช่วยคำนวณข้อ 7. ได้ โดยที่เมื่อ
+<span class="math notranslate nohighlight">\(\log_2(x)\)</span> = จำนวนครั้งที่ใช้ 2 หาร <span class="math notranslate nohighlight">\(x\)</span> ไปเรื่อย ๆ จนได้ 1</p>
+<p>ในข้อนี้ ให้ลองใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log2</span></code> (อยู่ใน module <code class="docutils literal notranslate"><span class="pre">math</span></code>) ในการทำโจทย์จากข้อ 7.1</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Your implementation here</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="id11">
-<h2>ข้อ 8.1<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
-<p>รับตัวเลข 1 ตัว โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input()</span></code> (สมมุติว่าผู้ใช้ใส่ตัวเลขเสมอ, สมมุติว่าตัวเลขที่รับเข้ามาคือ <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+<h2>ข้อ 8<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
+<p>เขียนโปรแกรมที่บอกว่าผู้ใช้ควรจะใส่เสื้อไซส์อะไรถ้าดูจากรอบเอว เราต้องการแปลงรอบเอวเป็นไซส์ตามตารางข้างล่างนี้</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Size</p></th>
+<th class="head"><p>รอบเอว (เซนติเมตร)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>&lt; 76</p></td>
+</tr>
+<tr class="row-odd"><td><p>M</p></td>
+<td><p>76 - 84</p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>&gt; 84</p></td>
+</tr>
+</tbody>
+</table>
+<p>โปรแกรมจะต้องมีลักษณะดังนี้</p>
 <ul class="simple">
-<li><p>ถ้า <code class="docutils literal notranslate"><span class="pre">x</span></code> ติดลบ หรือเป็น 0 ให้แสดงผลว่า <code class="docutils literal notranslate"><span class="pre">Invalid</span> <span class="pre">number</span></code></p></li>
-<li><p>ถ้า <code class="docutils literal notranslate"><span class="pre">x</span></code> น้อยกว่า 10 ให้แสดงผลว่า <code class="docutils literal notranslate"><span class="pre">Too</span> <span class="pre">few!</span></code></p></li>
-<li><p>นอกเหนือไปจากนั้น ให้พิมพ์ตัวเลขที่สุ่มตั้งแต่ ครั้งที่พิมพ์-สองเท่าของ <code class="docutils literal notranslate"><span class="pre">x</span></code> จำนวน 5 ตัว (เช่น ถ้า <code class="docutils literal notranslate"><span class="pre">x</span></code> = 15, ตัวที่ 1 พิมพ์เลขสุ่มจาก 1-30, ตัวที่ 2 สุ่มจาก 2-30, ตัวที่ 3 สุ่มจาก 3-30, …)</p></li>
+<li><p>Input: รอบเอว หน่วยเป็นนิ้ว (เพราะฉะนั้นจะต้องแปลงก่อน 1 นิ้ว = 2.54 เซนติเมตร)</p></li>
+<li><p>Output: Size ที่เหมาะสม type string</p></li>
 </ul>
-<p><strong>ควรเรียกใช้ฟังก์ชันที่สร้างในข้อ 8</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Your implementation here</span>
+<span class="k">def</span> <span class="nf">recommend_size</span><span class="p">(</span><span class="n">waist_size_in_inch</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>ข้อ 9<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h2>
+<p>สมมติว่าผู้ป่วยโควิด 19 หนึ่งคนจะมีทำให้มีผู้ติดเชื้อมากขึ้น 3 คนต่อวัน</p>
+<p>เพราะฉะนั้นถ้าวันที่ 1 มีผู้ป่วย 5 คน</p>
+<ul class="simple">
+<li><p>วันที่สองจะมีผู้ป่วยเพิ่มขึ้น 5 x 3 = 15 คน รวมแล้วมีจำนวนผู้ป่วย 5 + 15 = 20 คน</p></li>
+<li><p>วันที่สามจะมีผู้ป่วยเพิ่มขึ้น 20 x 3 = 60 คน รวมแล้วมีจำนวนผู้ป่วย 20 + 60 = 80 คน</p></li>
+<li><p>วันที่สี่จะมีผู้ป่วย 80 x 3 = 240 คน รวมแล้วมีจำนวนผู้ป่วย 80 + 240  = 320 คน</p></li>
+</ul>
+<p>เขียนโปรแกรมที่ print จำนวนผู้ป่วยในแต่ละวันโดยที่โปรแกรมจะมีลักษณะดังนี้</p>
+<p>input:</p>
+<ol class="simple">
+<li><p>จำนวนผู้ป่วยตั้งต้น (วันที่ 0)</p></li>
+<li><p>จำนวนวันที่ต้องการ print</p></li>
+</ol>
+<p>output: จำนวนผู้ป่วยในวันสุดท้าย</p>
+<p>โปรแกรมจะต้อง print จำนวนผู้ป่วยในแต่ละวันอีกด้วย</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_patients</span><span class="p">(</span><span class="n">num_initial_patients</span><span class="p">,</span> <span class="n">num_days</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; compute_patients(5, 3) # จำนวนผู้ป่วยตั้งต้น 5 คน ต้องการคำนวณ 3 วัน</span>
+<span class="sd">    Day 1: 20 patients</span>
+<span class="sd">    Day 2: 80 patients</span>
+<span class="sd">    Day 3: 320 patients</span>
+<span class="sd">    45</span>
+
+<span class="sd">    &gt;&gt;&gt; compute_patients(10, 2) # จำนวนผู้ป่วยตั้งต้น 10 คน ต้องการคำนวณ 2 วัน</span>
+<span class="sd">    Day 1: 30 patients</span>
+<span class="sd">    Day 2: 90 patients</span>
+<span class="sd">    90</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>ข้อ 10<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
+<p>วัคซีน COVID-19 แต่ละชนิดสามารถสร้างภูมิคุ้มกันได้แตกต่างกันขึ้นอยู่กับสภาพบุคคล ซึ่งเมื่อหลังจากฉีดวัคซีนแล้ว 7 วัน คนเราจะมีภูมิคุ้มกันสูงที่สุด (สูงที่สุดไม่เกิน 500 หน่วย) แต่ว่าปริมาณภูมิคุ้มกันสูงสุดก็แตกต่างกันไป ขึ้นอยู่กับสภาพร่างกายของแต่ละคนและชนิดของวัคซีนที่ได้รับ
+หลังจากร่างกายเรามีภูมิคุ้มกันสูงที่สุดแล้ว ปริมาณภูมิคุ้มกันในร่างกายก็จะลดลงเรื่อยๆ โดยปริมาณภูมิคุ้มกันในวันถัดไป จะเป็น 𝛂 เท่า (อ่านว่า alpha, อัลฟ่า) ของปริมาณภูมิคุ้มกันในวันนี้ โดยที่ค่า 𝛂 ขึ้นอยู่กับสภาพร่างกายของแต่ละคน หากคนเรามีปริมาณภูมิคุ้มกันต่ำกว่า 40 หน่วย จะถือว่าไม่มีภูมิต้านทานโรค COVID-19</p>
+<p><strong>ตัวอย่าง</strong></p>
+<ul class="simple">
+<li><p>คุณยายเอ๋ อายุ 75 ปี มีโรคประจำตัวเป็นโรคเบาหวาน มีค่า 𝛂 เป็น 0.60</p></li>
+<li><p>หลังจากรับวัคซีนไปแล้ว 7 วัน คุณยายเอ๋มีภูมิคุ้มกันสูงสุดที่ 350 หน่วย</p></li>
+<li><p>วันถัดไป (วันที่ 8 หลังจากรับวัคซีน) คุณยายเอ๋จะมีภูมิคุ้มกันอยู่ที่ 0.60 *  350 = 210 หน่วย</p></li>
+<li><p>วันที่ 9 จะมีภูมิคุ้มกันอยู่ 0.60 * 210 = 126 หน่วย</p></li>
+</ul>
+<div class="section" id="id14">
+<h3>ข้อ 10.1<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h3>
+<p>จงเขียนฟังก์ชัน days_to_hazard ซึ่งรับ parameter 2 ตัว ได้แก่ 1) ปริมาณภูมิคุ้มกันสูงสุด ณ วันที่ 7 หลังจากฉีดวัคซีน 2) ค่า 𝛂 แล้วให้ฟังก์ชันนี้คืนค่าเป็นจำนวนวันว่าคนๆ นี้มีภูมิต้านทานโรค COVID-19 ได้อยู่กี่วันหลังจากฉีดวัคซีน (ไม่นับวันที่มีปริมาณภูมิคุ้มกันต่ำกว่า 40 หน่วย)
+ตัวอย่าง</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">days_to_hazard</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">)</span> <span class="c1"># ปริมาณภูมิคุ้มกันสูงสุด 400 หน่วย, 𝛂 = 0.80</span>
+<span class="go">18</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">days_to_hazard</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># ปริมาณภูมิคุ้มกันสูงสุด 200 หน่วย, 𝛂 = 0.5</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">days_to_hazard</span><span class="p">(</span><span class="n">max_immunity</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>ข้อ 10.2<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
+<p>เขียนโปรแกรมโดยใช้ฟังก์ชัน days_to_hazard เพื่อตรวจสอบว่า ระหว่างคุณยายเอ๋ในตัวอย่าง กับนายโจ้ อายุ 22 ปี ผู้ซึ่งเป็นโรคอ้วน มีค่า 𝛂 = 0.75 และมีภูมิคุ้มกันสูงสุด 300 หน่วย ใครจะถึงจุดอันตรายก่อน (ใครจะไม่มีภูมิต้านทาน COVID-19 ก่อน) โดยพิมพ์ว่า เอ๋ก่อน หรือ โจ้ก่อน ทางหน้าจอ</p>
 </div>
 </div>
 </div>

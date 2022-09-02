@@ -198,12 +198,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="4-dictionary.html">
+     ดิกชันนารี (Dictionary)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="5-videos-dictionary.html">
      Video: Dictionary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="6-PC6%20Dictionary%20and%20Reading%20from%20Files.html">
+    <a class="reference internal" href="6-exercise-dictionary.html">
      โจทย์: ดิกชันนารี
     </a>
    </li>
@@ -279,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2%20video%20OOP.html">
+    <a class="reference internal" href="../module6/2-videos-OOP.html">
      Video: Object-Oriented Programming
     </a>
    </li>
@@ -296,18 +301,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2%20video%20NLP.html">
+    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
      Video: Natural Language Processing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/LDA%20workshop.html">
-     LDA Workshop
+    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
+     ตัดคำ word tokenization ภาษาไทย
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/Text%20Processing%20Workshop.html">
-     ตัดคำ word tokenization ภาษาไทย
+    <a class="reference internal" href="../module7/4-workshop-LDA.html">
+     LDA Workshop
     </a>
    </li>
   </ul>
@@ -584,6 +589,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   การเขียนทับด้วย
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     []
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#append">
    เพิ่มข้อมูลเข้าท้ายลิสต์:
    <code class="docutils literal notranslate">
@@ -770,6 +785,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-operator-built-in-function">
    List operator และ built-in function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   การเขียนทับด้วย
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     []
+    </span>
+   </code>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1060,6 +1085,19 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="id4">
+<h2>การเขียนทับด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="sidebar">
+<p class="sidebar-title">ตัวอย่าง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
+<span class="n">accountant_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;โจ้&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
+<span class="c1"># Output: [&#39;โจ้&#39;, &#39;เมย์&#39;, &#39;จอย&#39;, &#39;เมย์&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
+</pre></div>
+</div>
+</div>
+<p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> คร่อม index ที่เราต้องการเขียนทับ และใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ในการให้ค่า (assignment) คล้าย ๆ กับการใช้ตัวแปร เราอาจจะคิดเสมือนว่าลิสต์เป็นการเก็บตัวแปรไว้หลาย ๆ ตัวแปร แบบเรียงลำดับกันตามที่เราต้องการ</p>
 </div>
 <div class="section" id="append">
 <h2>เพิ่มข้อมูลเข้าท้ายลิสต์: <code class="docutils literal notranslate"><span class="pre">.append()</span></code><a class="headerlink" href="#append" title="Permalink to this headline">#</a></h2>
