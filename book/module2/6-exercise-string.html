@@ -593,43 +593,53 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prefix-suffix">
+     ข้อ 1. Prefix suffix
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compound-word">
+     ข้อ 2. Compound word
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reverse-string">
-     ข้อ 1. Reverse String
+     ข้อ 3. Reverse String
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#palindrome">
-     ข้อ 2. Palindrome
+     ข้อ 4. Palindrome
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pig-latin">
-     ข้อ 3. Pig Latin
+     ข้อ 5. Pig Latin
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#flip-language">
-     ข้อ 4. Flip Language
+     ข้อ 6. Flip Language
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     ข้อ 5. ไม่ 1 ไม่ 5
+     ข้อ 7. ไม่ 1 ไม่ 5
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     ข้อ 6. ไปรษณีย์
+     ข้อ 8. ไปรษณีย์
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#am-i-a-float">
-     ข้อ 7. Am I a float?
+     ข้อ 9. Am I a float?
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#str-to-int">
-     ข้อ 8. str to int
+     ข้อ 10. str to int
     </a>
    </li>
   </ul>
@@ -681,43 +691,53 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prefix-suffix">
+     ข้อ 1. Prefix suffix
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compound-word">
+     ข้อ 2. Compound word
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reverse-string">
-     ข้อ 1. Reverse String
+     ข้อ 3. Reverse String
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#palindrome">
-     ข้อ 2. Palindrome
+     ข้อ 4. Palindrome
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pig-latin">
-     ข้อ 3. Pig Latin
+     ข้อ 5. Pig Latin
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#flip-language">
-     ข้อ 4. Flip Language
+     ข้อ 6. Flip Language
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     ข้อ 5. ไม่ 1 ไม่ 5
+     ข้อ 7. ไม่ 1 ไม่ 5
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     ข้อ 6. ไปรษณีย์
+     ข้อ 8. ไปรษณีย์
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#am-i-a-float">
-     ข้อ 7. Am I a float?
+     ข้อ 9. Am I a float?
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#str-to-int">
-     ข้อ 8. str to int
+     ข้อ 10. str to int
     </a>
    </li>
   </ul>
@@ -756,8 +776,91 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>โจทย์: สตริง<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<div class="section" id="prefix-suffix">
+<h2>ข้อ 1. Prefix suffix<a class="headerlink" href="#prefix-suffix" title="Permalink to this headline">#</a></h2>
+<p>จงเขียนโปรแกรมที่ detect ว่าคำมี prefix/suffix ที่กำลังหาหรือไม่
+ถ้ามี prefix/suffix นั้นไปจับกับหน่วยคำใด</p>
+<p>เช่น
+คำว่า ‘ใจแตก’ มี ‘ใจ’ เป็น prefix ที่เกาะกับหน่วยคำ ‘-แตก’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;ใจแตก&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;-แตก&#39;</span>
+</pre></div>
+</div>
+<p>คำว่า ‘เข็ญใจ’ มี ‘ใจ’ เป็น suffix ที่เกาะกับหน่วยคำ ‘เข็ญ-‘</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;เข็ญใจ&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;เข็ญ-&#39;</span>
+</pre></div>
+</div>
+<p>ถ้าไม่ได้เป็น prefix หรือ suffix ให้ return ‘’</p>
+<p>อย่าลืมเติม - ให้ถูกต้องด้วย ขีดหน้าคือ prefix ขีดหลังคือ suffix</p>
+<p>คำใบ้: แนะนำให้แก้โจทย์เล็กๆ ก่อน</p>
+<ol class="simple">
+<li><p>กรณีที่ไม่เป็น prefix suffix</p></li>
+<li><p>กรณีที่เป็น prefix</p></li>
+<li><p>กรณีที่เป็น suffix</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_prefix_suffix</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">affix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ตัวอย่าง</span>
+
+<span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;หน้าเนื้อ&#39;, &#39;หน้า&#39;)</span>
+<span class="sd">    &#39;-เนื้อ&#39;</span>
+<span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;การเดินทาง&#39;, &#39;การ&#39;)</span>
+<span class="sd">    &#39;-เดินทาง&#39;</span>
+<span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;เหลือใจ&#39;, &#39;ใจ&#39;)</span>
+<span class="sd">    &#39;เหลือ-&#39;</span>
+<span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;ใจ&#39;, &#39;ใจ&#39;)</span>
+<span class="sd">    &#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;หน้าเนื้อใจเสือ&#39;, &#39;ใจ&#39;)</span>
+<span class="sd">    &#39;&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compound-word">
+<h2>ข้อ 2. Compound word<a class="headerlink" href="#compound-word" title="Permalink to this headline">#</a></h2>
+<p>จงเขียนฟังก์ชันที่มี input เป็นสตริงหนึ่งสตริง ฟังก์ชัน return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงสามารถถูกแบ่งออกมาเป็นคำสองคำย่อยได้ เช่น</p>
+<ul class="simple">
+<li><p>headband สามารถถูกแบ่งเป็น head + band</p></li>
+<li><p>warhead สามารถถูกแบ่งเป็น war + head</p></li>
+<li><p>headset สามารถถูกแบ่งเป็น head + set</p></li>
+</ul>
+<p>โดยที่ให้เรามีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">is_word</span></code> ที่ return บูลีนบ่งบอกว่าสตริงเป็นคำที่อยู่ในพจนานุกรมหรือไม่</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">True</span> 
+<span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;set&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">True</span> 
+<span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;filt&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_word</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;is word a valid word?</span>
+<span class="sd">	</span>
+<span class="sd">	Assume four words in the vocabulary</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">return</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;head&#39;</span><span class="p">,</span> <span class="s1">&#39;band&#39;</span><span class="p">,</span> <span class="s1">&#39;set&#39;</span><span class="p">,</span> <span class="s1">&#39;war&#39;</span><span class="p">]</span>
+
+	
+<span class="k">def</span> <span class="nf">splittable</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	ตัวอย่าง</span>
+<span class="sd">	&gt;&gt;&gt; splittable(&#39;headband&#39;) </span>
+<span class="sd">	True</span>
+<span class="sd">	&gt;&gt;&gt; splittable(&#39;warhead&#39;)</span>
+<span class="sd">	True</span>
+<span class="sd">	&gt;&gt;&gt; splittable(&#39;bandid&#39;)</span>
+<span class="sd">	False</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="reverse-string">
-<h2>ข้อ 1. Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 3. Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> ซึ่งรับ parameter 1 ตัวเป็น string (สมมุติว่าชื่อ <code class="docutils literal notranslate"><span class="pre">original_string</span></code>) แล้ว return ค่าเป็น string ซึ่งมีค่าเป็น string ย้อนกลับของ <code class="docutils literal notranslate"><span class="pre">original_string</span></code></p>
 <p><strong>ตัวอย่าง</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> รับ parameter เป็น <em>‘Hello’</em> จะต้อง return string ที่มีค่าเป็น <em>‘olleH’</em></p>
@@ -785,7 +888,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="palindrome">
-<h2>ข้อ 2. Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 4. Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code> ซึ่งรับ parameter 1 ตัวเป็น string แล้วเช็คว่า string นั้นเป็น palindrome หรือไม่ โดยถือว่าตัวอักษรตัวเล็กและตัวใหญ่เป็นคนละเดียวกัน</p>
 <p>ถ้าใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่ถ้าไม่ใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>string จะเป็น palindrome ก็ต่อเมื่ออ่าน string จากหน้าไปหลัง เหมือนกับการอ่านจากหลังไปหน้า</p>
@@ -816,7 +919,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="pig-latin">
-<h2>ข้อ 3. Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 5. Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this headline">#</a></h2>
 <p>ภาษา Pig Latin เป็นภาษาที่ใกล้เคียงภาษาอังกฤษมาก โดยการแปลงคำภาษาอังกฤษเป็นภาษา Pig Latin สามารถทำได้โดยนำตัวอักษรตัวแรกของคำไปไว้ด้านหลัง แล้วเติมตัว <code class="docutils literal notranslate"><span class="pre">a</span></code> ไว้ด้านท้ายสุด เช่น คำว่า <code class="docutils literal notranslate"><span class="pre">hello</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">elloha</span></code> หรือ คำว่า <code class="docutils literal notranslate"><span class="pre">sleep</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">leepsa</span></code></p>
 <p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">eng_to_pig_latin</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return คำภาษา Pig Latin ของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
 <div class="cell docutils container">
@@ -835,7 +938,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="flip-language">
-<h2>ข้อ 4. Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 6. Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this headline">#</a></h2>
 <p>คุณกับเพื่อนได้คิดค้นโค้ดลับของคำศัพท์ภาษาอังกฤษ โดยการแปลงคำศัพท์ภาษาอังกฤษดังนี้</p>
 <ol class="simple">
 <li><p>ถ้าคำศัพท์มีความยาวเป็นเลขคู่ ให้นำครึ่งหลังของคำมาไว้ข้างหน้า แล้วนำครึ่งหน้าของคำไปไว้ข้างหลัง</p></li>
@@ -863,7 +966,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="id2">
-<h2>ข้อ 5. ไม่ 1 ไม่ 5<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 7. ไม่ 1 ไม่ 5<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>จงหาผลรวมของจำนวนเต็มที่น้อยกว่า 100 และไม่มีเลข 1 กับ 5</p>
 <p><span class="math notranslate nohighlight">\(2 + 3 + 4 + 6 + 7 + 8 + 9 + 20 + 22 + 23 + 24 + 26 \cdots + 99\)</span></p>
 <p>คำตอบคือ 3432</p>
@@ -878,7 +981,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="id3">
-<h2>ข้อ 6. ไปรษณีย์<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 8. ไปรษณีย์<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>ตอนนี้มี text data ที่มีชื่อเขตกับรหัสไปรษณีย์ ซึ่งเป็นหน้าตาแบบนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Wattana 10110 Yannawa 10120 Lak Si 10210 Sai Mai 10220 Bang Na 10260 Dusit 10300&#39;</span>
 </pre></div>
@@ -906,7 +1009,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="am-i-a-float">
-<h2>ข้อ 7. Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 9. Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this headline">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 1 ค่า แล้วแสดงผลทางหน้าจอว่าค่าที่ผู้ใช้ใส่มาเป็น <code class="docutils literal notranslate"><span class="pre">float</span></code> หรือไม่</p>
 <p><strong>Hint:</strong> <code class="docutils literal notranslate"><span class="pre">float</span></code> จะมีจุดทศนิยม 1 จุด และทีเหลือเป็นตัวเลข แต่ว่าอาจจะเป็นค่าลบได้</p>
 <p><strong>ตัวอย่าง</strong></p>
@@ -940,7 +1043,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="str-to-int">
-<h2>ข้อ 8. str to int<a class="headerlink" href="#str-to-int" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 10. str to int<a class="headerlink" href="#str-to-int" title="Permalink to this headline">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 2 ค่า แล้วแสดงผลทางหน้าจอดังนี้</p>
 <ol class="simple">
 <li><p>ถ้าเป็นตัวเลขทั้งคู่ (<code class="docutils literal notranslate"><span class="pre">float</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">int</span></code>) ให้แสดงผลบวกของสองค่านี้</p></li>
