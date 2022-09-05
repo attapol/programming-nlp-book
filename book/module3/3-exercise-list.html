@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Programming for NLP</title>
+    <title>โจทย์: ลิสต์ &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="4-dictionary.html" />
+    <link rel="next" title="ดิกชันนารี (Dictionary)" href="4-dictionary.html" />
     <link rel="prev" title="Video: List and Data Structure" href="2-videos-list.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -107,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../comp_thinking.html">
    การคิดเชิงคำนวณ และ control flow
@@ -177,16 +177,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../data_structure1.html">
    โครงสร้างข้อมูล (Data Structure I)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1-list.html">
      ลิสต์ (List)
@@ -197,13 +197,23 @@ const thebe_selector_output = ".output, .cell_output"
      Video: List and Data Structure
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     โจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4-dictionary.html">
+     ดิกชันนารี (Dictionary)
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5-videos-dictionary.html">
      Video: Dictionary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="6-PC6%20Dictionary%20and%20Reading%20from%20Files.html">
+    <a class="reference internal" href="6-exercise-dictionary.html">
      โจทย์: ดิกชันนารี
     </a>
    </li>
@@ -220,17 +230,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/2%20video%20file.html">
+    <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/4%20video%20Reg%20Ex.html">
+    <a class="reference internal" href="../module4/4-videos-regex.html">
      Video: Regular Expression
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/PC7%20Regular%20Expression.html">
+    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
      โจทย์: Regular Expression
     </a>
    </li>
@@ -279,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2%20video%20OOP.html">
+    <a class="reference internal" href="../module6/2-videos-OOP.html">
      Video: Object-Oriented Programming
     </a>
    </li>
@@ -296,18 +306,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2%20video%20NLP.html">
+    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
      Video: Natural Language Processing
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/LDA%20workshop.html">
-     LDA Workshop
+    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
+     ตัดคำ word tokenization ภาษาไทย
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module7/Text%20Processing%20Workshop.html">
-     ตัดคำ word tokenization ภาษาไทย
+    <a class="reference internal" href="../module7/4-workshop-LDA.html">
+     LDA Workshop
     </a>
    </li>
   </ul>
@@ -407,6 +417,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/attapol/programming-for-nlp/main?urlpath=tree/book/book/module3/3-exercise-list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/attapol/programming-for-nlp/blob/main/book/book/module3/3-exercise-list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -474,7 +531,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module3/3-exercise-list.md"
+        <a href="../../_sources/book/module3/3-exercise-list.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -485,7 +542,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -532,7 +589,47 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อ 1. ลอตเตอรี่
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 2. ลิสต์อาหาร
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-an">
+   ข้อ 3. a/an
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 4. ทำความสะอาดข้อมูล
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 5. ความยาวเฉลี่ยของคำ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 7. เปลี่ยนตัว
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-statistics">
+   6. Basic Statistics
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -542,7 +639,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>โจทย์: ลิสต์</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -551,7 +648,47 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อ 1. ลอตเตอรี่
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 2. ลิสต์อาหาร
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-an">
+   ข้อ 3. a/an
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 4. ทำความสะอาดข้อมูล
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 5. ความยาวเฉลี่ยของคำ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 7. เปลี่ยนตัว
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-statistics">
+   6. Basic Statistics
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -562,266 +699,246 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>{
-“cells”: [
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “6L6KUtgV3VT2”
-},
-“source”: [
-“# โจทย์: ลิสต์”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “JSuZnn9V3VT_”
-},
-“source”: [
-“## 1. Sentence to list\n”,
-“เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">str_to_list</span></code> ซึ่งรับ parameter เป็น string (ประโยคภาษาอังกฤษ) และ return list ซึ่งเป็นคำในประโยคนั้น โดยไม่มี punctuation ต่างๆ (full stop, comma, question mark, exclamation mark)\n”,
-“\n”,
-“<strong>Hint:</strong> \n”,
-“\n”,
-“1) remove punctuation ออกจาก input ให้เรียบร้อยก่อน\n”,
-“\n”,
-“2) ใช้ built-in function ของ string ชื่อ <code class="docutils literal notranslate"><span class="pre">split</span></code>”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “5jYxwsYn3VUA”
-},
-“outputs”: [],
-“source”: [
-“# Your code here\n”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “804d9Mdb3VUC”
-},
-“outputs”: [],
-“source”: [
-“# ตรวจสอบว่าทำงานถูกหรือเปล่า\n”,
-“text = “I will not give up on this. If I feel tired, I will take a rest.”\n”,
-“expectedList = [‘I’,’will’,’not’,’give’,’up’,’on’,’this’,’If’,’I’,’feel’,’tired’,’I’,’will’,’take’,’a’,’rest’]\n”,
-“result = str_to_list(text)\n”,
-“\n”,
-“if result == expectedList:\n”,
-”    print(‘Correct!’)\n”,
-“else:\n”,
-”    print(‘Incorrect’)”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “GWmsiqWFmXrY”
-},
-“source”: [
-“## 2. Count mean number of words in the string\n”,
-“เขียนฟังก์ชันหาความยาวเฉลี่ยของคำที่อยู่ในข้อความ \n”,
-“\n”,
-“ให้เรา assume ได้เลยว่าคำถูกแบ่งชัดเจนด้วย <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> \n”,
-“\n”,
-“Hint: ให้แบ่ง string เป็น list of strings ก่อน จากนั้นค่อยหาค่าเฉลี่ยโดยการเขียน for loop “
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “kHhbw7tRmXra”
-},
-“outputs”: [],
-“source”: [
-“def compute_mean_number_of_words(text):\n”,
-”    return 0”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “MlYGBXFvmXrb”
-},
-“outputs”: [],
-“source”: [
-“s = ‘Black Pink in your area’\n”,
-“if compute_mean_number_of_words(s) == ((5+4+2+4+4) /5):\n”,
-”    print(‘Correct!’)\n”,
-“else:\n”,
-”    print(‘Inorrect’)\n”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “oNFK24XW3VT7”
-},
-“source”: [
-“## 3. The list which has no repetitions\n”,
-“\n”,
-“เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> ซึ่งรับ parameter เป็น list (ใน list จะเป็นข้อมูลประเภทใดก็ได้) และ <em>return list ใหม่</em> ซึ่งมีข้อมูลจาก list เดิม และมีข้อมูลไม่ซ้ำกันเลย ตัวอย่างเช่น\n”,
-“\n”,
-“<em>Input</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">5,</span> <span class="pre">5]</span></code> <br/>\n”,
-“<em>Output</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code>\n”,
-“\n”,
-“<strong>ข้อสำคัญ:</strong> List เดิมที่ส่งไปที่ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> จะต้องไม่เปลี่ยนแปลง”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “gg2V5vgj3VT8”
-},
-“outputs”: [],
-“source”: [
-“# Your code here\n”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “rErybrp43VT-“
-},
-“outputs”: [],
-“source”: [
-“# ตรวจสอบว่าทำงานถูกหรือเปล่า\n”,
-“originalList = [1, 2, 2, 3, 4, 5, 5, 5]\n”,
-“originalList_copy = originalList.copy()\n”,
-“expectedList = [1, 2, 3, 4, 5]\n”,
-“\n”,
-“result = remove_repetitions(originalList)\n”,
-“\n”,
-“if result == expectedList and originalList == originalList_copy:\n”,
-”    print(‘Correct!’)\n”,
-“else:\n”,
-”    print(‘Incorrect’)”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “Crxpe8VB3VUE”
-},
-“source”: [
-“## 4. Guest list  \n”,
-“\n”,
-“Write a function that prompt the user to input a name into a guest list and return the guest list when there are X people.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;guest_list(2)\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;&gt;&gt;Name:</span> <span class="pre">Manee\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;&gt;&gt;Name:</span> <span class="pre">Malee\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;&gt;&gt;['Manee',</span> <span class="pre">'Malee']\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;</span></code>”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “9RsnRzM83VUE”
-},
-“outputs”: [],
-“source”: [
-“# Your code here\n”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “_CjTm-9P3VUG”
-},
-“source”: [
-“## 5. Guest substitution\n”,
-“Suppose you have a name list of your friends who are coming to your birthday party, but one of your friend cannot make it. Write a function called <code class="docutils literal notranslate"><span class="pre">sub_name</span></code> that substitutes the name of a person with another person <strong>inplace</strong>.\n”,
-“\n”,
-“<strong>Note:</strong> The function <code class="docutils literal notranslate"><span class="pre">sub_name</span></code> should <strong>not</strong> return anything.\n”,
-“\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;name_list</span> <span class="pre">=</span> <span class="pre">[\&quot;Tony\&quot;,\&quot;Elan\&quot;,\&quot;Bee\&quot;,</span> <span class="pre">\&quot;Bonus\&quot;,\&quot;Jane\&quot;]\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;sub_name(\&quot;Bee\&quot;,\&quot;Thomas\&quot;,</span> <span class="pre">name_list)\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;print(name_list)\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;&gt;&gt;[\&quot;Tony\&quot;,\&quot;Elan\&quot;,\&quot;Thomas\&quot;,</span> <span class="pre">\&quot;Bonus\&quot;,\&quot;Jane\&quot;]\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;</span></code>”
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “LYMD7sNQ3VUG”
-},
-“outputs”: [],
-“source”: [
-“# Your code here\n”
-]
-},
-{
-“cell_type”: “markdown”,
-“metadata”: {
-“id”: “LLZJUZjR3VUI”
-},
-“source”: [
-“## 6. Basic Statistics\n”,
-“Write a function that gives a statistic summary of an input data. The function must be able to calculate and return the following values:\n”,
-“\n”,
-“*   min\n”,
-“*   max\n”,
-“*   range = max - min\n”,
-“—\n”,
-“\n”,
-“\n”,
-“\n”,
-“After composing all the above methods, the new function stats_summary(list) should yield the following result.\n”,
-“\n”,
-“<strong>Note that an input list is an unsorted list.</strong>\n”,
-“\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;score_nlps</span> <span class="pre">=</span> <span class="pre">[6,</span> <span class="pre">5,</span> <span class="pre">10,</span> <span class="pre">8,</span> <span class="pre">7,</span> <span class="pre">11,</span> <span class="pre">5.5,</span> <span class="pre">4,</span> <span class="pre">8,</span> <span class="pre">9]\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;stats_summary(score_nlps)\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;&gt;&gt;</span> <span class="pre">Min</span> <span class="pre">=</span> <span class="pre">4\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;</span>&#160;&#160; <span class="pre">Max</span> <span class="pre">=11\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;</span>&#160;&#160; <span class="pre">Range</span> <span class="pre">=</span> <span class="pre">7\n&quot;,</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;</span></code>\n”,
-“<strong>Hint:</strong> you should use <code class="docutils literal notranslate"><span class="pre">sorted(x)</span></code> “
-]
-},
-{
-“cell_type”: “code”,
-“execution_count”: null,
-“metadata”: {
-“id”: “5eRHsEie3VUI”
-},
-“outputs”: [],
-“source”: [
-“# Your code here\n”
-]
-}
-],
-“metadata”: {
-“colab”: {
-“collapsed_sections”: [],
-“name”: “PC5 Lists.ipynb”,
-“provenance”: []
-},
-“kernelspec”: {
-“display_name”: “Python 3 (ipykernel)”,
-“language”: “python”,
-“name”: “python3”
-},
-“language_info”: {
-“codemirror_mode”: {
-“name”: “ipython”,
-“version”: 3
-},
-“file_extension”: “.py”,
-“mimetype”: “text/x-python”,
-“name”: “python”,
-“nbconvert_exporter”: “python”,
-“pygments_lexer”: “ipython3”,
-“version”: “3.8.12”
-}
-},
-“nbformat”: 4,
-“nbformat_minor”: 4
-}</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>โจทย์: ลิสต์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<div class="section" id="id2">
+<h2>ข้อ 1. ลอตเตอรี่<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันเพื่อตรวจสอบว่าสลากกินแบ่ง (lottery) ที่มีอยู่ (อาจมีมากกว่า 1 ใบ) ถูกรางวัลทั้งหมดเท่าไร
+โดยที่ฟังก์ชันจะรับข้อมูล 3 อย่าง ได้แก่</p>
+<ol class="simple">
+<li><p>เลขสลากที่มีทั้งหมด (เป็นลิสต์ของสตริง) สลากแต่ละใบมีเลข 6 หลัก</p></li>
+<li><p>เลขรางวัลที่ 1 ที่ออก (เป็นสตริง) สลากจะถูกรางวัลที่ 1 เมื่อตัวเลขสลากตรงกับเลขรางวัลที่ 1 ที่ออก รางวัลละ 6,000,000 บาท</p></li>
+<li><p>เลขรางวัลเลขท้าย 2 ตัวที่ออก(เป็นสตริง)
+สลากจะถูกรางวัลเลขท้าย 2 ตัว เมื่อเลข 2 ตัวท้ายของสลาก ตรงกับเลขรางวัลเลขท้าย 2 ตัวที่ออก รางวัลละ 5,000 บาท</p></li>
+</ol>
+<p>สลาก 1 เลข สามารถถูกทั้งรางวัลที่ 1 และรางวัลเลขท้าย 2 ตัวได้
+เช่น ถ้าเลขรางวัลที่ 1 คือ 613728 และเลขท้าย 2 ตัวที่ออกคือ 28 สลากเลข 613728 จะได้รับรางวัล
+6,000,000 + 5,000 = 6,005,000 บาท</p>
+<p>ให้ฟังก์ชัน return ค่าเป็น list โดยที่ค่าแรกใน list เป็นจำนวนเงินที่ได้รับรางวัลทั้งหมด (เป็น int)
+และค่าต่อๆ ไปใน list เป็นเลขสลากที่ถูกรางวัล (เป็น string, อาจมีมากกว่า 1 เลขสลากได้ หรือไม่มีสลากที่ถูกรางวัลเลยก็ได้)</p>
+<p>คำใบ้:</p>
+<ul class="simple">
+<li><p>ไม่มีความจำเป็นที่จะต้องแปลงเลขสลาก เลขรางวัลที่ 1 เลขรางวัลเลขท้าย 2 ตัว จากสตริงเป็นเลข</p></li>
+<li><p>ค่อยๆ แก้ทีละส่วนตามหลักการย่อยโจทย์ โจทย์ย่อย ๆ มีดังนี้
+2.1) คำนวณรางวัลที่ได้
+2.2) หาวิธีเก็บเลขสลากที่ถูกรางวัล
+2.3) สร้างลิสต์สุดท้ายตามโจทย์กำหนด</p></li>
+<li><p>อย่าลืมว่าสลากใบเดียวสามารถถูกได้สองรางวัล</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lottery_check</span><span class="p">(</span><span class="n">lottery_numbers</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">end2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">	ตัวอย่าง</span>
+<span class="sd">    &gt;&gt;&gt; lottery_check([&#39;613728&#39;], &#39;613728&#39;, &#39;28&#39;)</span>
+<span class="sd">    [6005000, &#39;613728&#39;]</span>
+
+<span class="sd">    &gt;&gt;&gt; lottery_check([&#39;382982&#39;, &#39;428121&#39;], &#39;613728&#39;, &#39;28&#39;)</span>
+<span class="sd">    [0]</span>
+
+<span class="sd">    &gt;&gt;&gt; lottery_check([&#39;382982&#39;, &#39;417328&#39;, &#39;012828&#39;], &#39;613728&#39;, &#39;28&#39;)</span>
+<span class="sd">    [10000, &#39;417328&#39;, &#39;012828&#39;]</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>ข้อ 2. ลิสต์อาหาร<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>เพื่อนของคุณซึ่งเป็นผู้ชนะจากรายการ Master Top Iron Supercook Thailand ได้รับมอบหมายให้ไปทำอาหารให้เด็กนักเรียนโรงเรียน Sarasas Cadbury International แต่กลับโชคไม่ดีที่ว่าเด็กนักเรียนโรงเรียนนี้เป็นเด็กที่เลือกกินมาก เด็กแต่ละคนจะมี ลิสต์ของอาหารที่ตัวเองไม่กิน เพราะฉะนั้นเพื่อนของคุณจะต้องตรวจสอบวัตถุดิบของทุกจาน เพื่อเลือกสิ่งที่เด็กแต่ละคนไม่กินออก</p>
+<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">select_ingredients</span></code> ซึ่งรับ input ดังนี้</p>
+<ol class="simple">
+<li><p>ลิสต์ของวัตถุดิบของอาหารที่เพื่อนของคุณจะทำ</p></li>
+<li><p>ลิสต์ของวัตถุดิบที่เด็กไม่กิน
+ฟังก์ชันนี้จะต้อง return ลิสต์ของวัตถุดิบที่เพื่อนของคุณสามารถใช้ได้</p></li>
+</ol>
+<p>ตัวอย่าง</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ingredients = [‘คะน้า’, ‘กระเทียม’, ‘น้ำมันหอย’, ‘หมูกรอบ’, ‘น้ำปลา’, ‘พริกไทย’, ‘ปลาเค็ม’]
+&gt;&gt;&gt; prohibited = [‘น้ำปลา’, ‘กระเทียม’, ‘ปลาเค็ม’]
+&gt;&gt;&gt; select_ingredients(ingredients, prohibited)
+[‘คะน้า’, ‘น้ำมันหอย’, ‘หมูกรอบ’, ‘พริกไทย’] 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">select_ingredients</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-an">
+<h2>ข้อ 3. a/an<a class="headerlink" href="#a-an" title="Permalink to this headline">#</a></h2>
+<p>เราเรียนกันมาแล้วว่า a ใช้นำหน้าคำที่ขึ้นต้นด้วยเสียงพยัญชนะ และ an ใช้นำหน้าคำที่ขึ้นต้นด้วยเสียงสระ</p>
+<p>จงเขียนฟังก์ชันที่รับสตริงเป็น input และ return สตริงที่มีแก้การใช้ a/an โดยให้ assume ว่า</p>
+<ul class="simple">
+<li><p>สตริงที่ได้มายังไม่ถูกตัดเป็นคำ และแต่ละคำถูกแบ่งได้ด้วย space</p></li>
+<li><p>สตริงที่ได้มาไม่มีเครื่องหมายวรรคตอน (punctuation) หรือตัวเลขใดๆ</p></li>
+<li><p>ถ้าคำนำหน้าด้วยพยัญชนะให้ใช้ a ถ้าคำนำหน้าด้วย aeiou ให้ใช้ an</p></li>
+<li><p>ให้แก้ a–&gt;an หรือ an–&gt;a อย่างเดียว โดยไม่ต้องหาที่เติม a/an/the/ เข้าไปในจุดใดเลย</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correct_indefinite_article</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	ตัวอย่าง</span>
+<span class="sd">	&gt;&gt;&gt; correct_article(&#39;A elephant steps on an piece of wood in a forest&#39;)</span>
+<span class="sd">	&#39;An elephant steps on a piece of wood in a forest</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">return</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ข้อ 4. ทำความสะอาดข้อมูล<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันที่รับสตริงประโยคภาษาอังกฤษ และ return ลิสต์ของคำในประโยคนั้น โดยไม่มีเครื่องหมายวรรคตอน (<code class="docutils literal notranslate"><span class="pre">.,!?:</span></code>)</p>
+<p>คำใบ้</p>
+<ol class="simple">
+<li><p>ควรเอาเครื่องหมายวรรคตอนออกจากสตริงก่อน</p></li>
+<li><p>ใช้ method <code class="docutils literal notranslate"><span class="pre">.split()</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="k">def</span> <span class="nf">str_to_list</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ตรวจสอบว่าทำงานถูกหรือเปล่า</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I will not give up on this. If I feel tired, I will take a rest.&quot;</span>
+<span class="n">expectedList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;will&#39;</span><span class="p">,</span><span class="s1">&#39;not&#39;</span><span class="p">,</span><span class="s1">&#39;give&#39;</span><span class="p">,</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="s1">&#39;on&#39;</span><span class="p">,</span><span class="s1">&#39;this&#39;</span><span class="p">,</span><span class="s1">&#39;If&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;feel&#39;</span><span class="p">,</span><span class="s1">&#39;tired&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;will&#39;</span><span class="p">,</span><span class="s1">&#39;take&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;rest&#39;</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">str_to_list</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expectedList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ข้อ 5. ความยาวเฉลี่ยของคำ<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันหาความยาวเฉลี่ยของคำที่อยู่ในข้อความ โดยให้ใช้ฟังก์ชันจากข้อที่แล้วมาใช้ในการช่วยในการหาลิสต์ของคำทั้งหมดที่ไม่มีเครื่องหมายวรรคตอนอยู่เลย</p>
+<p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ในการหาผลรวมของตัวเลขที่อยู่ในลิสต์ทั้งหมด</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_mean_number_of_words</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Black Pink in your area!&#39;</span>
+<span class="k">if</span> <span class="n">compute_mean_number_of_words</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="p">((</span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Inorrect&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> ซึ่งรับลิสต์เป็น input (ในลิสต์จะเป็นข้อมูลประเภทใดก็ได้) และ <em>return ลิสต์ใหม่</em> ซึ่งมีข้อมูลจากลิสต์เดิม แต่มีข้อมูลที่ไม่ซ้ำกันเลย ตัวอย่างเช่น</p>
+<p><em>Input</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">5,</span> <span class="pre">5]</span></code></p>
+<p><em>Output</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code></p>
+<p><strong>ข้อสำคัญ:</strong> ลิสต์เดิมที่ส่งไปที่ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> จะต้องไม่เปลี่ยนแปลง</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="k">def</span> <span class="nf">remove_repetitions</span><span class="p">(</span><span class="n">li</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ตรวจสอบว่าทำงานถูกหรือเปล่า</span>
+<span class="n">original_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">original_list_copy</span> <span class="o">=</span> <span class="n">original_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">expected_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">remove_repetitions</span><span class="p">(</span><span class="n">original_list</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected_list</span> <span class="ow">and</span> <span class="n">original_list</span> <span class="o">==</span> <span class="n">original_list_copy</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>ข้อ 7. เปลี่ยนตัว<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>สมมติว่าเรามีลิสต์ของแขกที่จะมาร่วมงานวันเกิด แต่ว่าแขกมักจะมีการเปลี่ยนตัวกระทันหันเนื่องจากอาจจะติดธุระมาไม่ได้ จงเขียนฟังก์ชันที่รับ 3 พารามิเตอร์</p>
+<ol class="simple">
+<li><p>ลิสต์ของสตริงที่ชื่อแขกทั้งหมดอยู่</p></li>
+<li><p>ชื่อแขกที่มาไม่ได้แล้ว</p></li>
+<li><p>ชื่อแขกที่จะมาแทน
+ฟังก์ชันจะแก้ลิสต์ของแขกแต่ว่าจะไม่ return อะไรเลย</p></li>
+</ol>
+<p>ตัวอย่าง</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tony&quot;</span><span class="p">,</span> <span class="s2">&quot;Elan&quot;</span><span class="p">,</span> <span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">]</span>
+<span class="n">sub_name</span><span class="p">(</span><span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="n">name_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name_list</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Tony&quot;</span><span class="p">,</span> <span class="s2">&quot;Elan&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sub_name</span><span class="p">(</span><span class="n">guest_list</span><span class="p">,</span> <span class="n">old_guest</span><span class="p">,</span> <span class="n">new_guest</span><span class="p">):</span>
+	<span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="basic-statistics">
+<h2>6. Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">#</a></h2>
+<p>Write a function that gives a statistic summary of an input data. The function must be able to calculate and return the following values:</p>
+<ul class="simple">
+<li><p>min</p></li>
+<li><p>max</p></li>
+<li><p>range = max - min</p></li>
+</ul>
+<hr class="docutils" />
+<p>After composing all the above methods, the new function stats_summary(list) should yield the following result.</p>
+<p><strong>Note that an input list is an unsorted list.</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">score_nlps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">stats_summary</span><span class="p">(</span><span class="n">score_nlps</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">Min</span> <span class="o">=</span> <span class="mi">4</span>
+   <span class="n">Max</span> <span class="o">=</span><span class="mi">11</span>
+   <span class="n">Range</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Hint:</strong> you should use <code class="docutils literal notranslate"><span class="pre">sorted(x)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -860,7 +977,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="4-dictionary.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">ดิกชันนารี (Dictionary)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

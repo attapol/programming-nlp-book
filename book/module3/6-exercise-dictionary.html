@@ -198,6 +198,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="3-exercise-list.html">
+     โจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="4-dictionary.html">
      ดิกชันนารี (Dictionary)
     </a>
@@ -225,17 +230,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/2%20video%20file.html">
+    <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/4%20video%20Reg%20Ex.html">
+    <a class="reference internal" href="../module4/4-videos-regex.html">
      Video: Regular Expression
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module4/PC7%20Regular%20Expression.html">
+    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
      โจทย์: Regular Expression
     </a>
    </li>
@@ -587,6 +592,11 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
+   ข้อ 1. ตัดเกรด
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
    1. สนุกกำลังสอง
   </a>
  </li>
@@ -596,7 +606,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id4">
    3. โนโน่ชอบกินผลไม้
   </a>
  </li>
@@ -611,7 +621,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id5">
    6. สุนทรพจน์ของโอบามา
   </a>
  </li>
@@ -636,6 +646,11 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
+   ข้อ 1. ตัดเกรด
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
    1. สนุกกำลังสอง
   </a>
  </li>
@@ -645,7 +660,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id4">
    3. โนโน่ชอบกินผลไม้
   </a>
  </li>
@@ -660,7 +675,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id5">
    6. สุนทรพจน์ของโอบามา
   </a>
  </li>
@@ -677,7 +692,34 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>โจทย์: ดิกชันนารี<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <div class="section" id="id2">
-<h2>1. สนุกกำลังสอง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 1. ตัดเกรด<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันที่ตัดเกรดให้กับนักเรียนโดยที่ดูจากคะแนนการสอบสองครั้งที่ผ่านมา คะแนนสอบแต่ละครั้งนั้นถูกเก็บในรูปของ dictionary ที่ key=ชื่อนักเรียน value=คะแนนสอบ 0-10 คะแนน ถ้านักเรียนไม่ได้เข้าสอบชื่อก็จะไม่ได้อยู่ใน dictionary  เรามีเกณฑ์การตัดเกรดง่ายๆ ดังนี้</p>
+<ul class="simple">
+<li><p>นักเรียนที่สอบผ่านทั้งสองครั้ง (คะแนน &gt; 5 ทั้งสองครั้ง) จะได้ A</p></li>
+<li><p>นักเรียนที่สอบผ่านแค่ครั้งเดียว จะได้ B</p></li>
+<li><p>นักเรียนที่สอบไม่ผ่านเลย จะได้ C</p></li>
+<li><p>นักเรียนที่เข้าสอบไม่ครบทั้งสองครั้งจะได้ M</p></li>
+</ul>
+<p>Input: คะแนนสอบครั้งที่ 1 และ คะแนนสอบครั้งที่ 2 เป็น dictionary</p>
+<p>Output: dictionary ที่ key=ชื่อนักเรียนที่เข้าสอบอย่างน้อยหนึ่งครั้ง value=เกรด string A, B,C หรือ M</p>
+<p>ตัวอย่าง</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">midterm</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Rick&#39;</span><span class="p">:</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Carol&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Daryl&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">final</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Rick&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Carol&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">assign_grades</span><span class="p">(</span><span class="n">midterm</span><span class="p">,</span> <span class="n">final</span><span class="p">)</span> 
+<span class="go">{&#39;Rick&#39;: &#39;A&#39;, &#39;Michonne&#39;:&#39;C&#39;, &#39;Carol&#39;: &#39;B&#39;, &#39;Daryl&#39;: &#39;M&#39;}</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">assign_grades</span><span class="p">(</span><span class="n">midterm</span><span class="p">,</span> <span class="n">final</span><span class="p">):</span>
+	<span class="k">return</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>1. สนุกกำลังสอง<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันที่รับค่า n แล้ว return dictionary ที่มี key ตั้งแต่ 1 ถึง n โดย value ของแต่ละตัวคือ key ยกกำลังสอง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">squared_dict</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  
 <span class="o">&gt;&gt;&gt;</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span> <span class="p">}</span>
@@ -702,8 +744,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>3. โนโน่ชอบกินผลไม้<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id4">
+<h2>3. โนโน่ชอบกินผลไม้<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>โนโน่เป็นคนชอบเขียนโปรแกรมและกินผลไม้มาก โนโน่เลยเก็บจำนวนผลไม้ที่มีในตู้เย็นไว้ใน python dictionary เช่น <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;apple&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;banana&quot;:</span> <span class="pre">2</span> <span class="pre">}</span></code> คือมีแอปเปิ้ล 1 ลูก กล้วย 2 ลูก ต่อมา โนโน่ซื้อตู้เย็นมาอีกตู้ จึงมี dictionary อีกอันหนึ่งไว้เก็บจำนวนผลไม้</p>
 <p>โนโน่อยากรู้จำนวนผลไม้ที่มีทั้งหมด ช่วยโนโน่หน่อย เขียนฟังก์ชันที่รับ dictionary 2 ตัวเป็น parameters (คือ dictionary ที่แทนผลไม้ในตู้ที่ 1 และ 2 ตามลำดับ) และ return dictionary แสดงจำนวนผลไม้ทั้งหมด เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">count_fruits</span><span class="p">({</span><span class="s2">&quot;apple&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;apple&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
@@ -785,8 +827,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>6. สุนทรพจน์ของโอบามา<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id5">
+<h2>6. สุนทรพจน์ของโอบามา<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
 <p>ไฟล์ <a class="reference external" href="https://drive.google.com/file/d/1iA1s-yNIhdCQvo4BS8d7CVBICHZs4okt/view">obama.txt</a> มีสุนทรพจน์ของโอบามาในปี 2013 แต่ไฟล์นี้มีความพิเศษตรงที่มี Part of speech tag นั่นคือ แต่ละคำในไฟล์จะมีบอกไว้ด้วยว่าเป็น noun, verb, pronoun หรือเครื่องหมายวรรคตอนแบบต่าง ๆ เช่น ประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank</span> <span class="n">you</span><span class="o">.</span> <span class="n">God</span> <span class="n">bless</span> <span class="n">you</span><span class="p">,</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">He</span> <span class="n">forever</span> <span class="n">bless</span> <span class="n">these</span> <span class="n">United</span> <span class="n">States</span> <span class="n">of</span> <span class="n">America</span><span class="o">.</span>
 </pre></div>
