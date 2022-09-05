@@ -626,8 +626,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-statistics">
-   6. Basic Statistics
+  <a class="reference internal nav-link" href="#id8">
+   ข้อ 8. คำนวณสถิติ
   </a>
  </li>
 </ul>
@@ -685,8 +685,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-statistics">
-   6. Basic Statistics
+  <a class="reference internal nav-link" href="#id8">
+   ข้อ 8. คำนวณสถิติ
   </a>
  </li>
 </ul>
@@ -758,7 +758,7 @@ title="Print to PDF"
 </ol>
 <p>ตัวอย่าง</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ingredients = [‘คะน้า’, ‘กระเทียม’, ‘น้ำมันหอย’, ‘หมูกรอบ’, ‘น้ำปลา’, ‘พริกไทย’, ‘ปลาเค็ม’]
-&gt;&gt;&gt; prohibited = [‘น้ำปลา’, ‘กระเทียม’, ‘ปลาเค็ม’]
+&gt;&gt;&gt; prohibited = [‘น้ำปลา’, ‘กระเทียม’, ‘ปลาเค็ม’, &#39;มะนาว&#39;]
 &gt;&gt;&gt; select_ingredients(ingredients, prohibited)
 [‘คะน้า’, ‘น้ำมันหอย’, ‘หมูกรอบ’, ‘พริกไทย’] 
 </pre></div>
@@ -896,10 +896,10 @@ title="Print to PDF"
 ฟังก์ชันจะแก้ลิสต์ของแขกแต่ว่าจะไม่ return อะไรเลย</p></li>
 </ol>
 <p>ตัวอย่าง</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tony&quot;</span><span class="p">,</span> <span class="s2">&quot;Elan&quot;</span><span class="p">,</span> <span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">]</span>
-<span class="n">sub_name</span><span class="p">(</span><span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="n">name_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name_list</span><span class="p">)</span>
-<span class="o">&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Tony&quot;</span><span class="p">,</span> <span class="s2">&quot;Elan&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tony&quot;</span><span class="p">,</span> <span class="s2">&quot;Elan&quot;</span><span class="p">,</span> <span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Bonus&quot;</span><span class="p">,</span> <span class="s2">&quot;Jane&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sub_name</span><span class="p">(</span><span class="s2">&quot;Bee&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="n">name_list</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">name_list</span><span class="p">)</span>
+<span class="go">[&quot;Tony&quot;, &quot;Elan&quot;, &quot;Thomas&quot;, &quot;Bonus&quot;, &quot;Jane&quot;]</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -911,28 +911,23 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="basic-statistics">
-<h2>6. Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">#</a></h2>
-<p>Write a function that gives a statistic summary of an input data. The function must be able to calculate and return the following values:</p>
-<ul class="simple">
-<li><p>min</p></li>
-<li><p>max</p></li>
-<li><p>range = max - min</p></li>
-</ul>
-<hr class="docutils" />
-<p>After composing all the above methods, the new function stats_summary(list) should yield the following result.</p>
-<p><strong>Note that an input list is an unsorted list.</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">score_nlps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="n">stats_summary</span><span class="p">(</span><span class="n">score_nlps</span><span class="p">)</span>
-<span class="o">&gt;&gt;</span> <span class="n">Min</span> <span class="o">=</span> <span class="mi">4</span>
-   <span class="n">Max</span> <span class="o">=</span><span class="mi">11</span>
-   <span class="n">Range</span> <span class="o">=</span> <span class="mi">7</span>
+<div class="section" id="id8">
+<h2>ข้อ 8. คำนวณสถิติ<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<p>เขียนฟังก์ชันที่รับลิสต์ของตัวเลขเข้ามาเป็น input และคำนวณหาค่าต่ำสุด สูงสุด เรนจ์ (สูงสุด - ต่ำสุด) ค่ามัธยฐาน และค่าเฉลี่ย โดย <code class="docutils literal notranslate"><span class="pre">print</span></code> ออกมาและไม่ return ค่าใด ๆ และเพ่ือทำให้โจทย์นี้ง่ายลง เราสามารถ assume ได้ว่าจำนวนสมาชิกของลิสต์เป็นเลขคี่</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score_nlps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stats_summary</span><span class="p">(</span><span class="n">score_nlps</span><span class="p">)</span>
+<span class="go">Min = 4</span>
+<span class="go">Max = 11</span>
+<span class="go">Range = 7</span>
+<span class="go">Median = </span>
+<span class="go">Mean = 7.68</span>
 </pre></div>
 </div>
-<p><strong>Hint:</strong> you should use <code class="docutils literal notranslate"><span class="pre">sorted(x)</span></code></p>
+<p><strong>คำใบ้:</strong> ควรใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">sorted(x)</span></code> ในการหามัธยฐาน</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stats_summary</span><span class="p">(</span><span class="n">number_list</span><span class="p">):</span>
+	<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
