@@ -208,6 +208,21 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4a-dictionary.html">
+     ดิกชันนารี (Dictionary)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4b-tuple.html">
+     ทูเปิล (tuple)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4c-counter.html">
+     เคาน์เตอร์ (counter)
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module3/5-videos-dictionary.html">
      Video: Dictionary
     </a>
@@ -622,17 +637,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#is-lower-is-upper">
+  <a class="reference internal nav-link" href="#islower-isupper">
    เช็คว่าเป็นตัวเล็กหรือตัวใหญ่:
    <code class="docutils literal notranslate">
     <span class="pre">
-     .is_lower()
+     .islower()
     </span>
    </code>
    และ
    <code class="docutils literal notranslate">
     <span class="pre">
-     .is_upper()
+     .isupper()
     </span>
    </code>
   </a>
@@ -788,17 +803,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#is-lower-is-upper">
+  <a class="reference internal nav-link" href="#islower-isupper">
    เช็คว่าเป็นตัวเล็กหรือตัวใหญ่:
    <code class="docutils literal notranslate">
     <span class="pre">
-     .is_lower()
+     .islower()
     </span>
    </code>
    และ
    <code class="docutils literal notranslate">
     <span class="pre">
-     .is_upper()
+     .isupper()
     </span>
    </code>
   </a>
@@ -1197,23 +1212,23 @@ title="Print to PDF"
 <p><em>ข้อควรระวัง</em> ทั้งสอง method เมื่อเราเรียกใช้แล้วจะ return สตริงชุดใหม่มาให้ แยกต่างหากจากตัวสตริงเดิม ซึ่งจะมีค่าข้อความเดิมอยู่ไม่เปลี่ยนแปล</p>
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาเราอยากเปรียบเทียบข้อความสองข้อความว่าเหมือนกันหรือไม่โดยไม่สนใจว่าเป็นตัวเล็กตัวใหญ่ (case-insensitive)</p>
 </div>
-<div class="section" id="is-lower-is-upper">
-<h2>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.is_lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.is_upper()</span></code><a class="headerlink" href="#is-lower-is-upper" title="Permalink to this headline">#</a></h2>
+<div class="section" id="islower-isupper">
+<h2>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this headline">#</a></h2>
 <div class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;NASA&#39;</span>
-<span class="n">s</span><span class="o">.</span><span class="n">is_lower</span><span class="p">()</span> <span class="c1">#--&gt; False</span>
-<span class="n">s</span><span class="o">.</span><span class="n">is_upper</span><span class="p">()</span> <span class="c1">#--&gt; True</span>
+<span class="n">s</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1">#--&gt; False</span>
+<span class="n">s</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; True</span>
 
 <span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;Casa&#39;</span>
-<span class="n">s2</span><span class="o">.</span><span class="n">is_lower</span><span class="p">()</span> <span class="c1">#--&gt; False เพราะไม่ใช่ตัวเล็กหมด</span>
-<span class="n">s2</span><span class="o">.</span><span class="n">is_upper</span><span class="p">()</span> <span class="c1">#--&gt; False เพราะไม่ใช่ตัวใหญ่หมด</span>
-<span class="n">s2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">is_upper</span><span class="p">()</span> <span class="c1">#--&gt; True ตัวอักษรตัวแรกเป็นตัวใหญ่</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1">#--&gt; False เพราะไม่ใช่ตัวเล็กหมด</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; False เพราะไม่ใช่ตัวใหญ่หมด</span>
+<span class="n">s2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; True ตัวอักษรตัวแรกเป็นตัวใหญ่</span>
 </pre></div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">string.is_lower()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวเล็กทั้งหมด</p>
-<p><code class="docutils literal notranslate"><span class="pre">string.is_upper()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวใหญ่ทั้งหมด</p>
+<p><code class="docutils literal notranslate"><span class="pre">string.islower()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวเล็กทั้งหมด</p>
+<p><code class="docutils literal notranslate"><span class="pre">string.isupper()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวใหญ่ทั้งหมด</p>
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาต้องการเช็คว่าเป็นตัวย่อของชื่อองค์กรต่าง ๆ หรือไม่ หรือเป็นคำที่อยู่กลางประโยคภาษาอังกฤษหรือไม่ แต่คำสั่งเหล่านี้ไม่มีประโยชน์กับภาษาอื่น ๆ ที่ไม่ได้ใช้ตัวลาติน เช่น ภาษาจีน ภาษาไทย ภาษาเกาหลี ภาษารัสเซีย</p>
 </div>
 <div class="section" id="substring-count-substring">

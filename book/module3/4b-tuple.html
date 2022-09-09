@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video: Dictionary &#8212; Programming for NLP</title>
+    <title>ทูเปิล (tuple) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="โจทย์: ดิกชันนารี" href="6-exercise-dictionary.html" />
-    <link rel="prev" title="เคาน์เตอร์ (counter)" href="4c-counter.html" />
+    <link rel="next" title="เคาน์เตอร์ (counter)" href="4c-counter.html" />
+    <link rel="prev" title="ดิกชันนารี (Dictionary)" href="4a-dictionary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -212,8 +212,8 @@ const thebe_selector_output = ".output, .cell_output"
      ดิกชันนารี (Dictionary)
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4b-tuple.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      ทูเปิล (tuple)
     </a>
    </li>
@@ -222,8 +222,8 @@ const thebe_selector_output = ".output, .cell_output"
      เคาน์เตอร์ (counter)
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-videos-dictionary.html">
      Video: Dictionary
     </a>
    </li>
@@ -471,7 +471,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module3/5-videos-dictionary.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/attapol/programming-for-nlp/issues/new?title=Issue%20on%20page%20%2Fbook/module3/4b-tuple.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -499,7 +499,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module3/5-videos-dictionary.md"
+        <a href="../../_sources/book/module3/4b-tuple.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -558,29 +558,14 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary">
-   Dictionary
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ทูเปิล (tuple)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   การวนลูปบน Dictionary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-methods">
-   Dictionary Methods
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tuples">
-   Tuples
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#counter">
-   Counter
+   เคาน์เตอร์ (counter)
   </a>
  </li>
 </ul>
@@ -592,7 +577,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Video: Dictionary</h1>
+                <h1>ทูเปิล (tuple)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -602,29 +587,14 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary">
-   Dictionary
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ทูเปิล (tuple)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   การวนลูปบน Dictionary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-methods">
-   Dictionary Methods
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tuples">
-   Tuples
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#counter">
-   Counter
+   เคาน์เตอร์ (counter)
   </a>
  </li>
 </ul>
@@ -637,28 +607,40 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="video-dictionary">
-<h1>Video: Dictionary<a class="headerlink" href="#video-dictionary" title="Permalink to this headline">#</a></h1>
-<p>Dictionary</p>
-<div class="section" id="dictionary">
-<h2>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E7DQaHDmSXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tuple">
+<h1>ทูเปิล (tuple)<a class="headerlink" href="#tuple" title="Permalink to this headline">#</a></h1>
+<p>ทูเปิล เป็นโครงสร้างข้อมูลที่เก็บข้อมูลเป็นลำดับคล้ายกับลิสต์ ลิสต์สามารถทำทุกอย่างที่ทูเปิลสามารถทำได้ การสร้างทูเปิลคล้ายคลึงกับการสร้างลิสต์แต่ว่าเราจะใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">()</span></code> แทนวงเล็บเหลี่ยม <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="id1">
-<h2>การวนลูปบน Dictionary<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MBdRDNTIQbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>ข้อแตกต่างคือ ทูเปิลเป็นโครงสร้างข้อมูลที่เปลี่ยนแปลงไม่ได้ (immutable) เมื่อเราสร้างทูเปิลขึ้นมาแล้ว ไม่สามารถเปลี่ยนแปลงสมาชิกที่อยู่ภายในได้ รวมถึงไม่สามารถเพิ่มสมาชิกเข้าไปได้ ทั้งหมดนี้ดูเหมือนจะเป็นข้อเสียของทูเปิล แต่ว่าการใช้ทูเปิลทำให้เกิดข้อผิดพลาดในโปรแกรมน้อยลง
+การใช้ทูเปิลเป็นการสื่อความหมายในโปรแกรมว่าแต่ละ index ของทูเปิลมีความหมายเจาะจง เช่น</p>
+<ul class="simple">
+<li><p>พิกัดบนแผนที่โลก อาจจะถูกเก็บในทูเปิดโดยที่ index 0 เป็น latitude และ index 1 เป็น longtitude อาจจะถูกเก็บในทูเปิล ดังนี้  <code class="docutils literal notranslate"><span class="pre">('13.7563°</span> <span class="pre">N',</span> <span class="pre">'100.5018°')</span></code></p></li>
+<li><p>ชื่อนามสกุล อาจจะถูกเก็บในทูเปิลโดยที่ index 0 เป็นชื่อ index 1 เป็นนามสกุล ดังนี้ <code class="docutils literal notranslate"><span class="pre">('อรรถพล',</span> <span class="pre">'ธำรงรัตนฤทธิ์')</span></code></p></li>
+<li><p>สี มักจะถูกจัดเก็บเป็นค่าแดงเขียวน้ำเงิน (RGB) โดยที่ index 0 เป็นค่าของสีแดง index 1 เป็นค่าของสีเขียว index 2 เป็นค่าของสีน้ำเงิน ดังนี้ <code class="docutils literal notranslate"><span class="pre">(256,</span> <span class="pre">256,</span> <span class="pre">256)</span></code></p></li>
+</ul>
+<p>ในกรณีดังกล่าวทั้งหมดนี้เราไม่ควรจะเพิ่มสมาชิกเข้าไปในทูเปิลอีกแล้ว เพราะว่าพิกัดจะต้องมี 2 ตำแหน่งเท่านั้น ชื่อนามสกุลควรจะต้องถูกแทนด้วยทูเปิลแบบสองตำแหน่ง ค่าสีแบบ RGB ก็ต้องมีสีสามค่าเท่านั้น การเพิ่มสมาชิกเข้าไปทำให้สูญเสียความหมายของสิ่งที่ทูเปิลจะเก็บไว้</p>
+<p>การเข้าถึงข้อมูลในทูเปิลใช้วิธีเดียวกับลิสต์ทุกประการ สามารถใช้ positive index และ negative index ได้เหมือนกันหมด</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="n">first_last_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="n">first_last_name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="dictionary-methods">
-<h2>Dictionary Methods<a class="headerlink" href="#dictionary-methods" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FobPcPbWfcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>เพื่อความสะดวกเรามักจะ<em>กระจาย</em>ค่าของทูเปิลใส่ตัวแปรหลาย ๆ ตัวพร้อม ๆ กัน เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
+<span class="n">name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">first_last_name</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="tuples">
-<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CxRoXBWgE2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>การกระจายค่าที่จริงแล้วสามารถทำกับลิสต์ก็ได้ แต่ว่าไม่กรณีที่จะให้ใช้เนื่องจากเวลาเราเขียนโค้ดในการกระจายค่าเข้าสู่ตัวแปร เราจำเป็นต้องรู้ว่าลิสต์หรือทูเปิลนั้นมีจำนวนสมาชิกกี่ตัว ลิสต์เป็นโครงสร้างข้อมูลที่เราสามารถเปลี่ยนแปลงค่าข้างในได้ ทำให้เราไม่แน่ใจว่าข้อมูลในลิสต์มีอยู่กี่ตัว เมื่อเรามาถึงส่วนของโค้ดที่ต้องทำการกระจายข้อมูล แต่ว่าทูเปิลไม่มีปัญหานี้ เวลาเราสร้างทูเปิล เรามั่นใจได้เลยว่าค่าของทูเปิล และจำนวนสมาชิกของทูเปิลจะไม่เปลี่ยน</p>
+<p>ทูเปิลมี method <code class="docutils literal notranslate"><span class="pre">.count</span> <span class="pre">.index</span></code> เช่นเดียวกับลิสต์ แต่ว่ามักจะไม่ค่อยได้ใช้ เพราะทูเปิลมีโครงสร้างตายตัว และข้อมูลที่อยู่ในแต่ละตำแหน่งเก็บข้อมูลคนละชนิดกันหมด</p>
 </div>
-<div class="section" id="counter">
-<h2>Counter<a class="headerlink" href="#counter" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jhgeai82yw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="tex2jax_ignore mathjax_ignore section" id="counter">
+<h1>เคาน์เตอร์ (counter)<a class="headerlink" href="#counter" title="Permalink to this headline">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -688,17 +670,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="4c-counter.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="4a-dictionary.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">เคาน์เตอร์ (counter)</p>
+            <p class="prev-next-title">ดิกชันนารี (Dictionary)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="6-exercise-dictionary.html" title="next page">
+    <a class='right-next' id="next-link" href="4c-counter.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">โจทย์: ดิกชันนารี</p>
+        <p class="prev-next-title">เคาน์เตอร์ (counter)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
