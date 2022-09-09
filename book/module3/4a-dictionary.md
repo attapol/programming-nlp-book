@@ -250,8 +250,3 @@ print(word_to_freq)
 ```python
 {'jump': 200, 'Andy': 80}
 ```
-
-# Tuple
-
-
-# Counter
