@@ -27,8 +27,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/attapol/programming-for-nlp  # Online location of your book
-  path_to_book: book  # Optional path to your book, relative to the repository root
+  url: https://github.com/attapol/programming-nlp-book  # Online location of your book
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
