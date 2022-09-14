@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>โจทย์: Regular Expression &#8212; Programming for NLP</title>
+    <title>โจทย์: Text processing &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -606,6 +606,16 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proflookup">
+   5. Proflookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   6. สุนทรพจน์ของโอบามา
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#regular-expression-practice">
    1. Regular Expression Practice
   </a>
@@ -646,7 +656,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>โจทย์: Regular Expression</h1>
+                <h1>โจทย์: Text processing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -656,6 +666,16 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proflookup">
+   5. Proflookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   6. สุนทรพจน์ของโอบามา
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#regular-expression-practice">
    1. Regular Expression Practice
@@ -698,8 +718,57 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="regular-expression">
-<h1>โจทย์: Regular Expression<a class="headerlink" href="#regular-expression" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="text-processing">
+<h1>โจทย์: Text processing<a class="headerlink" href="#text-processing" title="Permalink to this headline">#</a></h1>
+<div class="section" id="proflookup">
+<h2>5. Proflookup<a class="headerlink" href="#proflookup" title="Permalink to this headline">#</a></h2>
+<p>ไฟล์ชนิดหนึ่งที่มักจะเจอในการจัดการกับข้อมูลคือไฟล์ csv (comma-separated values) แต่ละบรรทัดของไฟล์ csv จะเป็นข้อความที่คั่นด้วยเครื่องหมาย comma (,) และมีจำนวน “ท่อน” ที่คั่นด้วย comma เท่ากัน เช่น ไฟล์ csv อาจจะมีเนื้อหาแบบด้านล่าง (มี 3 “ท่อน” ที่คั่นด้วย comma)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">แมว</span><span class="p">,</span><span class="n">หมู</span><span class="p">,</span><span class="n">หมา</span>
+<span class="n">กา</span><span class="p">,</span><span class="n">ไก่</span><span class="p">,</span><span class="n">กุ้ง</span>
+</pre></div>
+</div>
+<p>ใน directory corpora จะมีไฟล์ csv อยู่ไฟล์หนึ่ง คือไฟล์ <a class="reference external" href="https://drive.google.com/open?id=1AYOVmPIR6W4BVCLCAKsZ29UvtchNfmL8">proflookup.csv</a> ซึ่งเก็บข้อมูลตำแหน่งอาจารย์ ชื่อ-นามสกุล และตัวย่อในฐานข้อมูลของ reg chula ของภาคภาษาศาสตร์และภาคบรรณารักษ์ แต่ละบรรทัดมีรูปแบบดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ตำแหน่งอาจารย์</span><span class="p">,</span><span class="n">ชื่อ</span><span class="o">-</span><span class="n">นามสกุลอาจารย์</span><span class="p">,</span><span class="n">ตัวย่อ</span>
+</pre></div>
+</div>
+<p>เช่น 5 บรรทัดแรกของไฟล์เป็นแบบนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ศาสตราจารย์</span> <span class="n">ดร</span><span class="o">.</span><span class="p">,</span><span class="n">กิ่งกาญจน์</span> <span class="n">เทพกาญจนา</span><span class="p">,</span><span class="n">KTN</span>
+<span class="n">รองศาสตราจารย์</span> <span class="n">ดร</span><span class="o">.</span><span class="p">,</span><span class="n">วิโรจน์</span> <span class="n">อรุณมานะกุล</span><span class="p">,</span><span class="n">WAK</span>
+<span class="n">ผู้ช่วยศาสตราจารย์</span> <span class="n">ดร</span><span class="o">.</span><span class="p">,</span><span class="n">ธีราภรณ์</span>  <span class="n">รติธรรมกุล</span><span class="p">,</span><span class="n">TRK</span>
+<span class="n">ศาสตราจารย์</span> <span class="n">ดร</span><span class="o">.</span><span class="p">,</span><span class="n">ธีระพันธ์</span>  <span class="n">เหลืองทองคำ</span><span class="p">,</span><span class="n">TLK</span>
+<span class="n">รองศาสตราจารย์</span> <span class="n">ดร</span><span class="o">.</span><span class="p">,</span><span class="n">พิทยาวัฒน์</span>  <span class="n">พิทยาภรณ์</span><span class="p">,</span><span class="n">PPP</span>
+</pre></div>
+</div>
+<p>จงเขียนฟังก์ชันที่เปิดและใช้ข้อมูลจากไฟล์ <a class="reference external" href="https://drive.google.com/open?id=1AYOVmPIR6W4BVCLCAKsZ29UvtchNfmL8">proflookup.csv</a> และ return dictionary ที่มี key เป็นตัวย่อ และ value เป็นตำแหน่งอาจารย์ และตามด้วยชื่อ-นามสกุลของอาจารย์ นั่นคือ ถ้าทำถูกจะต้อง return</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;KTN&quot;</span><span class="p">:</span> <span class="s2">&quot;ศาสตราจารย์ ดร.กิ่งกาญจน์ เทพกาญจนา&quot;</span><span class="p">,</span> <span class="s2">&quot;WAK&quot;</span><span class="p">:</span> <span class="s2">&quot;รองศาสตราจารย์ ดร.วิโรจน์ อรุณมานะกุล&quot;</span><span class="p">,</span> <span class="o">...</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>โดยลำดับอาจจะไม่เป็นอย่างนี้ก็ได้ (dictionary เป็น data structure ที่ไม่มีลำดับ) แต่ต้องเก็บข้อมูลอาจารย์ในไฟล์ให้ครบทุกคน</p>
+</div>
+<div class="section" id="id1">
+<h2>6. สุนทรพจน์ของโอบามา<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>ไฟล์ <a class="reference external" href="https://drive.google.com/file/d/1iA1s-yNIhdCQvo4BS8d7CVBICHZs4okt/view">obama.txt</a> มีสุนทรพจน์ของโอบามาในปี 2013 แต่ไฟล์นี้มีความพิเศษตรงที่มี Part of speech tag นั่นคือ แต่ละคำในไฟล์จะมีบอกไว้ด้วยว่าเป็น noun, verb, pronoun หรือเครื่องหมายวรรคตอนแบบต่าง ๆ เช่น ประโยค</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank</span> <span class="n">you</span><span class="o">.</span> <span class="n">God</span> <span class="n">bless</span> <span class="n">you</span><span class="p">,</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">He</span> <span class="n">forever</span> <span class="n">bless</span> <span class="n">these</span> <span class="n">United</span> <span class="n">States</span> <span class="n">of</span> <span class="n">America</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>จะปรากฏในไฟล์เป็น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank_VV</span> <span class="n">you_PP</span> <span class="o">.</span><span class="n">_SENT</span> <span class="n">God_NP</span> <span class="n">bless_VVP</span> <span class="n">you_PP</span> <span class="p">,</span><span class="n">_</span><span class="p">,</span> <span class="n">and_CC</span> <span class="n">may_MD</span> <span class="n">He_PP</span> <span class="n">forever_RB</span> <span class="n">bless_VV</span> <span class="n">these_DT</span> <span class="n">United_NP</span> <span class="n">States_NPS</span> <span class="n">of_IN</span> <span class="n">America_NP</span> <span class="o">.</span><span class="n">_SENT</span>
+</pre></div>
+</div>
+<p>โดยที่แต่ละคำและเครื่องหมายวรรคตอนจะถูกตามด้วยเครื่องหมาย _ และตัวหนังสือพิมพ์ใหญ่ทั้งหมด ซึ่งตัวพิมพ์ใหญ่ที่ตามมาเป็นตัวย่อที่บอกว่า Part of speech ของมันคืออะไร (เรียกว่า tag) เช่น VV แปลว่า Verb, PP แปลว่า Pronouns, NN แปลว่า noun, SENT แปลว่าเป็นจุด full stop</p>
+<ol class="simple">
+<li><p>เขียนโปรแกรมเพื่อนับว่าความถี่ part-of-speech แต่ละอันเป็นเท่าไร</p></li>
+<li><p>เขียนโปรแกรมหาคำที่พบมากที่สุด 100 อันดับ</p></li>
+</ol>
+<p>Hint:</p>
+<ul class="simple">
+<li><p>ลองทดสอบกับข้อความตัวอย่างข้างบนก่อน</p></li>
+<li><p>ตัด string ออกมาเป็นคำ ๆ เป็น list</p></li>
+<li><p>iterate ไปบน list และแยกคำกับ part-of-speech ออกจากกัน</p></li>
+<li><p>ใช้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ในการเก็บความถี่</p></li>
+<li><p>พอข้างบนเสร็จแล้วค่อยลองเปิดไฟล์ และอ่านทีละบรรทัด</p></li>
+</ul>
+</div>
 <div class="section" id="regular-expression-practice">
 <h2>1. Regular Expression Practice<a class="headerlink" href="#regular-expression-practice" title="Permalink to this headline">#</a></h2>
 <p>ให้ทำแบบฝึกหัด regular expression ใน <a class="reference external" href="https://regexone.com/">RegexOne</a> ตั้งแต่ Lesson 1 - 11 (นอกเหนือจากนั้นเป็น optional)</p>
