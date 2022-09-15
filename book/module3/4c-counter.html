@@ -560,34 +560,32 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   การสร้างเคาน์เตอร์
+   การสร้างเคาน์เตอร์ว่าง ๆ
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     การสร้างเคาน์เตอร์ว่าง ๆ
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id2">
    การสร้างเคาน์เตอร์จากดิกชันนารี
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id3">
    การสร้างเคาน์เตอร์จากลิสต์
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#key-value">
-   หาค่า key ที่คู่กับ value ที่สูงที่สุด
+  <a class="reference internal nav-link" href="#key-value-0">
+   key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   การนับสมาชิกแต่ละตัวของลิสต์
+  <a class="reference internal nav-link" href="#key-value-most-common">
+   หาค่า key ที่คู่กับ value ที่สูงที่สุด:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .most_common()
+    </span>
+   </code>
   </a>
  </li>
 </ul>
@@ -611,34 +609,32 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   การสร้างเคาน์เตอร์
+   การสร้างเคาน์เตอร์ว่าง ๆ
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     การสร้างเคาน์เตอร์ว่าง ๆ
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id2">
    การสร้างเคาน์เตอร์จากดิกชันนารี
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id3">
    การสร้างเคาน์เตอร์จากลิสต์
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#key-value">
-   หาค่า key ที่คู่กับ value ที่สูงที่สุด
+  <a class="reference internal nav-link" href="#key-value-0">
+   key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   การนับสมาชิกแต่ละตัวของลิสต์
+  <a class="reference internal nav-link" href="#key-value-most-common">
+   หาค่า key ที่คู่กับ value ที่สูงที่สุด:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .most_common()
+    </span>
+   </code>
   </a>
  </li>
 </ul>
@@ -654,36 +650,69 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="counter">
 <h1>เคาน์เตอร์ (counter)<a class="headerlink" href="#counter" title="Permalink to this headline">#</a></h1>
 <p>เคาน์เตอร์ เป็น<em>ซับคลาส (subclass)</em> ของดิกชันนารี ซึ่งแปลว่าเคานเตอร์สามารถทำได้เกือบทุกอย่างที่ดิกชันนารีสามารถทำได้ และยังมี method อืิ่น ๆ เพิ่มเติม</p>
-<p>เคาน์เตอร์เป็นดิกชันนารีที่ key เป็นอะไรก็ได้ แต่ว่า value จะต้องเป็น <code class="docutils literal notranslate"><span class="pre">int</span></code> เท่านั้น จุดประสงค์ของการใช้โครงสร้างข้อมูลชนิดนี้คือเพื่อเก็บจำนวนครั้งที่พบ key แต่ละอัน</p>
-<div class="section" id="id1">
-<h2>การสร้างเคาน์เตอร์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>เคาน์เตอร์เป็นดิกชันนารีที่ key เป็นอะไรก็ได้ แต่ว่า value จะต้องเป็นตัวเลข เท่านั้น จุดประสงค์หลักของการใช้โครงสร้างข้อมูลชนิดนี้คือเพื่อเก็บจำนวนครั้งที่พบ key แต่ละอัน</p>
 <p>เคาน์เตอร์ไม่ใช่ <em>บิวท์อินคลาส (built-in class)</em> ก่อนจะใช้จะต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อนที่จะเรียกใช้ เคาน์เตอร์เป็นคลาสที่เป็นส่วนหนึ่งของโมดูล <code class="docutils literal notranslate"><span class="pre">collections</span></code></p>
-<div class="section" id="id2">
-<h3>การสร้างเคาน์เตอร์ว่าง ๆ<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="section" id="id1">
+<h2>การสร้างเคาน์เตอร์ว่าง ๆ<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">Counter()</span></code> ในการสร้างเคาน์เตอร์ซึ่งเป็นคำสั่งที่ต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>การสร้างเคาน์เตอร์จากดิกชันนารี<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id2">
+<h2>การสร้างเคาน์เตอร์จากดิกชันนารี<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>เราสร้างแปลงดิกชันนารีที่ value เป็นตัวเลขมาเป็นเคาน์เตอร์ได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>การสร้างเคาน์เตอร์จากลิสต์<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id3">
+<h2>การสร้างเคาน์เตอร์จากลิสต์<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>การสร้างเคาน์เตอร์ คือ การใช้เคาน์เตอร์สามารถนับค่าต่าง ๆ ที่เก็บอยู่ในลิสต์ และจัดเก็บให้ค่าทั้งหมดเป็น key และจำนวนครั้งที่พบให้เก็บเป็น value</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
+<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 3</span>
+<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 2</span>
+<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 1</span>
+</pre></div>
 </div>
-<div class="section" id="key-value">
-<h2>หาค่า key ที่คู่กับ value ที่สูงที่สุด<a class="headerlink" href="#key-value" title="Permalink to this headline">#</a></h2>
-<p>เคาน์เตอร์มี method ที่ไว้</p>
 </div>
-<div class="section" id="id5">
-<h2>การนับสมาชิกแต่ละตัวของลิสต์<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
-<p>เ</p>
+<div class="section" id="key-value-0">
+<h2>key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0<a class="headerlink" href="#key-value-0" title="Permalink to this headline">#</a></h2>
+<p>เมื่อเวลาเราเปิดหาค่า key ที่ไม่ได้มีอยู่ในเคาน์เตอร์ค่าที่ได้คืนมาจะเป็น 0 เสมอ ซึ่งต่างจากดิกชันนารีที่จะโยน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> กลับมา</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 0</span>
+</pre></div>
+</div>
+<p>ฟีเจอร์นี้ทำให้เราใช้เคาน์เตอร์ได้สะดวกมากขึ้น เมื่อเราต้องการถามว่าค่าอะไรเจอกี่ครั้งบ้าง ถ้าค่าที่ไม่เจอเลยค่าที่ได้กลับคืนมาก็ควรจะเป็น 0 นอกจากนั้นแล้วเราสามารถอัพเดทเคาน์เตอร์ได้โดยไม่จำเป็นต้องตรวจสอบก่อนว่า key นั้นเคยมีอยู่ในเคาน์เตอร์แล้วหรือยัง เช่น สมมติว่าเราต้องการนับแค่คำที่ไม่มีตัวเลขปะปนอยู่เลยที่จัดเก็บอยู่ในลิสต์ <code class="docutils literal notranslate"><span class="pre">word_list</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">word_counter[word]</span></code> ค่าเป็น 0 ถ้าเราไม่เคยเห็นคำนั้นมาก่อนซึ่งทำให้ expression ทางขวามือของเครื่องหมายเท่ากับเป็น <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">1</span></code> ซ่ึงเป็นผลที่เราต้องการ
+ถ้าหากเราจะใช้ดิกชันนารีก็สามารถทำได้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_counter</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_counter</span><span class="p">:</span>
+            <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>แต่เราต้องตรวจสอบว่า key อยู่ในดิกอยู่แล้วหรือไม่ ถ้าไม่ได้อยู่ต้องทำการตั้งคู่ key-value ใหม่โดยตั้งให้ค่า value เป็น 0 เตรียมเอาไว้ก่อน เพื่อป้องกัน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
+</div>
+<div class="section" id="key-value-most-common">
+<h2>หาค่า key ที่คู่กับ value ที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code><a class="headerlink" href="#key-value-most-common" title="Permalink to this headline">#</a></h2>
+<p>เคาน์เตอร์มี method ที่ไว้สำหรับ key ที่พบบ่อยที่สุด</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
+<span class="n">letter_count</span><span class="o">.</span><span class="n">most_common</span><span class="p">()</span> <span class="c1">#--&gt; [(&#39;a&#39;, 3), (&#39;b&#39;, 2), (&#39;c&#39;, 1)]</span>
+<span class="n">letter_count</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#--&gt; [(&#39;a&#39;, 3)]</span>
+</pre></div>
+</div>
+<p>method นี้มี optional parameter ที่เราจะระบุหรือไม่ระบุก็ได้ว่าจะ return ผลกี่อันดับแรก ถ้าไม่ระบุจะให้ผลอย่างมาก 20 อันดับแรก สิ่งที่ method return มาให้คือลิสต์ของทูเปิล ทูเปิลที่ได้มาเป็นคู่ของ key-value เรียงลำดับตาม value</p>
 </div>
 </div>
 
