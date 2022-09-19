@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ทูเปิล (tuple) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -560,7 +566,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tuple">
+  <section class="tex2jax_ignore mathjax_ignore" id="tuple">
 <h1>ทูเปิล (tuple)<a class="headerlink" href="#tuple" title="Permalink to this headline">#</a></h1>
 <p>ทูเปิล เป็นโครงสร้างข้อมูลที่เก็บข้อมูลเป็นลำดับคล้ายกับลิสต์ ลิสต์สามารถทำทุกอย่างที่ทูเปิลสามารถทำได้ การสร้างทูเปิลคล้ายคลึงกับการสร้างลิสต์แต่ว่าเราจะใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">()</span></code> แทนวงเล็บเหลี่ยม <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
@@ -591,7 +597,7 @@ title="Print to PDF"
 </div>
 <p>การกระจายค่าที่จริงแล้วสามารถทำกับลิสต์ก็ได้ แต่ว่าไม่กรณีที่จะให้ใช้เนื่องจากเวลาเราเขียนโค้ดในการกระจายค่าเข้าสู่ตัวแปร เราจำเป็นต้องรู้ว่าลิสต์หรือทูเปิลนั้นมีจำนวนสมาชิกกี่ตัว ลิสต์เป็นโครงสร้างข้อมูลที่เราสามารถเปลี่ยนแปลงค่าข้างในได้ ทำให้เราไม่แน่ใจว่าข้อมูลในลิสต์มีอยู่กี่ตัว เมื่อเรามาถึงส่วนของโค้ดที่ต้องทำการกระจายข้อมูล แต่ว่าทูเปิลไม่มีปัญหานี้ เวลาเราสร้างทูเปิล เรามั่นใจได้เลยว่าค่าของทูเปิล และจำนวนสมาชิกของทูเปิลจะไม่เปลี่ยน</p>
 <p>ทูเปิลมี method <code class="docutils literal notranslate"><span class="pre">.count</span> <span class="pre">.index</span></code> เช่นเดียวกับลิสต์ และสามารถหั่นเป็นทูเปิลย่อยได้เหมือนกับลิสต์เช่นกัน แต่ว่ามักจะไม่ค่อยได้ใช้ประโยชน์ เพราะทูเปิลมีโครงสร้างตายตัว และข้อมูลที่อยู่ในแต่ละตำแหน่งเก็บข้อมูลคนละชนิดกันหมด</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

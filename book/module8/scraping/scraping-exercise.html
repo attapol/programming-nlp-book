@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Scraping Workshop &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -234,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -242,6 +243,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/2-videos-file.html">
      Video: file
@@ -254,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -639,15 +645,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="scraping-workshop">
+  <section class="tex2jax_ignore mathjax_ignore" id="scraping-workshop">
 <h1>Scraping Workshop<a class="headerlink" href="#scraping-workshop" title="Permalink to this headline">#</a></h1>
-<div class="section" id="warm-up-scraping-using-regex">
+<section id="warm-up-scraping-using-regex">
 <h2>Warm-up: Scraping using regex<a class="headerlink" href="#warm-up-scraping-using-regex" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถใช้ requests ในการดาวน์โหลดหน้าเว็บลงมา แล้วใช้ regex ตรวจหาได้เลย
 <a class="reference external" href="https://math.sc.chula.ac.th/en/people/">https://math.sc.chula.ac.th/en/people/</a>
 <a class="reference external" href="https://www.arts.chula.ac.th/~english/people/">https://www.arts.chula.ac.th/~english/people/</a></p>
-</div>
-<div class="section" id="scrape">
+</section>
+<section id="scrape">
 <h2>Scrape บทความจากเว็บ<a class="headerlink" href="#scrape" title="Permalink to this headline">#</a></h2>
 <p>สมมติว่าเราต้องการขูดข้อมูลข่าวเศรษฐกิจจาก <a class="reference external" href="http://thestandard.co">thestandard.co</a>
 หน้า article ตัว text อยู่ภายใน tag อะไร class อะไร id อะไร
@@ -670,11 +676,11 @@ title="Print to PDF"
 		scrape_and_write(url_link)
 </pre></div>
 </div>
-</div>
-<div class="section" id="beautifulsoup">
+</section>
+<section id="beautifulsoup">
 <h2>Beautifulsoup<a class="headerlink" href="#beautifulsoup" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Beautifulsoup</span></code> ขูดได้เฉพาะ static page เท่านั้น dynamic page ไม่ค่อยดีเช่น <a class="reference external" href="https://thestandard.co/pop/fashion/">https://thestandard.co/pop/fashion/</a></p>
-<div class="section" id="mission-1">
+<section id="mission-1">
 <h3>Mission 1:<a class="headerlink" href="#mission-1" title="Permalink to this headline">#</a></h3>
 <p>ขูดข่าวจาก <a class="reference external" href="http://thestandard.co">thestandard.co</a> 5 page แรก ให้เลือกมาแค่ข่าวประเภทเดียว</p>
 <p>Tech
@@ -688,8 +694,8 @@ On this day
 China
 World
 Thailand</p>
-</div>
-<div class="section" id="mission-2">
+</section>
+<section id="mission-2">
 <h3>Mission 2:<a class="headerlink" href="#mission-2" title="Permalink to this headline">#</a></h3>
 <p>ขูดข้อมูลจาก Dek-D จำนวน 20 กระทู้ ให้เลือกมาแค่บอร์ดเดียว</p>
 <p>มีสาระ+รีวิว
@@ -703,9 +709,9 @@ NUGIRL
 แจ้งปัญหา</p>
 <p>เอาข้อมูลมาใส่ไว้ที่นี่</p>
 <p><a class="reference external" href="https://drive.google.com/drive/folders/11u_eWiFnHK1w_Z-9SSjAkIiSznBUyZ91?usp=sharing">https://drive.google.com/drive/folders/11u_eWiFnHK1w_Z-9SSjAkIiSznBUyZ91?usp=sharing</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

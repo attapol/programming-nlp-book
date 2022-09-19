@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1. Unique Words &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -754,7 +760,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="unique-words">
+  <section class="tex2jax_ignore mathjax_ignore" id="unique-words">
 <h1>1. Unique Words<a class="headerlink" href="#unique-words" title="Permalink to this headline">#</a></h1>
 <p>Write a function that accepts a string of whitespace separated words and return the words after removing all duplicate words in an alphanumerically-sorted order, separated by <code class="docutils literal notranslate"><span class="pre">|</span></code>. You can assume that the input is in lowercase.</p>
 <p>Example input: <code class="docutils literal notranslate"><span class="pre">'hello</span> <span class="pre">world</span> <span class="pre">and</span> <span class="pre">practice</span> <span class="pre">makes</span> <span class="pre">perfect</span> <span class="pre">and</span> <span class="pre">hello</span> <span class="pre">world</span> <span class="pre">again'</span></code><br/>
@@ -781,8 +787,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">'again|and|
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="duplicate-characters">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="duplicate-characters">
 <h1>2. Duplicate Characters?<a class="headerlink" href="#duplicate-characters" title="Permalink to this headline">#</a></h1>
 <p>Write a function to find whether a given string has unique characters (case-sensitive). Your function should return True/False.</p>
 <p>Example input: <code class="docutils literal notranslate"><span class="pre">'just'</span></code><br/>
@@ -808,8 +814,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">False</span
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="business-opportunity">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="business-opportunity">
 <h1>3. Business Opportunity<a class="headerlink" href="#business-opportunity" title="Permalink to this headline">#</a></h1>
 <p>You are hired to write a function to find out what items sold in store A that store B doesn’t carry. You will be given two lists of items sold in store A and B respectively. Your output should be a list, but it’s order does not matter.</p>
 <p>However, your boss <strong>hates</strong> loops. Therefore, your code <strong>must not</strong> contain any kinds of loops: <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
@@ -835,8 +841,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="sum-of-scores">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sum-of-scores">
 <h1>4. Sum of scores<a class="headerlink" href="#sum-of-scores" title="Permalink to this headline">#</a></h1>
 <p>You are provided with a list of lists of students’ scores along the semester. Your task is to write a function that sum each student’s scores and assign a grade according to the following scheme:</p>
 <table class="colwidths-auto table">
@@ -865,8 +871,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="contact-list">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="contact-list">
 <h1>5. Contact List<a class="headerlink" href="#contact-list" title="Permalink to this headline">#</a></h1>
 <p>จงเขียนโปรแกรมที่สร้าง List of tuples (name, line id) จาก nested dictionary โดยเรียงลำดับตามอักษรของชื่อ<br></p>
 <p>ทำเสร็จแล้วควรจะได้ผลลัพธ์ดังนี้</p>
@@ -895,8 +901,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="look-up-by-last-name">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="look-up-by-last-name">
 <h1>6. Look up by last name<a class="headerlink" href="#look-up-by-last-name" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -919,8 +925,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="name-to-age-age-to-name">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="name-to-age-age-to-name">
 <h1>7. Name to age - Age to name<a class="headerlink" href="#name-to-age-age-to-name" title="Permalink to this headline">#</a></h1>
 <p>เปลี่ยนจาก</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_age</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ชญา&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> 
@@ -943,8 +949,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="how-popular-are-they">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-popular-are-they">
 <h1>8. How popular are they?<a class="headerlink" href="#how-popular-are-they" title="Permalink to this headline">#</a></h1>
 <p>เขียนฟังก์ชันหาจำนวน comment ของ tweet id ที่กำหนดให้</p>
 <div class="cell docutils container">
@@ -975,8 +981,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>9. เปลี่ยนคีย์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>เปลี่ยนโครงสร้างของ dictionary จากที่เคยมี key เป็น tuple(first name, last name) เป็นแค่ last name อย่างเดียว</p>
 <div class="cell docutils container">
@@ -990,8 +996,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id2">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
 <h1>10. นับจำนวนนักเรียน<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
 <p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนใน dict (string-&gt;list of strings) เขียนฟังก์ชันที่ return list ของชื่อนักเรียนทั้งหมดที่ไม่ซ้ำกัน</p>
 <div class="cell docutils container">
@@ -1021,8 +1027,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id3">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
 <h1>11. ใครชอบเรียนเยอะ<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
 <p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนใน dict (string-&gt;list of strings) เขียนฟังก์ชันที่ return dict ที่ key คือจำนวนคลาสที่เรียนต่อคน และ value คือคนที่เรียนจำนวนคลาสเท่านั้น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span> <span class="s1">&#39;Brittney&#39;</span><span class="p">],</span>
@@ -1063,8 +1069,8 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="combine-dicts">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="combine-dicts">
 <h1>12. Combine dicts<a class="headerlink" href="#combine-dicts" title="Permalink to this headline">#</a></h1>
 <p>Write a program that combines two dictionaries where the keys and values are strings. The program returns a dictionary where the keys are strings and the values are lists of strings.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">}</span>
@@ -1098,7 +1104,7 @@ Output: <code class="docutils literal notranslate"><span class="pre">['razor</sp
 </div>
 </div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

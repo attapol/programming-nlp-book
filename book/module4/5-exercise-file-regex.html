@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>โจทย์: Text processing &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2-videos-file.html">
      Video: file
@@ -718,9 +724,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="text-processing">
+  <section class="tex2jax_ignore mathjax_ignore" id="text-processing">
 <h1>โจทย์: Text processing<a class="headerlink" href="#text-processing" title="Permalink to this headline">#</a></h1>
-<div class="section" id="proflookup">
+<section id="proflookup">
 <h2>5. Proflookup<a class="headerlink" href="#proflookup" title="Permalink to this headline">#</a></h2>
 <p>ไฟล์ชนิดหนึ่งที่มักจะเจอในการจัดการกับข้อมูลคือไฟล์ csv (comma-separated values) แต่ละบรรทัดของไฟล์ csv จะเป็นข้อความที่คั่นด้วยเครื่องหมาย comma (,) และมีจำนวน “ท่อน” ที่คั่นด้วย comma เท่ากัน เช่น ไฟล์ csv อาจจะมีเนื้อหาแบบด้านล่าง (มี 3 “ท่อน” ที่คั่นด้วย comma)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">แมว</span><span class="p">,</span><span class="n">หมู</span><span class="p">,</span><span class="n">หมา</span>
@@ -744,8 +750,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>โดยลำดับอาจจะไม่เป็นอย่างนี้ก็ได้ (dictionary เป็น data structure ที่ไม่มีลำดับ) แต่ต้องเก็บข้อมูลอาจารย์ในไฟล์ให้ครบทุกคน</p>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2>6. สุนทรพจน์ของโอบามา<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>ไฟล์ <a class="reference external" href="https://drive.google.com/file/d/1iA1s-yNIhdCQvo4BS8d7CVBICHZs4okt/view">obama.txt</a> มีสุนทรพจน์ของโอบามาในปี 2013 แต่ไฟล์นี้มีความพิเศษตรงที่มี Part of speech tag นั่นคือ แต่ละคำในไฟล์จะมีบอกไว้ด้วยว่าเป็น noun, verb, pronoun หรือเครื่องหมายวรรคตอนแบบต่าง ๆ เช่น ประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank</span> <span class="n">you</span><span class="o">.</span> <span class="n">God</span> <span class="n">bless</span> <span class="n">you</span><span class="p">,</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">He</span> <span class="n">forever</span> <span class="n">bless</span> <span class="n">these</span> <span class="n">United</span> <span class="n">States</span> <span class="n">of</span> <span class="n">America</span><span class="o">.</span>
@@ -768,12 +774,12 @@ title="Print to PDF"
 <li><p>ใช้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ในการเก็บความถี่</p></li>
 <li><p>พอข้างบนเสร็จแล้วค่อยลองเปิดไฟล์ และอ่านทีละบรรทัด</p></li>
 </ul>
-</div>
-<div class="section" id="regular-expression-practice">
+</section>
+<section id="regular-expression-practice">
 <h2>1. Regular Expression Practice<a class="headerlink" href="#regular-expression-practice" title="Permalink to this headline">#</a></h2>
 <p>ให้ทำแบบฝึกหัด regular expression ใน <a class="reference external" href="https://regexone.com/">RegexOne</a> ตั้งแต่ Lesson 1 - 11 (นอกเหนือจากนั้นเป็น optional)</p>
-</div>
-<div class="section" id="detect-potential-names">
+</section>
+<section id="detect-potential-names">
 <h2>2. Detect potential names<a class="headerlink" href="#detect-potential-names" title="Permalink to this headline">#</a></h2>
 <p>ชื่อคนในภาษาอังกฤษ เช่น Peter Meg Lois Brian Stewie จะมีการสะกดแบบพิเศษ คือ ขึ้นต้นด้วยตัวใหญ่แค่ตัวหน้าเท่านั้น</p>
 <p>เขียนฟังก์ชันที่ detect ว่าคำที่ให้มานั้นมีรูปร่างเหมือนชื่อคนภาษาอังกฤษหรือไม่</p>
@@ -830,8 +836,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="autoanswer">
+</section>
+<section id="autoanswer">
 <h2>3. Autoanswer<a class="headerlink" href="#autoanswer" title="Permalink to this headline">#</a></h2>
 <p>ถ้าได้รับ string ที่เป็นคำถามที่ขึ้นต้นด้วย Do หรือ Does ให้ตอบกลับไปว่า Yes, ตามด้วยคำตอบเต็ม ๆ แบบใช้ verb do/does มาช่วยด้วย เช่น</p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('Does</span> <span class="pre">he</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music?')</span> <span class="pre">--&gt;</span> <span class="pre">'Yes,</span> <span class="pre">he</span> <span class="pre">does</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music.'</span></code></p>
@@ -847,8 +853,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="cool-things-about-words">
+</section>
+<section id="cool-things-about-words">
 <h2>4. Cool things about words<a class="headerlink" href="#cool-things-about-words" title="Permalink to this headline">#</a></h2>
 <p>Data ที่ใช้ทำแบบฝึกหัดนี้สามารถโหลดได้จากลิงค์นี้</p>
 <p><a class="reference external" href="https://attapol.github.io/programming/data/small_nyt_eng_200001">https://attapol.github.io/programming/data/small_nyt_eng_200001</a></p>
@@ -867,7 +873,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="section" id="k">
+<section id="k">
 <h3>5.1 คำที่มีตัว K<a class="headerlink" href="#k" title="Permalink to this headline">#</a></h3>
 <p>คำประเภทต่อไปนี้ ปรากฏอยู่ในชุดข้อมูลทั้งหมดกี่คำ (นับคำซ้ำด้วย)</p>
 <ul class="simple">
@@ -882,8 +888,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="k-vocabulary">
+</section>
+<section id="k-vocabulary">
 <h3>5.2 k vocabulary<a class="headerlink" href="#k-vocabulary" title="Permalink to this headline">#</a></h3>
 <p>คำประเภทต่อไปนี้ ปรากฏอยู่ในชุดข้อมูลทั้งหมดกี่คำ โดยไม่นับคำซ้ำด้วยเพื่อให้ได้ขนาดของ vocabulary</p>
 <ul class="simple">
@@ -891,9 +897,9 @@ title="Print to PDF"
 <li><p>คำที่ตัวที่สองคือตัว k</p></li>
 <li><p>คำที่ตัวที่ลงท้ายด้วยตัว k</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

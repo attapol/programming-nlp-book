@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>การคิดเชิงคำนวณ (Computational Thinking) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -749,7 +755,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="computational-thinking">
+  <section class="tex2jax_ignore mathjax_ignore" id="computational-thinking">
 <h1>การคิดเชิงคำนวณ (Computational Thinking)<a class="headerlink" href="#computational-thinking" title="Permalink to this headline">#</a></h1>
 <p>หลักสำคัญของการเขียนโปรแกรมไม่ใช่การจำคำสั่งให้ได้ แต่ว่าเป็นการนำคำสั่งมาประกอบรวมกันเพื่อสั่งให้เครื่องทำงานตามที่เราตั้งใจไว้ได้</p>
 <p>เวลาเราได้โจทย์มาหนึ่งโจทย์ เช่น ดึงข้อมูล comment บนโลกโซเชียลลงมาเพื่อวิเคราะห์ว่าคนกำลังสนใจผู้สมัครผู้ว่าฯ คนไหนมากที่สุด จะเห็นว่าเป็นโจทย์ที่ใหญ่มาก ไม่รู้เลยว่าจะเริ่มจากตรงไหนก่อน หลัก Computational thinking เป็นหลักการที่ทำให้เราแก้โจทย์การเขียนโปรแกรมเหล่านี้ ซึ่งประกอบไปด้วย 4 หลัก</p>
@@ -767,7 +773,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>สังเกตว่าอัลกอริธึมข้างบนมีการย่อยโจทย์ออกมาเป็นส่วนๆ เพื่อแยกแก้ และมีการ abstraction ออกมาโดยไม่สนว่าลิ้นชักที่ต้องการประกอบนั้นจะมีกี่อันก็ตาม จะมีขนาดไหนก็ตาม อัลกอริธึมนี้ก็จะสามารถแก้ได้</p>
-<div class="section" id="karel">
+<section id="karel">
 <h2>Karel<a class="headerlink" href="#karel" title="Permalink to this headline">#</a></h2>
 <p>ทักษะการคิดเชิงคำนวณดังตัวอย่างที่ยกขึ้นมานี้เป็นทักษะสำคัญที่สุดในการเขียนโปรแกรมซึ่งเราจะฝึกฝนกันในบทนี้โดยการใช้โปรแกรมที่ชื่อว่าแคเริลตัวแคเริลเป็นหุ่นยนต์ตัวเล็ก ๆ เดินไปเดินมาในโลกสี่เหลี่ยมเล็ก ๆ เราสามารถเขียนภาษาไพธอนให้แคเริลเดินไปตามคำสั่งของเรา เพื่อแก้โจทย์ต่าง ๆ ที่กำหนดได้ เราจะใช้แคเริลเป็นของเล่นในการฝึก computational thinking ก่อนที่จะเร่ิมเขียนเป็นภาษาไพธอนจริง ๆ กับโจทย์จริง ซึ่งจะต้องจำคำสั่งเพ่ิมอีกมาก จุดประสงค์ของการเล่นกับแคเริลช่วยฝึกทักษะการคิดแบบนักเขียนโปรแกรมโดยที่ไม่ต้องจำคำสั่งมากมาย</p>
 <p>Karel สามารถเดินไปข้างหน้าได้ทีละก้าว แต่ไม่สามารถทะลุกำแพงได้ ถ้าเดินชนกำแพงโปรแกรมจะเกิด error ซึ่งก็คือแคเริลพัง โจทย์ในโลกของแคเริลจะวางแคเริลไว้ที่จุดเริ่มต้น และกำหนดว่าโลกที่ให้มาขนาดเท่าไร มีกำแพงตรงไหนบ้าง และตัวกระดิ่ง (beeper) อยู่ตรงไหนบ้าง ซึ่งแคเริลสามารถเก็บขึ้นมาหรือวาง beeper ตามจุดต่าง ๆ ได้ แต่ถ้าหากพยายามหยิบ beeper ในจุดที่ไม่มี beeper โปรแกรมก็จะเกิด error เช่นกัน คำสั่งที่ใช้ในการแก้โจทย์มีดังนี้</p>
@@ -804,8 +810,8 @@ title="Print to PDF"
 <span class="n">put_beeper</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2>โปรแกรม ฟังก์ชัน และการย่อยโจทย์<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>สมมติว่าเรามีโจทย์คือ ให้แคเริลไปหยิบ beeper ตรงหน้าเนินแล้วเดินข้ามเนินไปวาง beeper ที่คอลัมน์ที่ 5 ตามภาพข้างล่าง (ภาพซ้ายคือจุดเริ่มต้น ภาพขวาคือจุดมุ่งหมาย)</p>
 <a class="reference internal image-reference" href="../../_images/karel-ex2.png"><img alt="../../_images/karel-ex2.png" class="align-center" src="../../_images/karel-ex2.png" style="height: 150px;" /></a>
@@ -897,17 +903,17 @@ title="Print to PDF"
     <span class="n">turn_left</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การสร้างฟังก์ชัน (function defintion/declaration) คือ เขียนฟังก์ชันขึ้นมาใหม่ และตั้งชื่อของฟังก์ชันเพื่อให้พร้อมกับนำไปใช้</p>
 <p>การเรียกฟังก์ชัน (function call) คือการนำฟังก์ชันที่เราได้สร้างไว้เรียบร้อยแล้วมาใช้</p>
-</div>
+</aside>
 <p>เราได้สร้างฟังก์ชันใหม่ขึ้น <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> ซึ่งทำให้โค้ดอ่านง่ายขึ้นเนื่องจากเราลดปริมาณโค้ดที่อยู่ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> ลงไป</p>
 <p>เมื่อเราสร้างฟังก์ชันแล้ว เราสามารถเรียกฟังก์ชันนั้น (function call) จากฟังก์ชันอื่น ๆ ได้ วิธีการเรียกคือพิมพ์ชื่อของฟังก์ชันตามด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งขาดไม่ได้ ดังนั้นคำสั่ง<code class="docutils literal notranslate"><span class="pre">move()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code> คือการเรียกฟังก์ชันเช่นเดียวกัน แต่ว่าฟังก์ชันเหล่านี้เราไม่ต้องตั้งขึ้นมาใหม่ เพราะเราได้ import เข้ามาแล้ว</p>
 <p>สรุปส่วนต่าง ๆ ของฟังก์ชันมีดังนี้</p>
 <a class="reference internal image-reference" href="../../_images/function.png"><img alt="../../_images/function.png" class="align-center" src="../../_images/function.png" style="height: 150px;" /></a>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>ข้อควรระวัง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>การสร้างฟังก์ชันต้องมีรูปแบบตามที่ภาษาไพธอนกำหนดทุกประการ เครื่องคอมพิวเตอร์เป็นสิ่งที่ฉลาดแต่ว่าเราต้องสื่อสารกับคอมพิวเตอร์แบบถูกไวยากรณ์ทุกประการ ถ้าหากเราลืมอย่างใดอย่างหนึ่ง จะถือว่าผิดไวยากรณ์และ python interpreter จะโยน error (throw) มาให้เราตอนที่เราพยายามรันโค้ด และหยุดการรันโค้ดทันที เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;my_first_karel.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span>
@@ -931,8 +937,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>พอเราเรียนรู้การใช้คำสั่งใหม่ ๆ เพิ่มขึ้นเราจะเห็น error ชนิดต่าง ๆ เพิ่มขึ้น ซึ่งคนเขียนโปรแกรมควรจะอ่านเป็นว่า python interpreter พยายามนำอะไรมาฟ้องเราเพื่อให้เราแก้ไข ทำให้โค้ดทำงานได้ถูกต้อง</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>ทุกโจทย์การเขียนโปรแกรมที่เราได้มา เราต้องเริ่มจากการทำ decomposition ก่อน เพราะว่าโจทย์เล็กๆ หลายๆ อัน ง่ายกว่าการแก้โจทย์ใหญ่โจทย์เดียว ที่ง่ายกว่าก็เพราะว่าเราสามารถทดสอบ solution ของเราเป็นส่วน ๆ ได้ง่ายขึ้น</p>
 <p>ลองดูตัวอย่างโจทย์ว่าแคเริลยืนอยู่บนถนนที่เป็นหลุมเป็นบ่อที่ต้องเอา beeper ลงไปอุดเพื่อทำให้ถนนเรียบ ๆ เดินง่าย สมมติว่าโลกที่แคเริลเริ่มต้นเป็นแบบภาพซ้ายด้านล่าง พอเรารันโปรแกรมโดยสมบูรณ์แล้วจะออกมาหน้าตาเหมือนกับภาพขวาล่าง</p>
@@ -954,10 +960,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>สังเกตอย่างแรกคือ เป็นโค้ดที่ยาวเหยียดมาก และเข้าใจได้ยากถ้าเราเลือกโค้ดขึ้นมาสักบรรทัด เราจะบอกไม่ได้เลยว่า ณ จุดนั้นแคเริลยืนอยู่ในไหนในโลก หันหน้าไปทางไหนอยู่</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>การย่อยโจทย์ เป็นขั้นตอนที่ 1 ของการคิดเขิงคำนวณ</p>
-</div>
+</aside>
 <p>เราจะลองแก้โจทย์นี้ใหม่อีกรอบโดยการใช้การย่อยโจทย์ โจทย์นี่้ที่จริงแล้วสามารถย่อยลงเป็น 3 โจทย์ย่อย</p>
 <ol class="simple">
 <li><p>ซ่อมหลุมแรก</p></li>
@@ -977,10 +983,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">pass</span></code> ใส่ไว้เพื่อจองที่ไว้สำหรับการเขียนโค้ดจริงๆ สำหรับฟังก์ชันนั้น ในกรณีนี้เราเขียนโครงของฟังก์ชันทิ้งไว้ก่อนที่จะเริ่มลงรายละเอียดของแต่ละฟังก์ชันจริง ๆ</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>การมองหาแพทเทิร์น เป็นขั้นตอนที่ 2 ของการคิดเขิงคำนวณ</p>
-</div>
+</aside>
 <p>แต่ถ้าเราสังเกตดูดี ๆ เราจะเห็นว่าโจทย์ที่ 1 กับโจทย์ที่ 3 เป็นโจทย์เดียวกัน เพราะเป็นแพทเทิร์นเดียวกัน ตามกรอบสีแดงข้างล่าง</p>
 <a class="reference internal image-reference" href="../../_images/deposed-repair-road.png"><img alt="../../_images/deposed-repair-road.png" class="align-center" src="../../_images/deposed-repair-road.png" style="height: 200px;" /></a>
 <p>เพราะฉะนั้นเราสามารถเรียกใช้ฟังก์ชันได้สองรอบ</p>
@@ -997,10 +1003,10 @@ title="Print to PDF"
     <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>ยิ่งประหยัดโค้ดลงแค่ไหน ยิ่งทำให้ลดโอกาสที่จะเขียนโปรแกรมที่ผิดพลาดได้มากขึ้น</p>
-</div>
+</aside>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> ดูเรียบง่ายและเข้าใจง่ายกว่าของเดิมเยอะมาก เพราะเราย่อยโจทย์อกมาเป็นส่วนย่อย ๆ รวมกับการมองหาแพทเทิร์น ทำให้ปริมาณโค้ดที่เราต้องเขียนน้อยลงด้วย ทำให้เกิดข้อผิดพลาดน้อยลง</p>
 <p>ตอนนี้เท่ากับว่าฟังก์ชันที่ต้องเขียนมีแค่ <code class="docutils literal notranslate"><span class="pre">fill_hole()</span></code> เท่านั้นที่เราจะนำไปใช้ถึง 2 ครั้งโดยที่เราเขียนฟังก์ชันนี้ขึ้นมารอบเดียว ฟังก์ชันนี้เรายังสามารถใช้หลักการย่อยโจทย์เพื่อย่อยลงไปได้อีก</p>
 <ol class="simple">
@@ -1008,10 +1014,10 @@ title="Print to PDF"
 <li><p>วาง beeper</p></li>
 <li><p>กระโดดออกมานอกหลุม</p></li>
 </ol>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>implement แปลว่า เริ่มเขียนโค้ดจริงๆ หลังจากที่ได้มีคิดคำนวณ วางแผนไว้เรียบร้อยแล้ว ซึ่งตรงกับขั้นตอนที่ 4 ของการคิดเชิงคำนวณ</p>
-</div>
+</aside>
 <p>เราสามารถเริ่ม implement อัลกอริธึมได้เลย</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fill_hole</span><span class="p">():</span>
     <span class="n">jump_in</span><span class="p">()</span>
@@ -1047,12 +1053,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>ในการแก้โจทย์แคเริลซ่อมถนนข้อนี้ เราได้ใช้การย่อยโจทย์ การมองหาแพทเทิร์น และการเขียนอัลกอริธึม ซึ่งเป็น 3 ใน 4 ของหลักการคิดเชิงคำนวณ เราได้่ข้ามการมองแบบนามธรรมไปในโจทย์ข้อนี้ เราจะมาแก้โจทย์ที่ยากขึ้นเรื่อย ๆ ซึ่งเราจะเห็นต่อไปว่าขั้นตอนการมองแบบนามธรรมจะมีส่วนช่วยอย่างมาก</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>control flow เป็นลักษณะพิเศษของภาษาคอมพิวเตอร์ท่ีควบคุมลําดับการรันโปรแกรม ว่าบรรทัดไหนเกิดก่อนหลัง ก่ีคร้ัง</p>
-</div>
-</div>
-<div class="section" id="control-flow-for-loop">
+</aside>
+</section>
+<section id="control-flow-for-loop">
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#control-flow-for-loop" title="Permalink to this headline">#</a></h2>
 <p>โปรแกรมที่เราเขียนมาทั้งหมดถึงตอนนี้รันโค้ดจากบรรทัดแรกไปถึงบรรทัดสุดท้าย โดยอาจจะมีการกระโดดไปรันฟังก์ชันย่อยอื่น ๆ บ้าง แต่ว่าก็รันเรียงลำดับจากบรรทัดแรกไปบรรทัดสุดท้าย ภาษาคอมพิวเตอร์มีสิ่งที่เรียกว่า control flow ซึ่งก็คือคำสั่งที่พิเศษที่ทำให้เราเลือกได้ว่าจะรันโค้ดส่วนไหนบ้าง จะรันกี่ครั้ง ทำให้เราเขียนโปรแกรมแก้โจทย์ได้อย่างหลากหลายมากขึ้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -1087,17 +1093,17 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>code block ที่มีคำสั่งที่ต้องการจะวนซ้ำจำเป็นต้องเคาะย่อหน้า (indentation) คล้าย ๆ กับการตั้งฟังก์ชัน เพื่อแยกให้เห็นชัดเจนว่าคำสั่งอะไรบ้างที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
-</div>
-<div class="section" id="control-flow-while-loop">
+</section>
+<section id="control-flow-while-loop">
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#control-flow-while-loop" title="Permalink to this headline">#</a></h2>
 <p>อีก control flow พบได้บ่อยในการเขียนโปรแกรมคือการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ซึ่งเป็นการรันคำสั่งวนซ้ำ ๆ เช่นเดียวกับ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ซึ่งเรากำหนดเงื่อนไขไปเลยว่าให้หลุดออกจาก loop หลังจากวนรันไปแล้วกี่ครั้ง  แต่ว่า <code class="docutils literal notranslate"><span class="pre">while</span></code> loop เรากำหนดเองว่าจะให้หลุดออกจากรูปด้วยเงื่อนไขอะไร</p>
 <p>ตัวอย่าง ถ้าเรามีโจทย์ว่าให้แคเริลวาง beeper บนแถวแรกให้เต็มแต่ยกเว้นริมซ้ายสุด และริมขวาสุด โดยที่จุดเริ่มต้นอยู่ที่มุมซ้ายล่างและแคเริลหันไปทางตะวันออก</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
-</div>
-<div class="figure align-center">
+</figure>
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
-</div>
+</figure>
 <p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวาง beeper ทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">move</span><span class="p">()</span>
@@ -1107,10 +1113,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>เราสังเกตแพทเทิร์นที่เราเจอซ้ำ ๆ คือ แคเริลจะต้องมีการวน loop ก้าว วาง ก้าว วาง ไปเรื่อย ๆ ซึ่งเราควรจะใช้การวนโค้ดในการแก้ปัญหาได้  ถ้าเราเปลี่ยนโจทย์ใหม่ว่า เราไม่ทราบว่าขนาดความกว้างของแถวแรก จึงไม่ทราบว่าต้องวาง beeper ทั้งหมดกี่ครั้ง ซึ่งทำให้เราไม่สามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ในการแก้โจทย์นี้ได้  ข้อสังเกตนี้ได้มาจากการมองหาแพทเทิร์น (pattern recognition)</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การคิดแบบนามธรรม (abstraction) คือ การคิดแก้ปัญหาโดยหาจุดร่วมของโจทย์ทั้งหมด และละรายละเอียดปลีกย่อยออกไป เพื่อให้เห็นแก่นของโจทย์</p>
-</div>
+</aside>
 <p>ในขั้นตอนต่อไป เราควรจะตั้งคำถามว่าโลกของแคเริลที่มีขนาด 8 ช่อง กับโลกขนาด 3 ช่อง กับโลกขนาด 100 ช่องมีอะไรที่เป็นจุดร่วมกันบ้าง ซึ่งจุดร่วมนี้เป็นแก่นสำคัญของโจทย์นี้ การคิดตั้งคำถามในลักษณะนี้เป็นตัวอย่างการคิดแบบนามธรรม (abstraction) ในโจทย์ข้อนี้ที่จริงแล้วเราต้องการวนโค้ดการก้าวและวางจนกว่าแคเริลจะชนกำแพง แล้วเราจะรู้ได้่อย่างไรว่าแคเริลตอนนี้หน้าปะกับกำแพงอยู่หรือไม่</p>
 <p>แคเริลมีฟังก์ชันที่ใช้ในการตรวจสอบเงื่อนไขสถานะของแคเริลว่าข้างหน้ามีกำแพงขวางอยู่หรือไม่ <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> เราสามารถแก้โจทย์นี้โดยการเปลี่ยนจาก <code class="docutils literal notranslate"><span class="pre">for</span></code> loop เป็น <code class="docutils literal notranslate"><span class="pre">while</span></code> loop พร้อมทั้งกำหนดเงื่อนไขการออกจาก loop ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -1177,8 +1183,8 @@ title="Print to PDF"
     <span class="n">คำสั่งอีกหลาย</span> <span class="n">ๆ</span> <span class="n">บรรทัด</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="control-flow-if-else-elif">
+</section>
+<section id="control-flow-if-else-elif">
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code><a class="headerlink" href="#control-flow-if-else-elif" title="Permalink to this headline">#</a></h2>
 <p>Control flow อีกประเภทหนึ่งที่สำคัญมาก ๆ คือ การเลือกว่าจะรัน code block ใดในเงื่อนไขใดบ้าง</p>
 <p>ตัวอย่าง เช่น ถ้าเราอยากให้แคเริลเดินไปข้างหน้าถ้าด้านหน้าไม่มีอะไรกั้น</p>
@@ -1217,7 +1223,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>ซึ่งทั้งหมดนี้อยากให้เห็นว่าเป็นการใช้การคิดเชิงคำนวณในการแก้ปัญหาโดยใช้การย่อยโจทย์ การสังเกตหาแพทเทิร์น (ต้องทำซ้ำเหมือนกันทุกช่อง) การมองแบบนามธรรม (หาเงื่อนไขในการวน) และการออกแบบอัลกอริธึม (เริ่มเขียนโค้ดรวมกันทั้งหมด) และเราได้ใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> รวมกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งเป็นเครื่องมือ control flow ที่สำคัญในการเขียนโปรแกรม</p>
-<div class="section" id="if-while">
+<section id="if-while">
 <h3>ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#if-while" title="Permalink to this headline">#</a></h3>
 <p>ผู้เรียนโปรแกรมมือใหม่อาจจะสับสนระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code> เนื่องจากไวยากรณ์ค่อนข้างคล้ายกัน แต่ว่าความหมายของทั้งสองคำสั่งนี้ต่างกันพอสมควร กล่าวคือ <code class="docutils literal notranslate"><span class="pre">if</span></code> จะรัน code block ข้างใต้เพียงหนึ่งครั้งเท่านั้น ถ้าเงื่อนไขที่กำหนดเป็นจริง</p>
 <p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> ได้ดังนี้</p>
@@ -1230,9 +1236,9 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-<div class="figure align-left">
+<figure class="align-left">
 <a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" /></a>
-</div>
+</figure>
 <p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> ได้ดังนี้ เพื่อเปรียบเทียบกันกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งรันคำสั่งเพียงแค่ครั้งเดียว</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
     <span class="n">คำสั่ง</span> <span class="mi">1</span>
@@ -1242,20 +1248,22 @@ title="Print to PDF"
     <span class="n">คำสั่ง</span> <span class="mi">4</span>
 </pre></div>
 </div>
-<div class="figure align-left">
+<figure class="align-left">
 <a class="reference internal image-reference" href="../../_images/while-vs-if-flow-chart.png"><img alt="../../_images/while-vs-if-flow-chart.png" src="../../_images/while-vs-if-flow-chart.png" style="width: 215.5px; height: 210.0px;" /></a>
-</div>
-</div>
-</div>
-<div class="section" id="id4">
+</figure>
+</section>
+</section>
+<section id="id4">
 <h2>บูลีน<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>การกำหนดเงื่อนไขด้วยบูลีนเป็นเครื่องมือที่สำคัญมากในการเขียนโปรแกรม เราสามารถเขียนเงื่อนไขที่ซับซ้อนขึ้นไปอีกได้โดยใช้โอเปอร์เรเตอร์ทางตรรกศาสตร์ เช่น <code class="docutils literal notranslate"><span class="pre">or</span></code> และ <code class="docutils literal notranslate"><span class="pre">and</span></code> เพื่อให้เห็นการใช้งานที่ชัดขึ้น เราจะลองแก้โจทย์แคเริลอีกหนึ่งข้อ</p>
 <p>สมมติว่าเราต้องการให้แคเริลเอา beeper ที่อยู่รอบรั้วออกไปให้หมด ดังตัวอย่างดังนี้</p>
-<div class="figure align-default" id="id5">
+<figure class="align-default" id="id5">
 <img alt="../../_images/boolean-remove-fence.png" src="../../_images/boolean-remove-fence.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
 ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
-</div>
+</figcaption>
+</figure>
 <p>เราสามารถสังเกตหาแพทเทิร์นได้ว่าการเก็บ beeper แต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถย่อยโจทย์ออกมาเป็นฟังก์ชันที่เก็บ beeper ของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -1271,16 +1279,20 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
-<div class="figure align-default" id="id6">
+<figure class="align-default" id="id6">
 <img alt="../../_images/or-operation.png" src="../../_images/or-operation.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>เงื่อนไขด้านล่างสุดแสดงให้เห็นว่าแคเริลได้เดินมาถึงมุมแล้วหรือถึงช่องที่ไม่ได้อยู่ติดกับรั้วอีกต่อไปแล้ว ทำให้ส่งต่อไปยังรั้วอีกข้างที่เหลือต่อไปได้</p>
 <p>นอกจากนั้นแล้วภาษาไพธอนยังมีโอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">and</span></code> ซึ่งมีการตีค่าบูลีนเหมือนกันกับ <em>และ</em> ในตรรกศาสตร์ ดังนี้</p>
-<div class="figure align-default" id="id7">
+<figure class="align-default" id="id7">
 <img alt="../../_images/and-operation.png" src="../../_images/and-operation.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้แคเริลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -1295,8 +1307,8 @@ title="Print to PDF"
         <span class="n">move</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

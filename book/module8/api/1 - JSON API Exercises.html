@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>JSON File (xxx.json) I/O &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -234,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -242,6 +243,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/2-videos-file.html">
      Video: file
@@ -254,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -682,7 +688,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="json-file-xxx-json-i-o">
+  <section class="tex2jax_ignore mathjax_ignore" id="json-file-xxx-json-i-o">
 <h1>JSON File (xxx.json) I/O<a class="headerlink" href="#json-file-xxx-json-i-o" title="Permalink to this headline">#</a></h1>
 <p>JSON array เป็น <strong>format หนึ่ง</strong> ซึ่งหน้าตาเหมือน string (มีรายละเอียดในสไลด์)</p>
 <p>ส่วน JSON file เป็นไฟล์ที่บันทึกแล้ว</p>
@@ -755,8 +761,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="list-of-universities-in-thailand">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="list-of-universities-in-thailand">
 <h1>1. List of Universities in Thailand<a class="headerlink" href="#list-of-universities-in-thailand" title="Permalink to this headline">#</a></h1>
 <p>We want to get the names of all universities in Thailand. Currently, Thai universities are registered with Ministry of Higher Education, Science, and Innovation, the newest Ministry as of 2019.</p>
 <p>First, let’s import the modules needed. We need <code class="docutils literal notranslate"><span class="pre">requests</span></code> module for pulling the information from web pages. <strong>Import that module.</strong></p>
@@ -865,8 +871,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="poke-api">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="poke-api">
 <h1>2. Poke API<a class="headerlink" href="#poke-api" title="Permalink to this headline">#</a></h1>
 <p>Although we all love cats, nobody can argue that Pokemons are so much cuter.</p>
 <img src="https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F6623d5a6ae583f81ee3515b6b3615c7f%2F204855766%2Flandscape-1456483171-pokemon2.jpg&client=amp-blogside-v2&signature=a66341cc83efebc3c63cadf0db972d9a16e1b05d" alt="Pokemon" width="500" />
@@ -940,8 +946,8 @@ title="Print to PDF"
 <p>Notice that you only get the names of 20 Pokemons. Why?</p>
 <p>Because most API providers <em>paginate</em> the responses, meaning that instead of returning a big chunk of results, they spilt up the results into multiple <em>pages</em> and returning them to you one at a time.</p>
 <p>Observe in our response previously that there is a value associated with the key <code class="docutils literal notranslate"><span class="pre">next</span></code>. That is the URL to our next page of results.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="extra-looping-on-next">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="extra-looping-on-next">
 <h1>2 Extra. Looping on <code class="docutils literal notranslate"><span class="pre">next</span></code><a class="headerlink" href="#extra-looping-on-next" title="Permalink to this headline">#</a></h1>
 <p>As an extra practice, take the URL from <code class="docutils literal notranslate"><span class="pre">next</span></code> key and keep requesting the content from the API until <code class="docutils literal notranslate"><span class="pre">next</span></code> has the value of <code class="docutils literal notranslate"><span class="pre">null</span></code> (<code class="docutils literal notranslate"><span class="pre">null</span></code> in JSON = <code class="docutils literal notranslate"><span class="pre">None</span></code> in python).</p>
 <p>When you are done with this, you should get the names of all 964 Pokemons.</p>
@@ -952,7 +958,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

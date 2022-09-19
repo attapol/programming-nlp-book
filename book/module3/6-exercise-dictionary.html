@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>โจทย์: ดิกชันนารี &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -51,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="การอ่านข้อมูลจากไฟล์" href="../text_file.html" />
+    <link rel="next" title="การประมวลผลข้อมูลจากไฟล์" href="../text_file.html" />
     <link rel="prev" title="Video: Dictionary" href="5-videos-dictionary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -704,9 +710,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>โจทย์: ดิกชันนารี<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>ข้อ 1. ตัดเกรด<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันที่ตัดเกรดให้กับนักเรียนโดยที่ดูจากคะแนนการสอบสองครั้งที่ผ่านมา คะแนนสอบแต่ละครั้งนั้นถูกเก็บในรูปของ dictionary ที่ key=ชื่อนักเรียน value=คะแนนสอบ 0-10 คะแนน ถ้านักเรียนไม่ได้เข้าสอบชื่อก็จะไม่ได้อยู่ใน dictionary  เรามีเกณฑ์การตัดเกรดง่ายๆ ดังนี้</p>
 <ul class="simple">
@@ -732,8 +738,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="recode-part-1">
+</section>
+<section id="recode-part-1">
 <h2>ข้อ 2. Recode part 1<a class="headerlink" href="#recode-part-1" title="Permalink to this headline">#</a></h2>
 <p>หลายครั้งเวลาเราประมวลผลข้อมูลที่เป็นคำ เราต้องเปลี่ยนคำให้เป็นตัวเลข (เรียกว่า index)
 เพราะว่าตัวเลขกินพื้นที่น้อยกว่าและจัดเก็บได้ง่ายกว่าตัวหนังสือ จงเขียนฟังก์ชันที่เปลี่ยนคำใน list เป็น list of index โดยมองหา index จาก dictionary ที่กำหนดให้</p>
@@ -764,8 +770,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="recode-part-2">
+</section>
+<section id="recode-part-2">
 <h2>ข้อ 3. Recode part 2<a class="headerlink" href="#recode-part-2" title="Permalink to this headline">#</a></h2>
 <p>เมื่อเวลาเราประมวลผลข้อมูลเสร็จแล้ว เราจะต้องการแปลงค่าที่เป็น index ของคำกลับไปเป็นคำเหมือนเดิม เช่น ถ้าดิกชันนารีจากคำไป index มีลักษณะดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;mat&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bat&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;eat&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
@@ -794,8 +800,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>ข้อ 4.<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>โนโน่เป็นคนชอบเขียนโปรแกรมและกินผลไม้มาก โนโน่เลยเก็บจำนวนผลไม้ที่มีในตู้เย็นไว้ใน python dictionary เช่น <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;apple&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;banana&quot;:</span> <span class="pre">2</span> <span class="pre">}</span></code> คือมีแอปเปิ้ล 1 ลูก กล้วย 2 ลูก ต่อมา โนโน่ซื้อตู้เย็นมาอีกตู้ จึงมี dictionary อีกอันหนึ่งไว้เก็บจำนวนผลไม้</p>
 <p>โนโน่อยากรู้จำนวนผลไม้ที่มีทั้งหมด ช่วยโนโน่หน่อย เขียนฟังก์ชันที่รับ dictionary 2 ตัวเป็น parameters (คือ dictionary ที่แทนผลไม้ในตู้ที่ 1 และ 2 ตามลำดับ) และ return dictionary แสดงจำนวนผลไม้ทั้งหมด เช่น</p>
@@ -821,8 +827,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>ข้อ 5. สนุกกำลังสอง<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันที่รับค่า n แล้ว return dictionary ที่มี key ตั้งแต่ 1 ถึง n โดย value ของแต่ละตัวคือ key ยกกำลังสอง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">squared_dict</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  
@@ -841,8 +847,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dictionary">
+</section>
+<section id="dictionary">
 <h2>ข้อ 6. สร้าง dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">#</a></h2>
 <p>สมมติว่าเรามี list ของคำศัพท์ และ list ของคำแปล</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">english_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;floor&#39;</span><span class="p">]</span>
@@ -863,8 +869,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="simplify">
+</section>
+<section id="simplify">
 <h2>ข้อ 7. Simplify<a class="headerlink" href="#simplify" title="Permalink to this headline">#</a></h2>
 <p>สมมติว่าเราต้องการทำให้ข้อความเข้าใจง่ายขึ้นโดยการแทนที่คำยากด้วยคำง่าย โดยเราจะเก็บคู่ของคำยาก คำง่ายไว้ใน ใน dictionary ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">censor_dict</span> <span class="o">=</span> <span class="p">{</span>
@@ -898,8 +904,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -938,7 +944,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="../text_file.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">การอ่านข้อมูลจากไฟล์</p>
+        <p class="prev-next-title">การประมวลผลข้อมูลจากไฟล์</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

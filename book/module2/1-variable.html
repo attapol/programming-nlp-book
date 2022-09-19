@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ตัวแปรและฟังก์ชัน &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -903,14 +909,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>ตัวแปรและฟังก์ชัน<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p><em>ตัวแปร (variable)</em> วิธีการเก็บข้อมูลโดยกำหนดชื่อเรียกให้กับค่าที่เก็บ</p>
 <p><em>การกำหนดค่าให้ตัวแปร (variable assignment)</em> การเชื่อมโยงชื่อตัวแปรกับค่าที่ต้องการเก็บ</p>
-</div>
-<div class="section" id="variable">
+</aside>
+<section id="variable">
 <h2>ตัวแปร (variable)<a class="headerlink" href="#variable" title="Permalink to this headline">#</a></h2>
 <p>ลองนึกถึงสมัยประถมที่เราเริ่มเรียนวิธีการตั้งหารยาว หรือการคูณเลขสามหลักด้วยมือ ซึ่งก็มีอัลกอริธึมที่ค่อนข้างซับซ้อนที่ต้องทำด้วยมือซ้ำๆ จนชำนาญ อย่างหนึ่งที่สังเกตจากการตั้งหารยาวคือ ต้องมีการทดเลข จดไว้สักที่หนึ่ง เพื่อจะนำเอาผลการคูณหารของเลขแต่ละหลักมารวมกันอีกครั้งตอนสุดท้ายที่เพื่อที่จะได้ผลลัพธ์สุดท้าย  การทดเลข เปรียบได้กับการเก็บข้อมูลเอาไว้ในตัวแปรเพื่อจะนำมาใช้ทีหลัง</p>
 <p>การเก็บข้อมูลใส่ตัวแปรเพื่อนำค่ามาใช้ทีหลัง เรียกว่า <em>การกำหนดค่าให้ตัวแปร (variable assignment)</em> ซึ่งจะต้องบอกเครื่องว่าชื่อของตัวแปรคืออะไร และค่าที่ต้องการ คำสั่งภาษาไพธอนมีกฏดังนี้</p>
@@ -927,10 +933,10 @@ title="Print to PDF"
 <li><p>ห้ามใช้คำที่สงวน เช่น <code class="docutils literal notranslate"><span class="pre">for</span></code> <code class="docutils literal notranslate"><span class="pre">while</span></code> <code class="docutils literal notranslate"><span class="pre">def</span></code> ฯลฯ ซึ่งเป็นคำที่สงวนใช้สร้างคำสั่งอื่น ๆ</p></li>
 <li><p>ห้ามมีช่องว่างเลย</p></li>
 </ul>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>ตัว <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> ที่ปรากฏอยู่หน้าคำสั่งมีไว้เพื่อแสดงให้เห็นว่าเป็นการพิมพ์คำสั่งไพธอนลงไปบน <code class="docutils literal notranslate"><span class="pre">ipython</span></code></p>
-</div>
+</aside>
 <p>ถ้าเกิดว่าไม่เขียนคำสั่งตามกฏ interpreter จะชี้บอกว่าเจอข้อผิดพลาด (error) ที่ไฟล์ไหน และบรรทัดที่เท่าไร ส่วนไหนของโค้ด และบอกด้วยว่าเป็น <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>  เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="n">of</span> <span class="n">words</span> <span class="o">=</span> <span class="mi">5000</span>
   File <span class="nb">&quot;myprogram.py&quot;</span>, line <span class="m">1</span>
@@ -970,8 +976,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>คำตอบคือ 4800 เท่าเดิมเนื่องจากเครื่องตีความผลของ <code class="docutils literal notranslate"><span class="pre">num_words</span> <span class="pre">-</span> <span class="pre">num_punctuations</span></code> ไปเสร็จเรียบร้อยแล้ว การแก้ค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">num_punctuations</span> <span class="pre">=</span> <span class="pre">1000</span></code> ในบรรทัดต่อมา ไม่มีผลต่อค่าของ <code class="docutils literal notranslate"><span class="pre">num_words_no_puncs</span></code> ที่ถูกจัดเก็บไว้แล้ว</p>
-</div>
-<div class="section" id="variable-type-data-type">
+</section>
+<section id="variable-type-data-type">
 <h2>ชนิดของตัวแปร (variable type) และข้อมูล (data type)<a class="headerlink" href="#variable-type-data-type" title="Permalink to this headline">#</a></h2>
 <p>ตัวแปรในภาษาไพธอนมีหลายชนิด (type)</p>
 <ul class="simple">
@@ -982,7 +988,7 @@ title="Print to PDF"
 </ul>
 <p>และยังมีอีกมากซึ่งเราจะได้เห็นในบทต่อ ๆ ไป</p>
 <p>เวลาเราสร้างตัวแปรและกำหนดค่าให้ตัวแปร เราไม่ต้องเลือกเลยว่าจะต้องใช้ตัวแปรชนิดใด เพราะว่า python interpreter จะแปลค่าจาก expression ที่อยู่ทางด้านขวามือและรู้เองว่าต้องใช้ตัวแปรชนิดใด แต่เราจำเป็นต้องรู้เองว่า expression ได้ผลออกมาเป็นชนิดใด เพื่อจะเลือก operator ใช้ได้ถูกต้อง</p>
-<div class="section" id="int-float">
+<section id="int-float">
 <h3><code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-float" title="Permalink to this headline">#</a></h3>
 <p>เราสามารถสร้าง expression ที่ประกอบด้วย <code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code> ด้วยตัวดำเนินการเลขคณิต (arithmetic operator)
 ในภาษาไพธอนมีดังนี้</p>
@@ -1058,10 +1064,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>ทั้ง <code class="docutils literal notranslate"><span class="pre">pi</span></code> และ <code class="docutils literal notranslate"><span class="pre">average_words_per_page</span></code> เป็นตัวแปรไทป์ <code class="docutils literal notranslate"><span class="pre">float</span></code> เพราะ Python interpreter แปลผล expression ทางขวามือแล้วได้ค่าที่เป็นทศนิยม</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p><code class="docutils literal notranslate"><span class="pre">TypeError</span></code> คือ error ที่เกิดจากการใช้ข้อมูลผิดไทป์</p>
-</div>
+</aside>
 <p>ถ้าหากเราใช้ operator กับข้อมูลผิดไทป์เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;ฉันรักภาษาไทย&#39;</span> <span class="o">+</span> <span class="mi">4</span>
 <span class="go">Traceback (most recent call last)</span>
@@ -1082,8 +1088,8 @@ title="Print to PDF"
 </div>
 <p>Python interpreter โยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> และอธิบายว่า operator <code class="docutils literal notranslate"><span class="pre">+</span></code> ไม่สามารถใช้กับ <code class="docutils literal notranslate"><span class="pre">int</span></code> และสตริงได้</p>
 <p>เพราะเหตุนี้เวลาเราเขียนโปรแกรมเราควรจำให้ได้ว่าไทป์ข้อมูลที่ตัวแปรและตัวเก็บเป็นข้อมูลไทป์ไหน และควรจะทราบด้วยว่าถ้าเครื่องโยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> มาให้ตอนที่เรารันโปรแกรม เราควรจะแก้ไขโดยการตรวจไทป์ของข้อมูลให้เหมาะสม</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>สตริง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>เบื้องต้นเราสามารถสร้างสตริงเพื่อเก็บข้อความได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">welcome_message</span> <span class="o">=</span> <span class="s1">&#39;Welcome to my world!&#39;</span>
@@ -1110,13 +1116,13 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>เราจะศึกษารายละเอียดของการสร้างสตริงในรูปอื่น ๆ ทั้งหมดในบทต่อไป</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>บูลีน<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>ชื่อของตัวแปรที่เก็บค่าบูลีนควรจะขึ้นต้นด้วย <code class="docutils literal notranslate"><span class="pre">is_</span></code> + adjective หรือคำนาม เช่น <code class="docutils literal notranslate"><span class="pre">is_too_long</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">is_newspaper</span></code> เป็นต้น</p>
-</div>
+</aside>
 <p>ค่าบูลีนสามารถเป็นได้แค่ <code class="docutils literal notranslate"><span class="pre">True</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">False</span></code> ให้สังเกตว่าทั้งสองค่านั้นต้องสะกดด้วยตัวใหญ่ตัวแรก</p>
 <p>นอกจากนั้นแล้วยังสามารถขึ้นมาได้ด้วยการใช้ comparison operator อีกด้วย</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_long_book</span> <span class="o">=</span> <span class="n">num_words</span> <span class="o">&gt;</span> <span class="mi">10000</span>
@@ -1124,8 +1130,8 @@ title="Print to PDF"
 </div>
 <p>จากตัวอย่างข้างบน <code class="docutils literal notranslate"><span class="pre">is_long_book</span></code> เป็นตัวแปรชนิดบูลีน เพราะว่า expression ตีผลออกมาเป็น <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>operator ของบูลีนกับบูลีน ได้แก่ <code class="docutils literal notranslate"><span class="pre">and</span></code> <code class="docutils literal notranslate"><span class="pre">or</span></code> เราได้เห็นและใช้กันไปแล้วในบทที่ 1</p>
-</div>
-<div class="section" id="reassignment-operator">
+</section>
+<section id="reassignment-operator">
 <h3>Reassignment operator<a class="headerlink" href="#reassignment-operator" title="Permalink to this headline">#</a></h3>
 <p>การให้ค่าใหม่กับตัวแปร (reassignment หรือ update) สามารถทำได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ซ้ำอีกครั้งได้เลย เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">5000</span>
@@ -1156,18 +1162,18 @@ title="Print to PDF"
 </div>
 <p>ค่าที่เก็บอยู่ใน <code class="docutils literal notranslate"><span class="pre">num_words</span></code> คือ 4999 หลังจากที่รันโค้ดแล้ว</p>
 <p>การใช้ reassignment operator เป็นที่นิยมมาก ถึงแม้ว่าจะไม่จำเป็นต้องใช้ก็ตาม อาจจะเห็นโปรแกรมเมอร์คนอื่นใช้ เราจึงต้องอ่านให้ออกว่าแปลว่าอะไร</p>
-</div>
-</div>
-<div class="section" id="function">
+</section>
+</section>
+<section id="function">
 <h2>ฟังก์ชัน (function)<a class="headerlink" href="#function" title="Permalink to this headline">#</a></h2>
 <p>ในบทที่หนึ่งเราได้เรียนรู้วิธีการเขียนฟังก์ชันที่สามารถนำกลับมาใช้อีกได้ในสถานการณ์ใกล้ ๆ กัน เพื่อช่วยย่อยโจทย์ออกมาเป็นส่วนย่อย ๆ และเป็นการประหยัดโค้ดอีกด้วย ที่จริงแล้วฟังก์ชันสามารถเขียนให้มีความยืดหยุ่นมากขึ้นโดยการเขียนฟังก์ชันที่รับอาร์กิวเมนต์ (argument)</p>
 <a class="reference internal image-reference" href="../../_images/input-output.png"><img alt="../../_images/input-output.png" class="align-center" src="../../_images/input-output.png" style="height: 100px;" /></a>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>parameter คือ ตัวแปรที่เป็นส่วนหนึ่งของการประกาศฟังก์ชัน
 argument คือ ค่าเราให้กับ parameter ตอนเรียกใช้ฟังก์ชัน</p>
 <p>แต่ว่าคนมักจะใช้สองคำนี้ปนกันบ่อยมาก จนกลายเป็นว่าเป็นคำที่ใช้แทนกันได้</p>
-</div>
+</aside>
 <p>ฟังก์ชันเหมือนกับฟังก์ชันทางคณิตศาสตร์ คือ มี</p>
 <ul class="simple">
 <li><p>input ซึ่งในภาษาคอมพิวเตอร์เราเรียกว่า parameter หรือ argument</p></li>
@@ -1201,7 +1207,7 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </li>
 </ul>
 <p>เราจะสังเกตได้ว่าฟังก์ชันมีความยืดหยุ่นสูงสามารถปรับใช้ในสถานการณ์ต่าง ๆ ได้โดยการปรับค่า argument ของแต่ละฟังก์ชัน เช่น วันหนึ่งถ้าอัตราภาษีมีการปรับเปลี่ยน เราก็ไม่ต้องเขียนฟังก์ชันใหม่ เราแค่ใส่อัตราภาษีใหม่เข้าไปเป็น input</p>
-<div class="section" id="argument">
+<section id="argument">
 <h3>การประกาศฟังก์ชันแบบมี argument<a class="headerlink" href="#argument" title="Permalink to this headline">#</a></h3>
 <p>ฟังก์ชันแบบมี argument ในภาษาไพธอนมีลักษณะดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_vat</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">vat_rate</span><span class="p">,</span> <span class="n">round_decimal</span><span class="p">):</span>
@@ -1235,13 +1241,13 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </div>
 <p>argument แต่ละตัวถูกเขียนกำกับว่าเป็น type อะไรโดยการเขียน <code class="docutils literal notranslate"><span class="pre">:type</span></code> ลงท้าย argument แต่ละตัว
 การกำกับ type ในลักษณะนี้เป็นการช่วยเหลือคนเขียนโปรแกรมเท่านั้น ทำให้รู้ว่าฟังก์ชันรับ input มาเป็นอะไรบ้าง และตัว IDE ก็นำข้อมูลนี้ไปช่วยตรวจสอบโค้ดให้ได้ในระดับหนึ่ง แต่ว่าเครื่องไม่ได้ช่วยตรวจจับ error ตอนนำฟังก์ชันไปใช้แต่อย่างใด และจะเห็นได้ว่าฟังก์ชันจะดูรก ไม่สะอาดตาเหมือนก่อน คนจึงไม่ค่อยนิยมเขียนกำกับ type เท่าไรนัก</p>
-</div>
-<div class="section" id="function-call">
+</section>
+<section id="function-call">
 <h3>การเรียกฟังก์ชัน (function call)<a class="headerlink" href="#function-call" title="Permalink to this headline">#</a></h3>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การส่งผ่านค่าพารามิเตอร์ (parameter passing) คือ การระบุค่าของพารามิเตอร์แต่ละตัวของฟังก์ชัน</p>
-</div>
+</aside>
 <p>ถ้าหากว่าฟังก์ชันที่เราต้องการเรียกเป็นฟังก์ชันแบบที่มีพารามิเตอร์/อาร์กิวเมนต์ เราจะต้องส่งผ่านค่า input พารามิเตอร์ (parameter passing) ให้กับฟังก์ชันให้ครบทุกตัว ตัวอย่างเช่น ถ้าหากเราต้องการเรียกฟังก์ชันนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_vat</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">vat_rate</span><span class="p">,</span> <span class="n">round_decimal</span><span class="p">):</span>
   <span class="n">vat</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">*</span> <span class="n">vat_rate</span>
@@ -1271,16 +1277,16 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="go">TypeError: compute_vat() missing 2 required positional arguments: &#39;vat_rate&#39; and &#39;round_decimal&#39;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="built-in-function">
+</section>
+</section>
+<section id="built-in-function">
 <h2>ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันบิวท์อิน(built-in function)<a class="headerlink" href="#built-in-function" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันบิวท์อิน(built-in function) คือฟังก์ชันที่มีมาให้อยู่แล้วสามารถเรียกใช้ได้เลย โดยไม่ต้องประกาศฟังก์ชันก่อน</p>
-</div>
+</aside>
 <p>ตอนลง Python interpreter เราจะได้ฟังก์ชันบิวท์อินที่เราสามารถเรียกใช้ได้เลยเพื่ออำนวยความสะดวกในการเขียนโค้ด ฟังก์ชันที่ควรรู้มีดังนี้</p>
-<div class="section" id="print-expression">
+<section id="print-expression">
 <h3><code class="docutils literal notranslate"><span class="pre">print</span></code>: แสดงผลของจากการตีความ expression<a class="headerlink" href="#print-expression" title="Permalink to this headline">#</a></h3>
 <p>ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_rectangle_area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
@@ -1293,7 +1299,7 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="go">9</span>
 </pre></div>
 </div>
-<div class="section" id="id4">
+<section id="id4">
 <h4>ข้อควรระวัง<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
 <p>ผู้ที่หัดเขียนโปรแกรมใหม่ ๆ มักจะสับสนระหว่าง <code class="docutils literal notranslate"><span class="pre">print</span></code> กับ <code class="docutils literal notranslate"><span class="pre">return</span></code> ให้เปรียบเทียบกับอีกฟังก์ชันที่ใช้ <code class="docutils literal notranslate"><span class="pre">return</span></code> แทน <code class="docutils literal notranslate"><span class="pre">print</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_rectangle_area2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
@@ -1321,9 +1327,9 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </pre></div>
 </div>
 <p>ในกรณีนี้พอเรียกฟังก์ชันแล้วจะมีการแสดงผลค่าตัวแปรที่อยู่ในฟังก์ชันทันที แต่ว่าตัวแปร <code class="docutils literal notranslate"><span class="pre">rect1</span></code> และ <code class="docutils literal notranslate"><span class="pre">rect2</span></code> ไม่ได้เก็บค่าอะไรไว้เลย ซึ่งภาษาไพธอนกำหนดให้ว่าไทป์ข้อมูลคือไทป์ <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> ซึ่งไม่ได้สามารถนำบวกกันได้ จึงโยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> มาให้</p>
-</div>
-</div>
-<div class="section" id="input">
+</section>
+</section>
+<section id="input">
 <h3><code class="docutils literal notranslate"><span class="pre">input</span></code>: รับข้อมูลสตริงจากผู้ใช้<a class="headerlink" href="#input" title="Permalink to this headline">#</a></h3>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> ต้องใส่พารามิเตอร์หนึ่งตัว คือข้อความที่บอกให้ผู้ใช้ใส่ข้อความ เมื่อฟังก์ชันนี้ถูกเรียกโปรแกรมจะหยุดรอให้ผู้ใช้พิมพ์ข้อความลงไป
 ตัวอย่าง</p>
@@ -1343,8 +1349,8 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="go">ยินดีต้อนรับคุณอรรถพล</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="str-int-float">
+</section>
+<section id="str-int-float">
 <h3><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code>: แปลงไทป์ของข้อมูล<a class="headerlink" href="#str-int-float" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code> ใช้สำหรับแปลงข้อมูลเป็นสตริง <code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code> ตามลำดับ</p>
 <p><code class="docutils literal notranslate"><span class="pre">str</span></code> ใช้แปลงข้อมูลให้เป็นสตริง ตัวอย่างเช่น</p>
@@ -1415,8 +1421,8 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="gr">TypeError</span>: <span class="n">&#39;&lt;&#39; not supported between instances of &#39;int&#39; and &#39;str&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="type">
+</section>
+<section id="type">
 <h3><code class="docutils literal notranslate"><span class="pre">type</span></code>: การตรวจสอบไทป์ของข้อมูล<a class="headerlink" href="#type" title="Permalink to this headline">#</a></h3>
 <p>เราสามารถตรวจสอบไทป์ของตัวแปรโดยคำสั่ง <code class="docutils literal notranslate"><span class="pre">type</span></code> เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">5000</span>
@@ -1431,9 +1437,9 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="go">&lt;class &#39;str&#39;&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="module">
+</section>
+</section>
+<section id="module">
 <h2>โมดูล (module)<a class="headerlink" href="#module" title="Permalink to this headline">#</a></h2>
 <p>โมดูลในภาษาไพธอน เป็นกลุ่มของฟังก์ชันซึ่งต้องโหลดเข้ามาก่อนจึงจะใช้ได้ วิธีการโหลดโมดูลมาใช้ให้ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span></code> ตามด้วยชื่อโมดูล ซึ่งเราทำทีเดียวสามารถใช้โมดูลได้ตลอดจนกว่าโปรแกรมจะจบ หรือเราปิด interpreter ไป เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>             <span class="c1"># โหลดโมดูลชื่อว่า math</span>
@@ -1443,10 +1449,10 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </div>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">3.0</span></code></p>
 <p>ในโค้ดข้างบนนี้เราใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span></code>  เพื่อโหลดโมดูลชื่อว่า <code class="docutils literal notranslate"><span class="pre">math</span></code> ซึ่งเป็นกลุ่มของฟังก์ชัน</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">NameError</span></code> คือ error ที่เกิดขึ้นเวลา python interpreter หาไม่เจอว่าชื่อที่ใช้อ้างถึงตัวแปร หรือฟังก์ชันอะไร</p>
-</div>
+</aside>
 <p>ถ้าเราไม่ <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อนจะเกิด <code class="docutils literal notranslate"><span class="pre">NameError</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
@@ -1473,10 +1479,10 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </pre></div>
 </div>
 <p>ในบทหลัง ๆ เราจะเรียนรู้วิธีการดาวน์โหลดโมดูลจากแหล่งอื่น ๆ (ไลบรารี) เพื่อนำฟังก์ชันอื่น ๆ มาใช้อำนวยความสะดวกในการประมวลผลข้อมูล</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>ตัวอย่าง และแพทเทิร์นที่พบเห็นได้บ่อย<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
-<div class="section" id="for">
+<section id="for">
 <h3>ใช้ตัวแปรจากใน <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Permalink to this headline">#</a></h3>
 <p>โจทย์: จงเขียนโปรแกรมที่พิมพ์ตัวเลขออกมาตั้งแต่ 1 ถึง 10</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -1496,8 +1502,8 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <li><p>พารามิเตอร์ตัวแรก คือ จำนวนที่จะกำหนดให้ตัวแปรใน <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
 <li><p>พารามิเตอร์ตัวที่สอง คือ จำนวนสุดท้าย เมื่อตัวแปรใน <code class="docutils literal notranslate"><span class="pre">for</span></code> มาถึงตัวเลขตัวนี้แล้วโปรแกรมจะออกจาก loop</p></li>
 </ul>
-</div>
-<div class="section" id="update-for-loop">
+</section>
+<section id="update-for-loop">
 <h3>update ตัวแปรข้างใน <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#update-for-loop" title="Permalink to this headline">#</a></h3>
 <p>โจทย์: จงเขียนโปรแกรมที่หาค่าผลรวมต้ังแต่ 1+2+3+4+5 จนถึง n โดยให้ n เป็นพารามิเตอร์ที่ให้ผู้ใช้ปรับได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_up_number_until</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1523,9 +1529,9 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <li><p>พออยู่ใน loop ให้อัพเดทค่านั้นไปในแต่ละรอบที่วนอยู่ ซึ่งเราจะใช้ <code class="docutils literal notranslate"><span class="pre">+=</span></code> ในกรณีนี้</p></li>
 <li><p>ออกจาก loop ได้ผลลัพท์เรียบร้อยแล้วค่อย return</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

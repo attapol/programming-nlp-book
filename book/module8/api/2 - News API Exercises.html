@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>News API &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -234,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -242,6 +243,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/2-videos-file.html">
      Video: file
@@ -254,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -758,7 +764,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="news-api">
+  <section class="tex2jax_ignore mathjax_ignore" id="news-api">
 <h1>News API<a class="headerlink" href="#news-api" title="Permalink to this headline">#</a></h1>
 <p>Explore the <a class="reference external" href="https://newsapi.org/">News API</a> website. It is different from the Poke API in the previous exercise in a way that you now need to register for an account before retrieving any data from the website.</p>
 <p>Go ahead and register for an account.</p>
@@ -771,11 +777,11 @@ title="Print to PDF"
 </div>
 </div>
 <p>Next, go to your account page. You will see that you are registered for the Developer plan. It’s fine for our use here. Below, you will see how many requests you have made. You are limited to 1,000 requests per 30 minutes, so don’t waste them!</p>
-<div class="section" id="api-documentation">
+<section id="api-documentation">
 <h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://newsapi.org/docs">Documentation</a> is a good source to look for reference on how to use the API. Different data sources (website) have different API specs, so spend some time in the Documentation section to learn how to use the API.</p>
-</div>
-<div class="section" id="sample-api-call-curated-headline">
+</section>
+<section id="sample-api-call-curated-headline">
 <h2>Sample API Call - Curated Headline<a class="headerlink" href="#sample-api-call-curated-headline" title="Permalink to this headline">#</a></h2>
 <p>Let’s make our first API call. We will get the lastest headlines from the API. Go to the <a class="reference external" href="https://newsapi.org/docs/get-started#top-headlines">Get the current top headlines for a country or category</a> section. You will see on the right side the URL format that you need to construct</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=API_KEY
@@ -821,15 +827,15 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 </div>
-<div class="section" id="exercise-1-get-thailand-s-headlines">
+<section id="exercise-1-get-thailand-s-headlines">
 <h3>Exercise 1. Get Thailand’s headlines<a class="headerlink" href="#exercise-1-get-thailand-s-headlines" title="Permalink to this headline">#</a></h3>
 <p>Reconstruct the url to retrieve headlines from Thailand.</p>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="your-implementation-here">
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="your-implementation-here">
 <h1>Your implementation here<a class="headerlink" href="#your-implementation-here" title="Permalink to this headline">#</a></h1>
-<div class="section" id="authentication">
+<section id="authentication">
 <h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">#</a></h2>
 <p>Next, let’s look at the <a class="reference external" href="https://newsapi.org/docs/authentication">authentication section</a> of the documentation. Since you have limited number of requests you can make, you have to manage your credential carefully so that other people (hackers!) cannot steal your precious resources.</p>
 <p>Previously, we simply put the our API key in the URL. This is not ideal because hackers can sniff your traffic (especially when you use free public wi-fi) and steal your API key. We will put our API key in the request header instead (the last method mentioned in the documentation.)</p>
@@ -861,14 +867,14 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="endpoints">
+</section>
+<section id="endpoints">
 <h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">#</a></h2>
 <p>Let’s explore what else the News API offer at the <a class="reference external" href="https://newsapi.org/docs/endpoints">Endpoints</a> section.</p>
-</div>
-<div class="section" id="exercises">
+</section>
+<section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
-<div class="section" id="exercises-2-news-sources">
+<section id="exercises-2-news-sources">
 <h3>Exercises 2 - News Sources<a class="headerlink" href="#exercises-2-news-sources" title="Permalink to this headline">#</a></h3>
 <p>List all the news sources available in Thailand</p>
 <div class="cell docutils container">
@@ -878,8 +884,8 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercises-3-news-search">
+</section>
+<section id="exercises-3-news-search">
 <h3>Exercises 3 - News Search<a class="headerlink" href="#exercises-3-news-search" title="Permalink to this headline">#</a></h3>
 <p>Find all the news from Thailand that’s about “เปิดประเทศ”</p>
 <div class="cell docutils container">
@@ -889,8 +895,8 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercises-4-news-sentiment">
+</section>
+<section id="exercises-4-news-sentiment">
 <h3>Exercises 4 - News Sentiment<a class="headerlink" href="#exercises-4-news-sentiment" title="Permalink to this headline">#</a></h3>
 <p>Based on exercises 3, group the news by each news source. Does each news source present different sentiment about “เปิดประเทศ”?</p>
 <div class="cell docutils container">
@@ -900,9 +906,9 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

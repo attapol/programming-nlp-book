@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Programming for Natural Language Processing &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -235,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -243,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="module4/2-videos-file.html">
      Video: file
@@ -640,22 +646,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programming-for-natural-language-processing">
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-for-natural-language-processing">
 <h1>Programming for Natural Language Processing<a class="headerlink" href="#programming-for-natural-language-processing" title="Permalink to this headline">#</a></h1>
 <p>การประมวลผลภาษาธรรมชาติ คือ การทำให้เครื่องคอมพิวเตอร์เข้าใจภาษา
 ทำให้สามารถทำความเข้าใจข้อมูลภาษาที่มีขนาดใหญ่ ๆ และสามารถประยุกต์ไปใช้สร้างเครื่องมือทางปัญญาประดิษฐ์มากมาย</p>
 <p>หนังสือออนไลน์ชิ้นนี้จะสอนการเขียนโปรแกรมโดยเริ่มจากวิธีการคิดเชิงคำนวณ (Computational thinking)
 จนไปถึงการใช้ภาษา Python ในการประมวลผลข้อมูลที่เป็นภาษา โดยผู้ศึกษาไม่ต้องมีพื้นฐานการเขียนโปรแกรมมาก่อน</p>
-<div class="section" id="python">
+<section id="python">
 <h2>เริ่มต้นกับภาษา Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจและกระทำการ (execute) ตามคำสั่งที่ป้อนเข้าไป</p>
 <p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นนส่วนหนึ่งของโค้ดเราได้ทันที</p>
 <p>เทอร์มินัล (Terminal) เป็นโปรแกรมที่ทำให้เราสั่งคอมพิวเตอร์ให้ทำงานต่าง ๆ ได้โดยการพิมพ์คำสั่งและกดปุ่ม Enter</p>
-</div>
+</aside>
 <p>Python เป็นชื่อภาษาเขียนโปรแกรม (programming language) เป็นภาษาที่ได้รับความนิยมที่สุดในการประมวลผลและวิเคราะห์ข้อมูลต่าง ๆ ไม่ว่าจะเป็นข้อมูลที่เป็นตัวเลข ข้อมูลที่อยู่ในฐานข้อมูลเรียบร้อยแล้ว หรือข้อมูลที่เป็นภาษา  โปรแกรมชิ้นหนึ่งประกอบด้วยชุดคำสั่งที่เราจะเขียนขึ้นเป็นภาษา Python</p>
-<div class="section" id="anaconda">
+<section id="anaconda">
 <h3>ติดตั้ง Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">#</a></h3>
 <p>ส่วนประกอบต่าง ๆ ที่จำเป็นในการเขียนโปรแกรมเป็นภาษา Python สามารถดาวน์โหลดพร้อมกันเป็นก้อนเดียวโดยการลงโปรแกรม Anaconda ซึ่งมีเครื่องมือต่าง ๆ ดังต่อไปนี้</p>
 <ul class="simple">
@@ -672,16 +678,16 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Jupyterlab เป็น IDE ที่เบาและ feature น้อยกว่า VSCode ทำให้ใช้ได้ไม่ยากนักสำหรับมือใหม่ ถูกออกแบบมาเพื่อการประมวลผลและวิเคราะห์ข้อมูลเป็นจุดประสงค์หลัก เหมาะกับการจัดการกับงานที่ต้องอาจจะต้องใช้ไฟล์ข้อมูล หลายไฟล์ และไฟล์ jupyter notebook (.ipynb) หลาย ๆ ไฟล์ และใช้ Terminal ควบคู่ไปกับการทำงานด้วย</p></li>
 </ul>
-</div>
-<div class="section" id="visual-studio-code-vscode">
+</section>
+<section id="visual-studio-code-vscode">
 <h3>Visual Studio Code (VSCode)<a class="headerlink" href="#visual-studio-code-vscode" title="Permalink to this headline">#</a></h3>
 <p>นอกจากนั้นให้ลงโปรแกรม IDE ที่ชื่อว่า Visual Studio Code (VSCode)</p>
 <a class="reference internal image-reference" href="../_images/vscode.png"><img alt="../_images/vscode.png" class="align-center" src="../_images/vscode.png" style="height: 300px;" /></a>
 <p>Visual Studio Code (VSCode) เป็น IDE ที่มี feature และลูกเล่นมากมายสามารถปรับรูปลักษณ์ตามความชอบได้หลายแบบ รวมถึงรองรับภาษาโปรแกรมมิงหลายภาษา เหมาะกับการเขียนโปรแกรมที่ประกอบด้วยหลาย ๆ ไฟล์ และต้องมีการตรวจสอบโค้ดอย่างรัดกุม เป็น IDE ที่ฟรีและเป็นที่แพร่หลายมากในการเขียนโปรแกรมภาษาไพธอน VSCode สามารถเปิด Terminal ขึ้นมาใช้ในโปรแกรมได้อีกด้วย</p>
 <p>หลังจากติดตั้งเรียบร้อยแล้ว ให้ไปที่ View &gt; Extension จากนั้นพิมพ์ python และติดตั้ง python extension (อย่าลืมเช็คว่าเป็นของ Microsoft)</p>
-</div>
-</div>
-<div class="section" id="interactive">
+</section>
+</section>
+<section id="interactive">
 <h2>เขียนโปรแกรมแบบตอบโต้ (Interactive)<a class="headerlink" href="#interactive" title="Permalink to this headline">#</a></h2>
 <p>หลังจากที่ลงโปรแกรม Anaconda เรียบร้อยแล้ว เราสามารถเริ่มเขียนโปรแกรมเป็นภาษาไพธอนได้ทันทีเพื่อทดสอบว่าลงโปรแกรมได้โดยสมบูรณ์แล้ว ให้เริ่มจากการเปิด Anaconda Prompt หรือ Anaconda Powershell ก็ได้ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Windows หรือเปิด Terminal App ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Mac จากนั้นให้พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">ipython</span></code> ลงไปเพื่อเปิด Interactive Python Interpreter (ipython) และลองพิมพ์</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
@@ -699,13 +705,13 @@ In [2]:
 </pre></div>
 </div>
 <p>โปรแกรม <code class="docutils literal notranslate"><span class="pre">ipython</span></code> เป็นโปรแกรมที่ทำให้เราสามารถพิมพ์คำสั่งภาษาไพธอนและกดรันเพื่อเห็นผลลัพท์ได้ทันที ทำให้เราสามารถตอบโต้กับเครื่องไปมาเป็นภาษาไพธอนได้</p>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2>เขียนโปรแกรมใส่ไฟล์และสั่งรันรวดเดียว<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>Editor โปรแกรมที่ใช้สำหรับเปิดแก้ไขไฟล์</p>
-</div>
+</aside>
 <p>เราได้ลองเขียนโปรแกรมแบบตอบโต้ คราวนี้เราจะลองเขียนโปรแกรมโดยการเขียนคำสั่งทั้งหมดใส่ไว้ในไฟล์ก่อน ซึ่งจะต้องมีสกุลไฟล์ <code class="docutils literal notranslate"><span class="pre">.py</span></code> จากนั้นค่อยสั่งให้ Python interpreter แปลและรันคำสั่งรวดเดียวทีละบรรทัด ให้ทำตามดังนี้</p>
 <ol class="simple">
 <li><p>เปิด Anaconda navigator</p></li>
@@ -722,10 +728,10 @@ Hello, world!
 </pre></div>
 </div>
 <p>ในบทนี้เราเรียนรู้เกี่ยวกับส่วนประกอบต่าง ๆ ที่รับโค้ดที่เป็นคำสั่งภาษาไพธอน แปลผล และกระทำการตามคำสั่ง เราได้ติดตั้ง Python interpreter และ IDE ต่าง ๆ ที่จะช่วยอำนวยความสะดวกในการเขียนและรันโค้ด ในบทต่อไปเราจะเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่านเทอร์มินัลในลักษณะเดียวกันนี้ แนะนำให้ใช้ JupyterLab เป็น editor และรันโปรแกรมผ่านทาง Anaconda Powershell/Terminal App</p>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

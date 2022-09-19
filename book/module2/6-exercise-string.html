@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>โจทย์: สตริง &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -238,7 +239,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -246,6 +247,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -258,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -794,9 +800,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>โจทย์: สตริง<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="section" id="prefix-suffix">
+<section id="prefix-suffix">
 <h2>ข้อ 1. Prefix suffix<a class="headerlink" href="#prefix-suffix" title="Permalink to this headline">#</a></h2>
 <p>จงเขียนโปรแกรมที่ detect ว่าคำมี prefix/suffix ที่กำลังหาหรือไม่
 ถ้ามี prefix/suffix นั้นไปจับกับหน่วยคำใด</p>
@@ -805,7 +811,7 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;ใจแตก&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;-แตก&#39;</span>
 </pre></div>
 </div>
-<p>คำว่า ‘เข็ญใจ’ มี ‘ใจ’ เป็น suffix ที่เกาะกับหน่วยคำ ‘เข็ญ-‘</p>
+<p>คำว่า ‘เข็ญใจ’ มี ‘ใจ’ เป็น suffix ที่เกาะกับหน่วยคำ ‘เข็ญ-’</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;เข็ญใจ&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;เข็ญ-&#39;</span>
 </pre></div>
 </div>
@@ -839,8 +845,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="compound-word">
+</section>
+<section id="compound-word">
 <h2>ข้อ 2. Compound word<a class="headerlink" href="#compound-word" title="Permalink to this headline">#</a></h2>
 <p>จงเขียนฟังก์ชันที่มี input เป็นสตริงหนึ่งสตริง ฟังก์ชัน return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงสามารถถูกแบ่งออกมาเป็นคำสองคำย่อยได้ เช่น</p>
 <ul class="simple">
@@ -878,8 +884,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="reverse-string">
+</section>
+<section id="reverse-string">
 <h2>ข้อ 3. Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> ซึ่งรับ parameter 1 ตัวเป็น string (สมมุติว่าชื่อ <code class="docutils literal notranslate"><span class="pre">original_string</span></code>) แล้ว return ค่าเป็น string ซึ่งมีค่าเป็น string ย้อนกลับของ <code class="docutils literal notranslate"><span class="pre">original_string</span></code></p>
 <p><strong>ตัวอย่าง</strong></p>
@@ -906,8 +912,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="palindrome">
+</section>
+<section id="palindrome">
 <h2>ข้อ 4. Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this headline">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code> ซึ่งรับ parameter 1 ตัวเป็น string แล้วเช็คว่า string นั้นเป็น palindrome หรือไม่ โดยถือว่าตัวอักษรตัวเล็กและตัวใหญ่เป็นคนละเดียวกัน</p>
 <p>ถ้าใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่ถ้าไม่ใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -937,8 +943,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="pig-latin">
+</section>
+<section id="pig-latin">
 <h2>ข้อ 5. Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this headline">#</a></h2>
 <p>ภาษา Pig Latin เป็นภาษาที่ใกล้เคียงภาษาอังกฤษมาก โดยการแปลงคำภาษาอังกฤษเป็นภาษา Pig Latin สามารถทำได้โดยนำตัวอักษรตัวแรกของคำไปไว้ด้านหลัง แล้วเติมตัว <code class="docutils literal notranslate"><span class="pre">a</span></code> ไว้ด้านท้ายสุด เช่น คำว่า <code class="docutils literal notranslate"><span class="pre">hello</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">elloha</span></code> หรือ คำว่า <code class="docutils literal notranslate"><span class="pre">sleep</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">leepsa</span></code></p>
 <p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">eng_to_pig_latin</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return คำภาษา Pig Latin ของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
@@ -956,8 +962,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="flip-language">
+</section>
+<section id="flip-language">
 <h2>ข้อ 6. Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this headline">#</a></h2>
 <p>คุณกับเพื่อนได้คิดค้นโค้ดลับของคำศัพท์ภาษาอังกฤษ โดยการแปลงคำศัพท์ภาษาอังกฤษดังนี้</p>
 <ol class="simple">
@@ -984,8 +990,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>ข้อ 7. ไม่ 1 ไม่ 5<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>จงหาผลรวมของจำนวนเต็มที่น้อยกว่า 100 และไม่มีเลข 1 กับ 5</p>
 <p><span class="math notranslate nohighlight">\(2 + 3 + 4 + 6 + 7 + 8 + 9 + 20 + 22 + 23 + 24 + 26 \cdots + 99\)</span></p>
@@ -999,8 +1005,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>ข้อ 8. ไปรษณีย์<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>ตอนนี้มี text data ที่มีชื่อเขตกับรหัสไปรษณีย์ ซึ่งเป็นหน้าตาแบบนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Wattana 10110 Yannawa 10120 Lak Si 10210 Sai Mai 10220 Bang Na 10260 Dusit 10300&#39;</span>
@@ -1027,8 +1033,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="am-i-a-float">
+</section>
+<section id="am-i-a-float">
 <h2>ข้อ 9. Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this headline">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 1 ค่า แล้วแสดงผลทางหน้าจอว่าค่าที่ผู้ใช้ใส่มาเป็น <code class="docutils literal notranslate"><span class="pre">float</span></code> หรือไม่</p>
 <p><strong>Hint:</strong> <code class="docutils literal notranslate"><span class="pre">float</span></code> จะมีจุดทศนิยม 1 จุด และทีเหลือเป็นตัวเลข แต่ว่าอาจจะเป็นค่าลบได้</p>
@@ -1061,8 +1067,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="str-to-int">
+</section>
+<section id="str-to-int">
 <h2>ข้อ 10. str to int<a class="headerlink" href="#str-to-int" title="Permalink to this headline">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 2 ค่า แล้วแสดงผลทางหน้าจอดังนี้</p>
 <ol class="simple">
@@ -1099,12 +1105,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id4">
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id4">
 <h1>โจทย์: สตริง (ยาก)<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h1>
 <p>โจทย์ optional สำหรับคนที่ชอบความท้าทาย</p>
-<div class="section" id="extra-1-morphophonological-rules">
+<section id="extra-1-morphophonological-rules">
 <h2>Extra 1 : Morphophonological Rules<a class="headerlink" href="#extra-1-morphophonological-rules" title="Permalink to this headline">#</a></h2>
 <p>ภาษาโซโนมิมี morphophonological rules ที่เปลี่ยน singular เป็น plural  หลายกฎ</p>
 <p>มีข้อมูลดังนี้</p>
@@ -1187,8 +1193,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="extra-2-password-generator">
+</section>
+<section id="extra-2-password-generator">
 <h2>Extra 2 : password generator<a class="headerlink" href="#extra-2-password-generator" title="Permalink to this headline">#</a></h2>
 <p>ใน module <code class="docutils literal notranslate"><span class="pre">string</span></code> มีชุดตัวอักษรดังนี้ (ไม่ใช่ฟังก์ชั่น จึงไม่ต้องใส่วงเล็บ)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
@@ -1223,8 +1229,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="extra-3-caesar-s-cipher">
+</section>
+<section id="extra-3-caesar-s-cipher">
 <h2>Extra 3 : Caesar’s cipher<a class="headerlink" href="#extra-3-caesar-s-cipher" title="Permalink to this headline">#</a></h2>
 <p>Caesar’s cipher สามารถใช้ ord / chr ได้ด้วย</p>
 <p>แต่ต้องระวังว่าตัวอักษรจะ circulate เช่น กรณี shift = 1</p>
@@ -1370,8 +1376,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

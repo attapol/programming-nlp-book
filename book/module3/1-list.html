@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ลิสต์ (List) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -947,11 +953,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="list">
+  <section class="tex2jax_ignore mathjax_ignore" id="list">
 <h1>ลิสต์ (List)<a class="headerlink" href="#list" title="Permalink to this headline">#</a></h1>
 <p>ลิสต์ เป็น โครงสร้างข้อมูลที่เก็บข้อมูลแบบเป็นลำดับ คล้ายกับการนำข้อมูลมาเรียงแถวกัน</p>
 <p>ข้อสังเกตที่สำคัญของลิสต์คือ มีความคล้ายคลึงกับสตริงมาก สตริงที่จริงแล้วก็คือลิสต์ที่เก็บตัวอักขระเท่านั้น  เพียงแต่ว่ามี method บางอย่างที่ต่างกัน จากบทนี้เราควรใช้ความรู้ความเข้าใจเรื่องสตริงมาประกอบกับการทำความเข้าใจการใช้ลิสต์จะทำให้เข้าใจได้เร็วขึ้น</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>สร้างลิสต์ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>ลิสต์ถูกสร้างได้ด้วยการใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> ซึ่งห้ามใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">{}</span></code> แทน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -970,35 +976,35 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>นักเขียนโปรแกรมมักจะไม่แนะนำให้สร้างลิสต์ในลักษณะนี้ เพราะว่ามักจะทำให้สับสนว่าลิสต์เก็บอะไรไว้อยู่บ้าง ทางที่ดีคือสมาชิกในลิสต์ทุกตัวควรจะเป็นประเภทเดียวกัน และสื่อความหมายเดียวกัน</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>ชื่อตัวแปรที่เก็บลิสต์<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>ชื่อตัวแปรที่ใช้ในการเก็บลิสต์โดยกฏแล้วจะเป็นอะไรก็ได้ แต่เพื่อทำให้โค้ดเข้าใจได้ง่ายขึ้น นักเขียนโปรแกรมมักตั้งชื่อลิสต์ตามสิ่งที่เก็บอยู่ตามด้วย <code class="docutils literal notranslate"><span class="pre">_list</span></code> หรือเปลี่ยนให้เป็นพหูพจน์แทน เช่น ถ้าสร้างลิสต์ขึ้นมาเพื่อเก็บนามสกุลก็ควรจะตั้งชื่อตัวแปรว่า <code class="docutils literal notranslate"><span class="pre">last_name_list</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">last_names</span></code> หรือ ถ้าสร้างลิสต์ขึ้นมาเพื่อเก็บจำนวนคำที่อยู่ในแต่ละประโยค ควรจะตั้งชื่อตัวแปรว่า <code class="docutils literal notranslate"><span class="pre">num_words_list</span></code> แต่ว่าชื่อ <code class="docutils literal notranslate"><span class="pre">num_words</span></code> อาจจะกำกวมว่าเก็บไว้เป็น <code class="docutils literal notranslate"><span class="pre">int</span></code> หรือไม่ เพราะว่าสิ่งที่เก็บเป็นคำพหูพจน์อยู่แล้ว</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>สร้างลิสต์จากสตริง<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>สตริง method <code class="docutils literal notranslate"><span class="pre">.split</span></code> ใช้เวลาเราต้องการเปลี่ยนสตริงให้เป็นลิสต์ โดยที่ต้องกำหนดว่าจะใช้สตริงอะไรแบ่งสมาชิกแต่ละตัว ในตัวอย่างนี้เราใช้ <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ช่องว่างในการแบ่ง ในการทำ Natural Language Processing เราใช้คำสั่งนี้บ่อยมากในการตัดคำ ซึ่งก็คือการเปลี่ยนสตริงยาว ๆ ให้เป็นลิสต์ของคำ</p>
-</div>
-<div class="section" id="len-list">
+</section>
+<section id="len-list">
 <h2>หาความยาวของลิสต์ (จำนวนสมาชิก): len(list)<a class="headerlink" href="#len-list" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span> <span class="c1">#---&gt; 10</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>ไพธอนมีฟังก์ชันบิวท์อิน <code class="docutils literal notranslate"><span class="pre">len</span></code> ที่ใช้หาจำนวนสมาชิกของลิสต์ และโครงสร้างข้อมูลอื่น ๆ ของไพธอนทั้งหมด ฟังก์ชันนี้จะรีเทิร์น <code class="docutils literal notranslate"><span class="pre">int</span></code> เสมอ ตัวอย่างที่ใช้บ่อย ๆ คือใช้ต่อการสร้างลิสต์จากสตริงเพื่อนับจำนวนคำที่อยู่ในประโยคหรือข้อความ เนื่องจากภาษาที่ใช้ตัวเขียนเป็นตัวลาตินสามารถตัดคำโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">split</span></code> ได้ง่าย ๆ ถึงแม้ว่าจะไม่ได้แม่นยำเสมอไป</p>
-</div>
-<div class="section" id="index">
+</section>
+<section id="index">
 <h2>เข้าถึงสมาชิกในลิสต์โดยใช้ index<a class="headerlink" href="#index" title="Permalink to this headline">#</a></h2>
 <p>การเข้าถึงสมาชิกแต่ละตัว เราจะใช้ operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> และกฏการใช้ index ที่เหมือนกับสตริงทุกประการ สมาชิกตัวแรกอยู่ที่ index 0 และสามารถใช้ negative indexing ในการนับ index ถอยหลังจากท้ายลิสต์ได้ ตัวอย่างเช่น</p>
 <p><code class="docutils literal notranslate"><span class="pre">words</span> <span class="pre">=</span> <span class="pre">[&quot;Let's&quot;,</span> <span class="pre">'go',</span> <span class="pre">'crazy',</span> <span class="pre">'crazy',</span> <span class="pre">'crazy',</span> <span class="pre">&quot;'til&quot;,</span> <span class="pre">'we',</span> <span class="pre">'see',</span> <span class="pre">'the',</span> <span class="pre">'sun']</span></code></p>
@@ -1024,12 +1030,12 @@ title="Print to PDF"
 </tbody>
 </table>
 <p><code class="docutils literal notranslate"><span class="pre">words[20]</span></code> จะทำให้เกิด <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> เนื่องจากไม่มีสมาชิกอยู่ที่ index ที่ 20</p>
-</div>
-<div class="section" id="list-splicing">
+</section>
+<section id="list-splicing">
 <h2>การหั่นลิสต์ (List splicing)<a class="headerlink" href="#list-splicing" title="Permalink to this headline">#</a></h2>
 <p>เราจะใช้ operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> และกฏการใช้ช่วงของ index ที่เหมือนกับสตริงทุกประการ</p>
-</div>
-<div class="section" id="for">
+</section>
+<section id="for">
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปบนลิสต์<a class="headerlink" href="#for" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถ iterate ไปบนลิสต์ ด้วยคำสั่งที่คล้ายคลึงกับสตริง</p>
 <p>สมมติว่าเราต้องการนับว่าลิสต์ของคำมีคำที่สะกดด้วยตัวเล็กทั้งหมด</p>
@@ -1059,8 +1065,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>จากโค้ดข้างบน ในลูปรอบแรก ค่าของ <code class="docutils literal notranslate"><span class="pre">word_index</span></code> จะเท่ากับ 0 และค่าของ <code class="docutils literal notranslate"><span class="pre">word</span></code> จะเท่ากับ <code class="docutils literal notranslate"><span class="pre">'Rick'</span></code> เพราะฉะนั้นเราจะทราบด้วยว่าในแต่ละรอบเราอยู่ที่ index ใดแล้ว วิธีนี้มีประโยชน์มากเวลาประมวลผลแต่ละคำในประโยค และเราต้องพิจารณาด้วยว่าคำที่อยู่รอบ ๆ คือคำว่าอะไรบ้าง จึงจำเป็นต้องใช้ index มาควบคู่ด้วย</p>
-</div>
-<div class="section" id="list-operator-built-in-function">
+</section>
+<section id="list-operator-built-in-function">
 <h2>List operator และ built-in function<a class="headerlink" href="#list-operator-built-in-function" title="Permalink to this headline">#</a></h2>
 <p>ลิสต์ใช้ operator และ built-in function ที่คล้ายคลึงกับสตริง</p>
 <table class="colwidths-auto table">
@@ -1105,10 +1111,10 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>การเขียนทับด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;โจ้&#39;</span>
@@ -1116,12 +1122,12 @@ title="Print to PDF"
 <span class="c1"># Output: [&#39;โจ้&#39;, &#39;เมย์&#39;, &#39;จอย&#39;, &#39;เมย์&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> คร่อม index ที่เราต้องการเขียนทับ และใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ในการให้ค่า (assignment) คล้าย ๆ กับการใช้ตัวแปร เราอาจจะคิดเสมือนว่าลิสต์เป็นการเก็บตัวแปรไว้หลาย ๆ ตัวแปร แบบเรียงลำดับกันตามที่เราต้องการ</p>
-</div>
-<div class="section" id="append">
+</section>
+<section id="append">
 <h2>เพิ่มข้อมูลเข้าท้ายลิสต์: <code class="docutils literal notranslate"><span class="pre">.append()</span></code><a class="headerlink" href="#append" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">]</span> <span class="c1"># สร้างลิสต์</span>
 <span class="n">sales_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># เติมข้อมูลเข้าไป</span>
@@ -1129,14 +1135,14 @@ title="Print to PDF"
 <span class="c1">#Output คือ [23, 12, 96, 100]</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: สมาชิกใหม่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>method นี้ใช้เพิ่มสมาชิกเข้าไปอีกหนึ่งตัวเข้าไปท้ายลิสต์ method นี้นับได้ว่าเป็น method ที่ใช้บ่อยที่สุดของลิสต์ มักจะใช้เมื่อเราสร้างลิสต์ขึ้นมาหนึ่งอันและต้องการเก็บผลลัพท์ที่ต้องการเติมเข้าไปเรื่อย ๆ ก่อนจะนำมาคำนวณ หรือนำผลออกมาดู</p>
-</div>
-<div class="section" id="extend">
+</section>
+<section id="extend">
 <h2>นำลิสต์หลาย ๆ อันมาต่อกัน: <code class="docutils literal notranslate"><span class="pre">.extend()</span></code><a class="headerlink" href="#extend" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_first_six_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">sales_last_six_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
@@ -1145,15 +1151,15 @@ title="Print to PDF"
 <span class="c1"># Output: [23, 12, 96, 100, 40, 10, 33, 44, 55, 66, 77, 88]</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: ลิสต์ที่ต้องการ copy มาใส่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>method นี้ใช้สำหรับเวลาที่เราไม่อยากเรียก <code class="docutils literal notranslate"><span class="pre">.append</span></code> บ่อย ๆ ถ้าหากเรามีอีกลิสต์นึงที่เราต้องการ copy เอามา ให้เรียก method นี้ ซึ่งจะต้องรับลิสต์มาเป็น input เท่านั้น</p>
 <p>ข้อสังเกตที่สำคัญคือ method นี้ไม่ได้ย้ายสมาชิกจากอีกลิสต์ที่เป็น input method จะ copy สมาชิกทุกตัวออกมาจากอีกลิสต์ที่เป็น input</p>
-</div>
-<div class="section" id="sorted-list-sort">
+</section>
+<section id="sorted-list-sort">
 <h2>เรียงลำดับสมาชิกในลิสต์: <code class="docutils literal notranslate"><span class="pre">sorted(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sorted-list-sort" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">sorted_sales_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sales_list</span><span class="p">)</span>
@@ -1167,15 +1173,15 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-</div>
+</aside>
 <p>การเรียงลำดับสมาชิกที่อยู๋ในลิสต์มีอยู่สองวิธี การเรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted</span></code> หรือการให้ลิสต์เรียก method <code class="docutils literal notranslate"><span class="pre">.sort()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">sorted</span></code> เป็นฟังก์ชันบิวท์อินที่รับลิสต์เป็น input และ return ลิสต์ใหม่อีกชุดที่สมาชิกทุกตัวถูกเรียงลำดับแล้ว ซึ่งหลังจากที่เรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted</span></code> ลิสต์ที่เป็น input นั้นจะไม่ถูกเปลี่ยนแปลงแต่อย่างใด</p>
 <p><code class="docutils literal notranslate"><span class="pre">.sort</span></code> เป็น method ของลิสต์ที่ไม่รับ input และไม่ return อะไรออกมา หลังจากที่ลิสต์ได้เรียก <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> แล้วสมาชิกของลิสต์ที่เรียก method จะถูกเรียงตามลำดับ</p>
 <p>ข้อควรระวังเกี่ยวกับการเรียงลำดับคือ ฟังก์ชันและ method นี้จะเรียงลำดับสตริงภาษาไทยไม่ถูกต้องตามหลักพจนานุกรมไทย แต่จะเรียงโดยการเปรียบเทียบตัวอักษรตัวแรกก่อนว่ามาก่อนมาหลัง ถ้าเหมือนกันจะดูตัวอักษรต่อไปเรื่อย ๆ เพราะฉะนั้นจากตัวอย่าง <code class="docutils literal notranslate"><span class="pre">'เจ'</span></code> กับ <code class="docutils literal notranslate"><span class="pre">'เมย์'</span></code> มาทีหลังอีกสองชื่อเพราะว่า <code class="docutils literal notranslate"><span class="pre">เ</span></code> มาหลัง <code class="docutils literal notranslate"><span class="pre">จ</span></code> และ <code class="docutils literal notranslate"><span class="pre">ม</span></code></p>
-</div>
-<div class="section" id="sum-list-max-list-min-list">
+</section>
+<section id="sum-list-max-list-min-list">
 <h2>หาผลรวม ค่าสูงสุด ต่ำสุด ในลิสต์: <code class="docutils literal notranslate"><span class="pre">sum(list)</span> <span class="pre">max(list)</span> <span class="pre">min(list)</span></code><a class="headerlink" href="#sum-list-max-list-min-list" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">class_size_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">class_size_list</span><span class="p">))</span>
@@ -1186,7 +1192,7 @@ title="Print to PDF"
 <span class="c1"># Output: 40</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: ลิสต์ที่มีสมาชิกเป็นค่าที่จะนำมาคำนวณหาผลรวม หรือค่าสูงสุด หรือค่าต่ำสุด</p>
 <p>Output: ผลรวม (<code class="docutils literal notranslate"><span class="pre">sum</span></code>) หรือค่าสูงสุด(<code class="docutils literal notranslate"><span class="pre">max</span></code>) หรือค่าต่ำสุด(<code class="docutils literal notranslate"><span class="pre">min</span></code>)</p>
 <p>ข้อควรระวังคือฟังก์ชันเหล่านี้ไม่ใช่่ method แต่ว่าเป็นฟังก์ชันบิวท์อิน เพราะฉะนั้นลิสต์ไม่สามารถเรียก <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> ได้ ถ้าหากเราเผลอเรียกประหนึ่งว่าเป็น method เราจะได้ <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> ซึ่งแจ้งให้เราทราบว่าลิสต์ไม่มี method ที่เราต้องการจะเรียก</p>
@@ -1196,17 +1202,17 @@ title="Print to PDF"
 <span class="gr">AttributeError</span>: <span class="n">&#39;list&#39; object has no attribute &#39;sum&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="index-index">
+</section>
+<section id="index-index">
 <h2>หา index ของสมาชิก: <code class="docutils literal notranslate"><span class="pre">.index()</span></code><a class="headerlink" href="#index-index" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;จอย&#39;</span><span class="p">))</span>
 <span class="c1"># Output: 2</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: สมาชิกที่ต้องการทราบ index (ตำแหน่งบนลิสต์)</p>
 <p>Output: index</p>
 <p>ข้อควรระวัง</p>
@@ -1221,27 +1227,27 @@ title="Print to PDF"
 <span class="gr">ValueError</span>: <span class="n">&#39;จิว&#39; is not in list</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="count">
+</section>
+<section id="count">
 <h2>นับจำนวนของสมาชิกที่ระบุมา: <code class="docutils literal notranslate"><span class="pre">.count()</span></code><a class="headerlink" href="#count" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;เมย์&#39;</span><span class="p">))</span>
 <span class="c1"># Output: 3</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: สมาชิกที่ต้องการหาและนับ</p>
 <p>Output: จำนวนที่เจอ</p>
 <p>ถ้าหากสิ่งที่ต้องการนั้นไม่ปรากฏอยู่ในลิสต์ จะไม่ได้ <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> แต่จะได้ 0 คืนกลับมาตามที่ควรจะเป็น</p>
-</div>
-<div class="section" id="insert-pop-remove">
+</section>
+<section id="insert-pop-remove">
 <h2>แก้ไขลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span> <span class="pre">.pop()</span> <span class="pre">.remove()</span></code><a class="headerlink" href="#insert-pop-remove" title="Permalink to this headline">#</a></h2>
 <p>method เหล่านี้ถูกใช้บ้างเป็นบางครั้ง ข้อควรระวังคือ method เหล่านี้แก้ไขลิสต์โดยตรง โดยไม่ได้สร้างลิสต์ใหม่ขึ้นมา ทำให้ index ของสมาชิกทุกตัวเปลี่ยนไปหมด เพราะเวลาเราแทรกสมาชิกเข้ามา หรือนำสมาชิกออกไปทำให้ตำแหน่งของสมาชิกแต่ละตัวเลื่อนกันไปเป็นทอด ๆ เพราะฉะนั้นหากเราเรียก method เหล่านี้ใน <code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปอาจจะทำให้เรางงว่าสมาชิกบางตัวถูกข้ามไปหรือไม่ และทำให้โค้ดอ่านทำความเข้าใจได้ยากขึ้น และยากต่อการแก้ไขหากเกิด error</p>
-<div class="section" id="insert">
+<section id="insert">
 <h3>แทรกสมาชิกเข้าลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span></code><a class="headerlink" href="#insert" title="Permalink to this headline">#</a></h3>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;เจน&#39;</span><span class="p">)</span>
@@ -1249,14 +1255,14 @@ title="Print to PDF"
 <span class="c1"># [&#39;เจ&#39;, &#39;เจน&#39;, &#39;เมย์&#39;, &#39;จอย&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: 1) index (สามารถใช้ negative index ได้) 2) สมาชิกใหม่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>ถ้าหาก index สูงกว่าความยาวของลิสต์ สมาชิกใหม่จะไปนำต่อท้ายลิสต์ และจะไม่ให้โยน error กลับมา</p>
-</div>
-<div class="section" id="remove">
+</section>
+<section id="remove">
 <h3>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.remove()</span></code><a class="headerlink" href="#remove" title="Permalink to this headline">#</a></h3>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -1264,14 +1270,14 @@ title="Print to PDF"
 <span class="c1"># [&#39;เจ&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: ค่าที่ต้องการเอาออก</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>ลิสต์จะทำการหา input ในลิสต์ ถ้าหาพบก็จะนำสมาชิกทุกตัวที่มีค่านั้นออกไปจากลิสต์  ถ้าหาก input ไม่ได้ปรากฏอยู่ในลิสต์ python interpreter จะโยน <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p>
-</div>
-<div class="section" id="pop">
+</section>
+<section id="pop">
 <h3>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.pop()</span></code><a class="headerlink" href="#pop" title="Permalink to this headline">#</a></h3>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">removed_member</span> <span class="o">=</span> <span class="n">accountant_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -1281,13 +1287,13 @@ title="Print to PDF"
 <span class="c1"># จอย</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Input: index (สามารถใช้ negative index ได้)</p>
 <p>Output: สมาชิกที่เคยอยู่ที่ index นั้น</p>
 <p>ลิสต์จะ return สมาชิกที่อยู่ที่ index ที่กำหนดมาให้ จากนั้นก็จะดีดเอาสมาชิกตัวนั้นออกไป (method นี้เลยชื่อว่า pop ซึ่งแปลว่าดีดออก) ถ้าหาก index นั้นไม่ได้อยู่ในลิสต์ python interpreter จะโยน <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> และแจ้งว่า index ไม่ได้อยู่ในช่วงที่เหมาะสม</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

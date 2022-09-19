@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>สตริง &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -881,7 +887,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>สตริง<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>สตริง เป็นประเภทของข้อมูลที่ใช้สำหรับเก็บข้อมูลที่เป็นรูปแบบตัวหนังสือหรืออักขระ (character) อื่น ๆ อักขระที่เราพบบ่อยและสตริงสามารถจัดเก็บได้มีหลายประเภทด้วยกัน</p>
 <ul class="simple">
@@ -891,11 +897,11 @@ title="Print to PDF"
 <li><p>เครื่องหมายวรรคตอนของภาษาอังกฤษ (เช่น <code class="docutils literal notranslate"><span class="pre">*&amp;?#$!«</span></code>) หรือภาษาไทย (เช่น <code class="docutils literal notranslate"><span class="pre">'๏๛ฯ'</span></code>)</p></li>
 <li><p>Emoji เช่น <code class="docutils literal notranslate"><span class="pre">'😂😃🧘🏻‍♂️🌍🌦️🍞🚗📞🎉🍆'</span></code></p></li>
 </ul>
-<div class="section" id="id2">
+<section id="id2">
 <h2>การสร้างสตริง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>วิธีการสร้างสตริงโดยการพิมพ์ข้อความเข้าไปในตัวโค้ดโดยตรง เรียกว่าการสร้าง string literal ซึ่งต่างจากการสร้างสตริงขึ้นมาโดยกาเรียนฟังก์ชันอื่น ๆ</p>
 <p>การสร้าง string literal มีอยู่อย่างน้อย 3 วิธี</p>
-<div class="section" id="single-quote">
+<section id="single-quote">
 <h3>1. คร่อมข้อความด้วย single quote<a class="headerlink" href="#single-quote" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_sentence</span> <span class="o">=</span> <span class="s1">&#39;I dreamed a dream in times gone by&#39;</span>
 </pre></div>
@@ -908,18 +914,18 @@ title="Print to PDF"
 <span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
 </pre></div>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>หนีสตริง (escaping a string) คือการใช้เครื่องหมายอื่นในการบอกให้เครื่องรู้ว่าเครื่องหมายที่ตามมาให้ถือว่าเป็นข้อความอย่างหนึ่ง ไม่มีความพิเศษอื่นใด</p>
-</div>
+</aside>
 <p>ซึ่งผิดไวยากรณ์เพราะ interpreter นึกว่า <code class="docutils literal notranslate"><span class="pre">'</span></code> ใน <code class="docutils literal notranslate"><span class="pre">I'm</span></code> ใช้ทำหน้าที่บอกจุดสิ้นสุดของสตริง เราจำเป็นต้องใช้การหนี (escape) โดยการใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">\</span></code> เพื่อบอกกับเครื่องว่า <code class="docutils literal notranslate"><span class="pre">'</span></code> ที่ตามหลังมาให้ถือว่าเป็นสตริง ไม่ใช่เครื่องหมาย quote เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s1">&#39;So different from this hell I</span><span class="se">\&#39;</span><span class="s1">m living&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">climax_sentence</span><span class="p">)</span>
 <span class="go">So different from this hell I&#39;m living</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="double-quote">
+</section>
+<section id="double-quote">
 <h3>2. คร่อมข้อความด้วย double quote เช่น<a class="headerlink" href="#double-quote" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s2">&quot;So different from this hell I&#39;m living&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">climax_sentence</span><span class="p">)</span>
@@ -939,8 +945,8 @@ title="Print to PDF"
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">news_opening</span> <span class="o">=</span> <span class="s2">&quot;The spokesman reported </span><span class="se">\&quot;</span><span class="s2">The company is in a great position.</span><span class="se">\&quot;</span><span class="s2"> after being pressed many times&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="triple-quote">
+</section>
+<section id="triple-quote">
 <h3>3. คร่อมข้อความด้วย triple quote<a class="headerlink" href="#triple-quote" title="Permalink to this headline">#</a></h3>
 <p>การสร้างสตริงด้วยวิธีนี้เป็นวิธีเดียวที่จะสร้าง string literal ที่มีหลาย ๆ บรรทัดอยู่ โดยตัวคั่นบรรทัดนั้นเครื่องจะจัดเก็บอยู่ในตัวอักขระพิเศษ <code class="docutils literal notranslate"><span class="pre">\n</span></code> เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">juliet_speech</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;O Romeo, Romeo, wherefore art thou Romeo?</span>
@@ -952,15 +958,15 @@ title="Print to PDF"
 <span class="go">Deny thy father and refuse thy name.</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id3">
+</section>
+</section>
+<section id="id3">
 <h2>เข้าถึงตัวอักษรที่อยุ่ในสตริง<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <a class="reference internal image-reference" href="../../_images/char-index.png"><img alt="../../_images/char-index.png" class="align-center" src="../../_images/char-index.png" style="height: 150px;" /></a>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>index เลขชี้ตำแหน่ง</p>
-</div>
+</aside>
 <p>เราใช้ operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> ครอบตำแหน่งที่ต้องการจะดึงตัวอักษรออกมา (index) แต่จะนับเริ่มจากศูนย์ เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[a]</span></code> return ตัวอักขระจากช่องที่ index <code class="docutils literal notranslate"><span class="pre">a</span></code> ตามที่เห็นดังภาพข้างบน</p>
 <p>ภาษาไพธอนมีการดึงตัวอักขระโดยนับจากข้างหลังได้ด้วยโดยตัวอักขระสุดท้ายของสตริงจะเริ่มที่ -1 เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[-a]</span></code> return ตัวอักขระจากช่องที่ index <code class="docutils literal notranslate"><span class="pre">-a</span></code> ซึ่งเราเรียกว่าการใช้เลข index ติดลบ (negative indexing)</p>
 <p>ตัวอย่าง สมมติว่าเราได้รัน <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'นายสมชาย'</span></code></p>
@@ -985,10 +991,10 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">IndexError</span></code> คือ error ที่เกิดจากการที่ใช้เลข index ที่ไม่อยู่ในช่วงที่เหมาะสม</p>
-</div>
+</aside>
 <p>ถ้าหากเรารัน <code class="docutils literal notranslate"><span class="pre">s[9]</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">s[-10]</span></code> เราได้ข้อความบอก error ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -996,8 +1002,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>เครื่องบอกว่า index ไม่ได้อยู่ในช่วงที่เหมาะสม เพราะจากสตริงที่เราสร้าง เราสามาเลือก index ตั้งแต่ 0-7 และ -1 ถึง -8</p>
-</div>
-<div class="section" id="string-splicing">
+</section>
+<section id="string-splicing">
 <h2>การหั่นสตริง (String splicing)<a class="headerlink" href="#string-splicing" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถหั่นสตริงตั้งต้นออกมาอีกสตริงหนึ่ง เพื่อตัดเอาส่วนของข้อความที่เราอยากได้ เช่น</p>
 <ul class="simple">
@@ -1006,10 +1012,10 @@ title="Print to PDF"
 <li><p>&#64;terutherford –&gt; terutherford (เอามาแต่ชื่ออินสตาแกรมไม่เอา &#64;)</p></li>
 <li><p>#ไอจีล่ม –&gt; ไอจีล่ม (ตัดเอาแฮชแท็กออกไป)</p></li>
 </ul>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>สตริงย่อย (substring) คือ สตริงที่เป็นส่วนหนึ่งของสตริงอีกสตริงหนึ่งที่ยาวกว่า</p>
-</div>
+</aside>
 <p>การหั่นสตริง หรือการดึง substring ออกมาจากสตริง สามารถทำได้โดยการใช้ operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่นเคยแต่ว่าต้องระบุตำแหน่งที่ต้องการตัด substring ออกมา <code class="docutils literal notranslate"><span class="pre">[ตำแหน่งที่เริ่ม:ตำแหน่งที่จบ]</span></code> เช่น สมมติว่าเราต้องการดึง substring จากสตริง <code class="docutils literal notranslate"><span class="pre">s</span></code> ที่เก็บข้อความอยู่ดังนี้</p>
 <a class="reference internal image-reference" href="../../_images/substring-index.png"><img alt="../../_images/substring-index.png" class="align-center" src="../../_images/substring-index.png" style="height: 150px;" /></a>
 <p>การดึง substring ให้นึกถึงว่าตัวเลข index ชี้ไปที่ร่องระหว่างตัวอักขระสองตัว เช่น index 3 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ย'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'ส'</span></code> หรือ index -2 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ช'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'า'</span></code></p>
@@ -1083,8 +1089,8 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="string-operator-built-in-function">
+</section>
+<section id="string-operator-built-in-function">
 <h2>String operator และ built-in function<a class="headerlink" href="#string-operator-built-in-function" title="Permalink to this headline">#</a></h2>
 <p>นอกเหนือจาก operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วสตริงยังมี operator ที่ใช้ได้อยู่อีก 4 ตัว</p>
 <table class="colwidths-auto table">
@@ -1129,13 +1135,13 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="for-loop">
+</section>
+<section id="for-loop">
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop บนสตริง<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>iterate คือ การไล่ดึงข้อมูลมาทีละตัว เพื่อนำมาประมวลผลด้วยคำสั่งอื่น ๆ</p>
-</div>
+</aside>
 <p>สตริง คือการนำอักขระหลาย ๆ ตัวมาต่อกันเป็นสายเดียว ในบางครั้งเราต้องการนำอักขระออกมาประมวลผลทีละตัว เช่น เราอยากนับว่าในสตริงมีตัวเลขทั้งหมดกี่ตัว มีอักษรภาษาอังกฤษทั้งหมดกี่ตัว หรือมีสระกี่ตัว เราต้องจะต้องเริ่มจากการดึงตัวอักษรออกมาทีละตัว (iterate) ออกมาตรวจสอบและนับ</p>
 <p>การ iterate ไปบนสตริงเราจะใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ในการดึงตัวอักษรดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abcdefg&#39;</span>
@@ -1159,13 +1165,13 @@ title="Print to PDF"
 	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>			<span class="c1"># แสดงผลค่าของอักขระที่ index i </span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="string-method">
+</section>
+<section id="string-method">
 <h2>String method<a class="headerlink" href="#string-method" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p><em>object</em> มีหน้าที่เก็บข้อมูล นอกจากนั้นยังมี <em>method</em> ต่างๆ ที่ช่วยนำข้อมูลที่เก็บอยู่มาใช้ให้ได้สะดวกขึ้น</p>
-</div>
+</aside>
 <p>สตริงจัดเป็น object ประเภทแรกที่เราจะเรียนรู้วิธีการใช้ในภาษาไพธอน object เป็นสิ่งที่ไว้เก็บข้อมูลที่เป็นตัวหนังสือต่าง ๆ แต่ว่านอกจากนั้นแล้ว object มีสิ่งที่เรียกว่า method ติดตัวมาด้วย ซึ่งก็คือฟังก์ชันที่นำเอาข้อมูลที่ object ที่เรียก method นั้นขึ้นมาใช้ ในการเรียกใช้ method เราจำเป็นต้องรู้ว่า</p>
 <ol class="simple">
 <li><p>object ชนิดนั้นมี method ชื่ออะไรบ้าง</p></li>
@@ -1179,10 +1185,10 @@ title="Print to PDF"
 </div>
 <p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">name</span></code> เก็บสตริง <code class="docutils literal notranslate"><span class="pre">'james'</span></code> ไว้โดยการสร้าง string literal แบบใช้ single quote จากนั้นสตริงนั้นเรียก method <code class="docutils literal notranslate"><span class="pre">is_upper</span></code> ซึ่งไม่ต้องการพารามิเตอร์ และ return บูลีนที่บ่งบอกว่าสตริงที่เก็บอยู่นั้นเป็นตัวลาตินตัวพิมพ์ใหญ่หรือไม่</p>
 <p>สตริงในภาษาไพธอนมี method เยอะมาก ๆ ไม่มีโปรแกรมเมอร์ไหนพยายามจำทั้ง จะจำได้เฉพาะ method ที่ใช้หน้างานบ่อย ๆ ถ้าหากจำไม่ได้สามารถเสิร์ชหาออนไลน์ได้ และโปรแกรมเมอร์เปิดหากันเป็นปกติ แต่เพื่อความสะดวกคล่องตัวในการเขียนโปรแกรมที่เกี่ยวกับการประมวลผลข้อมูลที่เป็นข้อความ เราควรจะต้องรู้จัก method ของสตริงดังนี้</p>
-</div>
-<div class="section" id="format">
+</section>
+<section id="format">
 <h2>สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code><a class="headerlink" href="#format" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
@@ -1193,28 +1199,28 @@ title="Print to PDF"
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, I&#39;m </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># My name is John, I&#39;m 36</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>method <code class="docutils literal notranslate"><span class="pre">format</span></code> ใช้เวลาเราต้องการสร้าง template ขึ้นมาเพื่อใช้เอาค่าอื่น ๆ มาเติมทีหลังเพื่อให้เป็นสตริงที่สมบูรณ์ เราจะใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> เป็นสัญลักษณ์ของช่องว่างที่เว้นเพื่อเอาค่าอื่นมาเติม (placeholder) ซึ่งเราจะใช้กี่ตัวก็ได้ แต่ตอนเรียก <code class="docutils literal notranslate"><span class="pre">.format</span></code> เราจะต้องใส่จำนวนพารามิเตอร์เท่ากับจำนวนของ placeholder ที่เราวางไว้ และจะเติมจากซ้ายไปขวา ถ้าใส่น้อยไปเราจะได้ <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> ถ้าใส่มากไปเครื่องจะไม่ว่าอะไร</p>
 <p>อีกวิธีคือการใช้ f string คือสตริงที่มีเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าเพื่อบอกให้เครื่องรู้ว่าเป็น formatting string เราสามารถใส่ชื่อตัวแปรเข้าไปใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้เลย ทำให้ประหยัดโค้ดไปได้ระดับหนึ่ง และดูสบายตากว่า</p>
-</div>
-<div class="section" id="lower-upper">
+</section>
+<section id="lower-upper">
 <h2>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;James&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#--&gt; &#39;james&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#--&gt; &#39;JAMES&#39;</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.lower()</span></code> return สตริงที่มีตัวอักษรเหมือนกันแต่เป็นตัวเล็กทั้งหมด</p>
 <p><code class="docutils literal notranslate"><span class="pre">string.upper()</span></code>return สตริงที่มีตัวอักษรเหมือนกันแต่เป็นตัวใหญ่ทั้งหมด</p>
 <p><em>ข้อควรระวัง</em> ทั้งสอง method เมื่อเราเรียกใช้แล้วจะ return สตริงชุดใหม่มาให้ แยกต่างหากจากตัวสตริงเดิม ซึ่งจะมีค่าข้อความเดิมอยู่ไม่เปลี่ยนแปล</p>
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาเราอยากเปรียบเทียบข้อความสองข้อความว่าเหมือนกันหรือไม่โดยไม่สนใจว่าเป็นตัวเล็กตัวใหญ่ (case-insensitive)</p>
-</div>
-<div class="section" id="islower-isupper">
+</section>
+<section id="islower-isupper">
 <h2>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;NASA&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1">#--&gt; False</span>
@@ -1226,14 +1232,14 @@ title="Print to PDF"
 <span class="n">s2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; True ตัวอักษรตัวแรกเป็นตัวใหญ่</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.islower()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวเล็กทั้งหมด</p>
 <p><code class="docutils literal notranslate"><span class="pre">string.isupper()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวใหญ่ทั้งหมด</p>
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาต้องการเช็คว่าเป็นตัวย่อของชื่อองค์กรต่าง ๆ หรือไม่ หรือเป็นคำที่อยู่กลางประโยคภาษาอังกฤษหรือไม่ แต่คำสั่งเหล่านี้ไม่มีประโยชน์กับภาษาอื่น ๆ ที่ไม่ได้ใช้ตัวลาติน เช่น ภาษาจีน ภาษาไทย ภาษาเกาหลี ภาษารัสเซีย</p>
-</div>
-<div class="section" id="substring-count-substring">
+</section>
+<section id="substring-count-substring">
 <h2>นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#substring-count-substring" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">laughter</span> <span class="o">=</span> <span class="s1">&#39;hahahahaha&#39;</span>
 <span class="n">laughter</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ha&#39;</span><span class="p">)</span> <span class="c1">#--&gt; 5</span>
@@ -1242,13 +1248,13 @@ title="Print to PDF"
 <span class="n">plea</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ู&#39;</span><span class="p">)</span> <span class="c1">#--&gt; 10</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.count(substring)</span></code> return จำนวนครั้งที่พบ substring ที่ในสตริงที่เรียก method นี้ ถ้าใส่ input มาเป็นตัวอักษรตัวเดียว ก็จะนับจำนวนครั้งที่พบตัวอักษรนั้น</p>
 <p>คำสั่งนี้มีประโยชน์เวลาเราต้องการนับจำนวนคำที่อยู่ในสตริงที่เก็บข้อมูลทั้งหมดเอาไว้ เช่น หนังสือทั้งเล่ม หนังสือพิมพ์ทุกฉบับของเดือนนั้น หรือนับจำนวนคำภาษาอังกฤษแบบหยาบ ๆ โดยการนับเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ที่มีอยู่ในข้อมูลทั้งหมด</p>
-</div>
-<div class="section" id="isdigit-isalpha-isalnum">
+</section>
+<section id="isdigit-isalpha-isalnum">
 <h2>เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;6578012478&#39;</span>
 <span class="n">license_plate</span> <span class="o">=</span> <span class="s1">&#39;3ก4951&#39;</span>
@@ -1265,17 +1271,17 @@ title="Print to PDF"
 <span class="n">student_name</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="c1">#--&gt; True</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>สาม method นี้มีไว้สำหรับเช็คว่าสตริงที่เรียกประกอบด้วยอักขระประเภทใดประเภทหนึ่งหรือไม่</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.isdigit</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงประกอบด้วยตัวเลขอารบิกทั้งหมด ถ้ามีตัวใดตัวหนึ่งที่ไม่ใช่ตัวเลขอารบิกจะ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.isalpha</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงประกอบด้วยตัวหนังสือทั้งหมด ตัวหนังสือคือตัวอักขระอะไรก็ได้ภาษาใดก็ได้ที่ไม่ใช่เครื่องหมายวรรคตอนภาษาอังกฤษ ไม่ใช่ emoji ไม่ใช่ตัวเลข alpha ในชื่อของ method ย่อมาจาก alphabet ซึ่งแปลว่าตัวอักษร</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.isalnum</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงมีแต่ alphabet และตัวเลขอารบิกทั้งหมด กล่าวคือไม่มีเครื่องหมายวรรคตอนอยู่เลย alnum ในชื่อ method ย่อมาจาก alphanumeric ซึ่งหมายถึง alphabet และ number นั่นเอง</p></li>
 </ul>
-</div>
-<div class="section" id="substring-replace-old-new">
+</section>
+<section id="substring-replace-old-new">
 <h2>แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#substring-replace-old-new" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ประเภทของคำมี 7 ประเภทใหญ่&#39;</span>
 <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ประเภท&#39;</span><span class="p">,</span><span class="s1">&#39;ชนิด&#39;</span><span class="p">)</span> <span class="c1">#--&gt; &#39;ชนิดของคำมี 7 ชนิดใหญ่&#39;</span>
@@ -1285,13 +1291,13 @@ title="Print to PDF"
 <span class="n">country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#--&gt; &#39;USA&#39;</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>method <code class="docutils literal notranslate"><span class="pre">.replace</span></code> คล้าย ๆ กับปุ่ม Find and replace ที่เราพบเห็นได้ในโปรแกรม word processing ทั่ว ๆ ไป เราระบุ substring ที่เราต้องการหา และระบุไปว่าอยากจะแทนที่ด้วย string อะไร</p>
 <p>method นี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมา ซึ่งเราจะต้องเก็บใส่ตัวแปรอีกตัวนึงก่อนจะนำไปทำกระบวนการอื่นต่อ ซึ่งคล้าย ๆ กับ method <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">.format()</span></code></p>
-</div>
-<div class="section" id="strip">
+</section>
+<section id="strip">
 <h2>ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Permalink to this headline">#</a></h2>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;  loveme123&#39;</span>
 <span class="n">password</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#--&gt; &#39;loveme123&#39;</span>
@@ -1300,11 +1306,11 @@ title="Print to PDF"
 <span class="n">password2</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#--&gt; &#39;iamawesome555&#39;</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>method นี้ใช้บ่อยเวลาเราต้องการทำความสะอาดข้อมูลภาษาที่เราได้มา ซึ่งมักจะมีช่องว่างข้างหน้าคือข้างหลังติดมาด้วย เวลาเราโหลดข้อมูลมาจากแหล่งข้อมูลจริง ซึ่งมักจะทำให้เรานับจำนวนตัวอักษรผิดพลาด method นี้สร้างสตริงเวอร์ชันใหม่ขึ้นมาที่ไม่มีช่องว่างน่าหลัง</p>
 <p>method นี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมาเช่นกันกับ method อื่นๆ ข้างต้น</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>ดิกชันนารี (Dictionary) &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -236,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../text_file.html">
-   การอ่านข้อมูลจากไฟล์
+   การประมวลผลข้อมูลจากไฟล์
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/2-videos-file.html">
      Video: file
@@ -256,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Regular Expression
+     โจทย์: Text processing
     </a>
    </li>
   </ul>
@@ -773,7 +779,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="dictionary">
+  <section class="tex2jax_ignore mathjax_ignore" id="dictionary">
 <h1>ดิกชันนารี (Dictionary)<a class="headerlink" href="#dictionary" title="Permalink to this headline">#</a></h1>
 <p>ดิกชันนารี (ซึ่งโปรแกรมเมอร์มักเรียกว่าดิกต์ (dict) เฉย ๆ) คือ โครงสร้างข้อมูลที่ไว้เก็บคู่ของ key และ value (key-value pair) จำนวนมาก ๆ จึงเรียกเปรียบเปรยว่าเหมือนพจนานุกรมซึ่งมี key เป็นคำที่เราต้องการหาความหมาย และ value เป็นควาหมายของคำแต่ละคำ พจนานุกรมจะสมบูรณ์ได้ก็ต่อเมื่อมีคู่ key (คำ) และ value (ความหมาย) จำนวนมาก ๆ ให้ครอบคลุมเกือบทุกคำในภาษา แต่ในไพธอนดิกชันนารีมีสามารถมี key เป็นอะไรก็ได้ และ value เป็นอะไรก็ได้เช่นกัน</p>
 <p>ข้อเหมือนอีกประการหนึ่งระหว่างดิกต์กับพจนานุกรม คือ เราใช้ดิกต์หรือพจนานุกรมเพื่อตอบคำถามว่า <em>คำนี้ มีความหมายว่าอะไร</em> แต่ไม่สามารถตอบคำถามว่า <em>ความหมายนี้ตรงกับคำว่าอะไร</em> เราสามารถเปิดหาว่าได้ว่า key ได้มานั้นอยู่คู่กับ value ตัวไหน ภาษาวิทยาการคอมพิวเตอร์มักเรียกว่าดิกต์เป็นการแมพจาก key ไปยัง value (key-value mapping)</p>
@@ -814,7 +820,7 @@ title="Print to PDF"
 </table>
 <p>จากตัวอย่างแรกหากเราจัดเก็บสมุดโทรศัพท์ โดยให้ key เป็นชื่อ value เป็นเบอร์โทรศัพท์ เราจะไม่สามารถเปิดหาได้ว่าเบอร์ปริศนาที่ได้มานั้นเป็นเบอร์ของใคร</p>
 <p>จุดเด่นของดิกชันนารีคือสามารถเปิดหา (lookup) value จาก key ที่กำหนดให้ได้อย่างรวดเร็วที่สุด โดยไม่ต้องคำนึงว่าดิกชันนารีเก็บ key value ไว้ทั้งหมดกี่คู่ ภาษาวิทยาการคอมพิวเตอร์เรียกว่า ระยะเวลาคงตัว (constant time) ย้อนกลับไปตัวอย่างการจัดเก็บสมุดโทรศัพท์ ในตัวอย่างนี้ถ้าพูดกันให้ถูกต้องจริง ๆ เราสามารถเปิดหาได้ว่าเบอร์ปริศนาที่ได้มานั้นเป็นของใคร แต่ว่าเราจะต้องเปิดไล่หาทั้งสมุดโทรศัพท์ ถ้าเรามี key value อยู่เยอะคู่ ระยะเวลาที่โปรแกรมใช้ในการ lookup ก็เยอะตามไปด้วย ภาษาวิทยาการคอมพิวเตอร์เรียกว่าระยะเวลาเชิงเส้น (linear time)</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>การสร้างดิกชันนารีด้วย <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>ดิกชันนารีถูกสร้างได้ด้วยการใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> ซึ่งห้ามใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">[]</span></code> (ใช้สร้างลิสต์)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span> <span class="o">=</span> <span class="p">{}</span>
@@ -849,14 +855,14 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>ชื่อตัวแปรที่เก็บดิกชันนารี<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>ชื่อตัวแปรที่เก็บดิกชันนารีควรจะบอกให้ชัดเจนว่า key คืออะไร และ value คืออะไร และคั่นด้วย <code class="docutils literal notranslate"><span class="pre">_to_</span></code> เพื่อเป็นการบ่งบอกว่าตัวแปรเก็บดิกชันนารี เช่น
 <code class="docutils literal notranslate"><span class="pre">name_to_phone_number</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">word_to_frequency</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">student_id_to_name</span></code> เป็นต้น
 ถึงแม้ว่าชื่อตัวแปรไม่ได้มีผลต่อการทำงานของโปรแกรมแต่อย่างใด แต่เนื่องจากดิกต์เป็นโครงสร้างข้อมูลที่ค่อนข้างซับซ้อน เราจึงควรที่จะตั้งชื่อตัวแปรให้สื่อความหมายว่าเก็บข้อมูลอะไรอยู่</p>
-</div>
-<div class="section" id="key-value-len">
+</section>
+<section id="key-value-len">
 <h2>หาจำนวนคู่ key-value ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code><a class="headerlink" href="#key-value-len" title="Permalink to this headline">#</a></h2>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> เมื่อใช้กับดิกต์จะ return จำนวนคู่ของ key-value ที่อยู่ในดิก</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
@@ -864,8 +870,8 @@ title="Print to PDF"
 <span class="nb">len</span><span class="p">(</span><span class="n">name_to_phone_number</span><span class="p">)</span> <span class="c1">#--&gt; 3</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="key-value">
+</section>
+<section id="key-value">
 <h2>เพิ่มข้อมูล (คู่ key-value) เข้าดิกชันนารี<a class="headerlink" href="#key-value" title="Permalink to this headline">#</a></h2>
 <p>เมื่อเราสร้างดิกต์ขึ้นมาแล้วอันหนึ่งเราสามารถเพิ่มคู่ key value ได้ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">d[key]</span> <span class="pre">=</span> <span class="pre">value</span></code> โดย key จะเป็นสตริง หรือตัวเลขก็ได้ แต่ไม่สามารถใช้บูลีน หรือลิสต์มาเป็นคีย์ได้ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
@@ -944,8 +950,8 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>ดิกชันนารีมี key value อยู่ 4 คู่ เท่าเดิม  <code class="docutils literal notranslate"><span class="pre">name_to_phone_number['ตังเม']</span> <span class="pre">=</span> <span class="pre">'011-222-3333'</span></code> ทำการเปลี่ยนคู่ key value ที่มี <code class="docutils literal notranslate"><span class="pre">'ตังเม'</span></code> เป็น key ให้เป็นค่าใหม่ที่ป้อนเข้าไป  ให้สังเกตด้วยว่าดิกชันนารีไม่ได้ลบคู่ key value เก่าและเติมคู่ใหม่เข้าไป ดิกชันนารีทำการเขียนทับตำแหน่งเดิม</p>
-</div>
-<div class="section" id="value-key-get">
+</section>
+<section id="value-key-get">
 <h2>เข้าถึง value ด้วย key: <code class="docutils literal notranslate"><span class="pre">[]</span></code> และ <code class="docutils literal notranslate"><span class="pre">.get()</span></code><a class="headerlink" href="#value-key-get" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถระบุ key ที่เราต้องการทราบ value ได้ สมมติว่าเราต้องการทราบเบอร์โทรศัพท์ของตังเม จากดิกชันนารีที่เก็บหมายเลขโทรศัพท์</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
@@ -981,11 +987,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>บรรทัดที่สองคือการเปิดหา key <code class="docutils literal notranslate"><span class="pre">'laptop'</span></code> ในดิกต์ แต่ถ้าหากไม่เจอให้ return 0 ทำให้เราไม่ต้องเจอกับ <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
-</div>
-<div class="section" id="for">
+</section>
+<section id="for">
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปบนดิกชันนารี<a class="headerlink" href="#for" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถ for ลูปวนซ้ำไปบน key (iterate on keys) วนซ้ำไปบน value (iterate on values) หรือวนซ้ำไปบนคู่ key-value (iterate on key-value pairs) ขึ้นอยู่กับการใช้งาน โดยเราจะใช้ method <code class="docutils literal notranslate"><span class="pre">.keys()</span> <span class="pre">.values()</span> <span class="pre">.items()</span></code> ตามลำดับ ทั้ง 3 method นี้จะ return ค่าที่มี type เป็น <em>iterable</em> ซึ่งก็คือสิ่งที่เราสามารถ iterate ไปได้</p>
-<div class="section" id="key">
+<section id="key">
 <h3>วนซ้ำไปบน key<a class="headerlink" href="#key" title="Permalink to this headline">#</a></h3>
 <p>เราสามารถใช้ไวยากรณ์ของ <code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปไปบนดิกชันนารี ซึ่งจะตีความไปว่าเราจะไล่เรียงไปบน key แต่ละตัว
 ตั้งแต่ Python 3.7 ขึ้นไป การลูปบนดิกชันนารี เครื่องจะไล่เรียงข้อมูล ออกมาจะเป็นลำดับเดียวกับตอนที่ใส่ข้อมูลเข้าไป</p>
@@ -1014,8 +1020,8 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_to_phone_number</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="value">
+</section>
+<section id="value">
 <h3>วนซ้ำไปบน value<a class="headerlink" href="#value" title="Permalink to this headline">#</a></h3>
 <p>ดิกชันนารีมี method <code class="docutils literal notranslate"><span class="pre">.values()</span></code> ที่ทำให้เราวนซ้ำไปบน value ได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
@@ -1037,8 +1043,8 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phone_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_to_phone_number</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>วนซ้ำไปบนคู่ key-value<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">name_to_phone_number</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
 	<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -1056,9 +1062,9 @@ title="Print to PDF"
 <span class="mi">066</span><span class="o">-</span><span class="mi">666</span><span class="o">-</span><span class="mi">6666</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="key-in">
+</section>
+</section>
+<section id="key-in">
 <h2>ตรวจสอบว่ามี key นั้นอยู่ในดิกต์หรือไม่: <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#key-in" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถตรวจสอบว่า key ที่เราต้องการหามีอยู่ในดิกต์อยู่แล้วหรือไม่</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
@@ -1082,8 +1088,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>ซึ่งทั้งสองวิธีเป็นมักจะใช้เวลานานเนื่องจากเราจะต้องวนไล่ไปบน value แต่ละตัว ยิ่งดิกชันนารีใหญ่แค่ไหนเวลาในการรันโปรแกรมก็จะนานตามไปด้วย ซึ่งต่างจากการตรวจสอบ key ซึ่งใช้เวลาในการรันโปรแกรมเป็นค่าคงตัว ไม่ขึ้นกับขนาดของดิกชันนารี ถ้าหากเราจำเป็นต้องมีการตรวจสอบว่ามี value อะไรอยู่หรือไม่ เราไม่ควรใช้ดิกต์ในการ</p>
-</div>
-<div class="section" id="key-value-pop">
+</section>
+<section id="key-value-pop">
 <h2>ลบคู่ key-value: <code class="docutils literal notranslate"><span class="pre">.pop</span></code><a class="headerlink" href="#key-value-pop" title="Permalink to this headline">#</a></h2>
 <p>เราสามารถลบคู่ key-value โดยการระบุ key ไม่สามารถลบโดยการระบุ value ได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
@@ -1095,8 +1101,8 @@ title="Print to PDF"
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;jump&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
