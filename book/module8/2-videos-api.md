@@ -1,9 +1,6 @@
 # Video: Serialization and API call
 Serialization and API call
 
-## Overview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2-fdXMyogKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Serialization in Python
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Xdm7g5-Aso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
