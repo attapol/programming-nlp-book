@@ -1,0 +1,1017 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>โจทย์: Data type &#8212; Programming for NLP</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Object-oriented programming" href="../oop.html" />
+    <link rel="prev" title="โจทย์: Set และ nested data structures" href="7-exercise-nested.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Programming for Natural Language Processing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../comp_thinking.html">
+   การคิดเชิงคำนวณ และ control flow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module1/1-karel.html">
+     การคิดเชิงคำนวณ (Computational Thinking)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module1/2-videos-karel.html">
+     Video: การคิดเชิงคำนวณ และ control flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module1/3-exercise.html">
+     แบบฝึกหัด
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics.html">
+   พื้นฐานการเขียนโปรแกรม
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/1-variable.html">
+     ตัวแปรและฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/2-videos-variable.html">
+     Video: ตัวแปรและฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/3-exercise-variable-function.html">
+     โจทย์: ตัวแปร และฟังก์ชัน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/4-string.html">
+     สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/5-videos-string.html">
+     Video: สตริง
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module2/6-exercise-string.html">
+     โจทย์: สตริง
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_structure1.html">
+   โครงสร้างข้อมูล (Data Structure I)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/1-list.html">
+     ลิสต์ (List)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/2-videos-list.html">
+     Video: List and Data Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/3-exercise-list.html">
+     โจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/3s-exercise-list.html">
+     เฉลยโจทย์: ลิสต์
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4a-dictionary.html">
+     ดิกชันนารี (Dictionary)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4b-tuple.html">
+     ทูเปิล (tuple)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/4c-counter.html">
+     เคาน์เตอร์ (counter)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/5-videos-dictionary.html">
+     Video: Dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module3/6-exercise-dictionary.html">
+     โจทย์: ดิกชันนารี
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../text_file.html">
+   การประมวลผลข้อมูลจากไฟล์
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/1-file.html">
+     File
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/2-videos-file.html">
+     Video: file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/3-regular-expression.html">
+     Regular expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/4-videos-regex.html">
+     Video: Regular Expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
+     โจทย์: Text processing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../data_structure2.html">
+   Data Structure II
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-set.html">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-videos-set.html">
+     Video: Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-nested-list.html">
+     Nested list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4-videos-nested-list.html">
+     Video: Advance list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-nested-dictionary.html">
+     Nested dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6-videos-nested-dictionary.html">
+     Video: Advance dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7-exercise-nested.html">
+     โจทย์: Set และ nested data structures
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     โจทย์: Data type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../oop.html">
+   Object-oriented programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module6/1-OOP.html">
+     Object-Oriented Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module6/2-videos-OOP.html">
+     Video: Object-Oriented Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module6/3-exercise-OOP.html">
+     โจทย์: Object-Oriented Programming
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nlp.html">
+   Natural Language Processing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/1-intro-NLP.html">
+     การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
+     Video: Natural Language Processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
+     Workshop - Text processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/3s-workshop-text-processing.html">
+     เฉลยแบบฝึกหัด Text processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/4-workshop-word-cloud.html">
+     Workshop - Word cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module7/5-workshop-lda.html">
+     Workshop - Topic modeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../scraping.html">
+   การดึงข้อมูลจากอินเตอร์เน็ต
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/1-api.html">
+     Application Programming Interface (API)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/2-videos-api.html">
+     Video: Serialization and API call
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/3-web-scraping.html">
+     Web scraping
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/4-videos-web-scraping.html">
+     Video: Web scraping
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pythonic.html">
+   Advanced Python features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/1-misc-python.html">
+     ฟีเจอร์อื่น ๆ ของไพธอน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/2-videos-misc-python.html">
+     Video: ฟีเจอร์อื่น ๆ ของไพธอน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/3-exercise-misc-python.html">
+     โจทย์
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/attapol/programming-nlp-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/8-exercise-data-type.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/book/module5/8-exercise-data-type.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ข้อ 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อ 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 7
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>โจทย์: Data type</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ข้อ 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   ข้อ 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   ข้อ 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   ข้อ 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   ข้อ 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   ข้อ 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   ข้อ 7
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="data-type">
+<h1>โจทย์: Data type<a class="headerlink" href="#data-type" title="Permalink to this headline">#</a></h1>
+<p>เวลาเราใช้ data structure หลายแบบมาประกอบกัน เราต้องคำนึงถึง type ตลอดเวลาที่เขียนโค้ด ในแต่ละข้อให้บอกว่า return type คืออะไร เช่น List of strings, list of tuples (string, string, int), dictionary (string → int) เป็นต้น</p>
+<section id="id1">
+<h2>ข้อ 1<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>ข้อมูล</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_list</span> <span class="o">=</span> \
+<span class="p">{</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">]</span> <span class="p">,</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s1">&#39;222-333-4444&#39;</span><span class="p">],</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">):</span> <span class="p">[</span><span class="s1">&#39;333-444-5555&#39;</span><span class="p">,</span> <span class="s1">&#39;777-555-1111&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">name_to_phone_list</span><span class="p">[(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">)]</span> <span class="c1"># return type อะไร</span>
+<span class="n">name_to_phone_list</span><span class="p">[(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">)][</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>ข้อ 2<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>animal = [ {&#39;dog&#39;:[&#39;ear&#39;,&#39;leg&#39;,&#39;tail&#39;,&#39;bark&#39;],&#39;cat&#39;:[&#39;eye&#39;,&#39;ear&#39;,&#39;tail&#39;]},
+{&#39;snake&#39;:[&#39;poison&#39;,&#39;tongue&#39;],&#39;frog&#39;:[&#39;hop&#39;,&#39;insect&#39;,&#39;rain&#39;]}]
+
+animal[1] # return type อะไร
+animal[0][‘cat’] # return type อะไร
+animal[1][‘frog’][1] # return type อะไร
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>ข้อ 3<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">news_dic</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;Cache-Control&quot;</span><span class="p">:</span> <span class="s2">&quot;public, max-age=300, must-revalidate&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;lastModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-06T11:01:00+07:00&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;news_id&quot;</span><span class="p">:</span> <span class="mi">85089</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;ฮือฮา! ชาวบ้านแห่กราบไหว้ใบไม้สิบแฉก&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publishTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-08-11T12:50:00+07:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;ความเชื่อ&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ไสยศาสตร์&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;เรื่องอัศจรรย์&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ข่าวฮิต&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;www.khaodee.com/85089&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;news_id&quot;</span><span class="p">:</span> <span class="mi">96686</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;กระทรวงศึกษาธิการชี้ ทำร้ายร่างกายนักเรียนมีความผิด&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publishTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-08-21T17:19:00+07:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;กระทรวงศึกษา&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;กระทรวงศึกษิการ&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ความรุนแรงในโรงเรียน&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ทำร้ายร่างกาย&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;www.khaodee.com/96686&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;news_id&quot;</span><span class="p">:</span> <span class="mi">19286</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;โลกตะลึง! นาซ่าพบสิ่งมีชีวิตบนดวงจันทร์&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publishTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-08-05T19:41:00+07:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;นาซ่า&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;มนุษย์ต่างดาว&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;อวกาศ&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;จักรวาล&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;www.khaodee.com/19286&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="n">news_dic</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+<span class="n">news_dic</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>ข้อ 4<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_lst</span> <span class="o">=</span> 
+<span class="p">[({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">1710501115187</span><span class="p">,</span>
+   <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Weiying&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">)},</span>
+  <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mf">99.88</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">]),</span>
+ <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">1030102285053</span><span class="p">,</span>
+   <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lelouch&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Politics&#39;</span><span class="p">,</span> <span class="s1">&#39;Material Arts&#39;</span><span class="p">)},</span>
+  <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">]),</span>
+ <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">2584275888067</span><span class="p">,</span>
+   <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Tunjiro&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Economics&#39;</span><span class="p">,</span> <span class="s1">&#39;Programming&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)},</span>
+  <span class="p">[</span><span class="s1">&#39;B+&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">]),</span>
+ <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">4080802291786</span><span class="p">,</span>
+   <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Somsak&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Thai&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">)},</span>
+  <span class="p">[</span><span class="s1">&#39;C+&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">])]</span>
+
+<span class="k">for</span> <span class="n">info</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">student_lst</span><span class="p">:</span> 
+   <span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+
+<span class="n">score</span> <span class="c1"># เป็น type อะไร</span>
+<span class="n">info</span> <span class="c1"># เป็น type อะไร</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>ข้อ 5<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phoneme_pairs</span> <span class="o">=</span> 
+<span class="p">[{</span><span class="s1">&#39;vowel&#39;</span><span class="p">:</span> <span class="p">[{(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="mf">0.0438</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.93</span><span class="p">}},</span>
+            <span class="p">{(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;ɛ&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.89</span><span class="p">}},</span>
+            <span class="p">{(</span><span class="s1">&#39;ɛ&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="mf">0.0188</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.995</span><span class="p">}}</span>
+            <span class="p">]</span>
+ <span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;consonant&#39;</span><span class="p">:</span> <span class="p">[{(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="mf">0.06</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.763</span><span class="p">}},</span>
+                <span class="p">{(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="mf">0.0588</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.611</span><span class="p">}}</span>
+                <span class="p">]</span>
+ <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">phoneme_pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;vowel&#39;</span><span class="p">]</span> <span class="c1">#return type อะไร</span>
+<span class="n">phoneme_pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;vowel&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;ɛ&quot;</span><span class="p">)][</span><span class="s2">&quot;fnLoad&quot;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>ข้อ 6<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">homework_info</span> <span class="o">=</span> 
+<span class="p">{</span><span class="s1">&#39;AM001&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Mr.&#39;</span><span class="p">,</span> <span class="s1">&#39;Robert&#39;</span><span class="p">,</span> <span class="s1">&#39;Kim&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="s1">&#39;lateStatus&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="s1">&#39;American History&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;wordCount&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span>
+ <span class="s1">&#39;AM002&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Mr.&#39;</span><span class="p">,</span> <span class="s1">&#39;Francis&#39;</span><span class="p">,</span> <span class="s1">&#39;Owen&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="s1">&#39;lateStatus&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="s1">&#39;American History&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;wordCount&#39;</span><span class="p">:</span> <span class="mi">520</span><span class="p">},</span>
+ <span class="s1">&#39;LT001&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Ms.&#39;</span><span class="p">,</span> <span class="s1">&#39;Rebecca&#39;</span><span class="p">,</span> <span class="s1">&#39;Lawrence&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="s1">&#39;lateStatus&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="s1">&#39;Literature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;wordCount&#39;</span><span class="p">:</span> <span class="mi">348</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">homework_info</span><span class="p">[</span><span class="s2">&quot;AM002&quot;</span><span class="p">][</span><span class="s1">&#39;lateStatus&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>ข้อ 7<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">required_langtech_course</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;2206323&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;INFO SYS HUMAN&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;13:00-16:00&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209261&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;BASIC PROG NLP&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Friday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;13:30-16:30&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209304&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;GRAM SYSTEM&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Thursday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;9:30-12:30&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209308&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;SOUND SYSTEM&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;13:00-16:00&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2206385&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;DATA MGT HUMAN&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;13:00-16:00&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209305&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;MEANING LANG&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Wednesday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;9:30-12:30&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209372&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;INTRO COMPU LING&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Thursday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;9:30-12:30&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2209368&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;LING ANALYS THAI&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Thursday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;9:30-12:30&#39;</span>
+                <span class="p">},</span>
+    <span class="s1">&#39;2206366&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;STAT HUMAN RES&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
+                <span class="s1">&#39;semester&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;day&#39;</span><span class="p">:</span><span class="s1">&#39;Thursday&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="s1">&#39;13:00-16:00&#39;</span>
+                <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">required_langtech_course</span><span class="p">[</span><span class="s1">&#39;2209368&#39;</span><span class="p">][</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="c1"># คือ type อะไร</span>
+<span class="n">required_langtech_course</span><span class="p">[</span><span class="s1">&#39;2209368&#39;</span><span class="p">]</span> <span class="c1"># คือ type อะไร</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book/module5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="7-exercise-nested.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">โจทย์: Set และ nested data structures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../oop.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Object-oriented programming</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Attapol Thamrongrattanarit<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
