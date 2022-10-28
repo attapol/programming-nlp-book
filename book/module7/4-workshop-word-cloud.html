@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="LDA Workshop" href="7%20LDA%20workshop.html" />
-    <link rel="prev" title="Workshop - Topic modeling" href="4-workshop-LDA.html" />
+    <link rel="next" title="Workshop - Topic modeling" href="5-workshop-lda.html" />
+    <link rel="prev" title="เฉลยแบบฝึกหัด Text processing" href="3s-workshop-text-processing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -376,19 +376,14 @@ const thebe_selector_output = ".output, .cell_output"
      เฉลยแบบฝึกหัด Text processing
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4-workshop-LDA.html">
-     Workshop - Topic modeling
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Workshop - Word cloud
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="7%20LDA%20workshop.html">
-     LDA Workshop
+    <a class="reference internal" href="5-workshop-lda.html">
+     Workshop - Topic modeling
     </a>
    </li>
   </ul>
@@ -691,59 +686,20 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">ปัญหาความเหลื่อมล้ำไม่ได้เกิดขึ้นแค่ในประเทศไทย แต่เกิดขึ้นกับประเทศมหาอำนาจอย่างสหรัฐฯ เช่นเดียวกัน ทางออกที่สหรัฐฯ กำลังจะทำคือการร่างกฎหมาย ‘การเก็บภาษีมหาเศรษฐี’ ขึ้นมาเพื่อแก้ปัญหานี้ ซึ่งถูกเสนอโดยพรรคเดโมแครต เพื่อที่จะนำเงินจากภาษีเหล่านี้มาใช้กับโครงข่ายรองรับทางสังคม (Social Safety Net) ไม่ว่าจะเป็นการช่วยเหลือผู้ที่ได้รับผลกระทบจากวิกฤตต่างๆ ผู้ที่ตกงาน ผู้ด้อยโอกาส เป็นต้น </span>
-
-<span class="s2"> </span>
-
 <span class="s2">มหาเศรษฐีที่รวยที่สุดในโลก ณ เวลานี้คือ อีลอน มัสก์ โดยบริษัทรถยนต์ไฟฟ้าของเขาอย่าง Tesla แทบจะเรียกได้ว่าถูกสร้างขึ้นมาด้วยเงินของรัฐบาลเลยก็ว่าได้ เนื่องจากหลายปีที่ผ่านมารัฐบาลต้องการจูงใจให้ประชาชนใช้รถยนต์ไฟฟ้ามากขึ้น จึงออกนโยบายต่างๆ เพื่อสนับสนุน </span>
-
-<span class="s2"> </span>
-
 <span class="s2">โดยบริษัทที่ได้รับผลประโยชน์ไปเต็มๆ เลยคือ Tesla ซึ่งผลกำไรส่วนใหญ่ในปัจจุบันของบริษัทมาจากการขายเครดิตรถยนต์ไฟฟ้า ที่รัฐบาลกำหนดให้ผู้ผลิตรถยนต์ต่างๆ ต้องผลิตรถยนต์ไฟฟ้าให้ได้ตามจำนวนที่กำหนด ถ้าผลิตไม่ถึงที่กำหนดจะต้องจ่ายค่าปรับเป็นจำนวนมหาศาล ทำให้ผู้ผลิตรถยนต์รายอื่นๆ ต้องมาซื้อเครดิตจาก Tesla แทน เนื่องจาก Tesla มีการผลิตรถยนต์ไฟฟ้าไปแล้วเป็นจำนวนมาก จนสามารถขายเครดิตให้กับผู้ผลิตรายอื่นๆ ได้อย่างเหลือเฟือ</span>
-
-<span class="s2"> </span>
-
 <span class="s2">ซึ่งการสนับสนุนของรัฐบาลนี้อาจเป็นเหตุผลที่ว่า ทำไม Tesla ถึงมีมูลค่ามากกว่า Toyota ถึง 3 เท่า ทั้งๆ ที่ขายรถยนต์ได้น้อยกว่ามาก </span>
-
-<span class="s2"> </span>
-
 <span class="s2">นอกจากนั้นองค์กรไม่แสวงหาผลกำไรอย่าง ProPublica ได้เปิดเผยว่า อีลอน มัสก์ ยังเป็น 1 ในเหล่ามหาเศรษฐีที่ร่ำรวยที่สุดในโลก ที่ใช้วิธีการต่างๆ เพื่อหลีกเลี่ยงการจ่ายภาษีเงินได้บุคคลธรรมดาอีกด้วย อย่างมหาเศรษฐีอีกคนที่ใช้วิธีการเดียวกันนี้คือ เจฟฟ์ เบโซส์ เจ้าของ Amazon และบริษัทท่องอวกาศอย่าง Blue Origin </span>
-
-<span class="s2"> </span>
-
 <span class="s2">ล่าสุด มัสก์ออกมาเคลื่อนไหวเกี่ยวกับประเด็นนี้ โดยทวีตว่า ‘การเก็บภาษีเหล่าเศรษฐี’ จะช่วยแก้ปัญหาหนี้สินของรัฐบาลได้เพียงเล็กน้อยเท่านั้น สิ่งที่ควรแก้ไขจริงๆ คือการใช้จ่ายของรัฐบาลมากกว่า พร้อมกล่าวเพิ่มเติมว่า หากรัฐเก็บภาษีจากเหล่ามหาเศรษฐีได้ครบ 100% แล้วก็ยังไม่พอต่อการใช้หนี้อยู่ดี และต้องหันไปเก็บภาษีเพิ่มกับประชาชนทั่วไปในภายหลัง โดยทวีตเพิ่มเติมว่าหากเก็บจากเหล่ามหาเศรษฐีแล้วก็ยังได้เพียงแค่ 10% ของ 3.5 ล้านล้านดอลลาร์ของหนี้ที่มีอยู่เท่านั้น และอีก 90% ที่เหลือจะเก็บจากใคร ก็เก็บจาก ‘คุณ’ ไง </span>
-
-<span class="s2"> </span>
-
 <span class="s2">ทำไมภาษีมหาเศรษฐีจึงจำเป็น?</span>
 <span class="s2">มหาเศรษฐีระดับโลกหลายคนใช้การหลีกเลี่ยงภาษีโดยวิธีการ ‘ซื้อ กู้ ตาย’ อธิบายโดยศาสตราจารย์ด้านกฎหมายของมหาวิทยาลัยเซาเทิร์นแคลิฟอร์เนีย เอ็ดเวิร์ด เจ. แมคคอฟเฟอรี โดยมหาเศรษฐีจะนำเงินที่ได้จากบริษัทไปซื้อทรัพย์สินต่างๆ แทนการถือเป็นเงินสด ตราบใดที่ทรัพย์สินเหล่านั้นไม่ได้ถูกนำไปขายก็จะไม่ต้องเสียภาษี </span>
-
-<span class="s2"> </span>
-
 <span class="s2">ต่อมาคือการ ‘กู้’ มหาเศรษฐีจะเลือกรับเงินเดือนจำนวนน้อยๆ เพื่อหลีกเลี่ยงภาษีเงินได้ แต่จะรับเป็นหุ้นแทนซึ่งมีอัตราภาษีที่น้อยกว่า หรืออีกวิธีคือใช้การกู้แทน เนื่องจากมหาเศรษฐีเหล่านี้มีเครดิตที่ดีมากจึงเสียดอกเบี้ยในอัตราที่ต่ำมากๆ ประมาณแค่ 3% เท่านั้น</span>
-
-<span class="s2"> </span>
-
 <span class="s2">และวิธีสุดท้ายคือ ‘ตาย’ เมื่อเหล่ามหาเศรษฐีต้องจากโลกนี้ไป จะสามารถถ่ายโอนทรัพย์สินต่างๆ ให้กับทายาทได้โดยไม่ต้องเสียภาษี ไม่ว่าจะเป็น หุ้น ที่ดิน บ้าน รถ นอกจากนั้นเหล่ามหาเศรษฐียังจัดตั้งมูลนิธิ กองทุนต่างๆ เพื่อบริจาคให้กับสังคมอยู่เรื่อยๆ เมื่อมหาเศรษฐีเหล่านั้นตายไปจะได้รับการยกเว้นภาษีในการถ่ายโอนอสังหาริมทรัพย์ให้กับลูกหลาน </span>
-
-<span class="s2"> </span>
-
 <span class="s2">สรุปก็คือเหล่ามหาเศรษฐีมีเงินมากมายมหาศาล แต่กลับจ่ายภาษีจริงในอัตราที่ต่ำกว่าคนธรรมดาทั่วไปมาก ยกตัวอย่าง อีลอน มัสก์ ไม่มีการเสียภาษีเลยในปี 2018 จากการใช้วิธีการต่างๆ เหล่านี้</span>
-
-<span class="s2"> </span>
-
 <span class="s2">ภาษีมหาเศรษฐีทำงานอย่างไร?</span>
 <span class="s2">แผนการเก็บภาษีมหาเศรษฐีของ รอน ไวเดน วุฒิสมาชิกสหรัฐอเมริกา พรรคเดโมแครต มีความยาวถึง 107 หน้า โดยสำนักข่าว CNN สรุปมาดังนี้ สำหรับสินทรัพย์ที่สามารถซื้อขายได้อย่างหุ้น มหาเศรษฐีจะต้องจ่ายภาษีที่ได้กำไรจากการขายหุ้นในอัตรา 23.8% แต่พวกเขาก็สามารถนำส่วนที่ขาดทุนจากหุ้นไปชดเชยภาษีเงินได้หรือภาษีที่ได้จากกำไรในอนาคตได้ โดยสามารถนำส่วนที่ขาดทุนย้อนหลังถึง 3 ปี มาชดเชยภาษีในอนาคตได้</span>
-
-<span class="s2"> </span>
-
 <span class="s2">นอกจากนั้นไวเดนยังมีวิธีที่ชาญฉลาดในการจัดการกับมหาเศรษฐีที่โอนความมั่งคั่งไปยังอสังหาริมทรัพย์และสินทรัพย์อื่นๆ ที่ไม่สามารถซื้อขายได้ โดยจะไม่เก็บภาษีทุกปี แต่จะคิดดอกเบี้ยเพิ่มเติมเมื่อขายสินทรัพย์เหล่านั้นแทน</span>
-
-<span class="s2"> </span>
-
 <span class="s2">แน่นอนว่าภาษีมหาเศรษฐีจะกระทบกับเหล่ามหาเศรษฐีเป็นหลัก จากข้อมูลของสำนักงานสำรวจสำมะโนประชากรของสหรัฐฯ ระบุว่า มีประชากรทั้งหมดประมาณ 333 ล้านคนในสหรัฐอเมริกา และมีไม่เกิน 700 คนเท่านั้นที่เป็นมหาเศรษฐี หรือเท่ากับ 0.0002% ของประชากรทั้งหมด โดยการเก็บภาษีมหาเศรษฐีจะเก็บกับผู้ที่มีรายได้มากกว่า 100 ล้านดอลลาร์ (3.3 พันล้านบาท) ติดต่อกันเป็นเวลา 3 ปี</span>
-
-<span class="s2"> </span>
-
 <span class="s2">นอกจากนั้นในสหรัฐฯ ยังมีมหาเศรษฐีหน้าใหม่เกิดขึ้นตลอดเวลา อย่างบริษัทผู้ผลิตวัคซีน Moderna และบริษัทอื่นๆ ที่เกี่ยวข้องกับวัคซีน ก็ได้รับเม็ดเงินสนับสนุนจากรัฐบาลเป็นจำนวนมาก เช่นเดียวกับ Tesla ซึ่งการเก็บภาษีมหาเศรษฐีนี้จะสามารถนำเงินมาพัฒนาสังคม และลดความเหลื่อมล้ำที่รุนแรงในสหรัฐฯ ได้</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
@@ -787,20 +743,34 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">font_path</span> <span class="o">=</span> <span class="s1">&#39;THSarabun.ttf&#39;</span>
-<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">width</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>  
-<span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
-<span class="n">wc</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;wc.png&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl -O https://github.com/attapol/programming-nlp-book/raw/main/book/module7/data/THSarabunNew.ttf
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">font_path</span> <span class="o">=</span> <span class="s1">&#39;THSarabunNew.ttf&#39;</span>
+<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+    <span class="n">width</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>  
+<span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">wc</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;wc.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4-workshop-word-cloud_7_0.png" src="../../_images/4-workshop-word-cloud_7_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x7f7dac76ef10&gt;
 </pre></div>
 </div>
 </div>
@@ -810,11 +780,18 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_color_func</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">&#39;hsl(60, 70%, </span><span class="si">{:n}</span><span class="s1">%)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">freq</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">/</span><span class="mi">85</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="n">custom_color_func</span><span class="p">)</span>  
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="n">custom_color_func</span><span class="p">)</span>  
 <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">wc</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;shaded-wc.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4-workshop-word-cloud_8_0.png" src="../../_images/4-workshop-word-cloud_8_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x7f7dac7169a0&gt;
 </pre></div>
 </div>
 </div>
@@ -848,17 +825,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="4-workshop-LDA.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3s-workshop-text-processing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Workshop - Topic modeling</p>
+            <p class="prev-next-title">เฉลยแบบฝึกหัด Text processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="7%20LDA%20workshop.html" title="next page">
+    <a class='right-next' id="next-link" href="5-workshop-lda.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">LDA Workshop</p>
+        <p class="prev-next-title">Workshop - Topic modeling</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
