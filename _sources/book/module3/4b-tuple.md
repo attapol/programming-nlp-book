@@ -25,7 +25,7 @@ print (last_name)
 เพื่อความสะดวกเรามักจะ*กระจาย*ค่าของทูเปิลใส่ตัวแปรหลาย ๆ ตัวพร้อม ๆ กัน เช่น 
 ```python
 first_last_name = ('อรรถพล', 'ธำรงรัตนฤทธิ์')
-name, last_name = first_last_name
+first_name, last_name = first_last_name
 print (first_name)
 print (last_name)
 ```

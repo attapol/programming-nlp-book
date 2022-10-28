@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Workshop - Text processing &#8212; Programming for NLP</title>
+    <title>เฉลยแบบฝึกหัด Text processing &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="เฉลยแบบฝึกหัด Text processing" href="3s-workshop-text-processing.html" />
-    <link rel="prev" title="Video: Natural Language Processing" href="2-videos-intro-NLP.html" />
+    <link rel="next" title="Workshop - Topic modeling" href="4-workshop-LDA.html" />
+    <link rel="prev" title="Workshop - Text processing" href="3-workshop-text-processing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -366,13 +366,13 @@ const thebe_selector_output = ".output, .cell_output"
      Video: Natural Language Processing
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-workshop-text-processing.html">
      Workshop - Text processing
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3s-workshop-text-processing.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      เฉลยแบบฝึกหัด Text processing
     </a>
    </li>
@@ -511,7 +511,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/attapol/programming-nlp-book/main?urlpath=tree/book/module7/3-workshop-text-processing.ipynb"
+        <a href="https://mybinder.org/v2/gh/attapol/programming-nlp-book/main?urlpath=tree/book/module7/3s-workshop-text-processing.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -529,7 +529,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module7/3-workshop-text-processing.ipynb"
+        <a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module7/3s-workshop-text-processing.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -589,7 +589,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module7/3-workshop-text-processing.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module7/3s-workshop-text-processing.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -617,7 +617,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module7/3-workshop-text-processing.ipynb"
+        <a href="../../_sources/book/module7/3s-workshop-text-processing.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -654,130 +654,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Workshop - Text processing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#word-tokenization">
-   ตัดคำ word tokenization ภาษาไทย
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   ตัดคำ word tokenization ภาษาอังกฤษ
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sentence-tokenization">
-   ตัดประโยค sentence tokenization ภาษาไทย
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   ตัดประโยค sentence tokenization ภาษาอังกฤษ
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stop-words">
-   Stop words
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#removing-punctuation">
-   Removing punctuation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Workshop - Text processing</h1>
+                <h1>เฉลยแบบฝึกหัด Text processing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Workshop - Text processing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#word-tokenization">
-   ตัดคำ word tokenization ภาษาไทย
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   ตัดคำ word tokenization ภาษาอังกฤษ
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sentence-tokenization">
-   ตัดประโยค sentence tokenization ภาษาไทย
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   ตัดประโยค sentence tokenization ภาษาอังกฤษ
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stop-words">
-   Stop words
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#removing-punctuation">
-   Removing punctuation
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -785,254 +678,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="workshop-text-processing">
-<h1>Workshop - Text processing<a class="headerlink" href="#workshop-text-processing" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pythainlp
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install attacut
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="word-tokenization">
-<h1>ตัดคำ word tokenization ภาษาไทย<a class="headerlink" href="#word-tokenization" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythainlp</span>
-<span class="kn">import</span> <span class="nn">attacut</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;ข้างนอกสุกใส ข้่างในต๊ะติ๊งโหน่ง&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ข้างนอก&#39;, &#39;สุกใส&#39;, &#39; &#39;, &#39;ข้่าง&#39;, &#39;ใน&#39;, &#39;ต๊ะติ๊ง&#39;, &#39;โหน่ง&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;ข้างนอกสุกใส ข้่างในต๊ะติ๊งโหน่ง&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;attacut&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ข้าง&#39;, &#39;นอก&#39;, &#39;สุกใส&#39;, &#39; &#39;, &#39;ข้่าง&#39;, &#39;ใน&#39;, &#39;ต๊ะติ๊งโหน่ง&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>ตัดคำ word tokenization ภาษาอังกฤษ<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /Users/te/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;COVID-19, which caused problems worldwide, is still a problem in the U.S.A. until today.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COVID-19&#39;,
- &#39;,&#39;,
- &#39;which&#39;,
- &#39;caused&#39;,
- &#39;problems&#39;,
- &#39;worldwide&#39;,
- &#39;,&#39;,
- &#39;is&#39;,
- &#39;still&#39;,
- &#39;a&#39;,
- &#39;problem&#39;,
- &#39;in&#39;,
- &#39;the&#39;,
- &#39;U.S.A.&#39;,
- &#39;until&#39;,
- &#39;today&#39;,
- &#39;.&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sentence-tokenization">
-<h1>ตัดประโยค sentence tokenization ภาษาไทย<a class="headerlink" href="#sentence-tokenization" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pythainlp</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s1">&#39;ระฆังดี ถึงแม้คนไม่ตีก็ดัง ระฆังไม่ดีไม่ตีก็ไม่ดัง&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ระฆังดี &#39;, &#39;ถึงแม้คนไม่ตีก็ดัง &#39;, &#39;ระฆังไม่ดีไม่ตีก็ไม่ดัง&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id2">
-<h1>ตัดประโยค sentence tokenization ภาษาอังกฤษ<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s1">&#39;Punkt knows that the periods in Mr. Smith and Johann S. Bach are not sentence boundaries.  But he was with Mrs. Bond that week.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Punkt knows that the periods in Mr. Smith and Johann S. Bach are not sentence boundaries.&#39;,
- &#39;But he was with Mrs.&#39;,
- &#39;Bond that week.&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="stop-words">
-<h1>Stop words<a class="headerlink" href="#stop-words" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;ข้างนอกสุกใส ข้่างในต๊ะติ๊งโหน่ง&#39;</span><span class="p">)</span>
-<span class="n">tokens_no_stop_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">thai_stopwords</span><span class="p">())</span>
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span><span class="p">:</span>
-        <span class="n">tokens_no_stop_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">tokens_no_stop_words</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ข้างนอก&#39;, &#39;สุกใส&#39;, &#39; &#39;, &#39;ข้่าง&#39;, &#39;ใน&#39;, &#39;ต๊ะติ๊ง&#39;, &#39;โหน่ง&#39;]
-[&#39;ข้างนอก&#39;, &#39;สุกใส&#39;, &#39; &#39;, &#39;ข้่าง&#39;, &#39;ต๊ะติ๊ง&#39;, &#39;โหน่ง&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /Users/te/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;COVID-19, which caused problems worldwide, is still a problem in the U.S.A. until today.&#39;</span><span class="p">)</span>
-<span class="n">tokens_no_stop_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="p">:</span>
-        <span class="n">tokens_no_stop_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">tokens_no_stop_words</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COVID-19&#39;, &#39;,&#39;, &#39;which&#39;, &#39;caused&#39;, &#39;problems&#39;, &#39;worldwide&#39;, &#39;,&#39;, &#39;is&#39;, &#39;still&#39;, &#39;a&#39;, &#39;problem&#39;, &#39;in&#39;, &#39;the&#39;, &#39;U.S.A.&#39;, &#39;until&#39;, &#39;today&#39;, &#39;.&#39;]
-[&#39;COVID-19&#39;, &#39;,&#39;, &#39;caused&#39;, &#39;problems&#39;, &#39;worldwide&#39;, &#39;,&#39;, &#39;still&#39;, &#39;problem&#39;, &#39;U.S.A.&#39;, &#39;today&#39;, &#39;.&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="removing-punctuation">
-<h1>Removing punctuation<a class="headerlink" href="#removing-punctuation" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^[ก-์a-zA-Z]+$&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s1">&#39;COVID-19, which caused problems worldwide, is still a problem in the U.S.A. until today.&#39;</span><span class="p">)</span>
-<span class="n">tokens_no_punct</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">patt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-        <span class="n">tokens_no_punct</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">tokens_no_punct</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COVID-19&#39;, &#39;,&#39;, &#39;which&#39;, &#39;caused&#39;, &#39;problems&#39;, &#39;worldwide&#39;, &#39;,&#39;, &#39;is&#39;, &#39;still&#39;, &#39;a&#39;, &#39;problem&#39;, &#39;in&#39;, &#39;the&#39;, &#39;U.S.A.&#39;, &#39;until&#39;, &#39;today&#39;, &#39;.&#39;]
-[&#39;which&#39;, &#39;caused&#39;, &#39;problems&#39;, &#39;worldwide&#39;, &#39;is&#39;, &#39;still&#39;, &#39;a&#39;, &#39;problem&#39;, &#39;in&#39;, &#39;the&#39;, &#39;until&#39;, &#39;today&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="text-processing">
+<h1>เฉลยแบบฝึกหัด Text processing<a class="headerlink" href="#text-processing" title="Permalink to this headline">#</a></h1>
 <p>เขียนฟังก์ชันที่นับจำนวนคำภาษาไทย โดยที่ต้องไม่นับ punctuation และ stopwords</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1097,6 +744,112 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pythainlp</span>
+<span class="k">def</span> <span class="nf">get_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">thai_stopwords</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+        <span class="n">token_list</span> <span class="o">=</span> <span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^[ก-์]+$&#39;</span><span class="p">)</span>   
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">token_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="ow">and</span> <span class="n">patt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+                <span class="n">filtered_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filtered_tokens</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">get_tokens</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wordcloud</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">/Users/te/programming-nlp-book/book/module7/3s-workshop-text-processing.ipynb Cell 5</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/Users/te/programming-nlp-book/book/module7/3s-workshop-text-processing.ipynb#X42sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="nn">wordcloud</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;wordcloud&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install wordcloud
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting wordcloud
+  Downloading wordcloud-1.8.2.2-cp39-cp39-macosx_10_9_x86_64.whl (160 kB)
+     |████████████████████████████████| 160 kB 367 kB/s eta 0:00:01
+?25hRequirement already satisfied: numpy&gt;=1.6.1 in /opt/anaconda3/lib/python3.9/site-packages (from wordcloud) (1.21.5)
+Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.9/site-packages (from wordcloud) (3.5.1)
+Requirement already satisfied: pillow in /opt/anaconda3/lib/python3.9/site-packages (from wordcloud) (9.0.1)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (4.25.0)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (3.0.4)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (1.3.2)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (21.3)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/anaconda3/lib/python3.9/site-packages (from matplotlib-&gt;wordcloud) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/anaconda3/lib/python3.9/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;wordcloud) (1.16.0)
+Installing collected packages: wordcloud
+Successfully installed wordcloud-1.8.2.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl -o https://www.fontmirror.com/app_public/files/t/1/Sarabun-Regular_f8df9d2a0f269458bab08b8733e74bf6.ttf
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span> <span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="n">color_func</span><span class="p">)</span> 
+<span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3s-workshop-text-processing_9_0.png" src="../../_images/3s-workshop-text-processing_9_0.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1126,17 +879,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2-videos-intro-NLP.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3-workshop-text-processing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Video: Natural Language Processing</p>
+            <p class="prev-next-title">Workshop - Text processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3s-workshop-text-processing.html" title="next page">
+    <a class='right-next' id="next-link" href="4-workshop-LDA.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">เฉลยแบบฝึกหัด Text processing</p>
+        <p class="prev-next-title">Workshop - Topic modeling</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

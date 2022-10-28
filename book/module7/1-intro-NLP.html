@@ -256,6 +256,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../module4/3-regular-expression.html">
+     Regular expression
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../module4/4-videos-regex.html">
      Video: Regular Expression
     </a>
@@ -367,8 +372,23 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="3s-workshop-text-processing.html">
+     เฉลยแบบฝึกหัด Text processing
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="4-workshop-LDA.html">
      Workshop - Topic modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4-workshop-word-cloud.html">
+     Workshop - Word cloud
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7%20LDA%20workshop.html">
+     LDA Workshop
     </a>
    </li>
   </ul>
@@ -416,13 +436,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module9/2-videos-misc-python.html">
-     Video: Advance Python features
+    <a class="reference internal" href="../module9/1-misc-python.html">
+     ฟีเจอร์อื่น ๆ ของไพธอน
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module9/PC9%20Python%20tricks.html">
-     Problem 1: List comprehension 1
+    <a class="reference internal" href="../module9/2-videos-misc-python.html">
+     Video: ฟีเจอร์อื่น ๆ ของไพธอน
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/3-exercise-misc-python.html">
+     โจทย์
     </a>
    </li>
   </ul>
@@ -582,12 +607,53 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   การใช้ไลบรารี
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#default-argument">
+   Default argument
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     ตัวอย่างที่ 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     ตัวอย่างที่ 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -599,6 +665,36 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   การใช้ไลบรารี
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#default-argument">
+   Default argument
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     ตัวอย่างที่ 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     ตัวอย่างที่ 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -609,6 +705,81 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>Under construction</p>
+<section id="id2">
+<h2>การใช้ไลบรารี<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>เรามักจะใช้ไลบรารีที่เปิดให้ใช้ฟรี และใช้คำสั่งบน terminal <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> เพื่อติดตั้งลงบนเครื่อง เราควรตรวจสอบว่าเราติดตั้งถูก environment หรือไม่ ถ้าหากใช้บน Colab เราจะต้องติดตั้งไลบรารีที่ต้องการใช้ทุกครั้งที่เปิด Colab ขึ้นมาใช้งาน</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ไลบรารี (library) คือ โค้ดที่สามารถรวมกันเป็นกลุ่มก้อนเพื่อนำมาใช้งานร่วมกัน มักจะพูดถึงโค้ดที่คนอื่นเขียนเอาไว้ให้และเราสามารถดาวน์โหลดลงมาใช้ได้เลย</p>
+</aside>
+</section>
+<section id="default-argument">
+<h2>Default argument<a class="headerlink" href="#default-argument" title="Permalink to this headline">#</a></h2>
+<p>Default argument เป็น argument ที่เรามีค่า default ให้อยู่แล้วจะใส่เองหรือไม่ใส่เองก็ได้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_volume</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span> <span class="o">*</span> <span class="n">height</span>
+
+<span class="n">calc_volume</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">calc_volume</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">calc_volume</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">calc_volume</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>                       <span class="c1"># ไม่ได้ เพราะใส่ไม่พอ length ไม่รู้ค่าอะไร</span>
+<span class="n">calc_volume</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>          <span class="c1"># จะผสมก็ได้ แต่ต้องใช้ keyword arg หลังสุด</span>
+<span class="n">calc_volume</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>         <span class="c1"># ไม่ได้</span>
+<span class="n">calc_volume</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>   <span class="c1"># ไม่ได้</span>
+</pre></div>
+</div>
+<p>default argument ใช้กันบ่อยมาก ๆ เวลาใช้ไลบรารีต่าง ๆ
+เนื่องจากไลบรารีที่เราใช้ มักจะมีฟังก์ชันที่ต้องใช้ argument เยอะ ๆ
+ข้อดี คือเราสามารถปรับวิธีการใช้งาน function นั้นได้เยอะ
+ข้อเสีย คือกว่าจะใช้ได้ต้องเอาค่า argument มาใส่ให้ครบซึ่งทำให้ใช้งานไม่สะดวก และบางทีก็ลืมว่าต้องใส่อะไรบ้าง ลำดับอะไรมาก่อนมาหลัง</p>
+<p>วิธีแก้คือใช้ default argument คือใส่ค่า default ไปให้ก่อนเลย แล้วถ้าอยากปรับอะไรก็แก้โดยการใช้ keyword argument ระบุไปเลยว่าอยากจะแก้ค่า argument ตัวไหน โดยไม่ต้องสนใจลำดับที่เรียงอยู่บนฟังก์ชัน</p>
+<section id="id3">
+<h3>ตัวอย่างที่ 1<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>เวลาเราเรียกใช้ split เรามักจะไม่ใช้ argument อะไรเลย เพราะว่า default มันกำหนดมาให้แล้วแต่ว่าจะปรับเป็นอย่างอื่นก็ได้ ดังนี้</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> เราระบุได้ว่าจะใช้อะไรเป็นตัวคั่นกลางในการ split</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxsplit</span></code> เรากำหนดได้ด้วยว่าจะให้มัน split ได้มากที่สุดกี่ครั้ง</p></li>
+</ul>
+<p>จาก documentation ของ method นี้เราเห็นว่า <code class="docutils literal notranslate"><span class="pre">maxsplit=-1</span></code>  คือมีค่า default เป็น -1 เราจึงไม่จำเป็นต้องตั้งค่าเวลาเรียกใช้ method นี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">Return</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">words</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">string</span><span class="p">,</span> <span class="n">using</span> <span class="n">sep</span> <span class="k">as</span> <span class="n">the</span> <span class="n">delimiter</span> <span class="n">string</span><span class="o">.</span> <span class="n">If</span> <span class="n">maxsplit</span> <span class="ow">is</span> <span class="n">given</span><span class="p">,</span> <span class="n">at</span> <span class="n">most</span> <span class="n">maxsplit</span> <span class="n">splits</span> <span class="n">are</span> <span class="n">done</span> <span class="p">(</span><span class="n">thus</span><span class="p">,</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">will</span> <span class="n">have</span> <span class="n">at</span> <span class="n">most</span> <span class="n">maxsplit</span><span class="o">+</span><span class="mi">1</span> <span class="n">elements</span><span class="p">)</span><span class="o">.</span> <span class="n">If</span> <span class="n">maxsplit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">specified</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">then</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">limit</span> <span class="n">on</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">splits</span> <span class="p">(</span><span class="nb">all</span> <span class="n">possible</span> <span class="n">splits</span> <span class="n">are</span> <span class="n">made</span><span class="p">)</span><span class="o">.</span>
+
+<span class="n">If</span> <span class="n">sep</span> <span class="ow">is</span> <span class="n">given</span><span class="p">,</span> <span class="n">consecutive</span> <span class="n">delimiters</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">grouped</span> <span class="n">together</span> <span class="ow">and</span> <span class="n">are</span> <span class="n">deemed</span> <span class="n">to</span> <span class="n">delimit</span> <span class="n">empty</span> <span class="n">strings</span> <span class="p">(</span><span class="k">for</span> <span class="n">example</span><span class="p">,</span> <span class="s1">&#39;1,,2&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="n">returns</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">])</span><span class="o">.</span> <span class="n">The</span> <span class="n">sep</span> <span class="n">argument</span> <span class="n">may</span> <span class="n">consist</span> <span class="n">of</span> <span class="n">multiple</span> <span class="n">characters</span> <span class="p">(</span><span class="k">for</span> <span class="n">example</span><span class="p">,</span> <span class="s1">&#39;1&lt;&gt;2&lt;&gt;3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="p">)</span> <span class="n">returns</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">])</span><span class="o">.</span> <span class="n">Splitting</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">string</span> <span class="k">with</span> <span class="n">a</span> <span class="n">specified</span> <span class="n">separator</span> <span class="n">returns</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">]</span><span class="o">.</span>
+
+<span class="n">If</span> <span class="n">sep</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">specified</span> <span class="ow">or</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> <span class="n">a</span> <span class="n">different</span> <span class="n">splitting</span> <span class="n">algorithm</span> <span class="ow">is</span> <span class="n">applied</span><span class="p">:</span> <span class="n">runs</span> <span class="n">of</span> <span class="n">consecutive</span> <span class="n">whitespace</span> <span class="n">are</span> <span class="n">regarded</span> <span class="k">as</span> <span class="n">a</span> <span class="n">single</span> <span class="n">separator</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">result</span> <span class="n">will</span> <span class="n">contain</span> <span class="n">no</span> <span class="n">empty</span> <span class="n">strings</span> <span class="n">at</span> <span class="n">the</span> <span class="n">start</span> <span class="ow">or</span> <span class="n">end</span> <span class="k">if</span> <span class="n">the</span> <span class="n">string</span> <span class="n">has</span> <span class="n">leading</span> <span class="ow">or</span> <span class="n">trailing</span> <span class="n">whitespace</span><span class="o">.</span> <span class="n">Consequently</span><span class="p">,</span> <span class="n">splitting</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">string</span> <span class="n">consisting</span> <span class="n">of</span> <span class="n">just</span> <span class="n">whitespace</span> <span class="k">with</span> <span class="n">a</span> <span class="kc">None</span> <span class="n">separator</span> <span class="n">returns</span> <span class="p">[]</span><span class="o">.</span>
+
+<span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="s1">&#39; 1  2   3  &#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="n">returns</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">],</span> <span class="ow">and</span> <span class="s1">&#39;  1  2   3  &#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="n">returns</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2   3  &#39;</span><span class="p">]</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>ตัวอย่างที่ 2<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>library nltk มี documentation บอกว่าให้ใช้ฟังก์ชันนี้ในการตัดข้อความให้เป็น list ของประโยค</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nltk.tokenize.sent_tokenize(text, language=&#39;english&#39;)
+
+Return a sentence-tokenized copy of text, using NLTK’s recommended sentence tokenizer (currently PunktSentenceTokenizer for the specified language).
+
+Parameters
+text – text to split into sentences
+language – the model name in the Punkt corpus
+</pre></div>
+</div>
+<p>เราไม่จำเป็นต้องระบุว่ากำลังตัดประโยคภาษาอะไร เพราะว่า default argument ระบุมาแล้วว่าเป็นภาษาอังกฤษ แต่ว่าเราสามารถเปลี่ยนค่านี้ได้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">)</span>  
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;fr&#39;</span><span class="p">)</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">()</span> <span class="c1"># ไม่ได้ เพราะว่าไม่ได้ระบุ required argument</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
