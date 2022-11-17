@@ -65,9 +65,3 @@ NUGIRL
 เรียนต่อนอก
 นักเขียน
 แจ้งปัญหา
-
-เอาข้อมูลมาใส่ไว้ที่นี่
-
-https://drive.google.com/drive/folders/11u_eWiFnHK1w_Z-9SSjAkIiSznBUyZ91?usp=sharing
-
-
