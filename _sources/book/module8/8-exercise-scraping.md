@@ -1,4 +1,4 @@
-# Scraping Workshop
+# แบบฝึกหัดการขูดข้อมูลด้วย `BeautifulSoup`
 
 ## Warm-up: Scraping using regex
 เราสามารถใช้ requests ในการดาวน์โหลดหน้าเว็บลงมา แล้วใช้ regex ตรวจหาได้เลย
