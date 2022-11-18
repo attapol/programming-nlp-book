@@ -34,6 +34,6 @@ chapters:
 - file: book/scraping
   sections:
   - glob: book/module8/*
-- file: book/pythonic
+- file: book/pandas
   sections:
   - glob: book/module9/*
