@@ -386,12 +386,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module7/3-workshop-text-processing.html">
-     Workshop - Text processing
+     Workshop - การประมวลผลข้อความ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../module7/3s-workshop-text-processing.html">
-     เฉลยแบบฝึกหัด Text processing
+     เฉลยแบบฝึกหัดการประมวลผลข้อความ
     </a>
    </li>
    <li class="toctree-l2">
@@ -447,6 +447,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../6s-example-news-api.html">
+     แบบฝึกหัดการเรียก API
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../7-example-scrape-dek-d.html">
      ตัวอย่างการขูดข้อมูลด้วย
      <code class="docutils literal notranslate">
@@ -470,7 +475,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../pandas.html">
-   Advanced Python features
+   การจัดการข้อมูลด้วย
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pandas
+    </span>
+   </code>
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -815,41 +825,6 @@ englishdepartment@chula.ac.th
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ถ้าพูดถึงกระแสที่ร้อนแรงที่สุดทั่วโลกตอนนี้คงหนีไม่พ้นเรื่องของ ‘Metaverse’ ซึ่งเป็นที่รู้จักกันทั่วโลกจากโซเชียลเน็ตเวิร์กอันดับ 1 ของโลกอย่าง Facebook ที่ได้ประกาศเปลี่ยนชื่อบริษัท พร้อมกับแนวทางการดำเนินธุรกิจเมื่อวันที่ 28 ตุลาคมที่ผ่านมา ซึ่งนอกจาก Facebook แล้ว หลายบริษัทยักษ์ใหญ่ก็เริ่มทยอยออกมาประกาศถึงการเข้าสู่ธุรกิจ Metaverse ไม่ว่าจะเป็นบริษัท Microsoft, Nike หรือแม้กระทั่งแอปฯ หาคู่ชื่อดังอย่าง Tinder 
- 
-Metaverse คือแนวคิดในการสร้างสภาพแวดล้อมของโลกแห่งความจริงและเทคโนโลยีเข้าด้วยกัน จนกลายเป็น ‘ชุมชนโลกเสมือนจริง’ ที่สามารถผสานวัตถุรอบตัวและสภาพแวดล้อมให้เชื่อมต่อกันเป็นหนึ่งเดียว ทำให้เหมือนว่าได้ออกไปใช้ชีวิต มีปฏิสัมพันธ์กับบุคคลภายนอก สร้างกิจกรรมร่วมกัน เช่น ออกกำลังกาย รับชมคอนเสิร์ต ประชุมทางไกล และเหมือนเรากำลังอยู่ในสถานที่นั้น แต่ในความเป็นจริงแล้วเรากำลังทำกิจกรรมทั้งหมดอยู่ภายในบ้านของตัวเอง 
- 
-ในความเป็นจริงแล้ว Metaverse ไม่ได้เพิ่งจะกำเนิดขึ้น แต่มีจุดเริ่มต้นมาจากนิยายวิทยาศาสตร์เรื่อง ‘Snow Crash’ ของ นีล สตีเฟนสัน ในปี 1992 ที่เล่าเรื่องราวของโลกในยุคอนาคตที่มนุษย์และคอมพิวเตอร์เชื่อมต่อกันผ่านเทคโนโลยีในโลกเสมือนจริง ซึ่งถือว่าล้ำสมัยเกินจินตนาการของคนในยุคนั้น 
- 
-นอกจากนี้ยังมีภาพยนต์อย่าง Ready Player One ที่ออกฉายในปี 2018 ที่ทำให้เราเริ่มเห็นภาพในจินตนาการของ Metaverse ได้ชัดเจนขึ้น และอีกจุดเปลี่ยนสำคัญที่เปรียบเสมือนเป็นปัจจัยเร่งสำหรับแนวคิด Metaverse ในการนำมาใช้ในโลกความเป็นจริงได้เร็วขึ้น คือการระบาดของโควิดที่ทำให้ผู้คนจำนวนมากต้องกักตัวอยู่ในบ้าน ไม่มีโอกาสได้ออกไปใช้ชีวิต เดินทาง ทำงาน ผจญภัย ซึ่งแนวคิดของ Metaverse สามารถเข้ามาเติมเต็มได้อย่างพอดี
- 
-สำหรับเทคโนโลยี VR (Virtual Reality) และ AR (Augmented Reality) เป็น 2 เทคโนโลยีหลักในปัจจุบันที่จะเข้ามาช่วยในการเชื่อมโยงผ่านอินเทอร์เน็ตระหว่างโลกจริงกับโลกเสมือน หากลองยกตัวอย่างที่ทุกคนอาจจะพอนึกออกและเคยเห็นมาบ้าง เช่น เครื่องเพลย์สเตชันที่ผู้เล่นที่ใส่แว่น VR เป็นอุปกรณ์เสริม สามารถเห็นคอนเทนต์รอบทิศทาง 360 องศา หรือตัวอย่างของ AR จากเกม Pokémon GO ที่เคยได้รับความนิยมเมื่อ 4-5 ปีก่อน 
- 
-นอกจากนี้ยังมีตัวอย่างของการสร้างสังคมในโลกเสมือน อย่างเช่น Decentraland ที่เปิดให้ผู้ใช้สามารถซื้อที่ดินในโลกดิจิทัลด้วยเหรียญคริปโตฯ ผ่านเทคโนโลยีบล็อกเชนเพื่อใช้จัดกิจกรรมต่างๆ เช่น งานแสดงดนตรี ขายโฆษณา หรือขายงานศิลปะ NFT เป็นต้น ซึ่งหากมองประโยชน์ของ Metaverse ที่จะมีโอกาสถูกพัฒนาและนำไปใช้ในชีวิตจริงน่าจะมีในอีกหลายๆ ด้าน เช่น ด้านการแพทย์ (ผ่าตัดทางไกล), ด้านวิศวกรรม (ใช้อุปกรณ์ช่วยในการปฏิบัติงานในพื้นที่อันตราย), การค้าขาย (ทดลองสินค้าผ่าน AR), ด้านบันเทิง (เกม, คอนเสิร์ต) เป็นต้น
- 
-ในส่วนของการลงทุนเองนั้น จากกระแสที่กำลังร้อนแรงในขณะนี้ทำให้บริษัทหรือหุ้นที่กำลังพัฒนา Metaverse หรือธุรกิจที่เกี่ยวข้องได้รับความสนใจเป็นอย่างมากตามด้วย โดยปัจจุบันมีการจัดทำดัชนีที่ชื่อว่า ‘The Ball Metaverse Index’ ซึ่งประกอบไปด้วยหุ้นของ 41 บริษัทชั้นนำทั่วโลกที่มีเทคโนโลยีที่เกี่ยวข้องกับการเปลี่ยนแปลงไปสู่ยุค Metaverse เช่น Meta Platform (Facebook), Microsoft, NVIDIA, Sea, Amazon, Apple ที่อยู่ในตลาดสหรัฐฯ หรือแม้กระทั่งบริษัทอย่าง Tencent ที่อยู่ในฮ่องกง, Sony ของญี่ปุ่น และ Samsung ของเกาหลี 
- 
-นอกจากนี้ยังมี ‘The Roundhill Ball Metaverse ETF’ (META) ที่เป็นกองทุน ETF ในตลาดสหรัฐฯ ที่เปิดโอกาสนักลงทุนที่สนใจการลงทุนในธีมนี้สามารถซื้อกองทุนเพื่อคาดหวังผลตอบแทนที่ล้อไปกับหุ้นที่อยู่ในดัชนี The Ball Metaverse Index อีกด้วย
- 
-สำหรับประเทศไทย ถึงแม้ว่าเรายังไม่สามารถพัฒนาเทคโนโลยีเหล่านี้แข่งกับบริษัทระดับโลกได้ แต่เชื่อว่าประเทศไทยพร้อมที่จะเป็นผู้นำเทคโนโลยีเหล่านี้มาใช้อย่างแน่นอน โดยองค์ประกอบพื้นฐานที่สำคัญสำหรับการท่องโลก Metaverse คือ 
- 
-
- อินเทอร์เน็ตจำเป็นต้องมีความเร็วสูงเพื่อตอบสนองได้ทันทีและต่อเนื่อง ซึ่งผู้ให้บริการทั้งมือถือและบอร์ดแบรนด์ในบ้านเราคงต้องมีการลงทุนเพื่อพัฒนาระบบอินเทอร์เน็ตให้มีประสิทธิภาพมากขึ้น บริษัทที่ทำธุรกิจ Internet Provider, Data Center, System Integrator, Software Engineering เหล่านี้น่าจะได้ประโยชน์จากความต้องการใช้ข้อมูลที่สูงขึ้น 
-
- 
-
- อุปกรณ์ (Device) เช่น แว่น ถุงมือ VR AR, Smart Watch หรือแกดเจ็ตใหม่ๆ ในอนาคต ซึ่งคาดว่าไทยจะได้รับประโยชน์ทางอ้อมจากการเป็นผู้ผลิตส่วนหนึ่งของซัพพลายเชนของอุปกรณ์เหล่านี้ที่จะมีความต้องการสูงขึ้นจากการเปลี่ยนแปลงของเทคโนโลยีและพฤติกรรมของผู้บริโภค
 </pre></div>
 </div>
 </div>
