@@ -85,7 +85,7 @@ if __name__ == "__main__":
  ข้อความที่นำด้วย `#` เรียกว่า comment เขียนเอาไว้เพื่อให้คนอื่นมาอ่าน จะได้ทราบว่าโปรแกรมนี้ทำงานอย่างไร มีข้อควรรู้อะไรบ้าง เผื่อว่าคนอื่นอาจจะนำโปรแกรมของเราไปใช้ต่อ 
 
  ```python
-`from stanfordkarel import *`
+from stanfordkarel import *
 ```
 บอกให้โปรแกรมนี้ import ทุกคำสั่งมาจากไลบรารี `stanfordkarel` 
 
@@ -359,15 +359,17 @@ code block ที่มีคำสั่งที่ต้องการจะ
 
 
 ```{figure} img/while-ex1.png
-:height: 100px
-:align: center
+---
+height: 100px
+align: center
 ---
 จุดเริ่มต้น
 ```
 
 ```{figure} img/while-ex2.png
-:height: 100px
-:align: center
+---
+height: 100px
+align: center
 ---
 จุดหมาย
 ```

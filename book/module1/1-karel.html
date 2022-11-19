@@ -473,6 +473,16 @@ const thebe_selector_output = ".output, .cell_output"
      </code>
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/8s-exercise-scraping.html">
+     เฉลยแบบฝึกหัดการขูดข้อมูลด้วย
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       BeautifulSoup
+      </span>
+     </code>
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -492,12 +502,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../module9/1-pandas.html">
-     Pandas
+     การจัดการข้อมูลขั้นพื้นฐานด้วย
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../module9/2-videos-pandas.html">
-     Videos - pandas
+    <a class="reference internal" href="../module9/2-example-pandas.html">
+     ตัวอย่างการใช้
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module9/3-exercise-pandas.html">
+     แบบฝึกหัด
     </a>
    </li>
   </ul>
@@ -957,7 +982,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>ข้อความที่นำด้วย <code class="docutils literal notranslate"><span class="pre">#</span></code> เรียกว่า comment เขียนเอาไว้เพื่อให้คนอื่นมาอ่าน จะได้ทราบว่าโปรแกรมนี้ทำงานอย่างไร มีข้อควรรู้อะไรบ้าง เผื่อว่าคนอื่นอาจจะนำโปรแกรมของเราไปใช้ต่อ</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>`from stanfordkarel import *`
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">stanfordkarel</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>บอกให้โปรแกรมนี้ import ทุกคำสั่งมาจากไลบรารี <code class="docutils literal notranslate"><span class="pre">stanfordkarel</span></code></p>
@@ -1213,11 +1238,17 @@ title="Print to PDF"
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#control-flow-while-loop" title="Permalink to this headline">#</a></h2>
 <p>อีก control flow พบได้บ่อยในการเขียนโปรแกรมคือการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ซึ่งเป็นการรันคำสั่งวนซ้ำ ๆ เช่นเดียวกับ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ซึ่งเรากำหนดเงื่อนไขไปเลยว่าให้หลุดออกจาก loop หลังจากวนรันไปแล้วกี่ครั้ง  แต่ว่า <code class="docutils literal notranslate"><span class="pre">while</span></code> loop เรากำหนดเองว่าจะให้หลุดออกจากรูปด้วยเงื่อนไขอะไร</p>
 <p>ตัวอย่าง ถ้าเรามีโจทย์ว่าให้แคเริลวาง beeper บนแถวแรกให้เต็มแต่ยกเว้นริมซ้ายสุด และริมขวาสุด โดยที่จุดเริ่มต้นอยู่ที่มุมซ้ายล่างและแคเริลหันไปทางตะวันออก</p>
-<figure class="align-center">
+<figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">จุดเริ่มต้น</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<figure class="align-center">
+<figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">จุดหมาย</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวาง beeper ทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -1372,11 +1403,11 @@ title="Print to PDF"
 <h2>บูลีน<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>การกำหนดเงื่อนไขด้วยบูลีนเป็นเครื่องมือที่สำคัญมากในการเขียนโปรแกรม เราสามารถเขียนเงื่อนไขที่ซับซ้อนขึ้นไปอีกได้โดยใช้โอเปอร์เรเตอร์ทางตรรกศาสตร์ เช่น <code class="docutils literal notranslate"><span class="pre">or</span></code> และ <code class="docutils literal notranslate"><span class="pre">and</span></code> เพื่อให้เห็นการใช้งานที่ชัดขึ้น เราจะลองแก้โจทย์แคเริลอีกหนึ่งข้อ</p>
 <p>สมมติว่าเราต้องการให้แคเริลเอา beeper ที่อยู่รอบรั้วออกไปให้หมด ดังตัวอย่างดังนี้</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id7">
 <img alt="../../_images/boolean-remove-fence.png" src="../../_images/boolean-remove-fence.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
-ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
+ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราสามารถสังเกตหาแพทเทิร์นได้ว่าการเก็บ beeper แต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถย่อยโจทย์ออกมาเป็นฟังก์ชันที่เก็บ beeper ของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
@@ -1394,18 +1425,18 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id8">
 <img alt="../../_images/or-operation.png" src="../../_images/or-operation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เงื่อนไขด้านล่างสุดแสดงให้เห็นว่าแคเริลได้เดินมาถึงมุมแล้วหรือถึงช่องที่ไม่ได้อยู่ติดกับรั้วอีกต่อไปแล้ว ทำให้ส่งต่อไปยังรั้วอีกข้างที่เหลือต่อไปได้</p>
 <p>นอกจากนั้นแล้วภาษาไพธอนยังมีโอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">and</span></code> ซึ่งมีการตีค่าบูลีนเหมือนกันกับ <em>และ</em> ในตรรกศาสตร์ ดังนี้</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id9">
 <img alt="../../_images/and-operation.png" src="../../_images/and-operation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้แคเริลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>

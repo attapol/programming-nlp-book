@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pandas &#8212; Programming for NLP</title>
+    <title>การจัดการข้อมูลขั้นพื้นฐานด้วย pandas &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Videos - pandas" href="2-videos-pandas.html" />
+    <link rel="next" title="ตัวอย่างการใช้ pandas" href="2-example-pandas.html" />
     <link rel="prev" title="การจัดการข้อมูลด้วย pandas" href="../pandas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -473,6 +473,16 @@ const thebe_selector_output = ".output, .cell_output"
      </code>
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../module8/8s-exercise-scraping.html">
+     เฉลยแบบฝึกหัดการขูดข้อมูลด้วย
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       BeautifulSoup
+      </span>
+     </code>
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -492,12 +502,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Pandas
+     การจัดการข้อมูลขั้นพื้นฐานด้วย
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2-videos-pandas.html">
-     Videos - pandas
+    <a class="reference internal" href="2-example-pandas.html">
+     ตัวอย่างการใช้
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-exercise-pandas.html">
+     แบบฝึกหัด
     </a>
    </li>
   </ul>
@@ -553,6 +578,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/attapol/programming-nlp-book/main?urlpath=tree/book/module9/1-pandas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module9/1-pandas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -620,7 +692,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module9/1-pandas.md"
+        <a href="../../_sources/book/module9/1-pandas.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -631,7 +703,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -657,23 +729,150 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe">
+   การสร้าง
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   โหลดข้อมูลเข้า
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+   จากไฟล์ข้อมูล
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-id-columns-a">
+   การเลือกแค่บางคอลัมน์
+   <a id="columns">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-id-rows-a">
+   การเลือกบางแถว
+   <a id="rows">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   คำนวณสถิติของแต่ละคอลัมน์
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#column">
+   การสร้าง column เพิ่ม
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-chaining">
+   Method chaining
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pandas</h1>
+                <h1>การจัดการข้อมูลขั้นพื้นฐานด้วย pandas</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe">
+   การสร้าง
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   โหลดข้อมูลเข้า
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     DataFrame
+    </span>
+   </code>
+   จากไฟล์ข้อมูล
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-id-columns-a">
+   การเลือกแค่บางคอลัมน์
+   <a id="columns">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-id-rows-a">
+   การเลือกบางแถว
+   <a id="rows">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   คำนวณสถิติของแต่ละคอลัมน์
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#column">
+   การสร้าง column เพิ่ม
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-chaining">
+   Method chaining
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -682,8 +881,1069 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="pandas">
-<h1>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h1>
-<p>under construction</p>
+<h1>การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h1>
+<p>ไลบรารี <code class="docutils literal notranslate"><span class="pre">pandas</span></code> เป็นไลบรารีที่สำคัญที่สุดในวิทยาการข้อมูล (data science) อาจจะนับได้ด้วยซ้ำว่าหลายคนเรียนเขียนโปรแกรมเป็นภาษาไพธอนเพื่อที่จะได้ใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code> ได้</p>
+<p>รูปแบบของข้อมูลที่เรามักจะเจอและใช้กันคือข้อมูลที่อยู่ในรูปแบบของตาราง (tabular data) ซึ่งเป็นรูปแบบข้อมูลที้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code> มีฟังก์ชันต่าง ๆ ที่ช่วยในการจัดการข้อมูลดังนี้</p>
+<ol class="simple">
+<li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
+<li><p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis: EDA) คือ การวิเคราะห์เพื่อให้เราเข้าใจข้อมูลคร่าว ๆ เนื่องจากข้อมูลมักจะมีขนาดใหญ่มาก เราไม่สามารถนำข้อมูลออกมาดูได้ทั้งหมด เรามักจะทำ EDA โดยดูว่าข้อมูลมีทั้งหมดที่แถว แต่ละคอลัมน์เก็บข้อมูลอะไรอยู่บ้าง แต่ละคอลัมน์มีค่าสูงสุด ต่ำสุดเท่าไร ถ้าเป็นข้อความ ข้อความที่ยาวสุดยาวกี่ตัวอักษร สั้นสุดกี่ตัวอักษร เป็นต้น</p></li>
+<li><p>การขยำข้อมูล (data munging หรือ data wrangling) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ เช่น ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ หรือลบแถวที่ซ้ำซ้อนกันออกไป</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> มีฟังก์ชันเยอะมากเพื่อรองรับการวิเคราะห์ข้อมูลในรูปแบบที่หลากหลาย ฟังก์ชันที่เราจำเป็นต้องรู้มีดังนี้</p>
+<ol class="simple">
+<li><p>การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p></li>
+<li><p>โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล</p></li>
+<li><p>เลือกบางคอลัมน์</p></li>
+<li><p>เลือกบางแถว</p></li>
+<li><p>คำนวณสถิติของแต่ละคอลัมน์</p></li>
+<li><p>คำนวณสถิติของแต่ละคอลัมน์ แบบแยกกลุ่มก่อน (aggregation)</p></li>
+<li><p>การเพิ่มคอลัมน์</p></li>
+<li><p>การเซฟข้อมูลลงใส่ไฟล์</p></li>
+</ol>
+<section id="dataframe">
+<h2>การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this headline">#</a></h2>
+<p>DataFrame คือตาราง ประกอบไปด้วยแถวและคอลัมน์</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;tangmay&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">mydata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>pang</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dream</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>tangmay</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">[{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> 
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span><span class="s1">&#39;tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">mydata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>pang</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dream</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>tangmay</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id1">
+<h2>โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>ส่วนใหญ่เราจะอ่านข้อมูลจาก csv file</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code> อ่านข้อมูลจาก csv</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepallength</th>
+      <th>sepalwidth</th>
+      <th>petallength</th>
+      <th>petalwidth</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="a-id-columns-a">
+<h2>การเลือกแค่บางคอลัมน์ <a id="columns"></a><a class="headerlink" href="#a-id-columns-a" title="Permalink to this headline">#</a></h2>
+<p><img alt="image.png" src="book/module9/attachment:image.png" /></p>
+<ul class="simple">
+<li><p>เลือกหลายคอลัมน์พร้อม ๆ กัน ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่น</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;sepallength&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+      <th>sepallength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Iris-setosa</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>Iris-virginica</td>
+      <td>6.7</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>Iris-virginica</td>
+      <td>6.3</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>Iris-virginica</td>
+      <td>6.5</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>Iris-virginica</td>
+      <td>6.2</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>Iris-virginica</td>
+      <td>5.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>เลือกคอลัมน์เดียวโดยการใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แต่ว่าป้อนแค่สตริงที่เป็นชื่อคอลัมน์ที่ต้องการ คำสั่งนี้จะให้รีเทิร์น <code class="docutils literal notranslate"><span class="pre">Series</span></code> มาให้ซึ่งเป็น object ที่สามารถเรียก method อื่น ๆ ต่ออีกได้</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sepallength</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      5.1
+1      4.9
+2      4.7
+3      4.6
+4      5.0
+      ... 
+145    6.7
+146    6.3
+147    6.5
+148    6.2
+149    5.9
+Name: sepallength, Length: 150, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-id-rows-a">
+<h2>การเลือกบางแถว <a id="rows"></a><a class="headerlink" href="#a-id-rows-a" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.sample(frac=0.5)</span></code> สุ่มมาครึ่งนึงของแถวทั้งหมด</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.sample(n=10)</span></code> สุ่มมาสิบตัว</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.head(n)</span></code> เลือก n แถวแรก</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.tail(n)</span></code> เลือก n แถวหลัง</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[5:10]</span></code> เลือกแถว 5, 6, 7, 8, 9</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df[df.pos_tag</span> <span class="pre">=</span> <span class="pre">'VERB']</span></code> เลือกแถวตามเกณฑ์ boolean</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepallength</th>
+      <th>sepalwidth</th>
+      <th>petallength</th>
+      <th>petalwidth</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>40</th>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.3</td>
+      <td>0.3</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>4.4</td>
+      <td>3.0</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>5.7</td>
+      <td>2.8</td>
+      <td>4.1</td>
+      <td>1.3</td>
+      <td>Iris-versicolor</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>7.6</td>
+      <td>3.0</td>
+      <td>6.6</td>
+      <td>2.1</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>2.4</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>4.9</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.1</td>
+      <td>Iris-setosa</td>
+    </tr>
+  </tbody>
+</table>
+<p>75 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="c1">#ตำแหน่งจากบนลงล่าง</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepallength</th>
+      <th>sepalwidth</th>
+      <th>petallength</th>
+      <th>petalwidth</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>40</th>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.3</td>
+      <td>0.3</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>4.4</td>
+      <td>3.0</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">140</span><span class="p">,</span> <span class="mi">131</span><span class="p">]]</span> <span class="c1"># ชื่อ (index)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepallength</th>
+      <th>sepalwidth</th>
+      <th>petallength</th>
+      <th>petalwidth</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>6.7</td>
+      <td>3.1</td>
+      <td>5.6</td>
+      <td>2.4</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#d[d[&#39;class&#39;] == &#39;Iris-virginica&#39;]  # select * from d where class = &#39;iris-virginica&#39;;</span>
+<span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;sepallength&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>  <span class="c1"># select * from d where sepallength &gt; 7&#39;;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepallength</th>
+      <th>sepalwidth</th>
+      <th>petallength</th>
+      <th>petalwidth</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>102</th>
+      <td>7.1</td>
+      <td>3.0</td>
+      <td>5.9</td>
+      <td>2.1</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>7.6</td>
+      <td>3.0</td>
+      <td>6.6</td>
+      <td>2.1</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>7.3</td>
+      <td>2.9</td>
+      <td>6.3</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>7.2</td>
+      <td>3.6</td>
+      <td>6.1</td>
+      <td>2.5</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>7.7</td>
+      <td>3.8</td>
+      <td>6.7</td>
+      <td>2.2</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>7.7</td>
+      <td>2.6</td>
+      <td>6.9</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>7.7</td>
+      <td>2.8</td>
+      <td>6.7</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>7.2</td>
+      <td>3.0</td>
+      <td>5.8</td>
+      <td>1.6</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7.4</td>
+      <td>2.8</td>
+      <td>6.1</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>7.7</td>
+      <td>3.0</td>
+      <td>6.1</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id2">
+<h2>คำนวณสถิติของแต่ละคอลัมน์<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>method</p></th>
+<th class="head"><p>การใช้</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.sum()</span></code></p></td>
+<td><p>หาผลรวม</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code></p></td>
+<td><p>หาจำนวนแถวที่มีข้อมูลอยู่</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.median()</span></code></p></td>
+<td><p>หาค่ามัธยฐาน</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code></p></td>
+<td><p>หาค่าเฉลี่ย</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code></p></td>
+<td><p>หาค่าต่ำสุด</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code></p></td>
+<td><p>หาค่าสูงสุด</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.var()</span></code></p></td>
+<td><p>หาความแปรปรวน (variance)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.std()</span></code></p></td>
+<td><p>หาค่าเบี่ยงเบนมาตรฐาน (standard deviation)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.describe()</span></code></p></td>
+<td><p>หาค่าสถิติทั่วไป เช่น ค่าเฉลี่ย ค่าสูงสุด ต่ำสุด ฯลฯ</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.apply(function)</span></code></p></td>
+<td><p>เรียกฟังก์ชันอื่น ๆ ตามระบุ</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;tangmay&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">mydata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>pang</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dream</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>tangmay</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_column</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">age</span>
+<span class="n">age_column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    20
+1    19
+2    19
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_column</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.333333333333332
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_column</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     3.000000
+mean     19.333333
+std       0.577350
+min      19.000000
+25%      19.000000
+50%      19.000000
+75%      19.500000
+max      20.000000
+Name: age, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19    2
+20    1
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="column">
+<h2>การสร้าง column เพิ่ม<a class="headerlink" href="#column" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">apply</span></code> คือการใช้ฟังก์ชันที่เขียนขึ้นมาเอง</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">older_age_column</span> <span class="o">=</span> <span class="n">age_column</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">plus_one</span><span class="p">)</span>
+<span class="n">older_age_column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    21
+1    20
+2    20
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_column</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    21
+1    20
+2    20
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;older age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">mydata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>student name</th>
+      <th>age</th>
+      <th>older age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>pang</td>
+      <td>20</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>dream</td>
+      <td>19</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>tangmay</td>
+      <td>19</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="method-chaining">
+<h2>Method chaining<a class="headerlink" href="#method-chaining" title="Permalink to this headline">#</a></h2>
+<p>จุด จุด จุด จุด ต่อกันไปเรื่อยๆ</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.333333333333332
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;student name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;nong &#39;</span><span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       nong pang
+1      nong dream
+2    nong tangmay
+Name: student name, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -720,10 +1980,10 @@ title="Print to PDF"
             <p class="prev-next-title">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="2-videos-pandas.html" title="next page">
+    <a class='right-next' id="next-link" href="2-example-pandas.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Videos - pandas</p>
+        <p class="prev-next-title">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
