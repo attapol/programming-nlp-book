@@ -20,8 +20,8 @@ animal = [ {'dog':['ear','leg','tail','bark'],'cat':['eye','ear','tail']},
 {'snake':['poison','tongue'],'frog':['hop','insect','rain']}]
 
 animal[1] # return type อะไร
-animal[0][‘cat’] # return type อะไร
-animal[1][‘frog’][1] # return type อะไร
+animal[0]['cat'] # return type อะไร
+animal[1]['frog'][1] # return type อะไร
 ```
 
 ## ข้อ 3
