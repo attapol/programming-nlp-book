@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Video: Set &#8212; Programming for NLP</title>
+    <title>Video: Advance dictionary &#8212; Programming for NLP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Nested list" href="3-nested-list.html" />
-    <link rel="prev" title="โจทย์" href="11-exercise-comprehension.html" />
+    <link rel="next" title="โจทย์: Set และ nested data structures" href="07-exercise-nested.html" />
+    <link rel="prev" title="Nested dictionary" href="05-nested-dictionary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -283,8 +283,48 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="1-set.html">
+    <a class="reference internal" href="01-set.html">
      Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02-videos-set.html">
+     Video: Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-nested-list.html">
+     Nested list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-videos-nested-list.html">
+     Video: Advance list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-nested-dictionary.html">
+     Nested dictionary
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Video: Advance dictionary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-exercise-nested.html">
+     โจทย์: Set และ nested data structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-exercise-data-type.html">
+     โจทย์: Data type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-comprehension.html">
+     Comprehension
     </a>
    </li>
    <li class="toctree-l2">
@@ -295,46 +335,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="11-exercise-comprehension.html">
      โจทย์
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Video: Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3-nested-list.html">
-     Nested list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4-videos-nested-list.html">
-     Video: Advance list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5-nested-dictionary.html">
-     Nested dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="6-videos-nested-dictionary.html">
-     Video: Advance dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7-exercise-nested.html">
-     โจทย์: Set และ nested data structures
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="8-exercise-data-type.html">
-     โจทย์: Data type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="9-comprehension.html">
-     ฟีเจอร์อื่น ๆ ของไพธอน
     </a>
    </li>
   </ul>
@@ -617,7 +617,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/2-videos-set.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/06-videos-nested-dictionary.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -645,7 +645,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/book/module5/2-videos-set.md"
+        <a href="../../_sources/book/module5/06-videos-nested-dictionary.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -705,8 +705,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set">
-   Set
+  <a class="reference internal nav-link" href="#dictionary-key-tuple">
+   Dictionary ที่ key เป็น tuple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-value-list">
+   Dictionary ที่ value เป็น list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-of-info-dictionaries">
+   List of info dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-in-dictionary">
+   Dictionary in dictionary
   </a>
  </li>
 </ul>
@@ -718,7 +733,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Video: Set</h1>
+                <h1>Video: Advance dictionary</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -729,8 +744,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set">
-   Set
+  <a class="reference internal nav-link" href="#dictionary-key-tuple">
+   Dictionary ที่ key เป็น tuple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-value-list">
+   Dictionary ที่ value เป็น list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-of-info-dictionaries">
+   List of info dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-in-dictionary">
+   Dictionary in dictionary
   </a>
  </li>
 </ul>
@@ -743,12 +773,24 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="video-set">
-<h1>Video: Set<a class="headerlink" href="#video-set" title="Permalink to this headline">#</a></h1>
-<p>Set</p>
-<section id="set">
-<h2>Set<a class="headerlink" href="#set" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j0gkuFeH0xU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+  <section class="tex2jax_ignore mathjax_ignore" id="video-advance-dictionary">
+<h1>Video: Advance dictionary<a class="headerlink" href="#video-advance-dictionary" title="Permalink to this headline">#</a></h1>
+<p>Advance dictionary</p>
+<section id="dictionary-key-tuple">
+<h2>Dictionary ที่ key เป็น tuple<a class="headerlink" href="#dictionary-key-tuple" title="Permalink to this headline">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QJ6_fdloaKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="dictionary-value-list">
+<h2>Dictionary ที่ value เป็น list<a class="headerlink" href="#dictionary-value-list" title="Permalink to this headline">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pm51rONRmXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="list-of-info-dictionaries">
+<h2>List of info dictionaries<a class="headerlink" href="#list-of-info-dictionaries" title="Permalink to this headline">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wy_2Y3MrvZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="dictionary-in-dictionary">
+<h2>Dictionary in dictionary<a class="headerlink" href="#dictionary-in-dictionary" title="Permalink to this headline">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_QoJiejsmkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -778,17 +820,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="11-exercise-comprehension.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="05-nested-dictionary.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">โจทย์</p>
+            <p class="prev-next-title">Nested dictionary</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3-nested-list.html" title="next page">
+    <a class='right-next' id="next-link" href="07-exercise-nested.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Nested list</p>
+        <p class="prev-next-title">โจทย์: Set และ nested data structures</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
