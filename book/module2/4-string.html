@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>สตริง &#8212; Programming for NLP</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,56 +61,87 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module2/4-string';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Video: สตริง" href="5-videos-string.html" />
     <link rel="prev" title="โจทย์: ตัวแปร และฟังก์ชัน" href="3-exercise-variable-function.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -109,926 +151,315 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../comp_thinking.html">
-   การคิดเชิงคำนวณ และ control flow
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/1-karel.html">
-     การคิดเชิงคำนวณ (Computational Thinking)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/2-videos-karel.html">
-     Video: การคิดเชิงคำนวณ และ control flow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/3-exercise.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../basics.html">
-   พื้นฐานการเขียนโปรแกรม
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1-variable.html">
-     ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2-videos-variable.html">
-     Video: ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3-exercise-variable-function.html">
-     โจทย์: ตัวแปร และฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     สตริง
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5-videos-string.html">
-     Video: สตริง
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="6-exercise-string.html">
-     โจทย์: สตริง
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure1.html">
-   โครงสร้างข้อมูล (Data Structure I)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/1-list.html">
-     ลิสต์ (List)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/2-videos-list.html">
-     Video: List and Data Structure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3-exercise-list.html">
-     โจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3s-exercise-list.html">
-     เฉลยโจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4a-dictionary.html">
-     ดิกชันนารี (Dictionary)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4b-tuple.html">
-     ทูเปิล (tuple)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4c-counter.html">
-     เคาน์เตอร์ (counter)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/5-videos-dictionary.html">
-     Video: Dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/6-exercise-dictionary.html">
-     โจทย์: ดิกชันนารี
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../text_file.html">
-   การประมวลผลข้อมูลจากไฟล์
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/1-file.html">
-     File
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/2-videos-file.html">
-     Video: file
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/3-regular-expression.html">
-     Regular expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/4-videos-regex.html">
-     Video: Regular Expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Text processing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure2.html">
-   Data Structure II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/01-set.html">
-     Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/02-videos-set.html">
-     Video: Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/03-nested-list.html">
-     Nested list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/04-videos-nested-list.html">
-     Video: Advance list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/05-nested-dictionary.html">
-     Nested dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/06-videos-nested-dictionary.html">
-     Video: Advance dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/07-exercise-nested.html">
-     โจทย์: Set และ nested data structures
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/08-exercise-data-type.html">
-     โจทย์: Data type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/09-comprehension.html">
-     Comprehension
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/10-videos-comprehension.html">
-     Video: ฟีเจอร์อื่น ๆ ของไพธอน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/11-exercise-comprehension.html">
-     โจทย์: Comprehension
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../oop.html">
-   Object-oriented programming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/1-OOP.html">
-     Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2-videos-OOP.html">
-     Video: Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/3-exercise-OOP.html">
-     โจทย์: Object-Oriented Programming
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../nlp.html">
-   Natural Language Processing
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/1-intro-NLP.html">
-     การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
-     Video: Natural Language Processing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
-     Workshop - การประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3s-workshop-text-processing.html">
-     เฉลยแบบฝึกหัดการประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/4-workshop-word-cloud.html">
-     Workshop - Word cloud
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/5-workshop-lda.html">
-     Workshop - Topic modeling
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../scraping.html">
-   การดึงข้อมูลจากอินเตอร์เน็ต
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/1-api.html">
-     Application Programming Interface (API)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/2-videos-api.html">
-     Video: Serialization and API call
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/3-web-scraping.html">
-     Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/4-videos-web-scraping.html">
-     Video: Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/5-exercise-json-html-api.html">
-     แบบฝึกหัด JSON Serialization และการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/6-exercise-news-api.html">
-     แบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/6s-example-news-api.html">
-     เฉลยแบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/7-example-scrape-dek-d.html">
-     ตัวอย่างการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/8-exercise-scraping.html">
-     แบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/8s-exercise-scraping.html">
-     เฉลยแบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../pandas.html">
-   การจัดการข้อมูลด้วย
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     pandas
-    </span>
-   </code>
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/1-pandas.html">
-     การจัดการข้อมูลขั้นพื้นฐานด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/2-example-pandas.html">
-     ตัวอย่างการใช้
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/3-exercise-pandas.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../comp_thinking.html">การคิดเชิงคำนวณ และ control flow</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../basics.html">พื้นฐานการเขียนโปรแกรม</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-variable.html">ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-exercise-variable-function.html">โจทย์: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-exercise-string.html">โจทย์: สตริง</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/1-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/2-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/5-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/03-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/04-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/05-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/09-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../scraping.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-pandas.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module2/4-string.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module2/4-string.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module2/4-string.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/book/module2/4-string.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   การสร้างสตริง
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-quote">
-     1. คร่อมข้อความด้วย single quote
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#double-quote">
-     2. คร่อมข้อความด้วย double quote เช่น
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#triple-quote">
-     3. คร่อมข้อความด้วย triple quote
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   เข้าถึงตัวอักษรที่อยุ่ในสตริง
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-splicing">
-   การหั่นสตริง (String splicing)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-operator-built-in-function">
-   String operator และ built-in function
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loop">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   loop บนสตริง
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-method">
-   String method
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#format">
-   สร้างสตริงจากตัวแปรอื่น ๆ:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .format()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lower-upper">
-   เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .lower()
-    </span>
-   </code>
-   และ
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .upper()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#islower-isupper">
-   เช็คว่าเป็นตัวเล็กหรือตัวใหญ่:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .islower()
-    </span>
-   </code>
-   และ
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .isupper()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#substring-count-substring">
-   นับ substring ในสตริง:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .count(substring)
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">
-   เช็คประเภทของตัวอักขระ:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isdigit()
-    </span>
-   </code>
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isalpha()
-    </span>
-   </code>
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isalnum()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#substring-replace-old-new">
-   แทน substring ด้วยสตริงอื่น:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .replace(old,
-    </span>
-    <span class="pre">
-     new)
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#strip">
-   ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .strip()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>สตริง</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   การสร้างสตริง
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-quote">
-     1. คร่อมข้อความด้วย single quote
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#double-quote">
-     2. คร่อมข้อความด้วย double quote เช่น
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#triple-quote">
-     3. คร่อมข้อความด้วย triple quote
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   เข้าถึงตัวอักษรที่อยุ่ในสตริง
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-splicing">
-   การหั่นสตริง (String splicing)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-operator-built-in-function">
-   String operator และ built-in function
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loop">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   loop บนสตริง
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#string-method">
-   String method
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#format">
-   สร้างสตริงจากตัวแปรอื่น ๆ:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .format()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lower-upper">
-   เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .lower()
-    </span>
-   </code>
-   และ
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .upper()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#islower-isupper">
-   เช็คว่าเป็นตัวเล็กหรือตัวใหญ่:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .islower()
-    </span>
-   </code>
-   และ
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .isupper()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#substring-count-substring">
-   นับ substring ในสตริง:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .count(substring)
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">
-   เช็คประเภทของตัวอักขระ:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isdigit()
-    </span>
-   </code>
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isalpha()
-    </span>
-   </code>
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     isalnum()
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#substring-replace-old-new">
-   แทน substring ด้วยสตริงอื่น:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .replace(old,
-    </span>
-    <span class="pre">
-     new)
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#strip">
-   ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป:
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .strip()
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>สตริง</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-quote">1. คร่อมข้อความด้วย single quote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-quote">2. คร่อมข้อความด้วย double quote เช่น</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. คร่อมข้อความด้วย triple quote</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เข้าถึงตัวอักษรที่อยุ่ในสตริง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-splicing">การหั่นสตริง (String splicing)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-operator-built-in-function">String operator และ built-in function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop"><code class="docutils literal notranslate"><span class="pre">for</span></code> loop บนสตริง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-method">String method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format">สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-upper">เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#islower-isupper">เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-count-substring">นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-replace-old-new">แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>สตริง<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>สตริง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>สตริง เป็นประเภทของข้อมูลที่ใช้สำหรับเก็บข้อมูลที่เป็นรูปแบบตัวหนังสือหรืออักขระ (character) อื่น ๆ อักขระที่เราพบบ่อยและสตริงสามารถจัดเก็บได้มีหลายประเภทด้วยกัน</p>
 <ul class="simple">
 <li><p>ตัวเลข เช่น <code class="docutils literal notranslate"><span class="pre">'007'</span></code></p></li>
@@ -1038,19 +469,19 @@ title="Print to PDF"
 <li><p>Emoji เช่น <code class="docutils literal notranslate"><span class="pre">'😂😃🧘🏻‍♂️🌍🌦️🍞🚗📞🎉🍆'</span></code></p></li>
 </ul>
 <section id="id2">
-<h2>การสร้างสตริง<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2>การสร้างสตริง<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>วิธีการสร้างสตริงโดยการพิมพ์ข้อความเข้าไปในตัวโค้ดโดยตรง เรียกว่าการสร้าง string literal ซึ่งต่างจากการสร้างสตริงขึ้นมาโดยกาเรียนฟังก์ชันอื่น ๆ</p>
 <p>การสร้าง string literal มีอยู่อย่างน้อย 3 วิธี</p>
 <section id="single-quote">
-<h3>1. คร่อมข้อความด้วย single quote<a class="headerlink" href="#single-quote" title="Permalink to this headline">#</a></h3>
+<h3>1. คร่อมข้อความด้วย single quote<a class="headerlink" href="#single-quote" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_sentence</span> <span class="o">=</span> <span class="s1">&#39;I dreamed a dream in times gone by&#39;</span>
 </pre></div>
 </div>
 <p>การใช้ single quote สะดวกดีเพราะว่าไม่ต้องกดปุ่ม shift และดูสะอาดตา แต่ว่าจะเปิดปัญหาเมื่อข้อความที่เราเก็บมี <code class="docutils literal notranslate"><span class="pre">'</span></code> อยู่ข้างในอยู่แล้ว เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s1">&#39;So different from this hell I&#39;</span><span class="n">m</span> <span class="n">living</span><span class="s1">&#39;</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
-    <span class="n">climax_sentence</span> <span class="o">=</span> <span class="s1">&#39;So different from this hell I&#39;</span><span class="n">m</span> <span class="n">living</span><span class="s1">&#39;</span>
-                                                     <span class="pm">^</span>
+<span class="w">    </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s1">&#39;So different from this hell I&#39;</span><span class="n">m</span> <span class="n">living</span><span class="s1">&#39;</span>
+<span class="w">                                                     </span><span class="pm">^</span>
 <span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
 </pre></div>
 </div>
@@ -1066,7 +497,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="double-quote">
-<h3>2. คร่อมข้อความด้วย double quote เช่น<a class="headerlink" href="#double-quote" title="Permalink to this headline">#</a></h3>
+<h3>2. คร่อมข้อความด้วย double quote เช่น<a class="headerlink" href="#double-quote" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s2">&quot;So different from this hell I&#39;m living&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">climax_sentence</span><span class="p">)</span>
 <span class="go">So different from this hell I&#39;m living</span>
@@ -1087,7 +518,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="triple-quote">
-<h3>3. คร่อมข้อความด้วย triple quote<a class="headerlink" href="#triple-quote" title="Permalink to this headline">#</a></h3>
+<h3>3. คร่อมข้อความด้วย triple quote<a class="headerlink" href="#triple-quote" title="Permalink to this heading">#</a></h3>
 <p>การสร้างสตริงด้วยวิธีนี้เป็นวิธีเดียวที่จะสร้าง string literal ที่มีหลาย ๆ บรรทัดอยู่ โดยตัวคั่นบรรทัดนั้นเครื่องจะจัดเก็บอยู่ในตัวอักขระพิเศษ <code class="docutils literal notranslate"><span class="pre">\n</span></code> เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">juliet_speech</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;O Romeo, Romeo, wherefore art thou Romeo?</span>
 <span class="gp">... </span><span class="s2">Deny thy father and refuse thy name.&quot;&quot;&quot;</span>
@@ -1101,7 +532,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="id3">
-<h2>เข้าถึงตัวอักษรที่อยุ่ในสตริง<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2>เข้าถึงตัวอักษรที่อยุ่ในสตริง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <a class="reference internal image-reference" href="../../_images/char-index.png"><img alt="../../_images/char-index.png" class="align-center" src="../../_images/char-index.png" style="height: 150px;" /></a>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -1110,7 +541,7 @@ title="Print to PDF"
 <p>เราใช้ operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> ครอบตำแหน่งที่ต้องการจะดึงตัวอักษรออกมา (index) แต่จะนับเริ่มจากศูนย์ เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[a]</span></code> return ตัวอักขระจากช่องที่ index <code class="docutils literal notranslate"><span class="pre">a</span></code> ตามที่เห็นดังภาพข้างบน</p>
 <p>ภาษาไพธอนมีการดึงตัวอักขระโดยนับจากข้างหลังได้ด้วยโดยตัวอักขระสุดท้ายของสตริงจะเริ่มที่ -1 เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[-a]</span></code> return ตัวอักขระจากช่องที่ index <code class="docutils literal notranslate"><span class="pre">-a</span></code> ซึ่งเราเรียกว่าการใช้เลข index ติดลบ (negative indexing)</p>
 <p>ตัวอย่าง สมมติว่าเราได้รัน <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'นายสมชาย'</span></code></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>output</p></th>
@@ -1144,7 +575,7 @@ title="Print to PDF"
 <p>เครื่องบอกว่า index ไม่ได้อยู่ในช่วงที่เหมาะสม เพราะจากสตริงที่เราสร้าง เราสามาเลือก index ตั้งแต่ 0-7 และ -1 ถึง -8</p>
 </section>
 <section id="string-splicing">
-<h2>การหั่นสตริง (String splicing)<a class="headerlink" href="#string-splicing" title="Permalink to this headline">#</a></h2>
+<h2>การหั่นสตริง (String splicing)<a class="headerlink" href="#string-splicing" title="Permalink to this heading">#</a></h2>
 <p>เราสามารถหั่นสตริงตั้งต้นออกมาอีกสตริงหนึ่ง เพื่อตัดเอาส่วนของข้อความที่เราอยากได้ เช่น</p>
 <ul class="simple">
 <li><p>นายสมชาย –&gt; สมชาย (ตัดคำนำหน้าชื่อออก)</p></li>
@@ -1160,7 +591,7 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../../_images/substring-index.png"><img alt="../../_images/substring-index.png" class="align-center" src="../../_images/substring-index.png" style="height: 150px;" /></a>
 <p>การดึง substring ให้นึกถึงว่าตัวเลข index ชี้ไปที่ร่องระหว่างตัวอักขระสองตัว เช่น index 3 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ย'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'ส'</span></code> หรือ index -2 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ช'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'า'</span></code></p>
 <p>ตัวอย่าง สมมติว่าเราได้รัน <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'นายสมชาย'</span></code></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>output</p></th>
@@ -1199,7 +630,7 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>ไพธอนให้ความอะลุ่มอล่วยกับการใช้ index ในการดึง substring ค่อนข้างมาก ซึ่งข้อเสียก็คือ เวลาเราใส่ index ที่ผิดลงไปโดยไม่ได้ตั้งใจ interpreter จะไม่โยน <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> ให้เรา แต่จะให้ output ที่เราไม่ได้คาดคิดมา ทำให้โปรแกรมเกิดข้อผิดพลาดเวลานำผลไปใช้ต่อกับคำสั่งอื่น ๆ</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>output</p></th>
@@ -1231,9 +662,9 @@ title="Print to PDF"
 </table>
 </section>
 <section id="string-operator-built-in-function">
-<h2>String operator และ built-in function<a class="headerlink" href="#string-operator-built-in-function" title="Permalink to this headline">#</a></h2>
+<h2>String operator และ built-in function<a class="headerlink" href="#string-operator-built-in-function" title="Permalink to this heading">#</a></h2>
 <p>นอกเหนือจาก operator <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วสตริงยังมี operator ที่ใช้ได้อยู่อีก 4 ตัว</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -1277,7 +708,7 @@ title="Print to PDF"
 </table>
 </section>
 <section id="for-loop">
-<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop บนสตริง<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop บนสตริง<a class="headerlink" href="#for-loop" title="Permalink to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>iterate คือ การไล่ดึงข้อมูลมาทีละตัว เพื่อนำมาประมวลผลด้วยคำสั่งอื่น ๆ</p>
@@ -1307,13 +738,13 @@ title="Print to PDF"
 </div>
 </section>
 <section id="string-method">
-<h2>String method<a class="headerlink" href="#string-method" title="Permalink to this headline">#</a></h2>
+<h2>String method<a class="headerlink" href="#string-method" title="Permalink to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p><em>object</em> มีหน้าที่เก็บข้อมูล นอกจากนั้นยังมี <em>method</em> ต่างๆ ที่ช่วยนำข้อมูลที่เก็บอยู่มาใช้ให้ได้สะดวกขึ้น</p>
 </aside>
 <p>สตริงจัดเป็น object ประเภทแรกที่เราจะเรียนรู้วิธีการใช้ในภาษาไพธอน object เป็นสิ่งที่ไว้เก็บข้อมูลที่เป็นตัวหนังสือต่าง ๆ แต่ว่านอกจากนั้นแล้ว object มีสิ่งที่เรียกว่า method ติดตัวมาด้วย ซึ่งก็คือฟังก์ชันที่นำเอาข้อมูลที่ object ที่เรียก method นั้นขึ้นมาใช้ ในการเรียกใช้ method เราจำเป็นต้องรู้ว่า</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>object ชนิดนั้นมี method ชื่ออะไรบ้าง</p></li>
 <li><p>method ที่จะใข้นั้น input คืออะไร</p></li>
 <li><p>method ที่จะใช้นั้น return output อะไร และเป็นไทป์อะไร</p></li>
@@ -1327,7 +758,7 @@ title="Print to PDF"
 <p>สตริงในภาษาไพธอนมี method เยอะมาก ๆ ไม่มีโปรแกรมเมอร์ไหนพยายามจำทั้ง จะจำได้เฉพาะ method ที่ใช้หน้างานบ่อย ๆ ถ้าหากจำไม่ได้สามารถเสิร์ชหาออนไลน์ได้ และโปรแกรมเมอร์เปิดหากันเป็นปกติ แต่เพื่อความสะดวกคล่องตัวในการเขียนโปรแกรมที่เกี่ยวกับการประมวลผลข้อมูลที่เป็นข้อความ เราควรจะต้องรู้จัก method ของสตริงดังนี้</p>
 </section>
 <section id="format">
-<h2>สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code><a class="headerlink" href="#format" title="Permalink to this headline">#</a></h2>
+<h2>สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code><a class="headerlink" href="#format" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
@@ -1344,7 +775,7 @@ title="Print to PDF"
 <p>อีกวิธีคือการใช้ f string คือสตริงที่มีเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าเพื่อบอกให้เครื่องรู้ว่าเป็น formatting string เราสามารถใส่ชื่อตัวแปรเข้าไปใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้เลย ทำให้ประหยัดโค้ดไปได้ระดับหนึ่ง และดูสบายตากว่า</p>
 </section>
 <section id="lower-upper">
-<h2>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this headline">#</a></h2>
+<h2>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;James&#39;</span>
@@ -1359,7 +790,7 @@ title="Print to PDF"
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาเราอยากเปรียบเทียบข้อความสองข้อความว่าเหมือนกันหรือไม่โดยไม่สนใจว่าเป็นตัวเล็กตัวใหญ่ (case-insensitive)</p>
 </section>
 <section id="islower-isupper">
-<h2>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this headline">#</a></h2>
+<h2>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;NASA&#39;</span>
@@ -1378,7 +809,7 @@ title="Print to PDF"
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาต้องการเช็คว่าเป็นตัวย่อของชื่อองค์กรต่าง ๆ หรือไม่ หรือเป็นคำที่อยู่กลางประโยคภาษาอังกฤษหรือไม่ แต่คำสั่งเหล่านี้ไม่มีประโยชน์กับภาษาอื่น ๆ ที่ไม่ได้ใช้ตัวลาติน เช่น ภาษาจีน ภาษาไทย ภาษาเกาหลี ภาษารัสเซีย</p>
 </section>
 <section id="substring-count-substring">
-<h2>นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#substring-count-substring" title="Permalink to this headline">#</a></h2>
+<h2>นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#substring-count-substring" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">laughter</span> <span class="o">=</span> <span class="s1">&#39;hahahahaha&#39;</span>
@@ -1393,7 +824,7 @@ title="Print to PDF"
 <p>คำสั่งนี้มีประโยชน์เวลาเราต้องการนับจำนวนคำที่อยู่ในสตริงที่เก็บข้อมูลทั้งหมดเอาไว้ เช่น หนังสือทั้งเล่ม หนังสือพิมพ์ทุกฉบับของเดือนนั้น หรือนับจำนวนคำภาษาอังกฤษแบบหยาบ ๆ โดยการนับเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ที่มีอยู่ในข้อมูลทั้งหมด</p>
 </section>
 <section id="isdigit-isalpha-isalnum">
-<h2>เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Permalink to this headline">#</a></h2>
+<h2>เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;6578012478&#39;</span>
@@ -1420,7 +851,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="substring-replace-old-new">
-<h2>แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#substring-replace-old-new" title="Permalink to this headline">#</a></h2>
+<h2>แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#substring-replace-old-new" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ประเภทของคำมี 7 ประเภทใหญ่&#39;</span>
@@ -1436,7 +867,7 @@ title="Print to PDF"
 <p>method นี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมา ซึ่งเราจะต้องเก็บใส่ตัวแปรอีกตัวนึงก่อนจะนำไปทำกระบวนการอื่นต่อ ซึ่งคล้าย ๆ กับ method <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">.format()</span></code></p>
 </section>
 <section id="strip">
-<h2>ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Permalink to this headline">#</a></h2>
+<h2>ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Permalink to this heading">#</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;  loveme123&#39;</span>
@@ -1464,7 +895,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./book/module2"
         },
         predefinedOutput: true
@@ -1472,50 +903,122 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3-exercise-variable-function.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">โจทย์: ตัวแปร และฟังก์ชัน</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3-exercise-variable-function.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">โจทย์: ตัวแปร และฟังก์ชัน</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="5-videos-string.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="5-videos-string.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Video: สตริง</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Attapol Thamrongrattanarit<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-quote">1. คร่อมข้อความด้วย single quote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-quote">2. คร่อมข้อความด้วย double quote เช่น</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. คร่อมข้อความด้วย triple quote</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เข้าถึงตัวอักษรที่อยุ่ในสตริง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-splicing">การหั่นสตริง (String splicing)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-operator-built-in-function">String operator และ built-in function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop"><code class="docutils literal notranslate"><span class="pre">for</span></code> loop บนสตริง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-method">String method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format">สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-upper">เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#islower-isupper">เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-count-substring">นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-replace-old-new">แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

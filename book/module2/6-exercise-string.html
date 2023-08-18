@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>โจทย์: สตริง &#8212; Programming for NLP</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,56 +63,87 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module2/6-exercise-string';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="โครงสร้างข้อมูล (Data Structure I)" href="../data_structure1.html" />
     <link rel="prev" title="Video: สตริง" href="5-videos-string.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -111,839 +153,350 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../comp_thinking.html">
-   การคิดเชิงคำนวณ และ control flow
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/1-karel.html">
-     การคิดเชิงคำนวณ (Computational Thinking)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/2-videos-karel.html">
-     Video: การคิดเชิงคำนวณ และ control flow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/3-exercise.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../basics.html">
-   พื้นฐานการเขียนโปรแกรม
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1-variable.html">
-     ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2-videos-variable.html">
-     Video: ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3-exercise-variable-function.html">
-     โจทย์: ตัวแปร และฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4-string.html">
-     สตริง
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5-videos-string.html">
-     Video: สตริง
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     โจทย์: สตริง
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure1.html">
-   โครงสร้างข้อมูล (Data Structure I)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/1-list.html">
-     ลิสต์ (List)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/2-videos-list.html">
-     Video: List and Data Structure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3-exercise-list.html">
-     โจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3s-exercise-list.html">
-     เฉลยโจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4a-dictionary.html">
-     ดิกชันนารี (Dictionary)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4b-tuple.html">
-     ทูเปิล (tuple)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4c-counter.html">
-     เคาน์เตอร์ (counter)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/5-videos-dictionary.html">
-     Video: Dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/6-exercise-dictionary.html">
-     โจทย์: ดิกชันนารี
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../text_file.html">
-   การประมวลผลข้อมูลจากไฟล์
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/1-file.html">
-     File
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/2-videos-file.html">
-     Video: file
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/3-regular-expression.html">
-     Regular expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/4-videos-regex.html">
-     Video: Regular Expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Text processing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure2.html">
-   Data Structure II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/01-set.html">
-     Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/02-videos-set.html">
-     Video: Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/03-nested-list.html">
-     Nested list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/04-videos-nested-list.html">
-     Video: Advance list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/05-nested-dictionary.html">
-     Nested dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/06-videos-nested-dictionary.html">
-     Video: Advance dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/07-exercise-nested.html">
-     โจทย์: Set และ nested data structures
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/08-exercise-data-type.html">
-     โจทย์: Data type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/09-comprehension.html">
-     Comprehension
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/10-videos-comprehension.html">
-     Video: ฟีเจอร์อื่น ๆ ของไพธอน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/11-exercise-comprehension.html">
-     โจทย์: Comprehension
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../oop.html">
-   Object-oriented programming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/1-OOP.html">
-     Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2-videos-OOP.html">
-     Video: Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/3-exercise-OOP.html">
-     โจทย์: Object-Oriented Programming
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../nlp.html">
-   Natural Language Processing
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/1-intro-NLP.html">
-     การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
-     Video: Natural Language Processing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
-     Workshop - การประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3s-workshop-text-processing.html">
-     เฉลยแบบฝึกหัดการประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/4-workshop-word-cloud.html">
-     Workshop - Word cloud
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/5-workshop-lda.html">
-     Workshop - Topic modeling
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../scraping.html">
-   การดึงข้อมูลจากอินเตอร์เน็ต
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/1-api.html">
-     Application Programming Interface (API)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/2-videos-api.html">
-     Video: Serialization and API call
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/3-web-scraping.html">
-     Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/4-videos-web-scraping.html">
-     Video: Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/5-exercise-json-html-api.html">
-     แบบฝึกหัด JSON Serialization และการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/6-exercise-news-api.html">
-     แบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/6s-example-news-api.html">
-     เฉลยแบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/7-example-scrape-dek-d.html">
-     ตัวอย่างการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/8-exercise-scraping.html">
-     แบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module8/8s-exercise-scraping.html">
-     เฉลยแบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../pandas.html">
-   การจัดการข้อมูลด้วย
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     pandas
-    </span>
-   </code>
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/1-pandas.html">
-     การจัดการข้อมูลขั้นพื้นฐานด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/2-example-pandas.html">
-     ตัวอย่างการใช้
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/3-exercise-pandas.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../comp_thinking.html">การคิดเชิงคำนวณ และ control flow</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../basics.html">พื้นฐานการเขียนโปรแกรม</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-variable.html">ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-exercise-variable-function.html">โจทย์: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-string.html">สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: สตริง</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/1-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/2-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/5-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/03-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/04-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/05-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/09-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../scraping.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-pandas.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/attapol/programming-nlp-book/main?urlpath=tree/book/module2/6-exercise-string.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
   
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
+  <div id="rtd-footer-container"></div>
 
-      </li>
+
+      </div>
       
-      <li>
-        <a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module2/6-exercise-string.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module2/6-exercise-string.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module2/6-exercise-string.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module2/6-exercise-string.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module2/6-exercise-string.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/book/module2/6-exercise-string.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   โจทย์: สตริง
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prefix-suffix">
-     ข้อ 1. Prefix suffix
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compound-word">
-     ข้อ 2. Compound word
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reverse-string">
-     ข้อ 3. Reverse String
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#palindrome">
-     ข้อ 4. Palindrome
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pig-latin">
-     ข้อ 5. Pig Latin
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flip-language">
-     ข้อ 6. Flip Language
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     ข้อ 7. ไม่ 1 ไม่ 5
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     ข้อ 8. ไปรษณีย์
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#am-i-a-float">
-     ข้อ 9. Am I a float?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#str-to-int">
-     ข้อ 10. str to int
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   โจทย์: สตริง (ยาก)
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-1-morphophonological-rules">
-     Extra 1 : Morphophonological Rules
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-2-password-generator">
-     Extra 2 : password generator
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-3-caesar-s-cipher">
-     Extra 3 : Caesar’s cipher
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>โจทย์: สตริง</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   โจทย์: สตริง
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prefix-suffix">
-     ข้อ 1. Prefix suffix
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compound-word">
-     ข้อ 2. Compound word
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reverse-string">
-     ข้อ 3. Reverse String
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#palindrome">
-     ข้อ 4. Palindrome
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pig-latin">
-     ข้อ 5. Pig Latin
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flip-language">
-     ข้อ 6. Flip Language
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     ข้อ 7. ไม่ 1 ไม่ 5
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     ข้อ 8. ไปรษณีย์
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#am-i-a-float">
-     ข้อ 9. Am I a float?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#str-to-int">
-     ข้อ 10. str to int
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   โจทย์: สตริง (ยาก)
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-1-morphophonological-rules">
-     Extra 1 : Morphophonological Rules
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-2-password-generator">
-     Extra 2 : password generator
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extra-3-caesar-s-cipher">
-     Extra 3 : Caesar’s cipher
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>โจทย์: สตริง</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">โจทย์: สตริง</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-suffix">ข้อ 1. Prefix suffix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-word">ข้อ 2. Compound word</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-string">ข้อ 3. Reverse String</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palindrome">ข้อ 4. Palindrome</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pig-latin">ข้อ 5. Pig Latin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flip-language">ข้อ 6. Flip Language</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 7. ไม่ 1 ไม่ 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 8. ไปรษณีย์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9. Am I a float?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#str-to-int">ข้อ 10. str to int</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">โจทย์: สตริง (ยาก)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-1-morphophonological-rules">Extra 1 : Morphophonological Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-2-password-generator">Extra 2 : password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-3-caesar-s-cipher">Extra 3 : Caesar’s cipher</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>โจทย์: สตริง<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>โจทย์: สตริง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="prefix-suffix">
-<h2>ข้อ 1. Prefix suffix<a class="headerlink" href="#prefix-suffix" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 1. Prefix suffix<a class="headerlink" href="#prefix-suffix" title="Permalink to this heading">#</a></h2>
 <p>จงเขียนโปรแกรมที่ detect ว่าคำมี prefix/suffix ที่กำลังหาหรือไม่
 ถ้ามี prefix/suffix นั้นไปจับกับหน่วยคำใด</p>
 <p>เช่น
@@ -958,7 +511,7 @@ title="Print to PDF"
 <p>ถ้าไม่ได้เป็น prefix หรือ suffix ให้ return ‘’</p>
 <p>อย่าลืมเติม - ให้ถูกต้องด้วย ขีดหน้าคือ prefix ขีดหลังคือ suffix</p>
 <p>คำใบ้: แนะนำให้แก้โจทย์เล็กๆ ก่อน</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>กรณีที่ไม่เป็น prefix suffix</p></li>
 <li><p>กรณีที่เป็น prefix</p></li>
 <li><p>กรณีที่เป็น suffix</p></li>
@@ -966,7 +519,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_prefix_suffix</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">affix</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    ตัวอย่าง</span>
 
 <span class="sd">    &gt;&gt;&gt; detect_prefix_suffix(&#39;หน้าเนื้อ&#39;, &#39;หน้า&#39;)</span>
@@ -987,7 +540,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="compound-word">
-<h2>ข้อ 2. Compound word<a class="headerlink" href="#compound-word" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 2. Compound word<a class="headerlink" href="#compound-word" title="Permalink to this heading">#</a></h2>
 <p>จงเขียนฟังก์ชันที่มี input เป็นสตริงหนึ่งสตริง ฟังก์ชัน return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงสามารถถูกแบ่งออกมาเป็นคำสองคำย่อยได้ เช่น</p>
 <ul class="simple">
 <li><p>headband สามารถถูกแบ่งเป็น head + band</p></li>
@@ -1003,7 +556,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_word</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;is word a valid word?</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;is word a valid word?</span>
 <span class="sd">	</span>
 <span class="sd">	Assume four words in the vocabulary</span>
 <span class="sd">	&quot;&quot;&quot;</span>
@@ -1011,7 +564,7 @@ title="Print to PDF"
 
 	
 <span class="k">def</span> <span class="nf">splittable</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-	<span class="sd">&quot;&quot;&quot;</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">	ตัวอย่าง</span>
 <span class="sd">	&gt;&gt;&gt; splittable(&#39;headband&#39;) </span>
 <span class="sd">	True</span>
@@ -1026,7 +579,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="reverse-string">
-<h2>ข้อ 3. Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 3. Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this heading">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> ซึ่งรับ parameter 1 ตัวเป็น string (สมมุติว่าชื่อ <code class="docutils literal notranslate"><span class="pre">original_string</span></code>) แล้ว return ค่าเป็น string ซึ่งมีค่าเป็น string ย้อนกลับของ <code class="docutils literal notranslate"><span class="pre">original_string</span></code></p>
 <p><strong>ตัวอย่าง</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> รับ parameter เป็น <em>‘Hello’</em> จะต้อง return string ที่มีค่าเป็น <em>‘olleH’</em></p>
@@ -1054,7 +607,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="palindrome">
-<h2>ข้อ 4. Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 4. Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this heading">#</a></h2>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code> ซึ่งรับ parameter 1 ตัวเป็น string แล้วเช็คว่า string นั้นเป็น palindrome หรือไม่ โดยถือว่าตัวอักษรตัวเล็กและตัวใหญ่เป็นคนละเดียวกัน</p>
 <p>ถ้าใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่ถ้าไม่ใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>string จะเป็น palindrome ก็ต่อเมื่ออ่าน string จากหน้าไปหลัง เหมือนกับการอ่านจากหลังไปหน้า</p>
@@ -1085,7 +638,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="pig-latin">
-<h2>ข้อ 5. Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 5. Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this heading">#</a></h2>
 <p>ภาษา Pig Latin เป็นภาษาที่ใกล้เคียงภาษาอังกฤษมาก โดยการแปลงคำภาษาอังกฤษเป็นภาษา Pig Latin สามารถทำได้โดยนำตัวอักษรตัวแรกของคำไปไว้ด้านหลัง แล้วเติมตัว <code class="docutils literal notranslate"><span class="pre">a</span></code> ไว้ด้านท้ายสุด เช่น คำว่า <code class="docutils literal notranslate"><span class="pre">hello</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">elloha</span></code> หรือ คำว่า <code class="docutils literal notranslate"><span class="pre">sleep</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">leepsa</span></code></p>
 <p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">eng_to_pig_latin</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return คำภาษา Pig Latin ของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
 <div class="cell docutils container">
@@ -1104,9 +657,9 @@ title="Print to PDF"
 </div>
 </section>
 <section id="flip-language">
-<h2>ข้อ 6. Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 6. Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this heading">#</a></h2>
 <p>คุณกับเพื่อนได้คิดค้นโค้ดลับของคำศัพท์ภาษาอังกฤษ โดยการแปลงคำศัพท์ภาษาอังกฤษดังนี้</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>ถ้าคำศัพท์มีความยาวเป็นเลขคู่ ให้นำครึ่งหลังของคำมาไว้ข้างหน้า แล้วนำครึ่งหน้าของคำไปไว้ข้างหลัง</p></li>
 <li><p>ถ้าคำศัพท์มีความยาวเป็ยเลขคี่ ให้ตัดตัวอักษรตัวแรกออก แล้วนำคำที่เหลือสลับเหมือนคำศัพท์ที่มีความยาวเป็นเลขคู่ แล้วนำตัวอักษรตัวแรกที่ตัดออกไว้ด้านหน้าคำตามเดิม</p></li>
 </ol>
@@ -1132,7 +685,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="id2">
-<h2>ข้อ 7. ไม่ 1 ไม่ 5<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 7. ไม่ 1 ไม่ 5<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>จงหาผลรวมของจำนวนเต็มที่น้อยกว่า 100 และไม่มีเลข 1 กับ 5</p>
 <p><span class="math notranslate nohighlight">\(2 + 3 + 4 + 6 + 7 + 8 + 9 + 20 + 22 + 23 + 24 + 26 \cdots + 99\)</span></p>
 <p>คำตอบคือ 3432</p>
@@ -1147,7 +700,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="id3">
-<h2>ข้อ 8. ไปรษณีย์<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 8. ไปรษณีย์<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <p>ตอนนี้มี text data ที่มีชื่อเขตกับรหัสไปรษณีย์ ซึ่งเป็นหน้าตาแบบนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Wattana 10110 Yannawa 10120 Lak Si 10210 Sai Mai 10220 Bang Na 10260 Dusit 10300&#39;</span>
 </pre></div>
@@ -1164,7 +717,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">postal_table</span><span class="p">(</span><span class="n">raw_text</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    1. add each character to new_string, if not space</span>
 <span class="sd">    2. replace space before postal code with tab \t</span>
 <span class="sd">    3. replace space after postal code with newline \n</span>
@@ -1175,28 +728,28 @@ title="Print to PDF"
 </div>
 </section>
 <section id="am-i-a-float">
-<h2>ข้อ 9. Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 9. Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this heading">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 1 ค่า แล้วแสดงผลทางหน้าจอว่าค่าที่ผู้ใช้ใส่มาเป็น <code class="docutils literal notranslate"><span class="pre">float</span></code> หรือไม่</p>
 <p><strong>Hint:</strong> <code class="docutils literal notranslate"><span class="pre">float</span></code> จะมีจุดทศนิยม 1 จุด และทีเหลือเป็นตัวเลข แต่ว่าอาจจะเป็นค่าลบได้</p>
 <p><strong>ตัวอย่าง</strong></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><strong>input</strong></p></th>
-<th class="text-align:center head"><p><strong>output</strong></p></th>
+<tr class="row-odd"><th class="head text-center"><p><strong>input</strong></p></th>
+<th class="head text-center"><p><strong>output</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>3.1415</p></td>
-<td class="text-align:center"><p>Yes</p></td>
+<tr class="row-even"><td class="text-center"><p>3.1415</p></td>
+<td class="text-center"><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>12</p></td>
-<td class="text-align:center"><p>No</p></td>
+<tr class="row-odd"><td class="text-center"><p>12</p></td>
+<td class="text-center"><p>No</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>-35.439145</p></td>
-<td class="text-align:center"><p>Yes</p></td>
+<tr class="row-even"><td class="text-center"><p>-35.439145</p></td>
+<td class="text-center"><p>Yes</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>43BDgk</p></td>
-<td class="text-align:center"><p>No</p></td>
+<tr class="row-odd"><td class="text-center"><p>43BDgk</p></td>
+<td class="text-center"><p>No</p></td>
 </tr>
 </tbody>
 </table>
@@ -1209,32 +762,32 @@ title="Print to PDF"
 </div>
 </section>
 <section id="str-to-int">
-<h2>ข้อ 10. str to int<a class="headerlink" href="#str-to-int" title="Permalink to this headline">#</a></h2>
+<h2>ข้อ 10. str to int<a class="headerlink" href="#str-to-int" title="Permalink to this heading">#</a></h2>
 <p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 2 ค่า แล้วแสดงผลทางหน้าจอดังนี้</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>ถ้าเป็นตัวเลขทั้งคู่ (<code class="docutils literal notranslate"><span class="pre">float</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">int</span></code>) ให้แสดงผลบวกของสองค่านี้</p></li>
 <li><p>ถ้าตัวแรกเป็นจำนวนเต็มตั้งแต่ 1 ขึ้นไป (<code class="docutils literal notranslate"><span class="pre">int</span></code> &gt;= 1) แล้วอีกตัวหนึ่งไม่ใช่ตัวเลข (ไม่ใช่ทั้ง <code class="docutils literal notranslate"><span class="pre">float</span></code> และ <code class="docutils literal notranslate"><span class="pre">int</span></code>) ให้แสดงค่าที่ 2 เป็นจำนวนบรรทัดตามจำนวนแรก</p></li>
 <li><p>นอกจากนี้ ให้แสดงว่า <code class="docutils literal notranslate"><span class="pre">Sorry,</span> <span class="pre">I</span> <span class="pre">don't</span> <span class="pre">understand.</span></code></p></li>
 </ol>
 <p><strong>ตัวอย่าง</strong></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><strong>input</strong></p></th>
-<th class="text-align:center head"><p><strong>output</strong></p></th>
+<tr class="row-odd"><th class="head text-center"><p><strong>input</strong></p></th>
+<th class="head text-center"><p><strong>output</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>3<br> 5</p></td>
-<td class="text-align:center"><p>8</p></td>
+<tr class="row-even"><td class="text-center"><p>3<br> 5</p></td>
+<td class="text-center"><p>8</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>6<br> 1.11</p></td>
-<td class="text-align:center"><p>7.11</p></td>
+<tr class="row-odd"><td class="text-center"><p>6<br> 1.11</p></td>
+<td class="text-center"><p>7.11</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>2<br> Hello Thailand!</p></td>
-<td class="text-align:center"><p>Hello Thailand!<br> Hello Thailand!</p></td>
+<tr class="row-even"><td class="text-center"><p>2<br> Hello Thailand!</p></td>
+<td class="text-center"><p>Hello Thailand!<br> Hello Thailand!</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>-1<br> Go</p></td>
-<td class="text-align:center"><p>Sorry, I don’t understand.</p></td>
+<tr class="row-odd"><td class="text-center"><p>-1<br> Go</p></td>
+<td class="text-center"><p>Sorry, I don’t understand.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1248,69 +801,69 @@ title="Print to PDF"
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id4">
-<h1>โจทย์: สตริง (ยาก)<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h1>
+<h1>โจทย์: สตริง (ยาก)<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
 <p>โจทย์ optional สำหรับคนที่ชอบความท้าทาย</p>
 <section id="extra-1-morphophonological-rules">
-<h2>Extra 1 : Morphophonological Rules<a class="headerlink" href="#extra-1-morphophonological-rules" title="Permalink to this headline">#</a></h2>
+<h2>Extra 1 : Morphophonological Rules<a class="headerlink" href="#extra-1-morphophonological-rules" title="Permalink to this heading">#</a></h2>
 <p>ภาษาโซโนมิมี morphophonological rules ที่เปลี่ยน singular เป็น plural  หลายกฎ</p>
 <p>มีข้อมูลดังนี้</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>singular</p></th>
-<th class="text-align:center head"><p>plural</p></th>
+<tr class="row-odd"><th class="head text-center"><p>singular</p></th>
+<th class="head text-center"><p>plural</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>kari</p></td>
-<td class="text-align:center"><p>karina</p></td>
+<tr class="row-even"><td class="text-center"><p>kari</p></td>
+<td class="text-center"><p>karina</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>pranu</p></td>
-<td class="text-align:center"><p>pranuna</p></td>
+<tr class="row-odd"><td class="text-center"><p>pranu</p></td>
+<td class="text-center"><p>pranuna</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>tane</p></td>
-<td class="text-align:center"><p>tanena</p></td>
+<tr class="row-even"><td class="text-center"><p>tane</p></td>
+<td class="text-center"><p>tanena</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>gunro</p></td>
-<td class="text-align:center"><p>gunrona</p></td>
+<tr class="row-odd"><td class="text-center"><p>gunro</p></td>
+<td class="text-center"><p>gunrona</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>spa</p></td>
-<td class="text-align:center"><p>spana</p></td>
+<tr class="row-even"><td class="text-center"><p>spa</p></td>
+<td class="text-center"><p>spana</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>tam</p></td>
-<td class="text-align:center"><p>tamu</p></td>
+<tr class="row-odd"><td class="text-center"><p>tam</p></td>
+<td class="text-center"><p>tamu</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>zarin</p></td>
-<td class="text-align:center"><p>zarina</p></td>
+<tr class="row-even"><td class="text-center"><p>zarin</p></td>
+<td class="text-center"><p>zarina</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>esif</p></td>
-<td class="text-align:center"><p>esivu</p></td>
+<tr class="row-odd"><td class="text-center"><p>esif</p></td>
+<td class="text-center"><p>esivu</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>arev</p></td>
-<td class="text-align:center"><p>arevu</p></td>
+<tr class="row-even"><td class="text-center"><p>arev</p></td>
+<td class="text-center"><p>arevu</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>res</p></td>
-<td class="text-align:center"><p>reza</p></td>
+<tr class="row-odd"><td class="text-center"><p>res</p></td>
+<td class="text-center"><p>reza</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>foz</p></td>
-<td class="text-align:center"><p>foza</p></td>
+<tr class="row-even"><td class="text-center"><p>foz</p></td>
+<td class="text-center"><p>foza</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>mirib</p></td>
-<td class="text-align:center"><p>miribu</p></td>
+<tr class="row-odd"><td class="text-center"><p>mirib</p></td>
+<td class="text-center"><p>miribu</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>snep</p></td>
-<td class="text-align:center"><p>snebu</p></td>
+<tr class="row-even"><td class="text-center"><p>snep</p></td>
+<td class="text-center"><p>snebu</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>bad</p></td>
-<td class="text-align:center"><p>bada</p></td>
+<tr class="row-odd"><td class="text-center"><p>bad</p></td>
+<td class="text-center"><p>bada</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>orit</p></td>
-<td class="text-align:center"><p>orida</p></td>
+<tr class="row-even"><td class="text-center"><p>orit</p></td>
+<td class="text-center"><p>orida</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>akug</p></td>
-<td class="text-align:center"><p>akuga</p></td>
+<tr class="row-odd"><td class="text-center"><p>akug</p></td>
+<td class="text-center"><p>akuga</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>nank</p></td>
-<td class="text-align:center"><p>nanga</p></td>
+<tr class="row-even"><td class="text-center"><p>nank</p></td>
+<td class="text-center"><p>nanga</p></td>
 </tr>
 </tbody>
 </table>
@@ -1335,7 +888,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="extra-2-password-generator">
-<h2>Extra 2 : password generator<a class="headerlink" href="#extra-2-password-generator" title="Permalink to this headline">#</a></h2>
+<h2>Extra 2 : password generator<a class="headerlink" href="#extra-2-password-generator" title="Permalink to this heading">#</a></h2>
 <p>ใน module <code class="docutils literal notranslate"><span class="pre">string</span></code> มีชุดตัวอักษรดังนี้ (ไม่ใช่ฟังก์ชั่น จึงไม่ต้องใส่วงเล็บ)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
 
@@ -1371,67 +924,67 @@ title="Print to PDF"
 </div>
 </section>
 <section id="extra-3-caesar-s-cipher">
-<h2>Extra 3 : Caesar’s cipher<a class="headerlink" href="#extra-3-caesar-s-cipher" title="Permalink to this headline">#</a></h2>
+<h2>Extra 3 : Caesar’s cipher<a class="headerlink" href="#extra-3-caesar-s-cipher" title="Permalink to this heading">#</a></h2>
 <p>Caesar’s cipher สามารถใช้ ord / chr ได้ด้วย</p>
 <p>แต่ต้องระวังว่าตัวอักษรจะ circulate เช่น กรณี shift = 1</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>original</p></td>
-<td class="text-align:center"><p>a</p></td>
-<td class="text-align:center"><p>b</p></td>
-<td class="text-align:center"><p>c</p></td>
-<td class="text-align:center"><p>d</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>w</p></td>
-<td class="text-align:center"><p>x</p></td>
-<td class="text-align:center"><p>y</p></td>
-<td class="text-align:center"><p>z</p></td>
+<td class="text-center"><p>a</p></td>
+<td class="text-center"><p>b</p></td>
+<td class="text-center"><p>c</p></td>
+<td class="text-center"><p>d</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>w</p></td>
+<td class="text-center"><p>x</p></td>
+<td class="text-center"><p>y</p></td>
+<td class="text-center"><p>z</p></td>
 </tr>
 <tr class="row-odd"><td><p>code point</p></td>
-<td class="text-align:center"><p>97</p></td>
-<td class="text-align:center"><p>98</p></td>
-<td class="text-align:center"><p>99</p></td>
-<td class="text-align:center"><p>100</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>119</p></td>
-<td class="text-align:center"><p>120</p></td>
-<td class="text-align:center"><p>121</p></td>
-<td class="text-align:center"><p>122</p></td>
+<td class="text-center"><p>97</p></td>
+<td class="text-center"><p>98</p></td>
+<td class="text-center"><p>99</p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>119</p></td>
+<td class="text-center"><p>120</p></td>
+<td class="text-center"><p>121</p></td>
+<td class="text-center"><p>122</p></td>
 </tr>
 <tr class="row-even"><td><p>encrypted</p></td>
-<td class="text-align:center"><p>b</p></td>
-<td class="text-align:center"><p>c</p></td>
-<td class="text-align:center"><p>d</p></td>
-<td class="text-align:center"><p>e</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>x</p></td>
-<td class="text-align:center"><p>y</p></td>
-<td class="text-align:center"><p>z</p></td>
-<td class="text-align:center"><p>a</p></td>
+<td class="text-center"><p>b</p></td>
+<td class="text-center"><p>c</p></td>
+<td class="text-center"><p>d</p></td>
+<td class="text-center"><p>e</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>x</p></td>
+<td class="text-center"><p>y</p></td>
+<td class="text-center"><p>z</p></td>
+<td class="text-center"><p>a</p></td>
 </tr>
 <tr class="row-odd"><td><p>code point</p></td>
-<td class="text-align:center"><p>98</p></td>
-<td class="text-align:center"><p>99</p></td>
-<td class="text-align:center"><p>100</p></td>
-<td class="text-align:center"><p>101</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>120</p></td>
-<td class="text-align:center"><p>121</p></td>
-<td class="text-align:center"><p>122</p></td>
-<td class="text-align:center"><p>97</p></td>
+<td class="text-center"><p>98</p></td>
+<td class="text-center"><p>99</p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>101</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>120</p></td>
+<td class="text-center"><p>121</p></td>
+<td class="text-center"><p>122</p></td>
+<td class="text-center"><p>97</p></td>
 </tr>
 </tbody>
 </table>
@@ -1445,53 +998,53 @@ title="Print to PDF"
 </div>
 <p>Hint: ระวังกรณีมากกว่า 122 หรือน้อยกว่า 97</p>
 <p>ลบ 97 ไว้แล้วใช้ mod 26 จะง่ายกว่า</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
-<th class="text-align:center head"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
+<th class="head text-center"><p></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>original</p></td>
-<td class="text-align:center"><p>a</p></td>
-<td class="text-align:center"><p>b</p></td>
-<td class="text-align:center"><p>c</p></td>
-<td class="text-align:center"><p>d</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>w</p></td>
-<td class="text-align:center"><p>x</p></td>
-<td class="text-align:center"><p>y</p></td>
-<td class="text-align:center"><p>z</p></td>
+<td class="text-center"><p>a</p></td>
+<td class="text-center"><p>b</p></td>
+<td class="text-center"><p>c</p></td>
+<td class="text-center"><p>d</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>w</p></td>
+<td class="text-center"><p>x</p></td>
+<td class="text-center"><p>y</p></td>
+<td class="text-center"><p>z</p></td>
 </tr>
 <tr class="row-odd"><td><p>code point</p></td>
-<td class="text-align:center"><p>97</p></td>
-<td class="text-align:center"><p>98</p></td>
-<td class="text-align:center"><p>99</p></td>
-<td class="text-align:center"><p>100</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>119</p></td>
-<td class="text-align:center"><p>120</p></td>
-<td class="text-align:center"><p>121</p></td>
-<td class="text-align:center"><p>122</p></td>
+<td class="text-center"><p>97</p></td>
+<td class="text-center"><p>98</p></td>
+<td class="text-center"><p>99</p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>119</p></td>
+<td class="text-center"><p>120</p></td>
+<td class="text-center"><p>121</p></td>
+<td class="text-center"><p>122</p></td>
 </tr>
 <tr class="row-even"><td><p>code point - 97</p></td>
-<td class="text-align:center"><p>0</p></td>
-<td class="text-align:center"><p>1</p></td>
-<td class="text-align:center"><p>2</p></td>
-<td class="text-align:center"><p>3</p></td>
-<td class="text-align:center"><p>…</p></td>
-<td class="text-align:center"><p>22</p></td>
-<td class="text-align:center"><p>23</p></td>
-<td class="text-align:center"><p>24</p></td>
-<td class="text-align:center"><p>25</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>23</p></td>
+<td class="text-center"><p>24</p></td>
+<td class="text-center"><p>25</p></td>
 </tr>
 </tbody>
 </table>
@@ -1531,7 +1084,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./book/module2"
         },
         predefinedOutput: true
@@ -1539,50 +1092,124 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5-videos-string.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Video: สตริง</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5-videos-string.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Video: สตริง</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../data_structure1.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../data_structure1.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">โครงสร้างข้อมูล (Data Structure I)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Attapol Thamrongrattanarit<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">โจทย์: สตริง</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-suffix">ข้อ 1. Prefix suffix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-word">ข้อ 2. Compound word</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-string">ข้อ 3. Reverse String</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palindrome">ข้อ 4. Palindrome</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pig-latin">ข้อ 5. Pig Latin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flip-language">ข้อ 6. Flip Language</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 7. ไม่ 1 ไม่ 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 8. ไปรษณีย์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9. Am I a float?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#str-to-int">ข้อ 10. str to int</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">โจทย์: สตริง (ยาก)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-1-morphophonological-rules">Extra 1 : Morphophonological Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-2-password-generator">Extra 2 : password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-3-caesar-s-cipher">Extra 3 : Caesar’s cipher</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

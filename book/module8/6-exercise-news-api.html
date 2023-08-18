@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>แบบฝึกหัดการเรียก API &#8212; Programming for NLP</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,56 +61,87 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module8/6-exercise-news-api';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="เฉลยแบบฝึกหัดการเรียก API" href="6s-example-news-api.html" />
     <link rel="prev" title="แบบฝึกหัด JSON Serialization และการเรียก API" href="5-exercise-json-html-api.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Programming for NLP</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -109,789 +151,344 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../comp_thinking.html">
-   การคิดเชิงคำนวณ และ control flow
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/1-karel.html">
-     การคิดเชิงคำนวณ (Computational Thinking)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/2-videos-karel.html">
-     Video: การคิดเชิงคำนวณ และ control flow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module1/3-exercise.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../basics.html">
-   พื้นฐานการเขียนโปรแกรม
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/1-variable.html">
-     ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/2-videos-variable.html">
-     Video: ตัวแปรและฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/3-exercise-variable-function.html">
-     โจทย์: ตัวแปร และฟังก์ชัน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/4-string.html">
-     สตริง
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/5-videos-string.html">
-     Video: สตริง
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module2/6-exercise-string.html">
-     โจทย์: สตริง
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure1.html">
-   โครงสร้างข้อมูล (Data Structure I)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/1-list.html">
-     ลิสต์ (List)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/2-videos-list.html">
-     Video: List and Data Structure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3-exercise-list.html">
-     โจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/3s-exercise-list.html">
-     เฉลยโจทย์: ลิสต์
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4a-dictionary.html">
-     ดิกชันนารี (Dictionary)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4b-tuple.html">
-     ทูเปิล (tuple)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/4c-counter.html">
-     เคาน์เตอร์ (counter)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/5-videos-dictionary.html">
-     Video: Dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module3/6-exercise-dictionary.html">
-     โจทย์: ดิกชันนารี
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../text_file.html">
-   การประมวลผลข้อมูลจากไฟล์
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/1-file.html">
-     File
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/2-videos-file.html">
-     Video: file
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/3-regular-expression.html">
-     Regular expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/4-videos-regex.html">
-     Video: Regular Expression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module4/5-exercise-file-regex.html">
-     โจทย์: Text processing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_structure2.html">
-   Data Structure II
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/01-set.html">
-     Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/02-videos-set.html">
-     Video: Set
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/03-nested-list.html">
-     Nested list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/04-videos-nested-list.html">
-     Video: Advance list
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/05-nested-dictionary.html">
-     Nested dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/06-videos-nested-dictionary.html">
-     Video: Advance dictionary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/07-exercise-nested.html">
-     โจทย์: Set และ nested data structures
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/08-exercise-data-type.html">
-     โจทย์: Data type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/09-comprehension.html">
-     Comprehension
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/10-videos-comprehension.html">
-     Video: ฟีเจอร์อื่น ๆ ของไพธอน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module5/11-exercise-comprehension.html">
-     โจทย์: Comprehension
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../oop.html">
-   Object-oriented programming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/1-OOP.html">
-     Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/2-videos-OOP.html">
-     Video: Object-Oriented Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module6/3-exercise-OOP.html">
-     โจทย์: Object-Oriented Programming
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../nlp.html">
-   Natural Language Processing
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/1-intro-NLP.html">
-     การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/2-videos-intro-NLP.html">
-     Video: Natural Language Processing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3-workshop-text-processing.html">
-     Workshop - การประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/3s-workshop-text-processing.html">
-     เฉลยแบบฝึกหัดการประมวลผลข้อความ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/4-workshop-word-cloud.html">
-     Workshop - Word cloud
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module7/5-workshop-lda.html">
-     Workshop - Topic modeling
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../scraping.html">
-   การดึงข้อมูลจากอินเตอร์เน็ต
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1-api.html">
-     Application Programming Interface (API)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2-videos-api.html">
-     Video: Serialization and API call
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3-web-scraping.html">
-     Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4-videos-web-scraping.html">
-     Video: Web scraping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5-exercise-json-html-api.html">
-     แบบฝึกหัด JSON Serialization และการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     แบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="6s-example-news-api.html">
-     เฉลยแบบฝึกหัดการเรียก API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7-example-scrape-dek-d.html">
-     ตัวอย่างการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="8-exercise-scraping.html">
-     แบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="8s-exercise-scraping.html">
-     เฉลยแบบฝึกหัดการขูดข้อมูลด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       BeautifulSoup
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../pandas.html">
-   การจัดการข้อมูลด้วย
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     pandas
-    </span>
-   </code>
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/1-pandas.html">
-     การจัดการข้อมูลขั้นพื้นฐานด้วย
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/2-example-pandas.html">
-     ตัวอย่างการใช้
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../module9/3-exercise-pandas.html">
-     แบบฝึกหัด
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../comp_thinking.html">การคิดเชิงคำนวณ และ control flow</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics.html">พื้นฐานการเขียนโปรแกรม</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">โจทย์: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/4-string.html">สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/6-exercise-string.html">โจทย์: สตริง</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/1-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/2-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/5-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/03-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/04-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/05-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/09-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../scraping.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-pandas.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/attapol/programming-nlp-book/main?urlpath=tree/book/module8/6-exercise-news-api.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
   
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
+  <div id="rtd-footer-container"></div>
 
-      </li>
+
+      </div>
       
-      <li>
-        <a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module8/6-exercise-news-api.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module8/6-exercise-news-api.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module8/6-exercise-news-api.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module8/6-exercise-news-api.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module8/6-exercise-news-api.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/book/module8/6-exercise-news-api.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#news-api">
-   News API
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#api-documentation">
-   API Documentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-api-call-curated-headline">
-   Sample API Call - Curated Headline
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">
-     Exercise 1. Get Thailand’s headlines
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#authentication">
-   Authentication
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#endpoints">
-   Endpoints
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   Exercises
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-2-news-sources">
-     Exercises 2 - News Sources
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-3-news-search">
-     Exercises 3 - News Search
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-4-news-sentiment">
-     Exercises 4 - News Sentiment
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>แบบฝึกหัดการเรียก API</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#news-api">
-   News API
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#api-documentation">
-   API Documentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-api-call-curated-headline">
-   Sample API Call - Curated Headline
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">
-     Exercise 1. Get Thailand’s headlines
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#authentication">
-   Authentication
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#endpoints">
-   Endpoints
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   Exercises
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-2-news-sources">
-     Exercises 2 - News Sources
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-3-news-search">
-     Exercises 3 - News Search
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises-4-news-sentiment">
-     Exercises 4 - News Sentiment
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>แบบฝึกหัดการเรียก API</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#news-api">News API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-documentation">API Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-api-call-curated-headline">Sample API Call - Curated Headline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">Exercise 1. Get Thailand’s headlines</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication">Authentication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-2-news-sources">Exercises 2 - News Sources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-3-news-search">Exercises 3 - News Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-4-news-sentiment">Exercises 4 - News Sentiment</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="api">
-<h1>แบบฝึกหัดการเรียก API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h1>
+<h1>แบบฝึกหัดการเรียก API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h1>
 <section id="news-api">
-<h2>News API<a class="headerlink" href="#news-api" title="Permalink to this headline">#</a></h2>
+<h2>News API<a class="headerlink" href="#news-api" title="Permalink to this heading">#</a></h2>
 <p>Explore the <a class="reference external" href="https://newsapi.org/">News API</a> website. It is different from the Poke API in the previous exercise in a way that you now need to register for an account before retrieving any data from the website.</p>
 <p>Go ahead and register for an account.</p>
 <p>After that, an <strong>API Key</strong> will be shown. Copy it and save it in a variable because you will need to use it quite often.</p>
@@ -905,11 +502,11 @@ title="Print to PDF"
 <p>Next, go to your account page. You will see that you are registered for the Developer plan. It’s fine for our use here. Below, you will see how many requests you have made. You are limited to 1,000 requests per 30 minutes, so don’t waste them!</p>
 </section>
 <section id="api-documentation">
-<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">#</a></h2>
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://newsapi.org/docs">Documentation</a> is a good source to look for reference on how to use the API. Different data sources (website) have different API specs, so spend some time in the Documentation section to learn how to use the API.</p>
 </section>
 <section id="sample-api-call-curated-headline">
-<h2>Sample API Call - Curated Headline<a class="headerlink" href="#sample-api-call-curated-headline" title="Permalink to this headline">#</a></h2>
+<h2>Sample API Call - Curated Headline<a class="headerlink" href="#sample-api-call-curated-headline" title="Permalink to this heading">#</a></h2>
 <p>Let’s make our first API call. We will get the lastest headlines from the API. Go to the <a class="reference external" href="https://newsapi.org/docs/get-started#top-headlines">Get the current top headlines for a country or category</a> section. You will see on the right side the URL format that you need to construct</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=API_KEY
 </pre></div>
@@ -955,7 +552,7 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </div>
 <section id="exercise-1-get-thailand-s-headlines">
-<h3>Exercise 1. Get Thailand’s headlines<a class="headerlink" href="#exercise-1-get-thailand-s-headlines" title="Permalink to this headline">#</a></h3>
+<h3>Exercise 1. Get Thailand’s headlines<a class="headerlink" href="#exercise-1-get-thailand-s-headlines" title="Permalink to this heading">#</a></h3>
 <p>Reconstruct the url to retrieve headlines from Thailand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -967,7 +564,7 @@ The sample URL specify “us” as the country. However, it left the <code class
 </section>
 </section>
 <section id="authentication">
-<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">#</a></h2>
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this heading">#</a></h2>
 <p>Next, let’s look at the <a class="reference external" href="https://newsapi.org/docs/authentication">authentication section</a> of the documentation. Since you have limited number of requests you can make, you have to manage your credential carefully so that other people (hackers!) cannot steal your precious resources.</p>
 <p>Previously, we simply put the our API key in the URL. This is not ideal because hackers can sniff your traffic (especially when you use free public wi-fi) and steal your API key. We will put our API key in the request header instead (the last method mentioned in the documentation.)</p>
 <div class="cell docutils container">
@@ -1000,13 +597,13 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </section>
 <section id="endpoints">
-<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">#</a></h2>
+<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this heading">#</a></h2>
 <p>Let’s explore what else the News API offer at the <a class="reference external" href="https://newsapi.org/docs/endpoints">Endpoints</a> section.</p>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <section id="exercises-2-news-sources">
-<h3>Exercises 2 - News Sources<a class="headerlink" href="#exercises-2-news-sources" title="Permalink to this headline">#</a></h3>
+<h3>Exercises 2 - News Sources<a class="headerlink" href="#exercises-2-news-sources" title="Permalink to this heading">#</a></h3>
 <p>List all the news sources available in Thailand</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1017,7 +614,7 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </section>
 <section id="exercises-3-news-search">
-<h3>Exercises 3 - News Search<a class="headerlink" href="#exercises-3-news-search" title="Permalink to this headline">#</a></h3>
+<h3>Exercises 3 - News Search<a class="headerlink" href="#exercises-3-news-search" title="Permalink to this heading">#</a></h3>
 <p>Find all the news about “APEC” (on <code class="docutils literal notranslate"><span class="pre">everything</span></code> endpoint)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1028,7 +625,7 @@ The sample URL specify “us” as the country. However, it left the <code class
 </div>
 </section>
 <section id="exercises-4-news-sentiment">
-<h3>Exercises 4 - News Sentiment<a class="headerlink" href="#exercises-4-news-sentiment" title="Permalink to this headline">#</a></h3>
+<h3>Exercises 4 - News Sentiment<a class="headerlink" href="#exercises-4-news-sentiment" title="Permalink to this heading">#</a></h3>
 <p>Based on exercises 3, group the news by each news source. Does each news source present different sentiment about “APEC”?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +650,7 @@ The sample URL specify “us” as the country. However, it left the <code class
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./book/module8"
         },
         predefinedOutput: true
@@ -1061,50 +658,118 @@ The sample URL specify “us” as the country. However, it left the <code class
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5-exercise-json-html-api.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">แบบฝึกหัด JSON Serialization และการเรียก API</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5-exercise-json-html-api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">แบบฝึกหัด JSON Serialization และการเรียก API</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="6s-example-news-api.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="6s-example-news-api.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">เฉลยแบบฝึกหัดการเรียก API</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Attapol Thamrongrattanarit<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#news-api">News API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-documentation">API Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-api-call-curated-headline">Sample API Call - Curated Headline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">Exercise 1. Get Thailand’s headlines</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication">Authentication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-2-news-sources">Exercises 2 - News Sources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-3-news-search">Exercises 3 - News Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-4-news-sentiment">Exercises 4 - News Sentiment</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,0 +1,944 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Programming for NLP</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module8/pandas exercise solution';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="การจัดการข้อมูลด้วย pandas" href="../pandas.html" />
+    <link rel="prev" title="เฉลยแบบฝึกหัดการขูดข้อมูลด้วย BeautifulSoup" href="8s-exercise-scraping.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Programming for Natural Language Processing
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../comp_thinking.html">การคิดเชิงคำนวณ และ control flow</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../basics.html">พื้นฐานการเขียนโปรแกรม</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">โจทย์: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/4-string.html">สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/6-exercise-string.html">โจทย์: สตริง</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/1-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/2-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/4c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/5-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/03-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/04-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/05-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/09-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../scraping.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-pandas.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module8/pandas exercise solution.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module8/pandas exercise solution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module8/pandas exercise solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://thestandard.co/category/news/lgbtqia/&#39;</span>
+<span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">a_tags</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;div.newsbox-archive h3.news-title a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_tags</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;https://thestandard.co/onelove-captain-armband/&#39;,
+ &#39;https://thestandard.co/iker-casillas-lgbtq-joke/&#39;,
+ &#39;https://thestandard.co/iker-casillas-lgbtq/&#39;,
+ &#39;https://thestandard.co/cuba-family-law-marriage-equality-referendum/&#39;,
+ &#39;https://thestandard.co/naruemit-pride-wedding/&#39;,
+ &#39;https://thestandard.co/lgbtq-same-sex-marriage-act/&#39;,
+ &#39;https://thestandard.co/singapore-prohibit-377a/&#39;,
+ &#39;https://thestandard.co/committee-approve-draft-law-on-equal-marriage-and-marriage/&#39;,
+ &#39;https://thestandard.co/ukraine-to-consider-equal-marriage-law/&#39;,
+ &#39;https://thestandard.co/thanikan-pornpongsaroj-090765/&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scrape_article</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">d_list</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;div.entry-content&#39;</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">d_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;div.entry-title h1.title&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;news category&#39;</span><span class="p">:</span> <span class="s1">&#39;lgbtq+&#39;</span><span class="p">,</span> <span class="s1">&#39;header&#39;</span><span class="p">:</span> <span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;article&#39;</span><span class="p">:</span><span class="n">t</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span><span class="n">url</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info_dicts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+    <span class="n">info_dict</span> <span class="o">=</span> <span class="n">scrape_article</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">info_dicts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">scrape_article</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">links</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>news category</th>
+      <th>header</th>
+      <th>article</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>lgbtq+</td>
+      <td>ปลอกแขน ‘One Love’ ตัวแทนความรักที่กัปตัน 8 ที...</td>
+      <td>\nท่ามกลางเรื่องราวมากมายหลากหลายคำถามเกี่ยวกั...</td>
+      <td>https://thestandard.co/onelove-captain-armband/</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>lgbtq+</td>
+      <td>การล้อเล่นของ อิเกร์ กาซิยัส ที่ไม่ตลกเลยสำหรั...</td>
+      <td>\nเมื่อวันอาทิตย์ที่ผ่านมา (9 ตุลาคม) เกิดกระแ...</td>
+      <td>https://thestandard.co/iker-casillas-lgbtq-joke/</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>lgbtq+</td>
+      <td>อิเกร์ กาซิยัส เปิดตัวเป็นเกย์ วอนทุกคนเคารพใน...</td>
+      <td>\nอิเกร์ กาซิยัส อดีตผู้รักษาประตูระดับตำนานที...</td>
+      <td>https://thestandard.co/iker-casillas-lgbtq/</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>lgbtq+</td>
+      <td>ถอดบทเรียนความสำเร็จ คิวบาลงประชามติเห็นชอบแก้...</td>
+      <td>\nนับเป็นช่วงเวลาประวัติศาสตร์ครั้งสำคัญของชุม...</td>
+      <td>https://thestandard.co/cuba-family-law-marriag...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>lgbtq+</td>
+      <td>กลุ่มนฤมิตไพรด์เตรียมจัด ‘นฤมิตวิวาห์’ งานสมรส...</td>
+      <td>\nวันนี้ (15 กันยายน) กลุ่มนฤมิตไพรด์ แถลงข่าว...</td>
+      <td>https://thestandard.co/naruemit-pride-wedding/</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>lgbtq+</td>
+      <td>ภาคีสีรุ้งฯ ยื่นหนังสือเร่งให้ กมธ. ผลักดัน พ....</td>
+      <td>\nวันนี้ (8 กันยายน) ที่อาคารรัฐสภา วาดดาว-ชุม...</td>
+      <td>https://thestandard.co/lgbtq-same-sex-marriage...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>lgbtq+</td>
+      <td>สิงคโปร์เตรียมยกเลิกกฎหมายยุคอาณานิคม ที่กำหนด...</td>
+      <td>\nวานนี้ (21 สิงหาคม) นายกรัฐมนตรีลีเซียนลุงขอ...</td>
+      <td>https://thestandard.co/singapore-prohibit-377a/</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>lgbtq+</td>
+      <td>กมธ. เคาะกฎหมายคู่ชีวิตและสมรสเท่าเทียม จดทะเบ...</td>
+      <td>\nวันนี้ (27 กรกฎาคม) ธณิกานต์ พรพงษาโรจน์ และ...</td>
+      <td>https://thestandard.co/committee-approve-draft...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>lgbtq+</td>
+      <td>ยูเครนเตรียมพิจารณาร่างกฎหมายสมรสเท่าเทียม ท่า...</td>
+      <td>\nเมื่อช่วงกลางสัปดาห์ที่ผ่านมา กลุ่มนักเคลื่อ...</td>
+      <td>https://thestandard.co/ukraine-to-consider-equ...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>lgbtq+</td>
+      <td>ธณิกานต์ โฆษก กมธ.กฎหมายคู่ชีวิต ยืนยันสมรสเท่...</td>
+      <td>\nวันนี้ (9 กรกฎาคม) ธณิกานต์ พรพงษาโรจน์ สมาช...</td>
+      <td>https://thestandard.co/thanikan-pornpongsaroj-...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythainlp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;word count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;article&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>news category</th>
+      <th>header</th>
+      <th>article</th>
+      <th>url</th>
+      <th>word count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>lgbtq+</td>
+      <td>ปลอกแขน ‘One Love’ ตัวแทนความรักที่กัปตัน 8 ที...</td>
+      <td>\nท่ามกลางเรื่องราวมากมายหลากหลายคำถามเกี่ยวกั...</td>
+      <td>https://thestandard.co/onelove-captain-armband/</td>
+      <td>766</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>lgbtq+</td>
+      <td>การล้อเล่นของ อิเกร์ กาซิยัส ที่ไม่ตลกเลยสำหรั...</td>
+      <td>\nเมื่อวันอาทิตย์ที่ผ่านมา (9 ตุลาคม) เกิดกระแ...</td>
+      <td>https://thestandard.co/iker-casillas-lgbtq-joke/</td>
+      <td>1629</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>lgbtq+</td>
+      <td>อิเกร์ กาซิยัส เปิดตัวเป็นเกย์ วอนทุกคนเคารพใน...</td>
+      <td>\nอิเกร์ กาซิยัส อดีตผู้รักษาประตูระดับตำนานที...</td>
+      <td>https://thestandard.co/iker-casillas-lgbtq/</td>
+      <td>322</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>lgbtq+</td>
+      <td>ถอดบทเรียนความสำเร็จ คิวบาลงประชามติเห็นชอบแก้...</td>
+      <td>\nนับเป็นช่วงเวลาประวัติศาสตร์ครั้งสำคัญของชุม...</td>
+      <td>https://thestandard.co/cuba-family-law-marriag...</td>
+      <td>1702</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>lgbtq+</td>
+      <td>กลุ่มนฤมิตไพรด์เตรียมจัด ‘นฤมิตวิวาห์’ งานสมรส...</td>
+      <td>\nวันนี้ (15 กันยายน) กลุ่มนฤมิตไพรด์ แถลงข่าว...</td>
+      <td>https://thestandard.co/naruemit-pride-wedding/</td>
+      <td>521</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>lgbtq+</td>
+      <td>ภาคีสีรุ้งฯ ยื่นหนังสือเร่งให้ กมธ. ผลักดัน พ....</td>
+      <td>\nวันนี้ (8 กันยายน) ที่อาคารรัฐสภา วาดดาว-ชุม...</td>
+      <td>https://thestandard.co/lgbtq-same-sex-marriage...</td>
+      <td>381</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>lgbtq+</td>
+      <td>สิงคโปร์เตรียมยกเลิกกฎหมายยุคอาณานิคม ที่กำหนด...</td>
+      <td>\nวานนี้ (21 สิงหาคม) นายกรัฐมนตรีลีเซียนลุงขอ...</td>
+      <td>https://thestandard.co/singapore-prohibit-377a/</td>
+      <td>624</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>lgbtq+</td>
+      <td>กมธ. เคาะกฎหมายคู่ชีวิตและสมรสเท่าเทียม จดทะเบ...</td>
+      <td>\nวันนี้ (27 กรกฎาคม) ธณิกานต์ พรพงษาโรจน์ และ...</td>
+      <td>https://thestandard.co/committee-approve-draft...</td>
+      <td>219</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>lgbtq+</td>
+      <td>ยูเครนเตรียมพิจารณาร่างกฎหมายสมรสเท่าเทียม ท่า...</td>
+      <td>\nเมื่อช่วงกลางสัปดาห์ที่ผ่านมา กลุ่มนักเคลื่อ...</td>
+      <td>https://thestandard.co/ukraine-to-consider-equ...</td>
+      <td>465</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>lgbtq+</td>
+      <td>ธณิกานต์ โฆษก กมธ.กฎหมายคู่ชีวิต ยืนยันสมรสเท่...</td>
+      <td>\nวันนี้ (9 กรกฎาคม) ธณิกานต์ พรพงษาโรจน์ สมาช...</td>
+      <td>https://thestandard.co/thanikan-pornpongsaroj-...</td>
+      <td>396</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;word count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count      10.000000
+mean      702.500000
+std       530.492696
+min       219.000000
+25%       384.750000
+50%       493.000000
+75%       730.500000
+max      1702.000000
+Name: word count, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;news_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/module8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="8s-exercise-scraping.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../pandas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
