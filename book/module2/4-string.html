@@ -164,7 +164,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-videos-string.html">Video: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-exercise-string.html">โจทย์: สตริง</a></li>
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -447,6 +446,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-replace-old-new">แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">นำค่าตัวแปรมาเป็นส่วนหนึ่งของสตริง</a></li>
 </ul>
             </nav>
         </div>
@@ -467,6 +467,9 @@ document.write(`
 <li><p>ตัวเขียนของภาษาทุกภาษา เช่น <code class="docutils literal notranslate"><span class="pre">'流星雨'</span></code> <code class="docutils literal notranslate"><span class="pre">'いらっしゃいませ'</span></code> <code class="docutils literal notranslate"><span class="pre">'สามย่าน'</span></code></p></li>
 <li><p>เครื่องหมายวรรคตอนของภาษาอังกฤษ (เช่น <code class="docutils literal notranslate"><span class="pre">*&amp;?#$!«</span></code>) หรือภาษาไทย (เช่น <code class="docutils literal notranslate"><span class="pre">'๏๛ฯ'</span></code>)</p></li>
 <li><p>Emoji เช่น <code class="docutils literal notranslate"><span class="pre">'😂😃🧘🏻‍♂️🌍🌦️🍞🚗📞🎉🍆'</span></code></p></li>
+<li><p>อักขระพิเศษ (special character) มีหลายตัวด้วยกัน แต่ว่าตัวที่พบเห็นบ่อยได้แก่
+– <code class="docutils literal notranslate"><span class="pre">\n</span></code> คือ new line character ซึ่งเป็นสัญลักษณ์ใช้ในการบ่งบอกให้ขึ้นบรรทัดใหม่
+– <code class="docutils literal notranslate"><span class="pre">\t</span></code> คือ tab character ซึ่งเป็นสัญลักษณ์บ่งบอกถึงแท็บ (กลุ่มของช่องว่าง) ซึ่งอาจใช้สำหรับการบ่งบอกให้ขึ้นย่อหน้าใหม่</p></li>
 </ul>
 <section id="id2">
 <h2>การสร้างสตริง<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
@@ -881,6 +884,22 @@ document.write(`
 <p>method นี้ใช้บ่อยเวลาเราต้องการทำความสะอาดข้อมูลภาษาที่เราได้มา ซึ่งมักจะมีช่องว่างข้างหน้าคือข้างหลังติดมาด้วย เวลาเราโหลดข้อมูลมาจากแหล่งข้อมูลจริง ซึ่งมักจะทำให้เรานับจำนวนตัวอักษรผิดพลาด method นี้สร้างสตริงเวอร์ชันใหม่ขึ้นมาที่ไม่มีช่องว่างน่าหลัง</p>
 <p>method นี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมาเช่นกันกับ method อื่นๆ ข้างต้น</p>
 </section>
+<section id="id4">
+<h2>นำค่าตัวแปรมาเป็นส่วนหนึ่งของสตริง<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>ภาษาไพธอนมีสตริงพิเศษที่เรียกว่า เอฟสตริง (f-string) ซึ่งเป็นสตริงที่สร้างโดยการใช้ตัวเอฟมาอยู่ข้างหน้าก่อน <code class="docutils literal notranslate"><span class="pre">'</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">&quot;``</span> <span class="pre">เอฟสตริงทำให้เราสามารถนำค่าที่เก็บในตัวแปรอื่นมาเป็นส่วนหนึ่งของสตริงได้</span> <span class="pre">โดยการคร่อมตัวแปรนั้นด้วย</span> </code>{}` เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
+<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Thailand</span></code> ซึ่งเกิดจากการสร้างเอฟสตริงที่ดึงเอาค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">country</span></code> เข้ามารวมในสตริง แต่ถ้าเราเผลอลืมใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> ในเอฟสตริง เราจะไม่ได้ผลตามต้องการ กล่าวคือเราจะไม่ได้ดึงเอาค่าของตัวแปรมาใส่ในสตริง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
+<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to country&#39;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">country</span></code></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -968,6 +987,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isdigit-isalpha-isalnum">เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substring-replace-old-new">แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">นำค่าตัวแปรมาเป็นส่วนหนึ่งของสตริง</a></li>
 </ul>
   </nav></div>
 
