@@ -470,7 +470,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 7 - ไม่ 1 ไม่ 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 8 - ไปรษณีย์</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9 - Am I a float?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - Password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#past-form">ข้อ 11 - Past form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -574,22 +579,8 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> รับ parameter เป็น <em>‘Hello’</em> จะต้อง return string ที่มีค่าเป็น <em>‘olleH’</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### เขียนโค้ดในช่องนี้</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">reverse_string</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;olleH&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ถูกต้อง&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ไม่ถูกต้อง&#39;</span><span class="p">)</span>
-    
-<span class="k">if</span> <span class="n">reverse_string</span><span class="p">(</span><span class="s1">&#39;Welcome to the new World!&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;!dlroW wen eht ot emocleW&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ถูกต้อง&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ไม่ถูกต้อง&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -605,22 +596,8 @@ document.write(`
 <p><em>‘Hello’</em> , <em>‘AloHa’</em> , <em>‘Tenet’</em> , <em>‘ciVIC’</em> ไม่เป็น palindrome</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### เขียนโค้ดในช่องนี้</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="s1">&#39;TENET&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ถูกต้อง&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ไม่ถูกต้อง&#39;</span><span class="p">)</span>
-    
-<span class="k">if</span> <span class="ow">not</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="s1">&#39;AloHa&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ถูกต้อง&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ไม่ถูกต้อง&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
@@ -632,7 +609,8 @@ document.write(`
 <p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">eng_to_pig_latin</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return คำภาษา Pig Latin ของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ฟังก์ชัน</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eng_to_pig_latin</span><span class="p">(</span><span class="n">english_word</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -653,7 +631,8 @@ document.write(`
 <em>‘natural’</em> แปลงเป็น <em>‘nralatu’</em> <br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### เขียนฟังก์ชันในช่องนี้</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flip_string</span><span class="p">(</span><span class="n">text_to_flip</span><span class="p">):</span>
+    <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
@@ -735,7 +714,7 @@ document.write(`
 </div>
 </section>
 <section id="password-generator">
-<h2>ข้อ 10 - password generator<a class="headerlink" href="#password-generator" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 10 - Password generator<a class="headerlink" href="#password-generator" title="Permalink to this heading">#</a></h2>
 <p>ใน module <code class="docutils literal notranslate"><span class="pre">string</span></code> มีชุดตัวอักษรดังนี้ (ไม่ใช่ฟังก์ชั่น จึงไม่ต้องใส่วงเล็บ)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
 
@@ -762,6 +741,75 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="past-form">
+<h2>ข้อ 11 - Past form<a class="headerlink" href="#past-form" title="Permalink to this heading">#</a></h2>
+<section id="part-1">
+<h3>Part 1<a class="headerlink" href="#part-1" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชันในการตรวจสอบว่าคำที่ได้รับมาเป็นกริยาที่เป็นรูป past form หรือไม่ โดยให้ใช้กฏง่าย ๆ ดังนี้</p>
+<ul class="simple">
+<li><p>ห้ามขึ้นต้นด้วยตัวใหญ่</p></li>
+<li><p>ห้ามมีตัวเลขเลย</p></li>
+<li><p>ต้องลงท้ายด้วย -ed</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_past_form</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ตัวอย่าง</span>
+<span class="sd">    &gt;&gt;&gt; is_past_form(&#39;pasted&#39;)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; is_past_form(&#39;brushed&#39;)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; is_past_form(&#39;SpotTed&#39;)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; is_past_form(&#39;ate&#39;)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; is_past_form(&#39;M34ed&#39;)</span>
+<span class="sd">    False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2">
+<h3>Part 2<a class="headerlink" href="#part-2" title="Permalink to this heading">#</a></h3>
+<p>คำกริยาภาษาอังกฤษที่เป็น past form มักจะลงท้ายด้วย -ed แต่ว่า -ed จะออกเสียงออกมาเป็นอย่างไรนั้นขึ้นอยู่กับพยัญชนะที่อยู่ข้างหลังสุดของหน่วยคำกริยา  โดยมีกฏดังนี้</p>
+<ul class="simple">
+<li><p>กริยาที่ลงท้ายด้วย s sh ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /t/</p></li>
+<li><p>กริยาที่ลงท้ายด้วย t d ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /id/</p></li>
+<li><p>กริยาอื่น ๆ ที่เหลือ ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /d/</p></li>
+</ul>
+<p>ตัวอย่าง</p>
+<p>crashed → /t/</p>
+<p>missed → /t/</p>
+<p>wanted → /id/</p>
+<p>reminded → /id/</p>
+<p>scrubbed → /d/</p>
+<p>tuned → /d/</p>
+<p>จงเขียนฟังก์ชันที่รับคำเป็น input และ return ว่า -ed ออกเสียงเป็นอะไร (สำหรับกฏข้อแรก ไม่ต้องจัดการกับคำที่ลงท้ายด้วย k p ch x gh z เพื่อความง่าย)  ถ้าคำที่รับมาไม่ใช่ past form (ตามที่กำหนดไว้ในฟังก์ชันจาก part 1) ให้ return สตริงเปล่า</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pronounce_ed</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ตัวอย่าง</span>
+<span class="sd">    &gt;&gt;&gt; pronounce_ed(&#39;SpotTed&#39;)</span>
+<span class="sd">    &#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; pronounce_ed(&#39;spotted&#39;)</span>
+<span class="sd">    &#39;/id/&#39;</span>
+<span class="sd">    &gt;&gt;&gt; pronounce_ed(&#39;1254ed&#39;)</span>
+<span class="sd">    &#39;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; pronounce_ed(&#39;refreshed&#39;)</span>
+<span class="sd">    &#39;/t/&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -841,7 +889,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 7 - ไม่ 1 ไม่ 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 8 - ไปรษณีย์</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9 - Am I a float?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - Password generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#past-form">ข้อ 11 - Past form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
