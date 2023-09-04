@@ -485,6 +485,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 12.2</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">ข้อ 13 - ดัชนีมวลกาย - BMI</a></li>
 </ul>
             </nav>
         </div>
@@ -834,6 +835,25 @@ document.write(`
 </div>
 </section>
 </section>
+<section id="bmi">
+<h2>ข้อ 13 - ดัชนีมวลกาย - BMI<a class="headerlink" href="#bmi" title="Permalink to this heading">#</a></h2>
+<p>จงเขียนฟังก์ชันคำนวณค่า BMI สำหรับตรวจสอบภาวะไขมันและความอ้วน ที่รับ input เป็นน้ำหนักและส่วนสูง มีสูตรคำนวณคือ น้ำหนักตัว[Kg] / (ส่วนสูง[m] ยกกำลังสอง) มีหลักเกณฑ์การตรวจสอบภาวะไขมันดังนี้</p>
+<ol class="arabic simple">
+<li><p>อ้วนมาก = 30.0 ขึ้นไป</p></li>
+<li><p>อ้วน = 25.0 - 29.9</p></li>
+<li><p>น้ำหนักปกติ  = 18.6 - 24</p></li>
+<li><p>ผอมเกินไป = น้อยกว่า 18.5</p></li>
+</ol>
+<p>ให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">compute_bmi()</span></code> return ค่า BMI และ print สภาวะไขมัน เช่น ‘น้ำหนักปกติ’ หรือ ‘ผอมเกินไป’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_bmi</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -927,6 +947,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 12.2</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">ข้อ 13 - ดัชนีมวลกาย - BMI</a></li>
 </ul>
   </nav></div>
 
