@@ -775,7 +775,20 @@ document.write(`
 </div>
 </aside>
 <p>method <code class="docutils literal notranslate"><span class="pre">format</span></code> ใช้เวลาเราต้องการสร้าง template ขึ้นมาเพื่อใช้เอาค่าอื่น ๆ มาเติมทีหลังเพื่อให้เป็นสตริงที่สมบูรณ์ เราจะใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> เป็นสัญลักษณ์ของช่องว่างที่เว้นเพื่อเอาค่าอื่นมาเติม (placeholder) ซึ่งเราจะใช้กี่ตัวก็ได้ แต่ตอนเรียก <code class="docutils literal notranslate"><span class="pre">.format</span></code> เราจะต้องใส่จำนวนพารามิเตอร์เท่ากับจำนวนของ placeholder ที่เราวางไว้ และจะเติมจากซ้ายไปขวา ถ้าใส่น้อยไปเราจะได้ <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> ถ้าใส่มากไปเครื่องจะไม่ว่าอะไร</p>
-<p>อีกวิธีคือการใช้ f string คือสตริงที่มีเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าเพื่อบอกให้เครื่องรู้ว่าเป็น formatting string เราสามารถใส่ชื่อตัวแปรเข้าไปใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้เลย ทำให้ประหยัดโค้ดไปได้ระดับหนึ่ง และดูสบายตากว่า</p>
+<p>อีกวิธีคือการใช้ f string คือสตริงที่มีเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าเพื่อบอกให้เครื่องรู้ว่าเป็น formatting string เราสามารถใส่ชื่อตัวแปรเข้าไปใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้เลย ทำให้ประหยัดโค้ดไปได้ระดับหนึ่ง และดูสบายตากว่า ตัวแปรที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> จะถูกแปลความให้เป็นค่าที่ตัวแปรนั้นเก็บอยู่ จากนั้นแปลงเป็นสตริง</p>
+<p>อีกตัวอย่างของการใช้ f string</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
+<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Thailand</span></code> ซึ่งเกิดจากการสร้างเอฟสตริงที่ดึงเอาค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">country</span></code> เข้ามารวมในสตริง แต่ถ้าเราเผลอลืมใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> ในเอฟสตริง เราจะไม่ได้ผลตามต้องการ กล่าวคือเราจะไม่ได้ดึงเอาค่าของตัวแปรมาใส่ในสตริง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
+<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to country&#39;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">country</span></code></p>
 </section>
 <section id="lower-upper">
 <h2>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this heading">#</a></h2>
@@ -886,19 +899,6 @@ document.write(`
 </section>
 <section id="id4">
 <h2>นำค่าตัวแปรมาเป็นส่วนหนึ่งของสตริง<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>ภาษาไพธอนมีสตริงพิเศษที่เรียกว่า เอฟสตริง (f-string) ซึ่งเป็นสตริงที่สร้างโดยการใช้ตัวเอฟมาอยู่ข้างหน้าก่อน <code class="docutils literal notranslate"><span class="pre">'</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">&quot;``</span> <span class="pre">เอฟสตริงทำให้เราสามารถนำค่าที่เก็บในตัวแปรอื่นมาเป็นส่วนหนึ่งของสตริงได้</span> <span class="pre">โดยการคร่อมตัวแปรนั้นด้วย</span> </code>{}` เช่น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
-<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Thailand</span></code> ซึ่งเกิดจากการสร้างเอฟสตริงที่ดึงเอาค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">country</span></code> เข้ามารวมในสตริง แต่ถ้าเราเผลอลืมใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> ในเอฟสตริง เราจะไม่ได้ผลตามต้องการ กล่าวคือเราจะไม่ได้ดึงเอาค่าของตัวแปรมาใส่ในสตริง</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
-<span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to country&#39;</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">country</span></code></p>
 </section>
 </section>
 
