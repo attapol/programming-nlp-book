@@ -459,12 +459,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. ลอตเตอรี่</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. สลากกินแบ่ง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2. ลิสต์อาหาร</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-an">ข้อ 3. a/an</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4. ทำความสะอาดข้อมูล</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5. ความยาวเฉลี่ยของคำ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ตรวจข้อสอบ</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7. เปลี่ยนตัว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8. คำนวณสถิติ</a></li>
 </ul>
@@ -481,7 +481,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>โจทย์: ลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
-<h2>ข้อ 1. ลอตเตอรี่<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 1. สลากกินแบ่ง<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>เขียนฟังก์ชันเพื่อตรวจสอบว่าสลากกินแบ่ง (lottery) ที่มีอยู่ (อาจมีมากกว่า 1 ใบ) ถูกรางวัลทั้งหมดเท่าไร
 โดยที่ฟังก์ชันจะรับข้อมูล 3 อย่าง ได้แก่</p>
 <ol class="arabic simple">
@@ -586,23 +586,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="k">def</span> <span class="nf">str_to_list</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">str_to_clean_list</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot; Turn English text into clean words</span>
+<span class="sd">	</span>
+<span class="sd">	Example:</span>
+<span class="sd">	&gt;&gt;&gt; str_to_clean_list(&quot;I will not give up on this. If I feel tired, I will take a rest.&quot;)</span>
+<span class="sd">	[&#39;I&#39;,&#39;will&#39;,&#39;not&#39;,&#39;give&#39;,&#39;up&#39;,&#39;on&#39;,&#39;this&#39;,&#39;If&#39;,&#39;I&#39;,&#39;feel&#39;,&#39;tired&#39;,&#39;I&#39;,&#39;will&#39;,&#39;take&#39;,&#39;a&#39;,&#39;rest&#39;]</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="k">return</span> <span class="p">[]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ตรวจสอบว่าทำงานถูกหรือเปล่า</span>
-<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I will not give up on this. If I feel tired, I will take a rest.&quot;</span>
-<span class="n">expectedList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;will&#39;</span><span class="p">,</span><span class="s1">&#39;not&#39;</span><span class="p">,</span><span class="s1">&#39;give&#39;</span><span class="p">,</span><span class="s1">&#39;up&#39;</span><span class="p">,</span><span class="s1">&#39;on&#39;</span><span class="p">,</span><span class="s1">&#39;this&#39;</span><span class="p">,</span><span class="s1">&#39;If&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;feel&#39;</span><span class="p">,</span><span class="s1">&#39;tired&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;will&#39;</span><span class="p">,</span><span class="s1">&#39;take&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;rest&#39;</span><span class="p">]</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">str_to_list</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expectedList</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -620,46 +611,20 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Black Pink in your area!&#39;</span>
-<span class="k">if</span> <span class="n">compute_mean_number_of_words</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="p">((</span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Inorrect&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="id6">
-<h2>ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
-<p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> ซึ่งรับลิสต์เป็น input (ในลิสต์จะเป็นข้อมูลประเภทใดก็ได้) และ <em>return ลิสต์ใหม่</em> ซึ่งมีข้อมูลจากลิสต์เดิม แต่มีข้อมูลที่ไม่ซ้ำกันเลย ตัวอย่างเช่น</p>
-<p><em>Input</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">5,</span> <span class="pre">5]</span></code></p>
-<p><em>Output</em>: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code></p>
-<p><strong>ข้อสำคัญ:</strong> ลิสต์เดิมที่ส่งไปที่ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_repetitions</span></code> จะต้องไม่เปลี่ยนแปลง</p>
+<h2>ข้อ 6. ตรวจข้อสอบ<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>จงเขียนฟังก์ชันตรวจข้อสอบโดยรับค่า parameter 2 ตัว ได้แก่ ลิสต์ของเฉลยข้อสอบ และลิสต์ของคำตอบที่ต้องการตรวจในลำดับเดียวกัน ให้ข้อที่ถูกได้คะแนน 1 คะแนน หลังจากนั้นให้ฟังก์ชันคืนค่าเปอร์เซนต์ของข้อที่ตอบทั้งหมด</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="k">def</span> <span class="nf">remove_repetitions</span><span class="p">(</span><span class="n">li</span><span class="p">):</span>
-	<span class="k">return</span> <span class="p">[]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ตรวจสอบว่าทำงานถูกหรือเปล่า</span>
-<span class="n">original_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">original_list_copy</span> <span class="o">=</span> <span class="n">original_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">expected_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">remove_repetitions</span><span class="p">(</span><span class="n">original_list</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected_list</span> <span class="ow">and</span> <span class="n">original_list</span> <span class="o">==</span> <span class="n">original_list_copy</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grade_exam</span><span class="p">(</span><span class="n">correct_list</span><span class="p">,</span> <span class="n">answer_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; check_exam([&#39;a&#39;,&#39;b&#39;,&#39;d&#39;,&#39;a&#39;,&#39;c&#39;], [&#39;a&#39;,&#39;a&#39;,&#39;b&#39;,&#39;d&#39;,&#39;a&#39;])</span>
+<span class="sd">    (1, [1, 0, 0, 0, 0])</span>
+<span class="sd">    &gt;&gt;&gt; check_exam([&#39;a&#39;,&#39;b&#39;,&#39;d&#39;,&#39;a&#39;,&#39;c&#39;], [&#39;a&#39;,&#39;b&#39;,&#39;d&#39;,&#39;a&#39;,&#39;c&#39;])</span>
+<span class="sd">    (5, [1, 1, 1, 1, 1])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div>
@@ -698,7 +663,7 @@ document.write(`
 <span class="go">Min = 4</span>
 <span class="go">Max = 11</span>
 <span class="go">Range = 7</span>
-<span class="go">Median = </span>
+<span class="go">Median = 8</span>
 <span class="go">Mean = 7.68</span>
 </pre></div>
 </div>
@@ -781,12 +746,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. ลอตเตอรี่</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. สลากกินแบ่ง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2. ลิสต์อาหาร</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-an">ข้อ 3. a/an</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4. ทำความสะอาดข้อมูล</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5. ความยาวเฉลี่ยของคำ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ลิสต์ที่ไม่มีตัวซ้ำ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ตรวจข้อสอบ</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7. เปลี่ยนตัว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8. คำนวณสถิติ</a></li>
 </ul>
