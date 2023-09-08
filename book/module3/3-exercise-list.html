@@ -170,6 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1-list.html">ลิสต์ (List)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: ลิสต์</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4b-tuple.html">ทูเปิล (tuple)</a></li>
@@ -459,6 +460,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">โจทย์: ลิสต์</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. สลากกินแบ่ง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2. ลิสต์อาหาร</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-an">ข้อ 3. a/an</a></li>
@@ -467,7 +469,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ตรวจข้อสอบ</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7. เปลี่ยนตัว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8. คำนวณสถิติ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 9. เลือกคำ</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">โจทย์ฝึกใช้ List comprehension</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 3</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -677,6 +689,70 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="id9">
+<h2>ข้อ 9. เลือกคำ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>จงเขียน function หาคำที่สนใจ โดยกำหนดให้ function รับ parameter เข้ามา 2 ตัว</p>
+<ol class="arabic simple">
+<li><p>list ของประโยคที่ถูกตัดคำแล้ว เช่น [‘She’, ‘went’, ‘to’, ‘eat’, ‘pizza’, ‘at’, ‘Huahin’ ,’yesterday’]</p></li>
+<li><p>list ที่เป็นค่า 0 หรือ 1 เพื่อบอกว่าที่ตำแหน่งของคำนั้นเป็นคำที่เราสนใจหรือไม่ โดยที่ 0 คือไม่สนใจและ 1 คือสนใจ เช่น [0, 0, 0, 0, 1, 0, 1, 0]</p></li>
+</ol>
+<p>และคืนค่าออกมาเป็น list ที่มีแต่คำที่สนใจเท่านั้น</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">select_words_from_mask</span><span class="p">(</span><span class="n">word_list</span><span class="p">,</span> <span class="n">mask_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Select words from a list</span>
+<span class="sd">    </span>
+<span class="sd">    Example</span>
+
+<span class="sd">    &gt;&gt;&gt; tokenized_sentence = [&#39;She&#39;, &#39;went&#39;, &#39;to&#39;, &#39;eat&#39;, &#39;pizza&#39;, &#39;at&#39;, &#39;Huahin&#39; ,&#39;yesterday&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; mask = [0, 0, 0, 0, 1, 0, 1, 0]</span>
+<span class="sd">    &gt;&gt;&gt; select_words_from_mask(tokenized_sentence, mask)</span>
+<span class="sd">    [&#39;pizza&#39;, &#39;Huahin&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="list-comprehension">
+<h1>โจทย์ฝึกใช้ List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h1>
+<section id="id10">
+<h2>ข้อ 1<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<p>จงเปลี่ยนลิสต์ของชื่อให้เป็นลิสต์ที่มีแต่ชื่อภาษาอังกฤษ และชื่อภาษาอังกฤษจะต้องถูกเปลี่ยนเป็นชื่อที่ขึ้นต้นด้วยตัวใหญ่ที่เหลือตัวเล็กทั้งหมด ให้เขียนสองแบบ</p>
+<ul class="simple">
+<li><p>แบบแรกให้เขียนโดยใช้ for loop ธรรมดา</p></li>
+<li><p>แบบที่สองให้เขียนโดยใช้ list comprehension</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aaron&#39;</span><span class="p">,</span> <span class="s1">&#39;leigH&#39;</span><span class="p">,</span> <span class="s1">&#39;เต้&#39;</span><span class="p">,</span> <span class="s1">&#39;jOHN&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h2>ข้อ 2<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<p>จงเปลี่ยนลิสต์ที่มีคำภาษาอังกฤษอยู่ให้เป็นลิสต์ที่มีคำเดิมอยู่แต่ว่าเปลี่ยนให้ทุกคำเป็น uppercase และให้กรองเอาคำที่มีความยาวน้อยกว่าสองตัวอักษรออกไป</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fruit&#39;</span><span class="p">,</span> <span class="s1">&#39;flies&#39;</span><span class="p">,</span> <span class="s1">&#39;do&#39;</span><span class="p">,</span> <span class="s1">&#39;like&#39;</span><span class="p">,</span> <span class="s1">&#39;bananas&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h2>ข้อ 3<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<p>เขียน List comprehension</p>
+<ul class="simple">
+<li><p>input เป็นลิสต์ของคำ (strings) เช่น <code class="docutils literal notranslate"><span class="pre">['monKey',</span> <span class="pre">'roach',</span> <span class="pre">'Eve',</span> <span class="pre">'oo',</span> <span class="pre">'Jim']</span></code></p></li>
+<li><p>output ลิสต์ของคำทั้งหมดแต่ว่าให้เอาสระออกให้หมด เช่น <code class="docutils literal notranslate"><span class="pre">['mnKy',</span> <span class="pre">'rch',</span> <span class="pre">'v',</span> <span class="pre">'',</span> <span class="pre">'Jm']</span></code></p></li>
+</ul>
+<p>word_list = [‘monKey’, ‘roach’, ‘Eve’, ‘oo’, ‘Jim’]</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -746,6 +822,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">โจทย์: ลิสต์</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1. สลากกินแบ่ง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2. ลิสต์อาหาร</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-an">ข้อ 3. a/an</a></li>
@@ -754,7 +831,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6. ตรวจข้อสอบ</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7. เปลี่ยนตัว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8. คำนวณสถิติ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 9. เลือกคำ</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">โจทย์ฝึกใช้ List comprehension</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 3</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
