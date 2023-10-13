@@ -216,3 +216,23 @@ required_langtech_course = {
 required_langtech_course['2209368']['time'] # คือ type อะไร
 required_langtech_course['2209368'] # คือ type อะไร
 ```
+
+## ข้อ 8
+```python
+s = [['I am a student', 'You are also a student.'], 
+      ['You are right', 'You are correct']]
+s[1][0].split(' ') # คือ type อะไร
+
+t = [ (1120, {'status': 12, 'enc': '458df', 'contact': [230, 460, 125]}) ,
+      (2506, {'status': 0, 'enc': 'cvirg', 'contact': [1120, 508]}) ,
+      (508, {'status': 1, 'enc': '9kjb3', 'contact': [77, 2506]}) ]
+for x in t:
+	x[1] # คือ type อะไร
+
+results = []
+for i, y in t:
+	for k in y.keys():
+		k # คือ type อะไร
+	results.append(i)
+results # คือ type อะไร
+```

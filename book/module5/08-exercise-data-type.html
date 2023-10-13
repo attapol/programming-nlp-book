@@ -436,6 +436,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phoneme">ข้อ 5 - ข้อมูล phoneme</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 6 - ข้อมูลการบ้าน</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7 - วิชาบังคับ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 8</a></li>
 </ul>
             </nav>
         </div>
@@ -672,6 +673,27 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="id7">
+<h2>ข้อ 8<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;I am a student&#39;</span><span class="p">,</span> <span class="s1">&#39;You are also a student.&#39;</span><span class="p">],</span> 
+      <span class="p">[</span><span class="s1">&#39;You are right&#39;</span><span class="p">,</span> <span class="s1">&#39;You are correct&#39;</span><span class="p">]]</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># คือ type อะไร</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="mi">1120</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;enc&#39;</span><span class="p">:</span> <span class="s1">&#39;458df&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">230</span><span class="p">,</span> <span class="mi">460</span><span class="p">,</span> <span class="mi">125</span><span class="p">]})</span> <span class="p">,</span>
+      <span class="p">(</span><span class="mi">2506</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;enc&#39;</span><span class="p">:</span> <span class="s1">&#39;cvirg&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1120</span><span class="p">,</span> <span class="mi">508</span><span class="p">]})</span> <span class="p">,</span>
+      <span class="p">(</span><span class="mi">508</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;enc&#39;</span><span class="p">:</span> <span class="s1">&#39;9kjb3&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">77</span><span class="p">,</span> <span class="mi">2506</span><span class="p">]})</span> <span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+	<span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># คือ type อะไร</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+	<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">y</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+		<span class="n">k</span> <span class="c1"># คือ type อะไร</span>
+	<span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">results</span> <span class="c1"># คือ type อะไร</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -748,6 +770,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phoneme">ข้อ 5 - ข้อมูล phoneme</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 6 - ข้อมูลการบ้าน</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7 - วิชาบังคับ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 8</a></li>
 </ul>
   </nav></div>
 
