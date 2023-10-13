@@ -12,6 +12,8 @@ name_to_phone_list = \
 
 name_to_phone_list[('Jane', 'Eyre')] # return type อะไร
 name_to_phone_list[('Jane', 'Eyre')][1] # return type อะไร
+for x in name_to_phone_list:
+    print(x)  # x เป็น type อะไร
 ```
 
 ## ข้อ 2
@@ -22,9 +24,11 @@ animal = [ {'dog':['ear','leg','tail','bark'],'cat':['eye','ear','tail']},
 animal[1] # return type อะไร
 animal[0]['cat'] # return type อะไร
 animal[1]['frog'][1] # return type อะไร
+for x in animal:
+    print(x)  # x เป็น type อะไร
 ```
 
-## ข้อ 3
+## ข้อ 3 - ข้อมูลข่าว
 ```python
 news_dic = {
   "headers": {
@@ -76,6 +80,8 @@ news_dic = {
 
 news_dic['items']['content'] # return type อะไร
 news_dic['items']['content'][1]['tags'] # return type อะไร
+for x in news_dic:
+    print(x)  # x เป็น type อะไร
 ```
 
 ## ข้อ 4
@@ -84,19 +90,19 @@ news_dic['items']['content'][1]['tags'] # return type อะไร
 student_lst = 
 [({'student_id': 1710501115187,
    'name': 'Weiying',
-   'class_attended': ('History', 'Math', 'Chinese')},
+   'class_attended': ['History', 'Math', 'Chinese']},
   ['A', 99.88, 'S']),
  ({'student_id': 1030102285053,
    'name': 'Lelouch',
-   'class_attended': ('Japanese', 'Politics', 'Material Arts')},
+   'class_attended': ['Japanese', 'Politics', 'Material Arts']},
   ['A', 100, 'U']),
  ({'student_id': 2584275888067,
    'name': 'Tunjiro',
-   'class_attended': ('Japanese', 'Economics', 'Programming', '')},
+   'class_attended': ['Japanese', 'Economics', 'Programming']},
   ['B+', 80, 'S']),
  ({'student_id': 4080802291786,
    'name': 'Somsak',
-   'class_attended': ('Thai', 'Math', 'Science')},
+   'class_attended': ['Thai', 'Math', 'Science']},
   ['C+', 50, 'S'])]
 
 for info, score in student_lst: 
@@ -104,9 +110,10 @@ for info, score in student_lst:
 
 score # เป็น type อะไร
 info # เป็น type อะไร
+student_lst[0][0]  # เป็น type อะไร
 ```
 
-## ข้อ 5
+## ข้อ 5 - ข้อมูล phoneme
 ```python
 phoneme_pairs = 
 [{'vowel': [{('i', 'e'): {'fnLoad': 0.0438, 'predictability': 0.93}},
@@ -124,7 +131,7 @@ phoneme_pairs[0]['vowel'] #return type อะไร
 phoneme_pairs[0]['vowel'][1][("i", "ɛ")]["fnLoad"] # return type อะไร
 ```
 
-## ข้อ 6
+## ข้อ 6 - ข้อมูลการบ้าน
 ```python
 homework_info = 
 {'AM001': {'name': ('Mr.', 'Robert', 'Kim'),
@@ -147,7 +154,7 @@ homework_info =
 homework_info["AM002"]['lateStatus'] # return type อะไร
 ```
 
-## ข้อ 7
+## ข้อ 7 - วิชาบังคับ
 ```python
 required_langtech_course = {
     '2206323':{'subject_name':'INFO SYS HUMAN',
