@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/08-exercise-data-type';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Comprehension" href="09-comprehension.html" />
-    <link rel="prev" title="โจทย์: Set และ nested data structures" href="07-exercise-nested.html" />
+    <link rel="next" title="โจทย์: Nested data structure" href="09-exercise-nested.html" />
+    <link rel="prev" title="Video: Advance dictionary" href="07-videos-nested-dictionary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,20 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-set.html">Set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-videos-set.html">Video: Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-nested-list.html">Nested list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-nested-dictionary.html">Nested dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-exercise-set.html">โจทย์: เซ็ต</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09-comprehension.html">Comprehension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-exercise-nested.html">โจทย์: Nested data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-comprehension.html">Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 </ul>
 </li>
@@ -431,11 +431,11 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ข้อมูลข่าว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phoneme">ข้อ 5 - ข้อมูล phoneme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 6 - ข้อมูลการบ้าน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7 - วิชาบังคับ</a></li>
 </ul>
             </nav>
         </div>
@@ -461,6 +461,8 @@ document.write(`
 
 <span class="n">name_to_phone_list</span><span class="p">[(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">)]</span> <span class="c1"># return type อะไร</span>
 <span class="n">name_to_phone_list</span><span class="p">[(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">)][</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">name_to_phone_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># x เป็น type อะไร</span>
 </pre></div>
 </div>
 </section>
@@ -472,11 +474,13 @@ document.write(`
 <span class="n">animal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
 <span class="n">animal</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;cat&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
 <span class="n">animal</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;frog&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">animal</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># x เป็น type อะไร</span>
 </pre></div>
 </div>
 </section>
 <section id="id3">
-<h2>ข้อ 3<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 3 - ข้อมูลข่าว<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">news_dic</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">&quot;headers&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;Cache-Control&quot;</span><span class="p">:</span> <span class="s2">&quot;public, max-age=300, must-revalidate&quot;</span>
@@ -527,6 +531,8 @@ document.write(`
 
 <span class="n">news_dic</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
 <span class="n">news_dic</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span> <span class="c1"># return type อะไร</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">news_dic</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># x เป็น type อะไร</span>
 </pre></div>
 </div>
 </section>
@@ -535,19 +541,19 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_lst</span> <span class="o">=</span> 
 <span class="p">[({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">1710501115187</span><span class="p">,</span>
    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Weiying&#39;</span><span class="p">,</span>
-   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">)},</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;History&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">]},</span>
   <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mf">99.88</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">]),</span>
  <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">1030102285053</span><span class="p">,</span>
    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lelouch&#39;</span><span class="p">,</span>
-   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Politics&#39;</span><span class="p">,</span> <span class="s1">&#39;Material Arts&#39;</span><span class="p">)},</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Politics&#39;</span><span class="p">,</span> <span class="s1">&#39;Material Arts&#39;</span><span class="p">]},</span>
   <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">]),</span>
  <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">2584275888067</span><span class="p">,</span>
    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Tunjiro&#39;</span><span class="p">,</span>
-   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Economics&#39;</span><span class="p">,</span> <span class="s1">&#39;Programming&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)},</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;Economics&#39;</span><span class="p">,</span> <span class="s1">&#39;Programming&#39;</span><span class="p">]},</span>
   <span class="p">[</span><span class="s1">&#39;B+&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">]),</span>
  <span class="p">({</span><span class="s1">&#39;student_id&#39;</span><span class="p">:</span> <span class="mi">4080802291786</span><span class="p">,</span>
    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Somsak&#39;</span><span class="p">,</span>
-   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Thai&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">)},</span>
+   <span class="s1">&#39;class_attended&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Thai&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">]},</span>
   <span class="p">[</span><span class="s1">&#39;C+&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">])]</span>
 
 <span class="k">for</span> <span class="n">info</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">student_lst</span><span class="p">:</span> 
@@ -555,11 +561,12 @@ document.write(`
 
 <span class="n">score</span> <span class="c1"># เป็น type อะไร</span>
 <span class="n">info</span> <span class="c1"># เป็น type อะไร</span>
+<span class="n">student_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># เป็น type อะไร</span>
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h2>ข้อ 5<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="phoneme">
+<h2>ข้อ 5 - ข้อมูล phoneme<a class="headerlink" href="#phoneme" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phoneme_pairs</span> <span class="o">=</span> 
 <span class="p">[{</span><span class="s1">&#39;vowel&#39;</span><span class="p">:</span> <span class="p">[{(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="mf">0.0438</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.93</span><span class="p">}},</span>
             <span class="p">{(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;ɛ&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;fnLoad&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;predictability&#39;</span><span class="p">:</span> <span class="mf">0.89</span><span class="p">}},</span>
@@ -577,8 +584,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id6">
-<h2>ข้อ 6<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<section id="id5">
+<h2>ข้อ 6 - ข้อมูลการบ้าน<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">homework_info</span> <span class="o">=</span> 
 <span class="p">{</span><span class="s1">&#39;AM001&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Mr.&#39;</span><span class="p">,</span> <span class="s1">&#39;Robert&#39;</span><span class="p">,</span> <span class="s1">&#39;Kim&#39;</span><span class="p">),</span>
             <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
@@ -601,8 +608,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h2>ข้อ 7<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h2>ข้อ 7 - วิชาบังคับ<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">required_langtech_course</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;2206323&#39;</span><span class="p">:{</span><span class="s1">&#39;subject_name&#39;</span><span class="p">:</span><span class="s1">&#39;INFO SYS HUMAN&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;credit&#39;</span><span class="p">:</span><span class="mf">3.0</span><span class="p">,</span>
@@ -699,20 +706,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="07-exercise-nested.html"
+       href="07-videos-nested-dictionary.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">โจทย์: Set และ nested data structures</p>
+        <p class="prev-next-title">Video: Advance dictionary</p>
       </div>
     </a>
     <a class="right-next"
-       href="09-comprehension.html"
+       href="09-exercise-nested.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Comprehension</p>
+        <p class="prev-next-title">โจทย์: Nested data structure</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -736,11 +743,11 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ข้อมูลข่าว</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phoneme">ข้อ 5 - ข้อมูล phoneme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 6 - ข้อมูลการบ้าน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7 - วิชาบังคับ</a></li>
 </ul>
   </nav></div>
 

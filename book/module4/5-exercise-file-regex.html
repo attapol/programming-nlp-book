@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>โจทย์: Text processing &#8212; Programming for NLP</title>
+    <title>โจทย์: Text processing และ Regular expression &#8212; Programming for NLP</title>
   
   
   
@@ -185,20 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3-regular-expression.html">Regular expression</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="4-videos-regex.html">Video: Regular Expression</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Text processing</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/03-nested-list.html">Nested list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/04-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/05-nested-dictionary.html">Nested dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/03-exercise-set.html">โจทย์: เซ็ต</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/04-nested-list.html">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/05-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/06-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/07-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/09-comprehension.html">Comprehension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/09-exercise-nested.html">โจทย์: Nested data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/10-comprehension.html">Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 </ul>
 </li>
@@ -450,7 +450,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>โจทย์: Text processing</h1>
+    <h1>โจทย์: Text processing และ Regular expression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -460,16 +460,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proflookup">5. Proflookup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6. สุนทรพจน์ของโอบามา</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expression-practice">1. Regular Expression Practice</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect-potential-names">2. Detect potential names</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoanswer">3. Autoanswer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-things-about-words">4. Cool things about words</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proflookup">ข้อ 1 - Proflookup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 2 - สุนทรพจน์ของโอบามา</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect-potential-names">ข้อ 3 - Detect potential names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoanswer">ข้อ 4 - Autoanswer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-things-about-words">ข้อ 5 - Cool things about words</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">5.1 คำที่มีตัว K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-vocabulary">5.2 k vocabulary</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 6 - ชื่อจากประกาศ</a></li>
 </ul>
             </nav>
         </div>
@@ -481,10 +481,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="text-processing">
-<h1>โจทย์: Text processing<a class="headerlink" href="#text-processing" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="text-processing-regular-expression">
+<h1>โจทย์: Text processing และ Regular expression<a class="headerlink" href="#text-processing-regular-expression" title="Permalink to this heading">#</a></h1>
 <section id="proflookup">
-<h2>5. Proflookup<a class="headerlink" href="#proflookup" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 1 - Proflookup<a class="headerlink" href="#proflookup" title="Permalink to this heading">#</a></h2>
 <p>ไฟล์ชนิดหนึ่งที่มักจะเจอในการจัดการกับข้อมูลคือไฟล์ csv (comma-separated values) แต่ละบรรทัดของไฟล์ csv จะเป็นข้อความที่คั่นด้วยเครื่องหมาย comma (,) และมีจำนวน “ท่อน” ที่คั่นด้วย comma เท่ากัน เช่น ไฟล์ csv อาจจะมีเนื้อหาแบบด้านล่าง (มี 3 “ท่อน” ที่คั่นด้วย comma)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">แมว</span><span class="p">,</span><span class="n">หมู</span><span class="p">,</span><span class="n">หมา</span>
 <span class="n">กา</span><span class="p">,</span><span class="n">ไก่</span><span class="p">,</span><span class="n">กุ้ง</span>
@@ -509,7 +509,7 @@ document.write(`
 <p>โดยลำดับอาจจะไม่เป็นอย่างนี้ก็ได้ (dictionary เป็น data structure ที่ไม่มีลำดับ) แต่ต้องเก็บข้อมูลอาจารย์ในไฟล์ให้ครบทุกคน</p>
 </section>
 <section id="id1">
-<h2>6. สุนทรพจน์ของโอบามา<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 2 - สุนทรพจน์ของโอบามา<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>ไฟล์ <a class="reference external" href="https://drive.google.com/file/d/1iA1s-yNIhdCQvo4BS8d7CVBICHZs4okt/view">obama.txt</a> มีสุนทรพจน์ของโอบามาในปี 2013 แต่ไฟล์นี้มีความพิเศษตรงที่มี Part of speech tag นั่นคือ แต่ละคำในไฟล์จะมีบอกไว้ด้วยว่าเป็น noun, verb, pronoun หรือเครื่องหมายวรรคตอนแบบต่าง ๆ เช่น ประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank</span> <span class="n">you</span><span class="o">.</span> <span class="n">God</span> <span class="n">bless</span> <span class="n">you</span><span class="p">,</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">He</span> <span class="n">forever</span> <span class="n">bless</span> <span class="n">these</span> <span class="n">United</span> <span class="n">States</span> <span class="n">of</span> <span class="n">America</span><span class="o">.</span>
 </pre></div>
@@ -532,12 +532,8 @@ document.write(`
 <li><p>พอข้างบนเสร็จแล้วค่อยลองเปิดไฟล์ และอ่านทีละบรรทัด</p></li>
 </ul>
 </section>
-<section id="regular-expression-practice">
-<h2>1. Regular Expression Practice<a class="headerlink" href="#regular-expression-practice" title="Permalink to this heading">#</a></h2>
-<p>ให้ทำแบบฝึกหัด regular expression ใน <a class="reference external" href="https://regexone.com/">RegexOne</a> ตั้งแต่ Lesson 1 - 11 (นอกเหนือจากนั้นเป็น optional)</p>
-</section>
 <section id="detect-potential-names">
-<h2>2. Detect potential names<a class="headerlink" href="#detect-potential-names" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 3 - Detect potential names<a class="headerlink" href="#detect-potential-names" title="Permalink to this heading">#</a></h2>
 <p>ชื่อคนในภาษาอังกฤษ เช่น Peter Meg Lois Brian Stewie จะมีการสะกดแบบพิเศษ คือ ขึ้นต้นด้วยตัวใหญ่แค่ตัวหน้าเท่านั้น</p>
 <p>เขียนฟังก์ชันที่ detect ว่าคำที่ให้มานั้นมีรูปร่างเหมือนชื่อคนภาษาอังกฤษหรือไม่</p>
 <p>Hint: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code></p>
@@ -595,7 +591,7 @@ document.write(`
 </div>
 </section>
 <section id="autoanswer">
-<h2>3. Autoanswer<a class="headerlink" href="#autoanswer" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 4 - Autoanswer<a class="headerlink" href="#autoanswer" title="Permalink to this heading">#</a></h2>
 <p>ถ้าได้รับ string ที่เป็นคำถามที่ขึ้นต้นด้วย Do หรือ Does ให้ตอบกลับไปว่า Yes, ตามด้วยคำตอบเต็ม ๆ แบบใช้ verb do/does มาช่วยด้วย เช่น</p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('Does</span> <span class="pre">he</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music?')</span> <span class="pre">--&gt;</span> <span class="pre">'Yes,</span> <span class="pre">he</span> <span class="pre">does</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music.'</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('Do</span> <span class="pre">you</span> <span class="pre">sing</span> <span class="pre">well?')</span> <span class="pre">--&gt;</span> <span class="pre">'Yes,</span> <span class="pre">you</span> <span class="pre">do</span> <span class="pre">sing</span> <span class="pre">well.'</span></code></p>
@@ -612,7 +608,7 @@ document.write(`
 </div>
 </section>
 <section id="cool-things-about-words">
-<h2>4. Cool things about words<a class="headerlink" href="#cool-things-about-words" title="Permalink to this heading">#</a></h2>
+<h2>ข้อ 5 - Cool things about words<a class="headerlink" href="#cool-things-about-words" title="Permalink to this heading">#</a></h2>
 <p>Data ที่ใช้ทำแบบฝึกหัดนี้สามารถโหลดได้จากลิงค์นี้</p>
 <p><a class="reference external" href="https://attapol.github.io/programming/data/small_nyt_eng_200001">https://attapol.github.io/programming/data/small_nyt_eng_200001</a></p>
 <div class="cell docutils container">
@@ -655,6 +651,32 @@ document.write(`
 <li><p>คำที่ตัวที่ลงท้ายด้วยตัว k</p></li>
 </ul>
 </section>
+</section>
+<section id="id2">
+<h2>ข้อ 6 - ชื่อจากประกาศ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>เขียนฟังก์ชันชื่อ `find_names`` ที่รับ parameter เป็นชื่อไฟล์ที่มีเก็บ text ที่มาจากประกาศทางราชการย้อนหลัง 5 ปี ให้ฟังก์ชันนี้ return ค่าเป็น tuple ของลิสต์ 2 ลิสต์ ลิสต์แรกเก็บชื่อผู้ชาย ลิสต์ที่ 2 เก็บชื่อผู้หญิงทั้งหมดที่อยู่ในไฟล์ โดยจะเก็บชื่อจากท้ายประกาศที่มักจะมีชื่อคนที่เซ็นประกาศ เช่น</p>
+<p>ข้อความในไฟล์</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">นายขุนแผน</span> <span class="n">แสนสุภาพ</span><span class="p">)</span>
+<span class="n">กรรมการ</span>
+<span class="p">(</span><span class="n">นางสาวมณโฑ</span> <span class="n">ตาโตข้างเดียว</span><span class="p">)</span>
+<span class="n">หัวหน้าศูนย์สอบภาษาอังกฤษที่</span> <span class="mi">2</span> 
+<span class="p">(</span><span class="n">นางวันทอง</span> <span class="n">กี่ใจก็ได้</span><span class="p">)</span>
+<span class="n">ประธานกรรมการโครงการพัฒนาชนบท</span> 
+</pre></div>
+</div>
+<p>ฟังก์ชันต้อง return</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">([</span><span class="s1">&#39;ขุนแผน&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;มณโฑ&#39;</span><span class="p">,</span> <span class="s1">&#39;วันทอง&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+<p>ในไฟล์จะมีข้อความอื่น ๆ และสิ่งแปลกปลอมต่าง ๆ ที่ติดมาในประกาศอีกด้วย เพราะฉะนั้นเราต้องใช้ regular expression ในการหาชื่อที่นำหน้าวงเล็บเปิดตามด้วย นาย นาง หรือ นางสาว</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_names</span><span class="p">(</span><span class="n">announcement_file</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">([],</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -725,16 +747,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proflookup">5. Proflookup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6. สุนทรพจน์ของโอบามา</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expression-practice">1. Regular Expression Practice</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect-potential-names">2. Detect potential names</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoanswer">3. Autoanswer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-things-about-words">4. Cool things about words</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proflookup">ข้อ 1 - Proflookup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 2 - สุนทรพจน์ของโอบามา</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detect-potential-names">ข้อ 3 - Detect potential names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoanswer">ข้อ 4 - Autoanswer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-things-about-words">ข้อ 5 - Cool things about words</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">5.1 คำที่มีตัว K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-vocabulary">5.2 k vocabulary</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 6 - ชื่อจากประกาศ</a></li>
 </ul>
   </nav></div>
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Video: Advance list &#8212; Programming for NLP</title>
+    <title>Nested list &#8212; Programming for NLP</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/04-videos-nested-list';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/04-nested-list';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Nested dictionary" href="05-nested-dictionary.html" />
-    <link rel="prev" title="Nested list" href="03-nested-list.html" />
+    <link rel="next" title="Video: Advance list" href="05-videos-nested-list.html" />
+    <link rel="prev" title="โจทย์: เซ็ต" href="03-exercise-set.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,20 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-set.html">Set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-videos-set.html">Video: Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-nested-list.html">Nested list</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-nested-dictionary.html">Nested dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-exercise-nested.html">โจทย์: Set และ nested data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-exercise-set.html">โจทย์: เซ็ต</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Nested list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09-comprehension.html">Comprehension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-videos-comprehension.html">Video: ฟีเจอร์อื่น ๆ ของไพธอน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-exercise-nested.html">โจทย์: Nested data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-comprehension.html">Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 </ul>
 </li>
@@ -307,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/04-videos-nested-list.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/04-nested-list.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +337,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module5/04-videos-nested-list.md" target="_blank"
+      <li><a href="../../_sources/book/module5/04-nested-list.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,9 +406,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -419,23 +417,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Video: Advance list</h1>
+    <h1>Nested list</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-structure">Nested data structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tuples">List of tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-list">Nested list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-loop">Nested loop</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-list">Parallel list</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -445,28 +431,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="video-advance-list">
-<h1>Video: Advance list<a class="headerlink" href="#video-advance-list" title="Permalink to this heading">#</a></h1>
-<p>Advance list</p>
-<section id="nested-data-structure">
-<h2>Nested data structure<a class="headerlink" href="#nested-data-structure" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w6KfKsXOjzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<section id="list-of-tuples">
-<h2>List of tuples<a class="headerlink" href="#list-of-tuples" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lV1mxww5M1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<section id="nested-list">
-<h2>Nested list<a class="headerlink" href="#nested-list" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hhuzLVt9-Lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<section id="nested-loop">
-<h2>Nested loop<a class="headerlink" href="#nested-loop" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M3BUoBVOEFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<section id="parallel-list">
-<h2>Parallel list<a class="headerlink" href="#parallel-list" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vW5zcQSVGhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+  <section class="tex2jax_ignore mathjax_ignore" id="nested-list">
+<h1>Nested list<a class="headerlink" href="#nested-list" title="Permalink to this heading">#</a></h1>
+<p>Under construction</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -501,20 +468,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="03-nested-list.html"
+       href="03-exercise-set.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Nested list</p>
+        <p class="prev-next-title">โจทย์: เซ็ต</p>
       </div>
     </a>
     <a class="right-next"
-       href="05-nested-dictionary.html"
+       href="05-videos-nested-list.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Nested dictionary</p>
+        <p class="prev-next-title">Video: Advance list</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -527,24 +494,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-structure">Nested data structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tuples">List of tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-list">Nested list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-loop">Nested loop</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-list">Parallel list</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
