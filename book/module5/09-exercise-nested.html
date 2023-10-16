@@ -474,15 +474,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-dictionary">Nested dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 2 - Contact List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 1 - Contact List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-key">ข้อ 2 - Tuple เป็น key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7 - รวมดิกชันนารี</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-up-by-last-name">ข้อ 6. Look up by last name</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 7. Name to age - Age to name</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 9. เปลี่ยนคีย์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 10. นับจำนวนนักเรียน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 11. ใครชอบเรียนเยอะ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-dicts">ข้อ 12. Combine dicts</a></li>
 </ul>
             </nav>
         </div>
@@ -559,7 +559,7 @@ document.write(`
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    </span>
 <span class="sd">    &gt;&gt;&gt; get_min_max_sentence_length([&#39;short sentence.&#39;, &#39;This is a very long long long sentence.&#39;, &#39;a normal sentence here&#39;, &#39;another normal sentence&#39;])</span>
-<span class="sd">    (2, 5)</span>
+<span class="sd">    (2, 8)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
@@ -679,62 +679,51 @@ document.write(`
 <section id="nested-dictionary">
 <h2>Nested dictionary<a class="headerlink" href="#nested-dictionary" title="Permalink to this heading">#</a></h2>
 <section id="contact-list">
-<h3>ข้อ 2 - Contact List<a class="headerlink" href="#contact-list" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนโปรแกรมที่สร้าง List of tuples (name, line id) จาก nested dictionary โดยเรียงลำดับตามอักษรของชื่อ<br></p>
-<p>ทำเสร็จแล้วควรจะได้ผลลัพธ์ดังนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;alexcool&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Bo&#39;</span><span class="p">,</span> <span class="s1">&#39;bobo&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="s1">&#39;chrissie&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Doug&#39;</span><span class="p">,</span> <span class="s1">&#39;dougd&#39;</span><span class="p">)]</span>
-</pre></div>
-</div>
+<h3>ข้อ 1 - Contact List<a class="headerlink" href="#contact-list" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนโปรแกรมที่สร้าง List of tuples (name, line id) จาก nested dictionary โดยเรียงลำดับตามอักษรของชื่อ</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">contactList</span><span class="p">(</span><span class="n">contacts</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_contact</span><span class="p">(</span><span class="n">contacts</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; list_contact({</span>
+<span class="sd">    &#39;Alex&#39; : {&#39;phone&#39;: &#39;123-456-789&#39;, &#39;line&#39;: &#39;alexcool&#39;},</span>
+<span class="sd">    &#39;Bo&#39;: {&#39;home phone&#39;: &#39;111-222-3333&#39;, &#39;line&#39;: &#39;bobo&#39;},</span>
+<span class="sd">    &#39;Chris&#39;: {&#39;phone&#39;: &#39;444-555-6666&#39;, &#39;line&#39;: &#39;chrissie&#39;},</span>
+<span class="sd">    &#39;Doug&#39;: {&#39;mobile phone&#39;: &#39;444-555-6666&#39;, &#39;line&#39;: &#39;dougd&#39;}   </span>
+<span class="sd">    })</span>
+<span class="sd">    [(&#39;Alex&#39;, &#39;alexcool&#39;), (&#39;Bo&#39;, &#39;bobo&#39;), (&#39;Chris&#39;, &#39;chrissie&#39;), (&#39;Doug&#39;, &#39;dougd&#39;)]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contacts</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Alex&#39;</span> <span class="p">:</span> <span class="p">{</span><span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="s1">&#39;123-456-789&#39;</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;alexcool&#39;</span><span class="p">},</span>
-    <span class="s1">&#39;Bo&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;home phone&#39;</span><span class="p">:</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;bobo&#39;</span><span class="p">},</span>
-    <span class="s1">&#39;Chris&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;chrissie&#39;</span><span class="p">},</span>
-    <span class="s1">&#39;Doug&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;mobile phone&#39;</span><span class="p">:</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;dougd&#39;</span><span class="p">}</span>   
-<span class="p">}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">contactList</span><span class="p">(</span><span class="n">contacts</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-</section>
-<section id="look-up-by-last-name">
-<h2>ข้อ 6. Look up by last name<a class="headerlink" href="#look-up-by-last-name" title="Permalink to this heading">#</a></h2>
+<section id="tuple-key">
+<h3>ข้อ 2 - Tuple เป็น key<a class="headerlink" href="#tuple-key" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราได้ข้อมูลเบอร์โทรศัพท์ที่เก็บอยู่ในดิกชันนารีที่มี key เป็น tuple ของชื่อและนามสกุล และ value เป็นสตริงที่เก็บเบอร์โทรศัพท์</p>
+<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">lookup_by_lastname</span></code> ที่รับนามสกุลที่เป็นสตริง และดิกชันนารีข้อมูลเบอร์โทรศัพท์ และ return เบอร์โทรศัพท์ของคนที่มีนามสกุลที่กำหนดให้ ถ้าเกิดว่านามสกุลนั้นไม่มีอยู่ในดิกชันนารีให้ return <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lookup_by_lastname</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone</span> <span class="o">=</span> 
-<span class="p">{</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span>
-  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">):</span> <span class="s1">&#39;222-333-4444&#39;</span><span class="p">,</span>
-  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">):</span> <span class="s1">&#39;333-444-5555&#39;</span>
-<span class="p">}</span>
-
-<span class="n">lookup_by_lastname</span><span class="p">(</span><span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="n">name_to_phone_numbers</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; name_to_phone =  { (&#39;Mark&#39;, &#39;Wahlberg&#39;) : &#39;111-222-3333&#39;,</span>
+<span class="sd">        (&#39;Jane&#39;, &#39;Doe&#39;): &#39;222-333-4444&#39;,</span>
+<span class="sd">        (&#39;Jane&#39;, &#39;Eyre&#39;): &#39;333-444-5555&#39;</span>
+<span class="sd">        }</span>
+<span class="sd">    &gt;&gt;&gt; lookup_by_lastname(&#39;Doe&#39;, name_to_phone_numbers)</span>
+<span class="sd">    &#39;222-333-4444&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="name-to-age-age-to-name">
-<h2>ข้อ 7. Name to age - Age to name<a class="headerlink" href="#name-to-age-age-to-name" title="Permalink to this heading">#</a></h2>
+<h3>ข้อ 3 - Name to age - Age to name<a class="headerlink" href="#name-to-age-age-to-name" title="Permalink to this heading">#</a></h3>
 <p>เปลี่ยนจาก</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_age</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ชญา&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> 
          <span class="s1">&#39;อรรถพล&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
@@ -746,7 +735,6 @@ document.write(`
          <span class="mi">34</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Hint: ต้องสร้าง list เปล่าของแต่ละอายุก่อนที่จะ append</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_age</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ชญา&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> 
@@ -758,7 +746,7 @@ document.write(`
 </div>
 </section>
 <section id="id7">
-<h2>ข้อ 9. เปลี่ยนคีย์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<h3>ข้อ 4 - เปลี่ยนคีย์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <p>เปลี่ยนโครงสร้างของ dictionary จากที่เคยมี key เป็น tuple(first name, last name) เป็นแค่ last name อย่างเดียว</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -773,81 +761,56 @@ document.write(`
 </div>
 </section>
 <section id="id8">
-<h2>ข้อ 10. นับจำนวนนักเรียน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
-<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนใน dict (string-&gt;list of strings) เขียนฟังก์ชันที่ return list ของชื่อนักเรียนทั้งหมดที่ไม่ซ้ำกัน</p>
+<h3>ข้อ 5 - นับจำนวนนักเรียน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มี key เป็นสตริงที่เก็บชื่อวิชา และ value เป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
+<p>จงเขียนฟังก์ชันที่ return list ของชื่อนักเรียนทั้งหมดที่ไม่ซ้ำกัน</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_all_students</span><span class="p">(</span><span class="n">registration</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; registration = {&#39;CompLing&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;],</span>
+<span class="sd">        &#39;SoundSys&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;],</span>
+<span class="sd">        &#39;GramSys&#39;: [&#39;Brittney&#39;, &#39;Girth&#39;, &#39;Harry&#39;],</span>
+<span class="sd">        &#39;ManGeog&#39;: [&#39;Andy&#39;, &#39;Donald&#39;, &#39;Girth&#39;]</span>
+<span class="sd">    }</span>
+<span class="sd">    &gt;&gt;&gt; list_all_students(registration)</span>
+<span class="sd">    [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;, &#39;Girth&#39;, &#39;Harry&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">registration</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;CompLing&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span> <span class="s1">&#39;Brittney&#39;</span><span class="p">,</span> <span class="s1">&#39;Catherine&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;SoundSys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span> <span class="s1">&#39;Brittney&#39;</span><span class="p">,</span> <span class="s1">&#39;Donald&#39;</span><span class="p">,</span> <span class="s1">&#39;Elaine&#39;</span><span class="p">,</span> <span class="s1">&#39;Fodor&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;GramSys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Brittney&#39;</span><span class="p">,</span> <span class="s1">&#39;Girth&#39;</span><span class="p">,</span> <span class="s1">&#39;Harry&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;ManGeog&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span> <span class="s1">&#39;Donald&#39;</span><span class="p">,</span> <span class="s1">&#39;Girth&#39;</span><span class="p">]</span>
-<span class="p">}</span>
-
-<span class="n">list_all_students</span><span class="p">(</span><span class="n">registration</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="id9">
-<h2>ข้อ 11. ใครชอบเรียนเยอะ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนใน dict (string-&gt;list of strings) เขียนฟังก์ชันที่ return dict ที่ key คือจำนวนคลาสที่เรียนต่อคน และ value คือคนที่เรียนจำนวนคลาสเท่านั้น</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span> <span class="s1">&#39;Brittney&#39;</span><span class="p">],</span>
- <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Donald&#39;</span><span class="p">,</span> <span class="s1">&#39;Girth&#39;</span><span class="p">],</span>
- <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Catherine&#39;</span><span class="p">,</span> <span class="s1">&#39;Elaine&#39;</span><span class="p">,</span> <span class="s1">&#39;Fodor&#39;</span><span class="p">,</span> <span class="s1">&#39;Harry&#39;</span><span class="p">]}</span>
-</pre></div>
-</div>
-<p>Andy กับ Brittney เรียนสามวิชา</p>
-<p>Donald กับ Girth เรียนสองวิชา</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">registration</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;GramSys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span><span class="s1">&#39;Brittney&#39;</span><span class="p">,</span><span class="s1">&#39;Donald&#39;</span><span class="p">,</span><span class="s1">&#39;Catherine&#39;</span><span class="p">,</span><span class="s1">&#39;Fodor&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;SoundSys&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span><span class="s1">&#39;Brittney&#39;</span><span class="p">,</span><span class="s1">&#39;Donald&#39;</span><span class="p">,</span><span class="s1">&#39;Girth&#39;</span><span class="p">,</span><span class="s1">&#39;Harry&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;CompLing&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Andy&#39;</span><span class="p">,</span><span class="s1">&#39;Brittney&#39;</span><span class="p">,</span><span class="s1">&#39;Girth&#39;</span><span class="p">,</span><span class="s1">&#39;Elaine&#39;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
+<h3>ข้อ 6 - ใครชอบเรียนเยอะ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มี key เป็นสตริงที่เก็บชื่อวิชา และ value เป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
+<p>จงเขียนฟังก์ชันที่ return ดิกชันนารีที่ key คือจำนวนคลาสที่เรียนต่อคน และ value คือคนที่ลงเรียนจำนวนคลาสเท่ากับ key</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_num_classes_to_students</span><span class="p">(</span><span class="n">registration</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; registration = {&#39;CompLing&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;],</span>
+<span class="sd">        &#39;SoundSys&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;],</span>
+<span class="sd">        &#39;GramSys&#39;: [&#39;Brittney&#39;, &#39;Girth&#39;, &#39;Harry&#39;],</span>
+<span class="sd">        &#39;ManGeog&#39;: [&#39;Andy&#39;, &#39;Donald&#39;, &#39;Girth&#39;]</span>
+<span class="sd">    }</span>
+<span class="sd">    &gt;&gt;&gt; get_num_classes_to_students(registration)</span>
+<span class="sd">    {3: [&#39;Andy&#39;, &#39;Brittney&#39;],</span>
+<span class="sd">    2: [&#39;Donald&#39;, &#39;Girth&#39;],</span>
+<span class="sd">    1: [&#39;Catherine&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;, &#39;Harry&#39;]}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">{}</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_num_classes_to_students</span><span class="p">(</span><span class="n">registration</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="combine-dicts">
-<h2>ข้อ 12. Combine dicts<a class="headerlink" href="#combine-dicts" title="Permalink to this heading">#</a></h2>
-<p>Write a program that combines two dictionaries where the keys and values are strings. The program returns a dictionary where the keys are strings and the values are lists of strings.</p>
+<section id="id10">
+<h3>ข้อ 7 - รวมดิกชันนารี<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">combine_dicts</span></code> ที่รวมดิกชันนารีสองอันเข้าไว้ด้วยกัน โดยที่ดิกชันนารีมี key และ value เป็นสตริง ฟังก์ชันต้อง return ดิกชันนารีที่มี key เป็นสตริงและ value เป็นลิสต์ของสตริง เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">}</span>
 <span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;dog&#39;</span><span class="p">}</span>
 <span class="n">combine_dicts</span><span class="p">(</span><span class="n">dict1</span> <span class="p">,</span> <span class="n">dict2</span><span class="p">)</span>
@@ -857,6 +820,8 @@ document.write(`
      <span class="s1">&#39;d&#39;</span><span class="p">:[</span><span class="s1">&#39;dog&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
+<p>value ที่คู่กับ <code class="docutils literal notranslate"><span class="pre">'c'</span></code> เป็นลิสต์ที่มี <code class="docutils literal notranslate"><span class="pre">'catepillar'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict1</span></code> และ <code class="docutils literal notranslate"><span class="pre">'cat'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict2</span></code></p>
+<p>value ที่คู่กับ <code class="docutils literal notranslate"><span class="pre">'d'</span></code> เป็นลิสต์ที่มี <code class="docutils literal notranslate"><span class="pre">'dog'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict2</span></code> เพราะว่า <code class="docutils literal notranslate"><span class="pre">dict1</span></code> ไม่มี key <code class="docutils literal notranslate"><span class="pre">'c'</span></code> อยู่</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combine_dicts</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
@@ -865,20 +830,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">}</span>
-<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;dog&#39;</span><span class="p">}</span>
-<span class="n">combine_dicts</span><span class="p">(</span><span class="n">dict1</span> <span class="p">,</span> <span class="n">dict2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 </section>
 
@@ -963,15 +915,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-dictionary">Nested dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 2 - Contact List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 1 - Contact List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-key">ข้อ 2 - Tuple เป็น key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7 - รวมดิกชันนารี</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-up-by-last-name">ข้อ 6. Look up by last name</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 7. Name to age - Age to name</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 9. เปลี่ยนคีย์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 10. นับจำนวนนักเรียน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 11. ใครชอบเรียนเยอะ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-dicts">ข้อ 12. Combine dicts</a></li>
 </ul>
   </nav></div>
 
