@@ -466,7 +466,7 @@ document.write(`
 <h1>Workshop - Word cloud<a class="headerlink" href="#workshop-word-cloud" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>wordcloud
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pythainlp<span class="w"> </span>swordcloud
 </pre></div>
 </div>
 </div>
@@ -500,14 +500,21 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">pythainlp</span>
 <span class="k">def</span> <span class="nf">get_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Initialize an empty list to store the filtered tokens</span>
     <span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Get the set of Thai stopwords</span>
     <span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">thai_stopwords</span><span class="p">())</span>
+    <span class="c1"># Compile a regular expression pattern to match Thai characters</span>
+    <span class="n">thai_text_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^[ก-์]+$&#39;</span><span class="p">)</span>
+    <span class="c1"># Split the input text into lines and tokenize each line</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
         <span class="n">token_list</span> <span class="o">=</span> <span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^[ก-์]+$&#39;</span><span class="p">)</span>   
+        <span class="c1"># Iterate over the tokens in the current line</span>
         <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">token_list</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="ow">and</span> <span class="n">patt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="c1"># Only include the token if it is not a stopword and matches the Thai character pattern</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="ow">and</span> <span class="n">thai_text_pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
                 <span class="n">filtered_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1"># Return the list of filtered tokens</span>
     <span class="k">return</span> <span class="n">filtered_tokens</span>
 </pre></div>
 </div>
@@ -515,16 +522,8 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="n">get_tokens</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">get_tokens</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -532,57 +531,29 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl<span class="w"> </span>-O<span class="w"> </span>https://github.com/attapol/programming-nlp-book/raw/main/book/module7/data/THSarabunNew.ttf
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">font_path</span> <span class="o">=</span> <span class="s1">&#39;THSarabunNew.ttf&#39;</span>
-<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">width</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>  
-<span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">wc</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;wc.pdf&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/efbff740a27d908a66b84d1c3e990e708cfb55a4afd98542c46249551c96a651.png" src="../../_images/efbff740a27d908a66b84d1c3e990e708cfb55a4afd98542c46249551c96a651.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x7f7dac76ef10&gt;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">swordcloud</span> <span class="kn">import</span> <span class="n">SemanticWordCloud</span>
+<span class="kn">from</span> <span class="nn">swordcloud.color_func</span> <span class="kn">import</span> <span class="n">SingleColorFunc</span>
+
+<span class="n">swc</span> <span class="o">=</span> <span class="n">SemanticWordCloud</span><span class="p">(</span>
+    <span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;TH&#39;</span><span class="p">,</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">1600</span><span class="p">,</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span>
+    <span class="n">max_font_size</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="n">prefer_horizontal</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">color_func</span> <span class="o">=</span> <span class="n">SingleColorFunc</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_color_func</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;hsl(60, 70%, </span><span class="si">{:n}</span><span class="s1">%)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">freq</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">/</span><span class="mi">85</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span> <span class="n">prefer_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">max_words</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_func</span><span class="o">=</span><span class="n">custom_color_func</span><span class="p">)</span>  
-<span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">wc</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;shaded-wc.png&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">swc</span><span class="o">.</span><span class="n">generate_kmeans_cloud</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a65fffe6f73fc1fd9bff60f91d8450eb34d964802b9d8ddaad7a9aaa2b3c190b.png" src="../../_images/a65fffe6f73fc1fd9bff60f91d8450eb34d964802b9d8ddaad7a9aaa2b3c190b.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x7f7dac7169a0&gt;
-</pre></div>
-</div>
+<img alt="../../_images/f08fcb5248bcba1dd328ea75de46a7e8013e5acbf5cf90096b68cccb237ecacc.png" src="../../_images/f08fcb5248bcba1dd328ea75de46a7e8013e5acbf5cf90096b68cccb237ecacc.png" />
 </div>
 </div>
 </section>
