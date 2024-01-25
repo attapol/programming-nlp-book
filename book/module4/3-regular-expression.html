@@ -183,13 +183,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1-file.html">File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Regular expression</a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">เซ็ต (Set)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/03-exercise-set.html">โจทย์: เซ็ต</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/04-nested-list.html">Nested list</a></li>
@@ -429,26 +428,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Regular expression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ส่วนประกอบของ regular expression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ตัวอักษรปกติ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">สัญลักษณ์แทนตัวอักษรหรือกลุ่มของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การจัดเซ็ตของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifier">ตัวบอกปริมาณ (quantifier)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">สัญลักษณ์ที่ใช้ใน regular expression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literal-character">ตัวอักษรปกติ (Literal character)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metacharacter">อักขระพิเศษ (Metacharacter)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regex-1">ตัวอย่าง regex ที่ใช้อักขระพิเศษ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regex-2">ตัวอย่าง regex ที่ใช้อักขระพิเศษ 2</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การจัดเซ็ตของตัวอักษร</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifier">ตัวบอกปริมาณ (quantifier)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง regex ที่ใช้ตัวบอกปริมาณ 1</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Regular expression ในภาษาไพธอน</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backreference">การอ้างอิงกลับ (backreference)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Regular expression ในภาษาไพธอน</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match">re.match</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search">re.search</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall">re.findall</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub">re.sub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub">re.sub</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการใช้งานแบบมี backreference</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">สรุป</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -461,22 +467,29 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="regular-expression">
 <h1>Regular expression<a class="headerlink" href="#regular-expression" title="Permalink to this heading">#</a></h1>
-<p><em>Under construction</em></p>
-<p>Regular expression (regex อ่านว่า /regeks/) เป็นวิธีการเขียนจับแพทเทิร์น เพื่อที่จะได้ดึงข้อมูลที่อยากได้ออกมาโดยสะดวก เช่น</p>
+<p>Regular expression (เรียกกันย่อ ๆ ว่า regex อ่านว่า /regeks/ เร็กเก็กส์)  เป็นภาษาในการระบุเขียนจับแพทเทิร์นของตัวอักษรที่เราต้องการตรวจหา เพื่อที่จะได้ดึงหรือแก้ไขข้อมูลที่อยากได้โดยสะดวก ตัวอย่างเช่น</p>
+<ul class="simple">
+<li><p>ตรวจหาเบอร์โทรศัพท์ซึ่งมีแพทเทิร์นว่า มีตัวเลขทั้งหมด 10 ตัวแต่ตัวแรกต้องเป็น 0 อีก 9 ตัวเป็นอะไรก็ได้ แต่ถ้าตัวเลขมีทั้งหมด 9 ตัว ตัวแรกไม่ต้องเป็น 0 ก็ได้</p></li>
+<li><p>ตรวจหาอีเมลของพนักงานทุกคนที่มาจากภาครัฐ ซึ่งมีแพทเทิร์นว่า ข้างหน้าเครื่องหมาย &#64; เป็นตัวภาษาอังกฤษหรือจุดหรือตัวเลขอะไรก็ได้ แต่ข้างหลังเครื่องหมาย &#64; ต้องเป็นชื่อองค์กรอะไรก็ได้แต่ต้องลงท้ายด้วย .go.th</p></li>
+<li><p>ตรวจหาอักษรย่อขององค์กรที่เป็นภาษาไทย ซึ่งมีแพทเทิร์นว่า ต้องเป็นตัวอักษรไทย 2 - 4 ตัวและลงท้ายด้วย .
+แพทเทิร์นเหล่านี้ยากที่จะอธิบายให้เป็นตัวอักษร regular expression เป็นภาษาสื่อกลางที่ช่วยให้เราอธิบายแพทเทิร์นที่เราต้องการให้ได้อย่างชัดเจน</p></li>
+</ul>
+<p>Regex มีความสำคัญมากๆ ในการทำงานเกี่ยวกับการประมวลผลภาษาธรรมชาติ  เพราะทำให้เราสามารถดึงข้อมูลที่มีแพทเทิร์นเด่นชัดในภาษา (เช่น อีเมล์ เบอร์โทรศัพท์ ชื่อ ตัวย่อ) ออกมาจากข้อความที่เราต้องการประมวลผลได้สะดวก ความสำคัญของ regex อีกประการหนึ่งคือ การทำความสะอาดข้อมูล ข้อมูลภาษาที่เราได้รับมามักจะมีข้อความแปลกปลอมหลากหลายประเภทที่จำเป็นต้องกรองออกก่อน ตัวอย่างเช่น ข้อความที่ดาวน์โหลดมาจากทวิตเตอร์อาจจะมีข้อความที่เป็น hashtag หรือ mention ที่เราต้องการกรองออกไป หรือข้อความที่มีลิงก์ที่เราต้องการแปลงเป็นชื่อเว็บไซต์ หรือข้อความที่มีตัวอักษรพิเศษที่เราต้องการลบออกไป เป็นต้น</p>
+<section id="id1">
+<h2>สัญลักษณ์ที่ใช้ใน regular expression<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Regular expression มีความพิเศษกว่าสตริงปกติ คือตีความหมายสัญลักษณ์พิเศษต่าง ๆ ที่ช่วยระบุแพทเทิร์นที่ซับซ้อนและยืดหยุ่นมาก  เช่น</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[a-z.]+&#64;[a-z]+\.com</span></code> เป็น regex สำหรับแพทเทิร์นของ email address ที่ลงท้ายด้วย .com</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">\d\d\d-\d\d\d-\d\d\d\d</span></code> เป็น regex  สำหรับแพทเทิร์นของหมายถึงเลขโทรศัพท์ เช่น 123-123-1234</p></li>
 </ul>
-<p>Regex มีความสำคัญมากๆ ในการทำงานเกี่ยวกับการประมวลผลภาษาธรรมชาติ  เพราะทำให้เราสามารถดึงข้อมูลที่มีแพทเทิร์นเด่นชัดในภาษา (เช่น อีเมล์ เบอร์โทรศัพท์ ชื่อ ตัวย่อ) ออกมาจากข้อความที่เราต้องการประมวลผลได้สะดวก</p>
-<section id="id1">
-<h2>ส่วนประกอบของ regular expression<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>การเขียน regex ประกอบด้วย 4 ส่วนใหญ่ๆ</p>
-<section id="id2">
-<h3>ตัวอักษรปกติ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>ตัวอักษรบางตัวทับกับสัญลักษณ์อื่น ๆ ที่มีความหมายพิเศษใน regular expression ได้แก่ <code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">^</span> <span class="pre">$</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span></code> เลยต้องทำการหนี (escape) โดยเพิ่ม \ เข้าไปข้างหน้า</p>
+<p>สัญลักษณ์ที่ใช้ใน regular expression มีอยู่ 5 ประเภทด้วยกัน คือ</p>
+<section id="literal-character">
+<h3>ตัวอักษรปกติ (Literal character)<a class="headerlink" href="#literal-character" title="Permalink to this heading">#</a></h3>
+<p>ตัวอักษรปกติคือตัวอักษรที่เราต้องการให้ regex แมทช์กับตัวอักษรนั้น ๆ ตัวอักษรปกติสามารถเป็นตัวอักษรอะไรก็ได้ แต่บางตัวอักษรจะมีความหมายพิเศษใน regular expression ทำให้เราต้องทำการหนี (escape) โดยการเพิ่ม \ เข้าไปข้างหน้า เพื่อบอกว่าเป็นตัวอักษรปกติ ไม่ใช่อักขระพิเศษ ตัวอักษรที่ต้องทำการหนี (escape) ได้แก่ <code class="docutils literal notranslate"><span class="pre">\</span></code> <code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">*</span></code> <code class="docutils literal notranslate"><span class="pre">?</span></code> <code class="docutils literal notranslate"><span class="pre">^</span></code> <code class="docutils literal notranslate"><span class="pre">$</span></code> <code class="docutils literal notranslate"><span class="pre">(</span></code> <code class="docutils literal notranslate"><span class="pre">)</span></code> <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code> <code class="docutils literal notranslate"><span class="pre">|</span></code> และ <code class="docutils literal notranslate"><span class="pre">.</span></code></p>
 </section>
-<section id="id3">
-<h3>สัญลักษณ์แทนตัวอักษรหรือกลุ่มของตัวอักษร<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="metacharacter">
+<h3>อักขระพิเศษ (Metacharacter)<a class="headerlink" href="#metacharacter" title="Permalink to this heading">#</a></h3>
+<p>อักขระพิเศษเป็นหัวใจสำคัญของการเขียน regex เพื่อระบุแพทเทิร์น เพราะอักขระพิเศษใช้แทนกลุ่มของตัวอักษร อักขระพิเศษมีหลายตัว แต่ในบทนี้เราจะเรียนรู้เพียงอักขระพิเศษที่ใช้บ่อย ๆ ซึ่งเราควรจะจำให้ได้ทั้งหมด ดังนี้</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
@@ -506,7 +519,7 @@ document.write(`
 <td><p>อะไรก็ได้ที่ไม่ใช่ \d</p></td>
 </tr>
 <tr class="row-odd"><td><p>\s</p></td>
-<td><p>\space ช่องว่างรวมถึง \t\n\r</p></td>
+<td><p>(<strong>s</strong>pace) ช่องว่างรวมถึง \t (แท็บให้ขึ้นย่อหน้าใหม่) \n (new line บ่งบอกการขึ้นบรรทัดใหม่) และ \r (new line แบบของ Windows)</p></td>
 </tr>
 <tr class="row-even"><td><p>\S</p></td>
 <td><p>อะไรก็ได้ที่ไม่ใช่ \s</p></td>
@@ -516,9 +529,69 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<p>ข้อสังเกตอย่างหนึ่งเพื่อให้ช่วยจำได้ง่ายขึ้น คือ \w \d และ \s จะจับคู่กับเวอร์ชั่นที่เป็นตัวพิมพ์ใหญ่ซึ่งเป็นเวอร์ชั่นที่เป็นนิเสธของ \w \d และ \s ตามลำดับ เช่น \w หมายถึง a-z A-Z 0-9 และ _ แต่ \W เป็นนิเสธของ \w จึงแมทช์กับอะไรก็ได้ที่ไม่ใช่ a-z A-Z 0-9 และ _ ดังนั้น \W จะจับคู่กับตัวอักษรพิเศษ และช่องว่าง แต่ไม่จับคู่กับตัวอักษรทั่วไป เป็นต้น</p>
+<section id="regex-1">
+<h4>ตัวอย่าง regex ที่ใช้อักขระพิเศษ 1<a class="headerlink" href="#regex-1" title="Permalink to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">\d\d\d-\d\d\d-\d\d\d\d</span></code> เป็น regex  สำหรับแพทเทิร์นของหมายเลขโทรศัพท์ เริ่มต้นด้วยตัวเลข (\d) 3 ตัว ตามด้วยเครื่องหมายขีดกลาง แล้วตามด้วยตัวเลข (\d) 3 ตัว ตามด้วยเครื่องหมายขีดกลาง แล้วตามด้วยตัวเลข (\d) 4 ตัว</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริง</p></th>
+<th class="head"><p>แมทช์กับ regex</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>123-123-1234</p></td>
+<td><p>✔️</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>123-123-12345</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่ามีตัวเลข 5 ตัว หลังขีดสุดท้าย</p></td>
+</tr>
+<tr class="row-even"><td><p>a23-123-1234</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่า \d ตัวแรกไม่แมทช์กับ a</p></td>
+</tr>
+<tr class="row-odd"><td><p>๑๒๓-๑๒๓-๑๒๓๔</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่า \d แมทช์กับเลขอารบิกเท่านั้น</p></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="id4">
-<h3>การจัดเซ็ตของตัวอักษร<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="regex-2">
+<h4>ตัวอย่าง regex ที่ใช้อักขระพิเศษ 2<a class="headerlink" href="#regex-2" title="Permalink to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">\w\.\w\.\w\.</span></code> เป็น regex สำหรับแพทเทิร์นของตัวย่อที่มีสามตัวอักษร แต่แต่ละตัวอักษรคั่นด้วยจุด เช่น <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> เป็นต้น อย่าลืมว่าเราต้องทำการหนี <code class="docutils literal notranslate"><span class="pre">.</span></code> โดยการใช้ <code class="docutils literal notranslate"><span class="pre">\.</span></code> เพราะ <code class="docutils literal notranslate"><span class="pre">.</span></code> เป็นอักขระพิเศษ</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริง</p></th>
+<th class="head"><p>แมทช์กับ regex</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>U.S.A.</p></td>
+<td><p>✔️</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>ABC</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่าไม่มีจุดคั่นตามที่ระบุในแพทเทิร์น</p></td>
+</tr>
+<tr class="row-even"><td><p>พ.ร.บ.</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่า \w ไม่แมทช์กับตัวอักษรไทย</p></td>
+</tr>
+</tbody>
+</table>
+<p>อักขระพิเศษถูกออกแบบมาตอนที่ชุดอักขระมีเพียงแค่ตัวลาตินและเครื่องวรรคตอนเท่านั้น เพราะฉะนั้นถึงแม้ว่า \w ถูกออกแบบมาเพื่อจับคู่กับตัวอักษรที่ประกอบขึ้นมาเป็นคำ แต่ว่าไม่ได้ครอบคลุมถึงสตริงไม่ได้ใช้ได้ตัวลาติน เช่น ภาษาไทย ภาษาจีน ภาษาเกาหลี ภาษาญี่ปุ่น  ซึ่งเราจะเรียนรู้วิธีการจับคู่กับสตริงที่ไม่ใช่ตัวลาตินในตัวอย่างต่อไป</p>
+</section>
+</section>
+<section id="id2">
+<h3>การจัดเซ็ตของตัวอักษร<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>อักขระพิเศษมีข้อจำกัด เพราะมีการจัดกลุ่มมาแน่นอนอยู่แล้ว เช่น ตัวเลข ตัวอักษรลาติน ช่องว่าง แต่ถ้าหากเราต้องการจัดกลุ่มตัวอักษรตามที่เราต้องการเอง เราสามารถทำได้โดยการใช้เครื่องหมายวงเล็บเหลี่ยม <code class="docutils literal notranslate"><span class="pre">[]</span></code> เพื่อจับกลุ่มตัวอักษร และ <code class="docutils literal notranslate"><span class="pre">|</span></code> เพื่อจัดกลุ่มแพทเทิร์น</p>
+<p>เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> ใช้ในการระบุว่าตัวอักษรใดบ้างที่จะแมทช์กับแพทเทิร์น เช่น <code class="docutils literal notranslate"><span class="pre">[abc]</span></code> แปลว่าตัวอักษร a หรือ b หรือ c แต่ถ้าหากเราต้องการให้แมทช์กับตัวอักษรที่ไม่ใช่ a หรือ b หรือ c เราสามารถใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">^</span></code> นำหน้าได้ เช่น <code class="docutils literal notranslate"><span class="pre">[^abc]</span></code> แปลว่าตัวอักษรอะไรก็ได้ที่ไม่ใช่ a หรือ b หรือ c สรุปได้ดังนี้</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
@@ -531,15 +604,38 @@ document.write(`
 <td><p>ตัวอักษรตัวหนึ่งใน set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">b[aei]d</span></code> match bad bed bid</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code></p></td>
-<td><p>ไล่ตัวอักษรทำเป็น set</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">[b-d]ad</span></code> match bad cad dad</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[^abc]</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[^abc]</span></code></p></td>
 <td><p>อะไรก็ได้ที่ไม่อยู่ใน set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">b[^aei]d</span></code> match bbd bcd bdd</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">aaa|bb|c</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aaa|bb|c</span></code></p></td>
+<td><p>aaa หรือ bb หรือ c</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bea|ook</span></code> match bea ook</p></td>
+</tr>
+</tbody>
+</table>
+<p>เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">-</span></code> ที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">[]</span></code> ใช้สำหรับการไล่ตัวอักษร เช่น</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> แปลว่าตัวอักษรที่อยู่ใน a ถึง z</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> แปลว่าตัวอักษรที่อยู่ใน 0 ถึง 9 ซึ่งความหมายเหมือนกับ \d</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
+<th class="head"><p>แทนตัวอะไรบ้าง</p></th>
+<th class="head"><p>ตัวอย่าง</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code></p></td>
+<td><p>ไล่ตัวอักษรทำเป็น set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[b-d]ad</span></code> match bad cad dad</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[^abc]</span></code></p></td>
+<td><p>อะไรก็ได้ที่ไม่อยู่ใน set</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">b[^aei]d</span></code> match bbd bcd bdd</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aaa|bb|c</span></code></p></td>
 <td><p>aaa หรือ bb หรือ c</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bea|ook</span></code> match bea ook</p></td>
 </tr>
@@ -598,11 +694,63 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<section id="id3">
+<h4>ตัวอย่าง regex ที่ใช้ตัวบอกปริมาณ 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">\w+\.\w&#64;chula\.ac\.th</span></code> เป็น regex สำหรับแพทเทิร์นของ email address ที่โดเมนคือ <a class="reference external" href="http://chula.ac.th">chula.ac.th</a></p>
+<ul class="simple">
+<li><p>เริ่มต้นด้วยตัวอักษร (\w) หนึ่งตัวขึ้นไป</p></li>
+<li><p>ตามด้วยเครื่องหมายจุด ซึ่งเครื่องหมายจุดต้องมีการหนีโดยการใช้ backslash <code class="docutils literal notranslate"><span class="pre">\.</span></code> เพราะ <code class="docutils literal notranslate"><span class="pre">.</span></code> เป็นอักขระพิเศษ</p></li>
+<li><p>ตามด้วยตัวอักษร (\w) หนึ่งตัว</p></li>
+<li><p>ตามด้วยเครื่องหมาย &#64;</p></li>
+<li><p>ตามด้วยคำว่า <a class="reference external" href="http://chula.ac.th">chula.ac.th</a> ซึ่งเครื่องหมายจุดทั้งสองตัวต้องมีการหนีโดยการใช้ backslash <code class="docutils literal notranslate"><span class="pre">\.</span></code> เพราะ <code class="docutils literal notranslate"><span class="pre">.</span></code> เป็นอักขระพิเศษ</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริง</p></th>
+<th class="head"><p>แมทช์กับ regex</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="mailto:attapol&#46;t&#37;&#52;&#48;chula&#46;ac&#46;th">attapol<span>&#46;</span>t<span>&#64;</span>chula<span>&#46;</span>ac<span>&#46;</span>th</a></p></td>
+<td><p>✔️</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>123-123-12345</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่ามีตัวเลข 5 ตัว หลังขีดสุดท้าย</p></td>
+</tr>
+<tr class="row-even"><td><p>a23-123-1234</p></td>
+<td><p>❌</p></td>
+<td><p>เพราะว่า \d ตัวแรกไม่แมทช์กับ a</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
+<section id="backreference">
+<h3>การอ้างอิงกลับ (backreference)<a class="headerlink" href="#backreference" title="Permalink to this heading">#</a></h3>
+<p>การอ้างอิงกลับ (backreference) คือการส่วนที่แมทช์ใน regex มาอ้างถึงอีกครั้ง เหมือนกับการระบุว่าแมทช์แพทเทิร์นเดียวกับที่แมทช์ไปแล้ว ซึ่งก่อนที่จะให้ regex อ้างถึงแพทเทิร์นก่อนหน้านี้ จะต้องมีการจับกลุ่มโดยการใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">()</span></code>  ในการจัดกลุ่มเพื่อที่จะอ้างถึงได้ในภายหลัง จากนั้นจึงมีการอ้างอิงกลับด้วยหมายเลขกลุ่ม <code class="docutils literal notranslate"><span class="pre">\1</span></code> เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่แรก <code class="docutils literal notranslate"><span class="pre">\2</span></code>เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่ที่สอง เช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>\<span class="n">w</span><span class="o">+</span><span class="p">)</span> \<span class="mi">1</span> 
+</pre></div>
+</div>
+<p>แปลว่าแพทเทิร์นที่ขึ้นตัวด้วยตัวอักษรอย่างน้อยหนึ่งตัว ซึ่งให้เรียกว่ากลุ่มที่ 1 เนื่องจากเราใส่ไว้ในวงเล็บมน จากนั้นตามด้วยช่องว่างหนึ่งช่อง และตามด้วยแพทเทิร์นที่เราแมทช์ไปแล้วในกลุ่มที่หนึ่ง ซึ่งเราใช้ <code class="docutils literal notranslate"><span class="pre">\1</span></code> ในการอ้างถึงกลับ (backreference) ไปยังกลุ่มที่หนึ่ง  ดังนั้น regex นี้จะแมทช์กับสตริงที่มีคำที่ซ้ำกันอยู่ติดกัน เช่น
+<code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">hello</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">bye</span> <span class="pre">bye</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">hi</span> <span class="pre">hi</span></code> แต่ว่า <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">hi</span></code> ไม่แมทช์เพราะว่า <code class="docutils literal notranslate"><span class="pre">\1</span></code> จะต้องแมทช์กับสตริงที่แมทช์กับ regex ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> แรก</p>
+<p>สมมติว่าเราต้องการแมทช์ข้อความที่มีแพทเทิร์น เช่น <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่่ะ</span> <span class="pre">มอร์นิ่ง</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่่ะ</span> <span class="pre">ดี</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">แยกย้ายค่่ะ</span> <span class="pre">แยกย้าย</span></code> แต่ไม่แมทช์กับ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่่ะ</span> <span class="pre">ดี</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่่ะ</span> <span class="pre">แยกย้าย</span></code> เราสามารถใช้ backreference ในการแก้ปัญหานี้ได้ดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>^(\w+)ค่ะ \1$
+</pre></div>
+</div>
+<p>คำอธิบาย</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> แปลว่าต้องขึ้นต้นด้วย</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(\w+)</span></code> แปลว่าตัวอักษรอย่างน้อยหนึ่งตัว ซึ่งเราใส่ไว้ในวงเล็บเพื่อบ่งบอกว่าการจับกลุ่ม ทำให้สามารถ backreference กลับได้</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ค่ะ</span> </code> เป็นสตริงปกติ</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\1</span></code> แปลว่าอ้างถึงกลุ่มที่หนึ่ง ซึ่งกลุ่มก็คือสตริงที่ถูกแมทช์ด้วย <code class="docutils literal notranslate"><span class="pre">(\w+)</span></code></p></li>
+</ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id5">
-<h1>Regular expression ในภาษาไพธอน<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="id4">
+<h2>Regular expression ในภาษาไพธอน<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <p>คำสั่งที่เกี่ยวกับ regular expression อยู่ในโมดูล <code class="docutils literal notranslate"><span class="pre">re</span></code> ของไพธอน คำสั่งที่จำเป็นต้องทราบสำหรับการใช้ regular expression มีอยู่ 5 คำสั่ง</p>
 <table class="table">
 <thead>
@@ -628,19 +776,25 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<p>ทั้ง 5 คำสั่งเป็นคำสั่งที่ต้องเราเขียน regex เพื่อระบุแพทเทิร์นที่เราต้องการหา ในภาษาไพธอนเรามักจะระบุ regex โดยการใช้สตริงดิบ หรืออาร์สตริง (raw string หรือ r string) อาร์สตริงมีวิธีการสร้างเหมือนกับสตริงทั่วไปเพียงแต่ว่าเราจะมีตัวอักษร <code class="docutils literal notranslate"><span class="pre">r</span></code> ก่อนเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">'</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> ที่เราใช้นำหน้าสตริงทั่วไป เช่น regex สำหรับหาหมายเลขโทรศัพท์ประเทศไทย 10 หลัก จะเขียนได้เป็น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\d\d\d-\d\d\d-\d\d\d\d&#39;</span>
+</pre></div>
+</div>
+<p>จริง ๆ แล้วเราจะใช้สตริงธรรมดาแทนก็ได้ แต่ว่ามีอักขระพิเศษบางสัญลักษณ์ที่สตริงธรรมดา และอาร์สตริงมีความหมายต่างกัน เช่น ‘\b’ ในสตริงธรรมดาหมายถึง backspace แต่ในอาร์สตริงหมายถึงตัวแบ่งคำ ดังนั้นเราจึงควรใช้อาร์สตริงในการเขียน regex แทน</p>
+</section>
 <section id="re-match">
 <h2>re.match<a class="headerlink" href="#re-match" title="Permalink to this heading">#</a></h2>
 <p>คำสั่งนี้ต้องการ regular expression ที่บ่งบอกแพทเทิร์น และสตริงที่ต้องการจะตรวจสอบ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;นายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;นายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ชื่อไม่แมทช์กับแพทเทิร์นนี้&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code> จะรีเทิร์น match object กลับมาให้ถ้าหากแพทเทิร์นแมทช์กับสตริงที่ระบุไว้ ถ้าหากไม่เราจะได้ <code class="docutils literal notranslate"><span class="pre">None</span></code> คืนกลับมาแทน</p>
-<p>ถ้าหากเราต้องการทราบด้วยว่าแพทเทิร์นไป match ส่วนใดของสตริงบ้าง เราต้องใช้ match object ที่รีิเทิร์นมา ซึ่งมี method ที่ควรทราบคือ <code class="docutils literal notranslate"><span class="pre">.group</span></code></p>
+<p>ถ้าหากเราต้องการทราบด้วยว่าแพทเทิร์นไป match ส่วนใดของสตริงบ้าง เราต้องใช้ match object ที่รีเทิร์นมา และใช้ method ที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">.group</span></code> ซึ่งจะรีเทิร์นสตริงที่แมทช์กับกลุ่มแพทเทิร์นที่ระบุไว้กลับมาให้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;นายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;นายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
     <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ชื่อไม่แมทช์กับแพทเทิร์นนี้&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -653,10 +807,10 @@ document.write(`
 </section>
 <section id="re-search">
 <h2>re.search<a class="headerlink" href="#re-search" title="Permalink to this heading">#</a></h2>
-<p>คล้ายกับ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> ทุกอย่างเพียงแต่ว่าจะสแกนหาทั้งสตริงว่าแพทเทิร์นไปแมทช์กับส่วนใดส่วนหนึ่งของสตริงหรือไม่ ไม่ได้จำกัดแค่ตัวอักษรแรกของสตริงเหมือนกับ <code class="docutils literal notranslate"><span class="pre">.match</span></code></p>
+<p>คำสั่งคล้ายกับ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> เกือบทุกประการ เพียงแต่ว่าจะคำสั่งนี้จะสแกนหาทั้งสตริง เพื่อหาว่าแพทเทิร์นไปแมทช์กับส่วนใดส่วนหนึ่งของสตริงหรือไม่ ไม่ได้จำกัดแค่ตัวอักษรแรกของสตริงเหมือนกับ <code class="docutils literal notranslate"><span class="pre">.match</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้เข้าพบนายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span> <span class="c1"># None เพราะไม่มีแมทช์ตั้งแต่ต้นสตริง</span>
-<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้เข้าพบนายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span> <span class="c1"># match </span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้เข้าพบนายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span> <span class="c1"># None เพราะไม่มีแมทช์ตั้งแต่ต้นสตริง</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้เข้าพบนายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span> <span class="c1"># match </span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># นายณัฐพล โคกสูงเนิน</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># ณัฐ</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># โคกสูงเนิน</span>
@@ -666,35 +820,84 @@ document.write(`
 </section>
 <section id="re-findall">
 <h2>re.findall<a class="headerlink" href="#re-findall" title="Permalink to this heading">#</a></h2>
+<p>คำสั่งนี้ใช้ในสถานการณ์ที่เราทราบว่าแพทเทิร์นที่เราระบุใน regex นั่นเกิดขึ้นซ้ำกันหลาย ๆ ครั้ง และเราต้องการดึงข้อความที่แมทช์กับ regex ทั้งหมดมาเก็บไว้ในลิสต์ ซึ่งต่างจาก <code class="docutils literal notranslate"><span class="pre">re.search</span></code> และ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> ซึ่งจะให้ส่วนของสตริงที่แมทช์มาแค่ส่วนเดียวเท่านั้น</p>
+<p>สมมติว่าเราต้องการหาคำที่ลงท้ายด้วย -s ทั้งหมด</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;\w+s&#39;</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\w+s&#39;</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
 <span class="n">s_words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
 <span class="n">s_words</span> <span class="c1"># --&gt; [&#39;James&#39;, &#39;misses&#39;, &#39;stitches&#39;, &#39;Carlos&#39;, &#39;fixes&#39;]</span>
 </pre></div>
 </div>
-<p>ถ้าหาก regex มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หนึ่งครั้ง เรารีเทิร์นมาเฉพาะส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> เท่านั้น เช่น</p>
+<p>สมมติว่าเราต้องการหาคำที่ลงที่เราเติม -es ต่อท้ายเพื่อเปลี่ยนคำนามภาษาอังกฤษให้เป็นพหูพจน์ หรือเปลี่ยนคำกริยาภาษาอังกฤษให้เป็นรูป present tense สำหรับประธานที่เป็นบุรุษที่สามเอกพจน์ กล่าวคือเราต้องการหาคำที่ลงท้ายด้วย -xes -ches -shes -zes -ses ในประโยค
+` เท่านั้น เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;\w+(x|tch|sh|z|s)es&#39;</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\w+(x|tch|sh|z|s)es&#39;</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
 <span class="n">es_words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
 <span class="n">es_words</span> <span class="c1"># --&gt; [&#39;s&#39;, &#39;tch&#39;, &#39;x&#39;]</span>
 </pre></div>
 </div>
-<p>ถ้าหาก regex มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> มากกว่าหนึ่งครั้ง เรารีเทิร์นมาทุกกลุ่ม กลายเป็นลิสต์ขของทูเปิล เช่น</p>
+<p>ถ้าหาก regex มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หนึ่งครั้ง เรารีเทิร์นมาเฉพาะส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span> <span class="pre">เท่านั้นซึ่งต่างจากตอนที่เราใช้</span> <span class="pre">regex</span> <span class="pre">แบบไม่มี</span> </code>()` ซึ่งจะสตริงที่แมทช์แบบเต็ม ๆ กลับมาให้</p>
+<p>แต่ถ้าหาก regex มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> มากกว่าหนึ่งครั้ง เรารีเทิร์นมาทุกกลุ่ม กลายเป็นลิสต์ขของทูเปิล เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;(\w+(x|tch|sh|z|s)es)&#39;</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\w+(x|tch|sh|z|s)es)&#39;</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
 <span class="n">es_words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
 <span class="n">es_words</span> <span class="c1"># --&gt; [(&#39;misses&#39;, &#39;s&#39;), (&#39;stitches&#39;, &#39;tch&#39;), (&#39;fixes&#39;, &#39;x&#39;)]</span>
 </pre></div>
 </div>
+<p>ในทั้งสองตัวอย่างให้สังเกตว่าคำสั่งนี้จะคืนค่ามาเป็นลิสต์ของสตริง หรือลิสต์ของทูเปิล ไม่ได้คืนค่ามาเป็น match object เหมือนคำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code> และ <code class="docutils literal notranslate"><span class="pre">re.search</span></code></p>
 </section>
 <section id="re-sub">
 <h2>re.sub<a class="headerlink" href="#re-sub" title="Permalink to this heading">#</a></h2>
+<p>คำสั่งนี้ย่อมาจากภาษาอังกฤษ <strong>sub</strong>stitute แปลว่าการแทนค่า คำสั่งนี้ไว้สำหรับการแทนที่ส่วนของสตริงที่แมทช์กับ regex ด้วยสตริงอื่น ๆ หรือสตริงว่างก็ได้ ซึ่งเป็นคำสั่งที่ใช้บ่อยในการประมวลผลข้อความ</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">regex</span> <span class="n">ที่ต้องการแทนค่า</span> <span class="p">(</span><span class="n">สตริง</span><span class="p">),</span> <span class="n">สิ่งที่จะมาแทน</span> <span class="p">(</span><span class="n">สตริง</span><span class="p">),</span> <span class="n">สตริงที่ต้องทำการแมทช์และแทนค่า</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id5">
+<h3>ตัวอย่างการใช้งานเบื้องต้น<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราต้องการแทนที่คำว่า “สวัสดี” ด้วยคำว่า “สวัสดีครับ” ในประโยค ในกรณีนี้เราไม่จำเป็นต้องใช้อักขระพิเศษของ regex เลย สามารถใช้สตริงเป็นแพทเทิร์นได้เลย</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;สวัสดีทุกท่านที่มาร่วมงานในวันนี้&#39;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดีครับ&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">text</span> <span class="c1"># --&gt; &#39;สวัสดีครับทุกท่านที่มาร่วมงานในวันนี้&#39;</span>
+</pre></div>
+</div>
+<p>สมมติว่าเราต้องการแทนที่คำว่า “คะ” และ “ค่ะ” ด้วยคำว่า “ครับ” ในกรณีนี้เราจะใช้สัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">|</span></code> ใน regex เพื่อบอกว่าเราต้องการแทนที่คำว่า “คะ” หรือ “ค่ะ” ด้วยคำว่า “ครับ”</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;สวัสดีค่ะ ชื่อนัทนะคะ ยินดีรับใช้ค่ะ&#39;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;คะ|ค่ะ&#39;</span><span class="p">,</span> <span class="s1">&#39;ครับ&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">text</span> <span class="c1"># --&gt; &#39;สวัสดีครับ ชื่อนัทนะครับ ยินดีรับใช้ครับ&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>ตัวอย่างการใช้งานแบบมี backreference<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราต้องการเปลี่ยนคำนามที่เป็นรูปพหูพจน์ทีเกิดจากการเติม -es ต่อท้ายคำ ให้กลายเป็นคำนามที่เป็นรูปเอกพจน์ ในกรณีนี้เราจะใช้สัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">()</span></code> ใน regex เพื่อบอกว่าเราต้องการแทนที่ส่วนที่แมทช์กับ regex ด้วยสตริงอื่น ๆ ซึ่งสตริงนั้นจะเป็นส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งเราสามารถอ้างถึงได้ด้วย <code class="docutils literal notranslate"><span class="pre">.group</span></code> ของ match object ที่รีเทิร์นกลับมาจาก <code class="docutils literal notranslate"><span class="pre">re.sub</span></code> ได้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\w+)(x|tch|sh|z|s)es&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1\2&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">text</span> <span class="c1"># --&gt; &#39;James miss the stitch that Carlos fix&#39;</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="re-split">
 <h2>re.split<a class="headerlink" href="#re-split" title="Permalink to this heading">#</a></h2>
+<p>คำสั่งนี้ใช้ในการหั่นสตริงออกเป็นลิสต์ โดยใช้ regex เป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง คำสั่งนี้คล้ายคลึงกับสตริง method ที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">.split</span></code> แต่ว่า <code class="docutils literal notranslate"><span class="pre">re.split</span></code> มีความยืดหยุ่นกว่า เพราะว่า <code class="docutils literal notranslate"><span class="pre">str.split</span></code> ต้องระบุตัวแบ่ง (delimiter) เป็นสตริงไม่สามารถระบุเป็นแพทเทิร์นที่ซับซ้อนได้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> ใช้ regex ในการกำหนดตัวแบ่ง</p>
+<p>สมมติว่าเราต้องการหั่นสตริงด้านล่างออกเป็นลิสต์ โดยใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างเป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง ในกรณีนี้เราจะใช้ regex <code class="docutils literal notranslate"><span class="pre">[,;\s]+</span></code> ซึ่งหมายถึงเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างหนึ่งช่องหรือมากกว่า ในการหั่นสตริงออกเป็นลิสต์ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;Apples; Oranges, Bananas ;Grapes,Watermelons;Pineapples&quot;</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[,;\s]+&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">items</span> <span class="c1"># --&gt; [&#39;Apples&#39;, &#39;Oranges&#39;, &#39;Bananas&#39;, &#39;Grapes&#39;, &#39;Watermelons&#39;, &#39;Pineapples&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>สรุป<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<p>ในบทนี้เราได้เรียนรู้เกี่ยวกับ regular expression ซึ่งเป็นเครื่องมือที่ใช้ในการกำหนดแพทเทิร์นในสตริง โดยใช้อักขระพิเศษต่าง ๆ เช่น  <code class="docutils literal notranslate"><span class="pre">^</span> <span class="pre">$</span> <span class="pre">.</span> <span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">\w</span> <span class="pre">\W</span> <span class="pre">\d</span> <span class="pre">\D</span> <span class="pre">\s</span> <span class="pre">\S</span> <span class="pre">\b</span></code> และได้เรียนรู้วิธีการใช้งาน quantifier ใน regular expression ซึ่งประกอบด้วยสัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">{n}</span> <span class="pre">{m,n}</span> <span class="pre">{n,}</span> <span class="pre">{,n}</span></code> และได้เรียนรู้วิธีการใช้งานการอ้างอิงกลับ (backreference)</p>
+<p>ภาษาไพธอนมีโมดูลในการทำงานกับ regular expression คำสั่งที่ใช้บ่อย ๆ ในการประมวลข้อมูล ได้แก่ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> <code class="docutils literal notranslate"><span class="pre">re.search</span></code> <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> <code class="docutils literal notranslate"><span class="pre">re.sub</span></code> <code class="docutils literal notranslate"><span class="pre">re.split</span></code> ซึ่งใช้ในการตรวจหาแพทเทิร์นตามที่กำหนดด้วย regular expression ในสถานการณ์ต่าง ๆ</p>
 </section>
 </section>
 
@@ -765,26 +968,33 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Regular expression</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ส่วนประกอบของ regular expression</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ตัวอักษรปกติ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">สัญลักษณ์แทนตัวอักษรหรือกลุ่มของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การจัดเซ็ตของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifier">ตัวบอกปริมาณ (quantifier)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">สัญลักษณ์ที่ใช้ใน regular expression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literal-character">ตัวอักษรปกติ (Literal character)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metacharacter">อักขระพิเศษ (Metacharacter)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regex-1">ตัวอย่าง regex ที่ใช้อักขระพิเศษ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regex-2">ตัวอย่าง regex ที่ใช้อักขระพิเศษ 2</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การจัดเซ็ตของตัวอักษร</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifier">ตัวบอกปริมาณ (quantifier)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง regex ที่ใช้ตัวบอกปริมาณ 1</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Regular expression ในภาษาไพธอน</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backreference">การอ้างอิงกลับ (backreference)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Regular expression ในภาษาไพธอน</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match">re.match</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search">re.search</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall">re.findall</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub">re.sub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub">re.sub</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการใช้งานแบบมี backreference</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">สรุป</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

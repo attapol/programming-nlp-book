@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/data_structure2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Set" href="module5/01-set.html" />
+    <link rel="next" title="เซ็ต (Set)" href="module5/01-set.html" />
     <link rel="prev" title="โจทย์: Text processing และ Regular expression" href="module4/5-exercise-file-regex.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,13 +183,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="module4/1-file.html">File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module4/3-regular-expression.html">Regular expression</a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module5/01-set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/01-set.html">เซ็ต (Set)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/02-videos-set.html">Video: Set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/03-exercise-set.html">โจทย์: เซ็ต</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/04-nested-list.html">Nested list</a></li>
@@ -433,10 +432,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-structure-ii">
 <h1>Data Structure II<a class="headerlink" href="#data-structure-ii" title="Permalink to this heading">#</a></h1>
-<p>Set, ลิสต์ซ้อนลิสต์ ดิกชันนารีซ้อนดิกชันนารี และโครงสร้างข้อมูลที่ซ้อนกัน (nested data structure)</p>
+<p>โครงสร้างข้อมูลที่ใช้งานบ่อยในภาษาไพธอน คือ ลิสต์ และดิกชันนารี แต่ว่าโครงสร้างข้อมูลทั้งสองประเภทนี้ไม่ตอบโจทย์การใช้งานบางประเภท ในบทนี้เราจะเรียนรู้โครงสร้างข้อมูลใหม่ 3 ประเภท</p>
+<ol class="arabic simple">
+<li><p>เซ็ต เป็นโครงสร้างข้อมูลที่เก็บข้อมูลที่ไม่ซ้ำกัน และไม่สนใจลำดับของข้อมูล การไม่เก็บลำดับไว้ ทำให้ค้นหาข้อมูลในเซ็ตได้อย่างรวดเร็ว เช่น การเก็บคำในพจนานุกรม การเก็บรายชื่อนักเรียน</p></li>
+<li><p>ลิสต์ซ้อนลิสต์ (nested list) เป็นโครงสร้างข้อมูลที่เก็บข้อมูลที่มีโครงสร้างลิสต์ซ้อนกันในลิสต์ เช่น การเก็บข้อมูลของนักเรียน โดยข้อมูลของนักเรียนแต่ละคนจะประกอบไปด้วย ชื่อ นามสกุล อายุ และเกรด ซึ่งเกรดของนักเรียนแต่ละคนจะประกอบไปด้วย วิชา และคะแนน ดังนั้นเราจึงต้องใช้โครงสร้างข้อมูลที่ซ้อนกัน</p></li>
+<li><p>ดิกชันนารีซ้อนดิกชันนารี (nested dictionary) เป็นโครงสร้างข้อมูลที่เก็บข้อมูลที่มีโครงสร้างซ้อนกัน ดิกชันนารีที่มีค่า value เป็นดิกชันนารีหรือลิสต์ซ้อนอยู่ข้างใน</p></li>
+</ol>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module5/01-set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5/01-set.html">เซ็ต (Set)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/02-videos-set.html">Video: Set</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/03-exercise-set.html">โจทย์: เซ็ต</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/04-nested-list.html">Nested list</a></li>
@@ -496,7 +500,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Set</p>
+        <p class="prev-next-title">เซ็ต (Set)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
