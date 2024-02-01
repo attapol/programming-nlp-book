@@ -429,10 +429,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ลิสต์ของลิสต์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">คำถามชวนคิด</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เฉลย</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">คำถามชวนคิด</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate">Iterate ไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่าง</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#double-for-loop">Double for loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-list-comprehension">Nested list comprehension</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flatten">การทำลิสต์ให้เรียบ (flatten)</a></li>
 </ul>
 </li>
 </ul>
@@ -492,6 +500,24 @@ document.write(`
 <p>ในบทนี้เราจะพูดถึงโครงสร้างข้อมูลที่ซ้อนกัน ที่พบเห็นได้บ่อย ๆ ในการเขียนโค้ดเพื่อประมวลผลข้อมูล</p>
 <section id="id1">
 <h2>ลิสต์ของลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>ในการใช้งานจริงเราใช้ลิสต์ของลิสต์เพื่อเก็บข้อมูลประเภทเดี่ยวทั้ง 3 ประเภท ลิสต์ของลิสต์ของตัวเลข (ลิสต์ที่มีลิสต์ย่อยที่เก็บตัวเลข) ลิสต์ของลิสต์ของสตริง ลิสต์ของลิสต์ของบูลีน</p>
+<p>ขอยกตัวอย่างการใช้ลิสต์ของลิสต์ของตัวเลข ซึ่งเป็นลิสต์ของคะแนนของนักเรียน โดยแต่ละคะแนนจะประกอบไปด้วย คะแนนเก็บ คะแนนสอบกลางภาค และคะแนนสอบปลายภาค โดยเราจะเก็บคะแนนของนักเรียนแต่ละคนไว้ในลิสต์ของลิสต์ของตัวเลข ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>เราสามารถเข้าถึงคะแนนของนักเรียนคนที่ 2 ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ซึ่งเป็นลิสต์ของคะแนนของนักเรียนคนที่ 2</p>
 <p>ลิสต์ของลิสต์มักจะใช้เก็บประโยคหลาย ๆ ประโยค เราจะเก็บประโยค 1 ประโยคไว้ในลิสต์ของสตริงคำ เมื่อเราต้องเก็บหลาย ๆ ประโยคจึงกลายมาเป็นลิสต์ของลิสต์ของสตริงคำ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;want&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;need&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]]</span>
 </pre></div>
@@ -526,8 +552,7 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">list_lang2[1][2]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">list_len[0][3]</span></code></p></li>
 </ol>
-<section id="id3">
-<h4>เฉลย<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p><em>เฉลย</em></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>คำสั่ง</p></th>
@@ -559,7 +584,200 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<p>รูปแบบการใช้งานที่พบเห็นบ่อย ๆ ในการประมวลผลข้อมูล ได้แก่</p>
+<ul class="simple">
+<li><p>Iterate ไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</p></li>
+<li><p>รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</p></li>
+<li><p>การทำลิสต์ให้เรียบ (flatten)</p></li>
+</ul>
 </section>
+<section id="iterate">
+<h3>Iterate ไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#iterate" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราต้องให้นับจำนวนคำในประโยคที่เก็บไว้ในลิสต์ของลิสต์ของสตริง เราต้องใช้ for loop เพื่อไล่ลิสต์ย่อยออกมาทีละตัว และแต่ในลิสต์ย่อยเราต้องใช้ for loop อีกชั้นหนึ่งเพื่อไล่สตริงออกมาทีละคำ แปลออกมาเป็น pseudocode ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span>
+    <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span>
+        <span class="n">ทำอะไรกับข้อมูลเดี่ยว</span>
+</pre></div>
+</div>
+<section id="id3">
+<h4>ตัวอย่าง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;want&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;need&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]]</span>
+<span class="n">total_words</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+        <span class="n">total_words</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_words</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>สิ่งที่ปรากฏบนหน้าจอ คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
+</pre></div>
+</div>
+<p>ซึ่งเป็นจำนวนคำทั้งหมดในลิสต์ของลิสต์ของสตริง</p>
+<p>โปรแกรมข้างต้นมีการใช้ for loop ซ้อนกัน (double for loop) โดยที่ for loop ชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">sentences</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sentence</span></code> มาใช้เก็บลิสต์ย่อย และ for loop ชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sentence</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้นับคำที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> แล้วบวกเพิ่มในตัวแปร <code class="docutils literal notranslate"><span class="pre">total_words</span></code> ที่เป็นจำนวนคำทั้งหมด</p>
+</section>
+<section id="id4">
+<h4>ตัวอย่าง<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราต้องการหาคำที่สะกดด้วยตัวอักษรภาษาอังกฤษทั้งหมดโดยไม่ต้องนับตัวซ้ำ ข้อมูลที่ได้มาถูกจัดเก็บอยู่ในลิสต์ของลิสต์ของสตริงคำ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list_sen</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
+<span class="n">eng_word_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">list_sen</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="n">eng_word_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for loop ชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">list_sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sen</span></code> มาใช้เก็บลิสต์ย่อย และ for loop ชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้ตรวจสอบว่าสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> เป็นสตริงที่มีแต่ตัวอักษรภาษาอังกฤษหรือไม่ โดยใช้ string method <code class="docutils literal notranslate"><span class="pre">.isalpha()</span></code> ซึ่งจะคืนค่าเป็นบูลีน ถ้าเป็นค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> ให้เพิ่มสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> ลงในเซ็ต <code class="docutils literal notranslate"><span class="pre">eng_word_set</span></code> โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">eng_word_set.add(word)</span></code> ซึ่งเป็นการเพิ่มสตริงลงในเซ็ต และเนื่องจากเราใช้เซ็ตในการเก็บ สตริงที่ซ้ำกันจะถูกลบออกไปโดยอัตโนมัติ</p>
+</section>
+</section>
+<section id="id5">
+<h3>รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>การรันฟังก์ชันไปบนสมาชิกทุกตัว เราเรียกว่าการทำ function mapping ให้ลองนึกทบทวนถึงการทำ function mapping กับลิสต์ที่ไม่มีการซ้อนลิสต์ จากตัวอย่างต่อไปนี้</p>
+<p>สมมติว่า เราต้องการทำ function mapping ด้วยฟังก์ชันยกกำลังสองไปบนลิสต์ของตัวเลข <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[2,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">20]</span></code>(ซึ่งเป็นลิสต์ที่ยังไม่มีการซ้อนลิสต์) เริ่มจากการสร้างฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ที่รับตัวเลขเข้ามา แล้วคืนค่ากลับมาเป็นค่าที่ยกกำลังสอง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>เราอยากได้ผลลัพธ์จากการรัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ไปทุกตัวบนลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">square</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">square</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="n">square</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>หรือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">])]</span>
+</pre></div>
+</div>
+<p>แต่เนื่องจากเราไม่รู้ล่วงหน้าว่าลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> มีสมาชิกกี่ตัว เราจึงต้องเขียนโค้ดให้สามารถรัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ไปบนสมาชิกทุกตัวของลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> ได้โดยไม่ต้องระบุจำนวนรอบของ for loop ไว้ล่วงหน้า เราจึงจำเป็นต้องใช้ function mapping ซึ่งมี 3 วิธี ดังนี้</p>
+<ol class="arabic">
+<li><p>Double for loop:
+ใช้ for loop แล้วเก็บผลลัพธ์ไว้ในลิสต์ที่ขึ้นมาเตรียมไว้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์</span><span class="p">:</span>
+    <span class="n">ผลลัพธ์</span> <span class="o">=</span> <span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ผลลัพธ์</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ตัวอย่าง เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่จะแสดงผลบนหน้าจอ คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">400</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>List comprehension</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ตัวอย่าง เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">square</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">map</span></code> แล้วแปลงผลลัพธ์เป็นลิสต์</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">ฟังก์ชัน</span><span class="p">,</span> <span class="n">ลิสต์</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>ตัวอย่าง เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>เราสามารถใช้วิธีเหล่านี้ในทำนองเดียวกันเพื่อทำ function mapping กับลิสต์ของลิสต์</p>
+<section id="double-for-loop">
+<h4>Double for loop<a class="headerlink" href="#double-for-loop" title="Permalink to this heading">#</a></h4>
+<p>โครงสร้างของการใช้ for loop เพื่อทำ function mapping จะต้องมีการใช้ for loop ซ้อน for loop ซึ่งมีโครงสร้างดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">:</span>
+    <span class="n">sub_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">:</span>
+        <span class="n">ผลลัพธ์</span> <span class="o">=</span> <span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span>
+        <span class="n">sub_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ผลลัพธ์</span><span class="p">)</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_results</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>จุดที่ซับซ้อนและน่าสังเกตคือ การสร้างลิสต์ย่อย <code class="docutils literal notranslate"><span class="pre">sub_results</span></code> ขึ้นมาเพื่อเก็บผลลัพธ์ที่ได้จากการทำ function mapping กับสมาชิกแต่ละตัวในลิสต์ย่อย ถ้าเราแกะเอา for loop ชั้นนอกออกเราก็จะเห็นว่าโครงสร้างนั้นเหมือนกับการทำ function mapping บนลิสต์ที่ไม่มีการซ้อนลิสต์</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">sub_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">:</span>
+        <span class="n">ผลลัพธ์</span> <span class="o">=</span> <span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span>
+        <span class="n">sub_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ผลลัพธ์</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>แต่เพราะว่าเราต้องการทำ function mapping ไปบนลิสต์ย่อยทุกลิสต์ เราจึงต้องเอาโค้ดก้อนนี้ซ้อนเข้าไปใน for loop ชั้นนอก 1 ชั้น</p>
+<p><em>ตัวอย่าง</em></p>
+<p>สมมติว่าเราต้องการหาความยาวของคำแต่ละคำในประโยคที่เก็บไว้ในลิสต์ของลิสต์ของสตริง เช่น ถ้าหาก input คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>โปรแกรมจะต้องคืนค่ามาเป็นลิสต์ของลิสต์ของตัวเลข ซึ่งตัวเลขแต่ละตัวคือความยาวของคำในแต่ละตำแหน่ง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>โจทย์ข้อนี้เราทราบแล้วว่าเราต้องมีการทำ function mapping โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> ลงบนสมาชิกแต่ละตัวในลิสต์ย่อย ดังนั้นเราสามารถใช้โครงสร้าง double for loop มาประกอบกันได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">sub_lengths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">:</span>
+        <span class="n">sub_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+    <span class="n">lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_lengths</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="nested-list-comprehension">
+<h4>Nested list comprehension<a class="headerlink" href="#nested-list-comprehension" title="Permalink to this heading">#</a></h4>
+<p>เราสามารถใช้ list comprehension ซ้อนกัน (nested list comprehension) ในการทำ function mapping ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>สังเกตว่าเราซ้อน expression <code class="docutils literal notranslate"><span class="pre">[ฟังก์ชัน(ข้อมูลเดี่ยว)</span> <span class="pre">for</span> <span class="pre">ข้อมูลเดี่ยว</span> <span class="pre">in</span> <span class="pre">ลิสต์ย่อย]</span></code> เข้าไปใน <code class="docutils literal notranslate"><span class="pre">[expression</span> <span class="pre">for</span> <span class="pre">ลิสต์ย่อย</span> <span class="pre">in</span> <span class="pre">ลิสต์ใหญ่]</span></code></p>
+<p><em>ตัวอย่าง</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">]</span> <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="flatten">
+<h3>การทำลิสต์ให้เรียบ (flatten)<a class="headerlink" href="#flatten" title="Permalink to this heading">#</a></h3>
+<p>การทำลิสต์ให้เรียบ คือ การเปลี่ยนลิสต์ที่เคยเป็นลิสต์ซ้อนลิสต์ให้เป็นลิสต์ธรรมดาที่เก็บข้อมูลเดี่ยวไว้ ในกรณีที่ข้อมูลที่เราได้รับมาเป็นข้อมูลที่มีโครงสร้างที่ซับซ้อนเกินไปอย่างลิสต์ของลิสต์ของคำซึ่งเก็บข้อมูลระดับประโยคไว้ด้วยว่ามีประโยคอยู่กี่ประโยค (ลิสต์ย่อย) และแต่ละประโยคมีคำอยู่กี่คำ (สตริงที่อยู่ในลิสต์ย่อย) หากเราไม่ต้องการข้อมูลในระดับประโยคเราอาจจะย่อลงให้เหลือเพียงลิสต์ของสตริงคำ โดยการทำลิสต์ให้เรียบ</p>
+<p>โครงสร้างของโค้ดที่ใช้ในการทำลิสต์ให้เรียบ จะมีการใช้ for loop ซ้อน for loop ซึ่งมีโครงสร้างดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">:</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>หรือ จะใช้ list comprehension ซ้อนกัน (nested list comprehension) ในการทำลิสต์ให้เรียบ ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">ข้อมูลเดี่ยว</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>สังเกตว่าโครงสร้าง nested list comprehension แบบนี้มีลักษณะคล้ายคลึงกับ การทำ function mapping บน nested list ซึ่งมีโครงสร้างดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ข้อแตกต่าง คือ expression ที่ใช้ในการทำลิสต์ให้เรียบมีอยู่ตำแหน่งเดียวเท่านั้น และไม่มีการใช้ฟังก์ชันใด ๆ ในการประมวลผลข้อมูล แต่ว่า nested list comprehension สำหรับ function mapping จะมี expression สำหรับ for loop ชั้นนอกคือ <code class="docutils literal notranslate"><span class="pre">[ฟังก์ชัน(ข้อมูลเดี่ยว)</span> <span class="pre">for</span> <span class="pre">ข้อมูลเดี่ยว</span> <span class="pre">in</span> <span class="pre">ลิสต์ย่อย]</span></code> ซึ่งให้ค่าเป็นลิสต์ และ expression สำหรับ for loop ชั้นในคือ <code class="docutils literal notranslate"><span class="pre">ฟังก์ชัน(ข้อมูลเดี่ยว)</span></code></p>
+<p>ข้อแตกต่างของโครงสร้างอีกอย่างคือ nested list comprehension สำหรับทำให้ลิสต์ให้เรียบ จะมีการใช้ for loop ชั้นนอกก่อน และ for loop ชั้นในทีหลัง แต่สำหรับ function mapping จะมีการใช้ for loop ชั้นในก่อน และ for loop ชั้นนอกหลัง</p>
+<p><img alt="illustration of the structures" src="book/module5/img/nopic.jpg" /></p>
+<p><em>ตัวอย่าง</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
+<span class="n">flattened_word_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flattened_word_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span> <span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span> <span class="s1">&#39;tv&#39;</span><span class="p">,</span> <span class="s1">&#39;ใหม่&#39;</span><span class="p">,</span> <span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span> <span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -632,10 +850,18 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ลิสต์ของลิสต์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">คำถามชวนคิด</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เฉลย</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">คำถามชวนคิด</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate">Iterate ไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่าง</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#double-for-loop">Double for loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-list-comprehension">Nested list comprehension</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flatten">การทำลิสต์ให้เรียบ (flatten)</a></li>
 </ul>
 </li>
 </ul>
