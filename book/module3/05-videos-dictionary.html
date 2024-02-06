@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>เคาน์เตอร์ (counter) &#8212; Programming for NLP</title>
+    <title>Video: Dictionary &#8212; Programming for NLP</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module3/4c-counter';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module3/05-videos-dictionary';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Video: Dictionary" href="5-videos-dictionary.html" />
-    <link rel="prev" title="ทูเปิล (tuple)" href="4b-tuple.html" />
+    <link rel="next" title="โจทย์: ดิกชันนารี" href="06-exercise-dictionary.html" />
+    <link rel="prev" title="เคาน์เตอร์ (counter)" href="04c-counter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,16 +167,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1-list.html">ลิสต์ (List)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2-videos-list.html">Video: List and Data Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-exercise-list.html">โจทย์: ลิสต์</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4b-tuple.html">ทูเปิล (tuple)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">เคาน์เตอร์ (counter)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5-videos-dictionary.html">Video: Dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-set.html">เซ็ต (Set)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-exercise-set.html">โจทย์: เซ็ต</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,17 +193,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module5/01-set.html">เซ็ต (Set)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/02-videos-set.html">Video: Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/03-exercise-set.html">โจทย์: เซ็ต</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/04-nested-list.html">Nested data structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/05-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/06-nested-dictionary.html">Nested dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/07-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/08-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/09-exercise-nested.html">โจทย์: Nested data structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/10-comprehension.html">Comprehension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -306,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module3/4c-counter.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module3/05-videos-dictionary.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -336,7 +336,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module3/4c-counter.md" target="_blank"
+      <li><a href="../../_sources/book/module3/05-videos-dictionary.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -418,7 +418,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>เคาน์เตอร์ (counter)</h1>
+    <h1>Video: Dictionary</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -428,11 +428,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การสร้างเคาน์เตอร์ว่าง ๆ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างเคาน์เตอร์จากดิกชันนารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การสร้างเคาน์เตอร์จากลิสต์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-0">key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-most-common">หาค่า key ที่คู่กับ value ที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การวนลูปบน Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-methods">Dictionary Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counter">Counter</a></li>
 </ul>
             </nav>
         </div>
@@ -444,73 +443,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="counter">
-<h1>เคาน์เตอร์ (counter)<a class="headerlink" href="#counter" title="Permalink to this heading">#</a></h1>
-<p>เคาน์เตอร์ เป็น<em>ซับคลาส (subclass)</em> ของดิกชันนารี ซึ่งแปลว่าเคานเตอร์สามารถทำได้เกือบทุกอย่างที่ดิกชันนารีสามารถทำได้ และยังมี method อื่น ๆ เพิ่มเติม</p>
-<p>เคาน์เตอร์เป็นดิกชันนารีที่ key เป็นอะไรก็ได้ แต่ว่า value จะต้องเป็นตัวเลข เท่านั้น จุดประสงค์หลักของการใช้โครงสร้างข้อมูลชนิดนี้คือเพื่อเก็บจำนวนครั้งที่พบ key แต่ละอัน</p>
-<p>เคาน์เตอร์ไม่ใช่ <em>บิวท์อินคลาส (built-in class)</em> ก่อนจะใช้จะต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อนที่จะเรียกใช้ เคาน์เตอร์เป็นคลาสที่เป็นส่วนหนึ่งของโมดูล <code class="docutils literal notranslate"><span class="pre">collections</span></code></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="video-dictionary">
+<h1>Video: Dictionary<a class="headerlink" href="#video-dictionary" title="Permalink to this heading">#</a></h1>
+<p>Dictionary</p>
+<section id="dictionary">
+<h2>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E7DQaHDmSXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
 <section id="id1">
-<h2>การสร้างเคาน์เตอร์ว่าง ๆ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">Counter()</span></code> ในการสร้างเคาน์เตอร์ซึ่งเป็นคำสั่งที่ต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อน</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-</pre></div>
-</div>
+<h2>การวนลูปบน Dictionary<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MBdRDNTIQbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-<section id="id2">
-<h2>การสร้างเคาน์เตอร์จากดิกชันนารี<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>เราสร้างแปลงดิกชันนารีที่ value เป็นตัวเลขมาเป็นเคาน์เตอร์ได้ดังนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
-</pre></div>
-</div>
+<section id="dictionary-methods">
+<h2>Dictionary Methods<a class="headerlink" href="#dictionary-methods" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FobPcPbWfcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-<section id="id3">
-<h2>การสร้างเคาน์เตอร์จากลิสต์<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>การสร้างเคาน์เตอร์ คือ การใช้เคาน์เตอร์สามารถนับค่าต่าง ๆ ที่เก็บอยู่ในลิสต์ และจัดเก็บให้ค่าทั้งหมดเป็น key และจำนวนครั้งที่พบให้เก็บเป็น value</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
-<span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
-<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 3</span>
-<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 2</span>
-<span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 1</span>
-</pre></div>
-</div>
-</section>
-<section id="key-value-0">
-<h2>key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0<a class="headerlink" href="#key-value-0" title="Permalink to this heading">#</a></h2>
-<p>เมื่อเวลาเราเปิดหาค่า key ที่ไม่ได้มีอยู่ในเคาน์เตอร์ค่าที่ได้คืนมาจะเป็น 0 เสมอ ซึ่งต่างจากดิกชันนารีที่จะโยน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> กลับมา</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 0</span>
-</pre></div>
-</div>
-<p>ฟีเจอร์นี้ทำให้เราใช้เคาน์เตอร์ได้สะดวกมากขึ้น เมื่อเราต้องการถามว่าค่าอะไรเจอกี่ครั้งบ้าง ถ้าค่าที่ไม่เจอเลยค่าที่ได้กลับคืนมาก็ควรจะเป็น 0 นอกจากนั้นแล้วเราสามารถอัพเดทเคาน์เตอร์ได้โดยไม่จำเป็นต้องตรวจสอบก่อนว่า key นั้นเคยมีอยู่ในเคาน์เตอร์แล้วหรือยัง เช่น สมมติว่าเราต้องการนับแค่คำที่ไม่มีตัวเลขปะปนอยู่เลยที่จัดเก็บอยู่ในลิสต์ <code class="docutils literal notranslate"><span class="pre">word_list</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
-        <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">word_counter[word]</span></code> ค่าเป็น 0 ถ้าเราไม่เคยเห็นคำนั้นมาก่อนซึ่งทำให้ expression ทางขวามือของเครื่องหมายเท่ากับเป็น <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">1</span></code> ซ่ึงเป็นผลที่เราต้องการ
-ถ้าหากเราจะใช้ดิกชันนารีก็สามารถทำได้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_counter</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_counter</span><span class="p">:</span>
-            <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p>แต่เราต้องตรวจสอบว่า key อยู่ในดิกอยู่แล้วหรือไม่ ถ้าไม่ได้อยู่ต้องทำการตั้งคู่ key-value ใหม่โดยตั้งให้ค่า value เป็น 0 เตรียมเอาไว้ก่อน เพื่อป้องกัน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
-</section>
-<section id="key-value-most-common">
-<h2>หาค่า key ที่คู่กับ value ที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code><a class="headerlink" href="#key-value-most-common" title="Permalink to this heading">#</a></h2>
-<p>เคาน์เตอร์มี method ที่ไว้สำหรับ key ที่พบบ่อยที่สุด</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
-<span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
-<span class="n">letter_count</span><span class="o">.</span><span class="n">most_common</span><span class="p">()</span> <span class="c1">#--&gt; [(&#39;a&#39;, 3), (&#39;b&#39;, 2), (&#39;c&#39;, 1)]</span>
-<span class="n">letter_count</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#--&gt; [(&#39;a&#39;, 3)]</span>
-</pre></div>
-</div>
-<p>method นี้มี optional parameter ที่เราจะระบุหรือไม่ระบุก็ได้ว่าจะ return ผลกี่อันดับแรก ถ้าไม่ระบุจะให้ผลอย่างมาก 20 อันดับแรก สิ่งที่ method return มาให้คือลิสต์ของทูเปิล ทูเปิลที่ได้มาเป็นคู่ของ key-value เรียงลำดับตาม value</p>
-</section>
+<section id="counter">
+<h2>Counter<a class="headerlink" href="#counter" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jhgeai82yw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -545,20 +495,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="4b-tuple.html"
+       href="04c-counter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ทูเปิล (tuple)</p>
+        <p class="prev-next-title">เคาน์เตอร์ (counter)</p>
       </div>
     </a>
     <a class="right-next"
-       href="5-videos-dictionary.html"
+       href="06-exercise-dictionary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Video: Dictionary</p>
+        <p class="prev-next-title">โจทย์: ดิกชันนารี</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -580,11 +530,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การสร้างเคาน์เตอร์ว่าง ๆ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างเคาน์เตอร์จากดิกชันนารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การสร้างเคาน์เตอร์จากลิสต์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-0">key ที่ไม่ได้อยู่ในเคาน์เตอร์ value จะเป็น 0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-most-common">หาค่า key ที่คู่กับ value ที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การวนลูปบน Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-methods">Dictionary Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counter">Counter</a></li>
 </ul>
   </nav></div>
 

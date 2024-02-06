@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Nested dictionary &#8212; Programming for NLP</title>
+    <title>โจทย์: Comprehension &#8212; Programming for NLP</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/06-nested-dictionary';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module3/11-exercise-comprehension';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Video: Advance dictionary" href="07-videos-nested-dictionary.html" />
-    <link rel="prev" title="Video: Advance list" href="05-videos-nested-list.html" />
+    <link rel="next" title="การประมวลผลข้อมูลจากไฟล์" href="../text_file.html" />
+    <link rel="prev" title="Comprehension" href="10-comprehension.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,17 +166,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/6-exercise-string.html">โจทย์: สตริง</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module3/1-list.html">ลิสต์ (List)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/2-videos-list.html">Video: List and Data Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/3-exercise-list.html">โจทย์: ลิสต์</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-list.html">ลิสต์ (List)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-exercise-list.html">โจทย์: ลิสต์</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../module3/3s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/4a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/4b-tuple.html">ทูเปิล (tuple)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/4c-counter.html">เคาน์เตอร์ (counter)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/5-videos-dictionary.html">Video: Dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module3/6-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03s-exercise-list.html">เฉลยโจทย์: ลิสต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04a-dictionary.html">ดิกชันนารี (Dictionary)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04b-tuple.html">ทูเปิล (tuple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04c-counter.html">เคาน์เตอร์ (counter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-exercise-dictionary.html">โจทย์: ดิกชันนารี</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-set.html">เซ็ต (Set)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-exercise-set.html">โจทย์: เซ็ต</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Comprehension</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -187,18 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-set.html">เซ็ต (Set)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-videos-set.html">Video: Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-exercise-set.html">โจทย์: เซ็ต</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-nested-list.html">Nested data structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Nested dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09-exercise-nested.html">โจทย์: Nested data structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10-comprehension.html">Comprehension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="11-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -281,6 +281,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module3/11-exercise-comprehension.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -306,7 +337,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/06-nested-dictionary.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module3/11-exercise-comprehension.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -336,7 +367,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module5/06-nested-dictionary.md" target="_blank"
+      <li><a href="../../_sources/book/module3/11-exercise-comprehension.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +377,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -405,7 +436,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -416,11 +449,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Nested dictionary</h1>
+    <h1>โจทย์: Comprehension</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-1">ข้อ 1: List comprehension 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-2">ข้อ 2: List comprehension 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-3">ข้อ 3: List comprehension 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-1">ข้อ 4: Dictionary comprehension 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-2">ข้อ 5: Dictionary comprehension 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-3">ข้อ 6: Dictionary comprehension 3</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -430,9 +476,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nested-dictionary">
-<h1>Nested dictionary<a class="headerlink" href="#nested-dictionary" title="Permalink to this heading">#</a></h1>
-<p>Under construction</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="comprehension">
+<h1>โจทย์: Comprehension<a class="headerlink" href="#comprehension" title="Permalink to this heading">#</a></h1>
+<section id="list-comprehension-1">
+<h2>ข้อ 1: List comprehension 1<a class="headerlink" href="#list-comprehension-1" title="Permalink to this heading">#</a></h2>
+<p>จงเปลี่ยนลิสต์ของชื่อให้เป็นลิสต์ที่มีแต่ชื่อภาษาอังกฤษ และชื่อภาษาอังกฤษจะต้องถูกเปลี่ยนเป็นชื่อที่ขึ้นต้นด้วยตัวใหญ่ที่เหลือตัวเล็กทั้งหมด ให้เขียนสองแบบ</p>
+<ul class="simple">
+<li><p>แบบแรกให้เขียนโดยใช้ for loop ธรรมดา</p></li>
+<li><p>แบบที่สองให้เขียนโดยใช้ list comprehension</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aaron&#39;</span><span class="p">,</span> <span class="s1">&#39;leigH&#39;</span><span class="p">,</span> <span class="s1">&#39;เต้&#39;</span><span class="p">,</span> <span class="s1">&#39;jOHN&#39;</span><span class="p">]</span>
+<span class="c1"># For loop</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aaron&#39;</span><span class="p">,</span> <span class="s1">&#39;leigH&#39;</span><span class="p">,</span> <span class="s1">&#39;เต้&#39;</span><span class="p">,</span> <span class="s1">&#39;jOHN&#39;</span><span class="p">]</span>
+<span class="c1"># List comprehension</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="list-comprehension-2">
+<h2>ข้อ 2: List comprehension 2<a class="headerlink" href="#list-comprehension-2" title="Permalink to this heading">#</a></h2>
+<p>Given a list of English words, <strong>use list comprehension</strong> to create a list of words that are all capitalized. You must also exclude words that are shorter than two characters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fruit&#39;</span><span class="p">,</span> <span class="s1">&#39;flies&#39;</span><span class="p">,</span> <span class="s1">&#39;do&#39;</span><span class="p">,</span> <span class="s1">&#39;like&#39;</span><span class="p">,</span> <span class="s1">&#39;bananas&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="list-comprehension-3">
+<h2>ข้อ 3: List comprehension 3<a class="headerlink" href="#list-comprehension-3" title="Permalink to this heading">#</a></h2>
+<p>เขียน List comprehension</p>
+<ul class="simple">
+<li><p>input เป็นลิสต์ของคำ (strings) เช่น <code class="docutils literal notranslate"><span class="pre">['monKey',</span> <span class="pre">'roach',</span> <span class="pre">'Eve',</span> <span class="pre">'oo',</span> <span class="pre">'Jim']</span></code></p></li>
+<li><p>output ลิสต์ของคำทั้งหมดแต่ว่าให้เอาสระออกให้หมด เช่น <code class="docutils literal notranslate"><span class="pre">['mnKy',</span> <span class="pre">'rch',</span> <span class="pre">'v',</span> <span class="pre">'',</span> <span class="pre">'Jm']</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;monKey&#39;</span><span class="p">,</span> <span class="s1">&#39;roach&#39;</span><span class="p">,</span> <span class="s1">&#39;Eve&#39;</span><span class="p">,</span> <span class="s1">&#39;oo&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dictionary-comprehension-1">
+<h2>ข้อ 4: Dictionary comprehension 1<a class="headerlink" href="#dictionary-comprehension-1" title="Permalink to this heading">#</a></h2>
+<p>Given a list words, create a dictionary whose keys are a word and values are the length of the word.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fruit&#39;</span><span class="p">,</span> <span class="s1">&#39;flies&#39;</span><span class="p">,</span> <span class="s1">&#39;like&#39;</span><span class="p">,</span> <span class="s1">&#39;bananas&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dictionary-comprehension-2">
+<h2>ข้อ 5: Dictionary comprehension 2<a class="headerlink" href="#dictionary-comprehension-2" title="Permalink to this heading">#</a></h2>
+<p>Given two lists of words that are translations of each other, create a dictionary whose key is an English and whose value is the French translation of that word. And keep only English words that are longer than 3 characters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">english_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">,</span> <span class="s1">&#39;pen&#39;</span><span class="p">,</span> <span class="s1">&#39;eraser&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">]</span>
+<span class="n">french_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chaise&#39;</span><span class="p">,</span> <span class="s1">&#39;stylo&#39;</span><span class="p">,</span> <span class="s1">&#39;gomme&#39;</span><span class="p">,</span> <span class="s1">&#39;ordinateur&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dictionary-comprehension-3">
+<h2>ข้อ 6: Dictionary comprehension 3<a class="headerlink" href="#dictionary-comprehension-3" title="Permalink to this heading">#</a></h2>
+<p>จงเขียน dictionary comprehension</p>
+<ul class="simple">
+<li><p>Input: ลิสต์ของคำ <code class="docutils literal notranslate"><span class="pre">['baby',</span> <span class="pre">'baby',</span> <span class="pre">'baby',</span> <span class="pre">'oh',</span> <span class="pre">'...',</span> <span class="pre">'baby',</span> <span class="pre">'baby',</span> <span class="pre">'no','!']</span></code></p></li>
+<li><p>Output: ดิกต์ที่มี key เป็นคำ และ value เป็นอันดับของคำตามความถี่ เช่น <code class="docutils literal notranslate"><span class="pre">{'baby':</span> <span class="pre">1,</span> <span class="pre">'oh':</span> <span class="pre">2,</span> <span class="pre">'...':</span> <span class="pre">3,</span> <span class="pre">'no':</span> <span class="pre">4,</span> <span class="pre">'!':</span> <span class="pre">5}</span></code></p></li>
+</ul>
+<p>Hint: ใช้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> นับคำก่อนหลังจากนั้นเขียน dict comprehension โดยใช้ <code class="docutils literal notranslate"><span class="pre">Counter.most_common</span></code> เป็น input</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,7 +582,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./book/module5"
+            path: "./book/module3"
         },
         predefinedOutput: true
     }
@@ -467,20 +601,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05-videos-nested-list.html"
+       href="10-comprehension.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Video: Advance list</p>
+        <p class="prev-next-title">Comprehension</p>
       </div>
     </a>
     <a class="right-next"
-       href="07-videos-nested-dictionary.html"
+       href="../text_file.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Video: Advance dictionary</p>
+        <p class="prev-next-title">การประมวลผลข้อมูลจากไฟล์</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -493,6 +627,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-1">ข้อ 1: List comprehension 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-2">ข้อ 2: List comprehension 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension-3">ข้อ 3: List comprehension 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-1">ข้อ 4: Dictionary comprehension 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-2">ข้อ 5: Dictionary comprehension 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-comprehension-3">ข้อ 6: Dictionary comprehension 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
