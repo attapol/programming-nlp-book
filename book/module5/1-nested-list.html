@@ -447,6 +447,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -901,7 +902,37 @@ document.write(`
 </section>
 <section id="id8">
 <h2>ลิสต์ของดิกชันนารี<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
-<p><em>under construction</em></p>
+<p>ลิสต์ของดิกชันนารีเป็นโครงสร้างข้อมูลอีกประเภทที่พบเห็นได้บ่อย เราอาจจะสงสัยกันว่าเมื่อไรกันที่เราต้องการเก็บรายการของสิ่งที่เก็บคู่ key value เอาไว้เยอะ ๆ ดิกชันนารีที่ถูกเก็บอยู่ในลิสต์มักจะเป็นดิกชันนารีที่มี key เหมืิอนกันทุกตัว ดิกชันนารีประเภทนี้มีหน้าที่คล้ายคลึงกับทูเปิล เช่น หากว่าเราใช้ลิสต์ของทูเปิลในการเก็บข้อความและผู้ส่งข้อความดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;แม่เป็นกำลังใจของหนู&#39;</span><span class="p">)</span>
+    <span class="p">(</span><span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;หนูมีแม่คนเดียว&#39;</span><span class="p">),</span> 
+    <span class="p">(</span><span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;ทุกคนมีแม่คนเดียวโกโก้&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+<p>การเก็บข้อมูลในลักษณะนี้อาจทำให้เกิดข้อผิดพลาดได้ตรงที่เราอาจจะลืมว่าเราเก็บชื่อคนพูดไว้ในตำแหน่งใดของทูเปิล ในกรณีเราอาจจะใช้ดิกชันนารีแทนได้เพื่อความชัดเจน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;speaker&#39;</span><span class="p">:</span> <span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;แม่เป็นกำลังใจของหนู&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;speaker&#39;</span><span class="p">:</span> <span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;หนูมีแม่คนเดียว&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;speaker&#39;</span><span class="p">:</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;ทุกคนมีแม่คนเดียวโกโก้&#39;</span><span class="p">}</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+<p>โดยผิวเผินแล้วการเก็บข้อมูลทั้งสองวิธีนั้นเก็บข้อมูลได้ครบถ้วนเหมือนกัน ให้ลองเปรียบเทียบโค้ดในการแสดงผลข้อความให้ดูเป็นบทสนทนา</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>กับ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;speaker&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>จากตัวอย่างข้างต้นเราสามารถสังเกตได้ว่าการใช้ดิกชันนารีทำให้โค้ดอ่านง่ายขึ้น และเราไม่ต้องคอยจำลำดับของข้อมูลในทูเปิล แต่ก็มีข้อควรระวังคือ ดิกชันนารีทุกตัวที่อยู่ในลิสต์จะต้องมี key ที่เหมือนกันหมด มิฉะนั้นเราจะต้องเขียนโค้ดเพิ่มเติมเพื่อตรวจสอบว่าดิกชันนารีมี key ที่ต้องการเข้าถึงหรือไม่ ซึ่งอาจจะทำให้โค้ดดูซับซ้อนเกินความจำเป็น</p>
+</section>
+<section id="id9">
+<h2>สรุป<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>ลิสต์ของลิสต์ ลิสต์ของทูเปิล ลิสต์ของดิกชันนารีเป็นโครงสร้างข้อมูลที่ชั้นนอกสุดคือลิสต์ที่มีหน้าที่เก็บข้อมูลที่มีลักษณะคล้ายกัน เช่น ลิสต์ที่เก็บข้อมูลเดี่ยวประเภทเดียวกัน ทูเปิลที่มีจำนวนสมาชิกเท่ากัน และข้อมูลเดี่ยวประเภทเดียวกัน ดิกชันนารีที่มี key เหมือนกัน เป็นการเพิ่มกรณีการใช้งานของลิสต์จากที่เราเคยใช้เก็บข้อมูลเดี่ยว เพิ่มมาเป็นการเก็บข้อมูลแบบคอลเลกชัน</p>
 </section>
 </section>
 
@@ -991,6 +1022,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สรุป</a></li>
 </ul>
   </nav></div>
 
