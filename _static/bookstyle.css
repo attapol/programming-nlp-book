@@ -1,0 +1,9 @@
+
+@media print {
+    .bd-toc {
+        visibility: hidden;
+    }
+    a.skip-link {
+        display: none;
+    }
+}
