@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Nested dictionary &#8212; Programming for NLP</title>
+    <title>ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่ &#8212; Programming for NLP</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -193,9 +194,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1-nested-list.html">ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-nested-list.html">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Nested dictionary</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-data-type.html">โจทย์: Data type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-exercise-nested.html">โจทย์: Nested data structure</a></li>
@@ -405,7 +406,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -416,11 +419,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Nested dictionary</h1>
+    <h1>ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key">ดิกชันนารีที่ key เป็นทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#value">ดิกชันนารีที่ value เป็นลิสต์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ดิกชันนารีที่ value เป็นดิกชันนารี</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -430,9 +443,52 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nested-dictionary">
-<h1>Nested dictionary<a class="headerlink" href="#nested-dictionary" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>Under construction</p>
+<section id="key">
+<h2>ดิกชันนารีที่ key เป็นทูเปิล<a class="headerlink" href="#key" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/dict-tuple.jpeg"><img alt="../../_images/dict-tuple.jpeg" src="../../_images/dict-tuple.jpeg" style="height: 100px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">ภาพอธิบายโครงสร้างของดิกชันนารี</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">friend_list</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">,</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;222-333-4444&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">,</span> <span class="s1">&#39;333-444-5555&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">friend_to_phone</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">):</span> <span class="s1">&#39;222-333-4444&#39;</span><span class="p">,</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">):</span> <span class="s1">&#39;333-444-5555&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_mark_from_list</span><span class="p">(</span><span class="n">friend_list</span><span class="p">):</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">friend_list</span><span class="p">:</span>
+	<span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">phone</span> <span class="o">=</span> <span class="n">entry</span>
+	<span class="n">first_last</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">query</span> <span class="o">==</span> <span class="n">first_last</span><span class="p">:</span> 
+		<span class="k">return</span> <span class="n">phone</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_mark_from_dict</span><span class="p">(</span><span class="n">friend_to_phone</span><span class="p">):</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">friend_to_phone</span><span class="p">[</span><span class="n">query</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Under construction</p>
+</section>
+<section id="value">
+<h2>ดิกชันนารีที่ value เป็นลิสต์<a class="headerlink" href="#value" title="Permalink to this heading">#</a></h2>
+<p>Under construction</p>
+</section>
+<section id="id2">
+<h2>ดิกชันนารีที่ value เป็นดิกชันนารี<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Under construction</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -493,6 +549,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key">ดิกชันนารีที่ key เป็นทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#value">ดิกชันนารีที่ value เป็นลิสต์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ดิกชันนารีที่ value เป็นดิกชันนารี</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

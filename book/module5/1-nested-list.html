@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่ &#8212; Programming for NLP</title>
+    <title>ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่ &#8212; Programming for NLP</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -193,9 +194,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../data_structure2.html">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3-nested-dictionary.html">Nested dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-data-type.html">โจทย์: Data type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-exercise-nested.html">โจทย์: Nested data structure</a></li>
@@ -418,7 +419,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่</h1>
+    <h1>ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -460,7 +461,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>ลิสต์ที่มีเก็บโครงสร้างข้อมูลอื่นอยู่<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
 <h2>ลิสต์ของลิสต์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>ในการใช้งานจริงเราใช้ลิสต์ของลิสต์เพื่อเก็บข้อมูลประเภทเดี่ยวทั้ง 3 ประเภท ลิสต์ของลิสต์ของตัวเลข (ลิสต์ที่มีลิสต์ย่อยที่เก็บตัวเลข) ลิสต์ของลิสต์ของสตริง ลิสต์ของลิสต์ของบูลีน</p>
@@ -929,6 +930,49 @@ document.write(`
 </pre></div>
 </div>
 <p>จากตัวอย่างข้างต้นเราสามารถสังเกตได้ว่าการใช้ดิกชันนารีทำให้โค้ดอ่านง่ายขึ้น และเราไม่ต้องคอยจำลำดับของข้อมูลในทูเปิล แต่ก็มีข้อควรระวังคือ ดิกชันนารีทุกตัวที่อยู่ในลิสต์จะต้องมี key ที่เหมือนกันหมด มิฉะนั้นเราจะต้องเขียนโค้ดเพิ่มเติมเพื่อตรวจสอบว่าดิกชันนารีมี key ที่ต้องการเข้าถึงหรือไม่ ซึ่งอาจจะทำให้โค้ดดูซับซ้อนเกินความจำเป็น</p>
+<p>ดิกชันนารีที่เราใช้ลักษณะดังตัวอย่างข้างต้น จะมี key ที่เป็นสตริงที่เป็นฟิลด์ (field) บ่งบอกว่าข้อมูลที่เป็น value เป็นข้อมูลอะไร เช่น ดิกชันนารีในตัวอย่างข้างต้นมี 2 ฟิลด์ คือ <code class="docutils literal notranslate"><span class="pre">speaker</span></code> และ <code class="docutils literal notranslate"><span class="pre">message</span></code> ซึ่งบ่งบอกว่า value ของดิกชันนารีคือผู้พูด และข้อความที่คนนั้นพูด เราขอเรียกดิกชันนารีที่มี key เป็นฟิลด์ว่าเป็น field-value dictionary</p>
+<p>ตัวอย่างที่แล้วอาจจะยังไม่ได้ทำให้เห็นภาพว่าทำไมเราถึงจำเป็นต้องใช้ field-value ดิกชันนารี ให้ลองพิจารณากรณีที่เราต้องเก็บทวีตจำนวนมาก</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">243000</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">37200</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">250300</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I was proud to work with Justin Trudeau as President&#39;</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;SpeakerPelosi&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">22700</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">45600</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;What courage does it take to pass legislation that will save lives?&#39;</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 15, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">5400</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">52800</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;In December, Michelle and I will head to Malaysia for the first @ObamaFoundation Leaders: Asia-Pacific gathering&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>ดิกชันนารีที่เราใช้ในตัวอย่างข้างต้นเป็น field-value ดิกชันนารี ที่มีฟิลด์ดังต่อไปนี้</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> บ่งบอกว่าทวีตนั้นมาจากบัญชีใคร</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> บ่งบอกว่าทวีตนั้นถูกโพสต์เมื่อวันที่ไหน</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">comments</span></code> บ่งบอกว่าทวีตนั้นมีคอมเมนต์กี่คอมเมนต์</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">retweets</span></code> บ่งบอกว่าทวีตนั้นถูก retweet กี่ครั้ง</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">fav</span></code> บ่งบอกว่าทวีตนั้นทำให้เป็น favorite โดยการกดปุ่มหัวใจบนแอปกี่ครั้ง</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> บ่งบอกว่าทวีตนั้นมีข้อความอะไร</p></li>
+</ul>
+<p>สมมติต่ออีกว่าเราต้องการเขียนโปรแกรมเพื่อหาว่าแต่ละคนถูก retweet ทั้งหมดกี่ครั้ง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
+  <span class="n">twitter_id</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+  <span class="n">retweets</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;num retweets&#39;</span><span class="p">]</span>
+  <span class="n">counter</span><span class="p">[</span><span class="n">twitter_id</span><span class="p">]</span> <span class="o">+=</span> <span class="n">retweets</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">most_common</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้คือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="mi">42600</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;SpeakerPelosi&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>ถ้าหากเราต้องการทำเหมือนกันด้วยการใช้ลิสต์ของทูเปิล โค้ดจะมีความซับซ้อนขึ้น และอ่านยากขึ้น อย่างแรกคือผู้เขียนโค้ดจะต้องไปตามหาว่า twitter id และจำนวนการ retweet อยู่ในตำแหน่งใดของทูเปิล ทำให้เกิดความยุ่งยากในการเขียนโค้ด เมื่อเขียนเสร็จแล้วโค้ดจะยากต่อการอ่าน ดังที่เห็นในโปรแกรมข้างล่างนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
+  <span class="n">twitter_id</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">retweets</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">counter</span><span class="p">[</span><span class="n">twitter_id</span><span class="p">]</span> <span class="o">+=</span> <span class="n">retweets</span>
+</pre></div>
+</div>
+<p>หากเราต้องกลับมาอ่านโค้ดของเราเอง เราก็อาจจะลืมไปแล้วว่าตำแหน่งที่ 0 และ 3 เก็บอะไรไว้อยู่ หรือถ้าส่งต่อให้คนอื่นในทีมเพื่อตรวจสอบหรือเขียนโค้ดต่อจากเรา ก็ยากต่อการทำความเข้าใจด้วยเหตุผลเดียวกัน ปัญหาอีกประการหนึ่งคือ ถ้าหากเพิ่มข้อมูลเข้าไปในทูเปิลก็อาจจะทำให้ตำแหน่งที่เก็บเปลี่ยนไปได้ เนื่องจากทูเปิลเป็นโครงสร้างข้อมูลแบบมีลำดับ จากตัวอย่างนี้ทำให้เห็นว่าถ้าหากข้อมูลหนึ่งตัวเก็บข้อมูลอยู่หลายอย่างในลักษณะคล้ายกับกับการกรอกฟอร์มที่มีหลาย ๆ ฟิลด์ การใช้ field-value ดิกชันนารีเป็นวิธีที่ดีกว่าการใช้ทูเปิล</p>
 </section>
 <section id="id9">
 <h2>สรุป<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
