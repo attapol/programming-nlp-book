@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Object-oriented programming &#8212; Programming for NLP</title>
+    <title>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming) &#8212; Programming for NLP</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/oop';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Object-Oriented Programming" href="module6/1-OOP.html" />
+    <link rel="next" title="การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)" href="module6/1-OOP.html" />
     <link rel="prev" title="โจทย์: Nested data structure" href="module5/6-exercise-nested.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,8 +202,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Object-oriented programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
@@ -417,7 +420,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Object-oriented programming</h1>
+    <h1>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -432,11 +435,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="object-oriented-programming">
-<h1>Object-oriented programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading">#</a></h1>
-<p>Object-oriented programming (OOP)</p>
+<h1>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading">#</a></h1>
+<p>ในบทที่ผ่าน ๆ มาเราได้เน้นย้ำว่าหนึ่งในหลักการสำคัญของการเขียนโปรแกรม และวิทยาการข้อมูล คือ การเลือกใช้โครงสร้างข้อมูลที่เหมาะกับข้อมูล และเหมาะกับวิธีการวิเคราะห์ข้อมูลที่ต้องเราต้องการใช้ ซึ่งในบทนี้เราจะเริ่มต้นทำความเข้าใจกับหลักการของการเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming: OOP) ซึ่งเป็นหลักการที่เราจะใช้ในการออกแบบโครงสร้างข้อมูลเพื่อให้สะดวกและยืดหยุ่นกับการใช้งาน</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6/1-OOP.html#class-object">คลาส (class) และอ็อบเจกต์ (object)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6/1-OOP.html#attribute">ลักษณะประจำ (attribute)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module6/1-OOP.html#method">เมท็อด (method)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
@@ -488,7 +494,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Object-Oriented Programming</p>
+        <p class="prev-next-title">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

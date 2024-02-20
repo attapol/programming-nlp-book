@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/6-exercise-nested';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Object-oriented programming" href="../oop.html" />
+    <link rel="next" title="การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)" href="../oop.html" />
     <link rel="prev" title="โจทย์: Data type" href="5-exercise-data-type.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,8 +202,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Nested data structure</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">Object-oriented programming</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">Object-Oriented Programming</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
@@ -466,10 +469,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ประมวลผลประโยค 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4 - ประมวลผลประโยค 3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5 - ประมวลผลประโยค 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6 - ประมวลผลประโยค 5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tuples">List of tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 1 - หาชื่อเล่นผู้ชาย</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-info-dicts">List of (info) dicts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 1 - ความนิยม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 1 - ความนิยม</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#censorship">ข้อ 2 - Censorship</a></li>
 </ul>
 </li>
@@ -477,10 +485,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 1 - Contact List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-key">ข้อ 2 - Tuple เป็น key</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 4 - เปลี่ยนคีย์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 5 - นับจำนวนนักเรียน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 8 - ใครไม่ส่งการบ้าน</a></li>
 </ul>
 </li>
 </ul>
@@ -607,11 +616,46 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="id6">
+<h3>ข้อ 6 - ประมวลผลประโยค 5<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชันเพื่อวิเคราะห์ list ของประโยค ซึ่งแต่ละประโยคเป็น list ของสตริงคำ ฟังก์ชันจะต้องคำนวณว่า ข้อความนี้ที่คำที่สั้นกว่าสามตัวอักษรคิดเป็นร้อยละเท่าไร (จำนวนคำที่สั้นกว่าสามตัวอักษร หารด้วยจำนวนคำทั้งหมด) และ return ค่าที่คำนวณออกมาได้ เช่น</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_ratio_3_chars</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; calculate_ratio_3_chars([[&#39;Stay&#39;, &#39;in&#39;, &#39;the&#39;, &#39;middle&#39;],[&#39;Like&#39;,&#39;you&#39;, &#39;a&#39;, &#39;little&#39;], [&quot;Don&#39;t&quot;, &#39;want&#39;,&#39;no&#39;,&#39;riddle&#39;]])</span>
+<span class="sd">    0.25</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="list-of-tuples">
+<h2>List of tuples<a class="headerlink" href="#list-of-tuples" title="Permalink to this heading">#</a></h2>
+<section id="id7">
+<h3>ข้อ 1 - หาชื่อเล่นผู้ชาย<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลชื่อของนิสิตปัจจุบันซึ่งเก็บไว้ในลิสต์ของ tuple (ชื่อจริง, ชื่อเล่น, เพศ) จงเขียนฟังก์ชันที่ return ลิสต์ที่มีชื่อเล่นของผู้ชายเรียงลำดับตามพจนานุกรม และไม่ซ้ำกัน</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_male_nicknames</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; get_male_nicknames([(&#39;Maysa&#39;, &#39;May&#39;, &#39;Female&#39;),(&#39;Waruntorn&#39;, &#39;Ing&#39;, &#39;Female&#39;),(&#39;Maysaya&#39;, &#39;May&#39;, &#39;Female&#39;), (&#39;Watsakorn&#39;, &#39;May&#39;, &#39;Female&#39;),(&#39;Chonkan&#39;, &#39;Atom&#39;, &#39;Male&#39;),(&#39;Saran&#39;, &#39;Ton&#39;, &#39;Male&#39;), (&#39;Tonkid&#39;, &#39;Ton&#39;, &#39;Male&#39;)])</span>
+<span class="sd">    [&#39;Atom&#39;, &#39;Ton&#39;]  </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="list-of-info-dicts">
 <h2>List of (info) dicts<a class="headerlink" href="#list-of-info-dicts" title="Permalink to this heading">#</a></h2>
-<section id="id6">
-<h3>ข้อ 1 - ความนิยม<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>ข้อ 1 - ความนิยม<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>เขียนฟังก์ชันหาจำนวน comment ของ tweet id ที่กำหนดให้ โดยที่ทวีตถูกเก็บอยู่ในรูป info dict</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">243000</span><span class="p">,</span>
   <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">37000</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">250300</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I was proud to work with Justin Trudeau as President&#39;</span><span class="p">},</span>
@@ -745,8 +789,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id7">
-<h3>ข้อ 4 - เปลี่ยนคีย์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>ข้อ 4 - เปลี่ยนคีย์<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <p>เปลี่ยนโครงสร้างของ dictionary จากที่เคยมี key เป็น tuple(first name, last name) เป็นแค่ last name อย่างเดียว</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -760,8 +804,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id8">
-<h3>ข้อ 5 - นับจำนวนนักเรียน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>ข้อ 5 - นับจำนวนนักเรียน<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มี key เป็นสตริงที่เก็บชื่อวิชา และ value เป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
 <p>จงเขียนฟังก์ชันที่ return list ของชื่อนักเรียนทั้งหมดที่ไม่ซ้ำกัน</p>
 <div class="cell docutils container">
@@ -782,8 +826,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id9">
-<h3>ข้อ 6 - ใครชอบเรียนเยอะ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>ข้อ 6 - ใครชอบเรียนเยอะ<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มี key เป็นสตริงที่เก็บชื่อวิชา และ value เป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
 <p>จงเขียนฟังก์ชันที่ return ดิกชันนารีที่ key คือจำนวนคลาสที่เรียนต่อคน และ value คือคนที่ลงเรียนจำนวนคลาสเท่ากับ key</p>
 <div class="cell docutils container">
@@ -808,8 +852,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id10">
-<h3>ข้อ 7 - รวมดิกชันนารี<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>ข้อ 7 - รวมดิกชันนารี<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">combine_dicts</span></code> ที่รวมดิกชันนารีสองอันเข้าไว้ด้วยกัน โดยที่ดิกชันนารีมี key และ value เป็นสตริง ฟังก์ชันต้อง return ดิกชันนารีที่มี key เป็นสตริงและ value เป็นลิสต์ของสตริง เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">}</span>
 <span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;dog&#39;</span><span class="p">}</span>
@@ -826,6 +870,24 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combine_dicts</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id13">
+<h3>ข้อ 8 - ใครไม่ส่งการบ้าน<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการส่งงานของนิสิต เก็บอยู่ในดิกชันนารีที่มี key เป็นสตริงที่เก็บชื่อการบ้านทั้งหมด และ value เป็นลิสต์ของสตริงที่เก็บชื่อนิสิตที่ส่งการบ้านชิ้นนั้นแล้ว จงเขียนฟังก์ชันที่ return list ของชื่อนิสิตที่ส่งการบ้านไม่ครบ เช่น</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_missing_work</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; find_missing_work( {&#39;PA1&#39;: [&#39;Bew&#39;, &#39;Mild&#39;, &#39;Nipun&#39;],</span>
+<span class="sd">        &#39;PA2&#39;: [&#39;Mild&#39;, &#39;Bew&#39;, &#39;PP&#39;],</span>
+<span class="sd">        &#39;PA3&#39;: [&#39;Bew&#39;, &#39;Nipun&#39;, &#39;Mild&#39;] } )</span>
+<span class="sd">    [&#39;Nipun&#39;, &#39;PP&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
@@ -879,7 +941,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Object-oriented programming</p>
+        <p class="prev-next-title">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -907,10 +969,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ประมวลผลประโยค 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4 - ประมวลผลประโยค 3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5 - ประมวลผลประโยค 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6 - ประมวลผลประโยค 5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tuples">List of tuples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 1 - หาชื่อเล่นผู้ชาย</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-info-dicts">List of (info) dicts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 1 - ความนิยม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 1 - ความนิยม</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#censorship">ข้อ 2 - Censorship</a></li>
 </ul>
 </li>
@@ -918,10 +985,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-list">ข้อ 1 - Contact List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple-key">ข้อ 2 - Tuple เป็น key</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 4 - เปลี่ยนคีย์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 5 - นับจำนวนนักเรียน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 8 - ใครไม่ส่งการบ้าน</a></li>
 </ul>
 </li>
 </ul>
