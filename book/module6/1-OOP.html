@@ -207,6 +207,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
@@ -437,8 +440,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
 </ul>
 
             </nav>
@@ -530,10 +537,11 @@ document.write(`
 </div>
 <p>อย่างที่สามคือ หากเราใช้ IDE ที่ดี ๆ อย่าง PyCharm หรือ Visual Studio Code หรือปัญญาประดิษฐ์ที่ช่วยในการเขียนโค้ด เช่น GitHub Copilot เครื่องมือเหล่านี้จะช่วยเติมโค้ดให้สมบูรณ์โดยอัตโนมัติได้ เพราะว่าการกำหนดคลาสเป็นส่วนหนึ่งของโค้ดที่ IDE ได้ทำความเข้าใจแล้ว เช่น หากเราพิมพ์ <code class="docutils literal notranslate"><span class="pre">first_word.w</span></code> และ IDE สแกนและทำความเข้าใจเรียบร้อยแล้วว่า <code class="docutils literal notranslate"><span class="pre">first_word</span></code> มาจากคลาส <code class="docutils literal notranslate"><span class="pre">Token</span></code> ซึ่งมีลักษณะประจำชื่อว่า <code class="docutils literal notranslate"><span class="pre">word</span></code> ซึ่งเป็นตัวแแปรเดียวที่ขึ้นต้นด้วย w IDE จึงมีความสามารถที่จะเติมโค้ดให้เราเป็น <code class="docutils literal notranslate"><span class="pre">first_word.word</span></code> โดยอัตโนมัติ</p>
 <p>นอกจากนั้นแล้วหากเราห่างจากโค้ดก้อนนี้ไปนาน ๆ แล้วต้องกลับมาเขียนโค้ดเพิ่ม หรือต้องร่วมงานกับคนอื่นที่ต้องใช้โค้ดร่วมกับเรา เราก็สามารถอ้างอิงไปยังโค้ดที่กำหนดคลาส เพื่อทำความเข้าใจว่าคลาสที่เห็นอยู่เก็บข้อมูลอะไรอยู่บ้าง ซึ่งต่างจากดิกชันนารีที่ไม่มีโค้ดที่กำหนดคีย์ทั้งหมดของดิกชันนารีอย่างเป็นหลักเป็นแหล่งใช้อ้างอิงได้</p>
+<p>ภาษาโปรแกรมที่เป็นภาษาเชิงอ็อบเจกต์ที่เก่าแก่กว่าภาษาไพธอน เช่น จาวา (Java) หรือ ซีพลัสพลัส(C++) จะมีการแบ่งแยกระดับการเข้าถึงตัวแปรชัดเจนว่าคลาสอื่น ๆ สามารถเข้าถึงแปรที่อยู่ในอ็อบเจกต์นี้ได้หรือไม่ (เช่น การใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">public</span></code> <code class="docutils literal notranslate"><span class="pre">private</span></code>และ <code class="docutils literal notranslate"><span class="pre">protected</span></code>) แต่ภาษาไพธอนตัวพื้นแบบที่ไม่ได้ใช้ไลบรารีตัวอื่น ๆ ช่วย ไม่ได้มีการแบ่งแยกระดับการเข้าถึง ทุกคลาส ทุกโปรแกรมสามารถเข้าถึงตัวแปรในอ็อบเจกต์และในคลาสได้ นักเขียนโปรแกรมบางกลุ่มแนะนำว่าให้ใส่ <code class="docutils literal notranslate"><span class="pre">_</span></code> ไปข้างหน้าชื่อตัวแปรเพื่อเป็นการบ่งบอกว่าโปรแกรมอื่น ๆ คลาสอื่น ๆ ไม่ควรจะเข้าถึงตัวแปรตัวนี้โดยตรง แต่ว่าภาษาไพธอนไม่มีการบังคับใช้กฎนี้แต่อย่างใด อย่างมากที่สุด คือ IDE อาจจะมีการเตือนผู้เขียนโปรแกรมอยู่บ้าง</p>
 </section>
 <section id="method">
 <h1>เมท็อด (method)<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h1>
-<p>ก่อนถึงบทนี้เราได้มีการใช้เมท็อดโดยการใช้ <code class="docutils literal notranslate"><span class="pre">.</span></code> มาหลายครั้งแล้ว เพราะว่าทั้งสตริง ทั้งลิสต์ ทั้งดิกชันนารีต่างก็เป็นอ็อบเจกต์ทั้งหมด และเมท็อดเป็นโค้ดที่ใช้ประมวลผลข้อมูลที่อยู่ในอ็อบเจกต์ เพราะฉะนั้นเราจึงถือได้ว่า เมท็อดเป็นฟังก์ชันที่เป็นลักษณะเฉพาะเจาะจงของคลาส เช่น คลาสลิสต์มีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">append</span></code> และ <code class="docutils literal notranslate"><span class="pre">pop</span></code> ซึ่งเป็นเมท็อดที่ใช้ในการปฏิสัมพันธ์กับข้อมูลที่อยู่ในอ็อบเจกต์ที่เป็นลิสต์</p>
+<p>ก่อนถึงบทนี้เราได้มีการใช้เมท็อดโดยการใช้ <code class="docutils literal notranslate"><span class="pre">.</span></code> มาหลายครั้งแล้ว เพราะว่าทั้งสตริง ทั้งลิสต์ ทั้งดิกชันนารีต่างก็เป็นอ็อบเจกต์ทั้งหมด และเมท็อดเป็นโค้ดที่ใช้ประมวลผลข้อมูลที่อยู่ในอ็อบเจกต์ เพราะฉะนั้นเราจึงถือได้ว่า เมท็อดเป็นฟังก์ชันที่เป็นลักษณะเฉพาะเจาะจงของคลาส เช่น ลิสต์มีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">append</span></code> และ <code class="docutils literal notranslate"><span class="pre">pop</span></code> ซึ่งเป็นเมท็อดที่ใช้ในการปฏิสัมพันธ์กับข้อมูลที่อยู่ในอ็อบเจกต์ที่เป็นลิสต์</p>
 <section id="id3">
 <h2>เมท็อดของคลาส<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <p>ในการกำหนดคลาส เราสามารถกำหนดเมท็อดให้คลาสได้ด้วย โดยการใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">def</span></code> ตามด้วยชื่อเมท็อด <code class="docutils literal notranslate"><span class="pre">()</span></code> และ <code class="docutils literal notranslate"><span class="pre">:</span></code> และอาร์กิวเมนต์แรกจะต้องเป็นคีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">self</span></code> ตัวอย่างเช่น</p>
@@ -565,6 +573,129 @@ document.write(`
 </pre></div>
 </div>
 <p>สังเกตว่าเวลาเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.to_plural_form</span></code> เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไป เวลาเราเรียกใช้เมท็อด ไพธอนทราบเองโดยอัตโนมัติว่าเป็นการใช้เมท็อดของอ็อบเจกต์ที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">word</span></code>  และจะส่งอ็อบเจกต์ที่เรียกเมท็อดนี้เข้าไปในอาร์กิวเมนต์แรกของเมท็อด ซึ่งเป็นเหตุผลที่ทำให้เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไปในอาร์กิวเมนต์ของเมท็อดอีก</p>
+</section>
+<section id="constructor">
+<h2>ตัวสร้าง (Constructor)<a class="headerlink" href="#constructor" title="Permalink to this heading">#</a></h2>
+<p>ตัวสร้าง (constructor) คือเมท็อดที่ถูกเรียกทำงานทันทีที่อ็อบเจกต์ถูกสร้างขึ้นมาากคลาสโดยการเรียกชื่อคลาสตามด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> ในภาษาไพธอน เมท็อดตัวสร้างจะต้องมีชื่อเป็น <code class="docutils literal notranslate"><span class="pre">__init__</span></code> ไม่สามารถเป็นชื่ออื่นได้ แต่ว่าเราสามารถกำหนดอาร์กิวเมนต์เองได้ ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">ner</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">is_first</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">lemma</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word</span> <span class="o">=</span> <span class="n">word</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lang</span> <span class="o">=</span> <span class="n">detect_lang</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>ในตัวอย่างด้านบนเรากำหนดเมท็อดตัวสร้างที่จำเป็นต้องใส่อาร์กิวเมนต์หนึ่งตัว นั่นก็คือรูปของคำ และเมท็อดนี้จะกำหนดค่าให้ <code class="docutils literal notranslate"><span class="pre">word</span></code> ในอ็อบเจกต์ที่เรียกเมท็อดนี้ ให้สังเกตว่า <code class="docutils literal notranslate"><span class="pre">word</span></code> ใน <code class="docutils literal notranslate"><span class="pre">__init__</span></code> อ้างถึงค่าที่ผู้ใช้โปรแกรมป้อนเข้ามา แต่ว่า <code class="docutils literal notranslate"><span class="pre">self.word</span></code> อ้างถึงตัวแปรที่อยู่ในอ็อบเจกต์ที่เรียกเมท็อดตัวสร้างนี้ กล่าวคือเราได้สร้างตัวแปรทั้งหมดที่อยู่ในคลาส <code class="docutils literal notranslate"><span class="pre">Token</span></code> เรียบร้อยแล้วได้แก่ <code class="docutils literal notranslate"><span class="pre">word</span></code>, <code class="docutils literal notranslate"><span class="pre">pos</span></code>, <code class="docutils literal notranslate"><span class="pre">ner</span></code>, <code class="docutils literal notranslate"><span class="pre">lang</span></code>, <code class="docutils literal notranslate"><span class="pre">is_first</span></code>, <code class="docutils literal notranslate"><span class="pre">lemma</span></code> เราจึงอ้างถึงตัวแปร <code class="docutils literal notranslate"><span class="pre">self.word</span></code>  จากนั้นตัวสร้างจึงเรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">detect_lang</span></code> (คิดไปก่อนว่าเรามีฟังก์ชันนี้ที่สามารถรับสตริงและคืนค่ารหัสภาษา) เพื่อหาภาษาของคำนั้น ๆ และกำหนดค่าให้ <code class="docutils literal notranslate"><span class="pre">lang</span></code> ซึ่งเป็นตัวแปรในอ็อบเจกต์ที่เรียกเมท็อดนี้</p>
+<p>เนื่องจาก <code class="docutils literal notranslate"><span class="pre">word</span></code> นั้นมีการถูกกำหนดค่าในตัวสร้างอยู่แล้วบางครั้ง เราอาจจะไม่กำหนดตัวแปรไว้ล่วงหน้านอกตัวสร้าง โค้ดอาจจะปรับเป็นดังตัวอย่างข้างล่าง โดยที่ไม่กระทบต่อการนำไปใช้จริง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
+    <span class="c1"># ตัดเอา word ออกไป</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">ner</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">is_first</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">lemma</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word</span> <span class="o">=</span> <span class="n">word</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lang</span> <span class="o">=</span> <span class="n">detect_lang</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ตัวอย่างการใช้เมท็อดตัวสร้างแสดงในโค้ดด้านล่าง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_token</span> <span class="o">=</span> <span class="n">Token</span><span class="p">(</span><span class="s1">&#39;firm&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_token</span><span class="o">.</span><span class="n">lang</span><span class="p">)</span> <span class="c1"># en</span>
+</pre></div>
+</div>
+<p>สังเกตว่าเวลาเราสร้างอ็อบเจกต์ของคลาส <code class="docutils literal notranslate"><span class="pre">Token</span></code> เราใส่อาร์กิวเมนต์ 1 ตัวเพื่อส่งให้กับเมท็อดตัวสร้าง ไม่ใช่สองตัว (<code class="docutils literal notranslate"><span class="pre">self</span></code> และ <code class="docutils literal notranslate"><span class="pre">word</span></code>)</p>
+<p>ในทำนองเดียวกันกับตัวแปรประจำคลาส เมท็อดในภาษาไพธอนไม่มีการแบ่งแยกระดับการเข้าถึง ทุกคลาส ทุกโปรแกรมสามารถเรียกใช้เมท็อดของคลาสอื่น ๆ ได้ และเมท็อดที่เรากำหนดขึ้นมาเองก็สามารถเรียกใช้เมท็อดของคลาสอื่น ๆ ได้เช่นกัน</p>
+</section>
+</section>
+<section id="inheritance">
+<h1>สิ่งสืบทอด (inheritance)<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h1>
+<p>ตอนนี้ทุกคนอาจจะยังไม่ได้เห็นประโยชน์ของการเขียนโปรแกรมเชิงอ็อบเจกต์เท่าไรนัก เพราะว่าเราสามารถใช้ดิกชันนารีแทนคลาสได้ และเขียนโปรแกรมอย่างระมัดระวังไม่ให้เกิดการเข้าถึงข้อมูลผ่านคีย์ที่ไม่ได้มีอยู่ในดิกชันนารี และเราสามารถเขียนฟังก์ชันแทนการเขียนเมท็อดได้ ถ้าหากเราจัดระเบียบโค้ดดี ๆ ก็ทำให้เราหลีกเลี่ยงของผิดพลาดในการเขียนโปรแกรมได้</p>
+<p>การใช้สิ่งสืบทอด (inheritance) เป็นรูปแบบการใช้งาน (feature) ที่ทำให้การเขียนโปรแกรมเชิงอ็อบเจกต์ดูน่าดึงดูดใจมากขึ้น สิ่งสืบทอดเป็นการสืบทอดลักษณะประจำและเมท็อดจากคลาสหนึ่งไปยังอีกคลาสหนึ่ง  ซึ่งทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ คลาสที่เป็นซับคลาส (subclass) สืบทอดเอาลักษณะประจำ (ตัวแปร) และเมท็อด (ฟังก์ชัน) จากคลาสที่เป็นซูเปอร์คลาส (superclass) และซับคลาสสามารถลบล้าง (override) เมท็อดที่สืบทอดมาให้เป็นไปตามต้องการได้ด้วย</p>
+<p>ตัวอย่าง เช่น คลาสที่ชื่อว่าเคาน์เตอร์ (<code class="docutils literal notranslate"><span class="pre">Counter</span></code>) ที่มากับไพธอน เป็นซับคลาสของคลาสที่ชื่อว่าดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) หมายความว่าเคาน์เตอร์มีตัวแปรและเมท็อดของดิกชันนารีทั้งหมด แต่สามารถปรับแก้เมท็อดที่สืบทอดมา และเพิ่มเมท็อดอื่น ๆ เพิ่มเติมเข้าไปได้อีกด้วย เพราะฉะนั้นเราคิดไปก่อนได้เลยว่า <code class="docutils literal notranslate"><span class="pre">Counter</span></code> จะต้องมีเมท็อด <code class="docutils literal notranslate"><span class="pre">items</span></code> <code class="docutils literal notranslate"><span class="pre">keys</span></code> <code class="docutils literal notranslate"><span class="pre">values</span></code> <code class="docutils literal notranslate"><span class="pre">update</span></code> <code class="docutils literal notranslate"><span class="pre">clear</span></code> ฯลฯ นอกจากนั้นแล้วเนื่องจาก <code class="docutils literal notranslate"><span class="pre">Counter</span></code> เป็นซับคลาสจึงมีเมท็อดพิเศษเพิ่มเข้ามาอย่าง <code class="docutils literal notranslate"><span class="pre">most_common</span></code></p>
+<p>การกำหนดให้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">dict</span></code> มีข้อดีคือ ทำให้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ใช้กลไกในการเก็บข้อมูลในลักษณะประจำ และกลไกการเข้าถึงข้อมูลได้เหมือน <code class="docutils literal notranslate"><span class="pre">dict</span></code> ทุกประการ โดยที่ไม่ต้องคัดลอกโค้ดของ <code class="docutils literal notranslate"><span class="pre">dict</span></code> มาทั้งหมด และยังสามารถปรับแก้เมท็อดที่สืบทอดมาได้อีกด้วย เช่น ลบล้างตัวสร้างที่สืบทอดมาเพื่อเปลี่ยนให้ตัวสร้างให้สามารถสร้างจากลิสต์ได้ ลบล้างเมท็อดการค้นหาแวลูจากคีย์เพื่อเปลี่ยนให้คืนค่าเป็น 0 ถ้าหากเรียกใช้คีย์ที่ไม่เคยปรากฏมาก่อน เป็นต้น</p>
+<p>การกำหนดคลาสให้เป็นซับคลาสของอีกคลาสหนึ่งสามารถทำได้ตอนที่เขียนโค้ดส่วนที่กำหนดคลาส โดยใช้คียเวิร์ด <code class="docutils literal notranslate"><span class="pre">class</span></code> ตามด้วยชื่อคลาสและใส่ชื่อซุปเปอร์คลาสในวงเล็บ ตามด้วย <code class="docutils literal notranslate"><span class="pre">:</span></code> เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Counter</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>ไวยากรณ์สำหรับการกำหนดคลาสและซับคลาสคือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ชื่อซับคลาส</span><span class="p">(</span><span class="n">ชื่อซูเปอร์คลาส</span><span class="p">):</span>
+    <span class="n">ย่อหน้า</span>
+    <span class="n">ชื่อลักษณะประจำ</span>
+    <span class="n">ตัวสร้าง</span>
+    <span class="n">เมท็อด</span>
+</pre></div>
+</div>
+<p>ในมุมมองของผู้ใช้คลาส เมื่อผู้ใช้ทราบว่าคลาสที่ใช้เป็นซับคลาสของคลาสอะไร ผู้ใช้ก็จะทราบทันทีว่าคลาสที่ต้องการใช้มีไว้ทำอะไร มีเมท็อดอะไรบ้าง ยกตัวอย่างเช่น  <code class="docutils literal notranslate"><span class="pre">Counter</span></code> และ <code class="docutils literal notranslate"><span class="pre">dict</span></code> หากเราทราบแล้วว่าเคาน์เตอร์เป็นซับคลาสของดิกชันนารี เราสามารถคิดไปก่อนเลยได้ว่าเคาน์เตอร์มีความสามารถทำทุกสิ่งที่ดิกชันนารีสามารถทำได้ แต่ว่าหลังบ้านอาจมีความแตกต่างกัน เช่น ผู้ใช้คลาสเคาน์เตอร์ต้องรู้เพียงแต่ว่าเคาน์เตอร์มีแวลูเป็นตัวเลขเท่านั้น และคีย์ที่ไม่ได้ปรากฏในเคาน์เตอร์จะมีแวลูเป็น 0 เสมอ</p>
+<p>ในมุมมองของนักเขียนโปรแกรม การใช้สิ่งสืบทอดทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ และปรับแก้เฉพาะส่วนที่ต้องการเท่านั้น</p>
+</section>
+<section id="id4">
+<h1>ตัวอย่างการใช้สิ่งสืบทอด<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<p>การเปลี่ยนให้เป็นโทเค็น เป็นกระบวนการแรกในการประมวลผลภาษาธรรมชาติ คือการตัดสตริงของข้อมูลภาษาให้เป็นหน่วยที่ชื่อว่าโทเค็น ซึ่งแปลว่าหน่วยที่เหมาะในการประมวลผล โทเค็นส่วนใหญ่แล้วจะคล้ายคลึงกับคำเป็นส่วนใหญ่ โทเค็นจะเป็นอะไรนั้นขึ้นอยู่กับผู้ที่วิเคราะห์และประมวลผลข้อความที่จะปรับให้โทเค็นเป็นลักษณะอย่างไร</p>
+<p>ตัวอย่างเช่น หากเราต้องการสร้างตัวตัดคำภาษาไทย โดยการใช้รายการคำศัพท์ (vocab list) เป็นเกณฑ์ในการตัด และถ้าหากว่าเราได้รับประโยคที่เราเคยตัดคำมาแล้ว ให้คืนค่าเป็นผลลัพท์เดิม เพื่อความรวดเร็ว เราอาจจะออกแบบคลาส <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer&quot;</span></code> ขึ้นมาดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ThaiTokenizer</span><span class="p">:</span>
+    <span class="n">vocab_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;thai-vocab.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="p">]</span>
+    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">sentence</span><span class="p">]</span>
+        
+        <span class="n">segmented</span> <span class="o">=</span> <span class="n">segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vocab_list</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">sentence</span><span class="p">]</span> <span class="o">=</span> <span class="n">segmented</span>
+        <span class="k">return</span> <span class="n">segmented</span>
+    
+    <span class="k">def</span> <span class="nf">add_more_vocab</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vocab_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>คลาสที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> มีลักษณะประจำทั้งหมด 2 ตัว คือ <code class="docutils literal notranslate"><span class="pre">vocab_list</span></code> และ <code class="docutils literal notranslate"><span class="pre">cache</span></code> และมีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">tokenize</span></code> และ <code class="docutils literal notranslate"><span class="pre">add_more_vocab</span></code> โดย <code class="docutils literal notranslate"><span class="pre">tokenize</span></code> จะใช้ฟังก์ชันที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">segment</span></code> (ไม่ได้ให้โค้ดของฟังก์ชันนี้มา) ในการตัดคำ และ <code class="docutils literal notranslate"><span class="pre">add_more_vocab</span></code> จะใช้ในการเพิ่มคำศัพท์เข้าไปใน <code class="docutils literal notranslate"><span class="pre">vocab_list</span></code> และเมท็อดตัวสร้าง <code class="docutils literal notranslate"><span class="pre">__init__</span></code> จะไม่ทำอะไรเลย</p>
+<p>เมื่อผู้ใช้ต้องการตัดคำสามารถทำได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">ThaiTokenizer</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;สวัสดีครับ&#39;</span><span class="p">))</span> <span class="c1"># [&#39;สวัสดี&#39;, &#39;ครับ&#39;]</span>
+</pre></div>
+</div>
+<p>สมมติว่าเราต้องการสร้างคลาสใหม่ที่มีความสามารถเพิ่มเติม คือสามารถตัดคำที่มีศัพท์ทางการแพทย์ เช่่น ชื่อโรค ชื่อยา อยู่ เพื่อนำไปใช้ประมวลผลเอกสารที่มาจากโรงพยาบาล เราสังเกตว่าคลาสใหม่ที่เราต้องการสร้างนั้นที่จริงจะต้องมีความสามารถทั้งหมดของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> เพียงแต่ว่าต้องมีคำศัพท์เพิ่มเติมใน <code class="docutils literal notranslate"><span class="pre">vocab_list</span></code> เมื่อสังเกตได้ดังนี้ เราควรจะเขียนให้คลาสใหม่นี้เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MedicalThaiTokenizer</span><span class="p">(</span><span class="n">ThaiTokenizer</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drug_name_list</span><span class="p">,</span> <span class="n">disease_name_list</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vocab_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">drug_name_list</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vocab_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">disease_name_list</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drug_name_list</span> <span class="o">=</span> <span class="n">drug_name_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disease_name_list</span> <span class="o">=</span> <span class="n">disease_name_list</span>
+
+    <span class="k">def</span> <span class="nf">contains_medical_terms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token_list</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">token_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">token</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">drug_name_list</span> <span class="ow">or</span> <span class="n">token</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disease_name_list</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างนี้เราทำการลบล้างเมท็อดตัวสร้างของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> ซึ่งสืบทอดมาจากซุปเปอร์คลาส โดยที่เมท็อดตัวสร้างของ <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> จะบังคับให้ผู้ใช้ระบุคำศัพท์ที่เป็นชื่อยา และชื่อโรคเพิ่มเติม ก่อนที่ตัวสร้างจะเพิ่มเข้าไปใน <code class="docutils literal notranslate"><span class="pre">vocab_list</span></code> และเพิ่มตัวแปรที่เป็นลักษณะประจำอีกสองตัว คือ <code class="docutils literal notranslate"><span class="pre">drug_name_list</span></code> และ <code class="docutils literal notranslate"><span class="pre">disease_name_list</span></code> นอกจากนั้นเรายังเพิ่มเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">contains_medical_terms</span></code> ซึ่งจะใช้ในการตรวจสอบว่าประโยคที่เราต้องการตัดคำมีคำที่เป็นชื่อยาหรือชื่อโรคหรือไม่</p>
+<p>เมื่อผู้ใช้ต้องการใช้คลาสใหม่นี้สามารถทำได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">MedicalThaiTokenizer</span><span class="p">([</span><span class="s1">&#39;เพนนิซิลิน&#39;</span><span class="p">,</span> <span class="s1">&#39;แอสไพริน&#39;</span><span class="p">,</span> <span class="s1">&#39;ไวโคดิน&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;เล็บโตสไปโรสิส&#39;</span><span class="p">,</span> <span class="s1">&#39;ไมเกรน&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;เพนนิซิลินเป็นยาที่ใช้ในการรักษาโรคเบาหวาน&#39;</span><span class="p">))</span> <span class="c1"># [&#39;เพนนิซิลิน&#39;, &#39;เป็น&#39;, &#39;ยา&#39;, &#39;ที่&#39;, &#39;ใช้&#39;, &#39;ใน&#39;, &#39;การ&#39;, &#39;รักษา&#39;, &#39;โรค&#39;, &#39;เบาหวาน&#39;]</span>
+</pre></div>
+</div>
+<p>สังเกตว่าในโค้ดที่กำหนดคลาสเราไม่ได้เขียนเลยว่ามีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">tokenize</span></code> เนื่องจาก <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> และ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> มีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">tokenize</span></code> อยู่แล้ว จึงได้รับการสืบทอดลงมาถึง <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> ด้วย</p>
+<p>ถึงแม้สิ่งสืบทอดทำให้สะดวกในการจัดระเบียบและนำโค้ดเก่ามาใช้เป็นระบบ ข้อเสียคือทำให้โค้ดทั้งหมดไม่ได้อยู่ในที่เดียวกัน เช่น ในกรณีข้างต้น ถ้าหากเราต้องการทราบว่า <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> มีเมท็อดอะไรบ้าง เราต้องไปเปิดโค้ดของซุปเปอร์คลาส <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> ทำให้โค้ดกระจัดกระจาย ยากต่อการทำความเข้าใจในบางครั้ง โดยเฉพาะอย่างยิ่งถ้าหากเราไม่ระมัดระวังและทำให้ตระกูลของคลาสมีความซับซ้อนเกินไป เช่น <code class="docutils literal notranslate"><span class="pre">LegalMedicalThaiTokenizer</span></code> เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> ซึ่งเป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> อีกครั้งหนึ่ง เพราะฉะนั้นบางเมท็อดของ <code class="docutils literal notranslate"><span class="pre">LegalMedicalThaiTokenizer</span></code> อาจจะมาจาก</p>
+</section>
+<section id="id5">
+<h1>สรุป<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<p>ผู้เขียนโปรแกรมต้องตัดสินใจออกแบบว่า OOP นั้นเหมาะสมกับโจทย์หรือไม่ เพราะไพธอน ไม่ได้บังคับให้ใช้ OOP ในทุกสถานการณ์แต่ก็มีคุณสมบัติหลักๆ ของ OOP อยู่ ข้อดีของการใช้ OOP คือช่วยให้โค้ดมีความสะอาด และง่ายต่อการอ่าน การแบ่งโปรแกรมเป็นส่วนย่อย ๆ ช่วยให้สามารถจัดการกับความซับซ้อนของโปรแกรมได้ดีขึ้น นอกจากนี้ยังช่วยในเรื่องของการนำโค้ดไปใช้ซ้ำ และการปรับเปลี่ยนโค้ดในอนาคตได้ง่ายขึ้น เพราะการแก้ไขหรือต่อเติมเมท็อดในคลาสหนึ่ง ๆ ไม่จำเป็นต้องกระทบกับส่วนอื่น ๆ ของโปรแกรม</p>
+<p>อย่างไรก็ตาม ข้อเสียของการใช้ OOP คืออาจทำให้โค้ดมีความซับซ้อนเกินความจำเป็นในบางสถานการณ์ การออกแบบที่ไม่ดีอาจนำไปสู่โค้ดที่ยุ่งเหยิง และการอ้างอิงที่ซับซ้อน ซึ่งสามารถทำให้การบำรุงรักษาโค้ดเป็นเรื่องยาก</p>
+<p>การตัดสินใจใช้ OOP ในภาษาไพธอน ควรขึ้นอยู่กับลักษณะของโปรเจกต์และทีมพัฒนา หากโปรเจกต์ต้องอาศัยความยืดหยุ่นในการจัดการกับออบเจกต์และข้อมูล หรือต้องการทำงานร่วมกับโค้ดที่มีอยู่แล้วซึ่งออกแบบมาในแบบ OOP การใช้แนวทางนี้อาจเป็นทางเลือกที่ดี แต่สำหรับโปรเจกต์ที่เรียบง่ายหรือทีมที่ไม่คุ้นเคยกับ OOP อาจพิจารณาใช้วิธีการเขียนโปรแกรมแบบอื่นที่ไพธอนรองรับได้เช่นกัน</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="pythonoop" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -575,7 +706,6 @@ document.write(`
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>เนื่องจากคำในความหมายที่อ้างอิงตามมโนทัศน์ทางภาษาศาสตร์มีคำนิยามเฉพาะซึ่งไม่เหมือนกับโทเค็น</p>
 </aside>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -650,8 +780,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
 </ul>
 
   </nav></div>
