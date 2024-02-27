@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/nlp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน" href="module7/1-intro-NLP.html" />
+    <link rel="next" title="ข้อมูลและภาษาธรรมชาติ" href="module7/1-intro-NLP.html" />
     <link rel="prev" title="โจทย์: Object-Oriented Programming" href="module6/3-exercise-OOP.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -215,7 +215,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Natural Language Processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module7/1-intro-NLP.html">ข้อมูลและภาษาธรรมชาติ</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
@@ -439,10 +442,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="natural-language-processing">
 <h1>Natural Language Processing<a class="headerlink" href="#natural-language-processing" title="Permalink to this heading">#</a></h1>
-<p>การประมวลผลภาษาธรรมชาติ การใช้เครื่องประมวลผลข้อมูลภาษาไทยเพื่อการจัดระเบียบข้อมูล และการทำให้เครื่องเข้าใจภาษา</p>
+<p>ข้อมูลที่เป็นข้อความเป็นแหล่งของข้อมูลที่ทั้งมีความสำคัญ และมีความท้าทายในการวิเคราะห์ ข้อมูลที่เป็นข้อความเป็นผลมาจากแพลตฟอร์มต่าง ๆ ที่คนสามารถพิมพ์ลงไปได้อย่างอิสระ เช่น โซเชียลมีเดีย หรือมาจากองค์กรที่ต้องประกาศหรือมีการแถลงการณ์เรื่องผลประกอบการ กฏระเบียบ หรือมาจากหนังสือ สิ่งพิมพ์ ข้อมูลจากแหล่งเหล่านี้มีปริมาณมากและมีประโยชน์มากหากเราสามารถวิเคราะห์ได้โดยอัตโนมัติเพื่อทำความเข้าใจพฤติกรรม ความคิดเห็นของคน หรือนำมาเป็นแอพพลิเคชันที่มีสามารถเข้าใจภาษามนุษย์ได้ เทคโนโลยีที่ใช้ในการวิเคราะห์ภาษาโดยอัตโนมัติเรียกว่า การประมวลภาษาธรรมชาติ (Natural Language Processing) หรือ NLP ซึ่งเป็นสาขาหนึ่งของปัญญาประดิษฐ์ ในบทนี้เราจะพูดถึงหลักการและวิธีการใช้เครื่องมือต่าง ๆ ทางด้าน NLP ที่เราสามารถเข้าถึงได้ง่ายจากคอมพิวเตอร์ส่วนตัวในปัจจุบัน</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7/1-intro-NLP.html">ข้อมูลและภาษาธรรมชาติ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7/1-intro-NLP.html#id2">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7/1-intro-NLP.html#id3">การใช้ไลบรารี</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module7/1-intro-NLP.html#default-argument">Default argument</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
@@ -497,7 +503,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</p>
+        <p class="prev-next-title">ข้อมูลและภาษาธรรมชาติ</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

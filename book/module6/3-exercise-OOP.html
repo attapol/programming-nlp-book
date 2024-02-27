@@ -215,7 +215,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">ข้อมูลและภาษาธรรมชาติ</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
@@ -437,6 +440,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6</a></li>
 </ul>
             </nav>
         </div>
@@ -532,6 +539,193 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="id3">
+<h2>ข้อ 3<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>สมมติว่าเรามีคลาสชื่อ <code class="docutils literal notranslate"><span class="pre">Library</span></code> และ <code class="docutils literal notranslate"><span class="pre">Book</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Library</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">books</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> added to the library.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">lend_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book_title</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="n">book_title</span> <span class="ow">and</span> <span class="n">book</span><span class="o">.</span><span class="n">available</span><span class="p">:</span>
+                <span class="n">book</span><span class="o">.</span><span class="n">available</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> lent from the library.&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book not available for lending.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">collect_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book_title</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="n">book_title</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">book</span><span class="o">.</span><span class="n">available</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+                <span class="n">book</span><span class="o">.</span><span class="n">available</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> collected back to the library.&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book not found or already available in the library.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Books available in the library:&quot;</span><span class="p">)</span>
+          <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+              <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No books available in the library.&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Book</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">available</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>จากโค้ดข้างล่างนี้ให้ลองคิดว่า แต่ละบรรทัดจะ print อะไรออกมาบ้าง หรือว่ามันจะเกิด error แทน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arts_library</span> <span class="o">=</span> <span class="n">Library</span><span class="p">()</span>
+
+<span class="n">book1</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;ภาษาศาสตร์เบื้องต้น&quot;</span><span class="p">)</span>
+<span class="n">book2</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;ปรัชญาทั่วไป&quot;</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book1</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book2</span><span class="p">)</span>
+
+<span class="n">arts_library</span><span class="o">.</span><span class="n">lend_book</span><span class="p">(</span><span class="s2">&quot;ภาษาศาสตร์เบื้องต้น&quot;</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">lend_book</span><span class="p">(</span><span class="s2">&quot;ภาษาศาสตร์เบื้องต้น&quot;</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">collect_book</span><span class="p">(</span><span class="s2">&quot;ภาษาศาสตร์เบื้องต้น&quot;</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">lend_book</span><span class="p">(</span><span class="s2">&quot;Machine Learning Basics&quot;</span><span class="p">)</span>
+<span class="n">arts_library</span><span class="o">.</span><span class="n">report</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>ข้อ 4<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>สมมติว่าเรามีคลาสชื่อ <code class="docutils literal notranslate"><span class="pre">BankAccount</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+        
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">account_number</span><span class="p">,</span> <span class="n">initial_balance</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">account_number</span> <span class="o">=</span> <span class="n">account_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">initial_balance</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span>
+
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Withdrawal successful.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insufficient funds. Withdrawal not allowed.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+</pre></div>
+</div>
+<p>จากโค้ดข้างล่างนี้ให้ลองคิดว่า แต่ละบรรทัดจะ print อะไรออกมาบ้าง หรือว่ามันจะเกิด error แทน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">account1</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="mi">12345</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">account1</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">account1</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">account1</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">700</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current balance:&quot;</span><span class="p">,</span> <span class="n">account1</span><span class="o">.</span><span class="n">get_balance</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>ข้อ 5<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>สมมติว่าเรามีคลาสชื่อ <code class="docutils literal notranslate"><span class="pre">StudentRecord</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StudentRecord</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">roll_number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">roll_number</span> <span class="o">=</span> <span class="n">roll_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_course</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Course &#39;</span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s2">&#39; added to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s record.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">drop_course</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">course</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Course &#39;</span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s2">&#39; dropped from </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s record.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Course &#39;</span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s2">&#39; not found in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s record.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">view_courses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Courses enrolled by </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">course</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No courses enrolled by </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>จากโค้ดข้างล่างนี้ให้ลองคิดว่า แต่ละบรรทัดจะ print อะไรออกมาบ้าง หรือว่ามันจะเกิด error แทน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student1</span> <span class="o">=</span> <span class="n">StudentRecord</span><span class="p">(</span><span class="s2">&quot;เอเรน&quot;</span><span class="p">,</span> <span class="s2">&quot;S001&quot;</span><span class="p">)</span>
+<span class="n">student2</span> <span class="o">=</span> <span class="n">StudentRecord</span><span class="p">(</span><span class="s2">&quot;มิคาสะ&quot;</span><span class="p">,</span> <span class="s2">&quot;S002&quot;</span><span class="p">)</span>
+<span class="n">student3</span> <span class="o">=</span> <span class="n">StudentRecord</span><span class="p">(</span><span class="s2">&quot;อามิน&quot;</span><span class="p">,</span> <span class="s2">&quot;S003&quot;</span><span class="p">)</span>
+
+
+<span class="n">student1</span><span class="o">.</span><span class="n">add_course</span><span class="p">(</span><span class="s2">&quot;NLP_SYSTEM&quot;</span><span class="p">)</span>
+<span class="n">student2</span><span class="o">.</span><span class="n">add_course</span><span class="p">(</span><span class="s2">&quot;USE_IN_DE_INF_WRK&quot;</span><span class="p">)</span>
+
+<span class="n">student1</span><span class="o">.</span><span class="n">view_courses</span><span class="p">()</span>
+
+<span class="n">student1</span><span class="o">.</span><span class="n">drop_course</span><span class="p">(</span><span class="s2">&quot;NLP_SYSTEM&quot;</span><span class="p">)</span>
+<span class="n">student1</span><span class="o">.</span><span class="n">drop_course</span><span class="p">(</span><span class="s2">&quot;WEB_DES_DEV&quot;</span><span class="p">)</span>
+
+
+<span class="n">student1</span><span class="o">.</span><span class="n">view_courses</span><span class="p">()</span>
+<span class="n">student2</span><span class="o">.</span><span class="n">view_courses</span><span class="p">()</span>
+<span class="n">student3</span><span class="o">.</span><span class="n">view_courses</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>ข้อ 6<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>สมมติว่าเรามีคลาสชื่อ <code class="docutils literal notranslate"><span class="pre">SocialMediaProfile</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SocialMediaProfile</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">bio</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">followers</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bio</span> <span class="o">=</span> <span class="n">bio</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">followers</span> <span class="o">=</span> <span class="n">followers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">posts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mentioned_organizations</span> <span class="o">=</span> <span class="p">{}</span>
+ 
+    <span class="k">def</span> <span class="nf">add_post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">post_content</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">post_content</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extract_and_track_organizations</span><span class="p">(</span><span class="n">post_content</span><span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">num_posts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">posts</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">extract_and_track_organizations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="n">organizations</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;XYZ Corp&#39;</span><span class="p">,</span> <span class="s1">&#39;ABC Company&#39;</span><span class="p">,</span> <span class="s1">&#39;Tech Inc&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">org</span> <span class="ow">in</span> <span class="n">organizations</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">org</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mentioned_organizations</span><span class="p">[</span><span class="n">org</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mentioned_organizations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">org</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">get_mentioned_organizations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mentioned_organizations</span>
+</pre></div>
+</div>
+<p>จากโค้ดข้างล่างนี้ให้ลองคิดว่า แต่ละบรรทัดจะ print อะไรออกมาบ้าง หรือว่ามันจะเกิด error แทน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">profile1</span> <span class="o">=</span> <span class="n">SocialMediaProfile</span><span class="p">(</span><span class="s1">&#39;user1&#39;</span><span class="p">,</span> <span class="n">bio</span><span class="o">=</span><span class="s1">&#39;I love technology!&#39;</span><span class="p">,</span> <span class="n">followers</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">profile2</span> <span class="o">=</span> <span class="n">SocialMediaProfile</span><span class="p">(</span><span class="s1">&#39;user2&#39;</span><span class="p">,</span> <span class="n">bio</span><span class="o">=</span><span class="s1">&#39;Foodie | Traveler&#39;</span><span class="p">,</span> <span class="n">followers</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">profile2</span><span class="o">.</span><span class="n">bio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">profile1</span><span class="o">.</span><span class="n">add_post</span><span class="p">)</span>
+
+<span class="n">profile1</span><span class="o">.</span><span class="n">add_post</span><span class="p">(</span><span class="s1">&#39;Just got a new job at XYZ Corp!&#39;</span><span class="p">)</span>
+<span class="n">profile1</span><span class="o">.</span><span class="n">add_post</span><span class="p">(</span><span class="s1">&#39;Excited to join the team at ABC Company!&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">profile1</span><span class="o">.</span><span class="n">num_posts</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">profile2</span><span class="o">.</span><span class="n">num_posts</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">profile1</span><span class="o">.</span><span class="n">get_mentioned_organizations</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -603,6 +797,10 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อ 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 6</a></li>
 </ul>
   </nav></div>
 

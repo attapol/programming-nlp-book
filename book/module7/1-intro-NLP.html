@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน &#8212; Programming for NLP</title>
+    <title>ข้อมูลและภาษาธรรมชาติ &#8212; Programming for NLP</title>
   
   
   
@@ -215,7 +215,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../nlp.html">Natural Language Processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ข้อมูลและภาษาธรรมชาติ</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
@@ -425,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</h1>
+    <h1>ข้อมูลและภาษาธรรมชาติ</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,13 +438,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การใช้ไลบรารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างที่ 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ข้อมูลและภาษาธรรมชาติ</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -452,11 +458,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>Under construction</p>
+  <section id="id1">
+<h1>ข้อมูลและภาษาธรรมชาติ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>ข้อมูลจัดเป็นทรัพยากรที่มีค่ามหาศาล ในปัจจุบันเกือบทุกบริษัท ทุกองค์กรทั้งภาครัฐและเอกชน ต่างเก็บข้อมูลต่าง ๆ ที่เกี่ยวกับการดำเนินธุรกิจ หรือบริหารงานทุกประเภท เช่น เมื่อเราเข้าร้านสะดวกซื้อ หรือห้างสรรพสินค้า พนักงานมักจะถามหาหมายเลขสมาชิก หรือเบอร์โทรศัพท์ เพื่อเก็บข้อมูลการซื้อของลูกค้าตลอดระยะเวลาที่ยังเป็นลูกค้าอยู่ สิ่งที่บริษัทต้องการได้คือข้อมูลของลูกค้า ถึงแม้ว่าจะต้องแลกมากลับการให้ส่วนลด หรือให้่ลูกค้าแลกแต้มเพื่อได้ของสมมนาคุณต่าง ๆ ข้อมูลเหล่านี้ทำให้บริษัทได้ศึกษาพฤติกรรมของลูกค้า ทำให้เลือกสินค้ามาขายได้ถูกใจลูกค้ามากขึ้น ได้ออกกิจกรรมส่งเสริมการขายได้ตรงใจลูกค้ามากขึ้น และทำให้สามารถลูกค้าออกมาได้เป็นกลุ่ม (เช่น กลุ่มที่เป็นลูกค้าใหม่ กลุ่มที่ซื้อไม่บ่อยแต่ซื้อเยอะ กลุ่มที่ซื้อสม่ำเสมอ เป็นต้น) เพื่อสามารถให้บริการลูกค้าได้ดีขึ้น ลูกค้ามีความพึงพอใจมากขึ้น และเพิ่มยอดขายได้มากขึ้น</p>
+<p>ข้อมูลอีกประเภทที่กำลังเป็นที่นิยมมากขึ้น คือข้อมูลตัวอักษร (text data) ซึ่งได้มาจากแพลตฟอร์มโซเชียลมีเดีย แพลตฟอร์มการซื้อขายออนไลน์ หรือการทำสำรวจความคิดเห็นที่มีคำถามปลายเปิด ข้อมูลเหล่านี้มีหลากมิติกว่าข้อมูลที่เป็นเชิงปริมาณ หรือข้อมูลที่เป็นตัวเลข เนื่องจากผู้ที่ให้ข้อมูลสามารถแสดงความเห็นได้อย่างอิสระ ทำให้ได้คำตอบที่หลากหลาย เมื่อนำมาวิเคราะห์ทำให้เกิดความรู้เชิงประจักษ์ (insight) ที่สามารถนำไปปรับใช้กับองค์กรหรือธุรกิจได้ ตัวอย่างเช่น บริษัทสามารถดึงข้อมูลรีวิวความเห็นของลูกค้าที่ได้ซื้อสินค้าจากแพลตฟอร์มการซื้อขายออนไลน์ที่บริษัทไปเปิดร้านไว้ แล้วนำข้อมูลนี้ไปวิเคราะห์ว่าลูกค้าชอบอะไรหรือไม่ชอบอะไรเกี่ยวกับผลิตภัณฑ์ของเรา หรือลูกค้าชอบอะไรเกี่ยวกับผลิตภัณฑ์ที่ทำโดยบริษัทคู่แข่ง ทำให้เกิดความรู้เชิงประจักษ์ที่สามารถนำไปพัฒนาผลิตภัณฑ์ให้ตอบโจทย์ของผู้บริโภคได้ดีขึ้น และพัฒนากระบวนการการสั่งซื้อของและส่งของให้ลูกค้าให้มีประสิทธิภาพมากขึ้น</p>
+<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (Data Science) เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (Computer Science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคโนโลยีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา</p>
+<p>นอกจากนั้นการประมวลผลภาษาธรรมชาติ เป็นเทคโนโลยีที่เป็นสันหลังของแอพพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติได้ ตัวอย่างเช่น Google Translate เป็นแอพพลิเคชันทำหน้าที่แปลภาษาโดยอาศัยแบบจำลองทางภาษาที่เข้าใจทั้งภาษาต้นทางที่ต้องการแปลและภาษาปลายทาง หรือแอพพลิเคชัน ChatGPT ที่สามารถทำหน้าที่ทางภาษาได้อย่างหลากหลาย ไม่ว่าจะเป็นการสรุปข่าว การแต่งนิยาย การปรับแก้ภาษาให้สละสลวยไร้ข้อผิดพลาด การตอบคำถามที่เป็นปลายเปิด การให้คำปรึกษาเรื่องต่าง ๆ หรือแอพพลินเคชัน Google Search เองที่สามารถทำความเข้าใจสิ่งที่ผู้ใช้ต้องการค้นหา โดยพิจารณาจากคำค้นที่ผู้ใช้พิมพ์เข้ามาในกล่อง และทำความเข้าใจเว็บไซต์ทุกเว็บไซต์ และเลือกมาเฉพาะเว็บไซต์ที่ตอบสนองโจทย์ความต้องการทางข้อมูลของผู้ใช้ตามที่ได้ระบุมาในคำค้น</p>
+</section>
 <section id="id2">
-<h2>การใช้ไลบรารี<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h1>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>ี</p>
+</section>
+<section id="id3">
+<h1>การใช้ไลบรารี<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
 <p>เรามักจะใช้ไลบรารีที่เปิดให้ใช้ฟรี และใช้คำสั่งบน terminal <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> เพื่อติดตั้งลงบนเครื่อง เราควรตรวจสอบว่าเราติดตั้งถูก environment หรือไม่ ถ้าหากใช้บน Colab เราจะต้องติดตั้งไลบรารีที่ต้องการใช้ทุกครั้งที่เปิด Colab ขึ้นมาใช้งาน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -464,7 +478,7 @@ document.write(`
 </aside>
 </section>
 <section id="default-argument">
-<h2>Default argument<a class="headerlink" href="#default-argument" title="Permalink to this heading">#</a></h2>
+<h1>Default argument<a class="headerlink" href="#default-argument" title="Permalink to this heading">#</a></h1>
 <p>Default argument เป็น argument ที่เรามีค่า default ให้อยู่แล้วจะใส่เองหรือไม่ใส่เองก็ได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_volume</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span> <span class="o">*</span> <span class="n">height</span>
@@ -484,8 +498,8 @@ document.write(`
 ข้อดี คือเราสามารถปรับวิธีการใช้งาน function นั้นได้เยอะ
 ข้อเสีย คือกว่าจะใช้ได้ต้องเอาค่า argument มาใส่ให้ครบซึ่งทำให้ใช้งานไม่สะดวก และบางทีก็ลืมว่าต้องใส่อะไรบ้าง ลำดับอะไรมาก่อนมาหลัง</p>
 <p>วิธีแก้คือใช้ default argument คือใส่ค่า default ไปให้ก่อนเลย แล้วถ้าอยากปรับอะไรก็แก้โดยการใช้ keyword argument ระบุไปเลยว่าอยากจะแก้ค่า argument ตัวไหน โดยไม่ต้องสนใจลำดับที่เรียงอยู่บนฟังก์ชัน</p>
-<section id="id3">
-<h3>ตัวอย่างที่ 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h2>ตัวอย่างที่ 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <p>เวลาเราเรียกใช้ split เรามักจะไม่ใช้ argument อะไรเลย เพราะว่า default มันกำหนดมาให้แล้วแต่ว่าจะปรับเป็นอย่างอื่นก็ได้ ดังนี้</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> เราระบุได้ว่าจะใช้อะไรเป็นตัวคั่นกลางในการ split</p></li>
@@ -504,8 +518,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id4">
-<h3>ตัวอย่างที่ 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h2>ตัวอย่างที่ 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <p>library nltk มี documentation บอกว่าให้ใช้ฟังก์ชันนี้ในการตัดข้อความให้เป็น list ของประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nltk.tokenize.sent_tokenize(text, language=&#39;english&#39;)
 
@@ -528,7 +542,6 @@ language – the model name in the Punkt corpus
 <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">()</span> <span class="c1"># ไม่ได้ เพราะว่าไม่ได้ระบุ required argument</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -599,13 +612,16 @@ language – the model name in the Punkt corpus
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การใช้ไลบรารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างที่ 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ข้อมูลและภาษาธรรมชาติ</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
+
   </nav></div>
 
 </div></div>
