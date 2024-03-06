@@ -452,10 +452,10 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การใช้ไลบรารี</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
@@ -705,7 +705,7 @@ document.write(`
 </tbody>
 </table>
 <p>จากตัวอย่างข้างต้น จะเห็นได้ว่าการตัดคำต้องอาศัยเกณฑ์ทางความหมาย เพื่อตัดสินว่าสตริงที่มีสตริงย่อยเป็นคำ (เช่น <em>ตัด|ใจ</em> หรือ <em>ตัด|หญ้า</em>)
-เป็นกลุ่มคำ หรือคำเดี่ยว  หากว่าความหมายไม่ได้ต่างจากการนำคำย่อยมารวมกันให้จัดว่าเป็นกลุ่มคำ ตัวอย่างเช่น คำว่า <em>ตัดหญ้า</em> มีความหมายจากคำกริยา <em>ตัด</em> รวมกับคำนามที่เป็นกรรม <em>หญ้า</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำสองคำมาอยู่ใกล้กันเป็นกลุ่มคำ ในขณะที่คำว่า <em>ตัดใจ</em> มีความหมายว่า เลิกคิด  และไม่ได้มาจากการนำคำย่อย <em>ตัด</em> และ <em>ใจ</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำเดี่ยว [&#64;aroonmanakun2007thoughts]</p>
+เป็นกลุ่มคำ หรือคำเดี่ยว  หากว่าความหมายไม่ได้ต่างจากการนำคำย่อยมารวมกันให้จัดว่าเป็นกลุ่มคำ ตัวอย่างเช่น คำว่า <em>ตัดหญ้า</em> มีความหมายจากคำกริยา <em>ตัด</em> รวมกับคำนามที่เป็นกรรม <em>หญ้า</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำสองคำมาอยู่ใกล้กันเป็นกลุ่มคำ ในขณะที่คำว่า <em>ตัดใจ</em> มีความหมายว่า เลิกคิด  และไม่ได้มาจากการนำคำย่อย <em>ตัด</em> และ <em>ใจ</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำเดี่ยว <span id="id7">[]</span></p>
 <div class="note admonition">
 <p class="admonition-title">คำถามชวนคิด</p>
 <p>จากกรณีให้ลองคิดว่ากรณีใดบ้างที่เป็นคำ กรณีใดบ้างที่เป็นกลุ่มคำ</p>
@@ -753,8 +753,8 @@ document.write(`
 <h1>การแปลด้วยเครื่อง (machine translation)<a class="headerlink" href="#machine-translation" title="Permalink to this heading">#</a></h1>
 <p><em>under construction</em></p>
 </section>
-<section id="id7">
-<h1>การใช้ไลบรารี<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
+<section id="id8">
+<h1>การใช้ไลบรารี<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h1>
 <p>เรามักจะใช้ไลบรารีที่เปิดให้ใช้ฟรี และใช้คำสั่งบน terminal <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> เพื่อติดตั้งลงบนเครื่อง เราควรตรวจสอบว่าเราติดตั้งถูก environment หรือไม่ ถ้าหากใช้บน Colab เราจะต้องติดตั้งไลบรารีที่ต้องการใช้ทุกครั้งที่เปิด Colab ขึ้นมาใช้งาน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -782,8 +782,8 @@ document.write(`
 ข้อดี คือเราสามารถปรับวิธีการใช้งาน function นั้นได้เยอะ
 ข้อเสีย คือกว่าจะใช้ได้ต้องเอาค่า argument มาใส่ให้ครบซึ่งทำให้ใช้งานไม่สะดวก และบางทีก็ลืมว่าต้องใส่อะไรบ้าง ลำดับอะไรมาก่อนมาหลัง</p>
 <p>วิธีแก้คือใช้ default argument คือใส่ค่า default ไปให้ก่อนเลย แล้วถ้าอยากปรับอะไรก็แก้โดยการใช้ keyword argument ระบุไปเลยว่าอยากจะแก้ค่า argument ตัวไหน โดยไม่ต้องสนใจลำดับที่เรียงอยู่บนฟังก์ชัน</p>
-<section id="id8">
-<h2>ตัวอย่างที่ 1<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<section id="id9">
+<h2>ตัวอย่างที่ 1<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <p>เวลาเราเรียกใช้ split เรามักจะไม่ใช้ argument อะไรเลย เพราะว่า default มันกำหนดมาให้แล้วแต่ว่าจะปรับเป็นอย่างอื่นก็ได้ ดังนี้</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> เราระบุได้ว่าจะใช้อะไรเป็นตัวคั่นกลางในการ split</p></li>
@@ -802,8 +802,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id9">
-<h2>ตัวอย่างที่ 2<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h2>ตัวอย่างที่ 2<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <p>library nltk มี documentation บอกว่าให้ใช้ฟังก์ชันนี้ในการตัดข้อความให้เป็น list ของประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nltk.tokenize.sent_tokenize(text, language=&#39;english&#39;)
 
@@ -826,7 +826,7 @@ language – the model name in the Punkt corpus
 <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">()</span> <span class="c1"># ไม่ได้ เพราะว่าไม่ได้ระบุ required argument</span>
 </pre></div>
 </div>
-</section>
+<span class="target" id="id11"></span></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -910,10 +910,10 @@ language – the model name in the Punkt corpus
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การใช้ไลบรารี</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
