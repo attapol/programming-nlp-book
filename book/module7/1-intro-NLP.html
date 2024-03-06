@@ -219,6 +219,12 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-workshop-text-processing.html">Workshop - การประมวลผลข้อความ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
@@ -439,11 +445,23 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ข้อมูลและภาษาธรรมชาติ</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">หลักการของการประมวลผลภาษาธรรมชาติ</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">การทำความสะอาดข้อมูล (Data cleaning)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงให้เป็นโทเค็น (tokenization)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-based-analysis">การวิเคราะห์โดยอาศัยความถี่ (frequency-based analysis)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การใช้ไลบรารี</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
@@ -461,26 +479,288 @@ document.write(`
   <section id="id1">
 <h1>ข้อมูลและภาษาธรรมชาติ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>ข้อมูลจัดเป็นทรัพยากรที่มีค่ามหาศาล ในปัจจุบันเกือบทุกบริษัท ทุกองค์กรทั้งภาครัฐและเอกชน ต่างเก็บข้อมูลต่าง ๆ ที่เกี่ยวกับการดำเนินธุรกิจ หรือบริหารงานทุกประเภท เช่น เมื่อเราเข้าร้านสะดวกซื้อ หรือห้างสรรพสินค้า พนักงานมักจะถามหาหมายเลขสมาชิก หรือเบอร์โทรศัพท์ เพื่อเก็บข้อมูลการซื้อของลูกค้าตลอดระยะเวลาที่ยังเป็นลูกค้าอยู่ สิ่งที่บริษัทต้องการได้คือข้อมูลของลูกค้า ถึงแม้ว่าจะต้องแลกมากลับการให้ส่วนลด หรือให้่ลูกค้าแลกแต้มเพื่อได้ของสมมนาคุณต่าง ๆ ข้อมูลเหล่านี้ทำให้บริษัทได้ศึกษาพฤติกรรมของลูกค้า ทำให้เลือกสินค้ามาขายได้ถูกใจลูกค้ามากขึ้น ได้ออกกิจกรรมส่งเสริมการขายได้ตรงใจลูกค้ามากขึ้น และทำให้สามารถลูกค้าออกมาได้เป็นกลุ่ม (เช่น กลุ่มที่เป็นลูกค้าใหม่ กลุ่มที่ซื้อไม่บ่อยแต่ซื้อเยอะ กลุ่มที่ซื้อสม่ำเสมอ เป็นต้น) เพื่อสามารถให้บริการลูกค้าได้ดีขึ้น ลูกค้ามีความพึงพอใจมากขึ้น และเพิ่มยอดขายได้มากขึ้น</p>
-<p>ข้อมูลอีกประเภทที่กำลังเป็นที่นิยมมากขึ้น คือข้อมูลตัวอักษร (text data) ซึ่งได้มาจากแพลตฟอร์มโซเชียลมีเดีย แพลตฟอร์มการซื้อขายออนไลน์ หรือการทำสำรวจความคิดเห็นที่มีคำถามปลายเปิด ข้อมูลเหล่านี้มีหลากมิติกว่าข้อมูลที่เป็นเชิงปริมาณ หรือข้อมูลที่เป็นตัวเลข เนื่องจากผู้ที่ให้ข้อมูลสามารถแสดงความเห็นได้อย่างอิสระ ทำให้ได้คำตอบที่หลากหลาย เมื่อนำมาวิเคราะห์ทำให้เกิดความรู้เชิงประจักษ์ (insight) ที่สามารถนำไปปรับใช้กับองค์กรหรือธุรกิจได้ ตัวอย่างเช่น บริษัทสามารถดึงข้อมูลรีวิวความเห็นของลูกค้าที่ได้ซื้อสินค้าจากแพลตฟอร์มการซื้อขายออนไลน์ที่บริษัทไปเปิดร้านไว้ แล้วนำข้อมูลนี้ไปวิเคราะห์ว่าลูกค้าชอบอะไรหรือไม่ชอบอะไรเกี่ยวกับผลิตภัณฑ์ของเรา หรือลูกค้าชอบอะไรเกี่ยวกับผลิตภัณฑ์ที่ทำโดยบริษัทคู่แข่ง ทำให้เกิดความรู้เชิงประจักษ์ที่สามารถนำไปพัฒนาผลิตภัณฑ์ให้ตอบโจทย์ของผู้บริโภคได้ดีขึ้น และพัฒนากระบวนการการสั่งซื้อของและส่งของให้ลูกค้าให้มีประสิทธิภาพมากขึ้น</p>
-<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (Data Science) เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (Computer Science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคโนโลยีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา</p>
+<p>ข้อมูลอีกประเภทที่กำลังเป็นที่นิยมมากขึ้น คือข้อมูลตัวอักษร (text data) ซึ่งได้มาจากแพลตฟอร์มสื่อสังคมออนไลน์ แพลตฟอร์มการซื้อขายออนไลน์ หรือการทำสำรวจความคิดเห็นที่มีคำถามปลายเปิด ข้อมูลเหล่านี้มีหลากมิติกว่าข้อมูลที่เป็นเชิงปริมาณ หรือข้อมูลที่เป็นตัวเลข เนื่องจากผู้ที่ให้ข้อมูลสามารถแสดงความเห็นได้อย่างอิสระ ทำให้ได้คำตอบที่หลากหลาย เมื่อนำมาวิเคราะห์ทำให้เกิดความรู้เชิงประจักษ์ที่เอื้อต่อการดำเนินการต่อ (actionable insight) ที่สามารถนำไปปรับใช้กับองค์กรหรือธุรกิจได้ ตัวอย่างเช่น บริษัทสามารถดึงข้อมูลรีวิวความเห็นของลูกค้าที่ได้ซื้อสินค้าจากแพลตฟอร์มการซื้อขายออนไลน์ที่บริษัทไปเปิดร้านไว้ แล้วนำข้อมูลนี้ไปวิเคราะห์ว่าลูกค้าชอบอะไรหรือไม่ชอบอะไรเกี่ยวกับผลิตภัณฑ์ของเรา หรือลูกค้าชอบอะไรเกี่ยวกับผลิตภัณฑ์ที่ทำโดยบริษัทคู่แข่ง ทำให้เกิดความรู้เชิงประจักษ์ที่สามารถนำไปพัฒนาผลิตภัณฑ์ให้ตอบโจทย์ของผู้บริโภคได้ดีขึ้น และพัฒนากระบวนการการสั่งซื้อของและส่งของให้ลูกค้าให้มีประสิทธิภาพมากขึ้น</p>
+<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (data science หรือ data analytics)  เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (computer science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคโนโลยีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา เมื่อนำมาประกอบกับการวิเคราะห์ข้อมูลเพื่อพัฒนาธุรกิจ เราจะเรียกว่าการวิเคราะห์ข้อความ (text analytics)</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>วิทยาการข้อมูล (data science) คือสหศาสตร์ที่ใช้วิธีการทางสถิติ การคำนวณด้วยเครื่องคอมพิวเตอร์ แบบจำลอง และอัลกอริธึมในการสกัดความรู้เชิงประจักษ์จากข้อมูลที่อาจจะมีสิ่งรบกวน หรือจัดเก็บอย่างไม่เป็นระเบียบ</p>
+</aside>
 <p>นอกจากนั้นการประมวลผลภาษาธรรมชาติ เป็นเทคโนโลยีที่เป็นสันหลังของแอพพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติได้ ตัวอย่างเช่น Google Translate เป็นแอพพลิเคชันทำหน้าที่แปลภาษาโดยอาศัยแบบจำลองทางภาษาที่เข้าใจทั้งภาษาต้นทางที่ต้องการแปลและภาษาปลายทาง หรือแอพพลิเคชัน ChatGPT ที่สามารถทำหน้าที่ทางภาษาได้อย่างหลากหลาย ไม่ว่าจะเป็นการสรุปข่าว การแต่งนิยาย การปรับแก้ภาษาให้สละสลวยไร้ข้อผิดพลาด การตอบคำถามที่เป็นปลายเปิด การให้คำปรึกษาเรื่องต่าง ๆ หรือแอพพลินเคชัน Google Search เองที่สามารถทำความเข้าใจสิ่งที่ผู้ใช้ต้องการค้นหา โดยพิจารณาจากคำค้นที่ผู้ใช้พิมพ์เข้ามาในกล่อง และทำความเข้าใจเว็บไซต์ทุกเว็บไซต์ และเลือกมาเฉพาะเว็บไซต์ที่ตอบสนองโจทย์ความต้องการทางข้อมูลของผู้ใช้ตามที่ได้ระบุมาในคำค้น</p>
+<p>สรุปคือการประยุกต์ใช้ NLP สามารถนำไปใช้ประโยชน์ได้อย่างน้อย 2 ทาง คือ</p>
+<ol class="arabic simple">
+<li><p>เครื่องมือ text analytics ที่สกัดความรู้เชิงประจักษ์</p></li>
+<li><p>เทคโนโลยีหลังบ้านของแอพพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติ</p></li>
+</ol>
 </section>
 <section id="id2">
-<h1>การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<h1>หลักการของการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>ข้อมูลตัวอักษรมักจะเก็บอยู่ในรูปของสตริง หรือเก็บอยู่ในโครงสร้างข้อมูลที่เก็บสตริงอยู่ เช่น ลิสต์ของสตริง ข้อมูลเมื่อรวบรวมมาอยู่ในชุดเดียวกัน เราเรียกว่าชุดข้อมูล (dataset) เช่น ชุดข้อมูลทวิตเตอร์ที่เก็บมาจากแฮชแท็กหนึ่งจากช่วงเวลาหนึ่ง ชุดข้อมูลข่าวต่างประเทศจากหนังสือพิมพ์ไทยออนไลน์จากช่วงเวลาหนึ่ง เป็นต้น ชุดข้อมูลชุดหนึ่งประกอบด้วย ข้อมูลหลาย ๆ แถว (row) หรือเรียกอีกอย่างหนึ่งได้ว่า ระเบียน หรือเรคคอร์ด (record) เช่น ชุดข้อมูลทวิตเตอร์มีข้อมูลอยู่ 50,000 แถว ซึ่งก็คือ 50,000 ทวีต หรือชุดข้อมูลข่าวมีข้อมูลอยู่ 10,000 แถว ซึ่งก็คือ 10,000 บทความ</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ชุดข้อมูล (dataset) คือ ชุดของข้อมูลที่มาจากแหล่งเดียวกัน หรือมีลักษณะอื่น ๆ คล้ายกัน และถูกจัดเก็บอยู่ในลักษณะที่พอจะใช้เครื่องในการประมวลผลได้</p>
+<p>แถว (row) คือ ข้อมูลหน่วยหนึ่งในชุดข้อมูล</p>
+</aside>
+<p>ข้อมูลแต่ละแถวที่อยู่ในชุดข้อมูลเป็นเพียงสตริง ซึ่งตัวสตริงเองนั้นไม่ได้มีความหมายอะไรในตัวมันเอง  เป็นเพียงรูปแบบการเก็บข้อมูลในรูปแบบดิจิทัลที่นำตัวอักษรมาร้อยเรียงกัน เราจึงเรียกข้อมูลตัวอักษรว่า ข้อมูลแบบไม่มีโครงสร้าง (unstructured data)  การที่จะทำให้เครื่องคอมพิวเตอร์สามารถเข้าใจความหมายได้จำเป็นต้องใช้ทฤษฎีทางด้านภาษาศาสตร์เข้ามาช่วยทำให้สตริงมีโครงสร้างมากขึ้น</p>
+<p>ภาษาศาสตร์ เป็นศาสตร์ที่วิเคราะห์ภาษาออกเป็นโครงสร้างย่อย ๆ เช่น ประโยค กลุ่มคำ คำ พยางค์ เสียงพยัญชนะ เสียงสระ หน่วยคำ เพื่อโยงโครงสร้างต่าง ๆ เข้ากับลักษณะทางภาษาทุกด้าน การประยุกต์ใช้ NLP อาศัยการวิเคราะห์ส่วนย่อย ๆ ของภาษา และโครงสร้างของภาษากับความหมาย เช่น ถ้าหากเราต้องการทราบว่าข้อมูลทวิตเตอร์ที่ติดแฮชแท็กชื่อสินค้าของบริษัทเรา พูดถึงสินค้าเราในแง่บวกหรือลบ โปรแกรมอาจจะต้องตรวจหาว่า</p>
 <ul class="simple">
-<li><p>Tokenization</p></li>
-<li><p>Frequency-based analysis</p></li>
-<li><p>Part-of-speech tagging</p></li>
-<li><p>Named entity recognition</p></li>
-<li><p>Sentiment analysis</p></li>
-<li><p>Topic modeling</p></li>
-<li><p>Text classification</p></li>
-<li><p>Machine translation</p></li>
-<li><p>Large language model</p></li>
+<li><p>คำใดบ้างที่ใช้ในการพูดถึงสินค้าของเรา หรือสินค้าของคู่แข่ง</p></li>
+<li><p>คำใดบ้าง และกลุ่มคำใดบ้างที่ใช้ในการสื่อความหมายในแง่บวก แง่ลบ</p></li>
+<li><p>คำใดบ้างที่ใช้เพื่อบ่งบอกว่าข้อความนั้นไม่ได้มีความคิดเห็นแฝงอยู่ แต่อาจจะเป็นการให้ข้อมูลอย่างเป็นกลางเท่านั้น</p></li>
+<li><p>ลักษณะประโยคแบบใดที่แสดงให้เห็นถึงน้ำเสียงแบบประชดประชัน หรือล้อเล่น</p></li>
+<li><p>การรีทวีทตอบโต้กันระหว่างผู้ใช้บนแพลตฟอร์ม แสดงถึงความคิดเห็นของลูกค้าต่อสินค้าของเราอย่างไร</p></li>
+<li><p>ลักษณะทางภาษาใดบ้าง ทำให้เราทราบถึงอายุ เพศ ถิ่นที่อยู่ของลูกค้าได้</p></li>
 </ul>
 </section>
+<section id="data-cleaning">
+<h1>การทำความสะอาดข้อมูล (Data cleaning)<a class="headerlink" href="#data-cleaning" title="Permalink to this heading">#</a></h1>
+<p>ขั้นตอนแรกของการประมวลผลข้อมูล คือ การทำความสะอาดข้อมูล ข้อมูลที่เราได้รับมามักจะไม่สะอาด มีรอยเปื้อน มีความผิดปกติอยู่ ถ้าหากเราไม่ทำความสะอาดดี ๆ ให้มีความเพี้ยนน้อยลง ให้เหลือเฉพาะส่วนที่เราต้องการวิเคราะห์ การทำความสะอาดข้อมูลไม่ได้มีสูตรสำเร็จตายตัว เราต้องปรับกระบวนการให้เข้ากับจุดประสงค์ของการวิเคราะห์ ดังกรณีตัวอย่างต่อไปนี้</p>
 <section id="id3">
-<h1>การใช้ไลบรารี<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
+<h2>ตัวอย่างการทำความสะอาดข้อมูล 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>RT &#64;MatichonOnline: “บิ๊กตู่”ลั่นรบ.ทำอะไรยึดกม.ไม่ใช่ติดคุกแล้วหนี เล่นมุกพรรคร่วม “พลังปชป.ภูมิใจไทย” <a class="reference external" href="https://t.co/9nmOBJnhrq">https://t.co/9nmOBJnhrq</a> via &#64;มติชนอ…</p>
+</div></blockquote>
+<p>ตัวอย่างข้างบนนี้มีข้อมูลหลายส่วนที่ไม่ใช่ข้อความที่เราต้องการวิเคราะห์ ได้แก่</p>
+<ul class="simple">
+<li><p>RT &#64;MatichonOnline ซึ่งหมายถึงการรีทวิตข่าวจาก MatichonOnline</p></li>
+<li><p>ลิงก์ <a class="reference external" href="https://t.co/9nmOBJnhrq">https://t.co/9nmOBJnhrq</a> ซึ่งเป็นลิงก์ที่เชื่อมไปยังเว็บไซต์ที่นำเสนอข่าวฉบับเต็มอยู่</p></li>
+<li><p>via &#64;มติชนอ… ซึ่งเป็นการบอกว่าลิงก์ที่นำไปสู่เว็บไซนต์ของมติชน</p></li>
+</ul>
+<p>เราจึงจำเป็นต้องเขียนโค้ดเพื่อใช้ regular expression ในการสกัดเอาข้อมูลส่วนที่เราไม่ต้องการออกไป ให้เหลือเพียงแค่</p>
+<blockquote>
+<div><p>“บิ๊กตู่”ลั่นรบ.ทำอะไรยึดกม.ไม่ใช่ติดคุกแล้วหนี เล่นมุกพรรคร่วม “พลังปชป.ภูมิใจไทย”</p>
+</div></blockquote>
+<p>ถ้าเราเก็บข้อมูลที่ยังไม่ได้ทำความสะอาดใส่ตัวแปรชื่อว่า <code class="docutils literal notranslate"><span class="pre">tweet</span></code> เราสามารถเขียนโค้ดในการทำความสะอาดได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="s1">&#39;RT @MatichonOnline: “บิ๊กตู่”ลั่นรบ.ทำอะไรยึดกม.ไม่ใช่ติดคุกแล้วหนี เล่นมุกพรรคร่วม “พลังปชป.ภูมิใจไทย” https://t.co/9nmOBJnhrq via @มติชนอ…&#39;</span>
+<span class="c1"># Remove RT @username</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;RT @\w+: &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+<span class="c1"># Remove URL that begins with http</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https?://\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+<span class="c1"># Remove via @username</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; via @\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ซึ่งเราอาจจะรวมเป็นฟังก์ชันที่ทำให้เราใช้งานกับทวีตอื่น ๆ ได้ด้วย ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
+    <span class="c1"># Remove RT @username</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;RT @\w+: &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+    <span class="c1"># Remove URL that begins with http</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https?://\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+    <span class="c1"># Remove via @username</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; via @\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tweet</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>ตัวอย่างการทำความสะอาดข้อมูล 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>บกพร่องโดยสุจริต VS อยู่-ไม่-เป็น | ขยี้คดีโกง | 10 พ.ย. 62 | (3/3) <a class="reference external" href="https://t.co/atUF6PrXdx">https://t.co/atUF6PrXdx</a> via &#64;YouTube</p>
+</div></blockquote>
+<p>ตัวอย่างข้างต้นนี้มีข้อมูลที่เราไม่ต้องการอยู่ด้วยหลายส่วน ได้แก่</p>
+<ul class="simple">
+<li><p>(3/3) ซึ่งหมายถึง ทวีตนี้เป็นทวีตที่ 3 ในชุดทวีตทั้งหมด 3 ทวีต</p></li>
+<li><p>ลิงก์ <a class="reference external" href="https://t.co/atUF6PrXdx">https://t.co/atUF6PrXdx</a> ซึ่งเป็นลิงก์ที่เชื่อมไปยังวีดีโอที่อยู่บน YouTube</p></li>
+<li><p>via &#64;YouTube ซึ่งเป็นการบอกว่าลิงก์ที่นำไปสู่วีดีโอนั้นอยู่บนแพลตฟอร์ม YouTube</p></li>
+</ul>
+<p>ในกรณีนี้จะเห็นว่าข้อมูลที่เราได้มาไม่สมบูรณ์ เนื่องจากเป็นทวีีตเป็นทวีตต่อเนื่องจากสองทวีตก่อนหน้า ผู้วิเคราะห์อาจจะเลือกไม่วิเคราะห์ทวีตที่มีความต่อเนื่องกันในลักษณะนี้ หรือไม่่เช่นนั้นต้องเตรียมข้อมูลให้เรียงลำดับตามการทวีตและเชื่อมทวีตเข้าไว้ด้วยกัน เช่น สมมติว่าเรามีข้อมูลลิสต์ของทวีต เราสามารถเขียนโค้ดเพื่อรวมทวีตที่มีการต่อเนื่องกัน เอาไว้ด้วยกันได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">merge_tweet_in_sequence</span><span class="p">(</span><span class="n">tweet_list_time_sorted</span><span class="p">):</span>
+    <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span> 
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweet_list_time_sorted</span><span class="p">)):</span>
+        <span class="c1"># if tweet contains (1/x), merge this tweet with the next x tweets</span>
+        <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\(1/(\d)\)&#39;</span><span class="p">)</span>
+        <span class="n">tweet</span> <span class="o">=</span> <span class="n">tweet_list_time_sorted</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">patt</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="n">num_tweets</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">merged_tweet</span> <span class="o">=</span> <span class="n">clean_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_tweets</span><span class="p">):</span>
+                <span class="n">merged_tweet</span> <span class="o">+=</span> <span class="n">clean_tweet</span><span class="p">(</span><span class="n">tweet_list_time_sorted</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="p">])</span>
+            <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">merged_tweet</span><span class="p">)</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="n">num_tweets</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet_list_time_sorted</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">merged_tweet</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>ตัวอย่างการทำความสะอาดข้อมูล 3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>ขอไห้นึกถึงการท่องเที่ยวภายภาคหน้าด้วยคะ</p>
+</div></blockquote>
+<p>ตัวอย่างข้างต้นนี้มีการสะกดผิดสองจุด ได้แก่</p>
+<ul class="simple">
+<li><p>การใช้คำว่า ขอไห้ แทนคำว่า ขอให้</p></li>
+<li><p>การใช้คำว่า คะ แทนคำว่า ค่ะ</p></li>
+</ul>
+<p>โดยทั่วไปแล้วเรามักจะไม่แก้การสะกดผิด เพราะส่วนใหญ่แล้วเรามักจะวิเคราะห์ข้อมูลที่มีขนาดค่อนข้างใหญ่ ใหญ่เกินที่จะให้มนุษย์วิเคราะห์เองได้ทันท่วงที วิธีทางสถิติหรือการใช้โมเดลทางภาษาอาศัยการจับแพทเทิร์นต่าง ๆ ที่อยู่ในข้อมูล การสะกดผิดตามสถิติแล้วมักจะเกิดขึ้นไม่มาก เมื่อเทียบกับส่วนของข้อมูลที่สะกดถูกตามหลักพจนานุกรม หรือตามความนิยมในช่วงเวลานั้น ทำให้ส่วนใหญ่แล้วมักจะไม่ต้องกังวลว่าการวิเคราะห์จะผิดเพี้ยนเนื่องจากมีคำที่สะกดผิดอยู่
+อีกเหตุผลหนึ่งที่เรามักจะตัดสินใจไม่แก้ไขคำที่สะกดผิดก่อนวิเคราะห์ข้อมูล คือ เราไม่มีโปรแกรมที่สามารถแก้ไขการสะกดผิดได้อย่างแม่นยำพอ เครื่องตรวจตัวสะกด (spellchecker) มีความแม่นยำระดับหนึ่ง แต่ก็มีโอกาสที่จะแก้ไขส่วนที่ผิดให้ผิดไปอีกแบบหนึ่ง หรือเปลี่ยนส่วนที่ถูกอยู่แล้วให้เป็นผิด  และเมื่อการวิเคราะห์ออกมาแปลกหรือผิดเพี้ยนจากที่สิ่งที่เราคาดการณ์ไว้ ทำให้เกิดเป็นอีกขั้นตอนหนึ่งที่เราต้องมาตรวจสอบว่า ความผิดเพี้ยนนั้นเกิดจากเครื่องตรวจตัวสะกดที่เราเลือกมาใช้หรือไม่</p>
+</section>
+<section id="id6">
+<h2>ตัวอย่างการทำความสะอาดข้อมูล 4<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>ชาล็อตพาร์ทแบบนี้จึ้งเว่อ น้องเก่งมาก มืออาชีพสุดๆ ขนาดพี่ในกองส่งเสียงชมไม่หยุด สวยมาก ดีมากกกกกก
+#ENGLOTshootingTvcWinkwhite
+&#64;itscharlotty
+(ที่มา: Twitter &#64;vanitcheryl วันที่ 2 มีนาคม 2567)</p>
+</div></blockquote>
+<p>ในโลกโซเชียลเรามักจะพบภาษาไม่ได้เป็นไปตามมาตรฐาน ในตัวอย่างนี้เราพบลักษณะของภาษาโซเชียลหลายจุด ได้แก่</p>
+<ul class="simple">
+<li><p>การใช้ไทยคำอังกฤษคำ เช่น <em>พาร์ท</em></p></li>
+<li><p>การใช้คำแสลง เช่น <em>จึ้ง</em> <em>เว่อ</em></p></li>
+<li><p>การสะกดแบบไม่มาตรฐาน เช่น <em>มากกกกกก</em></p></li>
+</ul>
+<p>ตามหลักภาษาศาสตร์แล้ว ภาษาที่เป็นมาตรฐานเป็นภาษาที่มีคนกลุ่มใดกลุ่มหนึ่งในสังคมเป็นคนกำหนดมาว่าเป็นมาตรฐาน คนกลุ่มนั้นมักจะเป็นกลุ่มคนที่มีสถานะทางสังคมและเศรษฐกิจสูง คนกลุ่มนี้มักจะกระทำการใด ๆ ให้สังคมยอมรับว่ารูปแบบภาษาที่ตนตั้งขึ้นมานั้นเป็นภาษาสำหรับคนที่ได้รับการยอมรับนับถือจากสังคมด้วยวิธีต่าง ๆ ในมุมมองของนักภาษาศาสตร์เห็นว่าเป็นการปะทะสังสรรค์ระหว่างปัจจัยทางสังคม และรูปแบบของภาษา การศึกษาภาษาในบริบทของสังคมและวัฒนธรรม เรียกว่า ภาษาศาสตร์สังคม (sociolinguistics) จากแง่มุมนี้ภาษาเป็นเพียงเครื่องมือที่ใช้ในการสื่อสาร และทุกภาษาต่างมีแบบแผนของตัวมันเอง การตีค่าว่ารูปแบบภาษาใด ภาษาหนึ่ง หรือภาษาใด ภาษาหนึ่งนั้นดีกว่าอีกภาษาหนึ่งนั้น ล้วนแต่เป็นสิ่งที่ถูกสร้างขึ้นโดยสังคม (social construct)</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ภาษาศาสตร์สังคม (sociolinguistics) คือการศึกษาเกี่ยวกับผลกระทบของปัจจัยทางสังคม (เช่น บรรทัดฐาน สถานะทางสังคม และบริบททางวัฒนธรรม) ต่อวิธีการใช้ภาษา</p>
+</aside>
+<p>หากเราต้องการวิเคราะห์ข้อมูลที่มาจากโลกโซเชียลมักจะไม่มีความจำเป็นใด ๆ ที่จะต้องแก้ภาษาให้เป็นมาตรฐาน เนื่องจากภาษาในโลกโซเชียลปรากฏเป็นแพทเทิร์นของมันเอง วิธีทางสถิติและแบบจำลองทางภาษาอาศัยการหาแพทเทิร์นที่เกิดขึ้นซ้ำ ๆ อยู่แล้ว เช่น คำว่า <em>จึ้ง</em> ปรากฏอยู่ถึง 6.7 ล้านครั้ง และ คำว่า <em>เว่อ</em> ปรากฏอยู่ถึง 18.7 ล้านครั้ง เมื่อลองค้นหาคำเหล่านี้บนกูเกิ้ล (วันที่ 2 มีนาคม 2567) ซึ่งแสดงให้เห็นว่าสองคำนี้กลายเป็นส่วนหนึ่งของภาษาแล้ว สังคมบนโลกอินเตอร์เน็ตยอมรับและนำไปใช้ต่ออย่างแพร่หลายในขณะนั้น</p>
+<p>ส่วนคำว่า <em>มากกกกกก</em> เราอาจจะทำความสะอาดให้เหลือ ก เพียงตัวเดียว เพราะคนแต่ละคนอาจจะใช้จำนวนตัว ก ไม่เท่ากัน ทำให้เครื่องมือตรวจจับได้ยากว่าใช้คำว่า <em>มาก</em> ไปแล้วกี่ครั้ง กระบวนการนี้เราเรียกว่าการเปลี่ยนให้เป็นมาตรฐาน (normalization) สำหรับภาษาไทยเรามักจะใช้กฎง่าย ๆ ในการเปลี่ยนให้เป็นมาตรฐาน โดยการตรวจจับว่ามีตัวอักษรเดียวกัน ตั้งแต่สามตัวขึ้นไปหรือไม่ ถ้ามีให้ทำให้เหลือตัวเดียว ซึ่งสามารถทำโดยใช้ regular expression ดังตัวอย่างโค้ดดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
+    <span class="c1"># ถ้าเจอ [ก-์] สามตัวขึ้นไป ทำให้เหลือตัวเดียว</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;([ก-์])\1{2,}&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tweet</span>
+</pre></div>
+</div>
+<p>คำอธิบาย regular expression ที่ใช้ในโค้ดด้านบนคือ</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">([ก-์])</span></code> หมายถึง ตัวอักษรไทยที่อยู่ในช่วง ก ถึง ์ และเก็บไว้ในกลุ่มที่ 1 (เครื่องหมายวงเล็บคู่แรก)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\1{2,}</span></code> หมายถึง อ้างกลับถึงตัวอักษรที่อยู่ในกลุ่มที่หนึ่ง (<code class="docutils literal notranslate"><span class="pre">\1</span></code>) ตรวจว่าเจอตั้งแต่ 2 ตัวขึ้นไปหรือไม่ (<code class="docutils literal notranslate"><span class="pre">{2,}</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r'\1'</span></code> หมายถึง ตัวอักษรที่ตรวจพบและเก็บอยู่ในกลุ่มที่ 1</p></li>
+</ul>
+<p>ตัวอย่างการใช้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;คิดถึงงงงงมากกกกก&#39;</span><span class="p">)</span> <span class="c1"># คิดถึงมาก</span>
+</pre></div>
+</div>
+<p>ขั้นตอนสุดท้ายของการทำความสะอาดข้อมูลคือ การกำจัดตัวซ้ำ (deduplication) โดยทั่วไปแล้วข้อมูลแต่ละชิ้นมักจะไม่ซ้ำกัน ชุดข้อมูลทีมาจากทวิตเตอร์อาจจะมีซ้ำกันบ้าง เมื่อผู้ใช้รีทวีตผู้ใช้อีกคนหนึ่ง เมื่อนำข้อความ <em>RT &#64;</em> ตามด้วยชื่อผู้ใช้ออกไปแล้ว ก็จะเหลือเพียงข้อความที่เหมือนกับเจ้าของทวีต ถ้าในชุดข้อมูลมีทวีตที่ถูกรีทวีตบ่อย ๆ ก่อให้เกิดแถวที่มีข้อมูลซ้ำ ๆ กันมากมาย ทำให้ค่าสถิติของคำถูกบิดเบือนไป เพราะฉะนั้นเราจึงจำเป็นต้องนำข้อมูลที่ซ้ำออกไป วิธีการที่ง่ายที่สุดคือใช้เซตในการเก็บข้อมูลที่เคยเจอแล้ว ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deduplicate</span><span class="p">(</span><span class="n">tweet_list</span><span class="p">):</span>
+    <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">deduplicated_tweet_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tweet</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+            <span class="n">deduplicated_tweet_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">deduplicated_tweet_list</span>
+</pre></div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>การกำจัดตัวซ้ำ (deduplication) คือ การตรวจหาแถวที่มีข้อมูลซ้ำกันแล้วลบทิ้งไป ให้เหลือเพียงแค่แถวที่ไม่ซ้ำกันเท่านั้น</p>
+</aside>
+<p>เมื่อรวมโค้ดทั้งหมดเข้าด้วยกัน จะได้ฟังก์ชันที่ทำความสะอาดข้อมูลทวีตได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cleaned_normalized_tweets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">clean_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="n">cleaned_normalized_tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">deduplicate</span><span class="p">(</span><span class="n">cleaned_normalized_tweets</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>หรืออาจจะรวมกันเป็นฟังก์ชันเดียวกันได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_normalize_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">clean_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tweet</span>
+
+<span class="n">merged_tweet_list</span> <span class="o">=</span> <span class="n">merge_tweet_in_sequence</span><span class="p">(</span><span class="n">tweet_list</span><span class="p">)</span>
+<span class="n">cleaned_normalized_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">clean_normalize_tweet</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span> <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">merged_tweet_list</span><span class="p">]</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">deduplicate</span><span class="p">(</span><span class="n">cleaned_normalized_tweets</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ทั้งนี้เราจะเห็นว่าเราต้องใช้ 4 ฟังก์ชันในการประมวลผลทำความสะอาดข้อมูล <code class="docutils literal notranslate"><span class="pre">merge_tweet_in_sequence</span></code>, <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code>, <code class="docutils literal notranslate"><span class="pre">normalize</span></code>, และ <code class="docutils literal notranslate"><span class="pre">deduplicate</span></code><br />
+ซึ่งการแยกออกมาเป็น 4 ฟังก์ชันนั้นมีข้อดีคือทำให้เราปรับแก้เป็นส่วน ๆ ไปได้ ถ้าหากว่าเราต้องการปรับวิธีการทำความสะอาดข้อมูลให้นำเอาแฮชแท็กออกไปด้วย เราสามารถเพิ่มขั้นตอนนี้เข้าไปใน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> หรือเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_hashtag</span></code> และเรียกใช้ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> อีกชั้นหนึ่งก็ได้ ขึ้นอยู่กับการตัดสินใจของผู้เขียนโปรแกรมว่าแบบใดเข้าใจง่ายกว่า</p>
+</section>
+</section>
+<section id="tokenization">
+<h1>การแปลงให้เป็นโทเค็น (tokenization)<a class="headerlink" href="#tokenization" title="Permalink to this heading">#</a></h1>
+<p>ขั้นตอนต่อจากการทำความสะอาดข้อมูล คือ การแปลงให้เป็นโทเค็น (tokenization) กระบวนการนี้เป็นกระบวนพิเศษสำหรับการเตรียมข้อมูลจากชุดข้อมูลที่เป็นตัวอักษร
+โทเค็น คือ หน่วยที่เล็กที่สุดที่ใช้ในการวิเคราะห์ หน่วยที่เล็กที่สุดที่ใช้ในการวิเคราะห์ข้อมูลตัวอักษรคืออะไร โดยทั่วไปแล้วผู้วิเคราะห์ข้อมูลสามารถกำหนดได้ว่าอยากให้โทเค็นเป็นอะไร ส่วนมากเราจะอ้างอิงหลักการการวิเคราะห์ภาษาจากภาษาศาสตร์ คือใช้คำเป็นโทเค็นในการวิเคราะห์ความหมายของประโยค คำ ในเชิงภาษาศาสตร์ คำ คือ หน่วยที่เล็กที่สุดของภาษาที่ยังคงสื่อความหมายได้ด้วยตัวเอง  ตัวอย่างเช่น</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>ข้อความ</p></th>
+<th class="head"><p>เป็นคำหรือไม่</p></th>
+<th class="head"><p>เหตุผล</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>สวัสดีครับ</p></td>
+<td><p>ไม่ใช่</p></td>
+<td><p>เป็นกลุ่มคำที่มีสองคำอยู่ <em>สวัสดี</em> และ <em>ครับ</em> ต่างเป็นคำที่สื่อความหมายด้วยตัวเอง</p></td>
+</tr>
+<tr class="row-odd"><td><p>ตัดหญ้า</p></td>
+<td><p>ไม่ใช่</p></td>
+<td><p>เป็นกลุ่มคำที่มีสองคำอยู่ <em>ตัด</em> และ <em>หญ้า</em> ต่างเป็นคำที่สื่อความหมายด้วยตัวเอง ความหมายของ <em>ตัดหญ้า</em> มาจากการรวมความหมายของคำสองคำ</p></td>
+</tr>
+<tr class="row-even"><td><p>ตัดใจ</p></td>
+<td><p>ใช่</p></td>
+<td><p>เป็นคำที่สื่อความหมายด้วยตัวเอง และไม่ใช่การประกอบความหมายของ <em>ตัด</em> และ <em>ใจ</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>คิดถึง</p></td>
+<td><p>ใช่</p></td>
+<td><p>เป็นคำเดียวกันที่สื่อความหมายด้วยตัวเอง และไม่ใช่การประกอบความหมายของ <em>คิด</em> และ <em>ถึง</em></p></td>
+</tr>
+<tr class="row-even"><td><p>เดินทาง</p></td>
+<td><p>ใช่</p></td>
+<td><p>เป็นคำเดียวกันที่สื่อความหมายด้วยตัวเอง และไม่ใช่การประกอบความหมายของ <em>เดิน</em> และ <em>ทาง</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>จากตัวอย่างข้างต้น จะเห็นได้ว่าการตัดคำต้องอาศัยเกณฑ์ทางความหมาย เพื่อตัดสินว่าสตริงที่มีสตริงย่อยเป็นคำ (เช่น <em>ตัด|ใจ</em> หรือ <em>ตัด|หญ้า</em>)
+เป็นกลุ่มคำ หรือคำเดี่ยว  หากว่าความหมายไม่ได้ต่างจากการนำคำย่อยมารวมกันให้จัดว่าเป็นกลุ่มคำ ตัวอย่างเช่น คำว่า <em>ตัดหญ้า</em> มีความหมายจากคำกริยา <em>ตัด</em> รวมกับคำนามที่เป็นกรรม <em>หญ้า</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำสองคำมาอยู่ใกล้กันเป็นกลุ่มคำ ในขณะที่คำว่า <em>ตัดใจ</em> มีความหมายว่า เลิกคิด  และไม่ได้มาจากการนำคำย่อย <em>ตัด</em> และ <em>ใจ</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำเดี่ยว [&#64;aroonmanakun2007thoughts]</p>
+<div class="note admonition">
+<p class="admonition-title">คำถามชวนคิด</p>
+<p>จากกรณีให้ลองคิดว่ากรณีใดบ้างที่เป็นคำ กรณีใดบ้างที่เป็นกลุ่มคำ</p>
+<ul class="simple">
+<li><p><em>ตู้เย็น</em></p></li>
+<li><p><em>ตะกร้าผ้า</em></p></li>
+<li><p><em>ขวดแก้ว</em></p></li>
+<li><p><em>หมอฟัน</em></p></li>
+</ul>
+<p><em>เฉลย</em></p>
+<ul class="simple">
+<li><p><em>ตู้เย็น</em> เป็นคำเดี่ยว เพราะว่าความหมายคือ เครื่องใช้ไฟฟ้าที่ทำความเย็น ซึ่งห่างจากความหมายของคำย่อย <em>ตู้</em> และ <em>เย็น</em></p></li>
+<li><p><em>ตะกร้าผ้า</em> เป็นกลุ่มคำ เพราะว่าความหมายคือ ตะกร้าที่ใช้ใส่ผ้า ซึ่งมาจากการนำคำย่อย <em>ตะกร้า</em> และ <em>ผ้า</em> มารวมกัน</p></li>
+<li><p><em>ขวดแก้ว</em> เป็นกลุ่มคำ เพราะว่าความหมายคือ ขวดที่ทำจากแก้ว ซึ่งมาจากการนำคำย่อย <em>ขวด</em> และ <em>แก้ว</em> มารวมกัน</p></li>
+<li><p><em>หมอฟัน</em> เป็นกลุ่มคำ เพราะว่าความหมายคือ ผู้เชี่ยวชาญที่ทำงานเฉพาะทางที่เกี่ยวกับฟัน ซึ่งมาจากการนำคำย่อย <em>หมอ</em> และ <em>ฟัน</em> มารวมกัน สามารถใช้หลักคิดนี้ได้กับ <em>หมอตา</em> <em>หมอผี</em> <em>หมอกระดูก</em></p></li>
+</ul>
+</div>
+<p>ในบางกรณีการพิจารณาว่าอะไรจัดเป็นคำ อะไรจัดเป็นกลุ่มคำ เป็นเรื่องที่ไม่ชัดเจนสักทีเดียว อาจจะทำให้เกิดการถกเถียงว่าความหมายโดยรวมเกิดจากการนำความหมายของสองคำย่อยมารวมกันหรือไม่ ในกรณีดังกล่าว เรามักจะตัดให้สั้นที่สุด เพื่อทำให้เกิดความเข้าใจที่ตรงกัน และถ้าหากหลักการวิเคราะห์เปลี่ยนไปเรายังสามารถนำคำที่ตัดไปแล้วมารวมกันใหม่ได้</p>
+<p>ด้วยหลักการนี้เรามักจะใช้คำเป็นหน่วยในการวิเคราะห์ความหมายของข้อความ การเปลี่ยนสตริงให้เป็นลิสต์ของคำ เรียกว่า การตัดคำ (word segmentation) ดังนั้นเรามักจะเรียกกระบวนการแปลงให้เป็นโทเค็น ว่าการตัดคำ ถึงแม้ที่จริงแล้วการแปลงให้เป็นโทเค็นเป็นมโนทัศน์ที่กว้างกว่าการตัดคำ  เพราะเราสามารถกำหนดให้โทเค็นเป็นอะไรก็ได้ ไม่จำเป็นต้องเป็นคำเท่านั้น</p>
+<p>การตัดคำโดยอัตโนมัติสามารถทำด้วย 3 วิธีใหญ่ ๆ ได้แก่</p>
+<ol class="arabic simple">
+<li><p>การตัดคำโดยอาศัยกฎเกณฑ์ (rule-based word segmentation)</p></li>
+<li><p>การตัดคำโดยอาศัยพจนานุกรม (dictionary-based word segmentation)</p></li>
+<li><p>การตัดคำโดยอาศัยการเรียนรู้ด้วยเครื่อง (machine-learning-based word segmentation)</p></li>
+</ol>
+<p>การแปลงให้เป็นโทเค็น คือ การเปลี่ยนสตริงให้กลายเป็นลิสต์ของโทเค็น</p>
+<ul class="simple">
+<li><p>Part-of-speech tagging</p></li>
+<li><p>Named entity recognition</p></li>
+</ul>
+</section>
+<section id="frequency-based-analysis">
+<h1>การวิเคราะห์โดยอาศัยความถี่ (frequency-based analysis)<a class="headerlink" href="#frequency-based-analysis" title="Permalink to this heading">#</a></h1>
+<p><em>under construction</em></p>
+</section>
+<section id="sentiment-analysis">
+<h1>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h1>
+<p><em>under construction</em></p>
+</section>
+<section id="topic-model">
+<h1>แบบจำลองหัวข้อ (topic model)<a class="headerlink" href="#topic-model" title="Permalink to this heading">#</a></h1>
+<p><em>under construction</em></p>
+</section>
+<section id="machine-translation">
+<h1>การแปลด้วยเครื่อง (machine translation)<a class="headerlink" href="#machine-translation" title="Permalink to this heading">#</a></h1>
+<p><em>under construction</em></p>
+</section>
+<section id="id7">
+<h1>การใช้ไลบรารี<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
 <p>เรามักจะใช้ไลบรารีที่เปิดให้ใช้ฟรี และใช้คำสั่งบน terminal <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> เพื่อติดตั้งลงบนเครื่อง เราควรตรวจสอบว่าเราติดตั้งถูก environment หรือไม่ ถ้าหากใช้บน Colab เราจะต้องติดตั้งไลบรารีที่ต้องการใช้ทุกครั้งที่เปิด Colab ขึ้นมาใช้งาน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -508,8 +788,8 @@ document.write(`
 ข้อดี คือเราสามารถปรับวิธีการใช้งาน function นั้นได้เยอะ
 ข้อเสีย คือกว่าจะใช้ได้ต้องเอาค่า argument มาใส่ให้ครบซึ่งทำให้ใช้งานไม่สะดวก และบางทีก็ลืมว่าต้องใส่อะไรบ้าง ลำดับอะไรมาก่อนมาหลัง</p>
 <p>วิธีแก้คือใช้ default argument คือใส่ค่า default ไปให้ก่อนเลย แล้วถ้าอยากปรับอะไรก็แก้โดยการใช้ keyword argument ระบุไปเลยว่าอยากจะแก้ค่า argument ตัวไหน โดยไม่ต้องสนใจลำดับที่เรียงอยู่บนฟังก์ชัน</p>
-<section id="id4">
-<h2>ตัวอย่างที่ 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h2>ตัวอย่างที่ 1<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
 <p>เวลาเราเรียกใช้ split เรามักจะไม่ใช้ argument อะไรเลย เพราะว่า default มันกำหนดมาให้แล้วแต่ว่าจะปรับเป็นอย่างอื่นก็ได้ ดังนี้</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> เราระบุได้ว่าจะใช้อะไรเป็นตัวคั่นกลางในการ split</p></li>
@@ -528,8 +808,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h2>ตัวอย่างที่ 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id9">
+<h2>ตัวอย่างที่ 2<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
 <p>library nltk มี documentation บอกว่าให้ใช้ฟังก์ชันนี้ในการตัดข้อความให้เป็น list ของประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nltk.tokenize.sent_tokenize(text, language=&#39;english&#39;)
 
@@ -623,11 +903,23 @@ language – the model name in the Punkt corpus
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ข้อมูลและภาษาธรรมชาติ</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การใช้ไลบรารี</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">หลักการของการประมวลผลภาษาธรรมชาติ</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">การทำความสะอาดข้อมูล (Data cleaning)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงให้เป็นโทเค็น (tokenization)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-based-analysis">การวิเคราะห์โดยอาศัยความถี่ (frequency-based analysis)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การใช้ไลบรารี</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">Default argument</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
 </ul>
