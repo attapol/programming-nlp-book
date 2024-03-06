@@ -204,12 +204,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
-
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
@@ -444,19 +438,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#class-object">คลาส (class) และอ็อบเจกต์ (object)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-object">คลาส (class) และอ็อบเจกต์ (object)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -467,7 +459,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="object-oriented-programming">
+  <section class="tex2jax_ignore mathjax_ignore" id="object-oriented-programming">
 <h1>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading">#</a></h1>
 <p>สมมติว่าเราต้องการเก็บข้อมูลของคำแต่ละคำที่อยู่ในย่อหน้าย่อหน้าหนึ่ง  โครงสร้างข้อมูลที่เหมาะกับข้อมูลประเภทนี้ คือ ลิสต์ที่เก็บสตริง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paragraph</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Inc.&#39;</span> <span class="s1">&#39;is&#39;</span> <span class="s1">&#39;an&#39;</span> <span class="s1">&#39;American&#39;</span> <span class="s1">&#39;multinational&#39;</span> <span class="s1">&#39;technology&#39;</span> <span class="s1">&#39;firm&#39;</span>  <span class="s1">&#39;headquartered&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
@@ -492,9 +484,8 @@ document.write(`
 </pre></div>
 </div>
 <p>อย่างแรกที่เราสังเกตได้คือ ดิกชันนารีที่เราใช้มีฟิลด์ถึง 6 ฟิลด์ การจะเขียนโปรแกรมขึ้นมาเพื่อประมวลผลวิเคราะห์ข้อมูลประเภทนี้ เราจะต้องระวังว่าดิกชันนารีแต่ละอันที่เก็บข้อมูลของคำจะต้องมีฟิลด์เท่ากันหมด และผู้ที่เขียนฟังก์ชันเพื่อประมวลผลดิกชันนารีจะต้องทราบด้วยว่าฟิลด์เหล่านี้มีอะไรบ้าง เก็บอะไรไว้บ้าง ถ้าหากมีการเปลี่ยนแปลงชื่อฟิลด์ หรือเพิ่มฟิลด์ใหม่ ฟังก์ชันที่เขียนขึ้นมาเพื่อประมวลผลดิกชันนารีจะต้องถูกแก้ไขใหม่ทั้งหมด ซึ่งอาจจะทำให้เกิดข้อผิดพลาดได้ เพราะว่าโค้ดที่ใช้ในการสร้างดิกชันนารีขึ้นมา กับโค้ดที่ใช้ในการประมวลผลอาจจะอยู่คนละที่ คนละไฟล์กัน ทำให้โค้ดที่เขียนขึ้นมานั้นยากต่อการบำรุงรักษา และยากต่อการเปลี่ยนแปลง</p>
-</section>
 <section id="class-object">
-<h1>คลาส (class) และอ็อบเจกต์ (object)<a class="headerlink" href="#class-object" title="Permalink to this heading">#</a></h1>
+<h2>คลาส (class) และอ็อบเจกต์ (object)<a class="headerlink" href="#class-object" title="Permalink to this heading">#</a></h2>
 <p>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming: OOP) คือหลักการที่เราจะใช้ในการออกแบบโครงสร้างข้อมูลเพื่อให้สะดวกกับกรณีการใช้งานดังตัวอย่างข้างต้น หลักการของ OOP คือการออกแบบโครงสร้างข้อมูลขี้นมาเป็นพิเศษ เจาะจงกับข้อมูลที่เราต้องการจะเก็บ โครงสร้างข้อมูลนี้เรียกว่าคลาส (class)</p>
 <p>คลาสในภาษาไพธอน<a class="footnote-reference brackets" href="#pythonoop" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> ประกอบลักษณะพิเศษหลัก ๆ 3 อย่าง คือ</p>
 <ol class="arabic simple">
@@ -504,7 +495,7 @@ document.write(`
 </ol>
 </section>
 <section id="attribute">
-<h1>ลักษณะประจำ (attribute)<a class="headerlink" href="#attribute" title="Permalink to this heading">#</a></h1>
+<h2>ลักษณะประจำ (attribute)<a class="headerlink" href="#attribute" title="Permalink to this heading">#</a></h2>
 <p>ลักษณะประจำ เป็นตัวแปรที่เก็บซ้อนอยู่ในคลาส ใช้เก็บข้อมูลคล้ายคลึงกับตัวแปร เพื่อให้เห็นภาพมากขึ้น เราจะลองเขียนคลาสเพื่อใช้เก็บข้อมูลเกี่ยวกับคำในประโยคแทนที่ดิกชันนารี เราขอเรียกว่าโทเค็น (token) แทนที่คำว่า <em>คำ</em> <a class="footnote-reference brackets" href="#token" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> โทเค็น หมายถึง หน่วยหนึ่งหน่วยที่ผู้วิเคราะห์ใช้เป็นหน่วยที่เล็กที่สุดในการประมวลผล ตัวอย่างโค้ดในการกำหนดคลาสมีดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -549,10 +540,10 @@ document.write(`
 <p>ภาษาโปรแกรมที่เป็นภาษาเชิงอ็อบเจกต์ที่เก่าแก่กว่าภาษาไพธอน เช่น จาวา (Java) หรือ ซีพลัสพลัส(C++) จะมีการแบ่งแยกระดับการเข้าถึงตัวแปรชัดเจนว่าคลาสอื่น ๆ สามารถเข้าถึงแปรที่อยู่ในอ็อบเจกต์นี้ได้หรือไม่ (เช่น การใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">public</span></code> <code class="docutils literal notranslate"><span class="pre">private</span></code>และ <code class="docutils literal notranslate"><span class="pre">protected</span></code>) แต่ภาษาไพธอนตัวพื้นแบบที่ไม่ได้ใช้ไลบรารีตัวอื่น ๆ ช่วย ไม่ได้มีการแบ่งแยกระดับการเข้าถึง ทุกคลาส ทุกโปรแกรมสามารถเข้าถึงตัวแปรในอ็อบเจกต์และในคลาสได้ นักเขียนโปรแกรมบางกลุ่มแนะนำว่าให้ใส่ <code class="docutils literal notranslate"><span class="pre">_</span></code> ไปข้างหน้าชื่อตัวแปรเพื่อเป็นการบ่งบอกว่าโปรแกรมอื่น ๆ คลาสอื่น ๆ ไม่ควรจะเข้าถึงตัวแปรตัวนี้โดยตรง แต่ว่าภาษาไพธอนไม่มีการบังคับใช้กฎนี้แต่อย่างใด อย่างมากที่สุด คือ IDE อาจจะมีการเตือนผู้เขียนโปรแกรมอยู่บ้าง</p>
 </section>
 <section id="method">
-<h1>เมท็อด (method)<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h1>
+<h2>เมท็อด (method)<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h2>
 <p>ก่อนถึงบทนี้เราได้มีการใช้เมท็อดโดยการใช้ <code class="docutils literal notranslate"><span class="pre">.</span></code> มาหลายครั้งแล้ว เพราะว่าทั้งสตริง ทั้งลิสต์ ทั้งดิกชันนารีต่างก็เป็นอ็อบเจกต์ทั้งหมด และเมท็อดเป็นโค้ดที่ใช้ประมวลผลข้อมูลที่อยู่ในอ็อบเจกต์ เพราะฉะนั้นเราจึงถือได้ว่า เมท็อดเป็นฟังก์ชันที่เป็นลักษณะเฉพาะเจาะจงของคลาส เช่น ลิสต์มีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">append</span></code> และ <code class="docutils literal notranslate"><span class="pre">pop</span></code> ซึ่งเป็นเมท็อดที่ใช้ในการปฏิสัมพันธ์กับข้อมูลที่อยู่ในอ็อบเจกต์ที่เป็นลิสต์</p>
 <section id="id3">
-<h2>เมท็อดของคลาส<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h3>เมท็อดของคลาส<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>ในการกำหนดคลาส เราสามารถกำหนดเมท็อดให้คลาสได้ด้วย โดยการใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">def</span></code> ตามด้วยชื่อเมท็อด <code class="docutils literal notranslate"><span class="pre">()</span></code> และ <code class="docutils literal notranslate"><span class="pre">:</span></code> และอาร์กิวเมนต์แรกจะต้องเป็นคีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">self</span></code> ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -584,7 +575,7 @@ document.write(`
 <p>สังเกตว่าเวลาเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.to_plural_form</span></code> เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไป เวลาเราเรียกใช้เมท็อด ไพธอนทราบเองโดยอัตโนมัติว่าเป็นการใช้เมท็อดของอ็อบเจกต์ที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">word</span></code>  และจะส่งอ็อบเจกต์ที่เรียกเมท็อดนี้เข้าไปในอาร์กิวเมนต์แรกของเมท็อด ซึ่งเป็นเหตุผลที่ทำให้เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไปในอาร์กิวเมนต์ของเมท็อดอีก</p>
 </section>
 <section id="constructor">
-<h2>ตัวสร้าง (Constructor)<a class="headerlink" href="#constructor" title="Permalink to this heading">#</a></h2>
+<h3>ตัวสร้าง (Constructor)<a class="headerlink" href="#constructor" title="Permalink to this heading">#</a></h3>
 <p>ตัวสร้าง (constructor) คือเมท็อดที่ถูกเรียกทำงานทันทีที่อ็อบเจกต์ถูกสร้างขึ้นมาากคลาสโดยการเรียกชื่อคลาสตามด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> ในภาษาไพธอน เมท็อดตัวสร้างจะต้องมีชื่อเป็น <code class="docutils literal notranslate"><span class="pre">__init__</span></code> ไม่สามารถเป็นชื่ออื่นได้ แต่ว่าเราสามารถกำหนดอาร์กิวเมนต์เองได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -625,7 +616,7 @@ document.write(`
 </section>
 </section>
 <section id="inheritance">
-<h1>สิ่งสืบทอด (inheritance)<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h1>
+<h2>สิ่งสืบทอด (inheritance)<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h2>
 <p>ตอนนี้ทุกคนอาจจะยังไม่ได้เห็นประโยชน์ของการเขียนโปรแกรมเชิงอ็อบเจกต์เท่าไรนัก เพราะว่าเราสามารถใช้ดิกชันนารีแทนคลาสได้ และเขียนโปรแกรมอย่างระมัดระวังไม่ให้เกิดการเข้าถึงข้อมูลผ่านคีย์ที่ไม่ได้มีอยู่ในดิกชันนารี และเราสามารถเขียนฟังก์ชันแทนการเขียนเมท็อดได้ ถ้าหากเราจัดระเบียบโค้ดดี ๆ ก็ทำให้เราหลีกเลี่ยงของผิดพลาดในการเขียนโปรแกรมได้</p>
 <p>การใช้สิ่งสืบทอด (inheritance) เป็นรูปแบบการใช้งาน (feature) ที่ทำให้การเขียนโปรแกรมเชิงอ็อบเจกต์ดูน่าดึงดูดใจมากขึ้น สิ่งสืบทอดเป็นการสืบทอดลักษณะประจำและเมท็อดจากคลาสหนึ่งไปยังอีกคลาสหนึ่ง  ซึ่งทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ คลาสที่เป็นซับคลาส (subclass) สืบทอดเอาลักษณะประจำ (ตัวแปร) และเมท็อด (ฟังก์ชัน) จากคลาสที่เป็นซูเปอร์คลาส (superclass) และซับคลาสสามารถลบล้าง (override) เมท็อดที่สืบทอดมาให้เป็นไปตามต้องการได้ด้วย</p>
 <p>ตัวอย่าง เช่น คลาสที่ชื่อว่าเคาน์เตอร์ (<code class="docutils literal notranslate"><span class="pre">Counter</span></code>) ที่มากับไพธอน เป็นซับคลาสของคลาสที่ชื่อว่าดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) หมายความว่าเคาน์เตอร์มีตัวแปรและเมท็อดของดิกชันนารีทั้งหมด แต่สามารถปรับแก้เมท็อดที่สืบทอดมา และเพิ่มเมท็อดอื่น ๆ เพิ่มเติมเข้าไปได้อีกด้วย เพราะฉะนั้นเราคิดไปก่อนได้เลยว่า <code class="docutils literal notranslate"><span class="pre">Counter</span></code> จะต้องมีเมท็อด <code class="docutils literal notranslate"><span class="pre">items</span></code> <code class="docutils literal notranslate"><span class="pre">keys</span></code> <code class="docutils literal notranslate"><span class="pre">values</span></code> <code class="docutils literal notranslate"><span class="pre">update</span></code> <code class="docutils literal notranslate"><span class="pre">clear</span></code> ฯลฯ นอกจากนั้นแล้วเนื่องจาก <code class="docutils literal notranslate"><span class="pre">Counter</span></code> เป็นซับคลาสจึงมีเมท็อดพิเศษเพิ่มเข้ามาอย่าง <code class="docutils literal notranslate"><span class="pre">most_common</span></code></p>
@@ -646,7 +637,7 @@ document.write(`
 <p>ในมุมมองของนักเขียนโปรแกรม การใช้สิ่งสืบทอดทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ และปรับแก้เฉพาะส่วนที่ต้องการเท่านั้น</p>
 </section>
 <section id="id4">
-<h1>ตัวอย่างการใช้สิ่งสืบทอด<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<h2>ตัวอย่างการใช้สิ่งสืบทอด<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <p>การเปลี่ยนให้เป็นโทเค็น เป็นกระบวนการแรกในการประมวลผลภาษาธรรมชาติ คือการตัดสตริงของข้อมูลภาษาให้เป็นหน่วยที่ชื่อว่าโทเค็น ซึ่งแปลว่าหน่วยที่เหมาะในการประมวลผล โทเค็นส่วนใหญ่แล้วจะคล้ายคลึงกับคำเป็นส่วนใหญ่ โทเค็นจะเป็นอะไรนั้นขึ้นอยู่กับผู้ที่วิเคราะห์และประมวลผลข้อความที่จะปรับให้โทเค็นเป็นลักษณะอย่างไร</p>
 <p>ตัวอย่างเช่น หากเราต้องการสร้างตัวตัดคำภาษาไทย โดยการใช้รายการคำศัพท์ (vocab list) เป็นเกณฑ์ในการตัด และถ้าหากว่าเราได้รับประโยคที่เราเคยตัดคำมาแล้ว ให้คืนค่าเป็นผลลัพท์เดิม เพื่อความรวดเร็ว เราอาจจะออกแบบคลาส <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer&quot;</span></code> ขึ้นมาดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ThaiTokenizer</span><span class="p">:</span>
@@ -701,7 +692,7 @@ document.write(`
 <p>ถึงแม้สิ่งสืบทอดทำให้สะดวกในการจัดระเบียบและนำโค้ดเก่ามาใช้เป็นระบบ ข้อเสียคือทำให้โค้ดทั้งหมดไม่ได้อยู่ในที่เดียวกัน เช่น ในกรณีข้างต้น ถ้าหากเราต้องการทราบว่า <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> มีเมท็อดอะไรบ้าง เราต้องไปเปิดโค้ดของซุปเปอร์คลาส <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> ทำให้โค้ดกระจัดกระจาย ยากต่อการทำความเข้าใจในบางครั้ง โดยเฉพาะอย่างยิ่งถ้าหากเราไม่ระมัดระวังและทำให้ตระกูลของคลาสมีความซับซ้อนเกินไป เช่น <code class="docutils literal notranslate"><span class="pre">LegalMedicalThaiTokenizer</span></code> เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> ซึ่งเป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> อีกครั้งหนึ่ง เพราะฉะนั้นบางเมท็อดของ <code class="docutils literal notranslate"><span class="pre">LegalMedicalThaiTokenizer</span></code> อาจจะมาจาก</p>
 </section>
 <section id="id5">
-<h1>สรุป<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<h2>สรุป<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <p>ผู้เขียนโปรแกรมต้องตัดสินใจออกแบบว่า OOP นั้นเหมาะสมกับโจทย์หรือไม่ เพราะไพธอน ไม่ได้บังคับให้ใช้ OOP ในทุกสถานการณ์แต่ก็มีคุณสมบัติหลักๆ ของ OOP อยู่ ข้อดีของการใช้ OOP คือช่วยให้โค้ดมีความสะอาด และง่ายต่อการอ่าน การแบ่งโปรแกรมเป็นส่วนย่อย ๆ ช่วยให้สามารถจัดการกับความซับซ้อนของโปรแกรมได้ดีขึ้น นอกจากนี้ยังช่วยในเรื่องของการนำโค้ดไปใช้ซ้ำ และการปรับเปลี่ยนโค้ดในอนาคตได้ง่ายขึ้น เพราะการแก้ไขหรือต่อเติมเมท็อดในคลาสหนึ่ง ๆ ไม่จำเป็นต้องกระทบกับส่วนอื่น ๆ ของโปรแกรม</p>
 <p>อย่างไรก็ตาม ข้อเสียของการใช้ OOP คืออาจทำให้โค้ดมีความซับซ้อนเกินความจำเป็นในบางสถานการณ์ การออกแบบที่ไม่ดีอาจนำไปสู่โค้ดที่ยุ่งเหยิง และการอ้างอิงที่ซับซ้อน ซึ่งสามารถทำให้การบำรุงรักษาโค้ดเป็นเรื่องยาก</p>
 <p>การตัดสินใจใช้ OOP ในภาษาไพธอน ควรขึ้นอยู่กับลักษณะของโปรเจกต์และทีมพัฒนา หากโปรเจกต์ต้องอาศัยความยืดหยุ่นในการจัดการกับออบเจกต์และข้อมูล หรือต้องการทำงานร่วมกับโค้ดที่มีอยู่แล้วซึ่งออกแบบมาในแบบ OOP การใช้แนวทางนี้อาจเป็นทางเลือกที่ดี แต่สำหรับโปรเจกต์ที่เรียบง่ายหรือทีมที่ไม่คุ้นเคยกับ OOP อาจพิจารณาใช้วิธีการเขียนโปรแกรมแบบอื่นที่ไพธอนรองรับได้เช่นกัน</p>
@@ -715,6 +706,7 @@ document.write(`
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>เนื่องจากคำในความหมายที่อ้างอิงตามมโนทัศน์ทางภาษาศาสตร์มีคำนิยามเฉพาะซึ่งไม่เหมือนกับโทเค็น</p>
 </aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -784,19 +776,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#class-object">คลาส (class) และอ็อบเจกต์ (object)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-object">คลาส (class) และอ็อบเจกต์ (object)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">ลักษณะประจำ (attribute)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method">เมท็อด (method)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เมท็อดของคลาส</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor">ตัวสร้าง (Constructor)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">สิ่งสืบทอด (inheritance)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการใช้สิ่งสืบทอด</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">สรุป</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
