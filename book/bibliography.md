@@ -1,0 +1,5 @@
+# บรรณานุกรม
+
+```{bibliography}
+:style: plain
+```
