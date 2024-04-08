@@ -1,0 +1,4 @@
+# การคิดเชิงคำนวณ (computational thinking)
+
+```{tableofcontents}
+```

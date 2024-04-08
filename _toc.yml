@@ -4,36 +4,44 @@
 format: jb-book
 root: book/intro
 chapters:
-- file: book/comp_thinking
+- file: book/1-comp_thinking
   sections:
   - glob: book/module1/*
 
-- file: book/basics
+- file: book/2-basics
   sections:
   - glob: book/module2/*
 
-- file: book/data_structure1
+- file: book/3-data_structure1
   sections:
   - glob: book/module3/*
 
-- file: book/text_file
+- file: book/4-text_file
   sections:
   - glob: book/module4/*
 
-- file: book/data_structure2
+- file: book/5-data_structure2
   sections:
   - glob: book/module5/*
 
-- file: book/oop
+- file: book/6-oop
   sections:
   - glob: book/module6/*
 
-- file: book/nlp
+- file: book/7-nlp
   sections:
   - glob: book/module7/*
-- file: book/scraping
+
+- file: book/8-scraping
   sections:
   - glob: book/module8/*
-- file: book/pandas
+
+- file: book/9-pandas
   sections:
   - glob: book/module9/*
+
+- file: book/10-llm
+  sections:
+  - glob: book/module10/*
+
+- file: book/bibliography
