@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module4/5-exercise-file-regex';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module4/5s-exercise-file-regex';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="โจทย์: Text processing และ Regular expression" href="5s-exercise-file-regex.html" />
-    <link rel="prev" title="Video: Regular Expression" href="4-videos-regex.html" />
+    <link rel="next" title="Data Structure II" href="../5-data_structure2.html" />
+    <link rel="prev" title="โจทย์: Text processing และ Regular expression" href="5-exercise-file-regex.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-regular-expression.html">Regular expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">โจทย์: Text processing และ Regular expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5s-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -295,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module4/5-exercise-file-regex.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module4/5s-exercise-file-regex.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module4/5-exercise-file-regex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module4/5s-exercise-file-regex.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module4/5-exercise-file-regex.ipynb" target="_blank"
+      <li><a href="../../_sources/book/module4/5s-exercise-file-regex.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -687,17 +687,30 @@ document.write(`
 </div>
 <section id="codeswitching">
 <h3>ข้อ 7 - Codeswitching<a class="headerlink" href="#codeswitching" title="Permalink to this heading">#</a></h3>
-<p>Codeswitch เป็นปรากฏการณ์ทางภาษาศาสตร์อย่างหนึ่ง เกิดขึ้นเมื่อผู้พูดสองภาษา หรือสองสำเนียงปน ๆ กัน (เช่น การพูดไทยคำอังกฤษคำ เป็นต้น) เขียนฟังก์ชันที่นับว่าในลิสต์ของคำที่ได้มา มีคำที่สะกดด้วยตัวภาษาอังกฤษกีคำ และคำที่สะกดด้วยตัวภาษาไทยกี่คำ โดยให้คืนผลลัพท์เป็นดิกชันนารีที่ key เป็นรหัสภาษา (en สำหรับภาษาอังกฤษ และ th สำหรับภาษาไทย) และ value เป็นจำนวนคำของแต่ละภาษา</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_en_th_words</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1"># import โมดูล regular expression เพื่อใช้ในการหาคำ</span>
+
+<span class="k">def</span> <span class="nf">count_en_th_words</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    </span>
 <span class="sd">    Example:</span>
 <span class="sd">    &gt;&gt;&gt; count_en_th_words([&#39;รองเท้า&#39;, &#39;ไม่&#39;, &#39;match&#39;, &#39;กับ&#39;, &#39;coat&#39;, &#39;เลย&#39;])</span>
 <span class="sd">    {&#39;en&#39;: 2, &#39;th&#39;: 4}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">{}</span>
+    <span class="c1"># สร้าง dict ที่มีค่าเริ่มต้นของจำนวนคำภาษาอังกฤษและภาษาไทยเป็น 0</span>
+    <span class="n">result_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;th&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="c1"># วนลูปผ่านคำในรายการคำ</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+        <span class="c1"># ตรวจสอบว่าคำเป็นภาษาอังกฤษหรือไม่</span>
+        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;[a-zA-Z]&#39;</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+            <span class="c1"># ถ้าใช่ เพิ่มจำนวนคำภาษาอังกฤษขึ้น 1</span>
+            <span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;en&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># ถ้าไม่ใช่ เพิ่มจำนวนคำภาษาไทยขึ้น 1</span>
+            <span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;th&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">result_dict</span>
 </pre></div>
 </div>
 </div>
@@ -738,20 +751,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="4-videos-regex.html"
+       href="5-exercise-file-regex.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Video: Regular Expression</p>
+        <p class="prev-next-title">โจทย์: Text processing และ Regular expression</p>
       </div>
     </a>
     <a class="right-next"
-       href="5s-exercise-file-regex.html"
+       href="../5-data_structure2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">โจทย์: Text processing และ Regular expression</p>
+        <p class="prev-next-title">Data Structure II</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
