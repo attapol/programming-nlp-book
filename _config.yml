@@ -7,7 +7,7 @@
 # Book settings
 title                       : Programming for NLP  # The title of the book. Will be placed in the left navbar.
 author                      : Attapol Thamrongrattanarit  # The author of the book
-copyright                   : "2022"  # Copyright year to be placed in the footer
+copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : book/logo.png  # A path to the book logo
 
 # See https://jupyterbook.org/content/execute.html
@@ -30,6 +30,8 @@ sphinx:
     bibtex_reference_style: author_year
     numfig_format: 
       figure: "ภาพที่ %s"
+    contents:
+      title: "สารบัญ"
 
     #bibtex_bibfiles: references.bib
 
