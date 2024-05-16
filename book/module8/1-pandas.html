@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>การจัดการข้อมูลขั้นพื้นฐานด้วย pandas &#8212; Programming for NLP</title>
+    <title>การจัดการข้อมูลด้วย pandas &#8212; Programming for NLP</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module8/1-pandas';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ตัวอย่างการใช้ pandas" href="2-example-pandas.html" />
+    <link rel="next" title="การจัดการข้อมูลขั้นพื้นฐานด้วย pandas" href="1-pandas-old.html" />
     <link rel="prev" title="การจัดการข้อมูลด้วย pandas" href="../8-pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -213,7 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">การจัดการข้อมูลด้วย pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-pandas-old.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
@@ -286,37 +287,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module8/1-pandas.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -372,7 +342,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module8/1-pandas.ipynb" target="_blank"
+      <li><a href="../../_sources/book/module8/1-pandas.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -454,7 +424,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>การจัดการข้อมูลขั้นพื้นฐานด้วย pandas</h1>
+    <h1>การจัดการข้อมูลด้วย pandas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -464,20 +434,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การจัดการข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ฟังก์ชันพื้นฐานที่ควรทราบ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การเปลี่ยนชื่อคอลัมน์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">เปลี่ยนแค่บางคอลัมน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">เปลี่ยนทุกคอลัมน์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-comma-separated-value-tsv-tab-separated-value">ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">ไฟล์ Excel</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การเลือกแค่บางคอลัมน์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การเลือกบางแถว</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การเลือกแถวแบบใช้บูลีน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">คำนวณสถิติของแต่ละคอลัมน์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column">การสร้าง column เพิ่ม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv">การสร้างดาตาเฟรมจากไฟล์ CSV</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบและแก้ไขหัวตาราง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขดัชนี</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -490,2723 +464,252 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pandas">
-<h1>การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h1>
-<p>ไลบรารี <code class="docutils literal notranslate"><span class="pre">pandas</span></code> เป็นไลบรารีที่สำคัญที่สุดในวิทยาการข้อมูล (data science) อาจจะนับได้ด้วยซ้ำว่าหลายคนเรียนเขียนโปรแกรมเป็นภาษาไพธอนเพื่อที่จะได้ใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code> ได้</p>
+<h1>การจัดการข้อมูลด้วย pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h1>
+<p>ข้อมูลแบบตาราง (tabular data) เป็นรูปแบบข้อมูลที่ได้รับความนิยมอย่างมากในงานประมวลผลและวิเคราะห์ข้อมูล เนื่องจากมีโครงสร้างที่เป็นระเบียบและการจัดเก็บข้อมูลที่สามารถเข้าถึงได้ง่าย แต่ละแถวแทนหนึ่งรายการหรือตัวอย่าง และแต่ละคอลัมน์มีค่าของตัวแปรหนึ่งตัว ซึ่งช่วยให้สามารถจัดการและวิเคราะห์ข้อมูลได้อย่างมีประสิทธิภาพ เราจึงจัดว่าข้อมูลแบบตารางเป็นข้อมูลที่มีโครงสร้าง (structured data) และเป็นรูปแบบการจัดเก็บข้อมูลในอุดมคติ พร้อมสำหรับการวิเคราะห์</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ข้อมูลแบบตาราง (tabular data)</p>
+</aside>
+<p>ในการจัดการกับข้อมูลชนิดนี้ เรามักใช้ pandas ซึ่งเป็นไลบรารีของภาษาไพธอน ที่ประกอบไปด้วยเครื่องมือระดับสูงสำหรับการจัดการข้อมูลแบบตาราง ไลบรารี pandas ทำงานร่วมกับข้อมูลขนาดใหญ่ได้ดี รวมถึงมีฟังก์ชันต่างๆ สำหรับการเลือก กรอง และปรับแต่งข้อมูลได้อย่างง่ายดาย นอกจากนี้ยังสามารถรวมข้อมูลจากแหล่งข้อมูลหลายแห่งและรองรับการอ่านและเขียนไฟล์ข้อมูลในรูปแบบต่างๆ ได้อย่างหลากหลาย ทำให้เป็นเครื่องมือที่ทรงพลังและได้รับความนิยมสูงในการวิเคราะห์ข้อมูลแบบตาราง การใช้ pandas นับเป็นทักษะที่สำคัญที่สุดอย่างหนึ่งของนักวิเคราะห์ข้อมูล โดยเฉพาะอย่างยิ่งข้อมูลที่เป็นข้อความ และข้อมูลที่มีขนาดใหญ่เกินกว่าที่จะเปิดด้วยโปรแกรมวิเคราะห์ข้อมูลทั่วไป เช่น SPSS Microsoft Excel หรือ Google Spreadsheet</p>
+<p>หากเราติดตั้งไพธอนผ่าน Anaconda เราจะได้ไลบรารี pandas มาพร้อมกับการติดตั้ง แต่หากเราใช้งานไพธอนผ่านการติดตั้งแบบอื่น เราสามารถติดตั้งไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code> (หากติดตั้ง miniconda) เมื่อติดตั้งเสร็จเรียบร้อยแล้ว เราสามารถนำเข้าไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งจะทำให้เราสามารถใช้ฟังก์ชันและเมธอดที่อยู่ในไลบรารี pandas ได้</p>
+<p>เราอาจจะสงสัยว่าเพราะเหตุใดเราต้องเปลี่ยนชื่อไลบรารีเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> โดยการรัน <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งเราไม่จำเป็นต้องเปลี่ยนชื่อก็สามารถใช้ได้เหมือนกัน แต่เราเลือกเปลี่ยนชื่อเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> เพื่อให้เราสามารถเขียนโค้ดได้สั้นลง  นอกจากนั้นเราไม่ใช้ชื่ออื่นเช่น <code class="docutils literal notranslate"><span class="pre">p</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pan</span></code> หรือชื่ออื่นๆ ที่เราเลือกเอง เหตุก็เพราะว่า <code class="docutils literal notranslate"><span class="pre">pd</span></code> จะเป็นชื่อที่คนในวงการวิทยาการข้อมูลใช้กันมากที่สุด อย่างที่เราเห็นได้ว่าหากเราไปค้นหาวิธีการใช้งานของ pandas ในเว็บไซต์ที่รวมชุมชนนักวิเคราะห์ข้อมูล เช่น <a class="reference external" href="http://stackoverflow.com">stackoverflow.com</a> หรือ <a class="reference external" href="http://medium.com">medium.com</a> จะพบว่าคำตอบจะใช้ <code class="docutils literal notranslate"><span class="pre">pd</span></code> ในการอ้างถึงไลบรารี pandas ทั้งสิ้นด้วย ดังนั้นการใช้ชื่อ <code class="docutils literal notranslate"><span class="pre">pd</span></code> เป็นการตั้งชื่อตามสมัยนิยม และเป็นการให้ความสะดวกในการเรียนรู้จากแหล่งข้อมูลอื่นๆ ที่มีอยู่ในอินเทอร์เน็ต</p>
 <section id="id1">
-<h2>การจัดการข้อมูล<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>รูปแบบของข้อมูลที่เรามักจะเจอและใช้กันคือข้อมูลที่อยู่ในรูปแบบของตาราง (tabular data) ซึ่งเป็นรูปแบบข้อมูลที้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code> มีฟังก์ชันต่าง ๆ ที่ช่วยในการจัดการข้อมูลดังนี้</p>
+<h2>ข้อมูลแบบตาราง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>ข้อมูลแบบตารางมีส่วนประกอบหลักที่สำคัญอยู่หลายส่วน ซึ่งแต่ละส่วนมีบทบาทสำคัญในการเก็บรักษาและการจัดการข้อมูล</p>
 <ol class="arabic simple">
-<li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
-<li><p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis: EDA) คือ การวิเคราะห์เพื่อให้เราเข้าใจข้อมูลคร่าว ๆ เนื่องจากข้อมูลมักจะมีขนาดใหญ่มาก เราไม่สามารถนำข้อมูลออกมาดูได้ทั้งหมด เรามักจะทำ EDA โดยดูว่าข้อมูลมีทั้งหมดที่แถว แต่ละคอลัมน์เก็บข้อมูลอะไรอยู่บ้าง แต่ละคอลัมน์มีค่าสูงสุด ต่ำสุดเท่าไร ถ้าเป็นข้อความ ข้อความที่ยาวสุดยาวกี่ตัวอักษร สั้นสุดกี่ตัวอักษร เป็นต้น</p></li>
-<li><p>การขยำข้อมูล (data munging หรือ data wrangling) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ เช่น ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ หรือลบแถวที่ซ้ำซ้อนกันออกไป</p></li>
+<li><p>แถว (row) แสดงถึงรายการหรือตัวอย่างแต่ละชิ้น ที่ซึ่งข้อมูลสามารถอธิบายลักษณะหรือสถานะของเหตุการณ์ วัตถุ หรือบุคคลที่กำลังศึกษาอยู่ ตัวอย่างเช่น ในตารางข้อมูลของผู้ป่วย แต่ละแถวอาจแทนผู้ป่วยหนึ่งคนพร้อมกับรายละเอียดต่างๆ เช่น อายุ เพศ และประวัติการรักษา</p></li>
+<li><p>คอลัมน์ (column) แสดงถึงตัวแปรหรือคุณลักษณะที่ระบุค่าข้อมูลต่างๆ ที่จำเป็นต่อการศึกษาหรือวิเคราะห์ ตัวอย่างเช่น ในตารางข้อมูลการขาย คอลัมน์อาจประกอบด้วย วันที่ จำนวนเงิน และสินค้าที่ขาย</p></li>
+<li><p>หัวตาราง (header) เป็นบรรทัดแรกของตารางที่ระบุชื่อของแต่ละคอลัมน์ เป็นส่วนที่สำคัญเพราะช่วยให้ผู้ใช้สามารถเข้าใจข้อมูลในแต่ละคอลัมน์ได้ง่ายและชัดเจน</p></li>
+<li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือไทป์อื่นๆ ที่เหมาะสมกับลักษณะของการศึกษา เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นไทป์เดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
 </ol>
-</section>
-<section id="id2">
-<h2>ฟังก์ชันพื้นฐานที่ควรทราบ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> มีฟังก์ชันเยอะมากเพื่อรองรับการวิเคราะห์ข้อมูลในรูปแบบที่หลากหลาย ฟังก์ชันที่เราจำเป็นต้องรู้มีดังนี้</p>
-<ol class="arabic simple">
-<li><p>การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p></li>
-<li><p>โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล</p></li>
-<li><p>เปลี่ยนชื่อคอลัมน์</p></li>
-<li><p>เลือกบางคอลัมน์</p></li>
-<li><p>เลือกบางแถว</p></li>
-<li><p>คำนวณสถิติของแต่ละคอลัมน์</p></li>
-<li><p>การเพิ่มคอลัมน์</p></li>
-<li><p>การเซฟข้อมูลลงใส่ไฟล์</p></li>
-</ol>
-</section>
-<section id="dataframe">
-<h2>การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h2>
-<p>DataFrame คือตาราง ประกอบไปด้วยแถวและคอลัมน์ แต่ละแถวมักจะเป็นหนึ่งหน่วยของการวิเคราะห์ แต่ละคอลัมน์มักจะเป็นลักษณะหรือ feature ต่าง ๆ ของแต่ละแถว</p>
-<p>เราสามารถสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากดิกชันนารีที่ key เป็นชื่อคอลัมน์ และ value เป็นลิสต์ที่เก็บค่าของแต่ละแถวของคอลัมน์นั้น เราจะต้องระวังเองว่าลิสต์ที่เป็น value ต้องมีความยาวเท่ากันหมด ไม่เช่นนั้นจะได้ข้อความ <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">All</span> <span class="pre">arrays</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">length</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;tangmay&#39;</span><span class="p">],</span>
-     <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">)</span>
-<span class="n">mydata</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student name</th>
-      <th>age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>pang</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>dream</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>tangmay</td>
-      <td>19</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>เราสามารถสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ได้จากลิสต์ของ info dictionary ดิกชันนารีที่ key เป็นชื่อคอลัมน์ และ value เป็นค่าของคอลัมน์นั้น เราต้องระวังเองว่า info dictionary ทุกอันมี key ชุดเดียวกันหมด</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">[{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> 
-     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
-     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span><span class="s1">&#39;tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">)</span>
-<span class="n">mydata</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student name</th>
-      <th>age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>pang</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>dream</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>tangmay</td>
-      <td>19</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
-<section id="id3">
-<h2>โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>ส่วนใหญ่เราจะอ่านข้อมูลจาก csv file เพราะเป็นประเภทของการจัดเก็บข้อมูลที่นิยมกันในวงการวิทยาการข้อมูล เนื่องจากสามารถเปิดอ่านด้วยโปรแกรม Excel หรือ Google Sheet เพื่อตรวจสอบแก้ไขได้ง่าย</p>
-<p><code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code> เป็นคำสั่งที่ใช้อ่านข้อมูลจาก csv ตามชื่อไฟล์ที่ระบุ ชื่อไฟล์จะเป็นไฟล์ที่อยู่บนเครื่อง หรือไฟล์ฝากไว้อยู่บน url ก็ได้</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
-<span class="n">d</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 5 columns</p>
-</div></div></div>
-</div>
-</section>
-<section id="id4">
-<h2>การเปลี่ยนชื่อคอลัมน์<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<section id="id5">
-<h3>เปลี่ยนแค่บางคอลัมน์<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">.rename</span></code> ช่วยเปลี่ยนชื่อคอลัมน์จากนั้น return <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ใหม่ออกมาอีกชุดที่ชื่อคอลัมน์เปลี่ยนไป เราได้ <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> แยกออกมาสองชุด เราระบุชื่อคอลัมน์ที่ต้องการเปลี่ยนใน key ของดิกต์ และชื่อใหม่อยู่ใน value ของดิกต์</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sepallength&#39;</span><span class="p">:</span><span class="s1">&#39;Sepal length&#39;</span><span class="p">,</span> <span class="s1">&#39;petallength&#39;</span><span class="p">:</span><span class="s1">&#39;Petal length&#39;</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sepal length</th>
-      <th>sepalwidth</th>
-      <th>Petal length</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 5 columns</p>
-</div></div></div>
-</div>
-<p>หากต้องการเปลี่ยนชื่อคอลัมน์ใน <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ที่เรียก method โดยไม่สร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ชุดใหม่ขึ้นมาให้ระบุว่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> พอเรียก method แล้วจะไม่ return อะไรกลับคืนมา การเปลี่ยนแปลงข้อมูลใน <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ในลักษณะนี้เราเรียกว่าการเปลี่ยนแบบ in place</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sepallength&#39;</span><span class="p">:</span><span class="s1">&#39;Sepal length&#39;</span><span class="p">,</span> <span class="s1">&#39;petallength&#39;</span><span class="p">:</span><span class="s1">&#39;Petal length&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">d</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sepal length</th>
-      <th>sepalwidth</th>
-      <th>Petal length</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 5 columns</p>
-</div></div></div>
-</div>
-</section>
-<section id="id6">
-<h3>เปลี่ยนทุกคอลัมน์<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> เก็บลิสต์ของชื่อคอลัมน์ไว้ใน property <code class="docutils literal notranslate"><span class="pre">.columns</span></code> ซึ่งเราสามารถเปลี่ยนค่านี้ได้โดยตรง การเปลี่ยนชื่อคอลัมน์ด้วยวิธีเป็นการเปลี่ยนแบบ in place เช่นกัน</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sepal length&#39;</span><span class="p">,</span> <span class="s1">&#39;Sepal width&#39;</span> <span class="p">,</span> <span class="s1">&#39;Petal length&#39;</span><span class="p">,</span> <span class="s1">&#39;Petal width&#39;</span><span class="p">,</span> <span class="s1">&#39;Class&#39;</span><span class="p">]</span>
-<span class="n">d</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sepal length</th>
-      <th>Sepal width</th>
-      <th>Petal length</th>
-      <th>Petal width</th>
-      <th>Class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 5 columns</p>
-</div></div></div>
-</div>
-</section>
-</section>
-<section id="id7">
-<h2>การเลือกแค่บางคอลัมน์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
-<p>ถ้าข้อมูลมีขนาดใหญ่เกินไป เราจะวิเคราะห์ข้อมูลได้ลำบากเนื่องจากข้อมูลจะล้นจอไม่สามารถมองได้สะดวก รวมถึงบางครั้งข้อมูลกินหน่วยความจำในเครื่องของเรามากเกินไป เราสามารถย่อขนาดของข้อมูลลงเลือกหลายคอลัมน์พร้อม ๆ กัน ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่น</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;sepallength&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>class</th>
-      <th>sepallength</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Iris-setosa</td>
-      <td>5.1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Iris-setosa</td>
-      <td>4.9</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Iris-setosa</td>
-      <td>4.7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Iris-setosa</td>
-      <td>4.6</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Iris-setosa</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>Iris-virginica</td>
-      <td>6.7</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>Iris-virginica</td>
-      <td>6.3</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>Iris-virginica</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>Iris-virginica</td>
-      <td>6.2</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>Iris-virginica</td>
-      <td>5.9</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 2 columns</p>
-</div></div></div>
-</div>
-<p>การเลือกคอลัมน์โดยระบุชื่อคอลัมน์ในรูปแบบของลิสต์ของสตริงจะคืนค่าเป็น <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> มาให้ ซึ่งเราสามารถนำไปเรียกคำสั่งอื่น ๆ ต่อไปได้ เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> เดิมไม่มีความเปลี่ยนแปลงใด ๆ เราได้ <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> มาสองชุด</p>
-<p>เลือกคอลัมน์เดียวโดยการใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แต่ว่าป้อนแค่สตริงที่เป็นชื่อคอลัมน์ที่ต้องการ คำสั่งนี้จะให้รีเทิร์น <code class="docutils literal notranslate"><span class="pre">Series</span></code> กลับมาให้ ไม่ใช่ <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> ซึ่งจะมีหลาย ๆ <code class="docutils literal notranslate"><span class="pre">Series</span></code> มารวมกันเป็นก้อนเดียว</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">sepallength</span> <span class="c1">#d[&#39;sepallength&#39;]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      5.1
-1      4.9
-2      4.7
-3      4.6
-4      5.0
-      ... 
-145    6.7
-146    6.3
-147    6.5
-148    6.2
-149    5.9
-Name: sepallength, Length: 150, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>  <span class="c1">#จะเปลี่ยนแบบ in place ก็ได้</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 4 columns</p>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;length&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span> <span class="c1">#จะเปลี่ยนแบบ in place ก็ได้</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepalwidth</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.0</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.2</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3.1</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3.6</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>3.0</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>2.5</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>3.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>3.0</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 3 columns</p>
-</div></div></div>
-</div>
-</section>
-<section id="id8">
-<h2>การเลือกบางแถว<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">df.sample(frac=0.5)</span></code> สุ่มมาครึ่งนึงของแถวทั้งหมด</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.sample(n=10)</span></code> สุ่มมาสิบตัว</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.head(n)</span></code> เลือก n แถวแรก</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.tail(n)</span></code> เลือก n แถวหลัง</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[5:10]</span></code> เลือกแถว 5, 6, 7, 8, 9</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://datahub.io/machine-learning/iris/r/iris.csv&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>40</th>
-      <td>5.0</td>
-      <td>3.5</td>
-      <td>1.3</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>4.4</td>
-      <td>3.0</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>5.7</td>
-      <td>2.8</td>
-      <td>4.1</td>
-      <td>1.3</td>
-      <td>Iris-versicolor</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.5</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>5.1</td>
-      <td>3.4</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>7.7</td>
-      <td>3.0</td>
-      <td>6.1</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>5.1</td>
-      <td>3.3</td>
-      <td>1.7</td>
-      <td>0.5</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>5.6</td>
-      <td>3.0</td>
-      <td>4.5</td>
-      <td>1.5</td>
-      <td>Iris-versicolor</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>5.4</td>
-      <td>3.4</td>
-      <td>1.5</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>5.1</td>
-      <td>3.7</td>
-      <td>1.5</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>7.0</td>
-      <td>3.2</td>
-      <td>4.7</td>
-      <td>1.4</td>
-      <td>Iris-versicolor</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="c1">#ตำแหน่งจากบนลงล่าง</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>40</th>
-      <td>5.0</td>
-      <td>3.5</td>
-      <td>1.3</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>4.4</td>
-      <td>3.0</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">140</span><span class="p">,</span> <span class="mi">131</span><span class="p">]]</span> <span class="c1"># ชื่อ (index)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>6.7</td>
-      <td>3.1</td>
-      <td>5.6</td>
-      <td>2.4</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>7.9</td>
-      <td>3.8</td>
-      <td>6.4</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>10</th>
-      <td>5.4</td>
-      <td>3.7</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>4.8</td>
-      <td>3.4</td>
-      <td>1.6</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>4.8</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.1</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>4.3</td>
-      <td>3.0</td>
-      <td>1.1</td>
-      <td>0.1</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>5.8</td>
-      <td>4.0</td>
-      <td>1.2</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>5.7</td>
-      <td>4.4</td>
-      <td>1.5</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>5.7</td>
-      <td>3.8</td>
-      <td>1.7</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>5.1</td>
-      <td>3.8</td>
-      <td>1.5</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sepal length</th>
-      <th>sepalwidth</th>
-      <th>Petal length</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.7</td>
-      <td>0.4</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>4.6</td>
-      <td>3.4</td>
-      <td>1.4</td>
-      <td>0.3</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>5.0</td>
-      <td>3.4</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>4.4</td>
-      <td>2.9</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-<p>146 rows × 5 columns</p>
-</div></div></div>
-</div>
-</section>
-<section id="id9">
-<h2>การเลือกแถวแบบใช้บูลีน<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;sepallength&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>  <span class="c1"># select * from d where sepallength &gt; 7&#39;;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>102</th>
-      <td>7.1</td>
-      <td>3.0</td>
-      <td>5.9</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>7.6</td>
-      <td>3.0</td>
-      <td>6.6</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>7.3</td>
-      <td>2.9</td>
-      <td>6.3</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>7.2</td>
-      <td>3.6</td>
-      <td>6.1</td>
-      <td>2.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>7.7</td>
-      <td>3.8</td>
-      <td>6.7</td>
-      <td>2.2</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>7.7</td>
-      <td>2.6</td>
-      <td>6.9</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>7.7</td>
-      <td>2.8</td>
-      <td>6.7</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>7.2</td>
-      <td>3.0</td>
-      <td>5.8</td>
-      <td>1.6</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>7.4</td>
-      <td>2.8</td>
-      <td>6.1</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>7.9</td>
-      <td>3.8</td>
-      <td>6.4</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>7.7</td>
-      <td>3.0</td>
-      <td>6.1</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Iris-virginica&#39;</span><span class="p">]</span> <span class="c1"># select * from d where class = &#39;iris-virginica&#39;;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sepallength</th>
-      <th>sepalwidth</th>
-      <th>petallength</th>
-      <th>petalwidth</th>
-      <th>class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>100</th>
-      <td>6.3</td>
-      <td>3.3</td>
-      <td>6.0</td>
-      <td>2.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>5.8</td>
-      <td>2.7</td>
-      <td>5.1</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>7.1</td>
-      <td>3.0</td>
-      <td>5.9</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>6.3</td>
-      <td>2.9</td>
-      <td>5.6</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.8</td>
-      <td>2.2</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>7.6</td>
-      <td>3.0</td>
-      <td>6.6</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>4.9</td>
-      <td>2.5</td>
-      <td>4.5</td>
-      <td>1.7</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>7.3</td>
-      <td>2.9</td>
-      <td>6.3</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>6.7</td>
-      <td>2.5</td>
-      <td>5.8</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>7.2</td>
-      <td>3.6</td>
-      <td>6.1</td>
-      <td>2.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>6.5</td>
-      <td>3.2</td>
-      <td>5.1</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>6.4</td>
-      <td>2.7</td>
-      <td>5.3</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>6.8</td>
-      <td>3.0</td>
-      <td>5.5</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>5.7</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>5.8</td>
-      <td>2.8</td>
-      <td>5.1</td>
-      <td>2.4</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>6.4</td>
-      <td>3.2</td>
-      <td>5.3</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.5</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>7.7</td>
-      <td>3.8</td>
-      <td>6.7</td>
-      <td>2.2</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>7.7</td>
-      <td>2.6</td>
-      <td>6.9</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>6.0</td>
-      <td>2.2</td>
-      <td>5.0</td>
-      <td>1.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>6.9</td>
-      <td>3.2</td>
-      <td>5.7</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>5.6</td>
-      <td>2.8</td>
-      <td>4.9</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>7.7</td>
-      <td>2.8</td>
-      <td>6.7</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>6.3</td>
-      <td>2.7</td>
-      <td>4.9</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>6.7</td>
-      <td>3.3</td>
-      <td>5.7</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>6.2</td>
-      <td>2.8</td>
-      <td>4.8</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>6.1</td>
-      <td>3.0</td>
-      <td>4.9</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>6.4</td>
-      <td>2.8</td>
-      <td>5.6</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>7.2</td>
-      <td>3.0</td>
-      <td>5.8</td>
-      <td>1.6</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>7.4</td>
-      <td>2.8</td>
-      <td>6.1</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>7.9</td>
-      <td>3.8</td>
-      <td>6.4</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>6.4</td>
-      <td>2.8</td>
-      <td>5.6</td>
-      <td>2.2</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>6.3</td>
-      <td>2.8</td>
-      <td>5.1</td>
-      <td>1.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>6.1</td>
-      <td>2.6</td>
-      <td>5.6</td>
-      <td>1.4</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>7.7</td>
-      <td>3.0</td>
-      <td>6.1</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>6.3</td>
-      <td>3.4</td>
-      <td>5.6</td>
-      <td>2.4</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>6.4</td>
-      <td>3.1</td>
-      <td>5.5</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>6.0</td>
-      <td>3.0</td>
-      <td>4.8</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>6.9</td>
-      <td>3.1</td>
-      <td>5.4</td>
-      <td>2.1</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>6.7</td>
-      <td>3.1</td>
-      <td>5.6</td>
-      <td>2.4</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>6.9</td>
-      <td>3.1</td>
-      <td>5.1</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>5.8</td>
-      <td>2.7</td>
-      <td>5.1</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>6.7</td>
-      <td>3.3</td>
-      <td>5.7</td>
-      <td>2.5</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>Iris-virginica</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
-<section id="id10">
-<h2>คำนวณสถิติของแต่ละคอลัมน์<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="id9">
+<img alt="../../_images/row-column2.png" src="../../_images/row-column2.png" />
+<figcaption>
+<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>ส่วนประกอบอีกอย่างหนึ่งที่สำคัญของข้อมูลแบบตารางคือ พจนานุกรมข้อมูล (data dictionary) ซึ่งเป็นเอกสารที่ระบุความหมายของแต่ละคอลัมน์ และค่าข้อมูลที่เป็นไปได้ของแต่ละคอลัมน์ ซึ่งช่วยให้ผู้ใช้เข้าใจข้อมูลได้ง่ายขึ้น และช่วยให้ผู้ใช้สามารถใช้ข้อมูลได้อย่างถูกต้องและเหมาะสม พจนานุกรมข้อมูลนี้มักจะถูกเก็บแยกออกมาอีกไฟล์หนึ่ง หรือเป็นส่วนหนึ่งของเอกสารคู่มือการใช้งานข้อมูล แต่ในหลาย ๆ กรณีผู้ดูแลรักษาข้อมูลอาจจะไม่ได้เตรียมพจนานุกรมข้อมูลเอาไว้ให้พร้อมใช้ ผู้ใช้ข้อมูลจะต้องไปสอบถามผู้ดูแลรักษาข้อมูลหรือค้นหาข้อมูลเพิ่มเติมเองโดยตรง ตัวอย่างของพจนานุกรมข้อมูลของข้อมูลการรีวิวสายการบิน อาจมีดังนี้</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>method</p></th>
-<th class="head"><p>การใช้</p></th>
+<tr class="row-odd"><th class="head"><p>ชื่อคอลัมน์</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+<th class="head"><p>ค่าที่เป็นไปได้</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.sum()</span></code></p></td>
-<td><p>หาผลรวม</p></td>
+<tr class="row-even"><td><p>Airline Name</p></td>
+<td><p>ชื่อสายการบิน</p></td>
+<td><p>ชื่อสายการบิน</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code></p></td>
-<td><p>หาจำนวนแถวที่มีข้อมูลอยู่</p></td>
+<tr class="row-odd"><td><p>Rating</p></td>
+<td><p>คะแนนการรีวิว</p></td>
+<td><p>1-10</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.median()</span></code></p></td>
-<td><p>หาค่ามัธยฐาน</p></td>
+<tr class="row-even"><td><p>Seat Type</p></td>
+<td><p>ประเภทที่นั่ง</p></td>
+<td><p>Economy, Premium Economy, Business, First</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code></p></td>
-<td><p>หาค่าเฉลี่ย</p></td>
+<tr class="row-odd"><td><p>Verified</p></td>
+<td><p>การยืนยันตัวตน</p></td>
+<td><p>TRUE, FALSE</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code></p></td>
-<td><p>หาค่าต่ำสุด</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code></p></td>
-<td><p>หาค่าสูงสุด</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.var()</span></code></p></td>
-<td><p>หาความแปรปรวน (variance)</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.std()</span></code></p></td>
-<td><p>หาค่าเบี่ยงเบนมาตรฐาน (standard deviation)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.describe()</span></code></p></td>
-<td><p>หาค่าสถิติทั่วไป เช่น ค่าเฉลี่ย ค่าสูงสุด ต่ำสุด ฯลฯ</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code></p></td>
-<td><p>นับว่าพบแต่ละค่ามากน้อยแค่ไหน (หา distribution</p></td>
+<tr class="row-even"><td><p>Date Flown</p></td>
+<td><p>วันที่เดินทาง</p></td>
+<td><p>วันที่เดินทางเป็นเดือนและปี</p></td>
 </tr>
 </tbody>
 </table>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">mydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;paolong&#39;</span><span class="p">,</span><span class="s1">&#39;fluke&#39;</span><span class="p">,</span><span class="s1">&#39;panyut&#39;</span><span class="p">,</span><span class="s1">&#39;bew&#39;</span><span class="p">],</span>
-     <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span>
-     <span class="s1">&#39;attendance&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">)</span>
-<span class="n">mydata</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student name</th>
-      <th>age</th>
-      <th>attendance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>pang</td>
-      <td>21</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>dream</td>
-      <td>21</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>tangmay</td>
-      <td>22</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>paolong</td>
-      <td>22</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>fluke</td>
-      <td>17</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>panyut</td>
-      <td>20</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>bew</td>
-      <td>19</td>
-      <td>16</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.285714285714285
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     7.000000
-mean     20.285714
-std       1.799471
-min      17.000000
-25%      19.500000
-50%      21.000000
-75%      21.500000
-max      22.000000
-Name: age, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-      <th>attendance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>7.000000</td>
-      <td>7.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>20.285714</td>
-      <td>15.000000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.799471</td>
-      <td>1.914854</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>17.000000</td>
-      <td>11.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>19.500000</td>
-      <td>15.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>21.000000</td>
-      <td>16.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>21.500000</td>
-      <td>16.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>22.000000</td>
-      <td>16.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21    2
-22    2
-17    1
-20    1
-19    1
-Name: age, dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="column">
-<h2>การสร้าง column เพิ่ม<a class="headerlink" href="#column" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">apply</span></code> คือการใช้ฟังก์ชันที่เขียนขึ้นมาเอง</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;old&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">20</span>
-<span class="n">mydata</span>
+<section id="id2">
+<h2>กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>ไลบรารี pandas มีฟังก์ชันต่าง ๆ ที่ช่วยในการจัดการข้อมูลแบบตาราง ซึ่งเป็นกระบวนการที่สำคัญในการวิเคราะห์ข้อมูล โดยปกติแล้วกระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์จะประกอบด้วยขั้นตอนดังนี้</p>
+<ol class="arabic simple">
+<li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
+<li><p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis: EDA) คือ การวิเคราะห์เพื่อให้เราเข้าใจข้อมูลคร่าว ๆ เนื่องจากข้อมูลมักจะมีขนาดใหญ่มาก เราไม่สามารถนำข้อมูลออกมาดูได้ทั้งหมด เรามักจะทำ EDA โดยดูว่าข้อมูลมีทั้งหมดที่แถว แต่ละคอลัมน์เก็บข้อมูลอะไรอยู่บ้าง แต่ละคอลัมน์มีค่าสูงสุด ต่ำสุดเท่าไร ถ้าเป็นข้อความ ข้อความที่ยาวสุดยาวกี่ตัวอักษร สั้นสุดกี่ตัวอักษร เป็นต้น</p></li>
+<li><p>การขยำข้อมูล (data munging ซึ่งเป็นศัพท์แสลงที่ใช้ในวงการวิทยาการข้อมูล) หรือ การทะเลาะกับข้อมูล (data wrangling ซึ่งเป็นศัพท์ที่ทางการขึ้น) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ อาทิ ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ ลบแถวที่ซ้ำซ้อนกันออกไป แปลงหน่วยวัด แปลงไทป์ของข้อมูลในแต่ละคอลัมน์ หรือควบรวมเอาข้อมูลจากหลายแหล่งมารวมกัน</p></li>
+</ol>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis)</p>
+</aside>
+</section>
+<section id="id3">
+<h2>รูปแบบการจัดเก็บข้อมูลแบบตาราง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>ข้อมูลแบบตารางสามารถเก็บได้ในหลายรูปแบบไฟล์ (file format) ที่มีลักษณะและคุณสมบัติที่ต่างกัน ทำให้เหมาะสมกับการใช้งานในสถานการณ์ที่ต่างกันด้วย รูปแบบไฟล์ที่พบบ่อยมีดังนี้</p>
+<section id="csv-comma-separated-value-tsv-tab-separated-value">
+<h3>ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)<a class="headerlink" href="#csv-comma-separated-value-tsv-tab-separated-value" title="Permalink to this heading">#</a></h3>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>อักขระคั่น (delimiter)</p>
+</aside>
+<p>ไฟล์ CSV (comma-separated value) สกุลของไฟล์คือ .csv ถูกจัดเก็บในลักษณะที่ง่ายและเป็นระเบียบเพื่อให้ง่ายต่อการเข้าใจและใช้งานได้กับโปรแกรมหลากหลายชนิด หลักการหลักของการเก็บข้อมูลแบบ CSV ได้แก่</p>
+<ol class="arabic simple">
+<li><p>ใช้เครื่องหมายจุลภาค (comma) เป็นอักขระคั่น (delimiter) ซึ่งเป็นอักขระที่ทำหน้าที่ตัวแบ่งระหว่างข้อมูลในแต่ละคอลัมน์2. ใช้สัญลักษณ์พิเศษ <code class="docutils literal notranslate"><span class="pre">\n</span></code> ในการบ่งบอกว่าข้อมูลในแถวนั้นจบลงแล้ว และข้อมูลในแถวถัดไปจะเริ่มต้นขึ้นใหม่ถ้าหากยังมีข้อมูลเพิ่มเติมอีก</p></li>
+<li><p>ข้อมูลที่เป็นข้อความจะถูกครอบด้วยเครื่องหมายคำพูด เพื่อป้องกันการสับสนกับอักขระคั่น หรืออักขระที่ใช้ในการขึ้นบรรทัดใหม่</p></li>
+</ol>
+<p>โดยปกติไฟล์ CSV จะเริ่มต้นด้วยบรรทัดหัวตารางที่บอกชื่อคอลัมน์ ชื่อคอลัมน์แต่ละชื่อถูกแบ่งด้วยจุลภาค ตามด้วยข้อมูลในแต่ละแถว โดยข้อมูลแต่ละชิ้นในแถวเดียวกันจะถูกแบ่งออกจากกันด้วยจุลภาค
+แต่ละแถวของข้อมูลจะถูกแยกออกจากกันด้วยการขึ้นบรรทัดใหม่ หากตัวข้อมูลเองมีเครื่องหมายจุลภาคหรือการขึ้นบรรทัดใหม่ ข้อมูลนี้ต้องถูกครอบด้วยเครื่องหมายคำพูดเพื่อไม่ให้เกิดความสับสนในโครงสร้างของไฟล์ ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Airline</span> <span class="n">Name</span><span class="p">,</span><span class="n">Rating</span><span class="p">,</span><span class="n">Seat</span> <span class="n">Type</span><span class="p">,</span><span class="n">Verified</span><span class="p">,</span><span class="n">Date</span> <span class="n">Flown</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">March</span> <span class="mi">2019</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">June</span> <span class="mi">2019</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">FALSE</span><span class="p">,</span><span class="n">November</span> <span class="mi">2021</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">FALSE</span><span class="p">,</span><span class="n">April</span> <span class="mi">2020</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">July</span> <span class="mi">2023</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">Business</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">January</span> <span class="mi">2020</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">Business</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">February</span> <span class="mi">2020</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">April</span> <span class="mi">2023</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">Premium</span> <span class="n">Economy</span><span class="p">,</span><span class="n">FALSE</span><span class="p">,</span><span class="n">January</span> <span class="mi">2023</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">July</span> <span class="mi">2023</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student name</th>
-      <th>age</th>
-      <th>attendance</th>
-      <th>old</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>pang</td>
-      <td>21</td>
-      <td>16</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>dream</td>
-      <td>21</td>
-      <td>14</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>tangmay</td>
-      <td>22</td>
-      <td>16</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>paolong</td>
-      <td>22</td>
-      <td>11</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>fluke</td>
-      <td>17</td>
-      <td>16</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>panyut</td>
-      <td>20</td>
-      <td>16</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>bew</td>
-      <td>19</td>
-      <td>16</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age next year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<p>ชุดข้อมูลในไฟล์ CSV ข้างต้นประกอบไปด้วยคอลัมน์ 5 คอลัมน์ ชื่อว่า</p>
+<ul class="simple">
+<li><p>Airline Name</p></li>
+<li><p>Rating</p></li>
+<li><p>Seat Type</p></li>
+<li><p>Verified</p></li>
+<li><p>Date Flown</p></li>
+</ul>
+<p>ซึ่งถูกเก็บอยู่ในหัวตารางในบรรทัดแรก และประกอบไปด้วยแถว 10
+แถวซึ่งเก็บข้อมูลของการรีวิวให้คะแนนจากผู้โดยสารของสายการบินต่างๆ แต่ละคน แต่ละเที่ยวบิน</p>
+<p>รูปแบบไฟล์ CSV คือมีโครงสร้างที่ง่าย ยืดหยุ่น และสามารถใช้กับโปรแกรมได้หลากหลายตัว จึงเป็นที่นิยมมาก ตัวอย่างเช่น เราสามารถใช้ visual studio code เปิดไฟล์ csv เพื่อตรวจสอบข้อมูลเบื้องต้นได้ เพราะเป็นรูปแบบไฟล์ที่มนุษย์อ่านได้ (human-readable format) และเป็นจะเป็นรูปแบบไฟล์ที่เราจะใช้เป็นตัวอย่างในบทนี้ อย่างไรก็ตามหากตัวข้อมูลเองมีการขึ้นบรรทัดใหม่ เช่น เรียงความ บทความ หรือทวีต จะทำให้ไฟล์ซับซ้อนขึ้นมาก เพราะว่าต้องมีการแบ่งแยกว่าการขึ้นบรรทัดใหม่แสดงถึง แถวใหม่ หรือเป็นการขึ้นบรรทัดใหม่ในสตริงที่เก็บอยู่ในตัวข้อมูลเอง ทำให้ไฟล์ csv ที่เรานับว่าเป็นไฟลที่มนุษย์อ่านได้กลายเป็นไฟล์ที่อ่านได้ยาก หากเราใช้ไลบรารี pandas หรือโปรแกรม Excel ในการจัดการข้อมูล CSV ตัวไลบรารีเองมักจะแก้ไขปัญหาเหล่านี้ให้</p>
+<p>นอกจากนั้นยังมีไฟล์ตระกูล .tsv ซึ่งย่อมาจาก tab-separated value ไฟล์ TSV ที่จริงแล้วมีรูปแบบการเก็บข้อมูลใกล้เคียงกันกับไฟล์ CSV เพียงแค่เปลี่ยนตัวแบ่งระหว่างข้อมูลในแต่ละคอลัมน์เป็นแท็บ (<code class="docutils literal notranslate"><span class="pre">\t</span></code>) แทนที่จุลภาค ข้อดีของการใช้แท็บแทนจุลภาคคือ แท็บแสดงผลออกมาเป็นการเว้นระยะทำให้เห็นความแบ่งแยกระหว่างคอลัมน์ที่ชัดเจนและเป็นระเบียบ ได้ดีกว่าเมื่อเปิดด้วยโปรแกรมแก้ไขข้อความธรรมดา ทำให้เหมาะสำหรับการตรวจสอบข้อมูลด้วยตาเปล่าหรือการปรับแต่งข้อมูลเบื้องต้น ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Airline</span> <span class="n">Name</span>	<span class="n">Rating</span>	<span class="n">Seat</span> <span class="n">Type</span>	<span class="n">Verified</span>	<span class="n">Date</span> <span class="n">Flown</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span>	<span class="mi">6</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">March</span> <span class="mi">2019</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span>	<span class="mi">9</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">June</span> <span class="mi">2019</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span>	<span class="mi">1</span>	<span class="n">Economy</span>	<span class="n">FALSE</span>	<span class="n">November</span> <span class="mi">2021</span>
+<span class="n">Bangkok</span> <span class="n">Airways</span>	<span class="mi">9</span>	<span class="n">Economy</span>	<span class="n">FALSE</span>	<span class="n">April</span> <span class="mi">2020</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span>	<span class="mi">1</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">July</span> <span class="mi">2023</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span>	<span class="mi">9</span>	<span class="n">Business</span>	<span class="n">TRUE</span>	<span class="n">January</span> <span class="mi">2020</span>
+<span class="n">Garuda</span> <span class="n">Indonesia</span>	<span class="mi">9</span>	<span class="n">Business</span>	<span class="n">TRUE</span>	<span class="n">February</span> <span class="mi">2020</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span>	<span class="mi">8</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">April</span> <span class="mi">2023</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span>	<span class="mi">7</span>	<span class="n">Premium</span> <span class="n">Economy</span>	<span class="n">FALSE</span>	<span class="n">January</span> <span class="mi">2023</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span>	<span class="mi">1</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">July</span> <span class="mi">2023</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age next year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">plus_one</span><span class="p">)</span>
+<p>จากตัวอย่างข้างต้นจะเห็นว่าข้อมูลในแต่ละคอลัมน์ซึ่งถูกแบ่งด้วยแท็บ ซึ่งถูกแสดงผลออกมาเป็นเหมือนการเคาะเว้นระยะทำให้เห็นความแบ่งแยกระหว่างคอลัมน์ที่ชัดเจนและเป็นระเบียบขึ้น แต่ว่าแต่ละคอลัมน์อาจจะไม่แสดงผลตรงกันหมดทุกบรรทัด ขึ้นอยู่กับความสั้นยาวของตัวข้อมูลในแต่ละคอลัมน์เอง</p>
+<p>ทั้งไฟล์ CSV และ TSV ต่างเป็นไฟล์ที่ได้รับความนิยมในวงการวิทยาการข้อมูล เนื่องจากมีโครงสร้างที่ง่าย มนุษย์สามารถอ่านได้ และสามารถใช้กับโปรแกรมหลายตัวได้ ทำให้เหมาะสำหรับการใช้งานในสถานการณ์ที่ต่างกัน รวมถึงรองรับการบันทึกชุดข้อมูลขนาดใหญ่อีกด้วย</p>
+</section>
+<section id="excel">
+<h3>ไฟล์ Excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h3>
+<p>ไฟล์ Excel เป็นรูปแบบไฟล์ที่ใช้กับโปรแกรม Microsoft Excel ซึ่งเป็นส่วนหนึ่งของชุดโปรแกรม Microsoft Office โดยไฟล์ Excel มักมีนามสกุลไฟล์เป็น .xls หรือ .xlsx สำหรับ Microsoft Office เวอร์ชันใหม่กว่า ซึ่งใช้รูปแบบการเก็บข้อมูลที่ซับซ้อนและสามารถรองรับคุณสมบัติต่างๆ ได้หลากหลายมากกว่า CSV ได้แก่</p>
+<ol class="arabic simple">
+<li><p><em>เวิร์กชีต (worksheet)</em> ข้อมูลใน Excel จะถูกจัดเก็บในเวิร์กชีตซึ่งแต่ละเวิร์กชีตสามารถมีข้อมูลแบบตารางได้ โดยผู้ใช้สามารถมีหลายเวิร์กชีตภายในไฟล์เดียว</p></li>
+<li><p><em>เซลล์ (cell)</em> ข้อมูลในเวิร์กชีตจะถูกจัดเก็บในเซลล์ โดยแต่ละเซลล์สามารถรองรับข้อมูลได้ทั้งข้อความ, ตัวเลข, สูตรการคำนวณ, หรือแม้กระทั่งกราฟิก</p></li>
+<li><p><em>สูตร</em> Excel รองรับสูตรการคำนวณที่ช่วยให้สามารถประมวลผลข้อมูลจากเซลล์ต่างๆ และอัปเดตผลลัพธ์อัตโนมัติเมื่อข้อมูลเปลี่ยนแปลง</p></li>
+<li><p><em>การจัดรูปแบบ</em> สามารถกำหนดรูปแบบให้กับข้อมูลได้อย่างละเอียด เช่น สี, ขนาด, และประเภทของตัวอักษร, การจัดตำแหน่ง, การใส่กรอบเซลล์, และอื่นๆ</p></li>
+</ol>
+<p>การจัดการและวิเคราะห์ข้อมูลด้วยโปรแกรม Microsoft Excel และไฟล์ตระกูล .xlsx เป็นที่นิยมเป็นอย่างมาก เนื่องจากมีฟีเจอร์หลากหลาย รองรับงานคำนวณตั้งแต่ขั้นเบื้องต้นจนไปถึงขั้นสูง ใช้งานค่อนข้างสะดวกสบายมีการแสดงผลที่สวยงาม สามารถจัดรูปแบบให้เกิดความโดดเด่น และความชัดเจนในการวิเคราะห์ข้อมูลได้ ทักษะการใช้โปรแกรมประเภทนี้เป็นทักษะจำเป็นอย่างยิ่งสำหรับนักวิเคราะห์ข้อมูล และนักวิทยาการข้อมูลทุกคน แต่ว่าข้อจำกัดที่สำคัญที่สุดของการใช้ Excel คือการรับมือกับข้อมูลขนาดใหญ่ที่มีจำนวนคอลัมน์มากจนไม่สามารถแสดงผลออกมาบนหน้าจอได้หมด หรือมีจำนวนแถวมากจนตัวโปรแกรมและเครื่องคอมพิวเตอร์ที่เราใช้ไม่สามารถเปิดขึ้นมาได้ ไฟล์ CSV เป็นรูปแบบการจัดเก็บไฟล์ที่เรามักเลือกใช้หากข้อมูลมีขนาดใหญ่</p>
+</section>
+</section>
+<section id="dataframe">
+<h2>ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์<a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h2>
+<p>ดาตาเฟรม (dataframe) เป็นโครงสร้างข้อมูลหลักของ pandas ที่ใช้ในการจัดเก็บข้อมูลแบบตาราง เป็นโครงสร้างข้อมูลสองมิติที่คล้ายคลึงกับตารางข้อมูลที่ใช้ในโปรแกรม Excel หรือโปรแกรมตารางคำนวณอื่น ๆ ดาตาเฟรม ใช้เพื่อจัดเก็บข้อมูลในรูปแบบที่จัดระเบียบเป็นแถวและคอลัมน์ ซึ่งแต่ละแถวและคอลัมน์สามารถมีป้ายกำกับได้ เพราะฉะนั้นขั้นตอนแรกของการเตรียมข้อมูลสำหรับการวิเคราะห์ คือ การโหลดเอาข้อมูลมาใส่ในดาตาเฟรม</p>
+<section id="id4">
+<h3>การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารีเป็นวิธีที่ถูกใช้ในหลายสถานการณ์ เมื่อทำงานกับไลบรารี pandas เช่น</p>
+<ul class="simple">
+<li><p>การแปลงข้อมูลจาก API หรือ JSON: ข้อมูลที่ได้จากการเรียกใช้ API หรือจากไฟล์ JSON มักจะอยู่ในรูปแบบของดิกชันนารีหรือลิสต์ของดิกชันนารี การแปลงโดยตรงเหล่านี้เข้าสู่ดาตาเฟรม ช่วยให้สามารถวิเคราะห์และประมวลผลข้อมูลได้ง่ายขึ้น</p></li>
+<li><p>การรวมข้อมูลจากหลายแหล่ง: ถ้ามีการรวบรวมข้อมูลจากหลาย ๆ แหล่งที่ให้รูปแบบข้อมูลที่ต่างกัน เรามักจะเขียนโค้ดเพิ่มเติมเพื่อรวบรวมเข้ามาใส่ดิกชันนารีซึ่งเป็นโครงสร้างข้อมูลที่ใช้ง่าย  การสร้างดาตาเฟรม จากลิสต์ของดิกชันนารีทำให้การรวมข้อมูลเหล่านี้เป็นกลุ่มก้อนเดียวกัน เพื่อนำมาแสดงผล และวิเคราะห์ได้อย่างสะดวกขึ้น</p></li>
+</ul>
+<p>ตัวอย่าง สมมติว่าเรานำชื่อนักเรียนมาจากหน้าเว็บไซต์ และต้องการจัดเก็บข้อมูลนักเรียนเหล่านี้ในรูปแบบของดาตาเฟรม โดยมีคอลัมน์เป็นชื่อนักเรียนและอายุ ข้อมูลนักเรียนเหล่านี้จะถูกเก็บในลิสต์ของดิกชันนารี ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> 
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span><span class="s1">&#39;tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+    <span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age next year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">number</span><span class="p">:</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<p>เราสามารถสร้างดาตาเฟรมจากลิสต์ของดิกชันนารีดังกล่าวได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;pang&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> 
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span> <span class="s1">&#39;dream&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">&#39;student name&#39;</span><span class="p">:</span><span class="s1">&#39;tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">students</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span>
+<p>เมื่อรันโค้ดด้านบนเสร็จเรียบร้อย ค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">df</span></code> จะเป็นดาตาเฟรมที่มีคอลัมน์ <code class="docutils literal notranslate"><span class="pre">student</span> <span class="pre">name</span></code> และ <code class="docutils literal notranslate"><span class="pre">age</span></code> และมีแถวที่เก็บข้อมูลของนักเรียนทั้งหมด 3 คน ดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">student</span> <span class="n">name</span>  <span class="n">age</span>
+<span class="mi">0</span>         <span class="n">pang</span>   <span class="mi">20</span>
+<span class="mi">1</span>        <span class="n">dream</span>   <span class="mi">19</span>
+<span class="mi">2</span>      <span class="n">tangmay</span>   <span class="mi">19</span>
 </pre></div>
 </div>
+<p>ถ้าหากเรารันโค้ดข้างต้นบน Jupyter notebook หรือ Visual Studio Code หรือ Google Colab เครื่องจะแสดงผลตารางออกมาอย่างสวยงาม รวมถึงสามารถดูตารางแบบ interactive ใกล้เคียงกับการใช้งาน Excel ได้ หรือใช้ลูกเล่นในการสร้างกราฟอัตโนมัติต่อได้ แต่ถ้าเรารันโค้ดด้านบนบนโปรแกรมไพธอน ทั่วไป จะแสดงผลออกมาเป็นข้อความเท่านั้น</p>
+</section>
+<section id="csv">
+<h3>การสร้างดาตาเฟรมจากไฟล์ CSV<a class="headerlink" href="#csv" title="Permalink to this heading">#</a></h3>
+<p>กรณีส่วนใหญ่ของการวิเคราะห์ข้อมูล เราจะต้องโหลดข้อมูลจากไฟล์ CSV ซึ่งเป็นรูปแบบไฟล์ที่ใช้งานกันอย่างแพร่หลาย เพราะใช้งานได้ง่าย ใช้งานได้ด้วยหลากหลายโปรแกรม pandas มีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>  ซึ่งจะโหลดข้อมูลจากไฟล์ CSV และสร้างดาตาเฟรมจากข้อมูลที่ได้ ตัวอย่างเช่น ถ้าเรามีไฟล์ CSV ที่เก็บข้อมูลการรีวิวของผู้โดยสารของสายการบินต่าง ๆ ชื่อว่า <code class="docutils literal notranslate"><span class="pre">airline_reviews.csv</span></code> เราสามารถอ่านไฟล์ดังกล่าวและโหลดเข้ามาใส่ในดาตาเฟรม ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;airline-reviews-small.csv&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student name</th>
-      <th>age</th>
-      <th>attendance</th>
-      <th>old</th>
-      <th>age next year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>pang</td>
-      <td>21</td>
-      <td>16</td>
-      <td>True</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>dream</td>
-      <td>21</td>
-      <td>14</td>
-      <td>True</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>tangmay</td>
-      <td>22</td>
-      <td>16</td>
-      <td>True</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>paolong</td>
-      <td>22</td>
-      <td>11</td>
-      <td>True</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>fluke</td>
-      <td>17</td>
-      <td>16</td>
-      <td>False</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>panyut</td>
-      <td>20</td>
-      <td>16</td>
-      <td>False</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>bew</td>
-      <td>19</td>
-      <td>16</td>
-      <td>False</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<p>ถ้าหากรันได้อย่างราบรื่น ไพธอนจะไม่แสดง error และตัวแปร <code class="docutils literal notranslate"><span class="pre">df</span></code> จะเป็นดาตาเฟรมที่เก็บข้อมูลจากไฟล์ CSV ที่เราโหลดเข้ามา โดยปกติแล้ว pandas จะอ่านไฟล์ CSV และสร้างดาตาเฟรมจากข้อมูลที่ได้ เรามักจะติดนิสัยการใช้ชื่อตัวแปร <code class="docutils literal notranslate"><span class="pre">df</span></code> ในการเก็บดาตาเฟรม เพราะว่าเป็นชื่อที่สั้น และชุมชนนักวิเคราะห์ข้อมูลนิยมใช้กัน แต่ผู้เขียนมีความเห็นว่าเราควรตั้งชื่อตัวแปรให้แสดงถึงชุดข้อมูลที่เราเก็บอยู่ เช่น <code class="docutils literal notranslate"><span class="pre">airline_reviews</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> จะช่วยให้เราเข้าใจว่าตัวแปรเก็บข้อมูลเป็นชุดข้อมูลของรีวิวของสายการบิน และเป็นดาตาเฟรม แน่นอนว่าชื่อตัวแปรเหล่านี้ยาวกว่าการเรียกว่า <code class="docutils literal notranslate"><span class="pre">df</span></code> เฉย ๆ แต่ว่าชื่อที่เหมาะสมจะช่วยให้เราเข้าใจโค้ดของเราได้ง่ายขึ้น รวมถึงในสมัยนี้เรามักใช้ IDE ที่ช่วยในการเติมชื่อตัวแปรให้ ความยาวของตัวแปรเองจึงไม่ควรจะเป็นประเด็นในการเลือกชื่อมากเหมือนก่อน เราจึงจะเรียกดาตาเฟรมที่เก็บข้อมูลรีวิวของสายการบินว่า <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ในตัวอย่างนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">airline_reviews_small</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;airline-reviews-small.csv&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
+<p>ปัญหาที่พบบ่อยในการอ่านไฟล์ CSV คือ ไฟล์มีการจัดรูปแบบไม่เหมาะสม เช่น อาจจะไม่ได้ใช้จุลภาคในการแบ่งคอลัมน์จริง อาจจะใช้ <code class="docutils literal notranslate"><span class="pre">\t</span></code> เป็นอักขระคั่นแทนแต่ว่าใช้สกุลไฟล์เป็น .csv  หรือว่าแต่ละแถวมีจำนวนอักขระคั่นไม่เท่ากันทุกแถว ในกรณีเหล่านี้เราต้องเปิดไฟล์และตรวจสอบว่าข้อมูลถูกแบ่งอย่างถูกต้องหรือไม่ และแก้ไขข้อมูลด้วยมือให้ถูกต้องก่อนที่จะโหลดข้อมูลเข้ามาในดาตาเฟรม</p>
+</section>
+</section>
+<section id="id5">
+<h2>การตรวจสอบส่วนประกอบหลักของดาตาเฟรม<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>ส่วนประกอบหลักของดาตาเฟรมล้อไปกับส่วนประกอบหลักของข้อมูลแบบตาราง ได้แก่</p>
+<ol class="arabic simple">
+<li><p>แถว</p></li>
+<li><p>คอลัมน์</p></li>
+<li><p>หัวตาราง</p></li>
+<li><p>ดัชนี (index)</p></li>
+<li><p>ตัวข้อมูล</p></li>
+</ol>
+<p>ในการเตรียมข้อมูลเบื้องต้น ควรมีการตรวจสอบข้อมูลดังนี้</p>
+<section id="id6">
+<h3>ตรวจสอบจำนวนแถวและคอลัมน์<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>เมื่อได้ข้อมูลมาทุกครั้งเราควรตรวจสอบว่าปริมาณข้อมูลตรงกับที่ควรจะเป็นหรือไม่ และมีปริมาณมากพอสำหรับการวิเคราะห์ที่ต้องการทำต่อไปหรือไม่ และจำนวนคอลัมน์ตรงกับที่พจนานุกรมข้อมูล หรือตรงกับจำนวนคอลัมน์ที่ควรจะเป็นหรือไม่ เราสามารถตรวจสอบจำนวนแถวและจำนวนคอลัมน์ของดาตาเฟรมได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">shape</span></code> ซึ่งจะแสดงจำนวนแถวและจำนวนคอลัมน์ของดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<p>จะแสดงผลลัพธ์ออกมาเป็นทูเปิลที่มีสมาชิกสองตัว คือ จำนวนแถวและจำนวนคอลัมน์ ตัวอย่างเช่น ถ้าดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> มี 10 แถว และ 5 คอลัมน์ ผลลัพธ์ที่ได้จะเป็น <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">5)</span></code></p>
+<p>หรือหากเราต้องการดูเฉพาะจำนวนแถวเพียงอย่างเดียวสามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> ได้เหมือนกับการหาจำนวนข้อมูลในลิสต์ เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">airline_reviews_small</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>จะแสดงผลลัพธ์ออกมาเป็นจำนวนแถวของดาตาเฟรม</p>
+</section>
+<section id="id7">
+<h3>ตรวจสอบและแก้ไขหัวตาราง<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>เราควรเปลี่ยนชื่อคอลัมน์ที่อยู่ในหัวตารางให้สื่อความหมาย และเข้าใจง่าย หัวตารางของดาตาเฟรมจะถูกเก็บในรูปของลิสต์ของสตริง ซึ่งแสดงชื่อของคอลัมน์ หากเราต้องการดูหัวตารางของดาตาเฟรม เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">columns</span></code> ได้ ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+<p>จะแสดงผลลัพธ์ออกมาเป็นอ็อบเจกต์ชื่อว่า <code class="docutils literal notranslate"><span class="pre">Index</span></code> แต่สามารถนำมาใช้ในลักษณะเดียวกันกับลิสต์ได้ ดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Verified&#39;</span><span class="p">,</span> <span class="s1">&#39;Date Flown&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>สังเกตได้ว่าคำสั่งไม่มี <code class="docutils literal notranslate"><span class="pre">()</span></code> ต่อท้าย ซึ่งแสดงว่าเป็นการเรียกลักษณะประจำ (attribute) ของดาตาเฟรม และไม่ใช่การเรียกฟังก์ชัน เพราะฉะนั้นเราสามารถเปลี่ยนชื่อคอลัมน์ทั้งหมด โดยให้ค่าใหม่กับลักษณะประจำได้ วิธีที่สะดวกที่สุดคือคัดลอกลิสต์ของชื่อคอลัมน์เดิมมา และแก้ไขชื่อคอลัมน์ที่ต้องการเปลี่ยน และให้ค่าใหม่กับลักษณะประจำ ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Verified&#39;</span><span class="p">,</span> <span class="s1">&#39;Date Flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>จากนั้นให้แก้สตริงที่อยู่ในลิสต์ตามที่เห็นควร เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Airline&#39;</span><span class="p">,</span> <span class="s1">&#39;Overall rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat type&#39;</span><span class="p">,</span> <span class="s1">&#39;Verified&#39;</span><span class="p">,</span> <span class="s1">&#39;Date flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Review text&#39;</span><span class="p">]</span>
+<span class="c1"># เติมรูป</span>
+</pre></div>
+</div>
+<p>การแก้ไขหัวตารางหรือชื่อคอลัมน์ด้วยวิธีนี้มีข้อดี คือ ทำให้เราบันทึกชื่อคอลัมน์ทั้งหมดของตารางนี้ไว้ในโค้ดของเราโดยปริยาย ทำให้กลับมาดูโค้ดเราในภายหลังแล้วเข้าใจได้ง่าย และทราบทันทีว่าคอลัมน์มีชื่อว่าอะไรบ้าง</p>
+<p>แต่ถ้าหากตารางมีคอลัมน์เยอะมาก ๆ เราไม่อยากได้ลิสต์ที่ยาวมาก ๆ มาอยู่ในโค้ดของเรา เราสามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">df.rename</span></code> ในการเปลี่ยนชื่อคอลัมน์ได้ เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Airline&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Overall rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">:</span> <span class="s1">&#39;Seat type&#39;</span><span class="p">,</span> <span class="s1">&#39;Date Flown&#39;</span><span class="p">:</span> <span class="s1">&#39;Date flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">:</span> <span class="s1">&#39;Review text&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># เติมรูป</span>
+</pre></div>
+</div>
+<p>สังเกตว่าคำสั่งมีการใช้พารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ซึ่งหมายความว่าเราจะแก้ไขคอลัมน์ในตัวดาตาเฟรมเดิม และไม่ได้สร้างดาตาเฟรมใหม่ขึ้นมา ถ้าเราไม่ใส่พารามิเตอร์นี้ คำสั่งจะสร้างดาตาเฟรมใหม่ที่มีคอลัมน์ที่แก้ไขแล้ว และเราต้องเก็บค่าใหม่ไว้ในตัวแปรใหม่ เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">:</span> <span class="s1">&#39;Airline&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Overall rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">:</span> <span class="s1">&#39;Seat type&#39;</span><span class="p">,</span> <span class="s1">&#39;Date Flown&#39;</span><span class="p">:</span> <span class="s1">&#39;Date flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">:</span> <span class="s1">&#39;Review text&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>หากเราต้องการรันคำสั่งที่มีการเปลี่ยนแปลงค่าของตัวดาตาเฟรม เราควรรันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน และให้ Jupyter notebook แสดงผลออกมาและตรวจสอบว่าผลตรงกับที่คาดหวังหรือไม่ จากนั้นค่อยรันคำสั่งเดิม แต่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> และรันอีกครั้ง</p>
+</section>
+<section id="id8">
+<h3>ตรวจสอบและแก้ไขดัชนี<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -3251,11 +754,11 @@ Name: age, dtype: int64
       </div>
     </a>
     <a class="right-next"
-       href="2-example-pandas.html"
+       href="1-pandas-old.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
+        <p class="prev-next-title">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -3277,20 +780,24 @@ Name: age, dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การจัดการข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ฟังก์ชันพื้นฐานที่ควรทราบ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">การสร้าง <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">โหลดข้อมูลเข้า <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> จากไฟล์ข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การเปลี่ยนชื่อคอลัมน์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">เปลี่ยนแค่บางคอลัมน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">เปลี่ยนทุกคอลัมน์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-comma-separated-value-tsv-tab-separated-value">ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">ไฟล์ Excel</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การเลือกแค่บางคอลัมน์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การเลือกบางแถว</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การเลือกแถวแบบใช้บูลีน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">คำนวณสถิติของแต่ละคอลัมน์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column">การสร้าง column เพิ่ม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv">การสร้างดาตาเฟรมจากไฟล์ CSV</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบและแก้ไขหัวตาราง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขดัชนี</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
