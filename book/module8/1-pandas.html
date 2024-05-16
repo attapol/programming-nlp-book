@@ -434,6 +434,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
@@ -449,7 +450,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบและแก้ไขหัวตาราง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขดัชนี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบแบบชนิดของข้อมูล</a></li>
 </ul>
 </li>
 </ul>
@@ -473,6 +474,16 @@ document.write(`
 <p>ในการจัดการกับข้อมูลชนิดนี้ เรามักใช้ pandas ซึ่งเป็นไลบรารีของภาษาไพธอน ที่ประกอบไปด้วยเครื่องมือระดับสูงสำหรับการจัดการข้อมูลแบบตาราง ไลบรารี pandas ทำงานร่วมกับข้อมูลขนาดใหญ่ได้ดี รวมถึงมีฟังก์ชันต่างๆ สำหรับการเลือก กรอง และปรับแต่งข้อมูลได้อย่างง่ายดาย นอกจากนี้ยังสามารถรวมข้อมูลจากแหล่งข้อมูลหลายแห่งและรองรับการอ่านและเขียนไฟล์ข้อมูลในรูปแบบต่างๆ ได้อย่างหลากหลาย ทำให้เป็นเครื่องมือที่ทรงพลังและได้รับความนิยมสูงในการวิเคราะห์ข้อมูลแบบตาราง การใช้ pandas นับเป็นทักษะที่สำคัญที่สุดอย่างหนึ่งของนักวิเคราะห์ข้อมูล โดยเฉพาะอย่างยิ่งข้อมูลที่เป็นข้อความ และข้อมูลที่มีขนาดใหญ่เกินกว่าที่จะเปิดด้วยโปรแกรมวิเคราะห์ข้อมูลทั่วไป เช่น SPSS Microsoft Excel หรือ Google Spreadsheet</p>
 <p>หากเราติดตั้งไพธอนผ่าน Anaconda เราจะได้ไลบรารี pandas มาพร้อมกับการติดตั้ง แต่หากเราใช้งานไพธอนผ่านการติดตั้งแบบอื่น เราสามารถติดตั้งไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code> (หากติดตั้ง miniconda) เมื่อติดตั้งเสร็จเรียบร้อยแล้ว เราสามารถนำเข้าไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งจะทำให้เราสามารถใช้ฟังก์ชันและเมธอดที่อยู่ในไลบรารี pandas ได้</p>
 <p>เราอาจจะสงสัยว่าเพราะเหตุใดเราต้องเปลี่ยนชื่อไลบรารีเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> โดยการรัน <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งเราไม่จำเป็นต้องเปลี่ยนชื่อก็สามารถใช้ได้เหมือนกัน แต่เราเลือกเปลี่ยนชื่อเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> เพื่อให้เราสามารถเขียนโค้ดได้สั้นลง  นอกจากนั้นเราไม่ใช้ชื่ออื่นเช่น <code class="docutils literal notranslate"><span class="pre">p</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pan</span></code> หรือชื่ออื่นๆ ที่เราเลือกเอง เหตุก็เพราะว่า <code class="docutils literal notranslate"><span class="pre">pd</span></code> จะเป็นชื่อที่คนในวงการวิทยาการข้อมูลใช้กันมากที่สุด อย่างที่เราเห็นได้ว่าหากเราไปค้นหาวิธีการใช้งานของ pandas ในเว็บไซต์ที่รวมชุมชนนักวิเคราะห์ข้อมูล เช่น <a class="reference external" href="http://stackoverflow.com">stackoverflow.com</a> หรือ <a class="reference external" href="http://medium.com">medium.com</a> จะพบว่าคำตอบจะใช้ <code class="docutils literal notranslate"><span class="pre">pd</span></code> ในการอ้างถึงไลบรารี pandas ทั้งสิ้นด้วย ดังนั้นการใช้ชื่อ <code class="docutils literal notranslate"><span class="pre">pd</span></code> เป็นการตั้งชื่อตามสมัยนิยม และเป็นการให้ความสะดวกในการเรียนรู้จากแหล่งข้อมูลอื่นๆ ที่มีอยู่ในอินเทอร์เน็ต</p>
+<section id="jupyter-notebook">
+<h2>การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">#</a></h2>
+<p>Jupyter notebook เป็น IDE ที่ถูกออกแบบมาเพื่อการวิเคราะห์ข้อมูลโดยเฉพาะ เพราะว่าการวิเคราะห์ข้อมูลจำเป็นต้องมีการบันทึกว่าเราได้แก้ไขชุดข้อมูลอย่างไรบ้าง รันโค้ดอะไรบ้างที่นำไปสู่ผลการวิเคราะห์ เราจึงเรียกว่า notebook เพราะเปรียบเสมือนการจดบันทึกการวิเคราะห์ข้อมูล เพื่อให้ฟังดูคล้ายคลึงนักวิทยาศาสตร์จดบันทึกผลการทดลอง ด้วยเหตุนี้เอง Jupyter notebook จึงมีการออกลูกเล่น ฟีเจอร์ใหม่อย่างต่อเนื่อง เพื่ออำนวยความสะดวกในการวิเคราะห์ข้อมูล เช่น</p>
+<ul class="simple">
+<li><p>แสดงผลข้อมูลตารางออกมาในรูปแบบที่อ่านได้ง่าย ไม่ล้นออกมาทั้งแนวตั้งและแนวนอน ทำให้ตรวจสอบข้อมูลได้ง่าย ข้อผิดพลาดน้อยลง</p></li>
+<li><p>แสดงแผนภูมิออกมาตามคำสั่งของไลบรารี โดยไม่ต้องเก็บภาพใส่ไฟล์แยกต่างหาก  ทำให้สามารถแก้ไขและปรับแต่งแผนภูมิได้ง่าย ทั้งแผนภูมิ และโค้ดที่ใช้สร้างแผนภูมิอยู่ข้างกัน</p></li>
+<li><p>สามารถใช้ extension บน Visual Studio Code หรือ Google Colab ที่ทำให้วิเคราะห์ข้อมูลเชิงโต้ตอบ (interactive) ได้คล้ายคลึงกับการใช้โปรแกรมวิเคราะห์ข้อมูลอื่น ๆ ที่มี user interface สวยงามและสะดวกในการใช้งาน</p></li>
+</ul>
+<p>ด้วยข้อดีดังกล่าวข้างต้นวงการวิทยาการข้อมูลจึงนิยมใช้ pandas บน Jupyter notebook ในการเตรียมข้อมูลและวิเคราะห์ข้อมูล  ซึ่งจัดเป็นแนวปฏิบัติที่ดีที่สุดในขณะนี้</p>
+</section>
 <section id="id1">
 <h2>ข้อมูลแบบตาราง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>ข้อมูลแบบตารางมีส่วนประกอบหลักที่สำคัญอยู่หลายส่วน ซึ่งแต่ละส่วนมีบทบาทสำคัญในการเก็บรักษาและการจัดการข้อมูล</p>
@@ -480,7 +491,7 @@ document.write(`
 <li><p>แถว (row) แสดงถึงรายการหรือตัวอย่างแต่ละชิ้น ที่ซึ่งข้อมูลสามารถอธิบายลักษณะหรือสถานะของเหตุการณ์ วัตถุ หรือบุคคลที่กำลังศึกษาอยู่ ตัวอย่างเช่น ในตารางข้อมูลของผู้ป่วย แต่ละแถวอาจแทนผู้ป่วยหนึ่งคนพร้อมกับรายละเอียดต่างๆ เช่น อายุ เพศ และประวัติการรักษา</p></li>
 <li><p>คอลัมน์ (column) แสดงถึงตัวแปรหรือคุณลักษณะที่ระบุค่าข้อมูลต่างๆ ที่จำเป็นต่อการศึกษาหรือวิเคราะห์ ตัวอย่างเช่น ในตารางข้อมูลการขาย คอลัมน์อาจประกอบด้วย วันที่ จำนวนเงิน และสินค้าที่ขาย</p></li>
 <li><p>หัวตาราง (header) เป็นบรรทัดแรกของตารางที่ระบุชื่อของแต่ละคอลัมน์ เป็นส่วนที่สำคัญเพราะช่วยให้ผู้ใช้สามารถเข้าใจข้อมูลในแต่ละคอลัมน์ได้ง่ายและชัดเจน</p></li>
-<li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือไทป์อื่นๆ ที่เหมาะสมกับลักษณะของการศึกษา เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นไทป์เดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
+<li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือแบบชนิดข้อมูล (data type) อื่นๆ ที่เหมาะสมกับลักษณะของการศึกษา เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นแบบชนิดข้อมูลเดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
 </ol>
 <figure class="align-default" id="id9">
 <img alt="../../_images/row-column2.png" src="../../_images/row-column2.png" />
@@ -526,7 +537,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
 <li><p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis: EDA) คือ การวิเคราะห์เพื่อให้เราเข้าใจข้อมูลคร่าว ๆ เนื่องจากข้อมูลมักจะมีขนาดใหญ่มาก เราไม่สามารถนำข้อมูลออกมาดูได้ทั้งหมด เรามักจะทำ EDA โดยดูว่าข้อมูลมีทั้งหมดที่แถว แต่ละคอลัมน์เก็บข้อมูลอะไรอยู่บ้าง แต่ละคอลัมน์มีค่าสูงสุด ต่ำสุดเท่าไร ถ้าเป็นข้อความ ข้อความที่ยาวสุดยาวกี่ตัวอักษร สั้นสุดกี่ตัวอักษร เป็นต้น</p></li>
-<li><p>การขยำข้อมูล (data munging ซึ่งเป็นศัพท์แสลงที่ใช้ในวงการวิทยาการข้อมูล) หรือ การทะเลาะกับข้อมูล (data wrangling ซึ่งเป็นศัพท์ที่ทางการขึ้น) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ อาทิ ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ ลบแถวที่ซ้ำซ้อนกันออกไป แปลงหน่วยวัด แปลงไทป์ของข้อมูลในแต่ละคอลัมน์ หรือควบรวมเอาข้อมูลจากหลายแหล่งมารวมกัน</p></li>
+<li><p>การขยำข้อมูล (data munging ซึ่งเป็นศัพท์แสลงที่ใช้ในวงการวิทยาการข้อมูล) หรือ การทะเลาะกับข้อมูล (data wrangling ซึ่งเป็นศัพท์ที่ทางการขึ้น) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ อาทิ ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ ลบแถวที่ซ้ำซ้อนกันออกไป แปลงหน่วยวัด แปลงแบบชนิดข้อมูลในแต่ละคอลัมน์ หรือควบรวมเอาข้อมูลจากหลายแหล่งมารวมกัน</p></li>
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -708,7 +719,7 @@ document.write(`
 <p>หากเราต้องการรันคำสั่งที่มีการเปลี่ยนแปลงค่าของตัวดาตาเฟรม เราควรรันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน และให้ Jupyter notebook แสดงผลออกมาและตรวจสอบว่าผลตรงกับที่คาดหวังหรือไม่ จากนั้นค่อยรันคำสั่งเดิม แต่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> และรันอีกครั้ง</p>
 </section>
 <section id="id8">
-<h3>ตรวจสอบและแก้ไขดัชนี<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>ตรวจสอบแบบชนิดของข้อมูล<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -780,6 +791,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
@@ -795,7 +807,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบและแก้ไขหัวตาราง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขดัชนี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบแบบชนิดของข้อมูล</a></li>
 </ul>
 </li>
 </ul>
