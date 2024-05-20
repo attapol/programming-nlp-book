@@ -32,15 +32,15 @@ chapters:
   sections:
   - glob: book/module7/*
 
-- file: book/8-scraping
+- file: book/8-pandas
   sections:
   - glob: book/module8/*
 
-- file: book/9-pandas
+- file: book/9-nlp-models
   sections:
   - glob: book/module9/*
 
-- file: book/10-llm
+- file: book/10-the-web
   sections:
   - glob: book/module10/*
 
