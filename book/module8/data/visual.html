@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../8-pandas.html">การจัดการข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../1-pandas.html">การจัดการข้อมูลด้วย pandas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1-pandas-old.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
@@ -1029,7 +1029,7 @@ dtype: int64
       <th>4</th>
       <td>Garuda Indonesia</td>
       <td>1.0</td>
-      <td>Economy</td>
+      <td>Eco</td>
       <td>True</td>
       <td>July 2023</td>
       <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
@@ -1073,7 +1073,7 @@ dtype: int64
     <tr>
       <th>9</th>
       <td>Philippine Airlines</td>
-      <td>1.0</td>
+      <td>11.0</td>
       <td>Economy</td>
       <td>True</td>
       <td>July 2023</td>
@@ -1160,6 +1160,421 @@ dtype: bool
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>7.666667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.872281</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>7.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>11.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Airline Name         Rating  Seat Type        Verified  Date Flown     Review                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+Bangkok Airways      6.0     Economy          True      March 2019     For this flight I was connecting from a flight from London and when originally booked there was an over 3 hour transit time, however Bangkok Airways then cancelled this flight and we were booked on an earlier flight with only a 70 minute connection time. Our flight from London arrived late due to the Pakistan airspace restrictions and although we were met by a lady from Bangkok Airways and rushed across the airport we did not make the connection as the lady was not able to use any pressure to expedite the delay at transit immigration at security. However Bangkok Airways did get us on the later flight and the 4 hours in their lounge at BKK was ok! Once on board the A320 was quite tired and the seat cushions past their best. The flight arrived on time and they managed to serve a hot drink and a pastry in the 1 hour duration. In spite of the missed connection our luggage arrived on the flight so this was good!                                                                                                                                                                                                                                                                                                                                                                                            1
+                     9.0     Economy          False     April 2020     I especially want to thank Khun Guy at Krabi Airport Ticketing Office for her perseverance and commitment as a ground handling Staff with Bangkok Airways where she gave me extreme assistance. She&#39;s a true dedicated employee. I was booked from Krabi to Bkk &amp; connecting SQ979 to S&#39;pore on April 5th, I realized on the day before my departure, Bangkok Airways was grounded and not taking off to Bkk and I went directly to KBV Airport on April 5th early morning hoping to book a ThaiSmile flight to BKK which was departing at 4pm that same April 5th. Somehow, with sheer luck I managed to get a seat with the kind help of Guy knowing that ThaiSmile was also fully booked and that I&#39;m on their 1st priority list. At the same time,  Guy also made sure that I&#39;m checked in with ThaiSmile as I need to be in Bangkok to connect my SQ flight back home to S&#39;pore. Simultaneously she also made arrangements for Bangkok Airways Staff at Suvarnabhumi Airport to assist me for check-in with SIA knowing that it was a time-factor that I needed to check-in ASAP as my SQ Departure time was 6.30pm &amp; ThaiSmile arrival Bkk at 5.30pm as I had to clear Customs &amp; Immigration that will consume some time. Overall I made it for my SQ-979 check-in on time with the help of Bangkok Airways Staff at Suvarnabhumi Airport.    1
+                                              True      June 2019      Bangkok to Koh Samui. Easy Check-In, The Bangkok Lounge (available to everyone) was crowded but still comfortable and the food and refreshments options plus WiFi are a bonus. Boarded on time via a bus, but was organized and efficient. Plane left bang on time and flight was 50 mins, in this time 4 crew still managed to serve a small hot lunch with hot beverages. Aircraft was clean comfortable but quite old. There is nothing not to like about Bangkok Airways, arriving in Koh Samui bags were out in 5 mins.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        1
+Garuda Indonesia     1.0     Eco              True      July 2023      Flew on GA-682 Jakarta to Sorong. I was able to check in at the SKY Priority desk and I was quickly escorted by the Garuda PSA Team member Yudi through security and into the Lounge. Soft drinks and snacks were provided in the lounge and staff were very helpful. When it came time for boarding Yudi also escorted me to the aircraft. Thank you Yudi, much appreciated. The flight itself was an overnight flight and was quite full, however the cabin crew managed to serve a meal and soft drinks and overall, they were very helpful and engaging in the typical warm and friendly Garuda-Indonesia way. We arrived in Sorong on time, and it took approx. 15 minutes for my baggage to come out, considering that early morning in Soring is very busy as many airlines arrive with 30 minutes of each other I found this a very acceptable time to wait. Overall, another good flight on Garuda-Indonesia.                                                                                                                                                                                                                                                                                                                                                                                                                              1
+                     9.0     Business         True      February 2020  Flew Jakarta-Sorong on GA862 the overnight flight. The check-in process was fast and efficient as was the security check. The lounge was quiet as it was late evening, however snacks and soft drinks were available in several area&#39;s within the lounge. The Boarding process was controlled and the cabin crew gave a very warm welcome upon boarding. We pulled back from the gate on schedule, however we had a long taxi to the runway, however that did not impact the arrival time in Sorong. Once airborne the cabin crew offered a selection of meals, however I opted for a sandwich. Prior to landing in the cabin crew again offered snacks and warm and cold drinks. Baggage was delivered very promptly i.e. approx. 5 minutes after arrival. Overall great flight.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   1
+Philippine Airlines  7.0     Premium Economy  False     January 2023   Got Premium economy since they were the only available seats going to Manila. The seats are premium and comfortable for the less than 2 hour flight. Food service was so so.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        1
+                     11.0    Economy          True      July 2023      Miserable experience: very expensive, online booking guides you to purchase 20kg allowance when it is included already. Asked for refund, no help. Never again                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9     True
+Name: Rating, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">][</span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/j7/mgs164kx5xx37ltn1q1f2_sw0000gp/T/ipykernel_10641/85773604.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_missing[&#39;Rating&#39;][df_missing[&#39;Rating&#39;] &gt; 10] = 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rating</th>
+      <th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.0</td>
+      <td>For this flight I was connecting from a flight...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9.0</td>
+      <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>I just want to thank Bangkok Airways for their...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>9.0</td>
+      <td>I especially want to thank Khun Guy at Krabi A...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.0</td>
+      <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9.0</td>
+      <td>Jakarta to Sorong. Check in was straight forwa...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>9.0</td>
+      <td>Flew Jakarta-Sorong on GA862 the overnight fli...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.0</td>
+      <td>This was the second flight in 7 days with this...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>7.0</td>
+      <td>Got Premium economy since they were the only a...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.0</td>
+      <td>Miserable experience: very expensive, online b...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Rating&#39;</span><span class="p">:</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rating</th>
+      <th>Seat Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.0</td>
+      <td>Economy</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9.0</td>
+      <td>Economy</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>9.0</td>
+      <td>Economy</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.0</td>
+      <td>Eco</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9.0</td>
+      <td>Business</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>9.0</td>
+      <td>Business</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>7.0</td>
+      <td>Premium Economy</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.0</td>
+      <td>Economy</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bangkok Airways        4
+Garuda Indonesia       3
+Philippine Airlines    3
+Name: Airline Name, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Economy            4
+Business           2
+Eco                1
+Premium Economy    1
+Name: Seat Type, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Airline Name</th>
+      <th>Rating</th>
+      <th>Seat Type</th>
+      <th>Verified</th>
+      <th>Date Flown</th>
+      <th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Bangkok Airways</td>
+      <td>9.0</td>
+      <td>Economy</td>
+      <td>True</td>
+      <td>June 2019</td>
+      <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bangkok Airways</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>November 2021</td>
+      <td>I just want to thank Bangkok Airways for their...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bangkok Airways</td>
+      <td>9.0</td>
+      <td>Economy</td>
+      <td>False</td>
+      <td>April 2020</td>
+      <td>I especially want to thank Khun Guy at Krabi A...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Garuda Indonesia</td>
+      <td>1.0</td>
+      <td>Eco</td>
+      <td>True</td>
+      <td>July 2023</td>
+      <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
+    <span class="c1"># ถ้าเจอ [ก-์] สามตัวขึ้นไป ทำให้เหลือตัวเดียว</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;([ก-์])\1{2,}&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">tweet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tweet</span>
+<span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Cleaned review&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Review&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
