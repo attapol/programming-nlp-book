@@ -455,10 +455,18 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การตรวจหาข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การแก้ไขข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การกำจัดแถวที่มีข้อมูลที่หายไป หรืิอเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว เช่น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว โดยใช้เครื่องหมาย : เป็นตัวคั่นระหว่างจุดเริ่มต้นไปถึงจุดหมาย เช่น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4. เลือกด้วยลิสต์ของบูลีน</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
 </ul>
 </li>
 </ul>
@@ -501,10 +509,10 @@ document.write(`
 <li><p>หัวตาราง (header) เป็นบรรทัดแรกของตารางที่ระบุชื่อของแต่ละคอลัมน์ เป็นส่วนที่สำคัญเพราะช่วยให้ผู้ใช้สามารถเข้าใจข้อมูลในแต่ละคอลัมน์ได้ง่ายและชัดเจน</p></li>
 <li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือแบบชนิดข้อมูล (data type) อื่นๆ ที่เหมาะสมกับลักษณะของการศึกษา เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นแบบชนิดข้อมูลเดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
 </ol>
-<figure class="align-default" id="id15">
+<figure class="align-default" id="id21">
 <img alt="../../_images/row-column2.png" src="../../_images/row-column2.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id15" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id21" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ส่วนประกอบอีกอย่างหนึ่งที่สำคัญของข้อมูลแบบตารางคือ พจนานุกรมข้อมูล (data dictionary) ซึ่งเป็นเอกสารที่ระบุความหมายของแต่ละคอลัมน์ และค่าข้อมูลที่เป็นไปได้ของแต่ละคอลัมน์ ซึ่งช่วยให้ผู้ใช้เข้าใจข้อมูลได้ง่ายขึ้น และช่วยให้ผู้ใช้สามารถใช้ข้อมูลได้อย่างถูกต้องและเหมาะสม พจนานุกรมข้อมูลนี้มักจะถูกเก็บแยกออกมาอีกไฟล์หนึ่ง หรือเป็นส่วนหนึ่งของเอกสารคู่มือการใช้งานข้อมูล แต่ในหลาย ๆ กรณีผู้ดูแลรักษาข้อมูลอาจจะไม่ได้เตรียมพจนานุกรมข้อมูลเอาไว้ให้พร้อมใช้ ผู้ใช้ข้อมูลจะต้องไปสอบถามผู้ดูแลรักษาข้อมูลหรือค้นหาข้อมูลเพิ่มเติมเองโดยตรง ตัวอย่างของพจนานุกรมข้อมูลของข้อมูลการรีวิวสายการบิน อาจมีดังนี้</p>
@@ -793,7 +801,7 @@ document.write(`
 <span class="n">Garuda</span> <span class="n">Indonesia</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">Business</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">February</span> <span class="mi">2020</span><span class="p">,</span><span class="s2">&quot;Flew Jakarta-Sorong on ...</span>
 <span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">8</span><span class="p">,,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">April</span> <span class="mi">2023</span><span class="p">,</span><span class="s2">&quot;This was the second flight in 7...</span>
 <span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">Premium</span> <span class="n">Economy</span><span class="p">,</span><span class="n">FALSE</span><span class="p">,</span><span class="n">January</span> <span class="mi">2023</span><span class="p">,</span><span class="n">Got</span> <span class="n">Premium</span> <span class="n">ec</span><span class="o">...</span>
-<span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">July</span> <span class="mi">2023</span><span class="p">,</span><span class="s2">&quot;Miserable experience: ver...</span>
+<span class="n">Philippine</span> <span class="n">Airlines</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="n">Economy</span><span class="p">,</span><span class="n">TRUE</span><span class="p">,</span><span class="n">July</span> <span class="mi">2023</span><span class="p">,</span><span class="s2">&quot;Miserable experience: ver...</span>
 </pre></div>
 </div>
 <p>จากข้อมูลด้านบน เราสังเกตหาข้อมูลที่หายไปค่อนข้างยาก และในการใช้งานจริงข้อมูลมักจะมีขนาดใหญ่มากจนเราไม่ได้มองหาข้อมูลที่หายไปด้วยตาเปล่าได้ ในกรณีนี้เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">isna()</span></code> ในการตรวจสอบข้อมูลที่หายไปได้</p>
@@ -802,24 +810,24 @@ document.write(`
 <span class="n">bad_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id16">
+<figure class="align-default" id="id22">
 <img alt="../../_images/df-null.png" src="../../_images/df-null.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id16" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id22" title="Permalink to this image">#</a></p>
 <div class="legend">
 <p>(ล่าง) ดาตาเฟรมที่ถูกคืนค่ามาจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code></p>
 <p>(ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</p>
 </div>
 </figcaption>
 </figure>
-<p>ผลที่ได้จะเป็นดาตาเฟรมที่เต็มไปด้วยค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> และ <code class="docutils literal notranslate"><span class="pre">False</span></code> ซึ่งยังไม่ได้ช่วยให้เรามองหาช่องที่มีข้อมูลที่หายไปได้ แต่เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ในการนับจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ได้ ตัวอย่างเช่น</p>
+<p>ผลที่ได้จะเป็นดาตาเฟรมที่เต็มไปด้วยค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> และ <code class="docutils literal notranslate"><span class="pre">False</span></code> ซึ่งยังไม่ได้ช่วยให้เรามองหาช่องที่มีข้อมูลที่หายไปได้ แต่เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ในการนับจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ได้ เราอาจจะสงสัยว่าเราจะหาผลรวมของข้อมูลที่ไม่ใช่ตัวเลขอย่างบูลีน <code class="docutils literal notranslate"><span class="pre">True</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">False</span></code> ได้อย่างไร ที่จริงแล้ว <code class="docutils literal notranslate"><span class="pre">True</span></code> ถูกแทนค่าด้วย 1 และ <code class="docutils literal notranslate"><span class="pre">False</span></code> ถูกแทนค่าด้วย 0 เมื่อนำมาบวกหรือลบกัน เพราะฉะนั้นการหาผลรวมของคอลัมน์ที่บูลีนอยู่เท่ากับการนับจำนวน <code class="docutils literal notranslate"><span class="pre">True</span></code> ที่อยู่ในคอลัมน์นั้น ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id17">
+<figure class="align-default" id="id23">
 <img alt="../../_images/df-null-sum-0.png" src="../../_images/df-null-sum-0.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id17" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id23" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นทำความเข้าใจได้ยากเล็กน้อย เพราะมีการเรียกสองเมท็อดต่อเนื่องกันในบรรทัดเดียว เราเรียกวิธีนี้ว่าการโยงเมท็อด (method chaining) ซึ่งการเรียกเมท็อดต่อเนื่องกันโดยไม่ต้องเก็บผลลัพธ์ของเมท็อดก่อนหน้าไว้ในตัวแปรก่อน และเรียกเมท็อดต่อไปได้ทันที ในตัวอย่างข้างต้นเราให้ดาตาเฟรมเรียกเมท็อด <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> ก่อน และให้ผลลัพธ์เป็นดาตาเฟรม จากนั้นใช้ดาตาเฟรมนั้นเมท็อด <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ต่อ โดยให้พารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> ซึ่งหมายถึงให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> นับจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ ดังนั้นจึงมีค่าเท่ากับการเรียกเมท็อดแยกกัน โดยใช้คำสั่งดังนี้</p>
@@ -847,10 +855,10 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id18">
+<figure class="align-default" id="id24">
 <img alt="../../_images/df-null-sum-1.png" src="../../_images/df-null-sum-1.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id18" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ผลลัพธ์ที่ได้จะเป็นจำนวนข้อมูลที่หายไปในแต่ละแถว คืนค่ามาเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่ index เป็นชื่อแถวของดาตาเฟรมเดิมดังนี้</p>
@@ -872,10 +880,10 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id19">
+<figure class="align-default" id="id25">
 <img alt="../../_images/df-null-any-sum.png" src="../../_images/df-null-any-sum.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id19" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.isnull().any(axis=1)</span></code> จะคืนค่าเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หากแถวนั้นมีข้อมูลที่หายไปอย่างน้อยหนึ่งช่อง และ <code class="docutils literal notranslate"><span class="pre">False</span></code> หากแถวนั้นไม่มีข้อมูลที่หายไปเลย ตัวอย่างเช่น</p>
@@ -895,23 +903,174 @@ document.write(`
 <p>เมื่อได้ผลลัพธ์ข้างต้นแล้วเราสามารถหาผลรวมของจำนวนแถวที่มีข้อมูลที่หายไปอย่างน้อยหนึ่งช่องได้ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ต่อท้าย ซึ่งจะคืนค่าเป็นจำนวนแถวที่มีข้อมูลที่หายไปอย่างน้อยหนึ่งช่อง</p>
 </section>
 <section id="id11">
-<h3>การแก้ไขข้อมูลที่หายไป<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
-<p>การแก้ไขข้อมูลที่หายไป สามารถทำได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> ซึ่งจะแทนที่ข้อมูลที่หายไปด้วยค่าที่เรากำหนด หรือใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ซึ่งจะลบแถวที่มีข้อมูลที่หายไปออกไป ตัวอย่างเช่น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<h3>การกำจัดแถวที่มีข้อมูลที่หายไป หรืิอเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>เมื่อเราพบแล้วว่าแถวใดบ้างมีข้อมูลที่หายไป วิธีที่ง่ายที่สุดคือการลบแถวที่มีข้อมูลที่หายไปออกไป แต่ว่าเราต้องคำนวณก่อนว่าถ้าหากลบแถวเหล่านั้นออกไปแล้ว เราจะเหลือข้อมูลอยู่ร้อยละเท่าไร ถ้าหากลบแถวที่มีข้อมูลที่หายไปออกไปแล้วเราจะเหลือข้อมูลอยูน้อยกว่า 75% ให้ตรวจสอบว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ และอาจจะต้องปรึกษากับผู้ที่รวบรวมและจัดเก็บข้อมูลว่า เพราะเหตุใดจึงข้อมูลที่หายไปในสัดส่วนที่มากขนาดนี้</p>
+<p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ใช้สำหรับลบแถวที่มีข้อมูลที่หายไปออกไป ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Airline Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Date Flown&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ซึ่งหมายถึงการลบแถวที่มีข้อมูลที่หายไปออกไปจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยที่ไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ หลังจากการลบแถวที่มีข้อมูลที่หายไปออกไปแล้ว เราสามารถตรวจสอบดูว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">shape</span></code> ซึ่งจะแสดงจำนวนแถวและคอลัมน์ที่มีในดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
+<p>ผลลัพธ์ที่ได้จะเป็นจำนวนแถวและคอลัมน์ที่มีในดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>จากผลลัพธ์ที่ได้ เราสามารถเห็นได้ว่าหลังจากลบแถวที่มีข้อมูลที่หายไปออกไปแล้ว เราเหลือแถวอยู่ 7 แถว และมีคอลัมน์อยู่ 6 คอลัมน์ ซึ่งเราสามารถทำการวิเคราะห์ข้อมูลต่อไปได้</p>
+<p>ถ้าสมมติว่าการวิเคราะห์ของเราไม่ได้สนใจว่าคนเขียนรีวิวบินสายการบินนั้นวันที่เท่าไรซึ่งเก็บอยู่ในคอลัมน์ <em>Date flown</em> เพราะฉะนั้นเราต้องการจะกำจัดแถวที่ไม่มีข้อมูลเกี่ยวกับคะแนน (คอลัมน์ Rating) และประเภทของทีนั่ง (คอลัมน์ Seat type) เท่านั้น ส่วนคอลัมน์ Date flown จะมีหรือไม่มีก็ได้ เราสามารถกำหนดคอลัมน์ที่สนใจไว้ในพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">subset</span></code> ของฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">subset=['Rating',</span> <span class="pre">'Seat</span> <span class="pre">Type']</span></code> ซึ่งหมายถึงการลบแถวที่มีข้อมูลที่หายไปออกไปจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยที่ไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ และเรากำหนดให้ลบแถวที่มีข้อมูลที่หายไปออกไปเฉพาะในคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Rating</span></code> และ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> เท่านั้น หลังจากการลบแถวที่มีข้อมูลที่หายไปออกไปแล้ว เราสามารถตรวจสอบดูว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">shape</span></code> ซึ่งจะแสดงจำนวนแถวและคอลัมน์ที่มีในดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้จะเป็นจำนวนแถวและคอลัมน์ที่มีในดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างข้างบนเราตั้งค่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> เพื่อให้การเปลี่ยนแปลงที่เกิดขึ้นกับดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ทันที และไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ ถ้าหากเราเขียนคำสั่งผิดและสั่ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ทำให้้เราย้อนกลับไปแก้ไม่ได้ ต้องกลับไปโหลดข้อมูลใหม่ตั้งแต่ต้น ทำให้การวิเคราะห์ติดขัด เพราะฉะนั้นผู้เขียนแนะนำว่าให้รันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน คำสั่งจะคืนค่าเป็นดาตาเฟรมใหม่ออกมาให้ จากนั้นเราตรวจสอบว่าผลลัพท์ที่ได้มานั้นถูกต้องหรือไม่ ถ้าหากถูกต้องแล้วให้ย้อนไปเปลี่ยนคำสั่งเป้น <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> แล้วรันคำสั่งอีกครั่้งหนึ่งเพื่อเปลี่ยนแปลงดาตาเฟรมตามที่เราต้องการ</p>
 </section>
 <section id="id12">
-<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<h3>การเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>การแก้ไขข้อมูลที่หายไป สามารถทำได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> ซึ่งจะแทนที่ข้อมูลที่หายไปด้วยค่าที่เรากำหนด สมมติว่าเราไปสืบทราบมาจากผู้ดูแลชุดข้อมูลนี้มาว่า ถ้าหากคอลัมน์ Seat Type ถูกเว้นว่างไว้ แปลว่าลูกค้าที่รีวิวนั่งตั๋วชั้นประหยัด เราสามารถเติมแถวที่มีค่าของ Seat Type เว้นว่างไว้ด้วยค่า <em>Economy</em> ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;Economy&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างข้างต้น เราสังเกตเห็นว่ามีคำสั่งในการเลือกคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> โดยการใช้ <code class="docutils literal notranslate"><span class="pre">[ชื่อคอลัมน์]</span></code> เพื่อเลือกคอลัมน์ออกมาก่อนที่จะใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.fillna()</span></code> ไปบนคอลัมน์นั้น ในคำสั่ง <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> เราต้องกำหนดค่าที่เราต้องการเติมให้กับข้อมูลที่หายไปในคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> ซึ่งเป็นค่า <code class="docutils literal notranslate"><span class="pre">Economy</span></code> โดยที่ไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ หลังจากการเติมค่าให้กับข้อมูลที่หายไปแล้ว</p>
+<p>เราสามารถตรวจสอบดูว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> และ <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ซึ่งจะแสดงจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้จะเป็นจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Airline</span> <span class="n">Name</span>    <span class="mi">0</span>
+<span class="n">Rating</span>          <span class="mi">1</span>
+<span class="n">Seat</span> <span class="n">Type</span>       <span class="mi">0</span>
+<span class="n">Verified</span>        <span class="mi">0</span>
+<span class="n">Date</span> <span class="n">Flown</span>      <span class="mi">1</span>
+<span class="n">Review</span>          <span class="mi">0</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+</div>
+<p>จากผลลัพธ์ที่ได้ เราสามารถเห็นได้ว่าคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> ไม่มีข้อมูลที่หายไปอีกแล้ว</p>
 </section>
 <section id="id13">
-<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h3>การกำจัดคอลัมน์ที่ไม่ต้องการ<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<p>ในบางกรณีข้อมูลของเราอาจจะมีจำนวนคอลัมน์เยอะมาก ๆ และเราอาจจะไม่ได้ต้องการนำมาวิเคราะห์ทุกคอลัมน์ เราควรจะกำจัดคอลัมน์ที่ไม่ต้องการออกไป เพื่อให้ดาตาเฟรมมีขนาดเล็กลง ใช้พื้นที่ในหน่วยความจำของเครื่องน้อยลง และสะดวกต่อการวิเคราะห์ เพราะ คอลัมน์ไม่ล้นทางขวาของจอ ทำให้เรามองเห็นข้อมูลที่สำคัญได้ชัดเจนขึ้น</p>
+<p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">drop()</span></code> ในการลบคอลัมน์ที่ไม่ต้องการออกไป ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date Flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Verified&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">drop()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">columns=['Date</span> <span class="pre">Flown',</span> <span class="pre">'Verified']</span></code> ซึ่งหมายถึงการลบคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Flown</span></code> และ <code class="docutils literal notranslate"><span class="pre">Verified</span></code> ออกจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยที่ไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ และเช่นเคยเราควรจะรันคำสั่งโดยไม่ตั้งค่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> และตรวจสอบด้วยสายตาก่อนว่าได้ผลตามที่คาดหวัง ก่อนที่จะรันคำสั่งอีกครั้งโดยการตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> เพื่อเปลี่ยนแปลงดาตาเฟรมตามที่เราต้องการ</p>
+<p>ในกรณีที่จำนวนคอลัมน์ที่ต้องการมีมากกว่าจำนวนคอลัมน์ที่ไม่ต้องการมาก ๆ เช่น เราอาจจะอยากได้เพียงคอลัมน์ <em>Review</em> และ <em>Rating</em> เท่านั้น ในกรณีนี้เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> ในการเลือกคอลัมน์ที่ต้องการออกมา ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="s1">&#39;Review&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">['Review',</span> <span class="pre">'Rating']</span></code> ซึ่งหมายถึงการเลือกคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Review</span></code> และ <code class="docutils literal notranslate"><span class="pre">Rating</span></code> จากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> คอลัมน์อื่น ๆ ที่เหลือจะถูกตัดออกหมด</p>
+<p>นอกจากนั้นแล้ว ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> สามารถใช้เลือกคอลัมน์ที่ต้องการออกมาได้อีกหลายวิธี เช่น เลือกคอลัมน์ด้วย regular expression หรือ เลือกตามเงื่อนไขอื่น ๆ ที่สามารถกำหนดได้ตามใจ ซึ่งผู้่อ่านสามารถอ้างอิงเอกสารประกอบการใช้บนเว็บไซต์ของ pandas เอง</p>
 </section>
 <section id="id14">
-<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<h3>การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>นอกเหนือจากการหาแถวที่มีข้อมูลที่หายไปแล้ว เรายังจะต้องตรวจสอบด้วยว่าข้อมูลที่มีอยู่แล้วนั้นถูกต้องหรือไม่ วิธีการตรวจสอบง่าย ๆ คือการเปิดไฟล์ขึ้นมาและกวาดสายตาดูคร่าว ๆ ว่ามีสิ่งแปลกปลอมหรือไม่ แต่ว่าเราสามารถใช้ฟังก์ชันต่าง ๆ ของ pandas ในการคำนวณสถิติเชิงพรรณนา (descriptive statistics) เพื่อตรวจสอบข้อมูลได้ง่ายขึ้น โดยเราจะตรวจสอบดังนี้</p>
+<ul class="simple">
+<li><p>ค่าเฉลี่ย อยู่ในช่วงที่ควรจะเป็นหรือไม่</p></li>
+<li><p>ค่าสูงสุด และค่าต่ำสุด อยู่ในช่วงที่ควรจะเป็นหรือไม่ เช่น คะแนนรีวิวในชุดข้อมูลของเราควรจะอยู่ในช่วง 1 ถึง 10 เพราะฉะนั้นค่าต่ำสุดที่พบไม่ควรต่ำกว่า 1 และค่าสูงสุดที่พบไม่ควรมากกว่า 10</p></li>
+</ul>
+<p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">describe()</span></code> ในการคำนวณสถิติเชิงพรรณนาของข้อมูลตัวเลขได้ ตัวอย่างเช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้จะเป็นสถิติเชิงพรรณนาของข้อมูลตัวเลขที่มีในดาตาเฟรม ตัวอย่างเช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	    <span class="n">Rating</span>
+<span class="n">count</span>	<span class="mf">9.000000</span>
+<span class="n">mean</span>	<span class="mf">7.666667</span>
+<span class="n">std</span>	    <span class="mf">2.872281</span>
+<span class="nb">min</span>	    <span class="mf">1.000000</span>
+<span class="mi">25</span><span class="o">%</span>	    <span class="mf">7.000000</span>
+<span class="mi">50</span><span class="o">%</span>	    <span class="mf">9.000000</span>
+<span class="mi">75</span><span class="o">%</span>	    <span class="mf">9.000000</span>
+<span class="nb">max</span>	    <span class="mf">11.000000</span>
+</pre></div>
+</div>
+<p>จะเห็นว่ามีบางแถวที่มีค่า Rating มีค่าที่ผิดพลาด คือมีค่าที่สูงกว่า 10 ซึ่งอาจจะเกิดจากการบันทึกผลที่ผิดพลาด ในกรณีนี้เราควรจะปรึกษาผู้ที่เก็บข้อมูลว่า หากมีข้อผิดพลาดดังกล่าวเป็นเพราะสาเหตุใด ถ้าหากจากการบันทึกผิด บันทึกผิดจากอะไร เช่น จาก 1 กลายเป็น 11 เพราะเผลอกดปุ่ม 1 ไปสองครั้งหรือ จาก 10 กลายเป็น 11 สมมติเราต้องการให้ค่าที่เกิน 10 กลายเป็น 10 ให้ใช้คำสั่งดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>คำสั่งนี้ประกอบไปด้วยหลายส่วนด้วยกันที่อาจจะดูซับซ้อน และเรายังไม่ได้เห็นมาก่อน ส่วนแรกคือคำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> ซึ่งเป็นคำสั่งในการอ้างอิงถึงกลุ่มของคอลัมน์หรือแถว โดยมีหลักการใช้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ตัวเลือกแถว</span><span class="p">,</span> <span class="n">ตัวเลือกคอลัมน์</span><span class="p">]</span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ตัวเลือกแถว</span><span class="p">]</span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">ตัวเลือกคอลัมน์</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>การกำหนดตัวเลือกแถว หรือตัวเลือกคอลัมน์สามารถกำหนดได้ 4 วิธี</p>
+<section id="id15">
+<h4>1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<p>เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>คำสั่งข้างต้นแก้ไขค่าในแถวที่ 5 และคอลัมน์ Rating ให้เป็น 10</p>
+</section>
+<section id="id16">
+<h4>2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว เช่น<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>คำสั่งข้างต้นเลือกแถวที่ 5, 6, และ 7 และคอลัมน์ Rating และ Review</p>
+</section>
+<section id="id17">
+<h4>3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว โดยใช้เครื่องหมาย : เป็นตัวคั่นระหว่างจุดเริ่มต้นไปถึงจุดหมาย เช่น<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
+<th class="head"><p>คำอธิบาย</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.loc[5:7]</span></code></p></td>
+<td><p>เลือกแถวที่ 5 ถึง 7</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.loc[5:7,</span> <span class="pre">'Rating']</span></code></p></td>
+<td><p>เลือกแถวที่ 5 ถึง 7 และคอลัมน์ Rating</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.loc[5:7,</span> <span class="pre">'Rating':'Review']</span></code></p></td>
+<td><p>เลือกแถวที่ 5 ถึง 7 และคอลัมน์ Rating ถึง Review</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id18">
+<h4>4. เลือกด้วยลิสต์ของบูลีน<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
+<p>เราสามารถใช้ลิสต์ของบูลีนที่มีจำนวนสมาชิกเท่ากับจำนวนแถว หรือคอลัมน์ วิธี้นี้เรียกว่าบูลีนพราง (boolean masking) วิธีนี้เรามักจะใช้กับการเลือกแถวโดยการกำหนดเงื่อนไขตามคอลัมน์ เช่น ถ้าหากเราต้องการเลือกแถวที่ค่าคะแนนสูงกว่าสิบ (ซึ่งไม่ควรจะเกิดขึ้น) เรามีวิธีการกำหนดเงื่อนไขดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>ซึ่งจะสร้างลิสต์ของบูลีนที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หากแถวแถวนั้นคะแนนสูงกว่า 10 และ <code class="docutils literal notranslate"><span class="pre">False</span></code> หากคะแนนไม่สูงกว่า 10 จะได้ผลลัพท์ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>    <span class="kc">False</span>
+<span class="mi">1</span>    <span class="kc">False</span>
+<span class="mi">2</span>    <span class="kc">False</span>
+<span class="mi">3</span>    <span class="kc">False</span>
+<span class="mi">4</span>    <span class="kc">False</span>
+<span class="mi">5</span>    <span class="kc">False</span>
+<span class="mi">6</span>    <span class="kc">False</span>
+<span class="mi">7</span>    <span class="kc">False</span>
+<span class="mi">8</span>    <span class="kc">False</span>
+<span class="mi">9</span>     <span class="kc">True</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Rating</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">bool</span>
+</pre></div>
+</div>
+<p>จากนั้นเราสามารถใช้ลิสต์ของบูลีนนี้ในการเลือกแถวที่ต้องการดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id19">
+<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id20">
+<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -1004,10 +1163,18 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การตรวจหาข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การแก้ไขข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การกำจัดแถวที่มีข้อมูลที่หายไป หรืิอเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว เช่น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว โดยใช้เครื่องหมาย : เป็นตัวคั่นระหว่างจุดเริ่มต้นไปถึงจุดหมาย เช่น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4. เลือกด้วยลิสต์ของบูลีน</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
 </ul>
 </li>
 </ul>

@@ -948,6 +948,222 @@ dtype: int64
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;airlines-reviews-small-missing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Airline Name</th>
+      <th>Rating</th>
+      <th>Seat Type</th>
+      <th>Verified</th>
+      <th>Date Flown</th>
+      <th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bangkok Airways</td>
+      <td>6.0</td>
+      <td>Economy</td>
+      <td>True</td>
+      <td>March 2019</td>
+      <td>For this flight I was connecting from a flight...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bangkok Airways</td>
+      <td>9.0</td>
+      <td>Economy</td>
+      <td>True</td>
+      <td>June 2019</td>
+      <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bangkok Airways</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>November 2021</td>
+      <td>I just want to thank Bangkok Airways for their...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bangkok Airways</td>
+      <td>9.0</td>
+      <td>Economy</td>
+      <td>False</td>
+      <td>April 2020</td>
+      <td>I especially want to thank Khun Guy at Krabi A...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Garuda Indonesia</td>
+      <td>1.0</td>
+      <td>Economy</td>
+      <td>True</td>
+      <td>July 2023</td>
+      <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Garuda Indonesia</td>
+      <td>9.0</td>
+      <td>Business</td>
+      <td>True</td>
+      <td>NaN</td>
+      <td>Jakarta to Sorong. Check in was straight forwa...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Garuda Indonesia</td>
+      <td>9.0</td>
+      <td>Business</td>
+      <td>True</td>
+      <td>February 2020</td>
+      <td>Flew Jakarta-Sorong on GA862 the overnight fli...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Philippine Airlines</td>
+      <td>8.0</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>April 2023</td>
+      <td>This was the second flight in 7 days with this...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Philippine Airlines</td>
+      <td>7.0</td>
+      <td>Premium Economy</td>
+      <td>False</td>
+      <td>January 2023</td>
+      <td>Got Premium economy since they were the only a...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Philippine Airlines</td>
+      <td>1.0</td>
+      <td>Economy</td>
+      <td>True</td>
+      <td>July 2023</td>
+      <td>Miserable experience: very expensive, online b...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0
+1    0
+2    2
+3    0
+4    0
+5    1
+6    0
+7    1
+8    0
+9    0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># how many rows miss at least one column</span>
+<span class="n">df_missing</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2     True
+3    False
+4    False
+5     True
+6    False
+7     True
+8    False
+9    False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(7, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 6)
+</pre></div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
