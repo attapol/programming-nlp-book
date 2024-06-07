@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>แบบจำลองการประมวลผลภาษาธรรมชาติ &#8212; Programming for NLP</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module9/1-ml-nlp-model';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workshop - Word cloud" href="4-workshop-word-cloud.html" />
+    <link rel="prev" title="แบบจำลองการประมวลภาษาธรรมชาติ" href="../9-nlp-models.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    บทนำ
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3s-exercise-variable-function.html">เฉลยแบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/4-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/03s-exercise-data-structure.html">เฉลยแบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/04-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/06-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/08-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">การจัดการข้อมูลด้วย pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../9-nlp-models.html">แบบจำลองการประมวลภาษาธรรมชาติ</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบจำลองการประมวลผลภาษาธรรมชาติ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module10/1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module9/1-ml-nlp-model.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module9/1-ml-nlp-model.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>แบบจำลองการประมวลผลภาษาธรรมชาติ</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-of-speech-tagging">การแท็กชนิดของคำ (Part-of-speech tagging)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การแยกชนิดของคำ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-large-language-model">แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>แบบจำลองการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>การประมวลผลภาษาธรรมชาติ คือ เทคนิควิธีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา แบบจำลองหรือโมเดลที่เราพูดถึงนี้หมายถึง การเขียนโปรแกรมที่จำลองการทำความเข้าใจภาษาในด้านต่าง ๆ ซึ่งการจำลองอาจจะไม่ได้สอดคล้องกับวิธีที่มนุษย์ทำความเข้าใจภาษา แต่ว่าแบบจำลองจำลองพฤติกรรมการประมวลผลภาษาได้ดีพอ ที่จะนำไปใช้ในการทำงานที่เกี่ยวข้องกับภาษาธรรมชาติได้
+งานที่สามารถใช้โมเดลการประมวลผลภาษาธรรมชาติได้อย่างมีประสิทธิภาพ และพบเห็นได้บ่อย ๆ ได้แก่  เช่น การแท็กชนิดของคำ (part-of-speech tagging) การตรวจจับเอนติตี้ (named entity recognition) การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) แบบจำลองหัวข้อ (topic model) การแปลด้วยเครื่อง (machine translation) ซึ่งทั้งหมดนี้คือต่างใช้การเรียนรู้ของเครื่อง (machine learning) ในการสร้างแบบจำลองสำหรับงานเหล่านี้ขึ้นมา กล่าวคือเราเขียนโปรแกรมที่เรียนรู้การทำงานเหล่านี้โดยการหาแพทเทิร์นจากชุดข้อมูลที่เหมาะสม เราไม่ได้ตั้งโปรแกรมให้ทำงานตามกฎของภาษาศาสตร์โดยตรง</p>
+<p>ในปัจจุบันเราสามารถดาวน์โหลดโมเดลและนำมาประยุกต์ใช้ได้ทันทีโดยที่ต้องไม่ทำการสร้างโมเดลใหม่ตั้งแต่ต้น แต่ว่าอาจจะมีโมเดลสำหรับบางงานและบางภาษาเท่านั้น และโมเดลของแต่ละภาษามีประสิทธิภาพ และความแม่นยำแตกต่างกันไป ในบทนี้เราจะเรียนรู้วิธีการใช้ไลบรารีเพื่อดาวน์โหลดและประยุกต์ใช้โมเดลในการวิเคราะห์ข้อมูลภาษาโดยอัตโนมัติ</p>
+<section id="part-of-speech-tagging">
+<h2>การแท็กชนิดของคำ (Part-of-speech tagging)<a class="headerlink" href="#part-of-speech-tagging" title="Permalink to this heading">#</a></h2>
+<p>ชนิดของคำ (part-of-speech tag) ในเชิงภาษาศาสตร์ถูกสร้างขึ้นมาเป็นส่วนหนึ่งของกฎไวยากรณ์ของภาษาที่กำหนดว่าคำชนิดใดสามารถมีความสัมพันธ์กับคำชนิดใด ในลักษณะไหนได้บ้าง  นอกจากนั้นแล้วยังมีบทบาทสำคัญในการทำความเข้าใจความหมายและโครงสร้างของประโยค
+เนื่องจากช่วยให้เรารู้ว่าแต่ละคำในประโยคทำหน้าที่อะไร  เช่น คำนาม (noun) มักจะทำหน้าที่เป็นประธานของประโยค หรือเป็นส่วนเติมเต็มของกริยา หรีอ คุณศัพท์ (adjective) มักจะทำหน้าที่เป็นตัวขยายความหมายของคำนาม เป็นต้น</p>
+<p>ในการประมวลผลภาษาธรรมชาติ ชนิดของคำมักจะช่วยในการสกัดข้อมูล (information extraction) จากข้อมูลที่เป็นข้อความ เช่น ถ้าหากเราต้องการสกัดเอาชื่อของบุคคลจากข้อความ เราอาจจะเลือกเอาเฉพาะคำที่เป็นคำนามมาพิจารณาเท่านั้น หรือถ้าหากเราต้องการสกัดคีย์เวิร์ดที่บ่งบอกถึงความหมายใจความสำคัญของคลังเอกสาร เราอาจจะเลือกเฉพาะไบแกรมที่มีคำนามและคำกริยามาพิจารณาเท่านั้น</p>
+<section id="id2">
+<h3>การแยกชนิดของคำ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>ชนิดของคำมีชนิด ชนิดอะไรบ้าง ทฤษฎีการแยกชนิดของคำมีอยู่หลากหลายทฤษฎี เช่น เด็กนักเรียนไทยมักจะคุ้นเคยกับการแยกชนิดของคำตามพระยาอุปกิตศิลปสารซึ่งแยกชนิดของคำเป็น 7 ชนิด ได้แก่ คำนาม คำสรรพนาม คำวิเศษณ์ คำกริยา คำบุพบท คำสันธาน และคำอุทาน  ในการประมวลผลภาษาธรรมชาติ เรามักใช้ทฤษฎีของ ชุดป้ายระบุชนิดของคำสากล (Universal Part-of-speech Tagset) ทฤษฎีนี้กำหนดชนิดของคำออกเป็น 17 ชนิด ซึ่งสามารถจัดออกเป็น 3 กลุ่มใหญ่ ได้แก่</p>
+<ol class="arabic simple">
+<li><p>คำชนิดเปิด (open class word) คือกลุ่มคำที่สามารถเพิ่มคำใหม่เข้าไปได้เรื่อยๆ คำชนิดเปิดมักมีความหมายที่ชัดเจนและสามารถยืนอยู่ได้ด้วยตัวเอง เช่น การกระทำ คน สัตว์ สิ่งของ สถานที่ คำชนิดเปิดประกอบด้วยคำ 6 ชนิดย่อย</p>
+<ul class="simple">
+<li><p>คำวิเศษณ์ (adverb)</p></li>
+<li><p>คำคุณศัพท์ (adjective)</p></li>
+<li><p>คำอุทาน (interjection)</p></li>
+<li><p>คำนาม (noun)</p></li>
+<li><p>คำกริยา (verb)</p></li>
+<li><p>วิสามานยนาม หรือคำนามชื่อเฉพาะ (proper noun)</p></li>
+</ul>
+</li>
+<li><p>คำชนิดปิด (closed class word) เป็นกลุ่มคำที่มีจำนวนจำกัดและไม่ค่อยมีการเพิ่มคำใหม่ หน้าที่หลักของคำชนิดปิดคือการเชื่อมโยงหรือจัดระเบียบความสัมพันธ์ระหว่างคำในประโยค คำชนิดปิดมักมีความหมายที่น้อยลงหรือเป็นนามธรรม และมักไม่สามารถยืนอยู่ได้ด้วยตัวเอง แต่ต้องใช้งานร่วมกับคำอื่นเพื่อสร้างประโยคที่ถูกหลักไวยากรณ์ คำชนิดปิดประกอบด้วยคำ 8 ชนิดย่อย</p>
+<ul class="simple">
+<li><p>คำบุพบท (adposition)</p></li>
+<li><p>คำช่วยกริยา (auxiliary)</p></li>
+<li><p>ตัวกำหนด (determiner)</p></li>
+<li><p>ตัวเลข (numeral)</p></li>
+<li><p>คำอนุภาค (particle)</p></li>
+<li><p>คำสรรพนาม (pronoun)</p></li>
+<li><p>คำสันธานเชื่อมความ (coordinating conjunction)</p></li>
+<li><p>คำสันธานซ้อนความ (subordinating conjunction)</p></li>
+</ul>
+</li>
+<li><p>คำชนิดอื่น ๆ ประกอบด้วยคำ 3 ชนิดย่อย</p>
+<ul class="simple">
+<li><p>เครื่องหมายวรรคตอน (punctuation)</p></li>
+<li><p>สัญลักษณ์ (symbol)</p></li>
+<li><p>อื่น ๆ ที่ไม่เข้าพวกกับคำชนิดที่กล่าวมาแล้ว</p></li>
+</ul>
+</li>
+</ol>
+<p><span id="id3">[]</span></p>
+<p>ชุดป้ายระบุชนิดของคำสากลเป็นระบบการจำแนกชนิดของคำที่มีมาตรฐานเดียวกันทุกภาษา เพื่อให้การทำงานของโมเดลภาษาต่าง ๆ สามารถทำงานร่วมกันได้โดยสะดวกต่อการใช้โมเดลที่มีการใช้การถ่ายโอนข้ามภาษา (cross-lingual transfer) การใช้ชุดป้ายระบุชนิดของคำสากล จึงเป็นเครื่องมือที่สำคัญและได้รับความนิยมในการพัฒนาระบบประมวลผลภาษาธรรมชาติที่มีประสิทธิภาพ</p>
+</section>
+</section>
+<section id="named-entity-recognition">
+<h2>การตรวจจับเอนทิตี (Named Entity Recognition)<a class="headerlink" href="#named-entity-recognition" title="Permalink to this heading">#</a></h2>
+<p>เอนทิตีในเชิงทฤษฎีแล้วคือ สิ่งที่มีตัวตนจริงและอิสระไม่เกี่ยวพันกับสิ่งอื่น ๆ ซึ่งเรามักจะหมายถึงบุคคล องค์กร บริษัท หรือสถานที่ เพราะฉะนั้นคำว่า named entity หมายความถึง บุคคล องค์กร สถานที่ หรือสิ่งที่มีตัวตนประเภทอื่น ๆ ที่มีสามารถอ้างถึงได้ด้วยชื่อ  ในบริบทของการประมวลผลภาษาธรรมชาติการตรวจจับเอนทิตี (Named Entity Recognition หรือ NER) คือ การตรวจจับชื่อของบุคคล ชื่อขององค์กร ชื่อของสถานที่ ชื่อของเหตุการณ์ หรือชื่อของสิ่งของที่มีความสำคัญออกมาจากข้อความ และในทางปฏิบัติแล้วการตรวจจับเอนทิตีไม่ได้จำกัดเพียงแต่เอนทิตีอย่างเดียว แต่หมายความรวมถึงการตรวจจับส่วนอื่นของข้อความที่มีความสำคัญ​และอาจจะไม่ได้มีตัวตนอิสระตามความหมายของเอนทิตี เช่น</p>
+<ul class="simple">
+<li><p>เวลาและวันที่ เช่น “เมื่อวาน” หรือ “สัปดาห์หน้า”</p></li>
+<li><p>จำนวนเงิน เช่น “500 บาท” หรือ “หนึ่งพันเหรียญสหรัฐ”</p></li>
+<li><p>จำนวนและขนาด เช่น “3 กิโลเมตร” หรือ “5 ลิตร”</p></li>
+<li><p>คำนำหน้าชื่อ และคำศัพท์ทั่วไปที่เป็นคำบ่งบอกสถานที่ เช่น “เด็กชาย” “นางสาว” หรือ “โรงเรียน” ซึ่งไม่ได้บ่งบอกถึงชื่อเฉพาะของบุคคลหรือสถานที่</p></li>
+</ul>
+<p>การตรวจจับเอนทิตีมีประโยชน์อย่างมากในหลายด้านของการประมวลผลภาษาธรรมชาติ (NLP) และการประยุกต์ใช้ในงานต่างๆ โดยสามารถยกตัวอย่างได้ดังนี้</p>
+<ul class="simple">
+<li><p>ในการวิเคราะห์ความเห็นของลูกค้าเกี่ยวกับผลิตภัณฑ์ในโซเชียลมีเดีย บริษัทสามารถใช้การตรวจจับเอนทิตีเพื่อระบุชื่อผลิตภัณฑ์ ชื่อบริษัท หรือบุคคลที่เกี่ยวข้อง จากนั้นสามารถวิเคราะห์ความเห็นในเชิงบวกหรือลบที่มีต่อเอนทิตีเหล่านี้ได้อย่างมีประสิทธิภาพ ซึ่งช่วยให้บริษัทสามารถเข้าใจความคิดเห็นของลูกค้าเกี่ยวกับผลิตภัณฑ์หรือบริการได้อย่างละเอียด และสามารถปรับปรุงผลิตภัณฑ์และการบริการตามความคิดเห็นที่ได้รับได้อย่างตรงจุด</p></li>
+<li><p>ในระบบตอบคำถามอัตโนมัติ เช่น ระบบบริการหลังการขายออนไลน์  การตรวจจับเอนทิตีสามารถระบุข้อมูลสำคัญจากคำถามของผู้ใช้ เช่น ชื่อผลิตภัณฑ์ หรือปัญหาที่เกิดขึ้น ทำให้ระบบสามารถให้คำตอบที่แม่นยำและรวดเร็วแก่ผู้ใช้ ลดเวลาที่ต้องใช้ในการค้นหาข้อมูลและเพิ่มประสิทธิภาพในการให้บริการลูกค้า</p></li>
+<li><p>ในด้านการสกัดข้อมูลทางการแพทย์ การตรวจจับเอนทิตีมีบทบาทสำคัญในการวิเคราะห์เวชระเบียนหรือเอกสารทางการแพทย์ โดยสามารถระบุชื่อโรค ชื่อยา ชื่อแพทย์ หรือวันนัดหมายได้อย่างชัดเจน ซึ่งช่วยในการจัดการข้อมูลทางการแพทย์อย่างเป็นระบบ สามารถสกัดข้อมูลสำคัญเพื่อใช้ในการวินิจฉัยโรค หรือการวิจัยทางการแพทย์ได้อย่างรวดเร็วและแม่นยำ</p></li>
+<li><p>ในการวิเคราะห์ข่าวสารจากแหล่งต่างๆ การตรวจจับเอนทิตีสามารถระบุชื่อบุคคลสำคัญ เหตุการณ์สำคัญ สถานที่ หรือชื่อองค์กรที่ปรากฏในข่าว ทำให้สำนักข่าวหรือองค์กรที่เกี่ยวข้องสามารถติดตามและวิเคราะห์ข้อมูลข่าวสารได้อย่างมีประสิทธิภาพ สามารถสรุปแนวโน้มข่าวสาร หรือทำการวิจัยเชิงลึกเกี่ยวกับประเด็นที่สำคัญได้</p></li>
+</ul>
+<p>การตรวจจับเอนทิตีมักจะใช้เทคนิคการประมวลผลภาษาธรรมชาติเช่นเดียวกับการแยกชนิดของคำ โดยใช้โมเดลการเรียนรู้ของเครื่องที่เรียนรู้จากชุดข้อมูลที่มีเอนทิตีที่ถูกติดป้ายไว้ และใช้เอนทิตีที่ติดป้ายเหล่านั้นในการสร้างโมเดลที่สามารถตรวจจับเอนทิตีใหม่ได้</p>
+</section>
+<section id="spacy">
+<h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี<a class="headerlink" href="#spacy" title="Permalink to this heading">#</a></h2>
+<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีแบบจำลองการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำแบบจำลองไปใช้จริง  <span id="id4">[<a class="reference internal" href="../module7/1-intro-NLP.html#id52">Honnibal <em>et al.</em>, 2020</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
+<p>ขั้นแรกต้องหาชื่อชุดโมเดลที่เราต้องการใช้ รายชื่อชุดโมเดลอยู่บนเว็บไซต์ของ spacy ซึ่งมีเอกสารประกอบการใช้งานที่เป็นปัจจุบันอยู่ โมเดลเหล่านี้ประกอบไปด้วยโมเดลย่อยหลาย ๆ โมเดลด้วยกัน เราสามารถตรวจสอบดูบนเว็บไซต์ได้ว่าโมเดลแต่ละชุดประกอบด้วยโมเดลอะไรบ้าง  ตัวอย่างเช่น สำหรับภาษาจีน มีชุดโมเดลที่มีโมเดลการแยกชนิดของคำได้อยู่สามแบบจำลองได้แก่ <code class="docutils literal notranslate"><span class="pre">zh_core_web_sm</span></code> (ขนาดเล็ก) <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> (ขนาดกลาง) และ  <code class="docutils literal notranslate"><span class="pre">zh_core_web_lg</span></code> (ขนาดใหญ่) ทั้งสามชุดในเวอร์ชันปี 2024 ประกอบไปด้วย 5 โมเดลย่อย ได้แก่ โมเดลการตัดคำ โมเดลการตัดประโยค โมเดลการวิเคราะห์โครงสร้างประโยค โมเดลการติดป้ายชนิดของคำ โมเดลการตรวจจับเอนทิตี</p>
+<p>หากเรายังไม่ได้ติดตั้งไลบรารี spacy เราสามารถติดตั้งโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacy</span></code> หลังจากนั้นเราสามารถดาวน์โหลดและติดตั้งแบบจำลองที่ต้องการได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spacy</span> <span class="pre">download</span></code> ตามด้วยชื่อแบบจำลองที่ต้องการดาวน์โหลดและติดตั้ง เช่น</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>zh_core_web_md
+</pre></div>
+</div>
+<p>วิธีการใช้ spacy จะต่างจากการใช้ pythainlp ตรงที่ว่าเราจะต้องสร้างอ็อบเจกต์ที่ทำหน้าที่เป็นตัวประมวลผลที่โหลดโมเดลที่ต้องการมาให้พร้อม เพื่อที่จะได้ไม่ต้องโหลดโมเดลซ้ำ ๆ บ่อย ๆ เพราะถ้าหากเป็นโมเดลขนาดใหญ่แล้วต้องโหลดโมเดลซ้ำ ๆ จะทำให้โปรแกรมทำงานช้า ไม่เหมาะกับการประมวลผลข้อมูลขนาดใหญ่ที่เราอาจจะต้องลูปวนเพื่อประมวลผลข้อมูลทีละชิ้น ตัวอย่างการใช้งาน spacy ในการแยกชนิดของคำแสดงในโค้ดต่อไปนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;zh_core_web_md&#39;</span>
+<span class="n">nlp_processor</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+<span class="n">text</span>  <span class="o">=</span> <span class="s1">&#39;张伟和李娜在漂亮的上海吃饭&#39;</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">nlp_processor</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้จะแสดงชนิดของคำที่แยกออกมาจากข้อความ ตามที่กำหนดไว้ในชุดป้ายระบุชนิดของคำสากลดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">张伟</span> <span class="n">PROPN</span>
+<span class="n">和</span> <span class="n">CCONJ</span>
+<span class="n">李娜</span> <span class="n">PROPN</span>
+<span class="n">在</span> <span class="n">ADP</span>
+<span class="n">漂亮</span> <span class="n">VERB</span>
+<span class="n">的</span> <span class="n">PART</span>
+<span class="n">上海</span> <span class="n">PROPN</span>
+<span class="n">吃饭</span> <span class="n">VERB</span>
+</pre></div>
+</div>
+<p>ในตัวอย่างนี้เราโหลดแบบจำลอง <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> ซึ่งเป็นแบบจำลองขนาดกลางสำหรับภาษาจีน โดยการเรียกคำสั่ง <code class="docutils literal notranslate"><span class="pre">spacy.load</span></code> เพื่อสร้างตัวประมวลผลข้อความและเก็บไว้ในตัวแปรชื่อ <code class="docutils literal notranslate"><span class="pre">nlp_processor</span></code> ซึ่งสามารถใช้ได้คล้ายกับว่าเป็นฟังก์ชัน เราจึงสามารถเรียก <code class="docutils literal notranslate"><span class="pre">nlp_processor(text)</span></code> ได้เลยโดยไม่ต้องใช้ชื่อเมท็อดอื่น ผลที่ได้คือเป็น <code class="docutils literal notranslate"><span class="pre">Doc</span></code> อ็อบเจกต์ที่เราสามารถวนลูปเพื่อดึง <code class="docutils literal notranslate"><span class="pre">Token</span></code> อ็อบเจกต์ออกมาและดึงชนิดของคำออกมาได้โดยใช้ <code class="docutils literal notranslate"><span class="pre">token.pos_</span></code> ในการเข้าถึงชนิดของคำ</p>
+<p>ข้อสังเกตที่สำคัญอีกประการหนึ่งของการใช้ spacy คือ ไลบรารีนี้ประมวลข้อความเป็นแบบการทำงานแบบสายท่อ (pipeline) กล่าวคือสตริงที่รับเข้ามาจะถูกประมวลหลาย ๆ ขั้นในครั้งเดียว เช่น การประมวลภาษาจีนจะเริ่มด้วยการตัดคำ ต่อด้วยการแยกชนิดของคำ การวิเคราะห์โครงสร้างประโยค และจบด้วยการตรวจจับเอนทิตี จากนั้นผู้ใช้สามารถเข้าถึงผลการวิเคราะห์ทั้งหมดนี้ผ่าน <code class="docutils literal notranslate"><span class="pre">Doc</span></code> อ็อบเจกต์ที่ได้รับกลับมาจากการเรียก <code class="docutils literal notranslate"><span class="pre">nlp_processor(text)</span></code> โดยไม่ต้องเรียกแต่ละขั้นตอนเอง  เพราะฉะนั้นเราสามารถเข้าถึงรายชื่อเอนทิตีได้เลย โดยไม่ต้องประมวลผลข้อความอีกครั้ง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพท์ที่ได้จะแสดงชื่อเอนทิตีที่ตรวจจับออกมาจากข้อความดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">张伟</span> <span class="n">PERSON</span>
+<span class="n">李娜</span> <span class="n">PERSON</span>
+<span class="n">上海</span> <span class="n">GPE</span>
+</pre></div>
+</div>
+<p>จากข้อความตัวอย่างที่ป้อนเข้าไป ตัวประมวลผลตรวจจับชื่อเอนทิตีที่เป็นบุคคลทั้งหมดสองชื่อ ได้แก่  张伟 และ 李娜 และเอนทิตีแบบภูมิรัฐศาสตร์ (GPE ซึ่งย่อมาจาก geopolitical entity) หนึ่งชื่อ ได้แก่ 上海</p>
+</section>
+<section id="sentiment-analysis">
+<h2>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h2>
+<p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) คือกระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ใช้หรือประชาชนต่อผลิตภัณฑ์ บริการ หรือเหตุการณ์ต่างๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง นับว่าเป็นการประยุกต์การใช้ประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดอย่างหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
+<ul class="simple">
+<li><p>การวิเคราะห์ความคิดเห็นของลูกค้าในโซเชียลมีเดีย: สมมติว่าเรามีข้อความจากทวิตเตอร์เกี่ยวกับผลิตภัณฑ์ใหม่ของบริษัท เราสามารถแยกแยะความคิดเห็นเชิงบวก ลบ หรือกลาง และนับจำนวนความคิดเห็นแต่ละประเภทได้ และแยกวิเคราะห์ได้ บริษัทสามารถใช้ข้อมูลนี้เพื่อเข้าใจความคิดเห็นของลูกค้าต่อผลิตภัณฑ์ใหม่ และนำไปปรับปรุงผลิตภัณฑ์หรือกลยุทธ์การตลาดได้</p></li>
+<li><p>การประเมินความพึงพอใจของลูกค้าในบทวิจารณ์ออนไลน์:
+การวิเคราะห์อารมณ์ความรู้สึกสามารถแยกแยะได้ว่าอาจจะมีความรู้สึกเชิงบวกต่อผลิตภัณฑ์ แต่มีความรู้สึกเชิงลบต่อการบริการ ร้านอาหารสามารถใช้ข้อมูลนี้เพื่อปรับปรุงการบริการและรักษาคุณภาพอาหารให้ดีอยู่เสมอ</p></li>
+<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id5">[]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่างๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
+</ul>
+<p><em>under construction</em></p>
+</section>
+<section id="topic-model">
+<h2>แบบจำลองหัวข้อ (topic model)<a class="headerlink" href="#topic-model" title="Permalink to this heading">#</a></h2>
+<p><em>under construction</em></p>
+</section>
+<section id="machine-translation">
+<h2>การแปลด้วยเครื่อง (machine translation)<a class="headerlink" href="#machine-translation" title="Permalink to this heading">#</a></h2>
+<p><em>under construction</em></p>
+</section>
+<section id="llm-large-language-model">
+<h2>แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)<a class="headerlink" href="#llm-large-language-model" title="Permalink to this heading">#</a></h2>
+<p><em>under construction</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/module9"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../9-nlp-models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">แบบจำลองการประมวลภาษาธรรมชาติ</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="4-workshop-word-cloud.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Workshop - Word cloud</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-of-speech-tagging">การแท็กชนิดของคำ (Part-of-speech tagging)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การแยกชนิดของคำ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-large-language-model">แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

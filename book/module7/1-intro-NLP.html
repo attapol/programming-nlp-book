@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Video: Natural Language Processing" href="2-videos-intro-NLP.html" />
-    <link rel="prev" title="Natural Language Processing" href="../7-nlp.html" />
+    <link rel="prev" title="การประมวลผลภาษาธรรมชาติ (Natural Language Processing)" href="../7-nlp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -205,7 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../7-nlp.html">Natural Language Processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
@@ -214,16 +214,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">การจัดการข้อมูลด้วย pandas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas-old.html">การจัดการข้อมูลขั้นพื้นฐานด้วย <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">แบบจำลองภาษาขนาดใหญ่ (Large Language Model)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-large-language-model.html">Large Language Model</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">แบบจำลองการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">แบบจำลองการประมวลผลภาษาธรรมชาติ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module9/5-nlp-models.html">โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
 </li>
@@ -500,7 +498,7 @@ document.write(`
 <p>ข้อมูลจัดเป็นทรัพยากรที่มีค่ามหาศาล ในปัจจุบันเกือบทุกบริษัท ทุกองค์กรทั้งภาครัฐและเอกชน ต่างเก็บข้อมูลต่าง ๆ ที่เกี่ยวกับการดำเนินธุรกิจ หรือบริหารงานทุกประเภท เช่น เมื่อเราเข้าร้านสะดวกซื้อ หรือห้างสรรพสินค้า พนักงานมักจะถามหาหมายเลขสมาชิก หรือเบอร์โทรศัพท์ เพื่อเก็บข้อมูลการซื้อของลูกค้าตลอดระยะเวลาที่ยังเป็นลูกค้าอยู่ สิ่งที่บริษัทต้องการได้คือข้อมูลของลูกค้า ถึงแม้ว่าจะต้องแลกมากลับการให้ส่วนลด หรือให้่ลูกค้าแลกแต้มเพื่อได้ของสมมนาคุณต่าง ๆ ข้อมูลเหล่านี้ทำให้บริษัทได้ศึกษาพฤติกรรมของลูกค้า ทำให้เลือกสินค้ามาขายได้ถูกใจลูกค้ามากขึ้น ได้ออกกิจกรรมส่งเสริมการขายได้ตรงใจลูกค้ามากขึ้น และทำให้สามารถลูกค้าออกมาได้เป็นกลุ่ม (เช่น กลุ่มที่เป็นลูกค้าใหม่ กลุ่มที่ซื้อไม่บ่อยแต่ซื้อเยอะ กลุ่มที่ซื้อสม่ำเสมอ เป็นต้น) เพื่อสามารถให้บริการลูกค้าได้ดีขึ้น ลูกค้ามีความพึงพอใจมากขึ้น และเพิ่มยอดขายได้มากขึ้น</p>
 <p>ข้อมูลอีกประเภทที่กำลังเป็นที่นิยมมากขึ้น คือข้อมูลตัวอักษร (text data) ซึ่งได้มาจากแพลตฟอร์มสื่อสังคมออนไลน์ แพลตฟอร์มการซื้อขายออนไลน์ หรือการทำสำรวจความคิดเห็นที่มีคำถามปลายเปิด ข้อมูลเหล่านี้มีหลากมิติกว่าข้อมูลที่เป็นเชิงปริมาณ หรือข้อมูลที่เป็นตัวเลข เนื่องจากผู้ที่ให้ข้อมูลสามารถแสดงความเห็นได้อย่างอิสระ ทำให้ได้คำตอบที่หลากหลาย
 เมื่อนำมาวิเคราะห์ทำให้เกิดความรู้เชิงประจักษ์ที่เอื้อต่อการดำเนินการต่อ (actionable insight) ที่สามารถนำไปปรับใช้กับองค์กรหรือธุรกิจได้ ตัวอย่างเช่น บริษัทสามารถดึงข้อมูลรีวิวความเห็นของลูกค้าที่ได้ซื้อสินค้าจากแพลตฟอร์มการซื้อขายออนไลน์ที่บริษัทไปเปิดร้านไว้ แล้วนำข้อมูลนี้ไปวิเคราะห์ว่าลูกค้าชอบอะไรหรือไม่ชอบอะไรเกี่ยวกับผลิตภัณฑ์ของเรา หรือลูกค้าชอบอะไรเกี่ยวกับผลิตภัณฑ์ที่ทำโดยบริษัทคู่แข่ง ทำให้เกิดความรู้เชิงประจักษ์ที่สามารถนำไปพัฒนาผลิตภัณฑ์ให้ตอบโจทย์ของผู้บริโภคได้ดีขึ้น และพัฒนากระบวนการการสั่งซื้อของและส่งของให้ลูกค้าให้มีประสิทธิภาพมากขึ้น</p>
-<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (data science หรือ data analytics)  เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (computer science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ (natural language processing) ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคโนโลยีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา เมื่อนำมาประกอบกับการวิเคราะห์ข้อมูลเพื่อพัฒนาธุรกิจ เราจะเรียกว่าการวิเคราะห์ข้อความ (text analytics)</p>
+<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (data science หรือ data analytics)  เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (computer science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ (natural language processing) ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคนิควิธีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา เมื่อนำมาประกอบกับการวิเคราะห์ข้อมูลเพื่อพัฒนาธุรกิจ เราจะเรียกว่าการวิเคราะห์ข้อความ (text analytics)</p>
 <p>คำว่า “ภาษาธรรมชาติ” ใช้เพื่ออ้างอิงถึงภาษาที่มนุษย์ใช้ในการสื่อสารกัน ซึ่งรวมไปถึงทั้งภาษาพูดและภาษาเขียนที่พัฒนาขึ้นอย่างธรรมชาติในสังคมมนุษย์ ไม่ว่าจะเป็นภาษาไทย อังกฤษ จีน หรือภาษาอื่นๆ การใช้คำว่า “ภาษาธรรมชาติ” เพื่อแยกแยะจาก “ภาษาคอมพิวเตอร์” ซึ่งเป็นภาษาที่ถูกสร้างขึ้นมาเพื่อการเขียนโปรแกรมและการสื่อสารกับเครื่องคอมพิวเตอร์ เช่น ภาษาไพธอน หรือ ภาษาจาวา (Java) ซึ่งมีโครงสร้างและกฎเกณฑ์ที่เข้มงวดกว่ามาก ด้วยเหตุนี้ เทคนิคที่ถูกพัฒนามาเพื่อการประมวลผลและทำความเข้าใจภาษาที่มนุษย์ใช้จึงเรียกว่า “ประมวลผลภาษาธรรมชาติ” หรือ NLP เทคนิคเหล่านี้ออกแบบมาเพื่อให้เครื่องคอมพิวเตอร์สามารถเข้าใจและประมวลผลข้อมูลที่เป็นภาษาธรรมชาติได้อย่างมีประสิทธิภาพ เป้าหมายคือการให้คอมพิวเตอร์สามารถ “เข้าใจ” ภาษามนุษย์ได้ใกล้เคียงกับวิธีที่มนุษย์เข้าใจภาษาของกันและกัน เพื่อใช้ประโยชน์ในงานต่างๆ ที่เกี่ยวกับภาษา</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -1413,7 +1411,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Natural Language Processing</p>
+        <p class="prev-next-title">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</p>
       </div>
     </a>
     <a class="right-next"
