@@ -1,5 +1,5 @@
-# แบบจำลองภาษาขนาดใหญ่ (Large Language Model)
-การใช้ LLM
+# แบบจำลองการประมวลภาษาธรรมชาติ 
+
 *Under construction*
 
 ```{tableofcontents}
