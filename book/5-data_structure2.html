@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Structure II &#8212; Programming for NLP</title>
+    <title>โครงสร้างข้อมูลแบบซ้อนใน &#8212; Programming for NLP</title>
   
   
   
@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/5-data_structure2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่" href="module5/1-nested-list.html" />
-    <link rel="prev" title="โจทย์: Text processing และ Regular expression" href="module4/5s-exercise-file-regex.html" />
+    <link rel="next" title="โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)" href="module5/1-nested-list.html" />
+    <link rel="prev" title="เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์" href="module4/5s-exercise-file-regex.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,16 +182,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module4/1-file-regex.html">การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module4/2-videos-file.html">Video: file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module4/3-regular-expression.html">Regular expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module4/4-videos-regex.html">Video: Regular Expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module4/5s-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Data Structure II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module5/1-nested-list.html">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">โครงสร้างข้อมูลแบบซ้อนใน</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="module5/1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -409,9 +408,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -422,19 +419,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Structure II</h1>
+    <h1>โครงสร้างข้อมูลแบบซ้อนใน</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-structure">Nested data structure</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -444,56 +433,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-structure-ii">
-<h1>Data Structure II<a class="headerlink" href="#data-structure-ii" title="Permalink to this heading">#</a></h1>
-<p>โครงสร้างข้อมูลที่ใช้งานบ่อยในภาษาไพธอน คือ ลิสต์ และดิกชันนารี แต่ว่าโครงสร้างข้อมูลทั้งสองประเภทนี้ไม่ตอบโจทย์การใช้งานบางประเภท ที่ต้องการโครงสร้างที่ซับซ้อนขึ้น บทนี้จะพูดถึงโครงสร้างข้อมูลที่ซ้อนกัน (nested data structure) ที่เราสามารถใช้เก็บข้อมูลที่ซับซ้อนขึ้นได้</p>
-<section id="nested-data-structure">
-<h2>Nested data structure<a class="headerlink" href="#nested-data-structure" title="Permalink to this heading">#</a></h2>
-<p>ภาษาไพธอนรองรับการเก็บข้อมูลอยู่สองประเภทใหญ่ ๆ ที่เราได้เรียนมาแล้ว</p>
-<ol class="arabic simple">
-<li><p>ข้อมูลแบบค่าเดี่ยว ได้แก่ integer string float boolean</p></li>
-<li><p>ข้อมูลแบบคอลเลกชัน ได้แก่ list tuple dictionary set เราเรียกข้อมูลประเภทนี้ว่า โครงสร้างข้อมูล  โครงสร้างข้อมูลมีหน้าที่ในการเก็บข้อมูลเอาไว้หลาย ๆ ตัว ทำให้เกิดโครงสร้าง เช่น ลิสต์เป็นโครงสร้างมีลำดับ ดิกชันนารีเป็นโครงสร้างแบบมีการจับคู่ ในบทที่ผ่านมาเราได้เรียนรู้วิธีการใช้โครงสร้างข้อมูลเหล่านี้ในการเก็บข้อมูลแบบค่าเดี่ยวหลาย ๆ ตัวไว้ในโครงสร้างเดียวกัน เช่น ลิสต์ของตัวเลขเพื่อใช้เก็บรายการคะแนนของนักเรียนในห้อง ลิสต์ของสตริงเพื่อใช้เก็บรายชื่อของพนักงานในบริษัท ดิกชันนารีที่คีย์เป็นสตริงและแวลูเป็นตัวเลขเพื่อใช้เก็บคำและความถี่เกิดขึ้นของตคำนั้น เซ็ตของสตริงเพื่อใช้เก็บ vocabulary เป็นต้น</p></li>
-</ol>
-<p><img alt="basic data structures" src="book/img/data-structures.svg" /></p>
-<p>โครงสร้างข้อมูลที่ซ้อนกัน (nested data structure) คือ โครงสร้างข้อมูลที่เก็บโครงสร้างข้อมูลอีกประเภทนึงเอาไว้  โครงสร้างข้อมูลทั้งหมดที่เราได้เรียนมาแล้วสามารถเก็บโครงสร้างข้อมูลอื่น ๆ ซ้อนเข้าไปได้อีกชั้นหนึ่ง เพื่อรองรับข้อมูลที่มีโครงสร้างซับซ้อนขึ้น เช่น</p>
-<ul class="simple">
-<li><p>ลิสต์ของลิสต์ของสตริง เพื่อใช้เก็บชื่อไฟล์และโฟลเดอร์ที่อยู่ในโฟลเดอร์อีกชั้นหนึ่ง</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s1">&#39;file1.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;file2.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;file3.txt&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;file4.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;file5.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;file6.txt&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;file7.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;file8.txt&#39;</span><span class="p">]</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>ลิสต์ของทูเปิลของสตริง เพื่อใช้เก็บรายชื่อที่มีทั้งชื่อจริงและชื่อเล่น</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;เศรษฐา&#39;</span><span class="p">,</span> <span class="s1">&#39;นิด&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;ประยุทธ์&#39;</span><span class="p">,</span> <span class="s1">&#39;ตู่&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;ยิ่งลักษณ์&#39;</span><span class="p">,</span> <span class="s1">&#39;ปู&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;อภิสิทธิ์&#39;</span><span class="p">,</span> <span class="s1">&#39;มาร์ค&#39;</span><span class="p">)</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>ลิสต์ของดิกชันนารี เพื่อใช้เก็บบทสนทนาในกลุ่มไลน์</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tweets</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="s1">&#39;nong-p1&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;พี่คะ โปรแกรมหนู error ค่ะ&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="s1">&#39;nipun&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;ขอดูหน่อยครับ&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="s1">&#39;nipun&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;ส่ง screenshot มาเลยครับ&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="s1">&#39;p-p2&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;ปัญหาเดียวกันเลยครับ&#39;</span><span class="p">}</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>ความท้าทายของการใช้โครงสร้างข้อมูลที่ซ้อนกัน คือ  การเข้าถึงข้อมูลในโครงสร้างข้อมูลที่ถูกซ้อนอยู่ ผู้ใช้จะต้องทราบว่าเมื่อเข้าถึงข้อมูลโดยใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วค่าทีได้คืนมาเป็นโครงสร้างข้อมูลประเภทใด และโครงสร้างข้อมูลนั้นเก็บข้อมูลประเภทใดอีก ในบทนี้จะมีคำถามให้ลองคิดตามดูว่าเพื่อรันโค้ดแล้วจะได้โครงสร้างข้อมูลประเภทใดคืนมา</p>
-<p>ความท้าทายอีกประการหนึ่งของการใช้โครงสร้างข้อมูลที่ซ้อนกัน คือ การเลือกใช้โครงสร้างข้อมูลที่เหมาะสมกับข้อมูลที่ต้องการจะเก็บ และไม่ซับซ้อนเกินไป หากเราเลือกโครงสร้างข้อมูลที่ซับซ้อนเกินไป จะทำให้โค้ดทำความเข้าใจได้ยาก เมื่อผู้อื่นต้องนำโค้ดเราไปเขียนเพ่ิมเติม ทำให้เกิดความผิดพลาดได้ง่าย</p>
-<p>ในบทนี้เราจะพูดถึงโครงสร้างข้อมูลที่ซ้อนกัน ที่พบเห็นได้บ่อย ๆ ในการเขียนโค้ดเพื่อประมวลผลข้อมูล</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>โครงสร้างข้อมูลแบบซ้อนใน<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module5/1-nested-list.html">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module5/1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -501,7 +445,6 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
 </ul>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -541,7 +484,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">โจทย์: Text processing และ Regular expression</p>
+        <p class="prev-next-title">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</p>
       </div>
     </a>
     <a class="right-next"
@@ -549,7 +492,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</p>
+        <p class="prev-next-title">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,20 +505,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-structure">Nested data structure</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

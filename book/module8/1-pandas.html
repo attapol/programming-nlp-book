@@ -182,16 +182,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module4/1-file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module4/3-regular-expression.html">Regular expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">โจทย์: Text processing และ Regular expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">Data Structure II</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">ลิสต์ที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -513,7 +512,7 @@ document.write(`
 <figure class="align-default" id="id24">
 <img alt="../../_images/row-column2.png" src="../../_images/row-column2.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ส่วนประกอบอีกอย่างหนึ่งที่สำคัญของข้อมูลแบบตารางคือ พจนานุกรมข้อมูล (data dictionary) ซึ่งเป็นเอกสารที่ระบุความหมายของแต่ละคอลัมน์ และค่าข้อมูลที่เป็นไปได้ของแต่ละคอลัมน์ ซึ่งช่วยให้ผู้ใช้เข้าใจข้อมูลได้ง่ายขึ้น และช่วยให้ผู้ใช้สามารถใช้ข้อมูลได้อย่างถูกต้องและเหมาะสม พจนานุกรมข้อมูลนี้มักจะถูกเก็บแยกออกมาอีกไฟล์หนึ่ง หรือเป็นส่วนหนึ่งของเอกสารคู่มือการใช้งานข้อมูล แต่ในหลาย ๆ กรณีผู้ดูแลรักษาข้อมูลอาจจะไม่ได้เตรียมพจนานุกรมข้อมูลเอาไว้ให้พร้อมใช้ ผู้ใช้ข้อมูลจะต้องไปสอบถามผู้ดูแลรักษาข้อมูลหรือค้นหาข้อมูลเพิ่มเติมเองโดยตรง ตัวอย่างของพจนานุกรมข้อมูลของข้อมูลการรีวิวสายการบิน อาจมีดังนี้</p>
@@ -833,7 +832,7 @@ document.write(`
 <figure class="align-default" id="id25">
 <img alt="../../_images/df-null.png" src="../../_images/df-null.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
 <div class="legend">
 <p>(ล่าง) ดาตาเฟรมที่ถูกคืนค่ามาจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code></p>
 <p>(ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</p>
@@ -847,7 +846,7 @@ document.write(`
 <figure class="align-default" id="id26">
 <img alt="../../_images/df-null-sum-0.png" src="../../_images/df-null-sum-0.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id26" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id26" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นทำความเข้าใจได้ยากเล็กน้อย เพราะมีการเรียกสองเมท็อดต่อเนื่องกันในบรรทัดเดียว เราเรียกวิธีนี้ว่าการโยงเมท็อด (method chaining) ซึ่งการเรียกเมท็อดต่อเนื่องกันโดยไม่ต้องเก็บผลลัพธ์ของเมท็อดก่อนหน้าไว้ในตัวแปรก่อน และเรียกเมท็อดต่อไปได้ทันที ในตัวอย่างข้างต้นเราให้ดาตาเฟรมเรียกเมท็อด <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> ก่อน และให้ผลลัพธ์เป็นดาตาเฟรม จากนั้นใช้ดาตาเฟรมนั้นเมท็อด <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ต่อ โดยให้พารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> ซึ่งหมายถึงให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> นับจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ ดังนั้นจึงมีค่าเท่ากับการเรียกเมท็อดแยกกัน โดยใช้คำสั่งดังนี้</p>
@@ -878,7 +877,7 @@ document.write(`
 <figure class="align-default" id="id27">
 <img alt="../../_images/df-null-sum-1.png" src="../../_images/df-null-sum-1.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id27" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id27" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ผลลัพธ์ที่ได้จะเป็นจำนวนข้อมูลที่หายไปในแต่ละแถว คืนค่ามาเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่ index เป็นชื่อแถวของดาตาเฟรมเดิมดังนี้</p>
@@ -903,7 +902,7 @@ document.write(`
 <figure class="align-default" id="id28">
 <img alt="../../_images/df-null-any-sum.png" src="../../_images/df-null-any-sum.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 24 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.isnull().any(axis=1)</span></code> จะคืนค่าเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หากแถวนั้นมีข้อมูลที่หายไปอย่างน้อยหนึ่งช่อง และ <code class="docutils literal notranslate"><span class="pre">False</span></code> หากแถวนั้นไม่มีข้อมูลที่หายไปเลย ตัวอย่างเช่น</p>
@@ -1033,7 +1032,7 @@ document.write(`
 <figure class="align-default" id="id29">
 <img alt="../../_images/df-loc-5-rating.png" src="../../_images/df-loc-5-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 24 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 25 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นแก้ไขค่าในแถวที่ 5 และคอลัมน์ Rating ให้เป็น 10</p>
@@ -1047,7 +1046,7 @@ document.write(`
 <figure class="align-default" id="id30">
 <img alt="../../_images/df-loc-5-7-rating-review.png" src="../../_images/df-loc-5-7-rating-review.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 25 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 26 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นเลือกแถวที่ 5 และ 7 และคอลัมน์ Rating และ Review</p>
@@ -1058,7 +1057,7 @@ document.write(`
 <figure class="align-default" id="id31">
 <img alt="../../_images/df-loc-5-7-rating.png" src="../../_images/df-loc-5-7-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 26 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 27 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1086,7 +1085,7 @@ document.write(`
 <figure class="align-default" id="id32">
 <img alt="../../_images/df-loc-colons.png" src="../../_images/df-loc-colons.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 27 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 28 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1121,7 +1120,7 @@ document.write(`
 <figure class="align-default" id="id33">
 <img alt="../../_images/df-loc-rating.png" src="../../_images/df-loc-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 28 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> ร่วมกับการใช้บูลีนพรางในเลือกแแถว และสตริงในการเลือกคอลัมน์ ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 29 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> ร่วมกับการใช้บูลีนพรางในเลือกแแถว และสตริงในการเลือกคอลัมน์ ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นเลือกแถวที่มีคะแนนสูงกว่า 10 โดยการใช้บูลีนพราง และเลือกคอลัมน์ด้วยการใช้สตริงเดี่ยว ๆ จากนั้นกำหนดให้คะแนนเป็น 10 เพราะฉะนั้นแถวที่มีค่าคอลัมน์ <em>Rating</em> มากกว่า 10 จะถูกเปลี่ยนเป็น 10 ทั้งหมด</p>
