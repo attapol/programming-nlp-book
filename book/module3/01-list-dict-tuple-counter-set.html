@@ -192,10 +192,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -576,25 +575,19 @@ document.write(`
 </section>
 <section id="id3">
 <h3>สร้างลิสต์จากสตริง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</aside>
 <p>สตริง method <code class="docutils literal notranslate"><span class="pre">.split</span></code> ใช้เวลาเราต้องการเปลี่ยนสตริงให้เป็นลิสต์ โดยที่ต้องกำหนดว่าจะใช้สตริงอะไรแบ่งสมาชิกแต่ละตัว ในตัวอย่างนี้เราใช้ <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ช่องว่างในการแบ่ง ในการทำ Natural Language Processing เราใช้คำสั่งนี้บ่อยมากในการตัดคำ ซึ่งก็คือการเปลี่ยนสตริงยาว ๆ ให้เป็นลิสต์ของคำ</p>
 </section>
 <section id="len-list">
 <h3>หาความยาวของลิสต์ (จำนวนสมาชิก): len(list)<a class="headerlink" href="#len-list" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span> <span class="c1">#---&gt; 10</span>
 </pre></div>
 </div>
-</aside>
 <p>ไพธอนมีฟังก์ชันบิวท์อิน <code class="docutils literal notranslate"><span class="pre">len</span></code> ที่ใช้หาจำนวนสมาชิกของลิสต์ และโครงสร้างข้อมูลอื่น ๆ ของไพธอนทั้งหมด ฟังก์ชันนี้จะรีเทิร์น <code class="docutils literal notranslate"><span class="pre">int</span></code> เสมอ ตัวอย่างที่ใช้บ่อย ๆ คือใช้ต่อการสร้างลิสต์จากสตริงเพื่อนับจำนวนคำที่อยู่ในประโยคหรือข้อความ เนื่องจากภาษาที่ใช้ตัวเขียนเป็นตัวลาตินสามารถตัดคำโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">split</span></code> ได้ง่าย ๆ ถึงแม้ว่าจะไม่ได้แม่นยำเสมอไป</p>
 </section>
 <section id="index">
@@ -707,15 +700,12 @@ document.write(`
 </section>
 <section id="id4">
 <h3>การเขียนทับด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;โจ้&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
 <span class="c1"># Output: [&#39;โจ้&#39;, &#39;เมย์&#39;, &#39;จอย&#39;, &#39;เมย์&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</aside>
 <p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> คร่อม index ที่เราต้องการเขียนทับ และใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ในการให้ค่า (assignment) คล้าย ๆ กับการใช้ตัวแปร เราอาจจะคิดเสมือนว่าลิสต์เป็นการเก็บตัวแปรไว้หลาย ๆ ตัวแปร แบบเรียงลำดับกันตามที่เราต้องการ</p>
 </section>
 </section>
@@ -724,23 +714,18 @@ document.write(`
 <p>ลิสต์ของเมท็อดของไพธอน เวอร์ชัน 3.12 มีอยู่ 11 เมท็อด แต่ว่าเมท็อดที่ใช้บ่อย ๆ ในการประมวลผลข้อมูลที่เกี่ยวข้องกับวิทยาการข้อมูล และการประมวลผลภาษาธรรมชาติ มีอยู่ 8 เมท็อด ได้แก่ <code class="docutils literal notranslate"><span class="pre">.append()</span> <span class="pre">.extend()</span> <span class="pre">.sort()</span> <span class="pre">.index()</span> <span class="pre">.count()</span> <span class="pre">.insert()</span> <span class="pre">.pop()</span> <span class="pre">.remove()</span></code> นอกจากนั้นยังมีฟังก์ชันบิวอินที่ใช้กับลิสต์ได้ 4 ฟังก์ชัน ได้แก่ <code class="docutils literal notranslate"><span class="pre">sort()</span> <span class="pre">sum()</span> <span class="pre">max()</span> <span class="pre">min()</span></code> ซึ่งเราจะเรียนรู้วิธีการใช้เมท็อดและฟังก์ชันเหล่านี้ในบทนี้</p>
 <section id="append">
 <h3>เพิ่มข้อมูลเข้าท้ายลิสต์: <code class="docutils literal notranslate"><span class="pre">.append()</span></code><a class="headerlink" href="#append" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">]</span> <span class="c1"># สร้างลิสต์</span>
 <span class="n">sales_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># เติมข้อมูลเข้าไป</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sales_list</span><span class="p">)</span> 
 <span class="c1">#Output คือ [23, 12, 96, 100]</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: สมาชิกใหม่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>method นี้ใช้เพิ่มสมาชิกเข้าไปอีกหนึ่งตัวเข้าไปท้ายลิสต์ method นี้นับได้ว่าเป็น method ที่ใช้บ่อยที่สุดของลิสต์ มักจะใช้เมื่อเราสร้างลิสต์ขึ้นมาหนึ่งอันและต้องการเก็บผลลัพท์ที่ต้องการเติมเข้าไปเรื่อย ๆ ก่อนจะนำมาคำนวณ หรือนำผลออกมาดู</p>
 </section>
 <section id="extend">
 <h3>นำลิสต์หลาย ๆ อันมาต่อกัน: <code class="docutils literal notranslate"><span class="pre">.extend()</span></code><a class="headerlink" href="#extend" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_first_six_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">sales_last_six_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
 <span class="n">sales_first_six_months</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sales_last_six_months</span><span class="p">)</span>
@@ -748,7 +733,6 @@ document.write(`
 <span class="c1"># Output: [23, 12, 96, 100, 40, 10, 33, 44, 55, 66, 77, 88]</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: ลิสต์ที่ต้องการ copy มาใส่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>method นี้ใช้สำหรับเวลาที่เราไม่อยากเรียก <code class="docutils literal notranslate"><span class="pre">.append</span></code> บ่อย ๆ ถ้าหากเรามีอีกลิสต์นึงที่เราต้องการ copy เอามา ให้เรียก method นี้ ซึ่งจะต้องรับลิสต์มาเป็น input เท่านั้น</p>
@@ -756,8 +740,6 @@ document.write(`
 </section>
 <section id="sorted-list-sort">
 <h3>เรียงลำดับสมาชิกในลิสต์: <code class="docutils literal notranslate"><span class="pre">sorted(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sorted-list-sort" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">sorted_sales_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sales_list</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sorted_sales_list</span><span class="p">)</span>
@@ -770,7 +752,6 @@ document.write(`
 
 </pre></div>
 </div>
-</aside>
 <p>การเรียงลำดับสมาชิกที่อยู๋ในลิสต์มีอยู่สองวิธี การเรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted</span></code> หรือการให้ลิสต์เรียก method <code class="docutils literal notranslate"><span class="pre">.sort()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">sorted</span></code> เป็นฟังก์ชันบิวท์อินที่รับลิสต์เป็น input และ return ลิสต์ใหม่อีกชุดที่สมาชิกทุกตัวถูกเรียงลำดับแล้ว ซึ่งหลังจากที่เรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted</span></code> ลิสต์ที่เป็น input นั้นจะไม่ถูกเปลี่ยนแปลงแต่อย่างใด</p>
 <p><code class="docutils literal notranslate"><span class="pre">.sort</span></code> เป็น method ของลิสต์ที่ไม่รับ input และไม่ return อะไรออกมา หลังจากที่ลิสต์ได้เรียก <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> แล้วสมาชิกของลิสต์ที่เรียก method จะถูกเรียงตามลำดับ</p>
@@ -778,8 +759,6 @@ document.write(`
 </section>
 <section id="sum-list-max-list-min-list">
 <h3>หาผลรวม ค่าสูงสุด ต่ำสุด ในลิสต์: <code class="docutils literal notranslate"><span class="pre">sum(list)</span> <span class="pre">max(list)</span> <span class="pre">min(list)</span></code><a class="headerlink" href="#sum-list-max-list-min-list" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">class_size_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">class_size_list</span><span class="p">))</span>
 <span class="c1"># Output: 300</span>
@@ -789,7 +768,6 @@ document.write(`
 <span class="c1"># Output: 40</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: ลิสต์ที่มีสมาชิกเป็นค่าที่จะนำมาคำนวณหาผลรวม หรือค่าสูงสุด หรือค่าต่ำสุด</p>
 <p>Output: ผลรวม (<code class="docutils literal notranslate"><span class="pre">sum</span></code>) หรือค่าสูงสุด(<code class="docutils literal notranslate"><span class="pre">max</span></code>) หรือค่าต่ำสุด(<code class="docutils literal notranslate"><span class="pre">min</span></code>)</p>
 <p>ข้อควรระวังคือฟังก์ชันเหล่านี้ไม่ใช่่ method แต่ว่าเป็นฟังก์ชันบิวท์อิน เพราะฉะนั้นลิสต์ไม่สามารถเรียก <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> ได้ ถ้าหากเราเผลอเรียกประหนึ่งว่าเป็น method เราจะได้ <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> ซึ่งแจ้งให้เราทราบว่าลิสต์ไม่มี method ที่เราต้องการจะเรียก</p>
@@ -802,14 +780,11 @@ document.write(`
 </section>
 <section id="index-index">
 <h3>หา index ของสมาชิก: <code class="docutils literal notranslate"><span class="pre">.index()</span></code><a class="headerlink" href="#index-index" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;จอย&#39;</span><span class="p">))</span>
 <span class="c1"># Output: 2</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: สมาชิกที่ต้องการทราบ index (ตำแหน่งบนลิสต์)</p>
 <p>Output: index</p>
 <p>ข้อควรระวัง</p>
@@ -827,14 +802,11 @@ document.write(`
 </section>
 <section id="count">
 <h3>นับจำนวนของสมาชิกที่ระบุมา: <code class="docutils literal notranslate"><span class="pre">.count()</span></code><a class="headerlink" href="#count" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;เมย์&#39;</span><span class="p">))</span>
 <span class="c1"># Output: 3</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: สมาชิกที่ต้องการหาและนับ</p>
 <p>Output: จำนวนที่เจอ</p>
 <p>ถ้าหากสิ่งที่ต้องการนั้นไม่ปรากฏอยู่ในลิสต์ จะไม่ได้ <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> แต่จะได้ 0 คืนกลับมาตามที่ควรจะเป็น</p>
@@ -844,38 +816,30 @@ document.write(`
 <p>method เหล่านี้ถูกใช้บ้างเป็นบางครั้ง ข้อควรระวังคือ method เหล่านี้แก้ไขลิสต์โดยตรง โดยไม่ได้สร้างลิสต์ใหม่ขึ้นมา ทำให้ index ของสมาชิกทุกตัวเปลี่ยนไปหมด เพราะเวลาเราแทรกสมาชิกเข้ามา หรือนำสมาชิกออกไปทำให้ตำแหน่งของสมาชิกแต่ละตัวเลื่อนกันไปเป็นทอด ๆ เพราะฉะนั้นหากเราเรียก method เหล่านี้ใน <code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปอาจจะทำให้เรางงว่าสมาชิกบางตัวถูกข้ามไปหรือไม่ และทำให้โค้ดอ่านทำความเข้าใจได้ยากขึ้น และยากต่อการแก้ไขหากเกิด error</p>
 <section id="insert">
 <h4>แทรกสมาชิกเข้าลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span></code><a class="headerlink" href="#insert" title="Permalink to this heading">#</a></h4>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;เจน&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
 <span class="c1"># [&#39;เจ&#39;, &#39;เจน&#39;, &#39;เมย์&#39;, &#39;จอย&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: 1) index (สามารถใช้ negative index ได้) 2) สมาชิกใหม่</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>ถ้าหาก index สูงกว่าความยาวของลิสต์ สมาชิกใหม่จะไปนำต่อท้ายลิสต์ และจะไม่ให้โยน error กลับมา</p>
 </section>
 <section id="remove">
 <h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.remove()</span></code><a class="headerlink" href="#remove" title="Permalink to this heading">#</a></h4>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
 <span class="c1"># [&#39;เจ&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: ค่าที่ต้องการเอาออก</p>
 <p>Output: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>ลิสต์จะทำการหา input ในลิสต์ ถ้าหาพบก็จะนำสมาชิกทุกตัวที่มีค่านั้นออกไปจากลิสต์  ถ้าหาก input ไม่ได้ปรากฏอยู่ในลิสต์ python interpreter จะโยน <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p>
 </section>
 <section id="pop">
 <h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.pop()</span></code><a class="headerlink" href="#pop" title="Permalink to this heading">#</a></h4>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">removed_member</span> <span class="o">=</span> <span class="n">accountant_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
@@ -884,7 +848,6 @@ document.write(`
 <span class="c1"># จอย</span>
 </pre></div>
 </div>
-</aside>
 <p>Input: index (สามารถใช้ negative index ได้)</p>
 <p>Output: สมาชิกที่เคยอยู่ที่ index นั้น</p>
 <p>ลิสต์จะ return สมาชิกที่อยู่ที่ index ที่กำหนดมาให้ จากนั้นก็จะดีดเอาสมาชิกตัวนั้นออกไป (method นี้เลยชื่อว่า pop ซึ่งแปลว่าดีดออก) ถ้าหาก index นั้นไม่ได้อยู่ในลิสต์ python interpreter จะโยน <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> และแจ้งว่า index ไม่ได้อยู่ในช่วงที่เหมาะสม</p>

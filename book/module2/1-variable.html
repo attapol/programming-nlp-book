@@ -192,10 +192,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/3-nested-dictionary.html">ดิกชันนารีที่เก็บโครงสร้างข้อมูลอื่นอยู่</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: Nested data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -1430,8 +1429,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <p>สตริงในภาษาไพธอนมีเมท็อดเยอะมาก ๆ ไม่มีโปรแกรมเมอร์ไหนพยายามจำทั้ง จะจำได้เฉพาะเมท็อดที่ใช้หน้างานบ่อย ๆ ถ้าหากจำไม่ได้สามารถเสิร์ชหาออนไลน์ได้ และโปรแกรมเมอร์เปิดหากันเป็นปกติ แต่เพื่อความสะดวกคล่องตัวในการเขียนโปรแกรมที่เกี่ยวกับการประมวลผลข้อมูลที่เป็นข้อความ เราควรจะต้องรู้จักเมท็อดของสตริงดังนี้</p>
 <section id="format">
 <h3>สร้างสตริงจากตัวแปรอื่น ๆ: <code class="docutils literal notranslate"><span class="pre">.format()</span></code><a class="headerlink" href="#format" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
 <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;My name is </span><span class="si">{}</span><span class="s2">, I&#39;m </span><span class="si">{}</span><span class="s2">&quot;</span>
@@ -1441,7 +1438,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;My name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, I&#39;m </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># My name is John, I&#39;m 36</span>
 </pre></div>
 </div>
-</aside>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">format</span></code> ใช้เวลาเราต้องการสร้าง template ขึ้นมาเพื่อใช้เอาค่าอื่น ๆ มาเติมทีหลังเพื่อให้เป็นสตริงที่สมบูรณ์ เราจะใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> เป็นสัญลักษณ์ของช่องว่างที่เว้นเพื่อเอาค่าอื่นมาเติม (placeholder) ซึ่งเราจะใช้กี่ตัวก็ได้ แต่ตอนเรียก <code class="docutils literal notranslate"><span class="pre">.format</span></code> เราจะต้องใส่จำนวนพารามิเตอร์เท่ากับจำนวนของ placeholder ที่เราวางไว้ และจะเติมจากซ้ายไปขวา ถ้าใส่น้อยไปเราจะได้ <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> ถ้าใส่มากไปเครื่องจะไม่ว่าอะไร</p>
 <p>อีกวิธีคือการใช้ f string คือสตริงที่มีเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าเพื่อบอกให้เครื่องรู้ว่าเป็น formatting string เราสามารถใส่ชื่อตัวแปรเข้าไปใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้เลย ทำให้ประหยัดโค้ดไปได้ระดับหนึ่ง และดูสบายตากว่า ตัวแปรที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> จะถูกแปลความให้เป็นค่าที่ตัวแปรนั้นเก็บอยู่ จากนั้นแปลงเป็นสตริง</p>
 <p>อีกตัวอย่างของการใช้ f string</p>
@@ -1460,14 +1456,11 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </section>
 <section id="lower-upper">
 <h3>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;James&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#--&gt; &#39;james&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#--&gt; &#39;JAMES&#39;</span>
 </pre></div>
 </div>
-</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.lower()</span></code> return สตริงที่มีตัวอักษรเหมือนกันแต่เป็นตัวเล็กทั้งหมด</p>
 <p><code class="docutils literal notranslate"><span class="pre">string.upper()</span></code>return สตริงที่มีตัวอักษรเหมือนกันแต่เป็นตัวใหญ่ทั้งหมด</p>
 <p><em>ข้อควรระวัง</em> ทั้งสองเมท็อดเมื่อเราเรียกใช้แล้วจะ return สตริงชุดใหม่มาให้ แยกต่างหากจากตัวสตริงเดิม ซึ่งจะมีค่าข้อความเดิมอยู่ไม่เปลี่ยนแปล</p>
@@ -1475,8 +1468,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </section>
 <section id="islower-isupper">
 <h3>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;NASA&#39;</span>
 <span class="n">s</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="c1">#--&gt; False</span>
 <span class="n">s</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; True</span>
@@ -1487,15 +1478,12 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="n">s2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="c1">#--&gt; True ตัวอักษรตัวแรกเป็นตัวใหญ่</span>
 </pre></div>
 </div>
-</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.islower()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวเล็กทั้งหมด</p>
 <p><code class="docutils literal notranslate"><span class="pre">string.isupper()</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าทุกอักขระเป็นตัวใหญ่ทั้งหมด</p>
 <p>คำสั่งเหล่านี้มีประโยชน์เวลาต้องการเช็คว่าเป็นตัวย่อของชื่อองค์กรต่าง ๆ หรือไม่ หรือเป็นคำที่อยู่กลางประโยคภาษาอังกฤษหรือไม่ แต่คำสั่งเหล่านี้ไม่มีประโยชน์กับภาษาอื่น ๆ ที่ไม่ได้ใช้ตัวลาติน เช่น ภาษาจีน ภาษาไทย ภาษาเกาหลี ภาษารัสเซีย</p>
 </section>
 <section id="substring-count-substring">
 <h3>นับ substring ในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#substring-count-substring" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">laughter</span> <span class="o">=</span> <span class="s1">&#39;hahahahaha&#39;</span>
 <span class="n">laughter</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ha&#39;</span><span class="p">)</span> <span class="c1">#--&gt; 5</span>
 
@@ -1503,14 +1491,11 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="n">plea</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ู&#39;</span><span class="p">)</span> <span class="c1">#--&gt; 10</span>
 </pre></div>
 </div>
-</aside>
 <p><code class="docutils literal notranslate"><span class="pre">string.count(substring)</span></code> return จำนวนครั้งที่พบ substring ที่ในสตริงที่เรียกเมท็อดนี้ ถ้าใส่ input มาเป็นตัวอักษรตัวเดียว ก็จะนับจำนวนครั้งที่พบตัวอักษรนั้น</p>
 <p>คำสั่งนี้มีประโยชน์เวลาเราต้องการนับจำนวนคำที่อยู่ในสตริงที่เก็บข้อมูลทั้งหมดเอาไว้ เช่น หนังสือทั้งเล่ม หนังสือพิมพ์ทุกฉบับของเดือนนั้น หรือนับจำนวนคำภาษาอังกฤษแบบหยาบ ๆ โดยการนับเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ที่มีอยู่ในข้อมูลทั้งหมด</p>
 </section>
 <section id="isdigit-isalpha-isalnum">
 <h3>เช็คประเภทของตัวอักขระ: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;6578012478&#39;</span>
 <span class="n">license_plate</span> <span class="o">=</span> <span class="s1">&#39;3ก4951&#39;</span>
 <span class="n">student_name</span> <span class="o">=</span> <span class="s1">&#39;ยาใจ&#39;</span>
@@ -1526,7 +1511,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="n">student_name</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="c1">#--&gt; True</span>
 </pre></div>
 </div>
-</aside>
 <p>สามเมท็อดนี้มีไว้สำหรับเช็คว่าสตริงที่เรียกประกอบด้วยอักขระประเภทใดประเภทหนึ่งหรือไม่</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.isdigit</span></code> return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงประกอบด้วยตัวเลขอารบิกทั้งหมด ถ้ามีตัวใดตัวหนึ่งที่ไม่ใช่ตัวเลขอารบิกจะ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
@@ -1536,8 +1520,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 </section>
 <section id="substring-replace-old-new">
 <h3>แทน substring ด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#substring-replace-old-new" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ประเภทของคำมี 7 ประเภทใหญ่&#39;</span>
 <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ประเภท&#39;</span><span class="p">,</span><span class="s1">&#39;ชนิด&#39;</span><span class="p">)</span> <span class="c1">#--&gt; &#39;ชนิดของคำมี 7 ชนิดใหญ่&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="c1"># ประเภทของคำมี 7 ประเภทใหญ่</span>
@@ -1546,14 +1528,11 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="n">country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#--&gt; &#39;USA&#39;</span>
 </pre></div>
 </div>
-</aside>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.replace</span></code> คล้าย ๆ กับปุ่ม Find and replace ที่เราพบเห็นได้ในโปรแกรม word processing ทั่ว ๆ ไป เราระบุ substring ที่เราต้องการหา และระบุไปว่าอยากจะแทนที่ด้วย string อะไร</p>
 <p>เมท็อด นี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมา ซึ่งเราจะต้องเก็บใส่ตัวแปรอีกตัวนึงก่อนจะนำไปทำกระบวนการอื่นต่อ ซึ่งคล้าย ๆ กับเมท็อด<code class="docutils literal notranslate"><span class="pre">.lower()</span></code> <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">.format()</span></code></p>
 </section>
 <section id="strip">
 <h3>ลบช่องว่างข้างหน้าข้างหลังสตริงออกไป: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
-<p class="sidebar-title">ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;  loveme123&#39;</span>
 <span class="n">password</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#--&gt; &#39;loveme123&#39;</span>
 
@@ -1561,7 +1540,6 @@ argument คือ ค่าเราให้กับ parameter ตอนเ�
 <span class="n">password2</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#--&gt; &#39;iamawesome555&#39;</span>
 </pre></div>
 </div>
-</aside>
 <p>เมท็อดนี้ใช้บ่อยเวลาเราต้องการทำความสะอาดข้อมูลภาษาที่เราได้มา ซึ่งมักจะมีช่องว่างข้างหน้าคือข้างหลังติดมาด้วย เวลาเราโหลดข้อมูลมาจากแหล่งข้อมูลจริง ซึ่งมักจะทำให้เรานับจำนวนตัวอักษรผิดพลาดเมท็อดนี้สร้างสตริงเวอร์ชันใหม่ขึ้นมาที่ไม่มีช่องว่างน่าหลัง</p>
 <p>เมท็อดนี้จะไม่เปลี่ยนค่าของสตริงที่เราใช้เรียก แต่ว่าจะสร้างสตริงใหม่ return กลับมาให้เป็นอีกชุดหนึ่งที่แยกต่างหากออกมาเช่นกันกับเมท็อดอื่นๆ ข้างต้น</p>
 </section>
