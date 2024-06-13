@@ -535,7 +535,7 @@ document.write(`
 </section>
 <section id="spacy">
 <h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี<a class="headerlink" href="#spacy" title="Permalink to this heading">#</a></h2>
-<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีแบบจำลองการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำแบบจำลองไปใช้จริง  <span id="id4">[<a class="reference internal" href="../module7/1-intro-NLP.html#id52">Honnibal <em>et al.</em>, 2020</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
+<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีแบบจำลองการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำแบบจำลองไปใช้จริง  <span id="id4">[<a class="reference internal" href="#id21">Honnibal <em>et al.</em>, 2020</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
 <p>ขั้นแรกต้องหาชื่อชุดโมเดลที่เราต้องการใช้ รายชื่อชุดโมเดลอยู่บนเว็บไซต์ของ spacy ซึ่งมีเอกสารประกอบการใช้งานที่เป็นปัจจุบันอยู่ โมเดลเหล่านี้ประกอบไปด้วยโมเดลย่อยหลาย ๆ โมเดลด้วยกัน เราสามารถตรวจสอบดูบนเว็บไซต์ได้ว่าโมเดลแต่ละชุดประกอบด้วยโมเดลอะไรบ้าง  ตัวอย่างเช่น สำหรับภาษาจีน มีชุดโมเดลที่มีโมเดลการแยกชนิดของคำได้อยู่สามแบบจำลองได้แก่ <code class="docutils literal notranslate"><span class="pre">zh_core_web_sm</span></code> (ขนาดเล็ก) <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> (ขนาดกลาง) และ  <code class="docutils literal notranslate"><span class="pre">zh_core_web_lg</span></code> (ขนาดใหญ่) ทั้งสามชุดในเวอร์ชันปี 2024 ประกอบไปด้วย 5 โมเดลย่อย ได้แก่ โมเดลการตัดคำ โมเดลการตัดประโยค โมเดลการวิเคราะห์โครงสร้างประโยค โมเดลการติดป้ายชนิดของคำ โมเดลการตรวจจับเอนทิตี</p>
 <p>หากเรายังไม่ได้ติดตั้งไลบรารี spacy เราสามารถติดตั้งโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacy</span></code> หลังจากนั้นเราสามารถดาวน์โหลดและติดตั้งแบบจำลองที่ต้องการได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spacy</span> <span class="pre">download</span></code> ตามด้วยชื่อแบบจำลองที่ต้องการดาวน์โหลดและติดตั้ง เช่น</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>zh_core_web_md
@@ -601,6 +601,13 @@ document.write(`
 <section id="llm-large-language-model">
 <h2>แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)<a class="headerlink" href="#llm-large-language-model" title="Permalink to this heading">#</a></h2>
 <p><em>under construction</em></p>
+<div class="docutils container" id="id6">
+<dl class="citation">
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id4">HMVLB20</a></span></dt>
+<dd><p><strong>missing journal in spacy</strong></p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 

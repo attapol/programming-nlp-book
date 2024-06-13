@@ -157,3 +157,7 @@ for ent in doc.ents:
 
 ## แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)
 *under construction*
+
+```{bibliography}
+:filter: docname in docnames
+```
