@@ -437,9 +437,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-large-language-model">แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -507,7 +509,7 @@ document.write(`
 </ul>
 </li>
 </ol>
-<p><span id="id3">[]</span></p>
+<p><span id="id3">[<a class="reference internal" href="#id25" title="Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12), 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf.">Petrov <em>et al.</em>, 2012</a>]</span></p>
 <p>ชุดป้ายระบุชนิดของคำสากลเป็นระบบการจำแนกชนิดของคำที่มีมาตรฐานเดียวกันทุกภาษา เพื่อให้การทำงานของโมเดลภาษาต่าง ๆ สามารถทำงานร่วมกันได้โดยสะดวกต่อการใช้โมเดลที่มีการใช้การถ่ายโอนข้ามภาษา (cross-lingual transfer) การใช้ชุดป้ายระบุชนิดของคำสากล จึงเป็นเครื่องมือที่สำคัญและได้รับความนิยมในการพัฒนาระบบประมวลผลภาษาธรรมชาติที่มีประสิทธิภาพ</p>
 </section>
 </section>
@@ -535,7 +537,7 @@ document.write(`
 </section>
 <section id="spacy">
 <h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี<a class="headerlink" href="#spacy" title="Permalink to this heading">#</a></h2>
-<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีแบบจำลองการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำแบบจำลองไปใช้จริง  <span id="id4">[<a class="reference internal" href="#id21">Honnibal <em>et al.</em>, 2020</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
+<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีแบบจำลองการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำแบบจำลองไปใช้จริง  <span id="id4">[<a class="reference internal" href="#id24" title="Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.">Honnibal and Montani, 2017</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี แต่ว่า spacy ยังไม่มีโมเดลในการประมวลผลภาษาไทย</p>
 <p>ขั้นแรกต้องหาชื่อชุดโมเดลที่เราต้องการใช้ รายชื่อชุดโมเดลอยู่บนเว็บไซต์ของ spacy ซึ่งมีเอกสารประกอบการใช้งานที่เป็นปัจจุบันอยู่ โมเดลเหล่านี้ประกอบไปด้วยโมเดลย่อยหลาย ๆ โมเดลด้วยกัน เราสามารถตรวจสอบดูบนเว็บไซต์ได้ว่าโมเดลแต่ละชุดประกอบด้วยโมเดลอะไรบ้าง  ตัวอย่างเช่น สำหรับภาษาจีน มีชุดโมเดลที่มีโมเดลการแยกชนิดของคำได้อยู่สามแบบจำลองได้แก่ <code class="docutils literal notranslate"><span class="pre">zh_core_web_sm</span></code> (ขนาดเล็ก) <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> (ขนาดกลาง) และ  <code class="docutils literal notranslate"><span class="pre">zh_core_web_lg</span></code> (ขนาดใหญ่) ทั้งสามชุดในเวอร์ชันปี 2024 ประกอบไปด้วย 5 โมเดลย่อย ได้แก่ โมเดลการตัดคำ โมเดลการตัดประโยค โมเดลการวิเคราะห์โครงสร้างประโยค โมเดลการติดป้ายชนิดของคำ โมเดลการตรวจจับเอนทิตี</p>
 <p>หากเรายังไม่ได้ติดตั้งไลบรารี spacy เราสามารถติดตั้งโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacy</span></code> หลังจากนั้นเราสามารถดาวน์โหลดและติดตั้งแบบจำลองที่ต้องการได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spacy</span> <span class="pre">download</span></code> ตามด้วยชื่อแบบจำลองที่ต้องการดาวน์โหลดและติดตั้ง เช่น</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>zh_core_web_md
@@ -574,11 +576,11 @@ document.write(`
 <span class="n">上海</span> <span class="n">GPE</span>
 </pre></div>
 </div>
-<p>จากข้อความตัวอย่างที่ป้อนเข้าไป ตัวประมวลผลตรวจจับชื่อเอนทิตีที่เป็นบุคคลทั้งหมดสองชื่อ ได้แก่  张伟 และ 李娜 และเอนทิตีแบบภูมิรัฐศาสตร์ (GPE ซึ่งย่อมาจาก geopolitical entity) หนึ่งชื่อ ได้แก่ 上海</p>
+<p>จากข้อความตัวอย่างที่ป้อนเข้าไป ตัวประมวลผลตรวจจับชื่อเอนทิตีที่เป็นบุคคลทั้งหมดสองชื่อ ได้แก่  张伟 (จางเหว่ย) และ 李娜 (หลีน่า) และเอนทิตีแบบภูมิรัฐศาสตร์ (GPE ซึ่งย่อมาจาก geopolitical entity) หนึ่งชื่อซึ่งก้คือ 上海 (เมืองเซี่ยงไฮ้)</p>
 </section>
 <section id="sentiment-analysis">
 <h2>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h2>
-<p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) คือกระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ใช้หรือประชาชนต่อผลิตภัณฑ์ บริการ หรือเหตุการณ์ต่างๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง นับว่าเป็นการประยุกต์การใช้ประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดอย่างหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
+<p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) คือกระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านการประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ที่ใช้งานระบบ หรือผู้บริโภคที่มีต่อผลิตภัณฑ์ บริการ รวมถึงการประเมินความคิดเห็นของบุคคลทั่วไปที่มีต่อเหตุการณ์ต่าง ๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง การวิเคราะห์อารมณ์ความรู้สึกนับว่าเป็นการประยุกต์ใช้การประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดชนิดหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</p>
@@ -587,8 +589,99 @@ document.write(`
 <li><p>การวิเคราะห์ความคิดเห็นของลูกค้าในโซเชียลมีเดีย: สมมติว่าเรามีข้อความจากทวิตเตอร์เกี่ยวกับผลิตภัณฑ์ใหม่ของบริษัท เราสามารถแยกแยะความคิดเห็นเชิงบวก ลบ หรือกลาง และนับจำนวนความคิดเห็นแต่ละประเภทได้ และแยกวิเคราะห์ได้ บริษัทสามารถใช้ข้อมูลนี้เพื่อเข้าใจความคิดเห็นของลูกค้าต่อผลิตภัณฑ์ใหม่ และนำไปปรับปรุงผลิตภัณฑ์หรือกลยุทธ์การตลาดได้</p></li>
 <li><p>การประเมินความพึงพอใจของลูกค้าในบทวิจารณ์ออนไลน์:
 การวิเคราะห์อารมณ์ความรู้สึกสามารถแยกแยะได้ว่าอาจจะมีความรู้สึกเชิงบวกต่อผลิตภัณฑ์ แต่มีความรู้สึกเชิงลบต่อการบริการ ร้านอาหารสามารถใช้ข้อมูลนี้เพื่อปรับปรุงการบริการและรักษาคุณภาพอาหารให้ดีอยู่เสมอ</p></li>
-<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id5">[]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่างๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
+<li><p>การวิเคราะห์อารมณ์ความรู้สึกที่อยู่เอกสารทางการเงิน ทุก ๆ ปีบริษัทที่มีการซื้อขายหุ้นอยู่ในตลาดหลักทรัพย์ จะต้องเผยแพร่เอกสารรายงานผลประกอบการที่จะต้องพูดถึงบริษัทในหลากหลายด้าน เช่น เรื่องผลกำไรขาดทุน ความเสี่ยงในการประกอบธุรกิจ การควบรวมกับบริษัทอื่น การพัฒนากำลังคน หรือการเปลี่ยนแปลงในโครงสร้างบริษัท นักวิเคราะห์สามารถวิเคราะห์อารมณ์ความรู้สึกในเอกสารรายงานผลประกอบการ เพื่อให้ได้ดัชนีในการชีวัดว่าผู้เขียนมีความคิดเห็นในด้านบวก ลบ หรือกลางในด้านใดบ้างในปีที่ผ่านมา ซึ่งมีการศึกษามาว่าผลการวิเคราะห์ในลักษณะดังกล่าวมีความสัมพันธ์ร่วมกันกับผลตอบแทนเกินปกติ (abnormal return) ดังนั้นการวิเคราะห์อารมณ์ความรู้สึกจึงสามารถช่วยให้นักลงทุนหรือผู้บริหารบริษัทมีดัชนีชี้วัดเพิ่มอีกตัวหนึ่งที่ช่วยในการตัดสินใจลงทุนในสินทรัพย์ต่าง ๆ ได้อย่างมีประสิทธิภาพมากขึ้น</p></li>
+<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id5">[<a class="reference internal" href="#id26" title="Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In Proceedings of the International AAAI Conference on Web and Social Media, volume 15, 703–713. 2021.">Tachaiya <em>et al.</em>, 2021</a>]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่างๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
 </ul>
+<p>การวิเคราะห์อารมณ์ความรู้สึกในเชิงปฏิบัติ คือ การแยกประเภทของข้อความว่าเป็นข้อความที่แสดงความเห็นในด้านบวก ด้านลบ หรือเป็นกลาง เราสามารถคิดว่าตัววิเคราะห์อารมณ์ความรู้สึก (sentiment analyzer) เป็นฟังก์ชันที่รับสตริงข้อความ และคืนค่าเป็นป้ายกำกับ (label) ที่บ่งบอกว่าข้อความนั้นเป็นเชิงบวก ลบ หรือเป็นกลาง โดยใช้เทคนิคการเรียนรู้ของเครื่อง ซึ่งสามารถทำได้ด้วยการใช้ชุดข้อมูลที่มีป้ายระบุความรู้สึกเช่นข้อความที่มีป้ายระบุว่าเป็นเชิงบวก ลบ หรือเป็นกลาง ในการสร้างโมเดลการเรียนรู้ของเครื่อง โดยใช้ข้อมูลเหล่านี้ในการเรียนรู้ว่าคุณลักษณะของข้อความที่เป็นเชิงบวก ลบ หรือกลาง คืออะไร และใช้คุณลักษณะเหล่านั้นในการจำแนกประเภทของข้อความใหม่ที่ยังไม่เคยเห็นมาก่อน หนึ่งในชุดข้อมูลที่ได้รับความนิยมมากในการนำมาสร้างตัววิเคราะห์อารมณ์ความรู้สึก คือ Sentiment Treebank  ซึ่งนำมาแสดงให้ดูเป็นตัวอย่างดังนี้ <span id="id6">[<a class="reference internal" href="#id27" title="Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing, 1631–1642. 2013.">Socher <em>et al.</em>, 2013</a>]</span></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>ข้อความ</p></th>
+<th class="head"><p>ป้ายกำกับ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>(a)</p></td>
+<td><p>Leguizamo and Jones are both excellent and the rest of the cast is uniformly superb.</p></td>
+<td><p>บวก</p></td>
+</tr>
+<tr class="row-odd"><td><p>(b)</p></td>
+<td><p>Still, this flick is fun, and host to some truly excellent sequences.</p></td>
+<td><p>บวก</p></td>
+</tr>
+<tr class="row-even"><td><p>(c)</p></td>
+<td><p>A potentially good comic premise and excellent cast are terribly wasted.</p></td>
+<td><p>ลบ</p></td>
+</tr>
+<tr class="row-odd"><td><p>(d)</p></td>
+<td><p>There’s an excellent 90-minute film here; unfortunately, it runs for 170</p></td>
+<td><p>ลบ</p></td>
+</tr>
+<tr class="row-even"><td><p>(e)</p></td>
+<td><p>So brisk is Wang’s pacing that none of the excellent cast are given air to breathe.</p></td>
+<td><p>เป็นกลาง</p></td>
+</tr>
+</tbody>
+</table>
+<p>ข้อสังเกตที่สำคัญอย่างหนึ่งจากตัวอย่างข้างต้น คือ ถึงแม้ว่าทุกข้อความจะมีคำว่า <em>excellent</em> อยู่ ซึ่งแปลว่ายอดเยี่ยม แต่ก็ไม่ได้หมายความว่าอารมณ์ความรู้สึกที่ส่งผ่านข้อความนั้นจะเป็นบวกเสมอไป ยังมีปัจจัยทางบริบทที่มีผลต่อการตีความโดยรวม เช่น บริบททางโครงสร้างประโยคในตัวอย่าง (c) นำเอาคำว่า <em>excellent</em> มาใช้เป็นส่วนขยายของนามแต่ว่าไม่ได้นำมาใช้เป็นส่วนหนึ่งของกริยาหลัก ซึ่งมีผลต่อความหมายโดยรวมของประโยคมากกว่า ทำให้เห็นว่าเราต้องคำนึงปัจจัยทางภาษาศาสตร์อื่น ๆ อีกมาก นอกเหนือจากความหมายของคำ จึงจะสามารถวิเคราะห์อารมณ์ความรู้สึกได้ถูกต้อง</p>
+</section>
+<section id="huggingface-transformers">
+<h2>แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก<a class="headerlink" href="#huggingface-transformers" title="Permalink to this heading">#</a></h2>
+<p>Huggingface เป็นแพลตฟอร์ม (ระบบที่ทุกคนเข้าใช้ร่วมกัน แทนที่จะมีคนกลุ่มเดียวที่เข้าใช้ได้) ที่มุ่งเน้นการพัฒนาและแบ่งปันโมเดลการประมวลผลภาษาธรรมชาติที่มีความสามารถหลากหลาย กล่าวคือนักพัฒนาสามารถนำโมเดลที่ตนสร้างขึ้นมาฝากไว้บนแพลตฟอร์มนี้ เพื่อให้ผู้ใช้คนอื่นเข้ามาโหลดเพื่อนำไปใช้ได้อย่างสะดวก ซึ่งหน้าที่ของแพลตฟอร์มคืออำนวยความสะดวกให้ทั้งสองฝ่ายโดยไม่ต้องพัฒนาโมเดลทั้งหมดเอง</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>แพลตฟอร์ม (platform)</p>
+</aside>
+<p>แพลตฟอร์ม huggingface อยู่บนเว็บไซต์ <a class="reference external" href="https://huggingface.co">https://huggingface.co</a>  และมาพร้อมกับไลบรารีที่เรียกว่า transformers ซึ่งเป็นไลบรารีไพธอนที่ช่วยโหลดโมเดลมาจากแพลตฟอร์ม เพื่อนำไปพัฒนาเป็นระบบอื่น ๆ ในภาษาไพธอนได้อย่างสะดวก huggingface รวมโมเดลที่ถูกพัฒนามาแล้วหลากหลายรุ่นที่สามารถนำไปใช้ในงานต่าง ๆ ได้ทันที ถ้าหากเราค้นหาโมเดล sentiment analysis บนแพลตฟอร์ม ก็จะพบว่ามีโมเดลให้เลือกกว่า 100 โมเดล เราจำเป็นต้องดูว่าโมเดลใดรองรับภาษาที่เราต้องการวิเคราะห์ รวมถึงตรวจสอบอีกว่าความแม่นยำที่คาดหวังได้คือเท่าไร ผู้ที่นำโมเดลมาฝากในแพลตฟอร์มนี้มักจะมีเขียนไว้อย่างละเอียดถึงกระบวนการพัฒนาโมเดล เหมาะกับข้อมูลประเภทใด (เช่น ทวีต รีวิว หรือข่าวการเงิน) และความแม่นยำตามที่ได้ประเมินสิทธิภาพไว้</p>
+<p>เริ่มต้นจากการติดตั้งไลบรารีด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">transformers</span></code> วิธีการใช้ไลบรารีนี้แบบพื้นฐานที่สุด ทำได้โดยการใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pipeline</span></code> ในการโหลดโมเดลและปรับการใช้งาน โดยที่เราจะต้องทราบชื่อโมเดลที่ต้องการใช้
+โมเดลที่แนะนำในปัจจุบัน (มิถุนายน 2567) สำหรับการวิเคราะห์อารมณ์ความรู้สึกภาษาไทยคือ <code class="docutils literal notranslate"><span class="pre">poom-sci/WangchanBERTa-finetuned-sentiment</span></code> ซึ่งเรียนรู้การวิเคราะห์มาจากชุดข้อมูลที่เป็นรีวิว รวมกันกับข้อมูลที่เป็นทวีต ทำให้เหมาะกับการวิเคราะห์เบื้องต้น ไม่ได้เฉพาะเจาะจงกับข้อมูลแหล่งใดแหล่งหนึ่ง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use a pipeline as a high-level helper</span>
+<span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s2">&quot;text-classification&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;poom-sci/WangchanBERTa-finetuned-sentiment&quot;</span><span class="p">)</span>
+<span class="n">pipe</span><span class="p">([</span><span class="s2">&quot;เนื้อครีมลื่นไม่เหนียว&quot;</span><span class="p">,</span> <span class="s2">&quot;กระปุกสีขาว ฝาเกลียว&quot;</span><span class="p">,</span> <span class="s2">&quot;เปิดออกมาแล้วกลิ่นค่อนข้างแรง&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้ออกมาคือ ลิสต์ของดิกชันนารีที่ประกอบด้วยป้ายกำกับ (label) ที่มีค่าความน่าจะเป็นสูงสุดคือป้ายกำกับที่ และค่าความน่าจะเป็น (score) ที่ได้ ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.6775356531143188</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9761248230934143</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neg&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.7795576453208923</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>ภาษาไทยทีโมเดลอีกตัวหนึ่งซึ่งสร้างขึ้นมาเพื่อข้อมูลที่มาจากเอกสารทางการเงิน เช่น รายงานผลประกอบการ หรือข่าวทางการเงิน โมเดลตัวนี้ชื่อว่า <code class="docutils literal notranslate"><span class="pre">nlp-chula/augment-sentiment-finnlp-th</span></code> บนแพลต์ฟอร์ม huggingface เราสามารถนำมาใช้งานได้ด้วยคำสั่งเดียวกันเพียงแต่เปลี่ยนชื่อโมเดลที่ใช้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_finance_news</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s2">&quot;text-classification&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;nlp-chula/augment-sentiment-finnlp-th&quot;</span><span class="p">)</span>
+<span class="n">pipe_finance_news</span><span class="p">([</span>
+    <span class="s2">&quot;บริษัทยังคงดำเนินนโยบายการขยายเครือข่ายสาขาอย่างต่อเนื่อง&quot;</span><span class="p">,</span> 
+     <span class="s2">&quot;ในช่วงคร่ึงปีหลัง บริษัทเน้น เรื่องการเร่งรัดติดตามทวงถามหนี้เพิ่มมากขึ้น&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;การแพร่ระบาดของไวรัสโควิด-19 ระลอกใหม่เป็นปัจจัย สาคัญที่กดดันต่อการบริโภคภาคเอกชน และการท่องเท่ียว&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ธนาคารมีสินทรัพย์สภาพคล่องประมาณ 47,272 ล้านบาท ลดลงจานวน 2,424 ล้านบาท &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ธุรกิจกองทุนสํารองเลี้ยงชีพของ บลจ. ทิสโก้ยังคงเติบโตกว่ําร้อยละ 11.8 เทียบกับ อุตสําหกรรมที่เติบโตลดลงเหลือเพียงร้อยละ 2.1 จากปี 2562&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้ออกมาคือ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.6528419256210327</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.937697172164917</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Negative&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9270865321159363</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Negative&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.8279978036880493</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Positive&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.5197721719741821</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p>ข้อควรระวังอย่างหนึ่งของการวิเคราะห์อารมณ์ความรู้สึก คือการเลือกใช้โมเดลให้เหมาะสมกับขอบเขตเนื้อหา (domain) ของข้อมูลที่เราต้องการวิเคราะห์  ถ้าหากชุดข้อมูลที่ใช้พัฒนาโมเดลมีขอบเขตเนื้อหาที่ไม่ตรงกับ ขอบเขตเนื้อหาของข้อมูลที่เราต้องการวิเคราะห์ อาจจะทำให้ความแม่นยำลดลง หรือผลลัพธ์ที่ได้ไม่เป็นที่พอใจ สมมติว่าโมเดลการวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) ถูกพัฒนามาด้วยข้อมูลรีวิวภาพยนตร์ ซึ่งข้อมูลนี้มีลักษณะเฉพาะ เช่น คำศัพท์และรูปแบบการใช้ภาษาที่เกี่ยวข้องกับการรีวิวภาพยนตร์ หากเรานำโมเดลนี้ไปใช้วิเคราะห์ความคิดเห็นเกี่ยวกับการเงินการลงทุน  โมเดลก็จะมีความแม่นยำลดลง เพราะลักษณะทางภาษาหรือขอบเขตเนื้อหาของข้อมูลรีวิวสมาร์ทโฟนอาจมีความแตกต่างจากข้อมูลความเห็นเกี่ยวกับการเงินการลงทุน  เรียกอีกอย่างว่า ปัญหาการกระจายตัวแบบออกนอกขอบเขต (out-of-distribution) ซึ่งเป็นปัญหาที่สำคัญในการใช้โมเดลการเรียนรู้ของเครื่องในงานปัญญาประดิษฐ์ <span id="id7">[<a class="reference internal" href="#id28" title="Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. Transactions on Machine Learning Research, 2023.">Lang <em>et al.</em>, 2023</a>]</span></p>
+<p>ในตัวอย่างการใช้ huggingface ข้างต้น เราได้ลองใช้โมเดลภาษาไทยสองตัวที่ถูกพัฒนาขึ้นมาจากชุดข้อมูลคนละขอบเขตกัน ตัวแรกสร้างขึ้นเพื่อใช้วิเคราะห์รีวิวและทวีต และโมเดลตัวที่สองสร้างขึ้นเพื่อใช้วิเคราะห์ข้อความที่ขอบเขตเนื้อหาคือการเงิน และผลประกอบการของบริษัท
+หากเราใช้โมเดลตัวแรกมาวิเคราะห์ข้อความที่พูดถึงเรื่องการเงิน จะได้ผลดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9173294305801392</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9335467219352722</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.8750076293945312</span><span class="p">},</span> <span class="c1"># ที่ถูกต้องคือ &#39;neg&#39;</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9450038075447083</span><span class="p">},</span> <span class="c1"># ที่ถูกต้องคือ &#39;neg&#39;</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9596440196037292</span><span class="p">}]</span> <span class="c1"># ที่ถูกต้องคือ &#39;pos&#39;</span>
+</pre></div>
+</div>
+<p>หากเราใช้โมเดลตัวที่สองมาวิเคราะห์ที่เป็นรีวิวจะได้ผลดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.6709030270576477</span><span class="p">},</span> <span class="c1"># ที่ถูกต้องคือ &#39;Positive&#39;</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Positive&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.5924004316329956</span><span class="p">},</span><span class="c1"># ที่ถูกต้องคือ &#39;Neutral&#39;</span>
+ <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.8645471930503845</span><span class="p">}]</span><span class="c1"># ที่ถูกต้องคือ &#39;Negative&#39;</span>
+</pre></div>
+</div>
+<p>เมื่อโมเดลทั้งสองตัวถูกนำไปใช้กับข้อมูลที่ไม่ตรงกับขอบเขตเนื้อหาที่ใช้พัฒนา ความแม่นยำลดลง และผลลัพธ์ที่ได้ไม่เป็นที่พอใจ ดังนั้นการเลือกใช้โมเดลที่เหมาะสมกับข้อมูลที่ต้องการวิเคราะห์เป็นสิ่งสำคัญ โดยทั่วไปแล้วโมเดลที่ได้รับความนิยมบนแพลตฟอร์ม huggingface มักจะระบุว่าโมเดลถูกพัฒนาขึ้นมาด้วยชุดข้อมูลอะไร ที่มาของข้อความอยู่ในขอบเขตเนื้อหาอะไร เพื่อผู้ใช้จะได้นำไปประยุกต์ใช้ได้อย่างเหมาะสมกับข้อมูลที่ต้องการวิเคราะห์</p>
 </section>
 <section id="topic-model">
 <h2>แบบจำลองหัวข้อ (topic model)<a class="headerlink" href="#topic-model" title="Permalink to this heading">#</a></h2>
@@ -601,10 +694,25 @@ document.write(`
 <section id="llm-large-language-model">
 <h2>แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)<a class="headerlink" href="#llm-large-language-model" title="Permalink to this heading">#</a></h2>
 <p><em>under construction</em></p>
-<div class="docutils container" id="id6">
+</section>
+<section id="id8">
+<h2>อ้างอิง<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id9">
 <dl class="citation">
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id4">HMVLB20</a></span></dt>
-<dd><p><strong>missing journal in spacy</strong></p>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
+<dd><p>Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. <em>Transactions on Machine Learning Research</em>, 2023.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, <em>Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</em>, 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: <a class="reference external" href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf</a>.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id6">4</a></span></dt>
+<dd><p>Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In <em>Proceedings of the 2013 conference on empirical methods in natural language processing</em>, 1631–1642. 2013.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In <em>Proceedings of the International AAAI Conference on Web and Social Media</em>, volume 15, 703–713. 2021.</p>
 </dd>
 </dl>
 </div>
@@ -685,9 +793,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">แบบจำลองหัวข้อ (topic model)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-large-language-model">แบบจำลองภาษาขนาดใหญ่ (LLM: Large Language Model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">อ้างอิง</a></li>
 </ul>
   </nav></div>
 
