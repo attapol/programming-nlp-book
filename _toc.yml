@@ -40,8 +40,13 @@ chapters:
   sections:
   - glob: book/module9/*
 
-- file: book/10-the-web
+- file: book/10-llm
   sections:
   - glob: book/module10/*
+
+
+- file: book/11-the-web
+  sections:
+  - glob: book/module11/*
 
 - file: book/bibliography
