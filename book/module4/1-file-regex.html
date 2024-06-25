@@ -473,12 +473,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match"><code class="docutils literal notranslate"><span class="pre">re.match</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search"><code class="docutils literal notranslate"><span class="pre">re.search</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall"><code class="docutils literal notranslate"><span class="pre">re.findall</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างการใช้งานเบื้องต้น</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split"><code class="docutils literal notranslate"><span class="pre">re.split</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">สรุป</a></li>
 </ul>
             </nav>
@@ -1157,9 +1159,8 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">regex</span> <span class="n">ที่ต้องการแทนค่า</span> <span class="p">(</span><span class="n">สตริง</span><span class="p">),</span> <span class="n">สิ่งที่จะมาแทน</span> <span class="p">(</span><span class="n">สตริง</span><span class="p">),</span> <span class="n">สตริงที่ต้องทำการแมทช์และแทนค่า</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 <section id="id13">
-<h3>ตัวอย่างการใช้งานเบื้องต้น<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h4>ตัวอย่างการใช้งานเบื้องต้น<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการแทนที่คำว่า “สวัสดี” ด้วยคำว่า “สวัสดีครับ” ในประโยค ในกรณีนี้เราไม่จำเป็นต้องใช้อักขระพิเศษของ regex เลย สามารถใช้สตริงเป็นแพทเทิร์นได้เลย</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;สวัสดีทุกท่านที่มาร่วมงานในวันนี้&#39;</span>
@@ -1176,7 +1177,7 @@ document.write(`
 </div>
 </section>
 <section id="id14">
-<h3>ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<h4>ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการเปลี่ยนคำนามที่เป็นรูปพหูพจน์ทีเกิดจากการเติม -es ต่อท้ายคำ ให้กลายเป็นคำนามที่เป็นรูปเอกพจน์ ในกรณีนี้เราจะใช้สัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">()</span></code> ใน regex เพื่อบอกว่าเราต้องการแทนที่ส่วนที่แมทช์กับ regex ด้วยสตริงอื่น ๆ ซึ่งสตริงนั้นจะเป็นส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งเราสามารถอ้างถึงได้ด้วย <code class="docutils literal notranslate"><span class="pre">.group</span></code> ของ match object ที่รีเทิร์นกลับมาจาก <code class="docutils literal notranslate"><span class="pre">re.sub</span></code> ได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
@@ -1187,7 +1188,7 @@ document.write(`
 </section>
 </section>
 <section id="re-split">
-<h2>re.split<a class="headerlink" href="#re-split" title="Permalink to this heading">#</a></h2>
+<h3><code class="docutils literal notranslate"><span class="pre">re.split</span></code><a class="headerlink" href="#re-split" title="Permalink to this heading">#</a></h3>
 <p>คำสั่งนี้ใช้ในการหั่นสตริงออกเป็นลิสต์ โดยใช้ regex เป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง คำสั่งนี้คล้ายคลึงกับสตริง method ที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">.split</span></code> แต่ว่า <code class="docutils literal notranslate"><span class="pre">re.split</span></code> มีความยืดหยุ่นกว่า เพราะว่า <code class="docutils literal notranslate"><span class="pre">str.split</span></code> ต้องระบุตัวแบ่ง (delimiter) เป็นสตริงไม่สามารถระบุเป็นแพทเทิร์นที่ซับซ้อนได้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> ใช้ regex ในการกำหนดตัวแบ่ง</p>
 <p>สมมติว่าเราต้องการหั่นสตริงด้านล่างออกเป็นลิสต์ โดยใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างเป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง ในกรณีนี้เราจะใช้ regex <code class="docutils literal notranslate"><span class="pre">[,;\s]+</span></code> ซึ่งหมายถึงเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างหนึ่งช่องหรือมากกว่า ในการหั่นสตริงออกเป็นลิสต์ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -1196,6 +1197,7 @@ document.write(`
 <span class="n">items</span> <span class="c1"># --&gt; [&#39;Apples&#39;, &#39;Oranges&#39;, &#39;Bananas&#39;, &#39;Grapes&#39;, &#39;Watermelons&#39;, &#39;Pineapples&#39;]</span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="id15">
 <h2>สรุป<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
@@ -1307,12 +1309,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match"><code class="docutils literal notranslate"><span class="pre">re.match</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search"><code class="docutils literal notranslate"><span class="pre">re.search</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall"><code class="docutils literal notranslate"><span class="pre">re.findall</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างการใช้งานเบื้องต้น</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split">re.split</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split"><code class="docutils literal notranslate"><span class="pre">re.split</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">สรุป</a></li>
 </ul>
   </nav></div>
