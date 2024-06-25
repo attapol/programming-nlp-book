@@ -1,4 +1,4 @@
-# โจทย์: Data type
+# เฉลยโจทย์: Data type
 เมื่อใช้โครงสร้างข้อมูลหลายรูปแบบมาประกอบกัน จะต้องคำนึงถึงประเภทของข้อมูลตลอดเวลาที่เขียนโค้ด จงระบุว่าโปรแกรมในแต่ละข้อคืนค่าออกมาเป็นโครงสร้างข้อมูลประเภทใด เช่น ลิสต์ของสตริง ลิสต์ของทูเปิล (สตริง, สตริง, เลขจำนวนเต็ม), ดิกชันนารี (สตริง → เลขจำนวนเต็ม) เป็นต้น
 
 ## ข้อ 1 - ข้อมูลสมุดโทรศัพท์
@@ -9,10 +9,10 @@ name_to_phone_list = \
   ('Jane', 'Eyre'): ['333-444-5555', '777-555-1111']
 }
 
-name_to_phone_list[('Jane', 'Eyre')] # return type อะไร
-name_to_phone_list[('Jane', 'Eyre')][1] # return type อะไร
+name_to_phone_list[('Jane', 'Eyre')] # return ลิสต์ของสตริง
+name_to_phone_list[('Jane', 'Eyre')][1] # return สตริง
 for x in name_to_phone_list:
-    print(x)  # x เป็น type อะไร
+    print(x)  # x เป็นทูเปิล (สตริง, สตริง)
 ```
 
 ## ข้อ 2 - ข้อมูลของสัตว์
@@ -20,11 +20,11 @@ for x in name_to_phone_list:
 animal = [ {'dog':['ear','leg','tail','bark'],'cat':['eye','ear','tail']},
 {'snake':['poison','tongue'],'frog':['hop','insect','rain']}]
 
-animal[1] # return type อะไร
-animal[0]['cat'] # return type อะไร
-animal[1]['frog'][1] # return type อะไร
+animal[1] # return ดิกชันนารี (สตริง -> ลิสต์)
+animal[0]['cat'] # return ลิสต์ของสตริง
+animal[1]['frog'][1] # return สตริง
 for x in animal:
-    print(x)  # x เป็น type อะไร
+    print(x)  # x เป็นดิกชันนารี (สตริง -> ลิสต์)
 ```
 
 ## ข้อ 3 - ข้อมูลข่าว
@@ -77,10 +77,10 @@ news_dic = {
 }
 
 
-news_dic['items']['content'] # return type อะไร
-news_dic['items']['content'][1]['tags'] # return type อะไร
+news_dic['items']['content'] # return ลิสต์ของดิกชันนารี
+news_dic['items']['content'][1]['tags'] # return ลิสต์ของสตริง
 for x in news_dic:
-    print(x)  # x เป็น type อะไร
+    print(x)  # x เป็นสตริง (คีย์ของดิกชันนารี)
 ```
 
 ## ข้อ 4 - ข้อมูลคะแนนนักเรียน
@@ -107,9 +107,9 @@ student_lst =
 for info, score in student_lst: 
    print(info, score)
 
-score # เป็น type อะไร
-info # เป็น type อะไร
-student_lst[0][0]  # เป็น type อะไร
+score # เป็น ลิสต์ [สตริง, เลขจำนวนเต็ม, สตริง]
+info # เป็น ดิกชันนารี
+student_lst[0][0]  # เป็น ดิกชันนารี
 ```
 
 ## ข้อ 5 - ข้อมูล phoneme
@@ -126,8 +126,8 @@ phoneme_pairs =
  }
 ]
 
-phoneme_pairs[0]['vowel'] #return type อะไร
-phoneme_pairs[0]['vowel'][1][("i", "ɛ")]["fnLoad"] # return type อะไร
+phoneme_pairs[0]['vowel'] # return ลิสต์ของดิกชันนารี
+phoneme_pairs[0]['vowel'][1][("i", "ɛ")]["fnLoad"] # return None
 ```
 
 ## ข้อ 6 - ข้อมูลการบ้าน
@@ -150,7 +150,7 @@ homework_info =
             'wordCount': 348}
 }
 
-homework_info["AM002"]['lateStatus'] # return type อะไร
+homework_info["AM002"]['lateStatus'] # return bool
 ```
 
 ## ข้อ 7 - ข้อมูลวิชาบังคับ
@@ -212,26 +212,26 @@ required_langtech_course = {
                 }
 }
 
-required_langtech_course['2209368']['time'] # คือ type อะไร
-required_langtech_course['2209368'] # คือ type อะไร
+required_langtech_course['2209368']['time'] # return สตริง 
+required_langtech_course['2209368'] # return ดิกชันนารี
 ```
 
 ## ข้อ 8 
 ```python
 s = [['I am a student', 'You are also a student.'], 
       ['You are right', 'You are correct']]
-s[1][0].split(' ') # คือ type อะไร
+s[1][0].split(' ') # คือ ลิสต์ของสตริง
 
 t = [ (1120, {'status': 12, 'enc': '458df', 'contact': [230, 460, 125]}) ,
       (2506, {'status': 0, 'enc': 'cvirg', 'contact': [1120, 508]}) ,
       (508, {'status': 1, 'enc': '9kjb3', 'contact': [77, 2506]}) ]
 for x in t:
-	x[1] # คือ type อะไร
+	x[1] # คือ ดิกชันนารี
 
 results = []
 for i, y in t:
 	for k in y.keys():
-		k # คือ type อะไร
+		k # คือ สตริง
 	results.append(i)
-results # คือ type อะไร
+results # คือ ลิสต์ของเลขจำนวนเต็ม
 ```
