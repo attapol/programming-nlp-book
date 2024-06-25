@@ -1,8 +1,7 @@
 # โจทย์: Data type
-เวลาเราใช้ data structure หลายแบบมาประกอบกัน เราต้องคำนึงถึง type ตลอดเวลาที่เขียนโค้ด ในแต่ละข้อให้บอกว่า return type คืออะไร เช่น List of strings, list of tuples (string, string, int), dictionary (string → int) เป็นต้น
+เมื่อใช้โครงสร้างข้อมูลหลายรูปแบบมาประกอบกัน จะต้องคำนึงถึงประเภทของข้อมูลตลอดเวลาที่เขียนโค้ด จงระบุว่าโปรแกรมในแต่ละข้อคืนค่าออกมาเป็นโครงสร้างข้อมูลประเภทใด เช่น ลิสต์ของสตริง ลิสต์ของทูเปิล (สตริง, สตริง, เลขจำนวนเต็ม), ดิกชันนารี (สตริง → เลขจำนวนเต็ม) เป็นต้น
 
-## ข้อ 1
-ข้อมูล
+## ข้อ 1 - ข้อมูลสมุดโทรศัพท์
 ```python
 name_to_phone_list = \
 { ('Mark', 'Wahlberg') : ['111-222-3333', '444-555-6666'] ,
@@ -16,7 +15,7 @@ for x in name_to_phone_list:
     print(x)  # x เป็น type อะไร
 ```
 
-## ข้อ 2
+## ข้อ 2 - ข้อมูลของสัตว์
 ```python
 animal = [ {'dog':['ear','leg','tail','bark'],'cat':['eye','ear','tail']},
 {'snake':['poison','tongue'],'frog':['hop','insect','rain']}]
@@ -84,7 +83,7 @@ for x in news_dic:
     print(x)  # x เป็น type อะไร
 ```
 
-## ข้อ 4
+## ข้อ 4 - ข้อมูลคะแนนนักเรียน
 
 ```python
 student_lst = 
@@ -154,7 +153,7 @@ homework_info =
 homework_info["AM002"]['lateStatus'] # return type อะไร
 ```
 
-## ข้อ 7 - วิชาบังคับ
+## ข้อ 7 - ข้อมูลวิชาบังคับ
 ```python
 required_langtech_course = {
     '2206323':{'subject_name':'INFO SYS HUMAN',
@@ -217,7 +216,7 @@ required_langtech_course['2209368']['time'] # คือ type อะไร
 required_langtech_course['2209368'] # คือ type อะไร
 ```
 
-## ข้อ 8
+## ข้อ 8 
 ```python
 s = [['I am a student', 'You are also a student.'], 
       ['You are right', 'You are correct']]

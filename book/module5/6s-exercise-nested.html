@@ -1,0 +1,1270 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน &#8212; Programming for NLP</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module5/6s-exercise-nested';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)" href="../6-oop.html" />
+    <link rel="prev" title="โจทย์: โครงสร้างข้อมูลซ้อนใน" href="6-exercise-nested.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Programming for NLP</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    บทนำ
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/3s-exercise-variable-function.html">เฉลยแบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/4-videos-string.html">Video: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/03s-exercise-data-structure.html">เฉลยแบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/04-videos-dictionary.html">Video: Dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/06-videos-set.html">Video: Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/08-comprehension.html">Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">การประมวลผลข้อมูลจากไฟล์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1-nested-list.html">โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-videos-nested-list.html">Video: Advance list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">การจัดการข้อมูลด้วย pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">แบบจำลองการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">แบบจำลองภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">Large language model</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module11/1-api.html">Application Programming Interface (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/2-videos-api.html">Video: Serialization and API call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/3-web-scraping.html">Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/4-videos-web-scraping.html">Video: Web scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module11/8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module5/6s-exercise-nested.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module5/6s-exercise-nested.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/module5/6s-exercise-nested.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">เรื่องลิสต์ซ้อนลิสต์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1 - คะแนนรวม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2 - ประมวลผลประโยค 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3 - ประมวลผลประโยค 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4 - ประมวลผลประโยค 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5 - ประมวลผลประโยค 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6 - ประมวลผลประโยค 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7 - หาชื่อเล่นผู้ชาย</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">เรื่องลิสต์ของดิกชันนารีคู่ฟิลด์แวลู</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 1 - ความนิยม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 2 - การปิดกั้นสื่อ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">เรื่องดิกชันนารีซ้อนใน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 1 - รายชื่อติดต่อ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 2 - ทูเปิลเป็นคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ข้อ 8 - ใครไม่ส่งการบ้าน</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>เรื่องลิสต์ซ้อนลิสต์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>ข้อ 1 - คะแนนรวม<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลคะแนนสอบของนักเรียนตลอดหนึ่งเทอม เขียนฟังก์ชันที่คำนวณว่านักเรียนแต่ละคนสอบผ่านหรือไม่ โดยใช้เกณฑ์ดังนี้</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>คะแนน</p></th>
+<th class="head"><p>grade</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&gt;=60</p></td>
+<td><p>pass</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;60</p></td>
+<td><p>fail</p></td>
+</tr>
+</tbody>
+</table>
+<p>input ที่ได้มาเป็นลิสต์ของลิสต์ของคะแนนของนักเรียนแต่ละคน เพราะฉะนั้น input เป็นโครงสร้างข้อมูลประเภทลิสต์ของลิสต์ของ <code class="docutils literal notranslate"><span class="pre">เลขจำนวนเต็ม</span></code></p>
+<p>ให้ฟังก์ชันคืนค่าลิสต์ของบูลีนที่ระบุว่านักเรียนแต่ละคนผ่านวิชานี้หรือไม่</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_scores</span><span class="p">(</span><span class="n">score_lists</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; sum_scores([[10, 15, 30, 15], [2, 12, 25, 18]])</span>
+<span class="sd">    [True, False]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">score_lists</span><span class="p">:</span>
+        <span class="c1"># วนลูปผ่านลิสต์ภายใน score_lists เพื่อคำนวณผลรวมของเลขในแต่ละลิสต์</span>
+        <span class="n">total_score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+        <span class="c1"># เก็บค่าความสำเร็จของนักเรียน (ผ่านหรือไม่ผ่าน) เป็นค่าบูลีนในลิสต์ result</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total_score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>ข้อ 2 - ประมวลผลประโยค 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>เขียนฟังก์ชันที่เปลี่ยนลิสต์ของประโยคที่ยังไม่ได้มีการตัดคำ ให้เป็นลิสต์ของลิสต์ของคำ (สตริง) โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.split('</span> <span class="pre">')</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_paragraph</span><span class="p">(</span><span class="n">sentence_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; process_paragraph([&#39;This is a sentence.&#39;, &#39;This is another sentence.&#39;])</span>
+<span class="sd">    [[&#39;This&#39;, &#39;is&#39;, &#39;a&#39;, &#39;sentence.&#39;], [&#39;This&#39;, &#39;is&#39;, &#39;another&#39;, &#39;sentence.&#39;]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># ลูปผ่านแต่ละประโยคใน sentence_list</span>
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentence_list</span><span class="p">:</span>
+        <span class="c1"># แบ่งประโยคเป็นคำๆ โดยใช้ช่องว่างเป็นตัวแบ่ง และเพิ่มลิสต์ของคำในแต่ละประโยคเข้าไปใน result</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+    
+    <span class="c1"># คืนค่าผลลัพธ์ที่เป็นลิสต์ของลิสต์ของคำ</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h3>ข้อ 3 - ประมวลผลประโยค 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>เขียนฟังก์ชันที่เปลี่ยนลิสต์ของประโยคที่ยังไม่ได้มีการตัดคำ ให้เป็นลิสต์ของจำนวนคำ จากนั้นให้คืนค่าทูเปิลที่มีค่าต่ำสุดและค่าสูงสุด</p>
+<p>กระบวนการนี้เป็นกระบวนการที่เราทำบ่อยๆ เวลาประมวลผลประโยคเพื่อตรวจสอบว่ามีประโยคที่สั้นเกินไปหรือไม่ซึ่งอาจจะเกิดจากตอนดึงข้อมูลแล้วเกิดการผิดพลาด</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_min_max_sentence_length</span><span class="p">(</span><span class="n">sentence_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; get_min_max_sentence_length([&#39;short sentence.&#39;, &#39;This is a very long long long sentence.&#39;, &#39;a normal sentence here&#39;, &#39;another normal sentence&#39;])</span>
+<span class="sd">    (2, 8)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">word_counts</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># ใช้ลูปเพื่อหาจำนวนคำในแต่ละประโยค</span>
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentence_list</span><span class="p">:</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">word_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+    
+    <span class="c1"># หาค่าต่ำสุดและค่าสูงสุด</span>
+    <span class="n">min_words</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">word_counts</span><span class="p">)</span>
+    <span class="n">max_words</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">word_counts</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">min_words</span><span class="p">,</span> <span class="n">max_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h3>ข้อ 4 - ประมวลผลประโยค 3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>เวลาเราประมวลผลข้อมูลที่เป็นประโยคเราจะตัดประโยคที่สั้นเกินไปออก เพราะว่าอาจจะเกิดจากความผิดพลาด และอาจจะเป็นประโยคที่ไม่ได้สื่อความหมายมาก นอกจากนั้นแล้วเรามักจะจำกัดความยาวของประโยคที่เราต้องการจะวิเคราะห์อีกด้วยไม่ให้มีความยาวเกินไป</p>
+<p>จงเขียนฟังก์ชันที่รับสามอาร์กิวเมนต์</p>
+<ol class="arabic simple">
+<li><p>ลิสต์ของประโยคที่ยังไม่ได้มีการตัดคำ</p></li>
+<li><p>จำนวนคำขั้นต่ำที่ของประโยคที่ต้องการ</p></li>
+<li><p>จำนวนคำสูงสุด</p></li>
+</ol>
+<p>คืนค่าลิสต์ของประโยคที่มีความยาวมากกว่าจำนวนคำที่กำหนด และถ้าหากประโยคมีความยาวเกิดจำนวนคำสูงสุดให้เก็บไว้เฉพาะคำแรก ๆ ตัดเอาคำที่เกินทิ้งไป</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">limit_sentence_lengths</span><span class="p">(</span><span class="n">sentence_list</span><span class="p">,</span> <span class="n">min_words</span><span class="p">,</span> <span class="n">max_words</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    รับลิสต์ของประโยค และกรองประโยคตามจำนวนคำขั้นต่ำและสูงสุดที่กำหนด</span>
+
+<span class="sd">    &gt;&gt;&gt; limit_sentence_lengths([&#39;short sentence&#39;, &#39;This is a very long long long sentence&#39;, &#39;a normal sentence here&#39;, &#39;another normal sentence&#39;], 2, 4)</span>
+<span class="sd">    [&#39;This is a very&#39;, &#39;a normal sentence here&#39;, &#39;another normal sentence&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filtered_sentences</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentence_list</span><span class="p">:</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># แยกคำในประโยค</span>
+        <span class="n">word_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>   <span class="c1"># นับจำนวนคำ</span>
+        
+        <span class="k">if</span> <span class="n">word_count</span> <span class="o">&gt;</span> <span class="n">min_words</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">word_count</span> <span class="o">&gt;</span> <span class="n">max_words</span><span class="p">:</span>
+                <span class="c1"># ตัดประโยคให้เหลือคำตามจำนวนสูงสุดที่กำหนด</span>
+                <span class="n">filtered_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">[:</span><span class="n">max_words</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># เก็บประโยคที่ผ่านเงื่อนไขไว้ในลิสต์</span>
+                <span class="n">filtered_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">filtered_sentences</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h3>ข้อ 5 - ประมวลผลประโยค 4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>เขียนฟังก์ชันเพื่อแปลงข้อมูลให้อยู่ในรูปของลิสต์ของลิสต์ของคำ โดยที่ input ที่ได้รับมาเป็นลิสต์ของประโยค ซึ่งแต่ละประโยคเป็นสตริงที่ถูกแบ่งคำไว้แล้ว แต่ละคำคั่นด้วย | โดยที่ให้กรองคำที่อยู่ในเซ็ตของคำที่ต้องการกรอง หรือ stopset ออก และกรองคำที่ไม่ใช่ตัวอักษรภาษาไทยออกไปโดยใช้ regex <code class="docutils literal notranslate"><span class="pre">[ก-์]</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">tokenize_clean</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">stopset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; tokenize_clean([&#39;ฉัน|รัก|การ|เขียน|โปรแกรม|Python&#39;, &#39;ใน|ที่|สุด|ก็|สำเร็จ&#39;],  {&#39;ฉัน&#39;, &#39;การ&#39;, &#39;ใน&#39;, &#39;ที่&#39;, &#39;ก็&#39;}) </span>
+<span class="sd">    [[&#39;รัก&#39;, &#39;เขียน&#39;, &#39;โปรแกรม&#39;],  [&#39;สำเร็จ&#39;]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
+    
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>  <span class="c1"># วนซ้ำในแต่ละประโยคในลิสต์</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>  <span class="c1"># แบ่งประโยคออกเป็นคำโดยใช้ &#39;|&#39; เป็นตัวคั่น</span>
+        <span class="n">clean_words</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># สร้างลิสต์ว่างเพื่อเก็บคำที่ผ่านการกรองแล้ว</span>
+        
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>  <span class="c1"># วนซ้ำในแต่ละคำในประโยค</span>
+            <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[ก-์]&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>  <span class="c1"># ตรวจสอบว่าคำไม่อยู่ใน stopset และเป็นตัวอักษรภาษาไทย</span>
+                <span class="n">clean_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1"># ถ้าผ่านการตรวจสอบ ให้เพิ่มคำลงในลิสต์ clean_words</span>
+                
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clean_words</span><span class="p">)</span>  <span class="c1"># เพิ่มลิสต์คำที่ผ่านการกรองแล้วลงในลิสต์ผลลัพธ์</span>
+        
+    <span class="k">return</span> <span class="n">result</span>  <span class="c1"># คืนค่าลิสต์ผลลัพธ์</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h3>ข้อ 6 - ประมวลผลประโยค 5<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชันเพื่อวิเคราะห์ลิสต์ของประโยค ซึ่งแต่ละประโยคเป็นลิสต์ของสตริงคำ ฟังก์ชันจะต้องคำนวณว่าแต่ละประโยคมีคำที่สั้นกว่าสามตัวอักษรคิดเป็นร้อยละเท่าไร (จำนวนคำที่สั้นกว่าสามตัวอักษร หารด้วยจำนวนคำทั้งหมด) และคืนค่าที่คำนวณออกมาได้</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_ratio_3_chars</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; calculate_ratio_3_chars([[&#39;Stay&#39;, &#39;in&#39;, &#39;the&#39;, &#39;middle&#39;],[&#39;Like&#39;,&#39;you&#39;, &#39;a&#39;, &#39;little&#39;], [&quot;Don&#39;t&quot;, &#39;want&#39;,&#39;no&#39;,&#39;riddle&#39;]])</span>
+<span class="sd">    0.25</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># ตัวแปรนับจำนวนคำที่สั้นกว่าสามตัวอักษร</span>
+    <span class="n">short_word_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># ตัวแปรนับจำนวนคำทั้งหมด</span>
+    <span class="n">total_word_count</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># วนซ้ำในแต่ละประโยคในลิสต์ของประโยค</span>
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+        <span class="c1"># วนซ้ำในแต่ละคำในประโยค</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+            <span class="n">total_word_count</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># เพิ่มจำนวนคำทั้งหมด</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># ถ้าคำสั้นกว่าสามตัวอักษร</span>
+                <span class="n">short_word_count</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># เพิ่มจำนวนคำที่สั้นกว่าสามตัวอักษร</span>
+    
+    <span class="c1"># คำนวณร้อยละของคำที่สั้นกว่าสามตัวอักษร</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">short_word_count</span> <span class="o">/</span> <span class="n">total_word_count</span>
+    
+    <span class="k">return</span> <span class="n">ratio</span>  <span class="c1"># คืนค่าร้อยละที่คำนวณได้</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h3>ข้อ 7 - หาชื่อเล่นผู้ชาย<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลชื่อของนิสิตปัจจุบันซึ่งเก็บไว้ในลิสต์ของทูเปิล (ชื่อจริง, ชื่อเล่น, เพศ) จงเขียนฟังก์ชันที่คืนค่าลิสต์ที่มีชื่อเล่นของผู้ชายเรียงลำดับตามพจนานุกรม และไม่ซ้ำกัน</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_male_nicknames</span><span class="p">(</span><span class="n">students</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; get_male_nicknames([(&#39;Maysa&#39;, &#39;May&#39;, &#39;Female&#39;),(&#39;Waruntorn&#39;, &#39;Ing&#39;, &#39;Female&#39;),(&#39;Maysaya&#39;, &#39;May&#39;, &#39;Female&#39;), (&#39;Watsakorn&#39;, &#39;May&#39;, &#39;Female&#39;),(&#39;Chonkan&#39;, &#39;Atom&#39;, &#39;Male&#39;),(&#39;Saran&#39;, &#39;Ton&#39;, &#39;Male&#39;), (&#39;Tonkid&#39;, &#39;Ton&#39;, &#39;Male&#39;)])</span>
+<span class="sd">    [&#39;Atom&#39;, &#39;Ton&#39;]  </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># สร้างเซ็ตเพื่อเก็บชื่อเล่นของผู้ชายที่ไม่ซ้ำกัน</span>
+    <span class="n">male_nicknames</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    
+    <span class="c1"># วนซ้ำผ่านลิสต์ของนักเรียน</span>
+    <span class="k">for</span> <span class="n">full_name</span><span class="p">,</span> <span class="n">nickname</span><span class="p">,</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+        <span class="c1"># ถ้าเพศเป็นชาย</span>
+        <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">:</span>
+            <span class="c1"># เพิ่มชื่อเล่นลงในเซ็ต</span>
+            <span class="n">male_nicknames</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nickname</span><span class="p">)</span>
+    
+    <span class="c1"># แปลงเซ็ตเป็นลิสต์และเรียงลำดับตามพจนานุกรม</span>
+    <span class="n">sorted_nicknames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">male_nicknames</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">sorted_nicknames</span>  <span class="c1"># คืนค่าลิสต์ที่เรียงลำดับแล้ว</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id10">
+<h2>เรื่องลิสต์ของดิกชันนารีคู่ฟิลด์แวลู<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<section id="id11">
+<h3>ข้อ 1 - ความนิยม<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>เขียนฟังก์ชันหาจำนวนคอมเมนต์ของไอดีแอ็กเคานต์ที่กำหนดให้ โดยที่ทวีตถูกเก็บอยู่ในรูปดิกชันนารีคู่ฟิลด์แวลู</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">243000</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">37000</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">250300</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I was proud to work with Justin Trudeau as President&#39;</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;SpeakerPelosi&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">22700</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">45600</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;What courage does it take to pass legislation that will save lives?&#39;</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 15, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+  <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">52800</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;In December, Michelle and I will head to Malaysia for the first @ObamaFoundation Leaders: Asia-Pacific gathering&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_comments_for_id</span><span class="p">(</span><span class="n">tweet_id</span><span class="p">,</span> <span class="n">tweet_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; sum_comments_for_id(&#39;BarackObama&#39;, data)</span>
+<span class="sd">    42000</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">total_comments</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># ตัวแปรสำหรับเก็บจำนวนคอมเมนต์ทั้งหมด</span>
+
+    <span class="c1"># วนลูปผ่านลิสต์ของทวีต</span>
+    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
+        <span class="c1"># ถ้าไอดีของทวีตตรงกับไอดีที่กำหนด</span>
+        <span class="k">if</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">tweet_id</span><span class="p">:</span>
+            <span class="c1"># บวกจำนวนคอมเมนต์ของทวีตนี้เข้าไปใน total_comments</span>
+            <span class="n">total_comments</span> <span class="o">+=</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;num comments&#39;</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">total_comments</span>  <span class="c1"># คืนค่าจำนวนคอมเมนต์ทั้งหมด</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h3>ข้อ 2 - การปิดกั้นสื่อ<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราได้รับข้อมูลเกี่ยวกับเว็บไซต์ที่ถูกปิดกั้นมาจากองค์กรหนึ่งในรูปแบบของลิสต์ของดิกชันนารีคู่ฟิลด์แวลู แต่ว่าข้อมูลชุดนี้ต้องได้รับการอัพเดท จงเขียนฟังก์ชันที่คืนค่าลิสต์ของดิกชันนารีคู่ฟิลด์แวลูที่มีการอัพเดทดังนี้</p>
+<ol class="arabic simple">
+<li><p>เว็บไซต์ที่ฟิลด์ ‘title’ มีคำว่า ‘men’ หรือคำว่า ‘women’ จะต้องถูกเอาออกจากลิสต์</p></li>
+<li><p>เว็บไซต์ที่ฟิลด์ ‘url’ มี ‘.co.th’ และจำนวนผู้เข้าชมรวมทุกประเทศมากกว่า 30000 ให้เพิ่มฟิลด์ ‘big Thai site’ และตั้งค่าเป็น True  ถ้าหากไม่ตรงเงื่อนไขให้ตั้งค่าเป็น False</p></li>
+<li><p>ลบฟิลด์ ‘viewer’ ออก (ใช้ dict.pop)</p></li>
+</ol>
+<p>ตัวอย่าง input:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Hottest men for you on this site&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;www.hotthing.com&#39;</span><span class="p">,</span> 
+ <span class="s1">&#39;viewer&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;thai&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s1">&#39;malaysia&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;singapore&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">}</span> <span class="p">},</span>
+<span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Welcome to Zentrale&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;www.zen-zen.co.th&#39;</span><span class="p">,</span> 
+ <span class="s1">&#39;viewer&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;thai&#39;</span><span class="p">:</span> <span class="mi">40000</span><span class="p">,</span> <span class="s1">&#39;malaysia&#39;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">&#39;singapore&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">}</span> <span class="p">},</span>
+<span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Apply now for better life&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;www.betterlife.co.th&#39;</span><span class="p">,</span> 
+ <span class="s1">&#39;viewer&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;thai&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;malaysia&#39;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="s1">&#39;singapore&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span> <span class="p">},</span>
+<span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;We have everything you want.&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;www.everything.com&#39;</span><span class="p">,</span> 
+ <span class="s1">&#39;viewer&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;thai&#39;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span> <span class="s1">&#39;malaysia&#39;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span> <span class="s1">&#39;china&#39;</span><span class="p">:</span> <span class="mi">60000</span><span class="p">}</span> <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag_thai_sites</span><span class="p">(</span><span class="n">site_dict_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    &gt;&gt;&gt; tag_thai_sites(data)</span>
+<span class="sd">    [</span>
+<span class="sd">    {&#39;title&#39;: &#39;Welcome to Zentrale&#39;, &#39;url&#39;: &#39;www.zen-zen.co.th&#39;,&#39;big Thai site&#39;: True},</span>
+<span class="sd">    {&#39;title&#39;: &#39;Apply now for better life&#39;, &#39;url&#39;: &#39;www.betterlife.co.th&#39;, &#39;big Thai site&#39;: False },</span>
+<span class="sd">    {&#39;title&#39;: &#39;We have everything you want.&#39;, &#39;url&#39;: &#39;www.everything.com&#39;, &#39;big Thai site&#39;: False}</span>
+<span class="sd">    ]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">updated_sites</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">site_dict_list</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">viewer</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;viewer&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        
+        <span class="c1"># เงื่อนไข 1: เอาออกถ้า &#39;title&#39; มีคำว่า &#39;men&#39; หรือ &#39;women&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;men&#39;</span> <span class="ow">in</span> <span class="n">title</span> <span class="ow">or</span> <span class="s1">&#39;women&#39;</span> <span class="ow">in</span> <span class="n">title</span><span class="p">:</span>
+            <span class="k">continue</span>
+        
+        <span class="c1"># เงื่อนไข 2: ตรวจสอบ &#39;.co.th&#39; และจำนวนผู้เข้าชมรวม</span>
+        <span class="n">total_viewers</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">viewer</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">if</span> <span class="s1">&#39;.co.th&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+            <span class="n">site</span><span class="p">[</span><span class="s1">&#39;big Thai site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_viewers</span> <span class="o">&gt;</span> <span class="mi">30000</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">site</span><span class="p">[</span><span class="s1">&#39;big Thai site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="c1"># เงื่อนไข 3: ลบฟิลด์ &#39;viewer&#39; ออก</span>
+        <span class="n">site</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;viewer&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        
+        <span class="n">updated_sites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">updated_sites</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id13">
+<h2>เรื่องดิกชันนารีซ้อนใน<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h3>ข้อ 1 - รายชื่อติดต่อ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนโปรแกรมที่สร้างลิสต์ของทูเปิล (name, line id) จากดิกชันนารีซ้อนใน โดยเรียงลำดับตามอักษรของชื่อ</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_contact</span><span class="p">(</span><span class="n">contacts</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; list_contact({</span>
+<span class="sd">    &#39;Alex&#39; : {&#39;phone&#39;: &#39;123-456-789&#39;, &#39;line&#39;: &#39;alexcool&#39;},</span>
+<span class="sd">    &#39;Bo&#39;: {&#39;home phone&#39;: &#39;111-222-3333&#39;, &#39;line&#39;: &#39;bobo&#39;},</span>
+<span class="sd">    &#39;Chris&#39;: {&#39;phone&#39;: &#39;444-555-6666&#39;, &#39;line&#39;: &#39;chrissie&#39;},</span>
+<span class="sd">    &#39;Doug&#39;: {&#39;mobile phone&#39;: &#39;444-555-6666&#39;, &#39;line&#39;: &#39;dougd&#39;}   </span>
+<span class="sd">    })</span>
+<span class="sd">    [(&#39;Alex&#39;, &#39;alexcool&#39;), (&#39;Bo&#39;, &#39;bobo&#39;), (&#39;Chris&#39;, &#39;chrissie&#39;), (&#39;Doug&#39;, &#39;dougd&#39;)]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># สร้างลิสต์ของทูเปิล (name, line id) จากดิกชันนารี</span>
+    <span class="n">contact_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">name</span><span class="p">,</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;line&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">contacts</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    
+    <span class="c1"># เรียงลำดับตามอักษรของชื่อ</span>
+    <span class="n">contact_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">contact_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h3>ข้อ 2 - ทูเปิลเป็นคีย์<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราได้ข้อมูลเบอร์โทรศัพท์ที่เก็บอยู่ในดิกชันนารีที่มีคีย์เป็นทูเปิลของชื่อและนามสกุล และแวลูเป็นสตริงที่เก็บเบอร์โทรศัพท์</p>
+<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">lookup_by_lastname</span></code> ที่รับนามสกุลที่เป็นสตริง และดิกชันนารีข้อมูลเบอร์โทรศัพท์ และคืนค่าเบอร์โทรศัพท์ของคนที่มีนามสกุลที่กำหนดให้ ถ้าเกิดว่านามสกุลนั้นไม่มีอยู่ในดิกชันนารีให้คืนค่า <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lookup_by_lastname</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; name_to_phone =  { (&#39;Mark&#39;, &#39;Wahlberg&#39;) : &#39;111-222-3333&#39;,</span>
+<span class="sd">        (&#39;Jane&#39;, &#39;Doe&#39;): &#39;222-333-4444&#39;,</span>
+<span class="sd">        (&#39;Jane&#39;, &#39;Eyre&#39;): &#39;333-444-5555&#39;</span>
+<span class="sd">        }</span>
+<span class="sd">    &gt;&gt;&gt; lookup_by_lastname(&#39;Doe&#39;, name_to_phone_numbers)</span>
+<span class="sd">    &#39;222-333-4444&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># วนลูปในดิกชันนารีเพื่อตรวจสอบนามสกุล</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">surname</span><span class="p">),</span> <span class="n">phone_number</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">surname</span> <span class="o">==</span> <span class="n">last_name</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">phone_number</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="name-to-age-age-to-name">
+<h3>ข้อ 3 - Name to age - Age to name<a class="headerlink" href="#name-to-age-age-to-name" title="Permalink to this heading">#</a></h3>
+<p>เปลี่ยนจาก</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_age</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ชญา&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> 
+         <span class="s1">&#39;อรรถพล&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+         <span class="s1">&#39;โนโซมิ&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>ให้เป็น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age_to_name</span> <span class="o">=</span> <span class="p">{</span><span class="mi">33</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ชญา&#39;</span><span class="p">],</span> 
+         <span class="mi">34</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_age</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ชญา&#39;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> 
+         <span class="s1">&#39;อรรถพล&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+         <span class="s1">&#39;โนโซมิ&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">transform_to_age_to_name</span><span class="p">(</span><span class="n">name_to_age</span><span class="p">):</span>
+    <span class="n">age_to_name</span> <span class="o">=</span> <span class="p">{}</span>
+    
+     <span class="c1"># วนลูปในดิกชันนารี name_to_age เพื่อเข้าถึงชื่อและอายุ</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">name_to_age</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="c1"># ถ้าคีย์ age ยังไม่มีใน age_to_name ให้สร้างลิสต์ใหม่</span>
+        <span class="k">if</span> <span class="n">age</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">age_to_name</span><span class="p">:</span>
+            <span class="n">age_to_name</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># เพิ่มชื่อเข้าไปในลิสต์ของคีย์ age</span>
+        <span class="n">age_to_name</span><span class="p">[</span><span class="n">age</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    
+    <span class="c1"># คืนค่าดิกชันนารี age_to_name ที่แปลงเสร็จแล้ว</span>
+    <span class="k">return</span> <span class="n">age_to_name</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id16">
+<h3>ข้อ 4 - เปลี่ยนคีย์<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>เปลี่ยนโครงสร้างของดิกชันนารีจากที่เคยมีคีย์เป็นทูเปิล (first name, last name) เป็นแค่ last name อย่างเดียว</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">):</span> <span class="s1">&#39;222-333-4444&#39;</span><span class="p">,</span>
+  <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Eyre&#39;</span><span class="p">):</span> <span class="s1">&#39;333-444-5555&#39;</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">transform_to_last_name_keys</span><span class="p">(</span><span class="n">name_to_phone</span><span class="p">):</span>
+    <span class="n">last_name_to_phone</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี name_to_phone เพื่อเข้าถึงชื่อและเบอร์โทรศัพท์</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">),</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">name_to_phone</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="c1"># ถ้าคีย์ last name ยังไม่มีใน last_name_to_phone ให้สร้างลิสต์ใหม่</span>
+        <span class="k">if</span> <span class="n">last_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">last_name_to_phone</span><span class="p">:</span>
+            <span class="n">last_name_to_phone</span><span class="p">[</span><span class="n">last_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># เพิ่มเบอร์โทรศัพท์เข้าไปในลิสต์ของคีย์ last name</span>
+        <span class="n">last_name_to_phone</span><span class="p">[</span><span class="n">last_name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
+    
+    <span class="c1"># คืนค่าดิกชันนารี last_name_to_phone ที่แปลงเสร็จแล้ว</span>
+    <span class="k">return</span> <span class="n">last_name_to_phone</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id17">
+<h3>ข้อ 5 - นับจำนวนนักเรียน<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มีคีย์เป็นสตริงที่เก็บชื่อวิชา และแวลูเป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
+<p>จงเขียนฟังก์ชันที่คืนค่าลิสต์ของชื่อนักเรียนทั้งหมดที่ไม่ซ้ำกัน</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_all_students</span><span class="p">(</span><span class="n">registration</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; registration = {&#39;CompLing&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;],</span>
+<span class="sd">        &#39;SoundSys&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;],</span>
+<span class="sd">        &#39;GramSys&#39;: [&#39;Brittney&#39;, &#39;Girth&#39;, &#39;Harry&#39;],</span>
+<span class="sd">        &#39;ManGeog&#39;: [&#39;Andy&#39;, &#39;Donald&#39;, &#39;Girth&#39;]</span>
+<span class="sd">    }</span>
+<span class="sd">    &gt;&gt;&gt; list_all_students(registration)</span>
+<span class="sd">    [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;, &#39;Girth&#39;, &#39;Harry&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># สร้างเซ็ตเปล่าเพื่อเก็บชื่อนักเรียนที่ไม่ซ้ำกัน</span>
+    <span class="n">student_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี registration เพื่อเข้าถึงลิสต์ชื่อนักเรียนในแต่ละวิชา</span>
+    <span class="k">for</span> <span class="n">students</span> <span class="ow">in</span> <span class="n">registration</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="c1"># เพิ่มชื่อนักเรียนในเซ็ต student_set (การเพิ่มเข้าเซ็ตจะทำให้ไม่มีชื่อนักเรียนซ้ำกัน)</span>
+        <span class="n">student_set</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">students</span><span class="p">)</span>
+
+    <span class="c1"># แปลงเซ็ต student_set เป็นลิสต์และเรียงลำดับชื่อนักเรียนตามลำดับตัวอักษร</span>
+    <span class="n">student_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">student_set</span><span class="p">)</span>
+
+    <span class="c1"># คืนค่าลิสต์ชื่อนักเรียนที่เรียงลำดับแล้ว</span>
+    <span class="k">return</span> <span class="n">student_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id18">
+<h3>ข้อ 6 - ใครชอบเรียนเยอะ<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการลงทะเบียนเรียนในดิกชันนารีที่มีคีย์เป็นสตริงที่เก็บชื่อวิชา และแวลูเป็นลิสต์ของสตริงที่เก็บชื่อนักเรียนที่ลงเรียนวิชานั้นอยู่</p>
+<p>จงเขียนฟังก์ชันที่คืนค่าดิกชันนารีที่คีย์คือจำนวนคลาสที่เรียนต่อคน และแวลูคือคนที่ลงเรียนจำนวนคลาสเท่ากับคีย์</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_num_classes_to_students</span><span class="p">(</span><span class="n">registration</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; registration = {&#39;CompLing&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Catherine&#39;],</span>
+<span class="sd">        &#39;SoundSys&#39;: [&#39;Andy&#39;, &#39;Brittney&#39;, &#39;Donald&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;],</span>
+<span class="sd">        &#39;GramSys&#39;: [&#39;Brittney&#39;, &#39;Girth&#39;, &#39;Harry&#39;],</span>
+<span class="sd">        &#39;ManGeog&#39;: [&#39;Andy&#39;, &#39;Donald&#39;, &#39;Girth&#39;]</span>
+<span class="sd">    }</span>
+<span class="sd">    &gt;&gt;&gt; get_num_classes_to_students(registration)</span>
+<span class="sd">    {3: [&#39;Andy&#39;, &#39;Brittney&#39;],</span>
+<span class="sd">    2: [&#39;Donald&#39;, &#39;Girth&#39;],</span>
+<span class="sd">    1: [&#39;Catherine&#39;, &#39;Elaine&#39;, &#39;Fodor&#39;, &#39;Harry&#39;]}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">student_classes_count</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี registration เพื่อเก็บจำนวนคลาสที่นักเรียนลงทะเบียนเรียน</span>
+    <span class="k">for</span> <span class="n">students</span> <span class="ow">in</span> <span class="n">registration</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">student_classes_count</span><span class="p">:</span>
+                <span class="n">student_classes_count</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">student_classes_count</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># สร้างดิกชันนารีเพื่อเก็บจำนวนคลาสและลิสต์นักเรียนที่ลงเรียนตามจำนวนคลาสนั้นๆ</span>
+    <span class="n">num_classes_to_students</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี student_classes_count เพื่อสร้างดิกชันนารี num_classes_to_students</span>
+    <span class="k">for</span> <span class="n">student</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">student_classes_count</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">num_classes_to_students</span><span class="p">:</span>
+            <span class="n">num_classes_to_students</span><span class="p">[</span><span class="n">count</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num_classes_to_students</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">student</span><span class="p">]</span>
+
+    <span class="c1"># คืนค่าดิกชันนารี num_classes_to_students</span>
+    <span class="k">return</span> <span class="n">num_classes_to_students</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id19">
+<h3>ข้อ 7 - รวมดิกชันนารี<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">combine_dicts</span></code> ที่รวมดิกชันนารีสองอันเข้าไว้ด้วยกัน โดยที่ดิกชันนารีมีคีย์และแวลูเป็นสตริง ฟังก์ชันต้องคืนค่าดิกชันนารีที่มีคีย์เป็นสตริงและแวลูเป็นลิสต์ของสตริง เช่น</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">}</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;dog&#39;</span><span class="p">}</span>
+<span class="n">combine_dicts</span><span class="p">(</span><span class="n">dict1</span> <span class="p">,</span> <span class="n">dict2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ant&#39;</span><span class="p">,</span> <span class="s1">&#39;ant&#39;</span><span class="p">],</span> 
+     <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bird&#39;</span><span class="p">],</span> 
+     <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;caterpillar&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">],</span> 
+     <span class="s1">&#39;d&#39;</span><span class="p">:[</span><span class="s1">&#39;dog&#39;</span><span class="p">]}</span>
+</pre></div>
+</div>
+<p>แวลูที่คู่กับ <code class="docutils literal notranslate"><span class="pre">'c'</span></code> เป็นลิสต์ที่มี <code class="docutils literal notranslate"><span class="pre">'catepillar'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict1</span></code> และ <code class="docutils literal notranslate"><span class="pre">'cat'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict2</span></code></p>
+<p>แวลูที่คู่กับ <code class="docutils literal notranslate"><span class="pre">'d'</span></code> เป็นลิสต์ที่มี <code class="docutils literal notranslate"><span class="pre">'dog'</span></code> ซึ่งมาจาก <code class="docutils literal notranslate"><span class="pre">dict2</span></code> เพราะว่า <code class="docutils literal notranslate"><span class="pre">dict1</span></code> ไม่มีคีย์ <code class="docutils literal notranslate"><span class="pre">'c'</span></code> อยู่</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combine_dicts</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+    <span class="n">combined</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี d1 เพื่อเพิ่มค่าใน combined</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d1</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี d2 เพื่อเพิ่มค่าใน combined</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">combined</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">combined</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id20">
+<h3>ข้อ 8 - ใครไม่ส่งการบ้าน<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเรามีข้อมูลการส่งงานของนิสิต เก็บอยู่ในดิกชันนารีที่มีคีย์เป็นสตริงที่เก็บชื่อการบ้านทั้งหมด และแวลูเป็นลิสต์ของสตริงที่เก็บชื่อนิสิตที่ส่งการบ้านชิ้นนั้นแล้ว จงเขียนฟังก์ชันที่คืนค่าลิสต์ของชื่อนิสิตที่ส่งการบ้านไม่ครบ</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_missing_work</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; find_missing_work( {&#39;PA1&#39;: [&#39;Bew&#39;, &#39;Mild&#39;, &#39;Nipun&#39;],</span>
+<span class="sd">        &#39;PA2&#39;: [&#39;Mild&#39;, &#39;Bew&#39;, &#39;PP&#39;],</span>
+<span class="sd">        &#39;PA3&#39;: [&#39;Bew&#39;, &#39;Nipun&#39;, &#39;Mild&#39;] } )</span>
+<span class="sd">    [&#39;Nipun&#39;, &#39;PP&#39;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># สร้างเซ็ตเพื่อเก็บชื่อนิสิตทั้งหมดที่ส่งการบ้านอย่างน้อยหนึ่งชิ้น</span>
+    <span class="n">all_students</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    
+    <span class="c1"># สร้างดิกชันนารีเพื่อตรวจสอบการส่งการบ้านของนิสิตแต่ละคน</span>
+    <span class="n">student_work_count</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># วนลูปในดิกชันนารี data เพื่อเก็บชื่อนิสิตและนับจำนวนการส่งการบ้าน</span>
+    <span class="k">for</span> <span class="n">homework</span><span class="p">,</span> <span class="n">students</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+            <span class="n">all_students</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">student_work_count</span><span class="p">:</span>
+                <span class="n">student_work_count</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">student_work_count</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="c1"># สร้างลิสต์เพื่อนิสิตที่ส่งการบ้านไม่ครบ</span>
+    <span class="n">missing_work_students</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># นับจำนวนการบ้านทั้งหมด</span>
+    <span class="n">total_homeworks</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="c1"># วนลูปในดิกชันนารี student_work_count เพื่อหานิสิตที่ส่งการบ้านไม่ครบ</span>
+    <span class="k">for</span> <span class="n">student</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">student_work_count</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">total_homeworks</span><span class="p">:</span>
+            <span class="n">missing_work_students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">missing_work_students</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/module5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6-exercise-nested.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">โจทย์: โครงสร้างข้อมูลซ้อนใน</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../6-oop.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">เรื่องลิสต์ซ้อนลิสต์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1 - คะแนนรวม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2 - ประมวลผลประโยค 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3 - ประมวลผลประโยค 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4 - ประมวลผลประโยค 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5 - ประมวลผลประโยค 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6 - ประมวลผลประโยค 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7 - หาชื่อเล่นผู้ชาย</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">เรื่องลิสต์ของดิกชันนารีคู่ฟิลด์แวลู</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 1 - ความนิยม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 2 - การปิดกั้นสื่อ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">เรื่องดิกชันนารีซ้อนใน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 1 - รายชื่อติดต่อ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 2 - ทูเปิลเป็นคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-to-age-age-to-name">ข้อ 3 - Name to age - Age to name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 4 - เปลี่ยนคีย์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 5 - นับจำนวนนักเรียน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ข้อ 6 - ใครชอบเรียนเยอะ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ข้อ 7 - รวมดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ข้อ 8 - ใครไม่ส่งการบ้าน</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Attapol Thamrongrattanarit
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

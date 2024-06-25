@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>แบบฝึกหัดการเรียก API &#8212; Programming for NLP</title>
+    <title>ตัวอย่างการขูดข้อมูลด้วย BeautifulSoup &#8212; Programming for NLP</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module10/6-exercise-news-api';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/module11/7-example-scrape-dek-d';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="เฉลยแบบฝึกหัดการเรียก API" href="6s-example-news-api.html" />
-    <link rel="prev" title="แบบฝึกหัด JSON Serialization และการเรียก API" href="5-exercise-json-html-api.html" />
+    <link rel="next" title="แบบฝึกหัดการขูดข้อมูลด้วย BeautifulSoup" href="8-exercise-scraping.html" />
+    <link rel="prev" title="เฉลยแบบฝึกหัดการเรียก API" href="6s-example-news-api.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,13 +194,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -218,20 +221,24 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">แบบจำลองการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">แบบจำลองการประมวลผลภาษาธรรมชาติ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../10-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">แบบจำลองภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">Large language model</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../11-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1-api.html">Application Programming Interface (API)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-api.html">Video: Serialization and API call</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-web-scraping.html">Web scraping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-web-scraping.html">Video: Web scraping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบฝึกหัดการเรียก API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
 </ul>
@@ -291,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module10/6-exercise-news-api.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module11/7-example-scrape-dek-d.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -339,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module10/6-exercise-news-api.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/attapol/programming-nlp-book/issues/new?title=Issue%20on%20page%20%2Fbook/module11/7-example-scrape-dek-d.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +376,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/module10/6-exercise-news-api.ipynb" target="_blank"
+      <li><a href="../../_sources/book/module11/7-example-scrape-dek-d.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -438,9 +445,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -451,32 +456,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>แบบฝึกหัดการเรียก API</h1>
+    <h1>ตัวอย่างการขูดข้อมูลด้วย BeautifulSoup</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#news-api">News API</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-documentation">API Documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-api-call-curated-headline">Sample API Call - Curated Headline</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">Exercise 1. Get Thailand’s headlines</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication">Authentication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-2-news-sources">Exercises 2 - News Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-3-news-search">Exercises 3 - News Search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-4-news-sentiment">Exercises 4 - News Sentiment</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -486,157 +470,91 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="api">
-<h1>แบบฝึกหัดการเรียก API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h1>
-<section id="news-api">
-<h2>News API<a class="headerlink" href="#news-api" title="Permalink to this heading">#</a></h2>
-<p>Explore the <a class="reference external" href="https://newsapi.org/">News API</a> website. It is different from the Poke API in the previous exercise in a way that you now need to register for an account before retrieving any data from the website.</p>
-<p>Go ahead and register for an account.</p>
-<p>After that, an <strong>API Key</strong> will be shown. Copy it and save it in a variable because you will need to use it quite often.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="beautifulsoup">
+<h1>ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code><a class="headerlink" href="#beautifulsoup" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Next, go to your account page. You will see that you are registered for the Developer plan. It’s fine for our use here. Below, you will see how many requests you have made. You are limited to 1,000 requests per 30 minutes, so don’t waste them!</p>
-</section>
-<section id="api-documentation">
-<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://newsapi.org/docs">Documentation</a> is a good source to look for reference on how to use the API. Different data sources (website) have different API specs, so spend some time in the Documentation section to learn how to use the API.</p>
-</section>
-<section id="sample-api-call-curated-headline">
-<h2>Sample API Call - Curated Headline<a class="headerlink" href="#sample-api-call-curated-headline" title="Permalink to this heading">#</a></h2>
-<p>Let’s make our first API call. We will get the lastest headlines from the API. Go to the <a class="reference external" href="https://newsapi.org/docs/get-started#top-headlines">Get the current top headlines for a country or category</a> section. You will see on the right side the URL format that you need to construct</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=API_KEY
-</pre></div>
-</div>
-<p>The first word (<code class="docutils literal notranslate"><span class="pre">GET</span></code>) simply tells you what kind of API endpoint it is. Most of the time, you will see two kinds of API endpoint</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GET</span></code> is an endpoint from where you retrieve data such as retrieving news headlines</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">POST</span></code> is an endpoint to where you submit data such as posting a message to Twitter
-This keyword tells you which function in the <code class="docutils literal notranslate"><span class="pre">requests</span></code> module to call <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> or <code class="docutils literal notranslate"><span class="pre">requests.post</span></code></p></li>
-</ul>
-<p>The second part is the URL. Notice that there are parameters you can or must adjust</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">apiKey</span></code>
-The sample URL specify “us” as the country. However, it left the <code class="docutils literal notranslate"><span class="pre">apiKey</span></code> as a placeholder, so you have to put your API key here.</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use f-string to help construct the URL</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/top-headlines?country=us&amp;apiKey=</span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s2">&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, we are ready to “GET” the data.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Since the response is in JSON format, we can use the JSON module to help convert it into python dictionary.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="exercise-1-get-thailand-s-headlines">
-<h3>Exercise 1. Get Thailand’s headlines<a class="headerlink" href="#exercise-1-get-thailand-s-headlines" title="Permalink to this heading">#</a></h3>
-<p>Reconstruct the url to retrieve headlines from Thailand.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="authentication">
-<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this heading">#</a></h2>
-<p>Next, let’s look at the <a class="reference external" href="https://newsapi.org/docs/authentication">authentication section</a> of the documentation. Since you have limited number of requests you can make, you have to manage your credential carefully so that other people (hackers!) cannot steal your precious resources.</p>
-<p>Previously, we simply put the our API key in the URL. This is not ideal because hackers can sniff your traffic (especially when you use free public wi-fi) and steal your API key. We will put our API key in the request header instead (the last method mentioned in the documentation.)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that we no longer put the API key in the URL</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://newsapi.org/v2/top-headlines?country=us&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scrape_article</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+  <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36&#39;</span><span class="p">}</span>
+  <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">page</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+  <span class="n">d_list</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;section#content-area p&#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">d_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+      <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Found error in </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">0</span>
 
-<span class="c1"># construct header as a dictionary</span>
-<span class="c1"># use the key as specified in the documentation (case-sensitive)</span>
-<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="n">api_key</span>
-<span class="p">}</span>
-
-<span class="c1"># adjust the function call</span>
-<span class="c1"># pass our dictionary as a parameter to the function</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">num_pages</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">num_pages</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span> 
+  <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.dek-d.com/board/teen/4042928/&#39;</span>
+  <span class="n">prefix</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span><span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+  <span class="n">new_url</span> <span class="o">=</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">number</span> <span class="o">+</span><span class="s1">&#39;/&#39;</span>
+  <span class="n">num_pages</span> <span class="o">+=</span> <span class="n">scrape_article</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
+  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found error in https://www.dek-d.com/board/teen/4042926/
+Found error in https://www.dek-d.com/board/teen/4042923/
+Found error in https://www.dek-d.com/board/teen/4042913/
+Found error in https://www.dek-d.com/board/teen/4042912/
+Found error in https://www.dek-d.com/board/teen/4042911/
+Found error in https://www.dek-d.com/board/teen/4042909/
+Found error in https://www.dek-d.com/board/teen/4042907/
+Found error in https://www.dek-d.com/board/teen/4042906/
+Found error in https://www.dek-d.com/board/teen/4042905/
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the response into JSON</span>
-<span class="c1"># Your implementation here</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!zip teen_board.zip *.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  adding: 4042900.txt (deflated 45%)
+  adding: 4042901.txt (deflated 18%)
+  adding: 4042902.txt (deflated 41%)
+  adding: 4042903.txt (deflated 66%)
+  adding: 4042904.txt (deflated 76%)
+  adding: 4042908.txt (deflated 51%)
+  adding: 4042910.txt (deflated 45%)
+  adding: 4042914.txt (deflated 58%)
+  adding: 4042915.txt (deflated 49%)
+  adding: 4042916.txt (deflated 38%)
+  adding: 4042917.txt (deflated 37%)
+  adding: 4042918.txt (deflated 51%)
+  adding: 4042919.txt (deflated 50%)
+  adding: 4042920.txt (deflated 62%)
+  adding: 4042921.txt (deflated 39%)
+  adding: 4042922.txt (deflated 38%)
+  adding: 4042924.txt (deflated 39%)
+  adding: 4042925.txt (deflated 61%)
+  adding: 4042927.txt (deflated 56%)
+  adding: 4042928.txt (deflated 61%)
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="endpoints">
-<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this heading">#</a></h2>
-<p>Let’s explore what else the News API offer at the <a class="reference external" href="https://newsapi.org/docs/endpoints">Endpoints</a> section.</p>
-</section>
-<section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<section id="exercises-2-news-sources">
-<h3>Exercises 2 - News Sources<a class="headerlink" href="#exercises-2-news-sources" title="Permalink to this heading">#</a></h3>
-<p>List all the news sources available in Thailand</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercises-3-news-search">
-<h3>Exercises 3 - News Search<a class="headerlink" href="#exercises-3-news-search" title="Permalink to this heading">#</a></h3>
-<p>Find all the news about “APEC” (on <code class="docutils literal notranslate"><span class="pre">everything</span></code> endpoint)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercises-4-news-sentiment">
-<h3>Exercises 4 - News Sentiment<a class="headerlink" href="#exercises-4-news-sentiment" title="Permalink to this heading">#</a></h3>
-<p>Based on exercises 3, group the news by each news source. Does each news source present different sentiment about “APEC”?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your implementation here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -652,7 +570,7 @@ The sample URL specify “us” as the country. However, it left the <code class
         },
         kernelOptions: {
             name: "python3",
-            path: "./book/module10"
+            path: "./book/module11"
         },
         predefinedOutput: true
     }
@@ -671,20 +589,20 @@ The sample URL specify “us” as the country. However, it left the <code class
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="5-exercise-json-html-api.html"
+       href="6s-example-news-api.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">แบบฝึกหัด JSON Serialization และการเรียก API</p>
+        <p class="prev-next-title">เฉลยแบบฝึกหัดการเรียก API</p>
       </div>
     </a>
     <a class="right-next"
-       href="6s-example-news-api.html"
+       href="8-exercise-scraping.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">เฉลยแบบฝึกหัดการเรียก API</p>
+        <p class="prev-next-title">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -697,33 +615,6 @@ The sample URL specify “us” as the country. However, it left the <code class
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#news-api">News API</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-documentation">API Documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-api-call-curated-headline">Sample API Call - Curated Headline</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-get-thailand-s-headlines">Exercise 1. Get Thailand’s headlines</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication">Authentication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-2-news-sources">Exercises 2 - News Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-3-news-search">Exercises 3 - News Search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-4-news-sentiment">Exercises 4 - News Sentiment</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
