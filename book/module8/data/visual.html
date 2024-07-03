@@ -1662,7 +1662,7 @@ Name: count, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_missing</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">,</span><span class="s1">&#39;Verified&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1687,19 +1687,22 @@ Name: count, dtype: int64
       <th></th>
       <th>Airline Name</th>
       <th>Rating</th>
-      <th>Seat Type</th>
-      <th>Verified</th>
       <th>Date Flown</th>
       <th>Review</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <th>0</th>
+      <td>Bangkok Airways</td>
+      <td>6.0</td>
+      <td>March 2019</td>
+      <td>For this flight I was connecting from a flight...</td>
+    </tr>
+    <tr>
       <th>1</th>
       <td>Bangkok Airways</td>
       <td>9.0</td>
-      <td>Economy</td>
-      <td>True</td>
       <td>June 2019</td>
       <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
     </tr>
@@ -1707,8 +1710,6 @@ Name: count, dtype: int64
       <th>2</th>
       <td>Bangkok Airways</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>False</td>
       <td>November 2021</td>
       <td>I just want to thank Bangkok Airways for their...</td>
     </tr>
@@ -1716,8 +1717,6 @@ Name: count, dtype: int64
       <th>3</th>
       <td>Bangkok Airways</td>
       <td>9.0</td>
-      <td>Economy</td>
-      <td>False</td>
       <td>April 2020</td>
       <td>I especially want to thank Khun Guy at Krabi A...</td>
     </tr>
@@ -1725,149 +1724,42 @@ Name: count, dtype: int64
       <th>4</th>
       <td>Garuda Indonesia</td>
       <td>1.0</td>
-      <td>Eco</td>
-      <td>True</td>
       <td>July 2023</td>
-      <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drop rows where Rating is greater than 10 </span>
-<span class="n">airline_reviews_small</span> <span class="c1">#[airline_reviews_small[&#39;Rating&#39;] &lt;= 10]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Airline Name</th>
-      <th>Rating</th>
-      <th>Seat Type</th>
-      <th>Verified</th>
-      <th>Date Flown</th>
-      <th>Review</th>
-      <th>Cleaned review</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Bangkok Airways</td>
-      <td>6</td>
-      <td>Economy</td>
-      <td>True</td>
-      <td>2019-03-01</td>
-      <td>For this flight I was connecting from a flight...</td>
-      <td>For this flight I was connecting from a flight...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Bangkok Airways</td>
-      <td>9</td>
-      <td>Economy</td>
-      <td>True</td>
-      <td>2019-06-01</td>
-      <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
-      <td>Bangkok to Koh Samui. Easy Check-In, The Bangk...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Bangkok Airways</td>
-      <td>1</td>
-      <td>Economy</td>
-      <td>False</td>
-      <td>2021-11-01</td>
-      <td>I just want to thank Bangkok Airways for their...</td>
-      <td>I just want to thank Bangkok Airways for their...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Bangkok Airways</td>
-      <td>9</td>
-      <td>Economy</td>
-      <td>False</td>
-      <td>2020-04-01</td>
-      <td>I especially want to thank Khun Guy at Krabi A...</td>
-      <td>I especially want to thank Khun Guy at Krabi A...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Garuda Indonesia</td>
-      <td>1</td>
-      <td>Economy</td>
-      <td>True</td>
-      <td>2023-07-01</td>
-      <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
       <td>Flew on GA-682 Jakarta to Sorong. I was able t...</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Garuda Indonesia</td>
-      <td>9</td>
-      <td>Business</td>
-      <td>True</td>
-      <td>2020-01-01</td>
-      <td>Jakarta to Sorong. Check in was straight forwa...</td>
+      <td>9.0</td>
+      <td>NaN</td>
       <td>Jakarta to Sorong. Check in was straight forwa...</td>
     </tr>
     <tr>
       <th>6</th>
       <td>Garuda Indonesia</td>
-      <td>9</td>
-      <td>Business</td>
-      <td>True</td>
-      <td>2020-02-01</td>
-      <td>Flew Jakarta-Sorong on GA862 the overnight fli...</td>
+      <td>9.0</td>
+      <td>February 2020</td>
       <td>Flew Jakarta-Sorong on GA862 the overnight fli...</td>
     </tr>
     <tr>
       <th>7</th>
       <td>Philippine Airlines</td>
-      <td>8</td>
-      <td>Economy</td>
-      <td>True</td>
-      <td>2023-04-01</td>
-      <td>This was the second flight in 7 days with this...</td>
+      <td>8.0</td>
+      <td>April 2023</td>
       <td>This was the second flight in 7 days with this...</td>
     </tr>
     <tr>
       <th>8</th>
       <td>Philippine Airlines</td>
-      <td>7</td>
-      <td>Premium Economy</td>
-      <td>False</td>
-      <td>2023-01-01</td>
-      <td>Got Premium economy since they were the only a...</td>
+      <td>7.0</td>
+      <td>January 2023</td>
       <td>Got Premium economy since they were the only a...</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Philippine Airlines</td>
-      <td>1</td>
-      <td>Economy</td>
-      <td>True</td>
-      <td>2023-07-01</td>
-      <td>Miserable experience: very expensive, online b...</td>
+      <td>10.0</td>
+      <td>July 2023</td>
       <td>Miserable experience: very expensive, online b...</td>
     </tr>
   </tbody>

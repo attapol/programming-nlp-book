@@ -446,8 +446,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">โมเดลหัวข้อ (topic model)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -515,7 +516,7 @@ document.write(`
 </ul>
 </li>
 </ol>
-<p><span id="id3">[<a class="reference internal" href="#id26" title="Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12), 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf.">Petrov <em>et al.</em>, 2012</a>]</span></p>
+<p><span id="id3">[<a class="reference internal" href="#id27" title="Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12), 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf.">Petrov <em>et al.</em>, 2012</a>]</span></p>
 <p>ชุดป้ายระบุชนิดของคำสากลเป็นระบบการจำแนกชนิดของคำที่มีมาตรฐานเดียวกันทุกภาษา เพื่อให้การทำงานของโมเดลภาษาต่าง ๆ สามารถทำงานร่วมกันได้โดยสะดวกต่อการใช้โมเดลที่มีการใช้การถ่ายโอนข้ามภาษา (cross-lingual transfer) การใช้ชุดป้ายระบุชนิดของคำสากล จึงเป็นเครื่องมือที่สำคัญและได้รับความนิยมในการพัฒนาระบบประมวลผลภาษาธรรมชาติที่มีประสิทธิภาพ</p>
 </section>
 </section>
@@ -543,7 +544,7 @@ document.write(`
 </section>
 <section id="spacy">
 <h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี<a class="headerlink" href="#spacy" title="Permalink to this heading">#</a></h2>
-<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีโมเดลการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำโมเดลไปใช้จริง  <span id="id4">[<a class="reference internal" href="#id25" title="Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.">Honnibal and Montani, 2017</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี แต่ว่า spacy ยังไม่มีโมเดลในการประมวลผลภาษาไทย</p>
+<p>การติดป้ายชนิดของคำ และการตรวจจับเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีโมเดลการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำโมเดลไปใช้จริง  <span id="id4">[<a class="reference internal" href="#id26" title="Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.">Honnibal and Montani, 2017</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี แต่ว่า spacy ยังไม่มีโมเดลในการประมวลผลภาษาไทย</p>
 <p>ขั้นแรกต้องหาชื่อชุดโมเดลที่เราต้องการใช้ รายชื่อชุดโมเดลอยู่บนเว็บไซต์ของ spacy ซึ่งมีเอกสารประกอบการใช้งานที่เป็นปัจจุบันอยู่ โมเดลเหล่านี้ประกอบไปด้วยโมเดลย่อยหลาย ๆ โมเดลด้วยกัน เราสามารถตรวจสอบดูบนเว็บไซต์ได้ว่าโมเดลแต่ละชุดประกอบด้วยโมเดลอะไรบ้าง  ตัวอย่างเช่น สำหรับภาษาจีน มีชุดโมเดลที่มีโมเดลการแยกชนิดของคำได้อยู่สามโมเดลได้แก่ <code class="docutils literal notranslate"><span class="pre">zh_core_web_sm</span></code> (ขนาดเล็ก) <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> (ขนาดกลาง) และ  <code class="docutils literal notranslate"><span class="pre">zh_core_web_lg</span></code> (ขนาดใหญ่) ทั้งสามชุดในเวอร์ชันปี 2024 ประกอบไปด้วย 5 โมเดลย่อย ได้แก่ โมเดลการตัดคำ โมเดลการตัดประโยค โมเดลการวิเคราะห์โครงสร้างประโยค โมเดลการติดป้ายชนิดของคำ โมเดลการตรวจจับเอนทิตี</p>
 <p>หากเรายังไม่ได้ติดตั้งไลบรารี spacy เราสามารถติดตั้งโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacy</span></code> หลังจากนั้นเราสามารถดาวน์โหลดและติดตั้งโมเดลที่ต้องการได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spacy</span> <span class="pre">download</span></code> ตามด้วยชื่อโมเดลที่ต้องการดาวน์โหลดและติดตั้ง เช่น</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>zh_core_web_md
@@ -596,9 +597,9 @@ document.write(`
 <li><p>การประเมินความพึงพอใจของลูกค้าในบทวิจารณ์ออนไลน์:
 การวิเคราะห์อารมณ์ความรู้สึกสามารถแยกแยะได้ว่าอาจจะมีความรู้สึกเชิงบวกต่อผลิตภัณฑ์ แต่มีความรู้สึกเชิงลบต่อการบริการ ร้านอาหารสามารถใช้ข้อมูลนี้เพื่อปรับปรุงการบริการและรักษาคุณภาพอาหารให้ดีอยู่เสมอ</p></li>
 <li><p>การวิเคราะห์อารมณ์ความรู้สึกที่อยู่เอกสารทางการเงิน ทุก ๆ ปีบริษัทที่มีการซื้อขายหุ้นอยู่ในตลาดหลักทรัพย์ จะต้องเผยแพร่เอกสารรายงานผลประกอบการที่จะต้องพูดถึงบริษัทในหลากหลายด้าน เช่น เรื่องผลกำไรขาดทุน ความเสี่ยงในการประกอบธุรกิจ การควบรวมกับบริษัทอื่น การพัฒนากำลังคน หรือการเปลี่ยนแปลงในโครงสร้างบริษัท นักวิเคราะห์สามารถวิเคราะห์อารมณ์ความรู้สึกในเอกสารรายงานผลประกอบการ เพื่อให้ได้ดัชนีในการชีวัดว่าผู้เขียนมีความคิดเห็นในด้านบวก ลบ หรือกลางในด้านใดบ้างในปีที่ผ่านมา ซึ่งมีการศึกษามาว่าผลการวิเคราะห์ในลักษณะดังกล่าวมีความสัมพันธ์ร่วมกันกับผลตอบแทนเกินปกติ (abnormal return) ดังนั้นการวิเคราะห์อารมณ์ความรู้สึกจึงสามารถช่วยให้นักลงทุนหรือผู้บริหารบริษัทมีดัชนีชี้วัดเพิ่มอีกตัวหนึ่งที่ช่วยในการตัดสินใจลงทุนในสินทรัพย์ต่าง ๆ ได้อย่างมีประสิทธิภาพมากขึ้น</p></li>
-<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id5">[<a class="reference internal" href="#id27" title="Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In Proceedings of the International AAAI Conference on Web and Social Media, volume 15, 703–713. 2021.">Tachaiya <em>et al.</em>, 2021</a>]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่างๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
+<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id5">[<a class="reference internal" href="#id28" title="Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In Proceedings of the International AAAI Conference on Web and Social Media, volume 15, 703–713. 2021.">Tachaiya <em>et al.</em>, 2021</a>]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่างๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
 </ul>
-<p>การวิเคราะห์อารมณ์ความรู้สึกในเชิงปฏิบัติ คือ การแยกประเภทของข้อความว่าเป็นข้อความที่แสดงความเห็นในด้านบวก ด้านลบ หรือเป็นกลาง เราสามารถคิดว่าตัววิเคราะห์อารมณ์ความรู้สึก (sentiment analyzer) เป็นฟังก์ชันที่รับสตริงข้อความ และคืนค่าเป็นป้ายกำกับ (label) ที่บ่งบอกว่าข้อความนั้นเป็นเชิงบวก ลบ หรือเป็นกลาง โดยใช้เทคนิคการเรียนรู้ของเครื่อง ซึ่งสามารถทำได้ด้วยการใช้ชุดข้อมูลที่มีป้ายระบุความรู้สึกเช่นข้อความที่มีป้ายระบุว่าเป็นเชิงบวก ลบ หรือเป็นกลาง ในการสร้างโมเดลการเรียนรู้ของเครื่อง โดยใช้ข้อมูลเหล่านี้ในการเรียนรู้ว่าคุณลักษณะของข้อความที่เป็นเชิงบวก ลบ หรือกลาง คืออะไร และใช้คุณลักษณะเหล่านั้นในการจำแนกประเภทของข้อความใหม่ที่ยังไม่เคยเห็นมาก่อน หนึ่งในชุดข้อมูลที่ได้รับความนิยมมากในการนำมาสร้างตัววิเคราะห์อารมณ์ความรู้สึก คือ Sentiment Treebank  ซึ่งนำมาแสดงให้ดูเป็นตัวอย่างดังนี้ โดยเลือกเฉพาะตัวอย่างที่มีคำว่า <em>excellent</em> ซึ่งแปลว่ายอดเยี่ยมอยู่อย่างน้อย 1 จุด <span id="id6">[<a class="reference internal" href="#id28" title="Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing, 1631–1642. 2013.">Socher <em>et al.</em>, 2013</a>]</span></p>
+<p>การวิเคราะห์อารมณ์ความรู้สึกในเชิงปฏิบัติ คือ การแยกประเภทของข้อความว่าเป็นข้อความที่แสดงความเห็นในด้านบวก ด้านลบ หรือเป็นกลาง เราสามารถคิดว่าตัววิเคราะห์อารมณ์ความรู้สึก (sentiment analyzer) เป็นฟังก์ชันที่รับสตริงข้อความ และคืนค่าเป็นป้ายกำกับ (label) ที่บ่งบอกว่าข้อความนั้นเป็นเชิงบวก ลบ หรือเป็นกลาง โดยใช้เทคนิคการเรียนรู้ของเครื่อง ซึ่งสามารถทำได้ด้วยการใช้ชุดข้อมูลที่มีป้ายระบุความรู้สึกเช่นข้อความที่มีป้ายระบุว่าเป็นเชิงบวก ลบ หรือเป็นกลาง ในการสร้างโมเดลการเรียนรู้ของเครื่อง โดยใช้ข้อมูลเหล่านี้ในการเรียนรู้ว่าคุณลักษณะของข้อความที่เป็นเชิงบวก ลบ หรือกลาง คืออะไร และใช้คุณลักษณะเหล่านั้นในการจำแนกประเภทของข้อความใหม่ที่ยังไม่เคยเห็นมาก่อน หนึ่งในชุดข้อมูลที่ได้รับความนิยมมากในการนำมาสร้างตัววิเคราะห์อารมณ์ความรู้สึก คือ Sentiment Treebank  ซึ่งนำมาแสดงให้ดูเป็นตัวอย่างดังนี้ โดยเลือกเฉพาะตัวอย่างที่มีคำว่า <em>excellent</em> ซึ่งแปลว่ายอดเยี่ยมอยู่อย่างน้อย 1 จุด <span id="id6">[<a class="reference internal" href="#id29" title="Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing, 1631–1642. 2013.">Socher <em>et al.</em>, 2013</a>]</span></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -671,7 +672,7 @@ document.write(`
  <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Positive&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.5197721719741821</span><span class="p">}]</span>
 </pre></div>
 </div>
-<p>ข้อควรระวังอย่างหนึ่งของการวิเคราะห์อารมณ์ความรู้สึก คือการเลือกใช้โมเดลให้เหมาะสมกับขอบเขตเนื้อหา (domain) ของข้อมูลที่เราต้องการวิเคราะห์  ถ้าหากชุดข้อมูลที่ใช้พัฒนาโมเดลมีขอบเขตเนื้อหาที่ไม่ตรงกับ ขอบเขตเนื้อหาของข้อมูลที่เราต้องการวิเคราะห์ อาจจะทำให้ความแม่นยำลดลง หรือผลลัพธ์ที่ได้ไม่เป็นที่พอใจ สมมติว่าโมเดลการวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) ถูกพัฒนามาด้วยข้อมูลรีวิวภาพยนตร์ ซึ่งข้อมูลนี้มีลักษณะเฉพาะ เช่น คำศัพท์และรูปแบบการใช้ภาษาที่เกี่ยวข้องกับการรีวิวภาพยนตร์ หากเรานำโมเดลนี้ไปใช้วิเคราะห์ความคิดเห็นเกี่ยวกับการเงินการลงทุน  โมเดลก็จะมีความแม่นยำลดลง เพราะลักษณะทางภาษาหรือขอบเขตเนื้อหาของข้อมูลรีวิวสมาร์ทโฟนอาจมีความแตกต่างจากข้อมูลความเห็นเกี่ยวกับการเงินการลงทุน  เรียกอีกอย่างว่า ปัญหาการกระจายตัวแบบออกนอกขอบเขต (out-of-distribution) ซึ่งเป็นปัญหาที่สำคัญในการใช้โมเดลการเรียนรู้ของเครื่องในงานปัญญาประดิษฐ์ <span id="id7">[<a class="reference internal" href="#id29" title="Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. Transactions on Machine Learning Research, 2023.">Lang <em>et al.</em>, 2023</a>]</span></p>
+<p>ข้อควรระวังอย่างหนึ่งของการวิเคราะห์อารมณ์ความรู้สึก คือการเลือกใช้โมเดลให้เหมาะสมกับขอบเขตเนื้อหา (domain) ของข้อมูลที่เราต้องการวิเคราะห์  ถ้าหากชุดข้อมูลที่ใช้พัฒนาโมเดลมีขอบเขตเนื้อหาที่ไม่ตรงกับ ขอบเขตเนื้อหาของข้อมูลที่เราต้องการวิเคราะห์ อาจจะทำให้ความแม่นยำลดลง หรือผลลัพธ์ที่ได้ไม่เป็นที่พอใจ สมมติว่าโมเดลการวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) ถูกพัฒนามาด้วยข้อมูลรีวิวภาพยนตร์ ซึ่งข้อมูลนี้มีลักษณะเฉพาะ เช่น คำศัพท์และรูปแบบการใช้ภาษาที่เกี่ยวข้องกับการรีวิวภาพยนตร์ หากเรานำโมเดลนี้ไปใช้วิเคราะห์ความคิดเห็นเกี่ยวกับการเงินการลงทุน  โมเดลก็จะมีความแม่นยำลดลง เพราะลักษณะทางภาษาหรือขอบเขตเนื้อหาของข้อมูลรีวิวสมาร์ทโฟนอาจมีความแตกต่างจากข้อมูลความเห็นเกี่ยวกับการเงินการลงทุน  เรียกอีกอย่างว่า ปัญหาการกระจายตัวแบบออกนอกขอบเขต (out-of-distribution) ซึ่งเป็นปัญหาที่สำคัญในการใช้โมเดลการเรียนรู้ของเครื่องในงานปัญญาประดิษฐ์ <span id="id7">[<a class="reference internal" href="#id30" title="Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. Transactions on Machine Learning Research, 2023.">Lang <em>et al.</em>, 2023</a>]</span></p>
 <p>ในตัวอย่างการใช้ huggingface ข้างต้น เราได้ลองใช้โมเดลภาษาไทยสองตัวที่ถูกพัฒนาขึ้นมาจากชุดข้อมูลคนละขอบเขตกัน ตัวแรกสร้างขึ้นเพื่อใช้วิเคราะห์รีวิวและทวีต และโมเดลตัวที่สองสร้างขึ้นเพื่อใช้วิเคราะห์ข้อความที่ขอบเขตเนื้อหาคือการเงิน และผลประกอบการของบริษัท
 หากเราใช้โมเดลตัวแรกมาวิเคราะห์ข้อความที่พูดถึงเรื่องการเงิน จะได้ผลดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9173294305801392</span><span class="p">},</span>
@@ -691,36 +692,253 @@ document.write(`
 </section>
 <section id="topic-model">
 <h2>โมเดลหัวข้อ (topic model)<a class="headerlink" href="#topic-model" title="Permalink to this heading">#</a></h2>
-<p>โมเดลหัวข้อ (topic model) เป็นหนึ่งในโมเดลที่ใช้กันบ่อยในการวิเคราะห์หาหัวข้อที่อยู่ในชุดเอกสาร โดยโมเดลหัวข้อจะช่วยเราในการระบุและจัดกลุ่มข้อความที่มีเนื้อหาคล้ายคลึงกัน การทำงานของโมเดลหัวข้อนั้นคล้ายกับการวิเคราะห์ความถี่ของคำ (word frequency analysis) แต่มีการแยกหัวข้อให้เลย ทำให้เราสามารถมองเห็นภาพรวมของข้อมูลได้ชัดเจนขึ้น โมเดลหัวข้อที่ได้รับความนิยมและใช้กันอย่างแพร่หลายคือ Latent Dirichlet Allocation (LDA) ซึ่งเป็นเทคนิคที่ช่วยในการหาโครงสร้างแฝงของหัวข้อในชุดเอกสารโดยการวิเคราะห์ความน่าจะเป็นของการเกิดร่วมกันของคำในเอกสาร</p>
-<p>การใช้โมเดลหัวข้อ LDA นั้นไม่เพียงแต่ช่วยในการระบุหัวข้อหลักในเอกสาร แต่ยังช่วยในการจัดกลุ่มเอกสารที่มีเนื้อหาเกี่ยวข้องกันออกมาอย่างชัดเจน ตัวอย่างเช่น หากเรามีชุดเอกสารที่เกี่ยวกับข่าวต่างประเทศ โมเดล LDA อาจช่วยในการระบุหัวข้อเช่น “การเมือง”, “เศรษฐกิจ”, และ “กีฬา” ทำให้เราสามารถจัดหมวดหมู่ข้อมูลและวิเคราะห์เชิงลึกได้ง่ายขึ้น นอกจากนี้ โมเดลหัวข้อยังสามารถนำไปใช้ในงานต่างๆ เช่น การจัดหมวดหมู่บทความในเว็บไซต์ข่าว การวิเคราะห์เอกสารทางวิชาการเพื่อค้นหาประเด็นวิจัยสำคัญ และการประมวลผลข้อความจากโซเชียลมีเดียเพื่อหาแนวโน้มและความสนใจของผู้ใช้งาน เป็นต้น</p>
-<p>โมเดล LDA มีรายละเอียดทางคณิตศาสตร์ที่ซับซ้อน ซึ่งอยู่นอกเหนือขอบเขตของหนังสือเล่มนี้ <span id="id8">[<a class="reference internal" href="#id30" title="David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. Journal of machine Learning research, 3(Jan):993–1022, 2003.">Blei <em>et al.</em>, 2003</a>]</span> อย่างไรก็ตาม เราสามารถเข้าใจหลักการทำงานของ LDA ได้อย่างง่าย ๆ โดยไม่ต้องลงลึกในรายละเอียดสมการของ LDA มากนัก LDA ทำงานโดยการหาคำที่เกิดขึ้นร่วมกันบ่อย ๆ ในเอกสารเดียวกัน</p>
-<p>สมมติว่าชุดเอกสารที่เราวิเคราะห์มีทั้งข่าวการเมือง ข่าวเศรษฐกิจ และข่าวกีฬา ข่าวการเมืองมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับการเมือง เช่น นายกรัฐมนตรี รัฐบาล รัฐสภา และการเลือกตั้ง ข่าวเศรษฐกิจมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับเศรษฐกิจ เช่น ธุรกิจ การลงทุน และเศรษฐกิจ ข่าวกีฬามักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับกีฬา เช่น ฟุตบอล บาสเกตบอล โมเดล LDA จะตรวจหาคำที่เกิดร่วมกันบ่อย ๆ ในเอกสารเดียวกันเหล่านี้ รายการของคำเหล่านี้รวมกันเป็นหัวข้อ จากนั้นเราจะสามารถ จัดกลุ่มเอกสารโดยดูว่ามีเอกสารแต่ละเอกสารมีคำจากหัวข้อใดเป็นสัดส่วนเท่าไร ผลลัพธ์คือหัวข้อทั้งหมด และสัดส่วนของหัวข้อแต่ละหัวข้อในแต่ละเอกสาร</p>
-<p><em>under construction</em></p>
+<p>โมเดลหัวข้อ (topic model) เป็นหนึ่งในโมเดลที่เป็นที่นิยมในการวิเคราะห์หาหัวข้อที่อยู่ในชุดเอกสาร โดยโมเดลหัวข้อจะช่วยเราในการระบุและจัดกลุ่มข้อความที่มีเนื้อหาคล้ายคลึงกัน การทำงานของโมเดลหัวข้อนั้นคล้ายกับการวิเคราะห์ความถี่ของคำ (word frequency analysis) เพียงแต่ว่าเราไม่ต้องจัดคำที่ปรากฏบ่อยให้เป็นหมวดหมู่ด้วยตัวเอง โมเดลหัวข้อที่ได้รับความนิยมและใช้กันอย่างแพร่หลายคือ Latent Dirichlet Allocation (LDA) ซึ่งเป็นเทคนิคที่ช่วยในการหาหัวข้อทั้งหมดที่อยู่ในชุดเอกสารโดยการวิเคราะห์ความน่าจะเป็นของการเกิดร่วมกันของคำในเอกสาร นอกจากนั้นแล้วโมเดล LDA ยังช่วยในการระบุหัวข้อหลักในเอกสารแต่ละเอกสารอีกด้วย  ตัวอย่างเช่น หากเรามีชุดเอกสารที่เกี่ยวกับข่าวต่างประเทศ โมเดล LDA อาจช่วยในการระบุหัวข้อเช่น “การเมือง”, “เศรษฐกิจ”, และ “กีฬา” ทำให้เราสามารถจัดหมวดหมู่ข้อมูลและวิเคราะห์เชิงลึกได้ง่ายขึ้น นอกจากนี้ โมเดลหัวข้อยังสามารถนำไปใช้ในงานต่างๆ เช่น การจัดหมวดหมู่บทความในเว็บไซต์ข่าว การวิเคราะห์เอกสารทางวิชาการเพื่อค้นหาประเด็นวิจัยสำคัญ และการประมวลผลข้อความจากโซเชียลมีเดียเพื่อหาแนวโน้มและความสนใจของผู้ใช้งาน เป็นต้น</p>
+<p>โมเดล LDA มีรายละเอียดทางคณิตศาสตร์ที่ซับซ้อน ซึ่งอยู่นอกเหนือขอบเขตของหนังสือเล่มนี้ <span id="id8">[<a class="reference internal" href="#id31" title="David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. Journal of machine Learning research, 3(Jan):993–1022, 2003.">Blei <em>et al.</em>, 2003</a>]</span> อย่างไรก็ตาม เราสามารถเข้าใจหลักการทำงานของ LDA ได้อย่างง่าย ๆ โดยไม่ต้องลงลึกในรายละเอียดสมการของ LDA มากนัก LDA ทำงานโดยการหาคำที่เกิดขึ้นร่วมกันบ่อย ๆ ในเอกสารเดียวกัน สมมติว่าชุดเอกสารที่เราวิเคราะห์มีบทความข่าวทั้งหมด 10 ข่าว ซึ่งอาจจะประกอบไปด้วยข่าวการเมือง ข่าวเศรษฐกิจ และข่าวกีฬา แต่เราไม่ทราบมาก่อนเลยว่าข่าวทั้ง 10 ข่าวนี้จัดกลุ่มเป็นข่าวประเภทใดได้บ้าง แต่เราพอจะคาดเดาได้ว่าน่าจะมีสัก 3 ประเภทด้วยกัน</p>
+<p>ข้อสังเกตที่สำคัญที่ทำให้ LDA ทำงานได้อย่างมีประสิทธิภาพคือ เราสามารถจัดหัวข้อตามคีย์เวิร์ดได้ และคีย์เวิร์ดที่มาจากหัวข้อเดียวกันเหล่านี้มักพบเห็นพร้อมกันในเอกสารเดียวกัน เช่น  ข่าวการเมืองมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับการเมือง เช่น <em>นายกรัฐมนตรี รัฐบาล รัฐสภา เลือกตั้ง ประกาศ ลงมติ</em> และข่าวการเมืองหนึ่งข่าวมักจะใช้คำเหล่านี้หลาย ๆ คำในข่าวเดียวกัน  ข่าวเศรษฐกิจมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับเศรษฐกิจ เช่น <em>ธุรกิจ ชะลอตัว ลด การลงทุน ดอกเบี้ย อัตรา เศรษฐกิจ</em> ข่าวการเมืองก็อาจจะใช้คีย์เวิร์ดเหล่านี้บ้าง เพราะว่าข่าวการเมืองก็อาจจะพูดถึงเศรษฐกิจด้วย แต่ว่าไม่ใช่ข่าวการเมืองทุกข่าวจะพูดถึงเศรษฐกิจ เพราะเหตุนี้ผลนี้เอง โมเดล LDA จึงทำงานโดยการตรวจหาคำที่เกิดร่วมกันบ่อย ๆ ในเอกสารเดียวกัน และรวบรวมรายการของคำเหล่านี้รวมกันเป็นหัวข้อ เพราะฉะนั้น<em>หัวข้อ</em> ที่ได้จาก LDA คือรายการของคำและแต่ละคำมีค่าน้ำหนักบ่งบอกถึงความสำคัญ</p>
+<p>หากเราฝึกโมเดล LDA บนเอกสารที่เป็นข่าว 10 ข่าวและกำหนดให้แยกออกมาเป็น 3 หัว หัวข้อที่ได้ออกมาเป็นผลลัพท์อาจมีลักษณะดังนี้</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>หัวข้อ</p></th>
+<th class="head"><p>คีย์เวิร์ด</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p>นายกรัฐมนตรี</p></td>
+<td><p>รัฐบาล</p></td>
+<td><p>รัฐสภา</p></td>
+<td><p>ลงมติ</p></td>
+<td><p>กรรมการ</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>น้ำหนัก</p></td>
+<td><p>0.3</p></td>
+<td><p>0.2</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p>ธุรกิจ</p></td>
+<td><p>ชะลอตัว</p></td>
+<td><p>ลด</p></td>
+<td><p>การลงทุน</p></td>
+<td><p>ดอกเบี้ย</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>น้ำหนัก</p></td>
+<td><p>0.25</p></td>
+<td><p>0.2</p></td>
+<td><p>0.2</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p></p></td>
+<td><p>ฟุตบอล</p></td>
+<td><p>บาสเกตบอล</p></td>
+<td><p>กรรมการ</p></td>
+<td><p>ชนะ</p></td>
+<td><p>คะแนน</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>น้ำหนัก</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.05</p></td>
+<td><p>0.025</p></td>
+</tr>
+</tbody>
+</table>
+<p>หัวข้อที่ได้จาก LDA มักจะเรียกอีกอย่างหนึ่งว่าคำสำคัญของหัวข้อ (topic key) ซึ่งเราจะต้องอ่านและตีความว่าหัวข้อแต่ละหัวข้อเกี่ยวกับอะไรโดยการเชื่อมโยงหาธีมด้วยตัวเอง ตัวโมเดลเองไม่ได้ประกาศชัดเจนว่าหัวข้อที่ 1 2 หรือ 3 เกี่ยวกับอะไร จากตัวอย่างข้างต้นเราตีความว่าหัวข้อที่ 1 เกี่ยวกับการเมือง หัวข้อที่ 2 เกี่ยวกับเศรษฐกิจ และหัวข้อที่ 3 เกี่ยวกับกีฬา</p>
+<p>ในกระบวนการวิเคราะห์เดียวกัน LDA ยังจัดกลุ่มเอกสารโดยดูว่ามีเอกสารแต่ละเอกสารมีคำจากหัวข้อใดเป็นสัดส่วนเท่าไร ผลลัพธ์คือสัดส่วนของหัวข้อแต่ละหัวข้อในแต่ละเอกสาร ซึ่งเราจะเรียกว่าตาราง doc-topic เพราะว่าตารางผลลัพธ์จะมีเอกสารอยู่ที่แถวแต่ละแถว และมีหัวข้ออยู่ใน เช่น ถ้าหากเรามี 10 เอกสาร</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>เอกสาร</p></th>
+<th class="head"><p>หัวข้อ 1</p></th>
+<th class="head"><p>หัวข้อ 2</p></th>
+<th class="head"><p>หัวข้อ 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>0.1</p></td>
+<td><p>0.8</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>0.8</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>0.0</p></td>
+<td><p>0.05</p></td>
+<td><p>0.95</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.4</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>0.7</p></td>
+<td><p>0.3</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>0.1</p></td>
+<td><p>0.8</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>0.9</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>0.95</p></td>
+<td><p>0.025</p></td>
+<td><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>0.1</p></td>
+<td><p>0.9</p></td>
+<td><p>0.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>จากตัวอย่างผลลัพธ์ข้างต้น เอกสารที่ 3 5 7 และ 9 น่าจะเป็นข่าวการเมือง เนื่องจากมีสัดส่วนของหัวข้อ 1 มากที่สุด แต่เราสังเกตว่าเอกสารที่ 5 มีสัดส่วนของหัวข้อ 1 และ 2 พอ ๆ กัน ซึ่งอาจจะตีความได้ว่าเป็นเอกสารที่พูดถึงทั้งการเมืองและเศรษฐกิจ
+ส่วนเอกสารที่ 2 8 และ 10 น่าจะเป็นข่าวเศรษฐกิจ เนื่องจากมีสัดส่วนของหัวข้อ 2 มากที่สุด และเอกสารที่ 1 และ 4 น่าจะเป็นข่าวกีฬา เนื่องจากมีสัดส่วนของหัวข้อ 3 มากที่สุด</p>
+<p>สรุปแล้ว LDA ช่วยในการหาหัวข้อที่อยู่ในชุดเอกสาร และจัดกลุ่มเอกสารตามหัวข้อที่พบในเอกสารไปในคราวเดียวกัน โดยที่เราไม่ต้องระบุหัวข้อล่วงหน้า แต่เราต้องระบุจำนวนหัวข้อที่เราคิดว่าเหมาะสมกับชุดเอกสาร
+เมื่อฝึกโมเดลเสร็จแล้วเราสามารถตีความหัวข้อที่ได้จาก LDA ได้อย่างง่าย ๆ โดยการดูคีย์เวิร์ดที่เกี่ยวข้องกับหัวข้อนั้น และดูสัดส่วนของหัวข้อในแต่ละเอกสาร</p>
 </section>
-<section id="machine-translation">
-<h2>การแปลด้วยเครื่อง (machine translation)<a class="headerlink" href="#machine-translation" title="Permalink to this heading">#</a></h2>
-<p><em>under construction</em></p>
+<section id="gensim-lda">
+<h2>ไลบรารี gensim สำหรับการฝึกโมเดล LDA<a class="headerlink" href="#gensim-lda" title="Permalink to this heading">#</a></h2>
+<p>ไลบรารี gensim เป็นไลบรารีภาษาไพธอนที่เป็นที่นิยมมากสำหรับการใช้โมเดล LDA ไลบรารีนี้ทำให้การฝึกและใช้งานโมเดล LDA เป็นเรื่องง่ายและมีประสิทธิภาพ ไลบรารีนี้มีฟังก์ชันอำนวยความสะดวกในการเตรียมข้อมูลและการฝึกโมเดล gensim มีเครื่องมือที่ช่วยในการแปลงเอกสารให้เป็นเวกเตอร์และสร้างดิกชันนารีของคำ (dictionary) ซึ่งเป็นขั้นตอนที่สำคัญก่อนที่จะเริ่มฝึกโมเดล LDA นอกจากนี้ gensim ยังมีฟังก์ชันที่ช่วยในการปรับพารามิเตอร์ของโมเดลเพื่อให้ได้ผลลัพท์ที่ออกมามีประโยชน์ที่สุด</p>
+<p>ขั้นตอนแรกของการฝึกโมเดลคือการเปลี่ยนข้อมูลให้อยู่ในรูปของลิสต์ของเอกสาร ซึ่งเอกสารหนึ่งเอกสารจะต้องถูกเก็บอยู่ในรูปลิสต์ของคำที่ปราศจากคำหยุด เพราะฉะนั้นเราจะต้องทำการตัดคำ สมมติว่าเราต้องการวิเคราะห์ข้อมูลรีวิวสายการบิน ที่อยู่ในไฟล์ zip ที่มีชื่อไฟล์ว่า Airline_review.csv.zip ซึ่งมีคอลัมน์ <em>Review</em> ที่เก็บข้อมูลรีวิว ขั้นตอนแรกเราจะทำการอ่านข้อมูลจากไฟล์ zip และทำการตัดคำด้วยไลบรารี nltk และเก็บข้อมูลในรูปลิสต์ของคำ โดยเราจะใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean</span></code> ที่เราได้สร้างขึ้นมาเพื่อทำความสะอาดข้อมูล และการตัดคำ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+
+<span class="n">zip_file_path</span> <span class="o">=</span> <span class="s1">&#39;Airline_review.csv.zip&#39;</span>
+
+<span class="c1"># อ่าน csv ที่อยู่ในไฟล์ zip โดยที่ไม่ต้อง unzip ออกมาใส่เครื่องเพิ่ม</span>
+<span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">zip_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">zip_ref</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;Airline_review.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># ลบตัวเลขและเครื่องหมายวรรคตอน</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;[^a-zA-Z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="c1"># ตัดคำ</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1"># ต้องระบุคำหยุดใน stop_word_set ก่อน</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_word_set</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">words</span>
+
+<span class="n">reviews</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Review&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>โค้ดข้างต้นเรารันฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean</span></code> ลงไปบนคอลัมน์ <em>Review</em> ที่อยู่ในดาตาเฟรม และเก็บใส่ตัวแปรชื่อว่า <code class="docutils literal notranslate"><span class="pre">reviews</span></code> ซึ่งมีโครงสร้างเป็นลิสต์ของลิสต์ของสตริง (คำ) ข้อมูลที่อยู่ในรูปนี้เป็นรูปแบบที่พร้อมใช้งานกับไลบรารี gensim และเราสามารถนำไปใช้ในการฝึกโมเดล LDA ได้เลย</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># use gensim to create a dictionary and a corpus</span>
+<span class="kn">from</span> <span class="nn">gensim</span> <span class="kn">import</span> <span class="n">corpora</span><span class="p">,</span> <span class="n">models</span>
+
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">reviews</span><span class="p">)</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">review</span><span class="p">)</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">]</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> 
+                            <span class="n">passes</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">eta</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>  <span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ในโค้ดข้างต้นเราใช้คลาส <code class="docutils literal notranslate"><span class="pre">gensim.corpora.Dictionary</span></code> ในการสร้างดิกชันนารีของคำ และใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">doc2bow</span></code> ในการแปลงข้อมูลให้อยู่ในรูปของลิสต์ของตัวเลข และเก็บใส่ตัวแปร <code class="docutils literal notranslate"><span class="pre">corpus</span></code> ซึ่งเป็นลิสต์ของลิสต์ของตัวเลข หลังจากนั้นเราใช้คลาส <code class="docutils literal notranslate"><span class="pre">gensim.models.LdaModel</span></code> ในการฝึกโมเดล LDA พารามิเตอร์ที่สำคัญที่สุดคือ จำนวนหัวข้อ (<code class="docutils literal notranslate"><span class="pre">num_topics</span></code>) ที่เราต้องการให้โมเดลหา ส่วนพารามิเตอร์อื่น ๆ ที่เกี่ยวข้องกับการฝึกโมเดลสามารถตั้งตามที่เห็นตัวอย่างได้เลย เช่น จำนวนรอบการฝึก (<code class="docutils literal notranslate"><span class="pre">passes</span></code>) เป็น 5 และการกำหนดค่าพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">alpha</span></code> และ <code class="docutils literal notranslate"><span class="pre">eta</span></code> โดยเราสามารถใช้ค่า <code class="docutils literal notranslate"><span class="pre">auto</span></code>  ส่วน <code class="docutils literal notranslate"><span class="pre">random_state</span></code> สามารถตั้งค่าเป็นอะไรก็ได้ การฝึกโมเดล LDA มีการต้องสุ่มค่าเริ่มต้นการฝึก เพราะฉะนั้นหากเราฝึกโมเดลใหม่อีกครั้งโดยใช้ค่า <code class="docutils literal notranslate"><span class="pre">random_state</span></code> เดียวกันก็จะได้ผลออกมาเหมือนเดิมทุกอย่าง หากไม่ระบุเลยแล้วกดรันอีกครั้งหนึ่งผลจะออกมาแตกต่าง</p>
+<p>หลังจากฝึกโมเดลเสร็จเราสามารถดูหัวข้อที่ได้จากโมเดลได้ด้วยเมท็อด <code class="docutils literal notranslate"><span class="pre">show_topic</span></code> ซึ่งจะคืนค่าเป็นลิสต์ของทูเปิล (คำ, ค่าน้ำหนัก) เรียงลำดับตั้งแต่มากไปน้อย ตัวอย่างเช่น หากเราเรียก <code class="docutils literal notranslate"><span class="pre">lda_model.show_topic(0)</span></code> จะได้ผลลัพธ์ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;flight&#39;</span><span class="p">,</span> <span class="mf">0.035730693</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="mf">0.017981019</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;food&#39;</span><span class="p">,</span> <span class="mf">0.016260142</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;crew&#39;</span><span class="p">,</span> <span class="mf">0.016218152</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;service&#39;</span><span class="p">,</span> <span class="mf">0.01401287</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;cabin&#39;</span><span class="p">,</span> <span class="mf">0.013283503</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mf">0.011989626</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;seats&#39;</span><span class="p">,</span> <span class="mf">0.00853041</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;friendly&#39;</span><span class="p">,</span> <span class="mf">0.008275962</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;staff&#39;</span><span class="p">,</span> <span class="mf">0.00817701</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>หากต้องการดูทุกหัวข้อโดยดูเฉพาะคำที่มีค่าน้ำหนักสูงสุด 10 คำแรก gensim ไม่ได้มีเมท็อดที่แสดงผลออกมาให้ดูง่าย เราจึงต้องเขียนลูปดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lda_model</span><span class="o">.</span><span class="n">num_topics</span><span class="p">):</span>
+    <span class="n">keyword_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">show_topic</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;หัวข้อ </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">keyword_list</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพธ์ที่ได้จะมีลักษณะดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">หัวข้อ</span> <span class="mi">0</span><span class="p">:</span> <span class="n">flight</span> <span class="n">good</span> <span class="n">food</span> <span class="n">crew</span> <span class="n">service</span> <span class="n">cabin</span> <span class="n">time</span> <span class="n">seats</span> <span class="n">friendly</span> <span class="n">staff</span>
+<span class="n">หัวข้อ</span> <span class="mi">1</span><span class="p">:</span> <span class="n">luggage</span> <span class="n">bag</span> <span class="n">baggage</span> <span class="n">pay</span> <span class="n">kg</span> <span class="n">extra</span> <span class="n">carry</span> <span class="n">bags</span> <span class="n">checked</span> <span class="n">wow</span>
+<span class="n">หัวข้อ</span> <span class="mi">2</span><span class="p">:</span> <span class="n">de</span> <span class="n">la</span> <span class="n">que</span> <span class="n">volotea</span> <span class="n">el</span> <span class="n">en</span> <span class="n">las</span> <span class="n">con</span> <span class="n">por</span> <span class="n">un</span>
+<span class="n">หัวข้อ</span> <span class="mi">3</span><span class="p">:</span> <span class="n">airline</span> <span class="n">air</span> <span class="n">flights</span> <span class="n">airlines</span> <span class="n">service</span> <span class="n">fly</span> <span class="n">time</span> <span class="n">like</span> <span class="n">flying</span> <span class="n">low</span>
+<span class="n">หัวข้อ</span> <span class="mi">4</span><span class="p">:</span> <span class="n">seat</span> <span class="n">seats</span> <span class="n">extra</span> <span class="n">flight</span> <span class="n">row</span> <span class="n">paid</span> <span class="n">get</span> <span class="n">front</span> <span class="n">plane</span> <span class="n">back</span>
+<span class="n">หัวข้อ</span> <span class="mi">5</span><span class="p">:</span> <span class="n">luggage</span> <span class="n">baggage</span> <span class="n">lost</span> <span class="n">bag</span> <span class="n">bags</span> <span class="n">claim</span> <span class="n">days</span> <span class="n">manila</span> <span class="n">arrived</span> <span class="n">suitcase</span>
+<span class="n">หัวข้อ</span> <span class="mi">6</span><span class="p">:</span> <span class="n">ticket</span> <span class="n">pay</span> <span class="n">check</span> <span class="n">service</span> <span class="n">online</span> <span class="n">customer</span> <span class="n">airline</span> <span class="n">website</span> <span class="n">said</span> <span class="n">told</span>
+<span class="n">หัวข้อ</span> <span class="mi">7</span><span class="p">:</span> <span class="n">johannesburg</span> <span class="n">china</span> <span class="n">kuala</span> <span class="n">lumpur</span> <span class="n">test</span> <span class="n">town</span> <span class="n">cape</span> <span class="n">klm</span> <span class="n">chinese</span> <span class="n">shanghai</span>
+<span class="n">หัวข้อ</span> <span class="mi">8</span><span class="p">:</span> <span class="n">flight</span> <span class="n">us</span> <span class="n">plane</span> <span class="n">airport</span> <span class="n">boarding</span> <span class="n">staff</span> <span class="n">time</span> <span class="n">gate</span> <span class="n">passengers</span> <span class="n">minutes</span>
+<span class="n">หัวข้อ</span> <span class="mi">9</span><span class="p">:</span> <span class="n">flight</span> <span class="n">airline</span> <span class="n">hours</span> <span class="n">get</span> <span class="n">us</span> <span class="n">service</span> <span class="n">customer</span> <span class="n">day</span> <span class="n">time</span> <span class="n">would</span>
+</pre></div>
+</div>
+<p>จากนั้นเราต้องนำหัวข้อแต่ละหัวข้อมาตีความต่อ</p>
+<ul class="simple">
+<li><p>หัวข้อ 0: บริการบนเครื่องบิน</p></li>
+<li><p>หัวข้อ 1: การจ่ายค่าบริการเกี่ยวกับน้ำหนักกระเป๋าที่สามารถนำขึ้นเครื่องได้</p></li>
+<li><p>หัวข้อ 2: เป็นคำศัพท์ภาษาสเปนที่ส่วนใหญ่เป็นคำหยุด ทำให้เห็นว่าข้อมูลเราอาจจะมีข้อมูลที่ไม่เป็นภาษาสเปนติดมาด้วย เราควรจะกลับไปกรองออกก่อนให้เรียบร้อย</p></li>
+<li><p>หัวข้อ 3: บริการของสายการบิน</p></li>
+<li><p>หัวข้อ 4: ที่นั่งบนเครื่องบิน</p></li>
+<li><p>หัวข้อ 5: การสูญหายของกระเป๋า</p></li>
+<li><p>หัวข้อ 6: การซื้อตั๋วและการบริการลูกค้าออนไลน์ ผ่านหน้าเว็บไซต์</p></li>
+<li><p>หัวข้อ 7: สถานที่เป็นปลายทางการบิน</p></li>
+<li><p>หัวข้อ 8: ประสบการณ์การเช็คอินและขึ้นเครื่อง</p></li>
+<li><p>หัวข้อ 9: ระยะเวลาที่แผนกบริการลูกค้าใช้ในการตอบกลับลูกค้า</p></li>
+</ul>
+<p>ถ้าหากว่าผลลัพท์ออกมาไม่ดีเท่าทีควร มีทางแก้อยู่สองทางด้วยกัน</p>
+<ol class="arabic simple">
+<li><p>ลองเปลี่ยนจำนวนหัวข้อ ถ้าจำนวนหัวข้อมากเกินไป เราจะพบเห็นหัวข้อที่ซ้ำ ๆ กัน ถ้าจำนวนหัวข้อน้อยเกินไป เราจะพบเห็นหัวที่มีคำที่ไม่เกี่ยวข้องกันอยู่ด้วย ดังนั้นเราควรจะลองเปลี่ยนจำนวนหัวข้อใหม่อีกครั้ง</p></li>
+<li><p>ทำความสะอาดข้อมูลให้ดีขึ้น หากเจอคำที่เกิดขึ้นในหลาย ๆ หัวข้อที่ไม่ได้มีประโยชน์ในการตีความ ทำความเข้าใจหัวข้อ อาจจะสกัดเอาคำเหล่านั้นออกไป เช่น ในตัวอย่างข้างต้น เราอาจจะเอาคำว่า <em>flight</em> และ <em>flights</em> ออกไปเนื่องจาก เราทราบอยู่แล้วว่าข้อมูลเกี่ยวกับสายการบิน คำว่า <em>flight</em> ย่อมปรากฏอยู่ในทุกรีวิว และไม่มีประโยชน์ในการตีความหัวข้อ</p></li>
+</ol>
 </section>
 <section id="id9">
-<h2>อ้างอิง<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id10">
+<h2>สรุป<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>ในบทนี้เราเรียนรู้เทคนิควิธีการประมวลผลภาษาธรรมชาติที่ถูกใช้บ่อย ได้แก่ การแท็กชนิดของคำ การตรวจจับเอนทิตี การวิเคราะห์อารมณ์ความรู้สึก การวิเคราะห์หัวข้อที่ปรากฏในชุดเอกสาร ในปัจจุบันมีไลบรารีที่สามารถดึงโมเดลต่าง ๆ ลงมาใช้ในภาษาไพธอนได้สะดวก เนื่องจากมีซอฟต์แวร์ที่เป็นโอเพนซอร์สมากมายที่ได้รับการพัฒนาอย่างต่อเนื่อง ทำให้สามารถทำการประมวลผลภาษาธรรมชาติได้ง่ายขึ้น หรือสามารถเทรนโมเดลบนชุดข้อมูลของเราเองอย่างการทำโมเดลหัวข้อ</p>
+</section>
+<section id="id10">
+<h2>อ้างอิง<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id11">
 <dl class="citation">
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id8">1</a></span></dt>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id8">1</a></span></dt>
 <dd><p>David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. <em>Journal of machine Learning research</em>, 3(Jan):993–1022, 2003.</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.</p>
 </dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
 <dd><p>Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. <em>Transactions on Machine Learning Research</em>, 2023.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
 <dd><p>Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, <em>Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</em>, 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: <a class="reference external" href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf</a>.</p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
 <dd><p>Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In <em>Proceedings of the 2013 conference on empirical methods in natural language processing</em>, 1631–1642. 2013.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id5">6</a></span></dt>
 <dd><p>Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In <em>Proceedings of the International AAAI Conference on Web and Social Media</em>, volume 15, 703–713. 2021.</p>
 </dd>
 </dl>
@@ -804,8 +1022,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">โมเดลหัวข้อ (topic model)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-translation">การแปลด้วยเครื่อง (machine translation)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">อ้างอิง</a></li>
 </ul>
   </nav></div>
 
