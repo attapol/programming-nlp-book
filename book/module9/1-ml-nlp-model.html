@@ -227,7 +227,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">แบบจำลองภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">Large language model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -443,7 +443,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">โมเดลหัวข้อ (topic model)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
@@ -586,8 +586,8 @@ document.write(`
 <p>จากข้อความตัวอย่างที่ป้อนเข้าไป ตัวประมวลผลตรวจจับชื่อเอนทิตีที่เป็นบุคคลทั้งหมดสองชื่อ ได้แก่  张伟 (จางเหว่ย) และ 李娜 (หลีน่า) และเอนทิตีแบบภูมิรัฐศาสตร์ (GPE ซึ่งย่อมาจาก geopolitical entity) หนึ่งชื่อซึ่งก้คือ 上海 (เมืองเซี่ยงไฮ้)</p>
 </section>
 <section id="sentiment-analysis">
-<h2>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h2>
-<p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) คือกระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านการประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ที่ใช้งานระบบ หรือผู้บริโภคที่มีต่อผลิตภัณฑ์ บริการ รวมถึงการประเมินความคิดเห็นของบุคคลทั่วไปที่มีต่อเหตุการณ์ต่าง ๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง การวิเคราะห์อารมณ์ความรู้สึกนับว่าเป็นการประยุกต์ใช้การประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดชนิดหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
+<h2>การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h2>
+<p>การวิเคราะห์อารมณ์ความรู้สึก คือกระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านการประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ที่ใช้งานระบบ หรือผู้บริโภคที่มีต่อผลิตภัณฑ์ บริการ รวมถึงการประเมินความคิดเห็นของบุคคลทั่วไปที่มีต่อเหตุการณ์ต่าง ๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง การวิเคราะห์อารมณ์ความรู้สึกนับว่าเป็นการประยุกต์ใช้การประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดชนิดหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</p>
@@ -909,7 +909,7 @@ document.write(`
 <li><p>หัวข้อ 8: ประสบการณ์การเช็คอินและขึ้นเครื่อง</p></li>
 <li><p>หัวข้อ 9: ระยะเวลาที่แผนกบริการลูกค้าใช้ในการตอบกลับลูกค้า</p></li>
 </ul>
-<p>ถ้าหากว่าผลลัพท์ออกมาไม่ดีเท่าทีควร มีทางแก้อยู่สองทางด้วยกัน</p>
+<p>ถ้าหากว่าผลลัพธ์ออกมาไม่ดีเท่าทีควร มีทางแก้อยู่สองทางด้วยกัน</p>
 <ol class="arabic simple">
 <li><p>ลองเปลี่ยนจำนวนหัวข้อ ถ้าจำนวนหัวข้อมากเกินไป เราจะพบเห็นหัวข้อที่ซ้ำ ๆ กัน ถ้าจำนวนหัวข้อน้อยเกินไป เราจะพบเห็นหัวที่มีคำที่ไม่เกี่ยวข้องกันอยู่ด้วย ดังนั้นเราควรจะลองเปลี่ยนจำนวนหัวข้อใหม่อีกครั้ง</p></li>
 <li><p>ทำความสะอาดข้อมูลให้ดีขึ้น หากเจอคำที่เกิดขึ้นในหลาย ๆ หัวข้อที่ไม่ได้มีประโยชน์ในการตีความ ทำความเข้าใจหัวข้อ อาจจะสกัดเอาคำเหล่านั้นออกไป เช่น ในตัวอย่างข้างต้น เราอาจจะเอาคำว่า <em>flight</em> และ <em>flights</em> ออกไปเนื่องจาก เราทราบอยู่แล้วว่าข้อมูลเกี่ยวกับสายการบิน คำว่า <em>flight</em> ย่อมปรากฏอยู่ในทุกรีวิว และไม่มีประโยชน์ในการตีความหัวข้อ</p></li>
@@ -917,7 +917,7 @@ document.write(`
 </section>
 <section id="id9">
 <h2>สรุป<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<p>ในบทนี้เราเรียนรู้เทคนิควิธีการประมวลผลภาษาธรรมชาติที่ถูกใช้บ่อย ได้แก่ การแท็กชนิดของคำ การตรวจจับเอนทิตี การวิเคราะห์อารมณ์ความรู้สึก การวิเคราะห์หัวข้อที่ปรากฏในชุดเอกสาร ในปัจจุบันมีไลบรารีที่สามารถดึงโมเดลต่าง ๆ ลงมาใช้ในภาษาไพธอนได้สะดวก เนื่องจากมีซอฟต์แวร์ที่เป็นโอเพนซอร์สมากมายที่ได้รับการพัฒนาอย่างต่อเนื่อง ทำให้สามารถทำการประมวลผลภาษาธรรมชาติได้ง่ายขึ้น หรือสามารถเทรนโมเดลบนชุดข้อมูลของเราเองอย่างการทำโมเดลหัวข้อ</p>
+<p>ในบทนี้เราเรียนรู้เทคนิควิธีการประมวลผลภาษาธรรมชาติที่ใช้บ่อย ๆ ได้แก่ การแท็กชนิดของคำ การตรวจจับเอนทิตี การวิเคราะห์อารมณ์ความรู้สึก การวิเคราะห์หัวข้อที่ปรากฏในชุดเอกสาร ในปัจจุบันมีไลบรารีที่สามารถดึงโมเดลต่าง ๆ ลงมาใช้ในภาษาไพธอนได้สะดวก เนื่องจากมีซอฟต์แวร์ที่เป็นโอเพนซอร์สมากมายที่ได้รับการพัฒนาอย่างต่อเนื่อง ทำให้สามารถทำการประมวลผลภาษาธรรมชาติได้ง่ายขึ้น หรือสามารถเทรนโมเดลบนชุดข้อมูลของเราเองอย่างการทำโมเดลหัวข้อ</p>
 </section>
 <section id="id10">
 <h2>อ้างอิง<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
@@ -1019,7 +1019,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entity-recognition">การตรวจจับเอนทิตี (Named Entity Recognition)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการตรวจจับเอนทิตี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-model">โมเดลหัวข้อ (topic model)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
