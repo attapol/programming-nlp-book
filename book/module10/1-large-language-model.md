@@ -1007,28 +1007,227 @@ Final Score: 3
 
 โมเดลทำงานตามที่กำหนดไว้ในพรอมต์ และได้คำตอบสุดท้ายออกมาต่างกันกับพรอมต์แบบไม่ได้คิดเป็นขั้นตอน โดยคะแนนที่ได้จากการใช้พรอมต์แบบคิดเป็นลำดับมีความแม่นยำมากกว่า และมีความเชื่อถือได้มากกว่า ดังนั้นการใช้พรอมต์แบบคิดเป็นลำดับเป็นวิธีที่ดีในการเพิ่มความแม่นยำของโมเดล
 
-## การแปลงให้เป็น agent 
 
+## ตัวอย่างการใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ
 
-## การใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ
+เทคนิคการเขียนพรอมต์ทำให้เราสามารถปรับใช้โมเดลภาษาขนาดใหญ่ไปใช้ได้อย่างหลากหลาย ทำให้เหมือนกับว่าเราสามารถสร้างโปรแกรมคอมพิวเตอร์ใหม่ขึ้นมาเพียงแค่เขียนพรอมต์ที่รายละเอียดครบถ้วน และเหมาะสมกับกับงานที่ต้องการนำไปใช้ จุดเด่นอีกประการหนึ่งของโมเดลภาษาขนาดใหญ่ คือ เป็นโมเดลที่มีความรู้ ความเข้าใจในการใช้ภาษามาก สามารถทำความเข้าใจข้อความที่ซับซ้อนได้ และตอบโจทย์งานทางด้านภาษาได้อย่างดี เช่น การวิเคราะห์อารมณ์ความรู้สึก การสรุปความ การแก้ไขข้อผิดพลาดทางไวยากรณ์ การถอดความ (paraphrasing) และการแปลภาษา งานทางภาษาที่ได้ยกตัวอย่างมาทั้งหมดนี้เป็นงานที่ความท้าทายมากในการประมวลผลภาษาธรรมชาติ ระบบที่ดีที่สุดมักจะต้องอาศัยคลังข้อมูลที่ออกแบบเพื่องานนี้โดยเฉพาะ และสร้างโมเดลแยกสำหรับแต่ละงาน แต่ว่าโมเดลภาษาขนาดใหญ่สามารถทำงานเหล่านี้เพียงเขียนพรอมต์ที่เหมาะสม คุณภาพของงานที่ได้จากการใช้โมเดลภาษาขนาดใหญ่นี้จะลดหล่นกันไปขึ้นอยู่กับยากง่ายของงาน และโดยทั่วไปแล้วโมเดลที่สร้างขึ้นมาเจาะจงกับงานโดยเฉพาะยังคงเป็นโมเดลทันสมัย (state-of-the-art model) หรือโมเดลที่มีคุณภาพสูงสุดเท่าที่นักวิทยาศาสตร์ได้ค้นพบกันมา 
+
+ในส่วนสุดท้ายในบทนี้เราจะรวบรวมตัวอย่างพรอมต์ที่ใช้ในการทำงานด้านการประมวลผลภาษาธรรมชาติ แต่ละตัวอย่างสามารถนำไปปรับเพิ่มเติมเพื่อให้เข้ากับกรณีการใช้งานของเราได้
 
 ### การวิเคราะห์อารมณ์ความรู้สึก
 
+การวิเคราะห์อารมณ์ความรู้สึกจัดเป็นงานที่ค่อนข้างท้าทาย เนื่องจากมนุษย์สามารถแสดงออกถึงอารมณ์ความรู้สึกออกมาทางภาษาได้หลายรูปแบบ การวิเคราะห์อารมณ์ความรู้สึกผ่านภาษาต้องใช้อาศัยการวิเคราะห์ตั้งแต่ระดับคำ ระดับกลุ่มคำ ไล่ไปถึงระดับบริบทของบทสนทนา โมเดลภาษาขนาดใหญ่เป็นโมเดลที่สามารถทำความเข้าใจภาษาในระดับเหนือประโยคได้ที่สุดในขณะนี้ ทำให้ความสามารถในการวิเคราะห์อารมณ์ความรู้สึกเป็นงานที่โมเดลภาษาขนาดใหญ่ทำได้ดีระดับหนึ่ง ถึงแม้จะยังไม่ดีเท่าระบบอื่น ๆ ที่สร้างมาเพื่อวิเคราะห์อารมณ์ความรู้สึกโดยเฉพาะ 
+
+ตัวอย่างพรอมต์ในการวิเคราะห์อารมณ์ความรู้สึกสามารถเขียนแบบตรงไปตรงมาได้ดังนี้
+
+```python
+def analyze_sentiment(text):
+    sentiment_analysis_prompt = f"""
+    Analyze the sentiment of the text delimited by <text> and </text> tags. 
+    The sentiment must be one of the following: positive, negative, or neutral.
+
+    {text}
+
+    Output must be json with keys:
+        reason: the reason for the sentiment
+        sentiment: the sentiment label
+    """
+    messages = [
+            {"role": "user", "content": sentiment_analysis_prompt}
+        ]
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={ "type": "json_object" }
+    )
+    json_response = json.loads(response.choices[0].message.content)
+    return json_response
+
+sentiment = analyze_sentiment("บริษัทจะต้องเน้นการสร้างความเชื่อมั่นให้กับลูกค้าให้มากขึ้น")
+```
+
 ### การสรุปความ
+
+ตัวอย่างพรอมต์ในการสรุปความจากบทสนทนาที่ได้มาจากโปรแกรมการตอบโต้สนทนาในบริษัท [^dialog] พร้อมทั้งสรุปว่าจากบทสนทนามีเรื่องอะไรที่จะต้องดำเนินการต่ออีกบ้าง
+    
+[^dialog]: บทสนทนานำมาจาก https://console.cloud.google.com/vertex-ai/generative/prompt-gallery
+
+```python
+def summarize_dialog(dialog):
+    summarize_prompt = f"""
+    Summarize the dialog delimited by <dialog>. 
+    The dialog is taken from a company chatroom.
+    The summary must be no more than 3 sentences.
+    <dialog> {dialog} </dialog>
+
+    Output must be in JSON with keys: 
+        'summary'
+        'action' tell the action that needs to be taken
+        'th_summary' translate summary to Thai        
+    """
+    messages = [
+        {"role": "user", "content": summarize_prompt}
+    ]
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={ "type": "json_object" }
+    )
+    json_response = json.loads(response.choices[0].message.content)
+    return json_response
+
+dialog = """
+Alice: Hey, Bob, what are some of your ideas for the team morale event?
+Bob: Everyone seemed to enjoy the potluck and board game that we did last time.
+Alice: I think so too.
+Bob: Maybe we can do something similar but at a different location?
+Alice: That sounds good. Where did you have in mind?
+Bob: I was thinking we could reserve the picnic area at Sunset Beach Park.
+Alice: Good idea. In addition to board games, we could also bring a frisbee and volleyball for the beach.
+Bob: Perfect! Let me make the reservation now.
+"""
+summary = summarize_dialog(dialog)
+print(summary)
+```
+
+ผลลัพท์ออกมาเป็นดิกชันนารีที่เก็บข้อมูลอยู่สามชิ้น ได้แก่ 
+
+1. บทสรุป `summary['summary']`
+> Alice and Bob discuss ideas for a team morale event, recalling a successful potluck and board game gathering. Bob suggests using a different location, specifically the picnic area at Sunset Beach Park, to host a similar event. They agree to incorporate additional activities like frisbee and volleyball, and Bob will handle the reservation.
+
+2. เรื่องที่ต้องดำเนินการต่อ `summary['action']`
+> Bob will make the reservation for the picnic area at Sunset Beach Park.
+
+3. บทสรุปเป็นภาษาไทย `summary['th_summary']`
+> อลิซและบ็อบพูดคุยเกี่ยวกับไอเดียในการจัดงานส่งเสริมบรรยากาศในทีม โดยนึกถึงการจัดปาร์ตี้อาหารและเล่นบอร์ดเกมที่ประสบความสำเร็จในครั้งก่อน บ็อบแนะนำให้ใช้สถานที่ที่แตกต่างออกไป โดยเฉพาะบริเวณปิกนิกที่สวนสาธารณะซันเซ็ตบีช เพื่อจัดงานที่คล้ายกัน ทั้งสองเห็นด้วยที่จะเพิ่มกิจกรรมเพิ่มเติม เช่น เกมส์ฟริสบี้และวอลเลย์บอล และบ็อบจะรับผิดชอบในการจองสถานที่
 
 ### การแก้ไขข้อผิดพลาดทางไวยากรณ์
 
+โมเดลภาษาขนาดใหญ่ได้ดูดซับไวยากรณ์ของภาษาผ่านการเรียนรู้สถิติของคำและ โครงสร้างประโยคจากตัวอย่างประโยคจำนวนมหาศาล ทำให้การแก้ไขข้อผิดพลาดทางไวยากรณ์เป็นไปได้อย่างไม่ยากนัก เราสามารถเขียนพรอมต์แบบง่าย ๆ เพื่อสร้างเครื่องตรวจแก้ภาษาได้ดังนี้
+
+```python
+def correct_grammatical_errors(text):
+    gec_prompt = f"""
+    Correct the grammatical errors in the text below. Output the corrected text
+
+    {text}
+    """
+    messages = [
+            {"role": "user", "content": gec_prompt}
+        ]
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages
+    )
+    return response.choices[0].message.content
+
+corrected = correct_grammatical_errors("After meeting over, the staffs had to returned to work promptly. Other meeting attendees go to the airport.")
+print(corrected)
+```
+
+สิ่งที่แสดงผลบนหน้าจอคือ
+
+> After the meeting was over, the staff had to return to work promptly. Other meeting attendees went to the airport.
+
+หรือถ้าหากต้องการให้คำนิยามให้ชัดเจนขึ้นว่าอยากให้เครื่องตรวจับข้อผิดพลาดทางไวยากรณ์ประเภทใดบ้าง ต้องการให้แก้ตัวสะกด และเครื่องหมายวรรคด้วยหรือไม่ เราอาจจะใช้พรอมต์ที่กล่าวถึงรายละเอียดดังกล่าว ตัวอย่างเช่น [^gec] 
+
+[^gec]: ตัวอย่างพรอมต์จาก https://docs.anthropic.com/en/prompt-library/grammar-genie
+
+
+> Your task is to take the text provided and rewrite it into a clear, grammatically correct version while preserving the original meaning as closely as possible. Correct any spelling mistakes, punctuation errors, verb tense issues, word choice problems, and other grammatical mistakes.
+
+
 ### การถอดความ
+
+การถอดความ คือ การนำข้อความหนึ่งมาเขียนใหม่ในลักษณะที่ยังคงความหมายเดิมแต่ใช้ถ้อยคำและโครงสร้างประโยคที่ต่างออกไป การถอดความเป็นงานที่สำคัญในงานการประมวลผลภาษาธรรมชาติ  เนื่องจากช่วยให้สามารถนำเสนอข้อมูลเดิมได้ในรูปแบบที่หลากหลายมากขึ้น ความท้าทายของงานนี้คือเราต้องมั่นใจว่าข้อความใหม่ที่สร้างขึ้นนั้นยังคงสื่อความหมายตรงตามต้นฉบับโดยไม่เกิดการบิดเบือน นอกจากนี้การเลือกใช้คำและโครงสร้างประโยคที่เหมาะสมเพื่อให้เหมาะสมกับระดับภาษาที่ต้องการทำให้งานนี้ต้องการความละเอียดอ่อน เช่น การถอดความให้เป็นภาษาราชการ หรือการถอดความให้เป็นภาษาที่เข้าใจง่าย 
+
+สมมติว่าเราต้องการถอดความให้เป็นย่อหน้าเพื่อสำหรับใช้เป็นส่วนหนึ่งของบทความวิชาการ 
+
+```python
+def academify(text):
+    academify_prompt = f"""
+Act as a computer science professor. 
+
+First, turn the paragraph below into a paragraph for an academic journal manuscript. The language must be academic English. Use strong verbs. Use we. Add sentences as necessary to improve logical flow and clarity. 
+
+Second, critique the logical flow of the generated paragraph. And rewrite or add sentences to improve logical flow
+
+The output must be in JSON with keys:
+    'academic_text'
+    'critique'
+    'improved_text'
+
+{text}
+"""
+    messages = [
+            {"role": "user", "content": academify_prompt}
+        ]
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={ "type": "json_object" }
+    )
+    json_response = json.loads(response.choices[0].message.content)
+    return json_response
+
+text = """
+Large language model is an NLP model that can do many many tasks. Examples are grammatical error correction, question answering, and summarization. We don't have to train it on each task. They can do these tasks quite well. But they are not perfect.
+"""
+response = academify(text)
+```
+ข้อสังเกคของพรอมต์ข้างต้นคือ มีการใช้พรอมต์แบบคิดเป็นลำดับ ขั้นแรกให้ถอดความเพื่อให้ได้ใจความที่สมบูรณ์ตามข้อความที่ป้อนเข้าไป จากนั้นถอดความอีกครั้งหนึ่งเพื่อทำให้ประโยคแต่ส่งต่อกันได้อย่างลื่นไหล เข้าใจง่ายมากขึ้น เท่ากับว่ามีการถอดความสองครั้ง แต่ละครั้งมีเป้าหมายที่แตกต่างกัน 
+
+ผลลัพธ์ที่ได้จากการใช้พรอมต์ข้างต้นมีอยู่สามส่วนเรียงกันอยู่ในดิกชันนารี ส่วนแรกคือ `response['academic_text']` ซึ่งมีสตริงเป็นข้อความที่ถอดความเป็นภาษาวิชาการตามที่ระบุในพรอมต์
+
+> Large language models (LLMs) represent a significant advancement in natural language processing (NLP), exhibiting the capability to perform a diverse array of tasks with remarkable proficiency. These tasks encompass grammatical error correction, question answering, and text summarization, among others. Notably, LLMs do not require exhaustive training on each specific task, as they demonstrate robust performance across multiple applications without task-specific fine-tuning. Despite their impressive capabilities, we acknowledge that these models are not infallible and may exhibit limitations in accuracy and contextual understanding.
+
+ข้อสังเกตหนึ่งจากย่อหน้าที่ได้คือ ย่อหน้าที่ได้มามีเนื้อหาที่ล้อไปกับย่อหน้าที่ป้อนเข้าค่อนข้างมาก ซึ่งตรงกับจุดประสงค์ของการถอดความ คำศัพท์ และสำนวนภาษาที่ใช้มีความวิชาการขึ้นมากอย่างเห็นได้ชัด 
+
+ส่วนที่สองคือคำวิจารณ์ `response['critique']` ซึ่งเป็นการวิจารณ์เนื้อหาที่ถอดความมาข้างต้น  โดยเน้นที่ความสัมพันธ์ระหว่างประโยคและความคลุมเครือของเนื้อหา และเสนอแนวทางในการปรับปรุงเนื้อหาให้ดีขึ้น ดังนี้
+
+> The first version of the paragraph lacked depth and did not adequately elaborate on why large language models are significant or the implications of their performance on various tasks. The transition between sentences could also be improved for smoother flow. Additionally, mentioning limitations without a preceding context regarding their usefulness might lead to confusion. A clearer distinction between their strengths and weaknesses would enhance the logical coherence of the argument.
+
+บทวิจารณ์ที่โมเดลเขียนขึ้นมาเองนั้นเป็นบทวิจารณ์ที่เน้นไปด้านความลื่นไหลตามที่เราได้ระบุไว้ในพรอมต์   โมเดลวิจารณ์ผลงานของตัวเองว่ายังขาดบริบทเพื่อที่จะทำให้เข้่าใจสารได้อย่างสมบูรณ์ ไม่มีการบอกว่าขยายความว่าการใช้โมเดลนี้มีความสำคัญอย่างไร นอกจากนั้นยังไม่มีการส่งต่อบริบทให้ชัดเจน ช่วยในการทำความเข้าใจข้อดีข้อเสียของโมเดลให้เด่นชัด ถึงแม้เราจะไม่ได้ใช้บทวิจารณ์จากพรอมต์โดยตรง บทวิจารณ์นี้ทำหน้าที่เป็นเครื่องชี้แนะให้โมเดลเองสามารถพัฒนาผลการถอดความของตัวเองได้ในขั้นตอนต่อไปตามที่ระบุในพรอมต์ ดังนี้ 
+
+> Large language models (LLMs) represent a significant advancement in natural language processing (NLP), displaying remarkable proficiency in a diverse array of tasks, including but not limited to grammatical error correction, question answering, and text summarization. These models operate on a principle of generalization that allows them to perform effectively without the need for exhaustive training on each specific task, thereby streamlining the deployment process across various applications. Moreover, the versatility of LLMs enables them to adapt to different contexts, making them invaluable tools for practitioners in the field. However, it is crucial to acknowledge that, despite their impressive capabilities, LLMs are not infallible; they may face limitations in accuracy, contextual understanding, and the generation of coherent results. Overall, this balance between their broad applicability and inherent shortcomings underscores the complexity of leveraging LLMs in practical NLP tasks.
+
+จะเห็นได้ว่าข้อความที่ได้จากการถอดความครั้งที่ 2 หลังจากที่ให้โมเดลภาษาขนาดใหญ่ได้อ่านและพิจารณาผลลัพธ์ก่อนหนึ่งครั้ง มีความลื่นไหลมากขึ้น ประเด็นที่หยิบยกขึ้นมาครั้งแรกมีการเน้นให้ชัดเจนขึ้น ทั้งการยกตัวอย่างเพื่อให้ทำให้เห็นจุดเด่นของโมเดล และใช้คำเชื่อมแสดงความขัดแย้งเพื่อทำให้ผู้อ่านเข้าใจถึงจุดด้อยของโมเดลซึ่งก็มีความสำคัญไม่แพ้กัน ทำให้โดยรวมแล้วเป็นย่อหน้านี้มีเนื้อหาครบถ้วนและสื่อความหมายได้อย่างชัดเจน และดีขึ้นจากข้อความเดิมที่ป้อนเข้าไปอย่างเห็นได้ชัด อย่างไรก็ตาม สำนวนภาษาในบางจุดยังมีความผิดแปลกไปบ้าง เช่น *including but not limited to grammatical error correction* ฟังดูไม่ค่อยเข้ากับบริบทของบทความวิชาการ ฟังคล้ายกับบทความทางกฎหมายมากกว่า  หรือ *they may face limitations in accuracy, contextual understanding, and the generation of coherent results* มีการเชื่อมนามวลี 3 นามวลีซึ่งรูปคำนามหลักต่างกัน *accuracy* เป็นนามธรรมดา *context understanding* เป็นรูปกริยาเป็นนาม (gerund) และ *the generation ...* เป็นนามวลีแบบชี้เฉพาะ ทำให้อ่านแล้วขาดความสละสลวย 
 
 ### การแปลภาษา
 
-## กรณีศึกษาการทำแอพพลิเคชันด้วยโมเดลภาษาขนาดใหญ่
+การแปลภาษาโดยใช้โมเดลปัญญาประดิษฐ์ เรียกว่า การแปลด้วยเครื่อง (machine translation) ถือเป็นหนึ่งในงานที่มีความสำคัญและเป็นงานที่สื่อถึงความทันสมัยของเทคโนโลยีการประมวลผลภาษาธรรมชาติ เพราะว่าโมเดลการแปลด้วยเครื่องต้องมีความเข้าใจเกี่ยวกับภาษาขั้นสูงของภาษาต้นทาง และภาษาปลายทาง จึงสามารถรักษาความหมายที่ถูกต้องและโทนของข้อความต้นฉบับ ซึ่งเป็นสิ่งที่ท้าทายเมื่อแปลระหว่างภาษาที่มีโครงสร้างประโยคและพื้นหลังทางวัฒนธรรมที่แตกต่างกันอย่างสิ้นเชิง เช่น การแปลระหว่างภาษาไทยและภาษาอังกฤษ โมเดลภาษาขนาดใหญ่ช่วยยกระดับความแม่นยำและความเป็นธรรมชาติของการแปลด้วยเครื่องอย่างมีนัยสำคัญ โมเดลเหล่านี้ถูกฝึกให้รู้จักภาษาหลาย ๆ ภาษาพร้อมกัน จึงสามารถทำหน้าที่เชื่อมโยงความหมายของภาษาหนึ่งไปยังอีกภาษาหนึ่งได้อย่างดี รวมทั้งมีความสามารถในการผลิตข้อความที่มีความไหลลื่นคล้ายเจ้าของภาษา ทำให้เป็นโมเดลที่มีคุณสมบัติที่เหมาะแก่การแปลภาษา และขณะนี้จัดเป็นโมเดลการแปลด้วยเครื่องที่มีคุณภาพเทียบเคียงกับโมเดลการแปลด้วยเครื่องที่สร้างมาแบบเจาะจงคู่ภาษาที่ต้องการแปล จัดเป็นคุณสมบัติอุบัติ (emergent property) ของโมเดลภาษาขนาดใหญ่ที่น่าทึ่ง
 
-### การสร้างคอนเทนต์สำหรับสื่อสังคมออนไลน์
+สมมติว่าเราต้องการแปลข้อความที่มีศัพท์เทคนิคหลายคำ ตัวอย่างเช่นข้อความจากวิกิพีเดีย
+> Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data and thus perform tasks without explicit instructions. Recently, artificial neural networks have been able to surpass many previous approaches in performance.
 
-### การวิเคราะห์อารมณ์ความรู้สึกจากรีวิวสินค้าออนไลน์
+เราอาจเขียนพรอมต์สำหรับการแปลภาษาแบบตรงไปตรงมา หรืออาจจะให้บริบททางภาษาเพิ่มเติมเพื่อทำให้แปลมาได้เหมาะสมก็ได้ เช่น
 
-### การสร้างแชทบอท
+```python
+def translate_text_to_thai(text):
+    translate_prompt = f"""
+    Translate the text below into Thai. 
+
+    {text}
+    """
+    messages = [
+            {"role": "user", "content": translate_prompt}
+        ]
+    response = openai.chat.completions.create(
+        model="gpt-4o",
+        messages=messages
+    )
+    return response.choices[0].message.content
+
+```
+หากนำข้อความจากการถอดความที่ได้มาก่อนหน้านี้มาใช้ในการแปลเป็นภาษาไทย จะได้ผลลัพธ์ดังนี้
+
+> การเรียนรู้ของเครื่อง (ML) เป็นสาขาหนึ่งในปัญญาประดิษฐ์ที่เกี่ยวข้องกับการพัฒนาและการศึกษาอัลกอริธึมเชิงสถิติที่สามารถเรียนรู้จากข้อมูลและปรับใช้กับข้อมูลที่ไม่เคยเจอมาก่อน และด้วยเหตุนี้จึงสามารถดำเนินงานต่างๆ ได้โดยไม่ต้องมีคำสั่งอย่างชัดเจน เมื่อเร็ว ๆ นี้ โครงข่ายประสาทเทียมได้สามารถทำผลงานได้เหนือกว่าวิธีการหลาย ๆ แบบในอดีต
+
+ผลการแปลออกมาอยู่ในระดับพอใช้ ประโยคที่แปลออกมามีเนื้อหาถูกต้องทุกประโยค แต่ว่ายังมีการใช้คำศัพท์ที่ไม่เหมาะสม เช่น *เมื่อเร็ว ๆ นี้* ฟังดูผิดบริบท ควรจะถูกแทนด้วยคำว่า *ในช่วงหลายปีที่ผ่านมา*  นอกจากนั้นยังมีจุดที่สำนวนภาษายังไม่เป็นธรรมชาติ เช่น *ได้สามารถทำผลงานได้เหนือกว่า...* ควรจะแปลเป็น *ทำงานได้อย่างมีประสิทธิภาพเหนือกว่า...*
+
+## ข้อควรระวังและข้อจำกัดของโมเดลภาษาขนาดใหญ่
+
+
 
 ## สรุป
 
