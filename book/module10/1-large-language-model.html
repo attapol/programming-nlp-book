@@ -466,23 +466,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">พรอมต์แบบคิดเป็นลำดับ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agent">การแปลงให้เป็น agent</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">การสรุปความ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">การแก้ไขข้อผิดพลาดทางไวยากรณ์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">การถอดความ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">การแปลภาษา</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">การแก้ไขข้อผิดพลาดทางไวยากรณ์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">การถอดความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การแปลภาษา</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">กรณีศึกษาการทำแอพพลิเคชันด้วยโมเดลภาษาขนาดใหญ่</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การสร้างคอนเทนต์สำหรับสื่อสังคมออนไลน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">การวิเคราะห์อารมณ์ความรู้สึกจากรีวิวสินค้าออนไลน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">การสร้างแชทบอท</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ข้อควรระวังและข้อจำกัดของโมเดลภาษาขนาดใหญ่</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -1497,48 +1491,233 @@ A:
 <p>โมเดลทำงานตามที่กำหนดไว้ในพรอมต์ และได้คำตอบสุดท้ายออกมาต่างกันกับพรอมต์แบบไม่ได้คิดเป็นขั้นตอน โดยคะแนนที่ได้จากการใช้พรอมต์แบบคิดเป็นลำดับมีความแม่นยำมากกว่า และมีความเชื่อถือได้มากกว่า ดังนั้นการใช้พรอมต์แบบคิดเป็นลำดับเป็นวิธีที่ดีในการเพิ่มความแม่นยำของโมเดล</p>
 </section>
 </section>
-<section id="agent">
-<h2>การแปลงให้เป็น agent<a class="headerlink" href="#agent" title="Permalink to this heading">#</a></h2>
-</section>
 <section id="id23">
-<h2>การใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
+<h2>ตัวอย่างการใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
+<p>เทคนิคการเขียนพรอมต์ทำให้เราสามารถปรับใช้โมเดลภาษาขนาดใหญ่ไปใช้ได้อย่างหลากหลาย ทำให้เหมือนกับว่าเราสามารถสร้างโปรแกรมคอมพิวเตอร์ใหม่ขึ้นมาเพียงแค่เขียนพรอมต์ที่รายละเอียดครบถ้วน และเหมาะสมกับกับงานที่ต้องการนำไปใช้ จุดเด่นอีกประการหนึ่งของโมเดลภาษาขนาดใหญ่ คือ เป็นโมเดลที่มีความรู้ ความเข้าใจในการใช้ภาษามาก สามารถทำความเข้าใจข้อความที่ซับซ้อนได้ และตอบโจทย์งานทางด้านภาษาได้อย่างดี เช่น การวิเคราะห์อารมณ์ความรู้สึก การสรุปความ การแก้ไขข้อผิดพลาดทางไวยากรณ์ การถอดความ (paraphrasing) และการแปลภาษา งานทางภาษาที่ได้ยกตัวอย่างมาทั้งหมดนี้เป็นงานที่ความท้าทายมากในการประมวลผลภาษาธรรมชาติ ระบบที่ดีที่สุดมักจะต้องอาศัยคลังข้อมูลที่ออกแบบเพื่องานนี้โดยเฉพาะ และสร้างโมเดลแยกสำหรับแต่ละงาน แต่ว่าโมเดลภาษาขนาดใหญ่สามารถทำงานเหล่านี้เพียงเขียนพรอมต์ที่เหมาะสม คุณภาพของงานที่ได้จากการใช้โมเดลภาษาขนาดใหญ่นี้จะลดหล่นกันไปขึ้นอยู่กับยากง่ายของงาน และโดยทั่วไปแล้วโมเดลที่สร้างขึ้นมาเจาะจงกับงานโดยเฉพาะยังคงเป็นโมเดลทันสมัย (state-of-the-art model) หรือโมเดลที่มีคุณภาพสูงสุดเท่าที่นักวิทยาศาสตร์ได้ค้นพบกันมา</p>
+<p>ในส่วนสุดท้ายในบทนี้เราจะรวบรวมตัวอย่างพรอมต์ที่ใช้ในการทำงานด้านการประมวลผลภาษาธรรมชาติ แต่ละตัวอย่างสามารถนำไปปรับเพิ่มเติมเพื่อให้เข้ากับกรณีการใช้งานของเราได้</p>
 <section id="id24">
 <h3>การวิเคราะห์อารมณ์ความรู้สึก<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<p>การวิเคราะห์อารมณ์ความรู้สึกจัดเป็นงานที่ค่อนข้างท้าทาย เนื่องจากมนุษย์สามารถแสดงออกถึงอารมณ์ความรู้สึกออกมาทางภาษาได้หลายรูปแบบ การวิเคราะห์อารมณ์ความรู้สึกผ่านภาษาต้องใช้อาศัยการวิเคราะห์ตั้งแต่ระดับคำ ระดับกลุ่มคำ ไล่ไปถึงระดับบริบทของบทสนทนา โมเดลภาษาขนาดใหญ่เป็นโมเดลที่สามารถทำความเข้าใจภาษาในระดับเหนือประโยคได้ที่สุดในขณะนี้ ทำให้ความสามารถในการวิเคราะห์อารมณ์ความรู้สึกเป็นงานที่โมเดลภาษาขนาดใหญ่ทำได้ดีระดับหนึ่ง ถึงแม้จะยังไม่ดีเท่าระบบอื่น ๆ ที่สร้างมาเพื่อวิเคราะห์อารมณ์ความรู้สึกโดยเฉพาะ</p>
+<p>ตัวอย่างพรอมต์ในการวิเคราะห์อารมณ์ความรู้สึกสามารถเขียนแบบตรงไปตรงมาได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">analyze_sentiment</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">sentiment_analysis_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Analyze the sentiment of the text delimited by &lt;text&gt; and &lt;/text&gt; tags. </span>
+<span class="s2">    The sentiment must be one of the following: positive, negative, or neutral.</span>
+
+<span class="s2">    </span><span class="si">{</span><span class="n">text</span><span class="si">}</span>
+
+<span class="s2">    Output must be json with keys:</span>
+<span class="s2">        reason: the reason for the sentiment</span>
+<span class="s2">        sentiment: the sentiment label</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">sentiment_analysis_prompt</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">response_format</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;json_object&quot;</span> <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">json_response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">json_response</span>
+
+<span class="n">sentiment</span> <span class="o">=</span> <span class="n">analyze_sentiment</span><span class="p">(</span><span class="s2">&quot;บริษัทจะต้องเน้นการสร้างความเชื่อมั่นให้กับลูกค้าให้มากขึ้น&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="id25">
 <h3>การสรุปความ<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
-</section>
-<section id="id26">
-<h3>การแก้ไขข้อผิดพลาดทางไวยากรณ์<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<p>ตัวอย่างพรอมต์ในการสรุปความจากบทสนทนาที่ได้มาจากโปรแกรมการตอบโต้สนทนาในบริษัท <a class="footnote-reference brackets" href="#dialog" id="id26">2</a> พร้อมทั้งสรุปว่าจากบทสนทนามีเรื่องอะไรที่จะต้องดำเนินการต่ออีกบ้าง</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">summarize_dialog</span><span class="p">(</span><span class="n">dialog</span><span class="p">):</span>
+    <span class="n">summarize_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Summarize the dialog delimited by &lt;dialog&gt;. </span>
+<span class="s2">    The dialog is taken from a company chatroom.</span>
+<span class="s2">    The summary must be no more than 3 sentences.</span>
+<span class="s2">    &lt;dialog&gt; </span><span class="si">{</span><span class="n">dialog</span><span class="si">}</span><span class="s2"> &lt;/dialog&gt;</span>
+
+<span class="s2">    Output must be in JSON with keys: </span>
+<span class="s2">        &#39;summary&#39;</span>
+<span class="s2">        &#39;action&#39; tell the action that needs to be taken</span>
+<span class="s2">        &#39;th_summary&#39; translate summary to Thai        </span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">summarize_prompt</span><span class="p">}</span>
+    <span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">response_format</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;json_object&quot;</span> <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">json_response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">json_response</span>
+
+<span class="n">dialog</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Alice: Hey, Bob, what are some of your ideas for the team morale event?</span>
+<span class="s2">Bob: Everyone seemed to enjoy the potluck and board game that we did last time.</span>
+<span class="s2">Alice: I think so too.</span>
+<span class="s2">Bob: Maybe we can do something similar but at a different location?</span>
+<span class="s2">Alice: That sounds good. Where did you have in mind?</span>
+<span class="s2">Bob: I was thinking we could reserve the picnic area at Sunset Beach Park.</span>
+<span class="s2">Alice: Good idea. In addition to board games, we could also bring a frisbee and volleyball for the beach.</span>
+<span class="s2">Bob: Perfect! Let me make the reservation now.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">summarize_dialog</span><span class="p">(</span><span class="n">dialog</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ผลลัพท์ออกมาเป็นดิกชันนารีที่เก็บข้อมูลอยู่สามชิ้น ได้แก่</p>
+<ol class="arabic simple">
+<li><p>บทสรุป <code class="docutils literal notranslate"><span class="pre">summary['summary']</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>Alice and Bob discuss ideas for a team morale event, recalling a successful potluck and board game gathering. Bob suggests using a different location, specifically the picnic area at Sunset Beach Park, to host a similar event. They agree to incorporate additional activities like frisbee and volleyball, and Bob will handle the reservation.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>เรื่องที่ต้องดำเนินการต่อ <code class="docutils literal notranslate"><span class="pre">summary['action']</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>Bob will make the reservation for the picnic area at Sunset Beach Park.</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>บทสรุปเป็นภาษาไทย <code class="docutils literal notranslate"><span class="pre">summary['th_summary']</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>อลิซและบ็อบพูดคุยเกี่ยวกับไอเดียในการจัดงานส่งเสริมบรรยากาศในทีม โดยนึกถึงการจัดปาร์ตี้อาหารและเล่นบอร์ดเกมที่ประสบความสำเร็จในครั้งก่อน บ็อบแนะนำให้ใช้สถานที่ที่แตกต่างออกไป โดยเฉพาะบริเวณปิกนิกที่สวนสาธารณะซันเซ็ตบีช เพื่อจัดงานที่คล้ายกัน ทั้งสองเห็นด้วยที่จะเพิ่มกิจกรรมเพิ่มเติม เช่น เกมส์ฟริสบี้และวอลเลย์บอล และบ็อบจะรับผิดชอบในการจองสถานที่</p>
+</div></blockquote>
 </section>
 <section id="id27">
-<h3>การถอดความ<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
-</section>
-<section id="id28">
-<h3>การแปลภาษา<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
-</section>
+<h3>การแก้ไขข้อผิดพลาดทางไวยากรณ์<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<p>โมเดลภาษาขนาดใหญ่ได้ดูดซับไวยากรณ์ของภาษาผ่านการเรียนรู้สถิติของคำและ โครงสร้างประโยคจากตัวอย่างประโยคจำนวนมหาศาล ทำให้การแก้ไขข้อผิดพลาดทางไวยากรณ์เป็นไปได้อย่างไม่ยากนัก เราสามารถเขียนพรอมต์แบบง่าย ๆ เพื่อสร้างเครื่องตรวจแก้ภาษาได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correct_grammatical_errors</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">gec_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Correct the grammatical errors in the text below. Output the corrected text</span>
+
+<span class="s2">    </span><span class="si">{</span><span class="n">text</span><span class="si">}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">gec_prompt</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+
+<span class="n">corrected</span> <span class="o">=</span> <span class="n">correct_grammatical_errors</span><span class="p">(</span><span class="s2">&quot;After meeting over, the staffs had to returned to work promptly. Other meeting attendees go to the airport.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">corrected</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>สิ่งที่แสดงผลบนหน้าจอคือ</p>
+<blockquote>
+<div><p>After the meeting was over, the staff had to return to work promptly. Other meeting attendees went to the airport.</p>
+</div></blockquote>
+<p>หรือถ้าหากต้องการให้คำนิยามให้ชัดเจนขึ้นว่าอยากให้เครื่องตรวจับข้อผิดพลาดทางไวยากรณ์ประเภทใดบ้าง ต้องการให้แก้ตัวสะกด และเครื่องหมายวรรคด้วยหรือไม่ เราอาจจะใช้พรอมต์ที่กล่าวถึงรายละเอียดดังกล่าว ตัวอย่างเช่น <a class="footnote-reference brackets" href="#gec" id="id28">3</a></p>
+<blockquote>
+<div><p>Your task is to take the text provided and rewrite it into a clear, grammatically correct version while preserving the original meaning as closely as possible. Correct any spelling mistakes, punctuation errors, verb tense issues, word choice problems, and other grammatical mistakes.</p>
+</div></blockquote>
 </section>
 <section id="id29">
-<h2>กรณีศึกษาการทำแอพพลิเคชันด้วยโมเดลภาษาขนาดใหญ่<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h2>
+<h3>การถอดความ<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<p>การถอดความ คือ การนำข้อความหนึ่งมาเขียนใหม่ในลักษณะที่ยังคงความหมายเดิมแต่ใช้ถ้อยคำและโครงสร้างประโยคที่ต่างออกไป การถอดความเป็นงานที่สำคัญในงานการประมวลผลภาษาธรรมชาติ  เนื่องจากช่วยให้สามารถนำเสนอข้อมูลเดิมได้ในรูปแบบที่หลากหลายมากขึ้น ความท้าทายของงานนี้คือเราต้องมั่นใจว่าข้อความใหม่ที่สร้างขึ้นนั้นยังคงสื่อความหมายตรงตามต้นฉบับโดยไม่เกิดการบิดเบือน นอกจากนี้การเลือกใช้คำและโครงสร้างประโยคที่เหมาะสมเพื่อให้เหมาะสมกับระดับภาษาที่ต้องการทำให้งานนี้ต้องการความละเอียดอ่อน เช่น การถอดความให้เป็นภาษาราชการ หรือการถอดความให้เป็นภาษาที่เข้าใจง่าย</p>
+<p>สมมติว่าเราต้องการถอดความให้เป็นย่อหน้าเพื่อสำหรับใช้เป็นส่วนหนึ่งของบทความวิชาการ</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">academify</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">academify_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Act as a computer science professor. </span>
+
+<span class="s2">First, turn the paragraph below into a paragraph for an academic journal manuscript. The language must be academic English. Use strong verbs. Use we. Add sentences as necessary to improve logical flow and clarity. </span>
+
+<span class="s2">Second, critique the logical flow of the generated paragraph. And rewrite or add sentences to improve logical flow</span>
+
+<span class="s2">The output must be in JSON with keys:</span>
+<span class="s2">    &#39;academic_text&#39;</span>
+<span class="s2">    &#39;critique&#39;</span>
+<span class="s2">    &#39;improved_text&#39;</span>
+
+<span class="si">{</span><span class="n">text</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">academify_prompt</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">response_format</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;json_object&quot;</span> <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">json_response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">json_response</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Large language model is an NLP model that can do many many tasks. Examples are grammatical error correction, question answering, and summarization. We don&#39;t have to train it on each task. They can do these tasks quite well. But they are not perfect.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">academify</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ข้อสังเกคของพรอมต์ข้างต้นคือ มีการใช้พรอมต์แบบคิดเป็นลำดับ ขั้นแรกให้ถอดความเพื่อให้ได้ใจความที่สมบูรณ์ตามข้อความที่ป้อนเข้าไป จากนั้นถอดความอีกครั้งหนึ่งเพื่อทำให้ประโยคแต่ส่งต่อกันได้อย่างลื่นไหล เข้าใจง่ายมากขึ้น เท่ากับว่ามีการถอดความสองครั้ง แต่ละครั้งมีเป้าหมายที่แตกต่างกัน</p>
+<p>ผลลัพธ์ที่ได้จากการใช้พรอมต์ข้างต้นมีอยู่สามส่วนเรียงกันอยู่ในดิกชันนารี ส่วนแรกคือ <code class="docutils literal notranslate"><span class="pre">response['academic_text']</span></code> ซึ่งมีสตริงเป็นข้อความที่ถอดความเป็นภาษาวิชาการตามที่ระบุในพรอมต์</p>
+<blockquote>
+<div><p>Large language models (LLMs) represent a significant advancement in natural language processing (NLP), exhibiting the capability to perform a diverse array of tasks with remarkable proficiency. These tasks encompass grammatical error correction, question answering, and text summarization, among others. Notably, LLMs do not require exhaustive training on each specific task, as they demonstrate robust performance across multiple applications without task-specific fine-tuning. Despite their impressive capabilities, we acknowledge that these models are not infallible and may exhibit limitations in accuracy and contextual understanding.</p>
+</div></blockquote>
+<p>ข้อสังเกตหนึ่งจากย่อหน้าที่ได้คือ ย่อหน้าที่ได้มามีเนื้อหาที่ล้อไปกับย่อหน้าที่ป้อนเข้าค่อนข้างมาก ซึ่งตรงกับจุดประสงค์ของการถอดความ คำศัพท์ และสำนวนภาษาที่ใช้มีความวิชาการขึ้นมากอย่างเห็นได้ชัด</p>
+<p>ส่วนที่สองคือคำวิจารณ์ <code class="docutils literal notranslate"><span class="pre">response['critique']</span></code> ซึ่งเป็นการวิจารณ์เนื้อหาที่ถอดความมาข้างต้น  โดยเน้นที่ความสัมพันธ์ระหว่างประโยคและความคลุมเครือของเนื้อหา และเสนอแนวทางในการปรับปรุงเนื้อหาให้ดีขึ้น ดังนี้</p>
+<blockquote>
+<div><p>The first version of the paragraph lacked depth and did not adequately elaborate on why large language models are significant or the implications of their performance on various tasks. The transition between sentences could also be improved for smoother flow. Additionally, mentioning limitations without a preceding context regarding their usefulness might lead to confusion. A clearer distinction between their strengths and weaknesses would enhance the logical coherence of the argument.</p>
+</div></blockquote>
+<p>บทวิจารณ์ที่โมเดลเขียนขึ้นมาเองนั้นเป็นบทวิจารณ์ที่เน้นไปด้านความลื่นไหลตามที่เราได้ระบุไว้ในพรอมต์   โมเดลวิจารณ์ผลงานของตัวเองว่ายังขาดบริบทเพื่อที่จะทำให้เข้่าใจสารได้อย่างสมบูรณ์ ไม่มีการบอกว่าขยายความว่าการใช้โมเดลนี้มีความสำคัญอย่างไร นอกจากนั้นยังไม่มีการส่งต่อบริบทให้ชัดเจน ช่วยในการทำความเข้าใจข้อดีข้อเสียของโมเดลให้เด่นชัด ถึงแม้เราจะไม่ได้ใช้บทวิจารณ์จากพรอมต์โดยตรง บทวิจารณ์นี้ทำหน้าที่เป็นเครื่องชี้แนะให้โมเดลเองสามารถพัฒนาผลการถอดความของตัวเองได้ในขั้นตอนต่อไปตามที่ระบุในพรอมต์ ดังนี้</p>
+<blockquote>
+<div><p>Large language models (LLMs) represent a significant advancement in natural language processing (NLP), displaying remarkable proficiency in a diverse array of tasks, including but not limited to grammatical error correction, question answering, and text summarization. These models operate on a principle of generalization that allows them to perform effectively without the need for exhaustive training on each specific task, thereby streamlining the deployment process across various applications. Moreover, the versatility of LLMs enables them to adapt to different contexts, making them invaluable tools for practitioners in the field. However, it is crucial to acknowledge that, despite their impressive capabilities, LLMs are not infallible; they may face limitations in accuracy, contextual understanding, and the generation of coherent results. Overall, this balance between their broad applicability and inherent shortcomings underscores the complexity of leveraging LLMs in practical NLP tasks.</p>
+</div></blockquote>
+<p>จะเห็นได้ว่าข้อความที่ได้จากการถอดความครั้งที่ 2 หลังจากที่ให้โมเดลภาษาขนาดใหญ่ได้อ่านและพิจารณาผลลัพธ์ก่อนหนึ่งครั้ง มีความลื่นไหลมากขึ้น ประเด็นที่หยิบยกขึ้นมาครั้งแรกมีการเน้นให้ชัดเจนขึ้น ทั้งการยกตัวอย่างเพื่อให้ทำให้เห็นจุดเด่นของโมเดล และใช้คำเชื่อมแสดงความขัดแย้งเพื่อทำให้ผู้อ่านเข้าใจถึงจุดด้อยของโมเดลซึ่งก็มีความสำคัญไม่แพ้กัน ทำให้โดยรวมแล้วเป็นย่อหน้านี้มีเนื้อหาครบถ้วนและสื่อความหมายได้อย่างชัดเจน และดีขึ้นจากข้อความเดิมที่ป้อนเข้าไปอย่างเห็นได้ชัด อย่างไรก็ตาม สำนวนภาษาในบางจุดยังมีความผิดแปลกไปบ้าง เช่น <em>including but not limited to grammatical error correction</em> ฟังดูไม่ค่อยเข้ากับบริบทของบทความวิชาการ ฟังคล้ายกับบทความทางกฎหมายมากกว่า  หรือ <em>they may face limitations in accuracy, contextual understanding, and the generation of coherent results</em> มีการเชื่อมนามวลี 3 นามวลีซึ่งรูปคำนามหลักต่างกัน <em>accuracy</em> เป็นนามธรรมดา <em>context understanding</em> เป็นรูปกริยาเป็นนาม (gerund) และ <em>the generation …</em> เป็นนามวลีแบบชี้เฉพาะ ทำให้อ่านแล้วขาดความสละสลวย</p>
+</section>
 <section id="id30">
-<h3>การสร้างคอนเทนต์สำหรับสื่อสังคมออนไลน์<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<h3>การแปลภาษา<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<p>การแปลภาษาโดยใช้โมเดลปัญญาประดิษฐ์ เรียกว่า การแปลด้วยเครื่อง (machine translation) ถือเป็นหนึ่งในงานที่มีความสำคัญและเป็นงานที่สื่อถึงความทันสมัยของเทคโนโลยีการประมวลผลภาษาธรรมชาติ เพราะว่าโมเดลการแปลด้วยเครื่องต้องมีความเข้าใจเกี่ยวกับภาษาขั้นสูงของภาษาต้นทาง และภาษาปลายทาง จึงสามารถรักษาความหมายที่ถูกต้องและโทนของข้อความต้นฉบับ ซึ่งเป็นสิ่งที่ท้าทายเมื่อแปลระหว่างภาษาที่มีโครงสร้างประโยคและพื้นหลังทางวัฒนธรรมที่แตกต่างกันอย่างสิ้นเชิง เช่น การแปลระหว่างภาษาไทยและภาษาอังกฤษ โมเดลภาษาขนาดใหญ่ช่วยยกระดับความแม่นยำและความเป็นธรรมชาติของการแปลด้วยเครื่องอย่างมีนัยสำคัญ โมเดลเหล่านี้ถูกฝึกให้รู้จักภาษาหลาย ๆ ภาษาพร้อมกัน จึงสามารถทำหน้าที่เชื่อมโยงความหมายของภาษาหนึ่งไปยังอีกภาษาหนึ่งได้อย่างดี รวมทั้งมีความสามารถในการผลิตข้อความที่มีความไหลลื่นคล้ายเจ้าของภาษา ทำให้เป็นโมเดลที่มีคุณสมบัติที่เหมาะแก่การแปลภาษา และขณะนี้จัดเป็นโมเดลการแปลด้วยเครื่องที่มีคุณภาพเทียบเคียงกับโมเดลการแปลด้วยเครื่องที่สร้างมาแบบเจาะจงคู่ภาษาที่ต้องการแปล จัดเป็นคุณสมบัติอุบัติ (emergent property) ของโมเดลภาษาขนาดใหญ่ที่น่าทึ่ง</p>
+<p>สมมติว่าเราต้องการแปลข้อความที่มีศัพท์เทคนิคหลายคำ ตัวอย่างเช่นข้อความจากวิกิพีเดีย</p>
+<blockquote>
+<div><p>Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data and thus perform tasks without explicit instructions. Recently, artificial neural networks have been able to surpass many previous approaches in performance.</p>
+</div></blockquote>
+<p>เราอาจเขียนพรอมต์สำหรับการแปลภาษาแบบตรงไปตรงมา หรืออาจจะให้บริบททางภาษาเพิ่มเติมเพื่อทำให้แปลมาได้เหมาะสมก็ได้ เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">translate_text_to_thai</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">translate_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Translate the text below into Thai. </span>
+
+<span class="s2">    </span><span class="si">{</span><span class="n">text</span><span class="si">}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">translate_prompt</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+
+</pre></div>
+</div>
+<p>หากนำข้อความจากการถอดความที่ได้มาก่อนหน้านี้มาใช้ในการแปลเป็นภาษาไทย จะได้ผลลัพธ์ดังนี้</p>
+<blockquote>
+<div><p>การเรียนรู้ของเครื่อง (ML) เป็นสาขาหนึ่งในปัญญาประดิษฐ์ที่เกี่ยวข้องกับการพัฒนาและการศึกษาอัลกอริธึมเชิงสถิติที่สามารถเรียนรู้จากข้อมูลและปรับใช้กับข้อมูลที่ไม่เคยเจอมาก่อน และด้วยเหตุนี้จึงสามารถดำเนินงานต่างๆ ได้โดยไม่ต้องมีคำสั่งอย่างชัดเจน เมื่อเร็ว ๆ นี้ โครงข่ายประสาทเทียมได้สามารถทำผลงานได้เหนือกว่าวิธีการหลาย ๆ แบบในอดีต</p>
+</div></blockquote>
+<p>ผลการแปลออกมาอยู่ในระดับพอใช้ ประโยคที่แปลออกมามีเนื้อหาถูกต้องทุกประโยค แต่ว่ายังมีการใช้คำศัพท์ที่ไม่เหมาะสม เช่น <em>เมื่อเร็ว ๆ นี้</em> ฟังดูผิดบริบท ควรจะถูกแทนด้วยคำว่า <em>ในช่วงหลายปีที่ผ่านมา</em>  นอกจากนั้นยังมีจุดที่สำนวนภาษายังไม่เป็นธรรมชาติ เช่น <em>ได้สามารถทำผลงานได้เหนือกว่า…</em> ควรจะแปลเป็น <em>ทำงานได้อย่างมีประสิทธิภาพเหนือกว่า…</em></p>
+</section>
 </section>
 <section id="id31">
-<h3>การวิเคราะห์อารมณ์ความรู้สึกจากรีวิวสินค้าออนไลน์<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<h2>ข้อควรระวังและข้อจำกัดของโมเดลภาษาขนาดใหญ่<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="id32">
-<h3>การสร้างแชทบอท<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
-</section>
+<h2>สรุป<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="id33">
-<h2>สรุป<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="id34">
-<h2>อ้างอิง<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h2>
-<span class="target" id="id35"></span><hr class="footnotes docutils" />
+<h2>อ้างอิง<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h2>
+<span class="target" id="id34"></span><hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="rubric"><span class="brackets"><a class="fn-backref" href="#id22">1</a></span></dt>
 <dd><p><a class="reference external" href="https://cet.usc.edu/teaching-resources/academic-essay-rubric/">https://cet.usc.edu/teaching-resources/academic-essay-rubric/</a></p>
+</dd>
+<dt class="label" id="dialog"><span class="brackets"><a class="fn-backref" href="#id26">2</a></span></dt>
+<dd><p>บทสนทนานำมาจาก <a class="reference external" href="https://console.cloud.google.com/vertex-ai/generative/prompt-gallery">https://console.cloud.google.com/vertex-ai/generative/prompt-gallery</a></p>
+</dd>
+<dt class="label" id="gec"><span class="brackets"><a class="fn-backref" href="#id28">3</a></span></dt>
+<dd><p>ตัวอย่างพรอมต์จาก <a class="reference external" href="https://docs.anthropic.com/en/prompt-library/grammar-genie">https://docs.anthropic.com/en/prompt-library/grammar-genie</a></p>
 </dd>
 </dl>
 </section>
@@ -1640,23 +1819,17 @@ A:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">พรอมต์แบบคิดเป็นลำดับ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agent">การแปลงให้เป็น agent</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานโมเดลภาษาขนาดใหญ่เพื่อการประมวลผลภาษาธรรมชาติ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">การสรุปความ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">การแก้ไขข้อผิดพลาดทางไวยากรณ์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">การถอดความ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">การแปลภาษา</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">การแก้ไขข้อผิดพลาดทางไวยากรณ์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">การถอดความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การแปลภาษา</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">กรณีศึกษาการทำแอพพลิเคชันด้วยโมเดลภาษาขนาดใหญ่</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การสร้างคอนเทนต์สำหรับสื่อสังคมออนไลน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">การวิเคราะห์อารมณ์ความรู้สึกจากรีวิวสินค้าออนไลน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">การสร้างแชทบอท</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ข้อควรระวังและข้อจำกัดของโมเดลภาษาขนาดใหญ่</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">อ้างอิง</a></li>
 </ul>
   </nav></div>
 
