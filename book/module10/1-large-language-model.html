@@ -1385,11 +1385,11 @@ print(summary_dict)
 </div>
 <p>สังเกตว่าพรอมต์ข้างต้นไม่มีการเขียนคำชี้แจ้งโดยชัดเจนว่าให้ทำอะไร
 แต่เป็นการให้โมเดลสังเกตเองว่ามีแพทเทิร์นของ <code class="docutils literal notranslate"><span class="pre">Text:</span> </code>ตามด้วยข้อความ และ <code class="docutils literal notranslate"><span class="pre">Category:</span></code> ตามด้วยประเภทของข้อความ สลับกันจนถึงสุดท้ายที่เราใส่อินพุตไว้หลัง <code class="docutils literal notranslate"><span class="pre">Text:</span> </code> และเว้นว่าง <code class="docutils literal notranslate"><span class="pre">Category</span> <span class="pre">:</span></code> โมเดลจะเห็นแพทเทิร์นตรงจุดนี้และเรียนรู้ว่าจะต้องใส่ประเภทของข้อความตามไป การเขียนพรอมต์แบบนี้เรียกว่าพรอมต์แบบให้เติม (completion prompt)</p>
-<p>การใช้การเรียนรู้จากตัวอย่างจำนวนน้อยช่วยให้เราเขียนพรอมต์เพื่ออธิบายผลลัพธ์ที่เราต้องการได้ดีขึ้น หากงานที่เราต้องการให้โมเดลทำเป็นงานที่ไม่ได้มีคำนิยามชัดเจน หรือเราต้องการปรับการใช้งานโมเดลบ่อย  อย่างไรก็ตามวิธีการเขียนพรอมต์ในลักษณะนี้มีข้อจำกัดที่สำคัญอย่างหนึ่งคือ การควบรวมตัวอย่างเข้าไปในพรอมต์อาจไม่ช่วยทำให้ความแม่นยำดีขึ้นเสมอไป <span id="id19">[]</span> และในบางกรณีทำให้ผลลัพธ์มีโอกาสผิดมากขึ้นกว่าไม่ใส่ตัวอย่างเลย เพราะฉะนั้นการเขียนพรอมต์แบบควบรวมตัวอย่างจะต้องมีอาศัยลองผิดลองถูกเพื่อให้ได้ผลลัพธ์ที่แม่นยำ</p>
+<p>การใช้การเรียนรู้จากตัวอย่างจำนวนน้อยช่วยให้เราเขียนพรอมต์เพื่ออธิบายผลลัพธ์ที่เราต้องการได้ดีขึ้น หากงานที่เราต้องการให้โมเดลทำเป็นงานที่ไม่ได้มีคำนิยามชัดเจน หรือเราต้องการปรับการใช้งานโมเดลบ่อย  อย่างไรก็ตามวิธีการเขียนพรอมต์ในลักษณะนี้มีข้อจำกัดที่สำคัญอย่างหนึ่งคือ การควบรวมตัวอย่างเข้าไปในพรอมต์อาจไม่ช่วยทำให้ความแม่นยำดีขึ้นเสมอไป <span id="id19">[<a class="reference internal" href="#id55" title="Caleb Ziems, William Held, Omar Shaikh, Jiaao Chen, Zhehao Zhang, and Diyi Yang. Can large language models transform computational social science? Computational Linguistics, 50(1):237–291, 2024.">Ziems <em>et al.</em>, 2024</a>]</span> และในบางกรณีทำให้ผลลัพธ์มีโอกาสผิดมากขึ้นกว่าไม่ใส่ตัวอย่างเลย เพราะฉะนั้นการเขียนพรอมต์แบบควบรวมตัวอย่างจะต้องมีอาศัยลองผิดลองถูกเพื่อให้ได้ผลลัพธ์ที่แม่นยำ</p>
 </section>
 <section id="id20">
 <h3>พรอมต์แบบคิดเป็นลำดับ<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
-<p>พรอมต์แบบคิดเป็นลำดับ (Chain-of-Thought prompting) คือการเขียนพรอมต์กระตุ้นให้โมเดลสร้างคำตอบเป็นขั้นเป็นตอน จากคำตอบหนึ่งนำไปสู่อีกคำตอบหนึ่ง จนถึงคำตอบสุดท้าย คล้ายคลึงกับการให้คำตอบโดยการแสดงวิธีทำ แทนที่จะเขียนพรอมต์ให้โมเดลให้คำตอบโดยทันทีโดยไม่ต้องแสดงความคิดที่นำไปสู่คำตอบ วิธีการเขียนพรอมต์แบบคิดเป็นลำดับเป็นวิธีที่ถูกทดสอบและพิสูจน์แล้วว่าสามารถเพิ่มความแม่นยำในการหาคำตอบที่ต้องอาศัยการใช้เหตุผลหลายขั้นตอน เช่น การทำโจทย์ทางคณิตศาสตร์ และโจทย์ที่ทดสอบตรรกะ  โดยสามารถให้คำตอบที่ถูกต้องมากขึ้น โดยเฉลี่ย 10% จากการใช้พรอมต์แบบคิดเป็นลำดับ และเพิ่มความแม่นยำของคำตอบได้ถึง 20% ในบางกรณี <span id="id21">[]</span></p>
+<p>พรอมต์แบบคิดเป็นลำดับ (Chain-of-Thought prompting) คือการเขียนพรอมต์กระตุ้นให้โมเดลสร้างคำตอบเป็นขั้นเป็นตอน จากคำตอบหนึ่งนำไปสู่อีกคำตอบหนึ่ง จนถึงคำตอบสุดท้าย คล้ายคลึงกับการให้คำตอบโดยการแสดงวิธีทำ แทนที่จะเขียนพรอมต์ให้โมเดลให้คำตอบโดยทันทีโดยไม่ต้องแสดงความคิดที่นำไปสู่คำตอบ วิธีการเขียนพรอมต์แบบคิดเป็นลำดับเป็นวิธีที่ถูกทดสอบและพิสูจน์แล้วว่าสามารถเพิ่มความแม่นยำในการหาคำตอบที่ต้องอาศัยการใช้เหตุผลหลายขั้นตอน เช่น การทำโจทย์ทางคณิตศาสตร์ และโจทย์ที่ทดสอบตรรกะ  โดยสามารถให้คำตอบที่ถูกต้องมากขึ้น โดยเฉลี่ย 10% จากการใช้พรอมต์แบบคิดเป็นลำดับ และเพิ่มความแม่นยำของคำตอบได้ถึง 20% ในบางกรณี <span id="id21">[<a class="reference internal" href="#id56" title="Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, and others. Chain-of-thought prompting elicits reasoning in large language models. Advances in neural information processing systems, 35:24824–24837, 2022.">Wei <em>et al.</em>, 2022</a>]</span></p>
 <p>สมมติว่าเราเขียนพรอมต์ให้แก้โจทย์ปัญหาทางคณิตศาสตร์ เราสามารถเขียนพรอมต์ง่าย ๆ ดังนี้เพื่อหาคำตอบ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Q: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now?
 A: The answer is 11.
@@ -1720,7 +1720,17 @@ A:
 </section>
 <section id="id33">
 <h2>อ้างอิง<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h2>
-<span class="target" id="id34"></span><hr class="footnotes docutils" />
+<div class="docutils container" id="id34">
+<dl class="citation">
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id21">1</a></span></dt>
+<dd><p>Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, and others. Chain-of-thought prompting elicits reasoning in large language models. <em>Advances in neural information processing systems</em>, 35:24824–24837, 2022.</p>
+</dd>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id19">2</a></span></dt>
+<dd><p>Caleb Ziems, William Held, Omar Shaikh, Jiaao Chen, Zhehao Zhang, and Diyi Yang. Can large language models transform computational social science? <em>Computational Linguistics</em>, 50(1):237–291, 2024.</p>
+</dd>
+</dl>
+</div>
+<hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="rubric"><span class="brackets"><a class="fn-backref" href="#id22">1</a></span></dt>
 <dd><p>ดัดแปลงมาจาก <a class="reference external" href="https://cet.usc.edu/teaching-resources/academic-essay-rubric/">https://cet.usc.edu/teaching-resources/academic-essay-rubric/</a></p>

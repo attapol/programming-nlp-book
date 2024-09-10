@@ -814,16 +814,16 @@ document.write(`
 <h2>Control flow - <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#control-flow-while-loop" title="Permalink to this heading">#</a></h2>
 <p>อีก control flow พบได้บ่อยในการเขียนโปรแกรมคือการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> loop ซึ่งเป็นการรันคำสั่งวนซ้ำ ๆ เช่นเดียวกับ <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ซึ่งเรากำหนดเงื่อนไขไปเลยว่าให้หลุดออกจาก loop หลังจากวนรันไปแล้วกี่ครั้ง  แต่ว่า <code class="docutils literal notranslate"><span class="pre">while</span></code> loop เรากำหนดเองว่าจะให้หลุดออกจากรูปด้วยเงื่อนไขอะไร</p>
 <p>ตัวอย่าง ถ้าเรามีโจทย์ว่าให้แคเริลวางกระดิ่งบนแถวแรกให้เต็มแต่ยกเว้นริมซ้ายสุด และริมขวาสุด โดยที่จุดเริ่มต้นอยู่ที่มุมซ้ายล่างและแคเริลหันไปทางตะวันออก</p>
-<figure class="align-center" id="id29">
+<figure class="align-center" id="id31">
 <a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 4 </span><span class="caption-text">จุดเริ่มต้น</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 4 </span><span class="caption-text">จุดเริ่มต้น</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id30">
+<figure class="align-center" id="id32">
 <a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 5 </span><span class="caption-text">จุดหมาย</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 5 </span><span class="caption-text">จุดหมาย</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราจะเห็นแพทเทิร์นว่าแคเริลจะต้องก้าวและวางกระดิ่งทั้งหมด 6 ครั้งด้วยกัน และก็ก้าวอีกก้าวเพื่อให้จบที่ริมขวาสุด ดังนี้</p>
@@ -979,11 +979,11 @@ document.write(`
 <h2>บูลีน<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
 <p>การกำหนดเงื่อนไขด้วยบูลีนเป็นเครื่องมือที่สำคัญมากในการเขียนโปรแกรม เราสามารถเขียนเงื่อนไขที่ซับซ้อนขึ้นไปอีกได้โดยใช้โอเปอร์เรเตอร์ทางตรรกศาสตร์ เช่น <code class="docutils literal notranslate"><span class="pre">or</span></code> และ <code class="docutils literal notranslate"><span class="pre">and</span></code> เพื่อให้เห็นการใช้งานที่ชัดขึ้น เราจะลองแก้โจทย์แคเริลอีกหนึ่งข้อ</p>
 <p>สมมติว่าเราต้องการให้แคเริลเอากระดิ่งที่อยู่รอบรั้วออกไปให้หมด ดังตัวอย่างดังนี้</p>
-<figure class="align-default" id="id31">
+<figure class="align-default" id="id33">
 <img alt="../../_images/boolean-remove-fence.png" src="../../_images/boolean-remove-fence.png" />
 <figcaption>
 <p><span class="caption-number">ภาพที่ 6 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
-ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
+ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราสามารถสังเกตหาแพทเทิร์นได้ว่าการเก็บกระดิ่งแต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถย่อยโจทย์ออกมาเป็นฟังก์ชันที่เก็บกระดิ่งของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
@@ -1001,18 +1001,18 @@ document.write(`
 </pre></div>
 </div>
 <p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
-<figure class="align-default" id="id32">
+<figure class="align-default" id="id34">
 <img alt="../../_images/or-operation.png" src="../../_images/or-operation.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 7 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 7 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">or</span></code> operator</span><a class="headerlink" href="#id34" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เงื่อนไขด้านล่างสุดแสดงให้เห็นว่าแคเริลได้เดินมาถึงมุมแล้วหรือถึงช่องที่ไม่ได้อยู่ติดกับรั้วอีกต่อไปแล้ว ทำให้ส่งต่อไปยังรั้วอีกข้างที่เหลือต่อไปได้</p>
 <p>นอกจากนั้นแล้วภาษาไพธอนยังมีโอเปอร์เรเตอร์ <code class="docutils literal notranslate"><span class="pre">and</span></code> ซึ่งมีการตีค่าบูลีนเหมือนกันกับ <em>และ</em> ในตรรกศาสตร์ ดังนี้</p>
-<figure class="align-default" id="id33">
+<figure class="align-default" id="id35">
 <img alt="../../_images/and-operation.png" src="../../_images/and-operation.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 8 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 8 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id35" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้แคเริลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>
