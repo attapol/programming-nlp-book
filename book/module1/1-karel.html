@@ -978,7 +978,7 @@ document.write(`
 <p><span class="caption-number">ภาพที่ 10 </span><span class="caption-text">(ซ้าย) จุดเริ่มต้นของคาเรล (ขวา) ผลลัพธ์ที่คาดหวังหลังจากรันโปรแกรมแล้ว</span><a class="headerlink" href="#id44" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>เราจะเริ่มแก้ปัญหานี้โดยการแบ่งปัญหาออกเป็นส่วนย่อย และการสังเกตแพทเทิร์นว่า ทุกช่องเราจะทำกระบวนการเดียวกันทั้งหมด เพราะฉะนั้นเราสามารถเขียนฟังก์ชันแยกออกมาเพื่อแก้โจทย์ย่อยในการเก็บและวางกระดิ่งดังนี้</p>
+<p>เราจะเริ่มแก้ปัญหานี้โดยการแบ่งปัญหาออกเป็นส่วนย่อย และสังเกตลักษณะที่ซ้ำกันในแต่ละช่อง สิ่งที่สังเกตได้คือไม่ว่าคาเรลจะยืนอยู่ช่องใดก็ตาม สิ่งที่คาเรลต้องทำคือตัดสินใจว่าจะเก็บหรือวางกระดิ่งบนช่องนั้น และไม่สำคัญด้วยว่าโลกของคาเรลในโจทย์จะมีขนาดเท่าไร นั่นคือเราจะทำกระบวนการเดียวกันในทุกช่อง ดังนั้นเราสามารถแยกเขียนฟังก์ชันออกมาเพื่อจัดการการวางและการเก็บกระดิ่งได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert</span><span class="p">():</span>
    <span class="k">if</span> <span class="n">beepers_present</span><span class="p">():</span> <span class="c1"># ถ้ามีกระดิ่ง</span>
       <span class="n">pick_beeper</span><span class="p">()</span>      <span class="c1"># ให้เก็บกระดิ่ง</span>
@@ -986,8 +986,9 @@ document.write(`
       <span class="n">put_beeper</span><span class="p">()</span>       <span class="c1"># ให้วางกระดิ่งลงในช่องนั้น     </span>
 </pre></div>
 </div>
-<p>ในฟังก์ชันนี้เรามีการใช้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งแปลว่าถ้าเงื่อนไขที่ตั้งไว้ใน <code class="docutils literal notranslate"><span class="pre">for</span></code> ไม่เป็นจริง จะรัน code block ที่อยู่ใต้ <code class="docutils literal notranslate"><span class="pre">else</span></code> ข้อควรระวังหนึ่งคือ ถ้าเราไม่ได้ใส่ <code class="docutils literal notranslate"><span class="pre">else</span></code> ไว้โค้ดที่ตามมาจะถูกรันในทุกกรณี เราต้องเลือกใช้ให้ถูกต้อง</p>
-<p>ฟังก์ชันทางด้านบนสามารถเขียนออกมาเป็นแผนภูมิได้ดังนี้</p>
+<p>ในฟังก์ชันนี้ เราใช้โครงสร้าง <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งทำงานโดยการตรวจสอบเงื่อนไข <code class="docutils literal notranslate"><span class="pre">if</span></code> ก่อน หากเงื่อนไขเป็นจริง (มีกระดิ่งอยู่ในช่อง) โปรแกรมจะทำการเก็บกระดิ่งด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code> แต่หากเงื่อนไขไม่เป็นจริง (ไม่มีกระดิ่ง) โปรแกรมจะดำเนินการตามคำสั่งในส่วน <code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งจะทำการวางกระดิ่งในช่องนั้นด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">put_beeper()</span></code></p>
+<p>สิ่งที่ต้องระวังคือ หากเราไม่ใช้คำสั่ง else คำสั่งที่ตามมาจะถูกรันในทุกกรณี ซึ่งอาจทำให้โปรแกรมทำงานไม่ตรงตามที่เราต้องการ ดังนั้นจึงต้องใช้ else ในกรณีที่ต้องการให้โปรแกรมทำงานอย่างชัดเจนในกรณีที่เงื่อนไขไม่เป็นจริง</p>
+<p>ขั้นตอนการทำงานของฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">invert()</span></code> สามารถแสดงเป็นแผนภูมิการทำงานได้ดังนี้</p>
 <a class="reference internal image-reference" href="../../_images/invert-beeper-flow-chart.png"><img alt="../../_images/invert-beeper-flow-chart.png" class="align-center" src="../../_images/invert-beeper-flow-chart.png" style="height: 250px;" /></a>
 <p>ถึงขั้นนี้แล้วเราสามารถแก้โจทย์นี้ต่อไปได้ หากเราเห็นว่าเราไม่ต้องสนใจว่าในช่องนั้นจะมีหรือไม่มีกระดิ่งอยู่แล้ว</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
