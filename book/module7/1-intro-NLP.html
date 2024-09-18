@@ -230,19 +230,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../11-the-web.html">การดึงข้อมูลจากอินเตอร์เน็ต</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module11/1-api.html">Application Programming Interface (API)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/2-videos-api.html">Video: Serialization and API call</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/3-web-scraping.html">Web scraping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/4-videos-web-scraping.html">Video: Web scraping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/5-exercise-json-html-api.html">แบบฝึกหัด JSON Serialization และการเรียก API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/6-exercise-news-api.html">แบบฝึกหัดการเรียก API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/6s-example-news-api.html">เฉลยแบบฝึกหัดการเรียก API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/7-example-scrape-dek-d.html">ตัวอย่างการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/8-exercise-scraping.html">แบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module11/8s-exercise-scraping.html">เฉลยแบบฝึกหัดการขูดข้อมูลด้วย <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -1165,11 +1152,11 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </section>
 <section id="word-frequency-analysis">
 <h2>การวิเคราะห์ความถี่ของคำ (word frequency analysis)<a class="headerlink" href="#word-frequency-analysis" title="Permalink to this heading">#</a></h2>
-<p>เมื่อข้อมูลได้รับการทำความสะอาดและการแบ่งคำอย่างเหมาะสมแล้ว การวิเคราะห์ความถี่ของคำ เป็นการวิเคราะห์ขั้นพื้นฐานที่ช่วยให้เราเข้าใจเนื้อหาของชุดของเอกสารที่มีขนาดใหญ่ได้  ความถี่ของคำในการวิเคราะห์ข้อความ หมายถึง การนับจำนวนครั้งที่คำปรากฏในชุดข้อมูล การวิเคราะห์นี้เป็นพื้นฐานของหลายเทคนิคในการประมวลผลภาษาธรรมชาติ และมีความสำคัญในการเข้าใจลักษณะสำคัญของข้อมูลตัวอักษร ความถี่ของคำช่วยให้เราเห็นภาพรวมของหัวข้อหรือเนื้อหาที่ถูกพูดถึงบ่อยครั้งในชุดของเอกสารที่มีขนาดใหญ่ เพื่อให้เห็นภาพชัดขึ้น ลองพิจารณา <a class="reference internal" href="#airline-review-word-freq"><span class="std std-numref">ภาพที่ 10</span></a></p>
+<p>เมื่อข้อมูลได้รับการทำความสะอาดและการแบ่งคำอย่างเหมาะสมแล้ว การวิเคราะห์ความถี่ของคำ เป็นการวิเคราะห์ขั้นพื้นฐานที่ช่วยให้เราเข้าใจเนื้อหาของชุดของเอกสารที่มีขนาดใหญ่ได้  ความถี่ของคำในการวิเคราะห์ข้อความ หมายถึง การนับจำนวนครั้งที่คำปรากฏในชุดข้อมูล การวิเคราะห์นี้เป็นพื้นฐานของหลายเทคนิคในการประมวลผลภาษาธรรมชาติ และมีความสำคัญในการเข้าใจลักษณะสำคัญของข้อมูลตัวอักษร ความถี่ของคำช่วยให้เราเห็นภาพรวมของหัวข้อหรือเนื้อหาที่ถูกพูดถึงบ่อยครั้งในชุดของเอกสารที่มีขนาดใหญ่ เพื่อให้เห็นภาพชัดขึ้น ลองพิจารณา <a class="reference internal" href="#airline-review-word-freq"><span class="std std-numref">ภาพที่ 15</span></a></p>
 <figure class="align-default" id="airline-review-word-freq">
 <img alt="../../_images/airline-review-word-freq.png" src="../../_images/airline-review-word-freq.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 10 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำจากชุดข้อมูล 30 อันดับแรก</span><a class="headerlink" href="#airline-review-word-freq" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 15 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำจากชุดข้อมูล 30 อันดับแรก</span><a class="headerlink" href="#airline-review-word-freq" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราพอจะเดาได้ว่าชุดข้อมูลที่นำมาวิเคราะห์นั้นเกี่ยวกับสายการบิน เพราะพบคำว่า <em>flight</em> <em>service</em> <em>airline</em> ด้วยความถี่รวมกว่า 50,000 ครั้ง รวมถึงพบคำอื่น ๆ ที่เกี่ยวกับสายการบินอยู่ใน 30 อันดับแรก เช่น <em>airport</em> <em>plane</em> <em>seats</em> <em>crew</em> <em>luggage</em></p>
@@ -1180,7 +1167,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <section id="id30">
 <h3>วิธีการวิเคราะห์ความถี่ของคำ<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
 <p>การคำนวณความถี่ของคำเป็นกระบวนการที่ไม่ซับซ้อน แต่ต้องอาศัยความละเอียดในการทำความสะอาดข้อมูลเพื่อให้ได้ผลลัพธ์ที่แม่นยำ  ขั้นตอนแรกในการคำนวณความถี่ของคำคือการเตรียมข้อมูลข้อความให้พร้อมสำหรับการวิเคราะห์ การเตรียมข้อมูลอาจรวมถึงการทำความสะอาดข้อมูล เช่น การลบอักขระพิเศษ แฮชแท็ก URL วันที่ หรือข้อมูล metadata อื่น ๆ ตามที่ได้อธิบายไปในบทนี้  เมื่อข้อมูลได้รับการเตรียมพร้อมแล้ว ขั้นตอนถัดไปคือการนับจำนวนครั้งที่แต่ละคำปรากฏในชุดข้อมูล การนับนี้สามารถทำได้โดยการเขียนโปรแกรม เพื่อตัดคำ และนับว่าแต่ละคำปรากฏอยู่ในข้อมูลทั้งหมดกี่ครั้ง ผลลัพธ์จะเป็นรายการของคำพร้อมกับจำนวนครั้งที่พบในข้อมูล ซึ่งเรียกว่า “ความถี่” ของคำนั้น ๆ ความถี่ของคำสามารถนำมาใช้ในการวิเคราะห์เพื่อเห็นแนวโน้มหรือลักษณะเด่นของข้อมูล</p>
-<p>เรามักจะพบว่าการวิเคราะห์ความถี่ของคำมักจะไม่ได้ผลออกมาดี ตีความได้ หากเราไม่ทำการกรองคำหยุด (stopword) ออกไปด้วย คำหยุด  คือ คำที่มีความถี่สูงแต่ไม่มีความหมายในบริบทของการวิเคราะห์ ตัวอย่างของคำหยุด ได้แก่ <em>และ</em> <em>ที่</em> <em>ใน</em> <em>the</em> <em>to</em> <em>for</em> <em>was</em>  เป็นต้น ถ้าหากเราไม่การกรองคำหยุดออกจากชุดข้อมูล ผลการวิเคราะห์จะไม่มีความหมายอะไรเลย ตามที่เห็นในแผนภูมิ <a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 11</span></a> ซึ่งเราไม่สามารถทราบได้เลยว่าชุดข้อมูลที่วิเคราะห์มีเนื้อหาเกี่ยวกับอะไรบ้าง เพราะว่าคำที่ไม่มีนัยสำคัญอยู่ในอันดับสูงสุด กลบคำอื่น ๆ ที่มีสาระสำคัญเชิงเนื้อหา ซึ่งทำให้การวิเคราะห์ข้อมูลไม่มีประสิทธิผล</p>
+<p>เรามักจะพบว่าการวิเคราะห์ความถี่ของคำมักจะไม่ได้ผลออกมาดี ตีความได้ หากเราไม่ทำการกรองคำหยุด (stopword) ออกไปด้วย คำหยุด  คือ คำที่มีความถี่สูงแต่ไม่มีความหมายในบริบทของการวิเคราะห์ ตัวอย่างของคำหยุด ได้แก่ <em>และ</em> <em>ที่</em> <em>ใน</em> <em>the</em> <em>to</em> <em>for</em> <em>was</em>  เป็นต้น ถ้าหากเราไม่การกรองคำหยุดออกจากชุดข้อมูล ผลการวิเคราะห์จะไม่มีความหมายอะไรเลย ตามที่เห็นในแผนภูมิ <a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 16</span></a> ซึ่งเราไม่สามารถทราบได้เลยว่าชุดข้อมูลที่วิเคราะห์มีเนื้อหาเกี่ยวกับอะไรบ้าง เพราะว่าคำที่ไม่มีนัยสำคัญอยู่ในอันดับสูงสุด กลบคำอื่น ๆ ที่มีสาระสำคัญเชิงเนื้อหา ซึ่งทำให้การวิเคราะห์ข้อมูลไม่มีประสิทธิผล</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>คำหยุด (stopword) คือ คำที่ปรากฏบ่อยครั้งในภาษาธรรมชาติ แต่มีนัยสำคัญหรือความหมายเชิงเนื้อหาสาระน้อย</p>
@@ -1188,10 +1175,10 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <figure class="align-default" id="airline-review-with-stopwords">
 <img alt="../../_images/airline-review-with-stopwords.png" src="../../_images/airline-review-with-stopwords.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 11 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยไม่ได้กรองคำหยุดออก</span><a class="headerlink" href="#airline-review-with-stopwords" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 16 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยไม่ได้กรองคำหยุดออก</span><a class="headerlink" href="#airline-review-with-stopwords" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>อีกประการหนึ่งที่สังเกตได้จาก<a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 11</span></a> คือ คำที่ความถี่ลำดับต้น ๆ จะมีความถี่แตกต่างกันมาก ๆ  และคำที่ความถี่ลำดับต่อ ๆ มาจะมีความถี่แตกต่างกันไม่มากนัก เป็นลักษณะที่ปรากฏอยู่เสมอในทุกชุดข้อมูลภาษาทุกภาษา การกระจายของคำในลักษณะนี้ เรียกว่าการกระจายตัวตามกฎของซิปฟ์ (Zipf’s Law) เพราะฉะนั้นเราสามารถกรองคำหยุดได้ง่าย ๆ ด้วยการกรองเอาคำที่ความถี่ลำดับแรก ๆ ที่ความแตกต่างของความถี่ยังต่างกันอยู่มาก ๆ ออกไป โดยอาจจะลองตัดเอาคำที่ความถี่ลำดับ 1 - 100 ออกไป แล้วทำการวิเคราะห์ความถี่ของคำอีกครั้ง ถ้าหากผลยังออกมาไม่ชัดเจนให้ตัดเอาคำที่ความถี่ลำดับ 1 - 150 ออกไป แล้วทำการวิเคราะห์ความถี่ของคำอีกครั้ง แล้วทำไปเรื่อย ๆ จนกว่าจะได้ผลลัพธ์ที่ดูดี</p>
+<p>อีกประการหนึ่งที่สังเกตได้จาก<a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 16</span></a> คือ คำที่ความถี่ลำดับต้น ๆ จะมีความถี่แตกต่างกันมาก ๆ  และคำที่ความถี่ลำดับต่อ ๆ มาจะมีความถี่แตกต่างกันไม่มากนัก เป็นลักษณะที่ปรากฏอยู่เสมอในทุกชุดข้อมูลภาษาทุกภาษา การกระจายของคำในลักษณะนี้ เรียกว่าการกระจายตัวตามกฎของซิปฟ์ (Zipf’s Law) เพราะฉะนั้นเราสามารถกรองคำหยุดได้ง่าย ๆ ด้วยการกรองเอาคำที่ความถี่ลำดับแรก ๆ ที่ความแตกต่างของความถี่ยังต่างกันอยู่มาก ๆ ออกไป โดยอาจจะลองตัดเอาคำที่ความถี่ลำดับ 1 - 100 ออกไป แล้วทำการวิเคราะห์ความถี่ของคำอีกครั้ง ถ้าหากผลยังออกมาไม่ชัดเจนให้ตัดเอาคำที่ความถี่ลำดับ 1 - 150 ออกไป แล้วทำการวิเคราะห์ความถี่ของคำอีกครั้ง แล้วทำไปเรื่อย ๆ จนกว่าจะได้ผลลัพธ์ที่ดูดี</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การกระจายตัวของคำ (word distribution) หมายถึงลักษณะการปรากฏหรือความถี่ในการใช้คำแต่ละคำ</p>
@@ -1199,25 +1186,25 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <figure class="align-default" id="airline-review-excluded-top-50">
 <img alt="../../_images/airline-review-excluded-top-50.png" src="../../_images/airline-review-excluded-top-50.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 12 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 50 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-50" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 17 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 50 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-50" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="airline-review-excluded-top-100">
 <img alt="../../_images/airline-review-excluded-top-100.png" src="../../_images/airline-review-excluded-top-100.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 13 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 100 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-100" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 18 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 100 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-100" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="airline-review-excluded-top-150">
 <img alt="../../_images/airline-review-excluded-top-150.png" src="../../_images/airline-review-excluded-top-150.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 14 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 150 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-150" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 150 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-150" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="airline-review-excluded-top-200">
 <img alt="../../_images/airline-review-excluded-top-200.png" src="../../_images/airline-review-excluded-top-200.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 15 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 200 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-200" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 200 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-200" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1255,14 +1242,14 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <figure class="align-default" id="airline-review-bigram">
 <img alt="../../_images/airline-review-bigram.png" src="../../_images/airline-review-bigram.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 16 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>อย่างไรก็ตาม เพื่อให้การวิเคราะห์มีประสิทธิภาพมากขึ้น เราอาจต้องพิจารณากรองเอาไบแกรมที่ประกอบด้วยคำหยุดอย่างน้อย 1 คำออกจากการวิเคราะห์ การกรองคำหยุดออกจากไบแกรมสามารถช่วยให้เก็บไว้เพียงไบแกรมที่มีความหมาย เช่น ไบแกรม <em>ผิวแห้ง</em> หรือ <em>เทขาย</em> มีประโยชน์กว่า สื่อความหมายได้มากกว่า ไบแกรมที่มีคำหยุด เช่น <em>กับคน</em> หรือ <em>นี้เหมาะ</em> ด้วยวิธีนี้ เราจึงสามารถลดภาระในการวิเคราะห์และเพิ่มความสามารถในการเข้าใจเนื้อหาของคลังข้อมูล</p>
 <figure class="align-default" id="airline-review-bigram-no-stopwords">
 <img alt="../../_images/airline-review-bigram-no-stopwords.png" src="../../_images/airline-review-bigram-no-stopwords.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 17 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยที่กรองเอาไบแกรมที่ประกอบด้วยคำหยุดออก</span><a class="headerlink" href="#airline-review-bigram-no-stopwords" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยที่กรองเอาไบแกรมที่ประกอบด้วยคำหยุดออก</span><a class="headerlink" href="#airline-review-bigram-no-stopwords" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>จากตัวอย่างการวิเคราะห์ความถี่ของไบแกรมใน <code class="docutils literal notranslate"><span class="pre">numref{airline-review-bigram-no-stopwords}</span></code> จะเห็นว่าผู้ที่เขียนรีวิวมักจะพูดถึงการบริการลูกค้า เนื่องจากไบแกรม <em>customer service</em> เป็นไบแกรมที่ปรากฏบ่อยที่สุด และผู้ที่เขียนรีวิวพูดถึงตั๋วชั้นธุรกิจบ่อยกว่าตั๋วชั้นประหยัด ถึงแม้ว่าผู้โดยสารชั้นประหยัดมักจะมีมากกว่าผู้โดยสารชั้นธุรกิจ ซึ่งอาจจะตีความได้ว่าประสบการณ์การนั่งชั้นธุรกิจมีประเด็นให้พูดถึงมากกว่า หรือเป็นประสบการณ์ที่ผู้โดยสารตั้งความหวังไว้สูง
@@ -1274,11 +1261,11 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <p>การสร้างเมฆคำ (Word Cloud) เป็นเทคนิคที่ใช้ในการแสดงภาพรวมของข้อมูลข้อความ โดยจะแสดงคำที่ปรากฏในข้อมูลข้อความเป็นภาพกราฟิกที่คำที่มีความถี่สูงจะปรากฏให้เห็นด้วยขนาดที่ใหญ่กว่าคำที่มีความถี่น้อย การใช้เมฆคำช่วยให้ผู้วิเคราะห์หรือผู้อ่านสามารถจับตาได้ง่ายว่าคำไหนถูกพูดถึงบ่อยครั้งในชุดข้อมูลข้อความที่กำลังศึกษาอยู่ ซึ่งส่งผลให้สามารถประเมินความสำคัญหรือความนิยมของหัวข้อหรือแนวคิดต่างๆ ได้อย่างรวดเร็ว</p>
 <p>การสร้างเมฆคำมีส่วนช่วยเสริมการวิเคราะห์ความถี่ของคำในหลาย ๆ ด้าน ข้อดีหลัก ๆ คือ การทำให้ข้อมูลดูน่าดึงดูด สะดุดตา เมื่อนำไปเป็นส่วนหนึ่งของการนำเสนอ รวมถึงทำให้ผู้วิเคราะห์และผู้ชมสามารถมองเห็นคำที่มีความสำคัญหรือถูกพูดถึงบ่อยในชุดข้อมูลได้ง่ายดาย โดยไม่ต้องดูตัวเลขความถี่โดยตรง
 การแสดงคำที่มีขนาดใหญ่ขึ้นตามความถี่ของคำนั้นๆ ช่วยให้ผู้ชมเข้าใจได้ว่าคำไหนที่มีความสำคัญหรือเป็นที่สนใจมากในหัวข้อหรือชุดข้อมูลนั้น</p>
-<p>ขั้นตอนการทำความสะอาดข้อมูลสำหรับการสร้างเมฆคำ เหมือนกับการวิเคราะห์ความถี่ของคำ เมื่อเราได้คำหรือไบแกรมที่มีความถี่สูงสุดแล้ว เราสามารถใช้ซอฟต์แวร์หรือไลบรารีที่ช่วยสร้างเมฆคำขึ้นมาได้ ซึ่งเราอาจจะปรับแต่งสี ขนาดฟอนต์สูงสุด ต่ำสุด จนกว่าได้เมฆคำที่สวยงามตามความต้องการของเรา ตัวอย่างเมฆคำที่สร้างจากไบแกรมที่มีความถี่สูงสุดในชุดข้อมูลรีวิวสายการบิน แสดงใน <a class="reference internal" href="#airline-review-bigram-wordcloud"><span class="std std-numref">ภาพที่ 18</span></a></p>
+<p>ขั้นตอนการทำความสะอาดข้อมูลสำหรับการสร้างเมฆคำ เหมือนกับการวิเคราะห์ความถี่ของคำ เมื่อเราได้คำหรือไบแกรมที่มีความถี่สูงสุดแล้ว เราสามารถใช้ซอฟต์แวร์หรือไลบรารีที่ช่วยสร้างเมฆคำขึ้นมาได้ ซึ่งเราอาจจะปรับแต่งสี ขนาดฟอนต์สูงสุด ต่ำสุด จนกว่าได้เมฆคำที่สวยงามตามความต้องการของเรา ตัวอย่างเมฆคำที่สร้างจากไบแกรมที่มีความถี่สูงสุดในชุดข้อมูลรีวิวสายการบิน แสดงใน <a class="reference internal" href="#airline-review-bigram-wordcloud"><span class="std std-numref">ภาพที่ 23</span></a></p>
 <figure class="align-default" id="airline-review-bigram-wordcloud">
 <img alt="../../_images/airline-review-bigram-wordcloud.png" src="../../_images/airline-review-bigram-wordcloud.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 18 </span><span class="caption-text">เมฆคำแสดงไบแกรมที่พบบ่อยอันดับแรก ๆ ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram-wordcloud" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">เมฆคำแสดงไบแกรมที่พบบ่อยอันดับแรก ๆ ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram-wordcloud" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="id34">
