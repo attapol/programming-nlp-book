@@ -62,8 +62,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module2/3s-exercise-variable-function';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -458,31 +456,31 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์​เรื่องตัวแปรและฟังก์ชัน</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print">ข้อ 1 - <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-vs">ข้อ 2 - <code class="docutils literal notranslate"><span class="pre">input</span></code> vs พารามิเตอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ฟังก์ชันแบบมีพารามิเตอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-vs-return">ข้อ 4 - <code class="docutils literal notranslate"><span class="pre">print</span></code> vs <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update">ข้อ 5 - update ตัวแปรในลูป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 6 - update ตัวแปรในลูป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 7 - หารสองกี่ครั้ง</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 7.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8 - แปลงเวลา</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 9 - ไซส์ไหน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 10 - โควิด</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 11 - วัคซีน</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 11.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 11.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 11.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flag-factory">ข้อ 12 Flag factory</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 12.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 12.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ข้อ 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ข้อ 12.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ข้อ 12.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">ข้อ 13 - ดัชนีมวลกาย - BMI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ข้อ 13</a></li>
 </ul>
 </li>
 </ul>
@@ -500,36 +498,19 @@ document.write(`
 <h1>เฉลยแบบฝึกหัด: ตัวแปร และฟังก์ชัน<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
 <h2>โจทย์​เรื่องตัวแปรและฟังก์ชัน<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<section id="print">
-<h3>ข้อ 1 - <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="headerlink" href="#print" title="Permalink to this heading">#</a></h3>
-<p>เขียนฟังก์ชันที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">greet</span></code> ที่แสดงผลข้อความว่า “สวัสดีชาวโลก”</p>
+<section id="id3">
+<h3>ข้อ 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน greet() </span>
-<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;สวัสดีชาวโลก&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน greet()</span>
-<span class="n">greet</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>สวัสดีชาวโลก
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="input-vs">
-<h3>ข้อ 2 - <code class="docutils literal notranslate"><span class="pre">input</span></code> vs พารามิเตอร์<a class="headerlink" href="#input-vs" title="Permalink to this heading">#</a></h3>
-<p>เขียนฟังก์ชันที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">add</span></code> ที่รับพารามิเตอร์สองตัว และคืนค่า (<code class="docutils literal notranslate"><span class="pre">return</span></code>) เป็นผลรวมของสองค่าที่ได้รับมา</p>
-<p>สังเกตว่าโจทย์ข้อนี้เราจะไม่ใช้ <code class="docutils literal notranslate"><span class="pre">input</span></code> เพราะจะส่งค่าให้ฟังก์ชันผ่านพารามิเตอร์</p>
+<section id="id4">
+<h3>ข้อ 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน add() วิธีที่ 1</span>
@@ -549,60 +530,18 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน add()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน add()</span>
-<span class="n">value1</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">value2</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value1</span> <span class="o">*</span> <span class="n">value2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id3">
-<h3>ข้อ 3 - ฟังก์ชันแบบมีพารามิเตอร์<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>จงหาปริมาตรของกล่องที่มีความกว้าง 3 ซม. ยาว 7 ซม. และ สูง 9 ซม. โดยสร้าง function ที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">cuboid</span></code> ที่รับ argument สามตัว (คำตอบคือ 189)</p>
-<p>จากนั้นคำนวณปริมาตรของกล่องที่มีความกว้าง 5.5 ซม. ยาว 6 ซม. และ สูง 8 ซม. โดยเปลี่ยนค่า argument (คำตอบคือ 264.0)</p>
-<p>จากนั้นคำนวณผลรวมของปริมาตรของทั้งสองกล่อง</p>
+<section id="id5">
+<h3>ข้อ 3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน cuboid()</span>
 <span class="k">def</span> <span class="nf">cuboid</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
   <span class="n">volume</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span> <span class="o">*</span> <span class="n">height</span>
   <span class="k">return</span> <span class="n">volume</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน cuboid() คำนวณปริมาตรของกล่องที่มีความกว้าง 3 ซม. ยาว 7 ซม. และ สูง 9 ซม. </span>
+
 <span class="n">vol_box1</span> <span class="o">=</span> <span class="n">cuboid</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">vol_box1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>189
 </pre></div>
 </div>
 </div>
@@ -622,24 +561,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="print-vs-return">
-<h3>ข้อ 4 - <code class="docutils literal notranslate"><span class="pre">print</span></code> vs <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#print-vs-return" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">show_work_cuboid</span></code> ที่รับ argument สามตัว คือความกว้าง ความยาว และความสูง โดยกำหนดให้ฟังก์ชันนี้</p>
-<ul class="simple">
-<li><p>ไม่ต้อง return อะไรเลย</p></li>
-<li><p>แสดงวิธีการคิดปริมาตรโดยการ <code class="docutils literal notranslate"><span class="pre">print</span></code> เช่น</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">show_work_cuboid</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-<span class="go">ความกว้าง</span>
-<span class="go">2</span>
-<span class="go">ความยาว</span>
-<span class="go">3</span>
-<span class="go">ความสูง</span>
-<span class="go">4</span>
-<span class="go">ปริมาตร</span>
-<span class="go">24</span>
-</pre></div>
-</div>
+<section id="id6">
+<h3>ข้อ 4<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน show_work_cuboid()</span>
@@ -657,69 +580,17 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน show_work_cuboid()</span>
-<span class="n">show_work_cuboid</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ความกว้าง
-2
-ความยาว
-3
-ความสูง
-4
-ปริมาตร
-24
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="update">
-<h3>ข้อ 5 - update ตัวแปรในลูป<a class="headerlink" href="#update" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนฟังก์ชันหาผลรวมตั้งแต่ 1 ถึง n
-เช่น</p>
-<p><code class="docutils literal notranslate"><span class="pre">cumulative_sum(3)</span></code> = 1 + 2 + 3  = 6</p>
-<p><code class="docutils literal notranslate"><span class="pre">cumulative_sum(5)</span></code> = 1 + 2 + 3 + 4 + 5 = 15</p>
+<section id="id7">
+<h3>ข้อ 5<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># วิธีที่ 1: เรียกตัวเองที่เล็กกว่า</span>
-<span class="k">def</span> <span class="nf">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-  <span class="c1"># 1 + 2 + 3 + ... + (n-1) + n --&gt; cumulative_sum(n)</span>
-  <span class="c1"># cumulative_sum(n-1) + n</span>
-  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">cum_sum</span> <span class="o">=</span> <span class="mi">1</span>
-  <span class="k">elif</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">cum_sum</span> <span class="o">=</span> <span class="n">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span>
-  <span class="k">return</span> <span class="n">cum_sum</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># วิธีที่ 2: for loop</span>
-<span class="k">def</span> <span class="nf">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-  <span class="c1"># 1. กำหนดตัวแปร 1 ตัว (result) ที่เก็บผลรวม ตั้งแต่ 1 ถึง i</span>
-  <span class="c1"># 2. ใช้ for loop เพื่อเปลี่ยนค่า i ไปเรื่อยๆ ตั้งแต่ 1 ถึง n</span>
-  <span class="c1"># ขั้นบันได้แต่ละขั้น (ขั้น i) คือหาผลรวมตั้งแต่ 1 - i</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
   <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="c1"># for i in range(n) --&gt; i = 0 ถึง n-1</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># เริ่มที่เท่าไร จบที่เท่าไร เพิ่มทีละเท่าไร i = 1 -&gt; n</span>
-    <span class="c1"># เมื่อเรามาถึงขั้น 5 -&gt; result คือ 1+2+3+4</span>
-    <span class="c1"># เมื่อเรามาถึงขั้น i -&gt; result คือ 1+2+3+...+(i-1)</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> 
     <span class="n">result_pre</span> <span class="o">=</span> <span class="n">result</span>
-
-    <span class="c1"># --&gt; อยากได้ผลรวม 1+2+3+...+i --&gt; result + i</span>
     <span class="n">result_post</span> <span class="o">=</span> <span class="n">result_pre</span> <span class="o">+</span> <span class="n">i</span>
-    <span class="c1"># เมื่อเราจะออกจากขั้น 5 --&gt; result คือ 1+2+3+4+5</span>
-    <span class="c1"># เมื่อเราจะออกจากขั้น i --&gt; result คือ 1+2+3+...+i</span>
-    <span class="c1"># กำหนดชื่อเป็น result</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">result_post</span>
-    
   <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
@@ -727,91 +598,38 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># วิธีที่ 3: for loop แบบ รวม 3 บรรทัด เป็นบรรทัดเดียว</span>
-<span class="k">def</span> <span class="nf">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cumulative_sum</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
   <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> 
     <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">i</span>
-
   <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน cumulative_sum()</span>
-<span class="k">if</span> <span class="n">cumulative_sum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-    
-<span class="k">if</span> <span class="n">cumulative_sum</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correct!
-Correct!
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id4">
-<h3>ข้อ 6 - update ตัวแปรในลูป<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>จงสร้าง function ที่คำนวณ factorial <span class="math notranslate nohighlight">\(n!\)</span></p>
-<p><span class="math notranslate nohighlight">\(n! = 1 \times 2 \times \cdots  \times n\)</span></p>
-<p><code class="docutils literal notranslate"><span class="pre">fact(5)</span></code> = 1 x 2 x 3 x 4 x 5 = 120</p>
+<section id="id8">
+<h3>ข้อ 6<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน fact() ที่รับพารามิเตอร์ 1 ตัว</span>
 <span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># กำหนดค่าเริ่มต้นของตัวแปร x เป็น 1</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="c1"># วนลูปตามจำนวนที่รับเข้ามาในพารามิเตอร์ n</span>
+    <span class="c1"># วนซ้ำตามจำนวนที่รับเข้ามาในพารามิเตอร์ n</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="c1"># คูณค่า x ด้วยตัวเลขในช่วง 1 ถึง n</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="c1"># เก็บค่า x ล่าสุดในแต่ละรอบไว้ในตัวแปร result</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span>
-
-    <span class="c1"># ส่งค่า result กลับ</span>
-    <span class="k">return</span> <span class="n">result</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน fact()</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="id5">
-<h3>ข้อ 7 - หารสองกี่ครั้ง<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<section id="id6">
-<h4>ข้อ 7.1<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
-<p>จงสร้าง function ที่รับ integer แล้วคืนจำนวนว่าหาร 2 ได้กี่ครั้งค่าถึงจะกลายเป็น 1</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">divide_two</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="mi">4</span>
-<span class="n">divide_two</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="mi">2</span>
-</pre></div>
-</div>
-<p>Bonus: ลองเพิ่มเงื่อนไข <code class="docutils literal notranslate"><span class="pre">if</span></code> ที่จับ input ที่หารสองเท่าไรก็ไม่ได้ 1 (หารแล้วกลายเป็นค่าที่น้อยกว่า 1) จากนั้น <code class="docutils literal notranslate"><span class="pre">print</span></code> บอกว่า input ไม่ใช่เลขฐาน 2</p>
+<section id="id9">
+<h3>ข้อ 7<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h4>ข้อ 7.1<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชันที่รับค่าจำนวนเต็มและคืนค่าว่าหารด้วย 2 ได้กี่ครั้งจนกลายเป็น 1</span>
@@ -841,20 +659,7 @@ Correct!
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน divide_two()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">divide_two</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bonus: สร้างฟังก์ชันที่รับค่าจำนวนเต็มและคืนจำนวนครั้งที่ต้องหารด้วย 2 จนกลายเป็น 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># โบนัส</span>
 <span class="k">def</span> <span class="nf">divide_two</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="c1"># วนลูปจนกว่า n จะมีค่าน้อยกว่า 2</span>
@@ -871,39 +676,23 @@ Correct!
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># เรียกใช้ฟังก์ชัน divide_two()</span>
-<span class="n">divide_two</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input ไม่ใช่เลขฐาน 2
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id7">
-<h4>ข้อ 7.2<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
-<p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log</span></code> ทางคณิตศาสตร์ในการช่วยคำนวณข้อ 7. ได้ โดยที่เมื่อ
-<span class="math notranslate nohighlight">\(\log_2(x)\)</span> = จำนวนครั้งที่ใช้ 2 หาร <span class="math notranslate nohighlight">\(x\)</span> ไปเรื่อย ๆ จนได้ 1</p>
-<p>ในข้อนี้ ให้ลองใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">log2</span></code> (อยู่ใน module <code class="docutils literal notranslate"><span class="pre">math</span></code>) ในการทำโจทย์จากข้อ 7.1</p>
+<section id="id11">
+<h4>ข้อ 7.2<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># นำเข้าโมดูล math สำหรับการทำงานกับฟังก์ชันทางคณิตศาสตร์</span>
 <span class="kn">import</span> <span class="nn">math</span>
 
-<span class="c1"># เรียกใช้ฟังก์ชัน math.log() จากโมดูล math เพื่อคำนวณ logarithm </span>
-<span class="c1"># คำนวณ log base 2 ของ 32</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># ผลลัพธ์คือ 5.0</span>
+<span class="c1"># เรียกใช้ฟังก์ชัน math.log() จากโมดูล math เพื่อคำนวณลอการิทึม</span>
+<span class="c1"># คำนวณ log ฐาน 2 ของ 32</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>  <span class="c1"># ผลลัพธ์คือ 5.0</span>
 
-<span class="c1"># คำนวณ log base 2 ของ 16</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># ผลลัพธ์คือ 4.0</span>
+<span class="c1"># คำนวณ log ฐาน 2 ของ 16</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>  <span class="c1"># ผลลัพธ์คือ 4.0</span>
 
-<span class="c1"># คำนวณ log base 2 ของ 4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>   <span class="c1"># ผลลัพธ์คือ 2.0</span>
+<span class="c1"># คำนวณ log ฐาน 2 ของ 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>   <span class="c1"># ผลลัพธ์คือ 2.0</span>
 </pre></div>
 </div>
 </div>
@@ -917,75 +706,21 @@ Correct!
 </div>
 </section>
 </section>
-<section id="id8">
-<h3>ข้อ 8 - แปลงเวลา<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>เขียนฟังก์ชันในการแปลงวัน ชั่วโมง นาที เป็นวินาที</p>
-<p>เช่น 2 วัน 5 ชั่วโมง 10 นาที เท่ากับ 191,400 วินาที</p>
-<p>3 วัน 5 นาที เท่ากับ 259,500 วินาที</p>
-<p>ให้ตั้งชื่อ function และ argument เอง และเขียน if-statement ในการตรวจสอบคำตอบ</p>
+<section id="id12">
+<h3>ข้อ 8<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน convert_to_seconds() รับพารามิเตอร์ 3 ตัวเป็น วัน ชั่วโมง และนาทีตามลำดับ</span>
-<span class="k">def</span> <span class="nf">convert_to_seconds</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_to_seconds</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
     <span class="c1"># คำนวณเวลาทั้งหมดในหน่วยวินาที</span>
     <span class="n">total_seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">days</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">hours</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">total_seconds</span>  <span class="c1"># คืนค่าเวลาทั้งหมดในหน่วยวินาที</span>
- 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน convert_to_seconds()</span>
-<span class="n">result_1</span> <span class="o">=</span> <span class="n">convert_to_seconds</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">result_1</span> <span class="o">==</span> <span class="mi">259200</span><span class="p">:</span>  <span class="c1"># 3 วัน = 259200 วินาที</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-
-<span class="n">result_2</span> <span class="o">=</span> <span class="n">convert_to_seconds</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">result_2</span> <span class="o">==</span> <span class="mi">477000</span><span class="p">:</span>  <span class="c1"># 5 วัน 12 ชั่วโมง 30 นาที = 477000 วินาที</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correct!
-Correct!
+    <span class="k">return</span> <span class="n">total_seconds</span>  <span class="c1"># คืนค่าเวลาทั้งหมดในหน่วยวินาที </span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="id9">
-<h3>ข้อ 9 - ไซส์ไหน<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
-<p>เขียนโปรแกรมที่บอกว่าผู้ใช้ควรจะใส่เสื้อไซส์อะไรถ้าดูจากรอบเอว เราต้องการแปลงรอบเอวเป็นไซส์ตามตารางข้างล่างนี้</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Size</p></th>
-<th class="head"><p>รอบเอว (เซนติเมตร)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>S</p></td>
-<td><p>&lt; 76</p></td>
-</tr>
-<tr class="row-odd"><td><p>M</p></td>
-<td><p>76 - 84</p></td>
-</tr>
-<tr class="row-even"><td><p>L</p></td>
-<td><p>&gt; 84</p></td>
-</tr>
-</tbody>
-</table>
-<p>โปรแกรมจะต้องมีลักษณะดังนี้</p>
-<ul class="simple">
-<li><p>Input: รอบเอว หน่วยเป็นนิ้ว (เพราะฉะนั้นจะต้องแปลงก่อน 1 นิ้ว = 2.54 เซนติเมตร)</p></li>
-<li><p>Output: Size ที่เหมาะสม type string</p></li>
-</ul>
+<section id="id13">
+<h3>ข้อ 9<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># สร้างฟังก์ชัน recommend_size() ที่รับพารามิเตอร์ 1 ตัวเป็นขนาดรอบเอว</span>
@@ -1000,72 +735,14 @@ Correct!
         <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;M&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;L&#39;</span>
-    
     <span class="k">return</span> <span class="n">size</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน recommend_size()</span>
-<span class="k">if</span> <span class="n">recommend_size</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">recommend_size</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Incorrect!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correct!
-Correct!
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id10">
-<h3>ข้อ 10 - โควิด<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
-<p>สมมติว่าผู้ป่วยโควิด 19 หนึ่งคนจะมีทำให้มีผู้ติดเชื้อมากขึ้น 3 คนต่อวัน</p>
-<p>เพราะฉะนั้นถ้าวันที่ 1 มีผู้ป่วย 5 คน</p>
-<ul class="simple">
-<li><p>วันที่สองจะมีผู้ป่วยเพิ่มขึ้น 5 x 3 = 15 คน รวมแล้วมีจำนวนผู้ป่วย 5 + 15 = 20 คน</p></li>
-<li><p>วันที่สามจะมีผู้ป่วยเพิ่มขึ้น 20 x 3 = 60 คน รวมแล้วมีจำนวนผู้ป่วย 20 + 60 = 80 คน</p></li>
-<li><p>วันที่สี่จะมีผู้ป่วย 80 x 3 = 240 คน รวมแล้วมีจำนวนผู้ป่วย 80 + 240  = 320 คน</p></li>
-</ul>
-<p>เขียนโปรแกรมที่ print จำนวนผู้ป่วยในแต่ละวันโดยที่โปรแกรมจะมีลักษณะดังนี้</p>
-<p>input:</p>
-<ol class="arabic simple">
-<li><p>จำนวนผู้ป่วยตั้งต้น (วันที่ 0)</p></li>
-<li><p>จำนวนวันที่ต้องการ print</p></li>
-</ol>
-<p>output: จำนวนผู้ป่วยในวันสุดท้าย</p>
-<p>โปรแกรมจะต้อง print จำนวนผู้ป่วยในแต่ละวันอีกด้วย</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_patients</span><span class="p">(</span><span class="n">num_initial_patients</span><span class="p">,</span> <span class="n">num_days</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    &gt;&gt;&gt; compute_patients(5, 3) # จำนวนผู้ป่วยตั้งต้น 5 คน ต้องการคำนวณ 3 วัน</span>
-<span class="sd">    Day 1: 20 patients</span>
-<span class="sd">    Day 2: 80 patients</span>
-<span class="sd">    Day 3: 320 patients</span>
-<span class="sd">    320</span>
-
-<span class="sd">    &gt;&gt;&gt; compute_patients(10, 2) # จำนวนผู้ป่วยตั้งต้น 10 คน ต้องการคำนวณ 2 วัน</span>
-<span class="sd">    Day 1: 30 patients</span>
-<span class="sd">    Day 2: 160 patients</span>
-<span class="sd">    160</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="id14">
+<h3>ข้อ 10<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># วิธีที่ 1</span>
@@ -1134,27 +811,10 @@ Correct!
 </div>
 </div>
 </section>
-<section id="id11">
-<h3>ข้อ 11 - วัคซีน<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
-<p>วัคซีน COVID-19 แต่ละชนิดสามารถสร้างภูมิคุ้มกันได้แตกต่างกันขึ้นอยู่กับสภาพบุคคล ซึ่งเมื่อหลังจากฉีดวัคซีนแล้ว 7 วัน คนเราจะมีภูมิคุ้มกันสูงที่สุด (สูงที่สุดไม่เกิน 500 หน่วย) แต่ว่าปริมาณภูมิคุ้มกันสูงสุดก็แตกต่างกันไป ขึ้นอยู่กับสภาพร่างกายของแต่ละคนและชนิดของวัคซีนที่ได้รับ
-หลังจากร่างกายเรามีภูมิคุ้มกันสูงที่สุดแล้ว ปริมาณภูมิคุ้มกันในร่างกายก็จะลดลงเรื่อยๆ โดยปริมาณภูมิคุ้มกันในวันถัดไป จะเป็น 𝛂 เท่า (อ่านว่า alpha, อัลฟ่า) ของปริมาณภูมิคุ้มกันในวันนี้ โดยที่ค่า 𝛂 ขึ้นอยู่กับสภาพร่างกายของแต่ละคน หากคนเรามีปริมาณภูมิคุ้มกันต่ำกว่า 40 หน่วย จะถือว่าไม่มีภูมิต้านทานโรค COVID-19</p>
-<p><strong>ตัวอย่าง</strong></p>
-<ul class="simple">
-<li><p>คุณยายเอ๋ อายุ 75 ปี มีโรคประจำตัวเป็นโรคเบาหวาน มีค่า 𝛂 เป็น 0.60</p></li>
-<li><p>หลังจากรับวัคซีนไปแล้ว 7 วัน คุณยายเอ๋มีภูมิคุ้มกันสูงสุดที่ 350 หน่วย</p></li>
-<li><p>วันถัดไป (วันที่ 8 หลังจากรับวัคซีน) คุณยายเอ๋จะมีภูมิคุ้มกันอยู่ที่ 0.60 *  350 = 210 หน่วย</p></li>
-<li><p>วันที่ 9 จะมีภูมิคุ้มกันอยู่ 0.60 * 210 = 126 หน่วย</p></li>
-</ul>
-<section id="id12">
-<h4>ข้อ 11.1<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h4>
-<p>จงเขียนฟังก์ชัน days_to_hazard ซึ่งรับ parameter 2 ตัว ได้แก่ 1) ปริมาณภูมิคุ้มกันสูงสุด ณ วันที่ 7 หลังจากฉีดวัคซีน 2) ค่า 𝛂 แล้วให้ฟังก์ชันนี้คืนค่าเป็นจำนวนวันว่าคนๆ นี้มีภูมิต้านทานโรค COVID-19 ได้อยู่กี่วันหลังจากฉีดวัคซีน (ไม่นับวันที่มีปริมาณภูมิคุ้มกันต่ำกว่า 40 หน่วย)
-ตัวอย่าง</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">days_to_hazard</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">)</span> <span class="c1"># ปริมาณภูมิคุ้มกันสูงสุด 400 หน่วย, 𝛂 = 0.80</span>
-<span class="go">17</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">days_to_hazard</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># ปริมาณภูมิคุ้มกันสูงสุด 200 หน่วย, 𝛂 = 0.5</span>
-<span class="go">9</span>
-</pre></div>
-</div>
+<section id="id15">
+<h3>ข้อ 11<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id16">
+<h4>ข้อ 11.1<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">days_to_hazard</span><span class="p">(</span><span class="n">max_immunity</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
@@ -1186,23 +846,9 @@ Correct!
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน days_to_hazard()</span>
-<span class="n">days_to_hazard</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id13">
-<h4>ข้อ 11.2<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
-<p>เขียนโปรแกรมโดยใช้ฟังก์ชัน days_to_hazard เพื่อตรวจสอบว่า ระหว่างคุณยายเอ๋ในตัวอย่าง กับนายโจ้ อายุ 22 ปี ผู้ซึ่งเป็นโรคอ้วน มีค่า 𝛂 = 0.75 และมีภูมิคุ้มกันสูงสุด 300 หน่วย ใครจะถึงจุดอันตรายก่อน (ใครจะไม่มีภูมิต้านทาน COVID-19 ก่อน) โดยพิมพ์ว่า เอ๋ก่อน หรือ โจ้ก่อน ทางหน้าจอ</p>
+<section id="id17">
+<h4>ข้อ 11.2<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_risk</span><span class="p">(</span><span class="n">name1</span><span class="p">,</span> <span class="n">max_immune1</span><span class="p">,</span> <span class="n">alpha1</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="n">max_immune2</span><span class="p">,</span> <span class="n">alpha2</span><span class="p">):</span>
@@ -1234,40 +880,10 @@ Correct!
 </div>
 </section>
 </section>
-<section id="flag-factory">
-<h3>ข้อ 12 Flag factory<a class="headerlink" href="#flag-factory" title="Permalink to this heading">#</a></h3>
-<section id="id14">
-<h4>ข้อ 12.1<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
-<p>คุณเป็นผู้จัดการโรงงานผลิดธง (Flag Factory) คุณจ่ายค่าแรงพนักงานตามจำนวนธงที่ผลิตได้ใน 1 ชั่วโมง ตามตารางด้านล่างนี้</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>จำนวนธงที่ผลิตได้ใน 1 ชั่วโมง</p></th>
-<th class="head"><p>ค่าแรง (ของชั่วโมงนี้)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1-10</p></td>
-<td><p>50 บาท</p></td>
-</tr>
-<tr class="row-even"><td><p>11-20</p></td>
-<td><p>120 บาท</p></td>
-</tr>
-<tr class="row-odd"><td><p>&gt;= 21</p></td>
-<td><p>6.50 บาทต่อธง</p></td>
-</tr>
-</tbody>
-</table>
-<p>เขียนฟังก์ชันในภาษา python ชื่อ hourly_pay ซึ่งรับ parameter 1 ตัว ได้แก่ จำนวนธงที่ผลิดได้ใน 1 ชั่วโมง แล้วให้ฟังก์ชันนี้คืนค่าเป็นค่าแรงที่จะได้รับในชั่วโมงนี้
-ตัวอย่าง</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">hourly_pay</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># ค่าแรงในชั่วโมงที่ผลิตได้ 9 ธง</span>
-<span class="go">50</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hourly_pay</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># ค่าแรงในชั่วโมงที่ผลิตได้ 25 ธง</span>
-<span class="go">162.5</span>
-</pre></div>
-</div>
+<section id="id18">
+<h3>ข้อ 12<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<section id="id19">
+<h4>ข้อ 12.1<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hourly_pay</span><span class="p">(</span><span class="n">flag</span><span class="p">):</span>
@@ -1290,55 +906,9 @@ Correct!
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน hourly_pay()</span>
-<span class="n">hourly_pay</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>162.5
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id15">
-<h4>ข้อ 12.2<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
-<p>เมื่อทำงานหลายชั่วโมงติดต่อกัน พนักงานส่วนใหญ่สามารถผลิตธงได้มากขึ้น ซึ่งแต่ละคนสามารถผลิตธงได้เพิ่มขึ้นเป็นจำนวนแตกต่างกัน เช่น</p>
-<p>นายแมว สามารถผลิตธงได้ 6 ธง ในชั่งโมงแรก และผลิตได้เพิ่มขึ้น 3 ธง ในแต่ละชั่วโมงที่ทำงาน ฉะนั้น</p>
-<ul class="simple">
-<li><p>ชั่วโมงที่ 1 นายแมว ผลิตได้ 6 ธง</p></li>
-<li><p>ชั่วโมงที่ 2 นายแมว ผลิตได้ 6+3 = 9 ธง</p></li>
-<li><p>ชั่วโมงที่ 3 นายแมว ผลิตได้ 9+3 = 12 ธง</p></li>
-<li><p>ชั่วโมงที่ 4 นายแมว ผลิตได้ 12+3 = 15 ธง</p></li>
-<li><p>ชั่วโมงที่ 5 นายแมว ผลิตได้ 15+3 = 18 ธง</p></li>
-<li><p>…</p></li>
-</ul>
-<p>นายตู้ สามารถผลิตธงได้ 9 ธง ในชั่งโมงแรก แต่ไม่สามารถผลิตเพิ่มได้เมื่อทำงานหลายชั่วโมงติดต่อกัน ฉะนั้น</p>
-<ul class="simple">
-<li><p>ชั่วโมงที่ 1 นายตู้ ผลิตได้ 9 ธง</p></li>
-<li><p>ชั่วโมงที่ 2 นายตู้ ผลิตได้ 9 ธง</p></li>
-<li><p>ชั่วโมงที่ 3 นายตู้ ผลิตได้ 9 ธง</p></li>
-<li><p>ชั่วโมงที่ 3 นายตู้ ผลิตได้ 9 ธง</p></li>
-<li><p>…</p></li>
-</ul>
-<p>เขียนฟังก์ชันชื่อ daily_pay ซึ่งรับ parameter 3 ตัว ตามลำดับดังต่อไปนี้</p>
-<ul class="simple">
-<li><p>จำนวนธงที่ผลิตได้ในชั่วโมงแรก</p></li>
-<li><p>จำนวนธงที่สามารถผลิตเพิ่มได้ในแต่ละชั่วโมง</p></li>
-<li><p>จำนวนชั่วโมงที่ทำงานในวันนี้</p></li>
-</ul>
-<p>ให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">daily_pay</span></code> คืนค่าเป็นค่าแรงที่จะได้รับทั้งหมดในวันนั้น</p>
-<p>ข้อกำหนด:  ห้ามใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code> ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">daily_pay</span></code> แต่สามารถเรียกใช้ฟังก์ชันจาก 11.1 ได้
-ตัวอย่าง</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">daily_pay</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># ตัวอย่างนายแมวด้านบน ทำงาน 5 ชั่วโมง</span>
-<span class="go">460</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">daily_pay</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1"># ตัวอย่างนายตู้ด้านบน ทำงาน 4 ชั่วโมง</span>
-<span class="go">200</span>
-</pre></div>
-</div>
+<section id="id20">
+<h4>ข้อ 12.2<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">daily_pay</span><span class="p">(</span><span class="n">first_flag</span><span class="p">,</span> <span class="n">next_flag</span><span class="p">,</span> <span class="n">hour</span><span class="p">):</span>
@@ -1385,31 +955,10 @@ Correct!
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน daily_pay()</span>
-<span class="n">daily_pay</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>460
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
-<section id="bmi">
-<h3>ข้อ 13 - ดัชนีมวลกาย - BMI<a class="headerlink" href="#bmi" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนฟังก์ชันคำนวณค่า BMI สำหรับตรวจสอบภาวะไขมันและความอ้วน ที่รับ input เป็นน้ำหนักและส่วนสูง มีสูตรคำนวณคือ น้ำหนักตัว[Kg] / (ส่วนสูง[m] ยกกำลังสอง) มีหลักเกณฑ์การตรวจสอบภาวะไขมันดังนี้</p>
-<ol class="arabic simple">
-<li><p>อ้วนมาก = 30.0 ขึ้นไป</p></li>
-<li><p>อ้วน = 25.0 - 29.9</p></li>
-<li><p>น้ำหนักปกติ  = 18.6 - 24</p></li>
-<li><p>ผอมเกินไป = น้อยกว่า 18.5</p></li>
-</ol>
-<p>ให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">compute_bmi()</span></code> return ค่า BMI และ print สภาวะไขมัน เช่น ‘น้ำหนักปกติ’ หรือ ‘ผอมเกินไป’</p>
+<section id="id21">
+<h3>ข้อ 13<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_bmi</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
@@ -1433,22 +982,6 @@ Correct!
     <span class="nb">print</span><span class="p">(</span><span class="n">classification</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">bmi</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ทดสอบฟังก์ชัน compute_bmi</span>
-<span class="n">compute_bmi</span><span class="p">(</span><span class="mi">171</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>  <span class="c1"># Output: &quot;น้ำหนักปกติ&quot; 18.80</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>น้ำหนักปกติ
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18.80920625149619
 </pre></div>
 </div>
 </div>
@@ -1525,31 +1058,31 @@ Correct!
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์​เรื่องตัวแปรและฟังก์ชัน</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print">ข้อ 1 - <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-vs">ข้อ 2 - <code class="docutils literal notranslate"><span class="pre">input</span></code> vs พารามิเตอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 3 - ฟังก์ชันแบบมีพารามิเตอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-vs-return">ข้อ 4 - <code class="docutils literal notranslate"><span class="pre">print</span></code> vs <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update">ข้อ 5 - update ตัวแปรในลูป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 6 - update ตัวแปรในลูป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 7 - หารสองกี่ครั้ง</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 7.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 7.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 7.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 8 - แปลงเวลา</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 9 - ไซส์ไหน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 10 - โควิด</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 11 - วัคซีน</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 11.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 11.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 11.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flag-factory">ข้อ 12 Flag factory</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อ 12.1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ข้อ 12.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ข้อ 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ข้อ 12.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ข้อ 12.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">ข้อ 13 - ดัชนีมวลกาย - BMI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ข้อ 13</a></li>
 </ul>
 </li>
 </ul>

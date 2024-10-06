@@ -62,8 +62,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module2/5s-exercise-string';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -458,23 +456,23 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์ปัญหาเรื่องสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-suffix">ข้อ 1 - Prefix suffix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-word">ข้อ 2 - Compound word</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-string">ข้อ 3 - Reverse String</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#palindrome">ข้อ 4 - Palindrome</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pig-latin">ข้อ 5 - Pig Latin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flip-language">ข้อ 6 - Flip Language</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 7 - ไม่ 1 ไม่ 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 8 - ไปรษณีย์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9 - Am I a float?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - Password generator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#past-form">ข้อ 11 - Past form</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ส่วนที่ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ส่วนที่ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">11.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 12 - ชื่อย่อ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 13 - นับตัวสะกดแปลก</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 12</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 13</a></li>
 </ul>
 </li>
 </ul>
@@ -492,27 +490,8 @@ document.write(`
 <h1>เฉลยแบบฝึกหัด: สตริง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
 <h2>โจทย์ปัญหาเรื่องสตริง<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<section id="prefix-suffix">
-<h3>ข้อ 1 - Prefix suffix<a class="headerlink" href="#prefix-suffix" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนโปรแกรมที่ detect ว่าคำมี prefix/suffix ที่กำลังหาหรือไม่
-ถ้ามี prefix/suffix นั้นไปจับกับหน่วยคำใด</p>
-<p>เช่น
-คำว่า ‘ใจแตก’ มี ‘ใจ’ เป็น prefix ที่เกาะกับหน่วยคำ ‘-แตก’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;ใจแตก&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;-แตก&#39;</span>
-</pre></div>
-</div>
-<p>คำว่า ‘เข็ญใจ’ มี ‘ใจ’ เป็น suffix ที่เกาะกับหน่วยคำ ‘เข็ญ-’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detect_prefix_suffix</span><span class="p">(</span><span class="s1">&#39;เข็ญใจ&#39;</span><span class="p">,</span> <span class="s1">&#39;ใจ&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s1">&#39;เข็ญ-&#39;</span>
-</pre></div>
-</div>
-<p>ถ้าไม่ได้เป็น prefix หรือ suffix ให้ return ‘’</p>
-<p>อย่าลืมเติม - ให้ถูกต้องด้วย ขีดหน้าคือ prefix ขีดหลังคือ suffix</p>
-<p>คำใบ้: แนะนำให้แก้โจทย์เล็กๆ ก่อน</p>
-<ol class="arabic simple">
-<li><p>กรณีที่ไม่เป็น prefix suffix</p></li>
-<li><p>กรณีที่เป็น prefix</p></li>
-<li><p>กรณีที่เป็น suffix</p></li>
-</ol>
+<section id="id3">
+<h3>ข้อ 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_prefix_suffix</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">affix</span><span class="p">):</span>
@@ -564,20 +543,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="compound-word">
-<h3>ข้อ 2 - Compound word<a class="headerlink" href="#compound-word" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนฟังก์ชันที่มี input เป็นสตริงหนึ่งสตริง ฟังก์ชัน return <code class="docutils literal notranslate"><span class="pre">True</span></code> ถ้าสตริงสามารถถูกแบ่งออกมาเป็นคำสองคำย่อยได้ เช่น</p>
-<ul class="simple">
-<li><p>headband สามารถถูกแบ่งเป็น head + band</p></li>
-<li><p>warhead สามารถถูกแบ่งเป็น war + head</p></li>
-<li><p>headset สามารถถูกแบ่งเป็น head + set</p></li>
-</ul>
-<p>โดยที่ให้เรามีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">is_word</span></code> ที่ return บูลีนบ่งบอกว่าสตริงเป็นคำที่อยู่ในพจนานุกรมหรือไม่</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">True</span> 
-<span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;set&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">True</span> 
-<span class="n">is_word</span><span class="p">(</span><span class="s1">&#39;filt&#39;</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="kc">False</span>
-</pre></div>
-</div>
+<section id="id4">
+<h3>ข้อ 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_word</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
@@ -602,7 +569,6 @@ document.write(`
 	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
 		<span class="n">first_half</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="c1"># ส่วนหน้า</span>
 		<span class="n">second_half</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">:]</span> <span class="c1"># ส่วนท้าย</span>
-		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;รอบที่ </span><span class="si">{}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">- ครึ่งหน้า: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">- ครึ่งหลัง: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">first_half</span><span class="p">,</span> <span class="n">second_half</span><span class="p">))</span>
 		<span class="c1"># ถ้าส่วนหน้าเป็นคำที่ถูกต้อง และส่วนท้ายเป็นคำที่ถูกต้อง</span>
 		<span class="k">if</span> <span class="n">is_word</span><span class="p">(</span><span class="n">first_half</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_word</span><span class="p">(</span><span class="n">second_half</span><span class="p">):</span>
 			<span class="k">return</span> <span class="kc">True</span> <span class="c1"># คืนค่า True</span>
@@ -611,64 +577,9 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">splittable</span><span class="p">(</span><span class="s1">&#39;headband&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">splittable</span><span class="p">(</span><span class="s1">&#39;warhead&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">splittable</span><span class="p">(</span><span class="s1">&#39;bandid&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>รอบที่ 1:
-- ครึ่งหน้า: h
-- ครึ่งหลัง: eadband
-รอบที่ 2:
-- ครึ่งหน้า: he
-- ครึ่งหลัง: adband
-รอบที่ 3:
-- ครึ่งหน้า: hea
-- ครึ่งหลัง: dband
-รอบที่ 4:
-- ครึ่งหน้า: head
-- ครึ่งหลัง: band
-True
-รอบที่ 1:
-- ครึ่งหน้า: w
-- ครึ่งหลัง: arhead
-รอบที่ 2:
-- ครึ่งหน้า: wa
-- ครึ่งหลัง: rhead
-รอบที่ 3:
-- ครึ่งหน้า: war
-- ครึ่งหลัง: head
-True
-รอบที่ 1:
-- ครึ่งหน้า: b
-- ครึ่งหลัง: andid
-รอบที่ 2:
-- ครึ่งหน้า: ba
-- ครึ่งหลัง: ndid
-รอบที่ 3:
-- ครึ่งหน้า: ban
-- ครึ่งหลัง: did
-รอบที่ 4:
-- ครึ่งหน้า: band
-- ครึ่งหลัง: id
-รอบที่ 5:
-- ครึ่งหน้า: bandi
-- ครึ่งหลัง: d
-False
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="reverse-string">
-<h3>ข้อ 3 - Reverse String<a class="headerlink" href="#reverse-string" title="Permalink to this heading">#</a></h3>
-<p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> ซึ่งรับ parameter 1 ตัวเป็น string (สมมุติว่าชื่อ <code class="docutils literal notranslate"><span class="pre">original_string</span></code>) แล้ว return ค่าเป็น string ซึ่งมีค่าเป็น string ย้อนกลับของ <code class="docutils literal notranslate"><span class="pre">original_string</span></code></p>
-<p><strong>ตัวอย่าง</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">reverse_string</span></code> รับ parameter เป็น <em>‘Hello’</em> จะต้อง return string ที่มีค่าเป็น <em>‘olleH’</em></p>
+<section id="id5">
+<h3>ข้อ 3<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -695,14 +606,8 @@ larutaN
 </div>
 </div>
 </section>
-<section id="palindrome">
-<h3>ข้อ 4 - Palindrome<a class="headerlink" href="#palindrome" title="Permalink to this heading">#</a></h3>
-<p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code> ซึ่งรับ parameter 1 ตัวเป็น string แล้วเช็คว่า string นั้นเป็น palindrome หรือไม่ โดยถือว่าตัวอักษรตัวเล็กและตัวใหญ่เป็นคนละตัวอักษรกัน (case-sensitive)</p>
-<p>ถ้าใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่ถ้าไม่ใช่ ให้ return <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-<p>string จะเป็น palindrome ก็ต่อเมื่ออ่าน string จากหน้าไปหลัง เหมือนกับการอ่านจากหลังไปหน้า</p>
-<p><strong>ตัวอย่าง</strong></p>
-<p><em>‘TENET’</em> , <em>‘civic’</em>  เป็น palindrome</p>
-<p><em>‘Hello’</em> , <em>‘AloHa’</em> , <em>‘Tenet’</em> , <em>‘ciVIC’</em> ไม่เป็น palindrome</p>
+<section id="id6">
+<h3>ข้อ 4<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
@@ -734,17 +639,14 @@ False
 </div>
 </div>
 </section>
-<section id="pig-latin">
-<h3>ข้อ 5 - Pig Latin<a class="headerlink" href="#pig-latin" title="Permalink to this heading">#</a></h3>
-<p>ภาษา Pig Latin เป็นภาษาที่ใกล้เคียงภาษาอังกฤษมาก โดยการแปลงคำภาษาอังกฤษเป็นภาษา Pig Latin สามารถทำได้โดยนำตัวอักษรตัวแรกของคำไปไว้ด้านหลัง แล้วเติมตัว <code class="docutils literal notranslate"><span class="pre">a</span></code> ไว้ด้านท้ายสุด เช่น คำว่า <code class="docutils literal notranslate"><span class="pre">hello</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">elloha</span></code> หรือ คำว่า <code class="docutils literal notranslate"><span class="pre">sleep</span></code> แปลงเป็นภาษา Pig Latin ได้ว่า <code class="docutils literal notranslate"><span class="pre">leepsa</span></code></p>
-<p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">eng_to_pig_latin</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return คำภาษา Pig Latin ของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
+<section id="id7">
+<h3>ข้อ 5<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eng_to_pig_latin</span><span class="p">(</span><span class="n">english_word</span><span class="p">):</span>
     <span class="n">first_letter</span> <span class="o">=</span> <span class="n">english_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># ตัวอักษรตัวแรก</span>
     <span class="n">rest_of_word</span> <span class="o">=</span> <span class="n">english_word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># ตัวอักษรที่เหลือ</span>
     <span class="n">pig_latin</span> <span class="o">=</span> <span class="n">rest_of_word</span> <span class="o">+</span> <span class="n">first_letter</span> <span class="o">+</span> <span class="s1">&#39;a&#39;</span> <span class="c1"># ต่อตัวอักษรที่เหลือ ตัวอักษรตัวแรก และ a</span>
-
     <span class="k">return</span> <span class="n">pig_latin</span>
 </pre></div>
 </div>
@@ -765,19 +667,8 @@ leepsa
 </div>
 </div>
 </section>
-<section id="flip-language">
-<h3>ข้อ 6 - Flip Language<a class="headerlink" href="#flip-language" title="Permalink to this heading">#</a></h3>
-<p>คุณกับเพื่อนได้คิดค้นโค้ดลับของคำศัพท์ภาษาอังกฤษ โดยการแปลงคำศัพท์ภาษาอังกฤษดังนี้</p>
-<ol class="arabic simple">
-<li><p>ถ้าคำศัพท์มีความยาวเป็นเลขคู่ ให้นำครึ่งหลังของคำมาไว้ข้างหน้า แล้วนำครึ่งหน้าของคำไปไว้ข้างหลัง</p></li>
-<li><p>ถ้าคำศัพท์มีความยาวเป็นเลขคี่ ให้ตัดตัวอักษรตัวแรกออก แล้วนำคำที่เหลือสลับเหมือนคำศัพท์ที่มีความยาวเป็นเลขคู่ แล้วนำตัวอักษรตัวแรกที่ตัดออกไว้ด้านหน้าคำตามเดิม</p></li>
-</ol>
-<p>เขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">flip_string</span></code> ซึ่งรับคำศัพท์ภาษาอังกฤษ 1 คำเป็น parameter แล้ว return โค้ดลับของคำๆ นั้น พร้อมทั้งเขียนเงื่อนไขในการตรวจสอบว่าฟังก์ชันทำงานถูกต้องตามตัวอย่างหรือไม่</p>
-<p><strong>ตัวอย่าง</strong></p>
-<p><em>‘bear’</em> แปลงเป็น <em>‘arbe’</em> <br>
-<em>‘hello’</em> แปลงเป็น <em>‘hloel’</em> <br>
-<em>‘language’</em> แปลงเป็น <em>‘uagelang’</em> <br>
-<em>‘natural’</em> แปลงเป็น <em>‘nralatu’</em> <br></p>
+<section id="id8">
+<h3>ข้อ 6<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flip_string</span><span class="p">(</span><span class="n">text_to_flip</span><span class="p">):</span>
@@ -819,12 +710,8 @@ nralatu
 </div>
 </div>
 </section>
-<section id="id3">
-<h3>ข้อ 7 - ไม่ 1 ไม่ 5<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>จงหาผลรวมของจำนวนเต็มที่น้อยกว่า 100 และไม่มีเลข 1 กับ 5</p>
-<p><span class="math notranslate nohighlight">\(2 + 3 + 4 + 6 + 7 + 8 + 9 + 20 + 22 + 23 + 24 + 26 \cdots + 99\)</span></p>
-<p>คำตอบคือ 3432</p>
-<p><strong>Hint:</strong> เปลี่ยนเป็น str แล้วใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code></p>
+<section id="id9">
+<h3>ข้อ 7<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_except15</span><span class="p">():</span>
@@ -837,39 +724,12 @@ nralatu
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sum_except15</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3432
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id4">
-<h3>ข้อ 8 - ไปรษณีย์<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>ตอนนี้มี text data ที่มีชื่อเขตกับรหัสไปรษณีย์ ซึ่งเป็นหน้าตาแบบนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Wattana 10110 Yannawa 10120 Dusit 10300&#39;</span>
-</pre></div>
-</div>
-<p>แต่ข้อมูลดูยาก จงสร้างฟังก์ชั่น <code class="docutils literal notranslate"><span class="pre">postal_table()</span></code> ซึ่งแยกชื่อเขตกับรหัสไปรษณีย์ด้วย tab (<code class="docutils literal notranslate"><span class="pre">\t</span></code>)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Wattana</span> <span class="mi">10110</span>
-<span class="n">Yannawa</span> <span class="mi">10120</span>
-<span class="n">Dusit</span>   <span class="mi">10300</span>
-</pre></div>
-</div>
+<section id="id10">
+<h3>ข้อ 8<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">postal_table</span><span class="p">(</span><span class="n">raw_text</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    1. add each character to new_string, if not space</span>
-<span class="sd">    2. replace space before postal code with tab \t</span>
-<span class="sd">    3. replace space after postal code with newline \n</span>
-<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">new_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)):</span> <span class="c1"># วนลูปตั้งแต่ตัวแรกจนถึงตัวสุดท้าย</span>
         <span class="k">if</span> <span class="n">raw_text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="c1"># ถ้าไม่ใช่ space</span>
@@ -899,32 +759,8 @@ Dusit	10300
 </div>
 </div>
 </section>
-<section id="am-i-a-float">
-<h3>ข้อ 9 - Am I a float?<a class="headerlink" href="#am-i-a-float" title="Permalink to this heading">#</a></h3>
-<p>เรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> เพื่อรับค่าทางหน้าจอจากผู้ใช้ 1 ค่า แล้วแสดงผลทางหน้าจอว่าค่าที่ผู้ใช้ใส่มาเป็น <code class="docutils literal notranslate"><span class="pre">float</span></code> หรือไม่</p>
-<p><strong>Hint:</strong> <code class="docutils literal notranslate"><span class="pre">float</span></code> จะมีจุดทศนิยม 1 จุด และทีเหลือเป็นตัวเลข แต่ว่าอาจจะเป็นค่าลบได้</p>
-<p><strong>ตัวอย่าง</strong></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-center head"><p><strong>input</strong></p></th>
-<th class="text-center head"><p><strong>output</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>3.1415</p></td>
-<td class="text-center"><p>True</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>12</p></td>
-<td class="text-center"><p>False</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>-35.439145</p></td>
-<td class="text-center"><p>True</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>43BDgk</p></td>
-<td class="text-center"><p>False</p></td>
-</tr>
-</tbody>
-</table>
+<section id="id11">
+<h3>ข้อ 9<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_float</span><span class="p">():</span>
@@ -939,82 +775,31 @@ Dusit	10300
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_float</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>User Input: 
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="password-generator">
-<h3>ข้อ 10 - Password generator<a class="headerlink" href="#password-generator" title="Permalink to this heading">#</a></h3>
-<p>ใน module <code class="docutils literal notranslate"><span class="pre">string</span></code> มีชุดตัวอักษรดังนี้ (ไม่ใช่ฟังก์ชั่น จึงไม่ต้องใส่วงเล็บ)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
-
-<span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span>
-<span class="o">&gt;&gt;&gt;</span><span class="s1">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
-
-<span class="n">string</span><span class="o">.</span><span class="n">digits</span>
-<span class="o">&gt;&gt;&gt;</span><span class="s1">&#39;0123456789&#39;</span>
-</pre></div>
-</div>
-<p>จงสร้างฟังก์ชั่นที่สุ่มเลือก <span class="math notranslate nohighlight">\(n &gt; 6\)</span> ตัวจากชุดข้างบนนี้ให้เป็นรหัส</p>
-<p>รหัสต้องมีตัวอักษรภาษาอังกฤษอย่างน้อย 4 ตัว และรหัส 2 ตัวสุดท้ายต้องเป็นตัวเลข</p>
-<p>ให้ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">random.choice(string.ascii_letters)</span></code> จะสุ่มเลือกตัวอักษร</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">generate_password</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">hdNaxd07</span>
-</pre></div>
-</div>
+<section id="id12">
+<h3>ข้อ 10<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span><span class="o">,</span> <span class="nn">random</span>
 <span class="k">def</span> <span class="nf">generate_password</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="n">num_char</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span> <span class="c1"># จำนวนตัวอักษรที่เป็นตัวอักษรภาษาอังกฤษ</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_char</span><span class="p">):</span> <span class="c1"># สุ่มตัวอักษรภาษาอังกฤษ ตามจำนวนที่กำหนด</span>
-            <span class="n">password</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span><span class="p">)</span> <span class="c1"># เพิ่มตัวอักษรภาษาอังกฤษ</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="c1"># สุ่มตัวเลข จำนวน 2 ตัว</span>
-            <span class="n">password</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="c1"># เพิ่มตัวเลข</span>
-        <span class="k">return</span> <span class="n">password</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;Password must be at least 6 characters long&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_password</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;xgwfMO91&#39;
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">num_char</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span> <span class="c1"># จำนวนตัวอักษรที่เป็นตัวอักษรภาษาอังกฤษ</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_char</span><span class="p">):</span> <span class="c1"># สุ่มตัวอักษรภาษาอังกฤษ ตามจำนวนที่กำหนด</span>
+        <span class="n">password</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span><span class="p">)</span> <span class="c1"># เพิ่มตัวอักษรภาษาอังกฤษ</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="c1"># สุ่มตัวเลข จำนวน 2 ตัว</span>
+        <span class="n">password</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="c1"># เพิ่มตัวเลข</span>
+    <span class="k">return</span> <span class="n">password</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="past-form">
-<h3>ข้อ 11 - Past form<a class="headerlink" href="#past-form" title="Permalink to this heading">#</a></h3>
-<section id="id5">
-<h4>ส่วนที่ 1<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
-<p>จงเขียนฟังก์ชันในการตรวจสอบว่าคำที่ได้รับมาเป็นกริยาที่เป็นรูป past form หรือไม่ โดยให้ใช้กฏง่าย ๆ ดังนี้</p>
-<ul class="simple">
-<li><p>ห้ามขึ้นต้นด้วยตัวใหญ่</p></li>
-<li><p>ห้ามมีตัวเลขเลย</p></li>
-<li><p>ต้องลงท้ายด้วย -ed</p></li>
-</ul>
+<section id="id13">
+<h3>ข้อ 11<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<section id="id14">
+<h4>11.1<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_past_form</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
@@ -1061,22 +846,8 @@ False
 </div>
 </div>
 </section>
-<section id="id6">
-<h4>ส่วนที่ 2<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
-<p>คำกริยาภาษาอังกฤษที่เป็น past form มักจะลงท้ายด้วย -ed แต่ว่า -ed จะออกเสียงออกมาเป็นอย่างไรนั้นขึ้นอยู่กับพยัญชนะที่อยู่ข้างหลังสุดของหน่วยคำกริยา  โดยมีกฏดังนี้</p>
-<ul class="simple">
-<li><p>กริยาที่ลงท้ายด้วย s sh ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /t/</p></li>
-<li><p>กริยาที่ลงท้ายด้วย t d ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /id/</p></li>
-<li><p>กริยาอื่น ๆ ที่เหลือ ถ้าเปลี่ยนเป็น past form โดยการเติม -ed จะออกเสียงเป็น /d/</p></li>
-</ul>
-<p>ตัวอย่าง</p>
-<p>crashed → /t/</p>
-<p>missed → /t/</p>
-<p>wanted → /id/</p>
-<p>reminded → /id/</p>
-<p>scrubbed → /d/</p>
-<p>tuned → /d/</p>
-<p>จงเขียนฟังก์ชันที่รับคำเป็น input และ return ว่า -ed ออกเสียงเป็นอะไร (สำหรับกฏข้อแรก ไม่ต้องจัดการกับคำที่ลงท้ายด้วย k p ch x gh z เพื่อความง่าย)  ถ้าคำที่รับมาไม่ใช่ past form (ตามที่กำหนดไว้ในฟังก์ชันจาก part 1) ให้ return สตริงเปล่า</p>
+<section id="id15">
+<h4>11.2<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pronounce_ed</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
@@ -1123,9 +894,8 @@ False
 </div>
 </section>
 </section>
-<section id="id7">
-<h3>ข้อ 12 - ชื่อย่อ<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
-<p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">convert_to_initials</span></code> เปลี่ยนชื่อภาษาอังกฤษเป็นชื่อย่อสองตัวอักษรโดยนำตัวอักษรพิมพ์ใหญ่ 2 ตัวในชื่อแปลงมาเป็นชื่อย่อ ทั้งนี้ถ้าชื่อนั้นมีตัวอักษรพิมพ์ใหญ่น้อยกว่า 2 ตัว หรือมากกว่า 2 ตัวจะไม่สามารถแปลงได้และคืนค่า ‘’ และ <code class="docutils literal notranslate"><span class="pre">print</span></code> ข้อความว่า ‘Please enter valid name.’</p>
+<section id="id16">
+<h3>ข้อ 12<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initial_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
@@ -1170,13 +940,8 @@ Please enter valid name.
 </div>
 </div>
 </section>
-<section id="id8">
-<h3>ข้อ 13 - นับตัวสะกดแปลก<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p>ตัวอักษรภาษาอังกฤษนั้นมีทั้ง “ตัวพิมพ์ใหญ่” (uppercase) และ “ตัวพิมพ์เล็ก” (lowercase)
-โดยในสภาวะปกติ ตัวพิมพ์ใหญ่จะสามารถปรากฏได้เพียงตำแหน่งแรกของคำเท่านั้น
-จงเขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">count_anomalies</span></code> ที่รับ input เป็น string 1 ตัว
-แล้ว return จำนวนตัวอักษรพิมพ์ใหญ่ที่ปรากฏในตำแหน่งอื่น ๆ นอกเหนือจากตำแหน่งเริ่มต้น
-โดย input string นี้ประกอบไปด้วยตัวอักษรอังกฤษเท่านั้นและจะไม่มีช่องว่างอยู่ภายใน</p>
+<section id="id17">
+<h3>ข้อ 13<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_anomalies</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
@@ -1298,23 +1063,23 @@ Please enter valid name.
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์ปัญหาเรื่องสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-suffix">ข้อ 1 - Prefix suffix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-word">ข้อ 2 - Compound word</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-string">ข้อ 3 - Reverse String</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#palindrome">ข้อ 4 - Palindrome</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pig-latin">ข้อ 5 - Pig Latin</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flip-language">ข้อ 6 - Flip Language</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 7 - ไม่ 1 ไม่ 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 8 - ไปรษณีย์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#am-i-a-float">ข้อ 9 - Am I a float?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password-generator">ข้อ 10 - Password generator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#past-form">ข้อ 11 - Past form</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ส่วนที่ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ส่วนที่ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ข้อ 9</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 10</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ข้อ 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">11.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 12 - ชื่อย่อ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 13 - นับตัวสะกดแปลก</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ข้อ 12</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ข้อ 13</a></li>
 </ul>
 </li>
 </ul>
