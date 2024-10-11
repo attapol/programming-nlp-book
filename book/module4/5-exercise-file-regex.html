@@ -455,16 +455,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1 - สุนทรพจน์ของโอบามา</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2 - ตรวจหาชื่อ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 3 - เครื่องตอบรับอัตโนมัติ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">4.1 คำที่มีตัว K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.2 คำศัพท์ที่ประกอบด้วยตัว k</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์การเขียนเรกเอกซ์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">โจทย์ปัญหาการประมวลผลข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 1 - สุนทรพจน์ของโอบามา</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 2 - ตรวจหาชื่อ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 2.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 2.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 2.3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5 - ชื่อจากประกาศ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codeswitching">ข้อ 6 - Codeswitching</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 3 - เครื่องตอบรับอัตโนมัติ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k">4.1 คำที่มีตัว K</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.2 คำศัพท์ที่ประกอบด้วยตัว k</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 5 - ชื่อจากประกาศ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codeswitching">ข้อ 6 - Codeswitching</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -479,7 +488,286 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>โจทย์: การประมวลผลข้อมูลจากไฟล์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
-<h2>ข้อ 1 - สุนทรพจน์ของโอบามา<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>โจทย์การเขียนเรกเอกซ์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>จงเขียนเรกเอกซ์ที่จับคู่กับสตริงที่กำหนดให้</p>
+<ol class="arabic simple">
+<li><p>เขียนเรกเอกซ์ที่จับคู่กับเลขทะเบียนรถภาษาอังกฤษ ที่ขึ้นต้นด้วยตัวอักษรภาษาอังกฤษตัวพิมพ์ใหญ่สองตัว ตามด้วยตัวเลข 3 หรือ 4 ตัว</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AB123</p></td>
+<td><p>aB123</p></td>
+</tr>
+<tr class="row-odd"><td><p>XY5678</p></td>
+<td><p>12XY34</p></td>
+</tr>
+<tr class="row-even"><td><p>PQ999</p></td>
+<td><p>ABC123</p></td>
+</tr>
+<tr class="row-odd"><td><p>LM456</p></td>
+<td><p>XY12345</p></td>
+</tr>
+<tr class="row-even"><td><p>GH000</p></td>
+<td><p>XY12A</p></td>
+</tr>
+<tr class="row-odd"><td><p>ST1234</p></td>
+<td><p>สต1234</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li><p>เขียน regular expression เพื่อจับคู่รหัสสีแบบ 6 หลักในระบบฐานสิบหกที่ถูกต้อง ซึ่งเริ่มต้นด้วย # และตามด้วยตัวเลขฐานสิบหก (0-9, a-f, A-F) จำนวน 6 หลัก</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>#ff5733</p></td>
+<td><p>#12345</p></td>
+</tr>
+<tr class="row-odd"><td><p>#aabbcc</p></td>
+<td><p>#gg1234</p></td>
+</tr>
+<tr class="row-even"><td><p>#123456</p></td>
+<td><p>123456</p></td>
+</tr>
+<tr class="row-odd"><td><p>#ABCDEF</p></td>
+<td><p>#12345G</p></td>
+</tr>
+<tr class="row-even"><td><p>#7890ab</p></td>
+<td><p>#12_456</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li><p>เขียนเรกเอกซ์ที่จับคู่ชื่อคนไทยที่ประกอบด้วยตัวอักษรไทยอย่างน้อย 2 ตัว และต้องไม่มีตัวอักษรภาษาอื่น</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>สมชาย</p></td>
+<td><p>somchai</p></td>
+</tr>
+<tr class="row-odd"><td><p>ประภัสสร</p></td>
+<td><p>Prabhat</p></td>
+</tr>
+<tr class="row-even"><td><p>สุนทร</p></td>
+<td><p>Su</p></td>
+</tr>
+<tr class="row-odd"><td><p>อัศวิน</p></td>
+<td><p>asawin</p></td>
+</tr>
+<tr class="row-even"><td><p>วิชัย</p></td>
+<td><p>Vichai</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li><p>เขียนเรกเอกซ์ที่จับคู่กับชื่อผู้ใช้งานที่ขึ้นต้นและลงท้ายด้วยอักษรภาษาอังกฤษตัวพิมพ์เล็ก ชื่อผู้ใช้งานต้องยาวอย่างน้อย 2 ตัวอักษร และประกอบด้วยตัวอักษรภาษาอังกฤษ ตัวเลข และเครื่องหมาย _ และ . เท่านั้น</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>john.doe</p></td>
+<td><p>John.doe</p></td>
+</tr>
+<tr class="row-odd"><td><p>alice123</p></td>
+<td><p>.alice</p></td>
+</tr>
+<tr class="row-even"><td><p>sam_89</p></td>
+<td><p>sam&#64;t89</p></td>
+</tr>
+<tr class="row-odd"><td><p>j_doe</p></td>
+<td><p>j_doe_</p></td>
+</tr>
+<tr class="row-even"><td><p>m.test</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p>user1</p></td>
+<td><p>user1.</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="5">
+<li><p>เขียนเรกเอกซ์ที่จับคู่เบอร์โทรศัพท์ในประเทศไทยที่เริ่มต้นด้วยเลข 0 และตามด้วยตัวเลขอีก 9 ตัว</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0812345678</p></td>
+<td><p>812345678</p></td>
+</tr>
+<tr class="row-odd"><td><p>0112345678</p></td>
+<td><p>01123456ก8</p></td>
+</tr>
+<tr class="row-even"><td><p>0912345678</p></td>
+<td><p>08012345678</p></td>
+</tr>
+<tr class="row-odd"><td><p>0612345678</p></td>
+<td><p>+66812345678</p></td>
+</tr>
+<tr class="row-even"><td><p>0991234567</p></td>
+<td><p>071-234-5678</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="6">
+<li><p>เขียนเรกเอกซ์ที่จับคู่ที่อยู่ในประเทศไทยที่มีได้เฉพาะตัวอักษรไทย ตัวเลขอารบิก และเครื่องหมาย / โดยตัวเลขต้องปรากฏอย่างน้อยหนึ่งครั้ง</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>123 หมู่บ้านทวีสุข</p></td>
+<td><p>หมู่บ้านทวีสุข</p></td>
+</tr>
+<tr class="row-odd"><td><p>45/6 ตำบลบางกะปิ</p></td>
+<td><p>ตำบลบางพลี</p></td>
+</tr>
+<tr class="row-even"><td><p>บ้านเลขที่ 99/10</p></td>
+<td><p>บ้านตำบลคลองหนึ่ง</p></td>
+</tr>
+<tr class="row-odd"><td><p>หมู่บ้าน 12</p></td>
+<td><p>ถนนใหญ่</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="7">
+<li><p>เขียนเรกเอกซ์เพื่อจับคู่นามสกุลไฟล์ .txt .csv หรือ .json โดยชื่อไฟล์ต้องเริ่มด้วยตัวอักษรภาษาอังกฤษ</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>report.txt</p></td>
+<td><p>.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>data.csv</p></td>
+<td><p>data.tx</p></td>
+</tr>
+<tr class="row-even"><td><p>notes.json</p></td>
+<td><p>data.csvx</p></td>
+</tr>
+<tr class="row-odd"><td><p>file.txt</p></td>
+<td><p>1data.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>my-file.csv</p></td>
+<td><p>my-file</p></td>
+</tr>
+<tr class="row-odd"><td><p>output.json</p></td>
+<td><p>output.</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="8">
+<li><p>เขียนเรกเอกซ์ที่จับคู่ที่อยู่อีเมลซึ่งเริ่มต้นด้วยตัวอักษรภาษาอังกฤษหรือตัวเลขอย่างน้อย 1 ตัว ตามด้วยเครื่องหมาย &#64; และลงท้ายด้วย &#64;gmail.com หรือ &#64;yahoo.com</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="mailto:user&#37;&#52;&#48;gmail&#46;com">user<span>&#64;</span>gmail<span>&#46;</span>com</a></p></td>
+<td><p><a class="reference external" href="mailto:user&#37;&#52;&#48;hotmail&#46;com">user<span>&#64;</span>hotmail<span>&#46;</span>com</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="mailto:someone&#37;&#52;&#48;yahoo&#46;com">someone<span>&#64;</span>yahoo<span>&#46;</span>com</a></p></td>
+<td><p><a class="reference external" href="mailto:someone&#37;&#52;&#48;mail&#46;com">someone<span>&#64;</span>mail<span>&#46;</span>com</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="mailto:abc123&#37;&#52;&#48;gmail&#46;com">abc123<span>&#64;</span>gmail<span>&#46;</span>com</a></p></td>
+<td><p><a class="reference external" href="mailto:abc&#37;&#52;&#48;gmail&#46;co">abc<span>&#64;</span>gmail<span>&#46;</span>co</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="mailto:john&#37;&#52;&#48;yahoo&#46;com">john<span>&#64;</span>yahoo<span>&#46;</span>com</a></p></td>
+<td><p><a class="reference external" href="mailto:john&#37;&#52;&#48;gmail&#46;org">john<span>&#64;</span>gmail<span>&#46;</span>org</a></p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="9">
+<li><p>เขียนเรกเอกซ์ที่จับคู่วันที่ในรูปแบบ DD/MM โดย DD เป็นตัวเลข 01-31 เท่านั้น และ MM เป็น 01-12 เท่านั้น</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>12/05</p></td>
+<td><p>12-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>01/12</p></td>
+<td><p>01/13</p></td>
+</tr>
+<tr class="row-even"><td><p>31/01</p></td>
+<td><p>33/04</p></td>
+</tr>
+<tr class="row-odd"><td><p>15/07</p></td>
+<td><p>15/7</p></td>
+</tr>
+<tr class="row-even"><td><p>01/01</p></td>
+<td><p>01/01/2001</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="10">
+<li><p>เขียนเรกเอกซ์ที่จับคู่กับคำภาษาไทยที่ขึ้นต้นด้วยอะไรก็ได้ แต่ต้องลงท้ายด้วยสระ า และต้องสามารถออกเสียงสระ -า ลงท้ายได้ ภายในสตริงต้องเป็นอักษรไทยเท่านั้น และมีความยาวอย่างน้อยสองตัวอักษร</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>สตริงที่ต้องจับคู่</p></th>
+<th class="head"><p>สตริงที่ต้องไม่จับคู่</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>มะลิลา</p></td>
+<td><p>มะลิ</p></td>
+</tr>
+<tr class="row-odd"><td><p>สุชาดา</p></td>
+<td><p>สำเภา</p></td>
+</tr>
+<tr class="row-even"><td><p>ป่า</p></td>
+<td><p>า</p></td>
+</tr>
+<tr class="row-odd"><td><p>กานดา</p></td>
+<td><p>กานดาา</p></td>
+</tr>
+<tr class="row-even"><td><p>เกลา</p></td>
+<td><p>ข้าพเจ้า</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>โจทย์ปัญหาการประมวลผลข้อมูลจากไฟล์<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3>ข้อ 1 - สุนทรพจน์ของโอบามา<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>ไฟล์ <a class="reference external" href="https://drive.google.com/file/d/1iA1s-yNIhdCQvo4BS8d7CVBICHZs4okt/view">obama.txt</a> ประกอบด้วยสุนทรพจน์ของบารัค โอบามาในปี 2013 ความพิเศษของไฟล์นี้คือมีการระบุประเภทของคำ (Part of speech tag) กล่าวคือ
 แต่ละคำในไฟล์จะถูกกำกับด้วยประเภทของคำ เช่น คำนาม (noun), คำกริยา (verb), คำสรรพนาม (pronoun) หรือเครื่องหมายวรรคตอนแบบต่าง ๆ เช่น ประโยค</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thank</span> <span class="n">you</span><span class="o">.</span> <span class="n">God</span> <span class="n">bless</span> <span class="n">you</span><span class="p">,</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">He</span> <span class="n">forever</span> <span class="n">bless</span> <span class="n">these</span> <span class="n">United</span> <span class="n">States</span> <span class="n">of</span> <span class="n">America</span><span class="o">.</span>
@@ -498,77 +786,85 @@ document.write(`
 <ul class="simple">
 <li><p>ทดสอบกับข้อความตัวอย่างข้างต้นก่อน</p></li>
 <li><p>แยกสตริงออกมาเป็นคำ ๆ ในรูปแบบของลิสต์</p></li>
-<li><p>วนลูปไปบนลิสต์และแยกคำกับประเภทของคำออกจากกัน</p></li>
+<li><p>วนซ้ำไปบนลิสต์และแยกคำกับประเภทของคำออกจากกัน</p></li>
 <li><p>ใช้ <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ในการเก็บความถี่</p></li>
 <li><p>เมื่อดำเนินการข้างต้นเสร็จแล้ว ลองเปิดไฟล์และอ่านทีละบรรทัด</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>ข้อ 2 - ตรวจหาชื่อ<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>ชื่อบุคคลในภาษาอังกฤษ เช่น Peter Meg Lois Brian Stewie จะมีการสะกดแบบพิเศษ คือ ขึ้นต้นด้วยตัวอักษรใหญ่เฉพาะตัวแรกเท่านั้น</p>
-<p>เขียนฟังก์ชันที่ตรวจสอบว่าคำที่ให้มานั้นมีลักษณะเหมือนชื่อคนภาษาอังกฤษหรือไม่</p>
+<section id="id5">
+<h3>ข้อ 2 - ตรวจหาชื่อ<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>ชื่อบุคคลในภาษาอังกฤษ เช่น Peter Meg Lois Brian Stewie จะมีการสะกดแบบพิเศษ คือ ขึ้นต้นด้วยตัวพิมพ์ใหญ่เฉพาะตัวแรกเท่านั้น</p>
+<section id="id6">
+<h4>ข้อ 2.1<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>จงเขียนฟังก์ชันที่ตรวจสอบว่าคำที่ให้มานั้นมีลักษณะเหมือนชื่อคนภาษาอังกฤษหรือไม่</p>
 <p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="k">def</span> <span class="nf">is_name_like</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  </span>
+<span class="sd">  ตัวอย่าง</span>
+<span class="sd">  &gt;&gt;&gt; is_name_like(&quot;Brian&quot;)  </span>
+<span class="sd">  True</span>
+<span class="sd">  &gt;&gt;&gt; is_name_like(&quot;brian&quot;)  </span>
+<span class="sd">  False</span>
+<span class="sd">  &gt;&gt;&gt; is_name_like(&quot;BRian&quot;)  </span>
+<span class="sd">  False</span>
+<span class="sd">  &quot;&quot;&quot;</span>
   <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">is_name_like</span><span class="p">(</span><span class="s1">&#39;Brian&#39;</span><span class="p">))</span>
-<span class="k">assert</span><span class="p">(</span><span class="ow">not</span> <span class="n">is_name_like</span><span class="p">(</span><span class="s1">&#39;tangmay&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="id7">
+<h4>ข้อ 2.2<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <p>เขียนฟังก์ชันที่ return ลิสต์ของคำทั้งหมดที่มีแนวโน้มว่าจะเป็นชื่อบุคคลจากประโยคที่กำหนด</p>
-<p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> และอย่าใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">str.split</span></code></p>
+<p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> และหลีกเลี่ยงการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">str.split</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_all_names</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  </span>
+<span class="sd">  ตัวอย่าง</span>
+<span class="sd">  &gt;&gt;&gt; get_all_names(&#39;Joe got married to Bonnie after his PhD in the USA&#39;)</span>
+<span class="sd">  [&#39;Joe&#39;, &#39;Bonnie&#39;]</span>
+<span class="sd">  &quot;&quot;&quot;</span>
   <span class="k">return</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">get_all_names</span><span class="p">(</span><span class="s1">&#39;Joe got married to Bonnie after his PhD in the USA&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Joe&#39;</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">get_all_names</span><span class="p">(</span><span class="s1">&#39;Joe got married to Bonnie after his PhD in the USA&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bonnie&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>เขียนฟังก์ชันที่ทำหน้าที่แทนที่คำที่คาดว่าจะเป็นชื่อบุคคลด้วยสัญลักษณ์ “XXX” เพื่อเป็นการเซนเซอร์</p>
-<p>Hint: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.sub</span></code></p>
+</section>
+<section id="id8">
+<h4>ข้อ 2.3<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<p>เขียนฟังก์ชันที่ทำหน้าที่แทนที่คำที่คาดว่าจะเป็นชื่อบุคคลด้วยสัญลักษณ์ “XXX” เพื่อเป็นการกรองข้อมูลส่วนตัวออกไป</p>
+<p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.sub</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">censor_names</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  </span>
+<span class="sd">  ตัวอย่าง</span>
+<span class="sd">  &gt;&gt;&gt; censor_names(&#39;Joe got married to Bonnie after his PhD in the USA&#39;)</span>
+<span class="sd">  &#39;XXX got married to XXX after his PhD in the USA&#39;)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
   <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="n">censor_names</span><span class="p">(</span><span class="s1">&#39;Joe got married to Bonnie after his PhD in the USA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;XXX got married to XXX after his PhD in the USA&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="id4">
-<h2>ข้อ 3 - เครื่องตอบรับอัตโนมัติ<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>หากได้รับสตริงที่เป็นคำถามที่ขึ้นต้นด้วย “Do” หรือ “Does” ให้ตอบกลับด้วย “Yes”, ตามด้วยคำตอบที่ใช้คำกริยา “do” หรือ “does” มาช่วย เช่น</p>
+</section>
+<section id="id9">
+<h3>ข้อ 3 - เครื่องตอบรับอัตโนมัติ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<p>จงเขียนฟังก์ชันที่รับสตริงที่เป็นคำถามที่ขึ้นต้นด้วย “Do” หรือ “Does” และคืนค่า “Yes”, ตามด้วยคำตอบที่ใช้คำกริยา “do” หรือ “does” มาช่วย เช่น</p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('Does</span> <span class="pre">he</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music?')</span> <span class="pre">--&gt;</span> <span class="pre">'Yes,</span> <span class="pre">he</span> <span class="pre">does</span> <span class="pre">like</span> <span class="pre">pop</span> <span class="pre">music.'</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('Do</span> <span class="pre">you</span> <span class="pre">sing</span> <span class="pre">well?')</span> <span class="pre">--&gt;</span> <span class="pre">'Yes,</span> <span class="pre">you</span> <span class="pre">do</span> <span class="pre">sing</span> <span class="pre">well.'</span></code></p>
 <p>แต่หากไม่ได้เป็นคำถามที่ขึ้นต้นด้วย “Do” หรือ “Does” ให้เปลี่ยนเป็นประโยคคำถามโดยการเติมเครื่องหมายคำถาม (?) ต่อท้าย เช่น</p>
 <p><code class="docutils literal notranslate"><span class="pre">autoanswer('I</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">understand.')</span> <span class="pre">--&gt;</span> <span class="pre">'I</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">understand?'</span></code></p>
-<p>Hint: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code> จากนั้นให้ใช้การอ้างอิงถึงกลุ่ม</p>
+<p>คำสั่ง: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code> จากนั้นให้ใช้การอ้างอิงถึงกลุ่ม</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">autoanswer</span><span class="p">(</span><span class="n">question</span><span class="p">):</span>
@@ -578,8 +874,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id5">
-<h2>ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h3>ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <p>ข้อมูลที่ใช้สำหรับการทำแบบฝึกหัดนี้ สามารถดาวน์โหลดได้จากลิงก์ด้านล่าง</p>
 <p><a class="reference external" href="https://attapol.github.io/programming/data/small_nyt_eng_200001">https://attapol.github.io/programming/data/small_nyt_eng_200001</a></p>
 <div class="cell docutils container">
@@ -598,7 +894,7 @@ document.write(`
 </div>
 </div>
 <section id="k">
-<h3>4.1 คำที่มีตัว K<a class="headerlink" href="#k" title="Permalink to this heading">#</a></h3>
+<h4>4.1 คำที่มีตัว K<a class="headerlink" href="#k" title="Permalink to this heading">#</a></h4>
 <p>ในชุดข้อมูลนี้มีคำที่มีคุณสมบัติต่อไปนี้ปรากฏอยู่ทั้งหมดกี่คำ (นับคำที่ซ้ำกันได้):</p>
 <ul class="simple">
 <li><p>คำที่ขึ้นต้นด้วยตัว k</p></li>
@@ -613,8 +909,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id6">
-<h3>4.2 คำศัพท์ที่ประกอบด้วยตัว k<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h4>4.2 คำศัพท์ที่ประกอบด้วยตัว k<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h4>
 <p>ในชุดข้อมูลนี้มีคำที่มีคุณสมบัติต่อไปนี้ปรากฏอยู่ทั้งหมดกี่คำ โดยไม่นับคำซ้ำด้วยเพื่อให้ได้ขนาดของรายการคำศัพท์ (vocabulary)</p>
 <ul class="simple">
 <li><p>คำที่ขึ้นต้นด้วยตัว k</p></li>
@@ -623,8 +919,8 @@ document.write(`
 </ul>
 </section>
 </section>
-<section id="id7">
-<h2>ข้อ 5 - ชื่อจากประกาศ<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<section id="id12">
+<h3>ข้อ 5 - ชื่อจากประกาศ<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <p>เขียนฟังก์ชันชื่อ <code class="docutils literal notranslate"><span class="pre">find_names</span></code> ที่รับพารามิเตอร์เป็นชื่อไฟล์ที่มีข้อความที่มาจากประกาศทางราชการย้อนหลัง 5 ปี ให้ฟังก์ชันนี้คืนค่าเป็นทูเปิลของลิสต์ 2 ลิสต์ ลิสต์แรกเก็บชื่อผู้ชาย ลิสต์ที่สองเก็บชื่อผู้หญิงทั้งหมดที่อยู่ในไฟล์ โดยจะเก็บชื่อจากท้ายประกาศที่มักจะมีชื่อบุคคลที่เซ็นประกาศ เช่น</p>
 <p>ข้อความในไฟล์</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">นายขุนแผน</span> <span class="n">แสนสุภาพ</span><span class="p">)</span>
@@ -650,7 +946,7 @@ document.write(`
 </div>
 </section>
 <section id="codeswitching">
-<h2>ข้อ 6 - Codeswitching<a class="headerlink" href="#codeswitching" title="Permalink to this heading">#</a></h2>
+<h3>ข้อ 6 - Codeswitching<a class="headerlink" href="#codeswitching" title="Permalink to this heading">#</a></h3>
 <p>Codeswitch เป็นปรากฏการณ์ทางภาษาศาสตร์หนึ่งที่เกิดขึ้นเมื่อผู้พูดใช้สองภาษาหรือสองสำเนียงผสมกัน (เช่น การพูดไทยคำอังกฤษคำ)</p>
 <p>เขียนฟังก์ชันที่นับว่าในลิสต์ของคำที่ได้มา มีคำที่สะกดด้วยตัวภาษาอังกฤษกี่คำ และคำที่สะกดด้วยตัวภาษาไทยกี่คำ โดยให้คืนค่าผลลัพธ์เป็นดิกชันนารีที่ key เป็นรหัสภาษา (en สำหรับภาษาอังกฤษ และ th สำหรับภาษาไทย) และ value เป็นจำนวนคำของแต่ละภาษา</p>
 <div class="cell docutils container">
@@ -658,7 +954,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_en_th_words</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    </span>
-<span class="sd">    Example:</span>
+<span class="sd">    ตัวอย่าง:</span>
 <span class="sd">    &gt;&gt;&gt; count_en_th_words([&#39;รองเท้า&#39;, &#39;ไม่&#39;, &#39;match&#39;, &#39;กับ&#39;, &#39;coat&#39;, &#39;เลย&#39;])</span>
 <span class="sd">    {&#39;en&#39;: 2, &#39;th&#39;: 4}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -667,6 +963,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -737,16 +1034,25 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อ 1 - สุนทรพจน์ของโอบามา</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ข้อ 2 - ตรวจหาชื่อ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 3 - เครื่องตอบรับอัตโนมัติ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">4.1 คำที่มีตัว K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.2 คำศัพท์ที่ประกอบด้วยตัว k</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">โจทย์การเขียนเรกเอกซ์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">โจทย์ปัญหาการประมวลผลข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ข้อ 1 - สุนทรพจน์ของโอบามา</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ข้อ 2 - ตรวจหาชื่อ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อ 2.1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 2.2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ข้อ 2.3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อ 5 - ชื่อจากประกาศ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codeswitching">ข้อ 6 - Codeswitching</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ข้อ 3 - เครื่องตอบรับอัตโนมัติ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อ 4 - สิ่งที่น่าสนใจเกี่ยวกับคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#k">4.1 คำที่มีตัว K</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.2 คำศัพท์ที่ประกอบด้วยตัว k</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ข้อ 5 - ชื่อจากประกาศ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codeswitching">ข้อ 6 - Codeswitching</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
