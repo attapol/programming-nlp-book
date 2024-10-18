@@ -1,7 +1,6 @@
-# เฉลยโจทย์: Data type
-เมื่อใช้โครงสร้างข้อมูลหลายรูปแบบมาประกอบกัน จะต้องคำนึงถึงประเภทของข้อมูลตลอดเวลาที่เขียนโค้ด จงระบุว่าโปรแกรมในแต่ละข้อคืนค่าออกมาเป็นโครงสร้างข้อมูลประเภทใด เช่น ลิสต์ของสตริง ลิสต์ของทูเปิล (สตริง, สตริง, เลขจำนวนเต็ม), ดิกชันนารี (สตริง → เลขจำนวนเต็ม) เป็นต้น
+# เฉลยโจทย์: ชนิดของโครงสร้างข้อมูล
 
-## ข้อ 1 - ข้อมูลสมุดโทรศัพท์
+## ข้อ 1 
 ```python
 name_to_phone_list = \
 { ('Mark', 'Wahlberg') : ['111-222-3333', '444-555-6666'] ,
@@ -9,25 +8,25 @@ name_to_phone_list = \
   ('Jane', 'Eyre'): ['333-444-5555', '777-555-1111']
 }
 
-name_to_phone_list[('Jane', 'Eyre')] # return ลิสต์ของสตริง
-name_to_phone_list[('Jane', 'Eyre')][1] # return สตริง
+name_to_phone_list[('Jane', 'Eyre')] # คืนค่าลิสต์ของสตริง
+name_to_phone_list[('Jane', 'Eyre')][1] # คืนค่าสตริง
 for x in name_to_phone_list:
     print(x)  # x เป็นทูเปิล (สตริง, สตริง)
 ```
 
-## ข้อ 2 - ข้อมูลของสัตว์
+## ข้อ 2
 ```python
 animal = [ {'dog':['ear','leg','tail','bark'],'cat':['eye','ear','tail']},
 {'snake':['poison','tongue'],'frog':['hop','insect','rain']}]
 
-animal[1] # return ดิกชันนารี (สตริง -> ลิสต์)
-animal[0]['cat'] # return ลิสต์ของสตริง
-animal[1]['frog'][1] # return สตริง
+animal[1] # คืนค่าดิกชันนารี (สตริง -> ลิสต์)
+animal[0]['cat'] # คืนค่าลิสต์ของสตริง
+animal[1]['frog'][1] # คืนค่าสตริง
 for x in animal:
     print(x)  # x เป็นดิกชันนารี (สตริง -> ลิสต์)
 ```
 
-## ข้อ 3 - ข้อมูลข่าว
+## ข้อ 3
 ```python
 news_dic = {
   "headers": {
@@ -77,13 +76,13 @@ news_dic = {
 }
 
 
-news_dic['items']['content'] # return ลิสต์ของดิกชันนารี
-news_dic['items']['content'][1]['tags'] # return ลิสต์ของสตริง
+news_dic['items']['content'] # คืนค่าลิสต์ของดิกชันนารี
+news_dic['items']['content'][1]['tags'] # คืนค่าลิสต์ของสตริง
 for x in news_dic:
     print(x)  # x เป็นสตริง (คีย์ของดิกชันนารี)
 ```
 
-## ข้อ 4 - ข้อมูลคะแนนนักเรียน
+## ข้อ 4
 
 ```python
 student_lst = 
@@ -106,13 +105,13 @@ student_lst =
 
 for info, score in student_lst: 
    print(info, score)
-
-score # เป็น ลิสต์ [สตริง, เลขจำนวนเต็ม, สตริง]
-info # เป็น ดิกชันนารี
-student_lst[0][0]  # เป็น ดิกชันนารี
 ```
+1. `score` เป็นลิสต์ [สตริง, เลขจำนวนเต็ม, สตริง]
+2. `info` เป็นดิกชันนารี
+3. `student_lst[0][0]` เป็นดิกชันนารี
 
-## ข้อ 5 - ข้อมูล phoneme
+
+## ข้อ 5
 ```python
 phoneme_pairs = 
 [{'vowel': [{('i', 'e'): {'fnLoad': 0.0438, 'predictability': 0.93}},
@@ -125,12 +124,12 @@ phoneme_pairs =
                 ]
  }
 ]
-
-phoneme_pairs[0]['vowel'] # return ลิสต์ของดิกชันนารี
-phoneme_pairs[0]['vowel'][1][("i", "ɛ")]["fnLoad"] # return None
 ```
+1. `phoneme_pairs[0]['vowel']` คืนค่าลิสต์ของดิกชันนารี
+2. `phoneme_pairs[0]['vowel'][1][("i", "ɛ")]["fnLoad"]` คืนค่า None
 
-## ข้อ 6 - ข้อมูลการบ้าน
+
+## ข้อ 6
 ```python
 homework_info = 
 {'AM001': {'name': ('Mr.', 'Robert', 'Kim'),
@@ -149,11 +148,10 @@ homework_info =
             'subject': 'Literature',
             'wordCount': 348}
 }
-
-homework_info["AM002"]['lateStatus'] # return bool
 ```
+`homework_info["AM002"]['lateStatus']` คืนค่าบูลีน
 
-## ข้อ 7 - ข้อมูลวิชาบังคับ
+## ข้อ 7
 ```python
 required_langtech_course = {
     '2206323':{'subject_name':'INFO SYS HUMAN',
@@ -211,10 +209,9 @@ required_langtech_course = {
                 'time':'13:00-16:00'
                 }
 }
-
-required_langtech_course['2209368']['time'] # return สตริง 
-required_langtech_course['2209368'] # return ดิกชันนารี
 ```
+1. `required_langtech_course['2209368']['time']` คืนค่าสตริง 
+2. `required_langtech_course['2209368']` คืนค่าดิกชันนารี
 
 ## ข้อ 8 
 ```python
