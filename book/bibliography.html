@@ -192,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module5/5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/5-exercise-data-type.html">โจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module5/5s-exercise-data-type.html">เฉลยโจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
@@ -201,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -213,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="module8/1-pandas.html">บทที่ 8  การจัดการข้อมูลแบบตาราง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
@@ -438,61 +438,73 @@ document.write(`
 <dt class="label" id="id22"><span class="brackets">3</span></dt>
 <dd><p>David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. <em>Journal of machine Learning research</em>, 3(Jan):993–1022, 2003.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets">4</span></dt>
+<dt class="label" id="id27"><span class="brackets">4</span></dt>
+<dd><p>Tom B Brown. Language models are few-shot learners. <em>arXiv preprint arXiv:2005.14165</em>, 2020.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets">5</span></dt>
 <dd><p>Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, <em>Proceedings of the 28th International Conference on Computational Linguistics</em>, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2020.coling-main.407">https://aclanthology.org/2020.coling-main.407</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2020.coling-main.407">doi:10.18653/v1/2020.coling-main.407</a>.</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets">5</span></dt>
+<dt class="label" id="id17"><span class="brackets">6</span></dt>
 <dd><p>Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.</p>
 </dd>
-<dt class="label" id="id10"><span class="brackets">6</span></dt>
+<dt class="label" id="id10"><span class="brackets">7</span></dt>
 <dd><p>Tibor Kiss and Jan Strunk. Unsupervised multilingual sentence boundary detection. <em>Computational Linguistics</em>, 32(4):485–525, 2006. URL: <a class="reference external" href="https://aclanthology.org/J06-4003">https://aclanthology.org/J06-4003</a>, <a class="reference external" href="https://doi.org/10.1162/coli.2006.32.4.485">doi:10.1162/coli.2006.32.4.485</a>.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets">7</span></dt>
+<dt class="label" id="id21"><span class="brackets">8</span></dt>
 <dd><p>Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. <em>Transactions on Machine Learning Research</em>, 2023.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets">8</span></dt>
+<dt class="label" id="id7"><span class="brackets">9</span></dt>
 <dd><p>Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Domain adaptation of Thai word segmentation models using stacked ensemble. In Bonnie Webber, Trevor Cohn, Yulan He, and Yang Liu, editors, <em>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 3841–3847. Online, November 2020. Association for Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2020.emnlp-main.315">https://aclanthology.org/2020.emnlp-main.315</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2020.emnlp-main.315">doi:10.18653/v1/2020.emnlp-main.315</a>.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets">9</span></dt>
+<dt class="label" id="id6"><span class="brackets">10</span></dt>
 <dd><p>Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Handling cross- and out-of-domain samples in Thai word segmentation. In <em>Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021</em>, 1003–1016. Online, August 2021. Association for Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2021.findings-acl.86">https://aclanthology.org/2021.findings-acl.86</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2021.findings-acl.86">doi:10.18653/v1/2021.findings-acl.86</a>.</p>
 </dd>
-<dt class="label" id="id15"><span class="brackets">10</span></dt>
+<dt class="label" id="id15"><span class="brackets">11</span></dt>
 <dd><p>Lalita Lowphansirikul, Charin Polpanumas, Attapol T Rutherford, and Sarana Nutanong. A large english–thai parallel corpus from the web and machine-generated text. <em>Language Resources and Evaluation</em>, 56(2):477–499, 2022.</p>
 </dd>
-<dt class="label" id="id3"><span class="brackets">11</span></dt>
+<dt class="label" id="id25"><span class="brackets">12</span></dt>
+<dd><p>Tomáš Mikolov, Stefan Kombrink, Lukáš Burget, Jan Černock\`y, and Sanjeev Khudanpur. Extensions of recurrent neural network language model. In <em>2011 IEEE international conference on acoustics, speech and signal processing (ICASSP)</em>, 5528–5531. IEEE, 2011.</p>
+</dd>
+<dt class="label" id="id3"><span class="brackets">13</span></dt>
 <dd><p>David D Palmer. Tokenisation and sentence segmentation. <em>Handbook of natural language processing</em>, pages 11–35, 2000.</p>
 </dd>
-<dt class="label" id="id5"><span class="brackets">12</span></dt>
+<dt class="label" id="id5"><span class="brackets">14</span></dt>
 <dd><p>Richard E Pattis. <em>Karel the robot: a gentle introduction to the art of programming</em>. John Wiley &amp; Sons, 1994.</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets">13</span></dt>
+<dt class="label" id="id18"><span class="brackets">15</span></dt>
 <dd><p>Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, <em>Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</em>, 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: <a class="reference external" href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf</a>.</p>
 </dd>
-<dt class="label" id="id11"><span class="brackets">14</span></dt>
+<dt class="label" id="id11"><span class="brackets">16</span></dt>
 <dd><p>Chanatip Saetia, Ekapol Chuangsuwanich, Tawunrat Chalothorn, and Peerapon Vateekul. Semi-supervised thai sentence segmentation using local and distant word representations. <em>arXiv preprint arXiv:1908.01294</em>, 2019.</p>
 </dd>
-<dt class="label" id="id12"><span class="brackets">15</span></dt>
+<dt class="label" id="id12"><span class="brackets">17</span></dt>
 <dd><p>Sorratat Sirirattanajakarin, Duangjai Jitkongchuen, and Peerasak Intarapaiboon. Boydcut: bidirectional lstm-cnn model for thai sentence segmenter. In <em>2020 1st International Conference on Big Data Analytics and Practices (IBDAP)</em>, 1–4. IEEE, 2020.</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets">16</span></dt>
+<dt class="label" id="id20"><span class="brackets">18</span></dt>
 <dd><p>Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In <em>Proceedings of the 2013 conference on empirical methods in natural language processing</em>, 1631–1642. 2013.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets">17</span></dt>
+<dt class="label" id="id13"><span class="brackets">19</span></dt>
 <dd><p>Srivatsan Srinivasan and Chris Dyer. Better chinese sentence segmentation with reinforcement learning. In <em>Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021</em>, 293–302. 2021.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets">18</span></dt>
+<dt class="label" id="id19"><span class="brackets">20</span></dt>
 <dd><p>Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In <em>Proceedings of the International AAAI Conference on Web and Social Media</em>, volume 15, 703–713. 2021.</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets">19</span></dt>
+<dt class="label" id="id28"><span class="brackets">21</span></dt>
+<dd><p>Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, and others. Llama 2: open foundation and fine-tuned chat models. <em>arXiv preprint arXiv:2307.09288</em>, 2023.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets">22</span></dt>
+<dd><p>A Vaswani. Attention is all you need. <em>Advances in Neural Information Processing Systems</em>, 2017.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">23</span></dt>
 <dd><p>Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, and others. Chain-of-thought prompting elicits reasoning in large language models. <em>Advances in neural information processing systems</em>, 35:24824–24837, 2022.</p>
 </dd>
-<dt class="label" id="id14"><span class="brackets">20</span></dt>
+<dt class="label" id="id14"><span class="brackets">24</span></dt>
 <dd><p>Nianwen Xue and Yaqin Yang. Chinese sentence segmentation as comma classification. In <em>Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</em>, 631–635. 2011.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets">21</span></dt>
+<dt class="label" id="id16"><span class="brackets">25</span></dt>
 <dd><p>Sumeth Yuenyong and Virach Sornlertlamvanich. Transentcut-transformer based thai sentence segmentation. <em>Songklanakarin Journal of Science and Technology</em>, 44(3):852–860, 2022.</p>
 </dd>
-<dt class="label" id="id23"><span class="brackets">22</span></dt>
+<dt class="label" id="id23"><span class="brackets">26</span></dt>
 <dd><p>Caleb Ziems, William Held, Omar Shaikh, Jiaao Chen, Zhehao Zhang, and Diyi Yang. Can large language models transform computational social science? <em>Computational Linguistics</em>, 50(1):237–291, 2024.</p>
 </dd>
 </dl>

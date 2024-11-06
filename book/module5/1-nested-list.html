@@ -193,8 +193,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-exercise-data-type.html">โจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5s-exercise-data-type.html">เฉลยโจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
@@ -202,8 +202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -214,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการข้อมูลแบบตาราง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
@@ -425,31 +425,33 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ลิสต์ของลิสต์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างที่ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ลิสต์ของลิสต์ของตัวเลข</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ลิสต์ของลิสต์ของสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">วงวนซ้อนวงวน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ลิสต์คอมพรีเฮนชันซ้อนใน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">วงวนซ้อนวงวน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ลิสต์คอมพริเฮนชันซ้อนใน</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ทำลิสต์ให้แบนเรียบ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ทำลิสต์ให้แบนเรียบ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ลิสต์ของทูเปิล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ลิสต์ของทูเปิล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ลิสต์ของดิกชันนารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ดิกชันนารีที่คีย์เป็นทูเปิล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ดิกชันนารีที่แวลูเป็นลิสต์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ดิกชันนารีที่แวลูเป็นดิกชันนารี</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ตัวอย่าง: การนับไบแกรม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ดิกชันนารีที่คีย์เป็นทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ดิกชันนารีที่แวลูเป็นลิสต์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ดิกชันนารีที่แวลูเป็นดิกชันนารี</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวอย่าง: การนับไบแกรม</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -463,14 +465,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="br-nested-data-structure">
 <h1>บทที่ 5 </br> โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)<a class="headerlink" href="#br-nested-data-structure" title="Permalink to this heading">#</a></h1>
-<p>โครงสร้างข้อมูลที่ใช้งานบ่อยในภาษาไพทอน คือ ลิสต์ และดิกชันนารี ภาษาไพทอนรองรับการเก็บข้อมูลอยู่สองประเภทใหญ่ ๆ ที่เราได้เรียนมาแล้ว</p>
+<p>โครงสร้างข้อมูลที่ใช้งานเป็นประจำในภาษาไพทอน คือ ลิสต์ และดิกชันนารี ภาษาไพทอนรองรับการเก็บข้อมูลอยู่สองประเภทใหญ่ ๆ ที่เราได้เรียนมาแล้ว</p>
 <ol class="arabic simple">
 <li><p>ข้อมูลแบบค่าเดี่ยว ได้แก่ เลขจำนวนเต็ม สตริง เลขทศนิยม และบูลีน</p></li>
 <li><p>ข้อมูลแบบคอลเลกชัน ได้แก่ ลิสต์ ทูเปิล ดิกชันนารี เซ็ต</p></li>
 </ol>
-<p>ข้อมูลแบบคอลเลกชันจัดเป็นโครงสร้างข้อมูลที่มีหน้าที่ในการเก็บข้อมูลเอาไว้หลาย ๆ ตัว ทำให้เกิดเป็นโครงสร้างขึ้นมา เช่น ลิสต์เป็นโครงสร้างมีลำดับ ดิกชันนารีเป็นโครงสร้างแบบมีการจับคู่ ในบทที่ผ่านมาเราได้เรียนรู้วิธีการใช้โครงสร้างข้อมูลเหล่านี้ในการเก็บข้อมูลแบบค่าเดี่ยวหลาย ๆ ตัวไว้ในโครงสร้างเดียวกัน เช่น ลิสต์ของตัวเลขเพื่อใช้เก็บรายการคะแนนของนักเรียนในห้อง ลิสต์ของสตริงเพื่อใช้เก็บรายชื่อของพนักงานในบริษัท ดิกชันนารีที่คีย์เป็นสตริงและแวลูเป็นตัวเลขเพื่อใช้เก็บคำและความถี่เกิดขึ้นของตคำนั้น เซ็ตของสตริงเพื่อใช้เก็บ vocabulary เป็นต้น</p>
+<p>ข้อมูลแบบคอลเลกชันจัดเป็นโครงสร้างข้อมูลที่มีหน้าที่ในการเก็บข้อมูลเอาไว้หลาย ๆ ตัว ทำให้เกิดเป็นโครงสร้างขึ้นมา เช่น ลิสต์เป็นโครงสร้างมีลำดับ ดิกชันนารีเป็นโครงสร้างแบบมีการจับคู่ ในบทที่ผ่านมาเราได้เรียนรู้วิธีการใช้โครงสร้างข้อมูลเหล่านี้ในการเก็บข้อมูลแบบค่าเดี่ยวหลาย ๆ ตัวไว้ในโครงสร้างเดียวกัน เช่น ลิสต์ของตัวเลขเพื่อใช้เก็บรายการคะแนนของนักเรียนในห้อง ลิสต์ของสตริงเพื่อใช้เก็บรายชื่อของพนักงานในบริษัท ดิกชันนารีที่คีย์เป็นสตริงและแวลูเป็นตัวเลขเพื่อใช้เก็บคำและความถี่เกิดขึ้นของตคำนั้น เซ็ตของสตริงเพื่อใช้เก็บรายการคำศัพท์ เป็นต้น</p>
 <p><img alt="basic data structures" src="../../_images/data-structures.svg" /></p>
-<p>โครงสร้างข้อมูลทั้งสองประเภทนี้ไม่ตอบโจทย์การใช้งานบางประเภท ที่ต้องการโครงสร้างที่ซับซ้อนขึ้น  โครงสร้างข้อมูลแบบซ้อนใน คือ โครงสร้างข้อมูลที่เก็บโครงสร้างข้อมูลอีกประเภทนึงเอาไว้  โครงสร้างข้อมูลทั้งหมดที่เราได้เรียนมาแล้วสามารถเก็บโครงสร้างข้อมูลอื่น ๆ ซ้อนเข้าไปได้อีกชั้นหนึ่ง เพื่อรองรับข้อมูลที่มีโครงสร้างซับซ้อนขึ้น เช่น</p>
+<p>โครงสร้างข้อมูลทั้งสองประเภทนี้ไม่ตอบโจทย์การใช้งานบางประเภท ที่ต้องการโครงสร้างที่ซับซ้อนขึ้น  โครงสร้างข้อมูลแบบซ้อนใน (nested data structure) คือ โครงสร้างข้อมูลที่เก็บโครงสร้างข้อมูลอีกประเภทนึงเอาไว้  โครงสร้างข้อมูลทั้งหมดที่เราได้เรียนมาแล้วสามารถเก็บโครงสร้างข้อมูลอื่น ๆ ซ้อนเข้าไปได้อีกชั้นหนึ่ง เพื่อรองรับข้อมูลที่มีโครงสร้างซับซ้อนขึ้น เช่น</p>
 <ul class="simple">
 <li><p>ลิสต์ของลิสต์ของสตริง เพื่อใช้เก็บชื่อไฟล์และโฟลเดอร์ที่อยู่ในโฟลเดอร์อีกชั้นหนึ่ง</p></li>
 </ul>
@@ -503,12 +505,14 @@ document.write(`
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>ความท้าทายของการใช้โครงสร้างข้อมูลที่ซ้อนกัน คือ  การเข้าถึงข้อมูลในโครงสร้างข้อมูลที่ถูกซ้อนอยู่ ผู้ใช้จะต้องทราบว่าเมื่อเข้าถึงข้อมูลโดยใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วค่าทีได้คืนมาเป็นโครงสร้างข้อมูลประเภทใด และโครงสร้างข้อมูลนั้นเก็บข้อมูลประเภทใดอีก ในบทนี้จะมีคำถามให้ลองคิดตามดูว่าเพื่อรันโค้ดแล้วจะได้โครงสร้างข้อมูลประเภทใดคืนมา</p>
-<p>ความท้าทายอีกประการหนึ่งของการใช้โครงสร้างข้อมูลที่ซ้อนกัน คือ การเลือกใช้โครงสร้างข้อมูลที่เหมาะสมกับข้อมูลที่ต้องการจะเก็บ และไม่ซับซ้อนเกินไป หากเราเลือกโครงสร้างข้อมูลที่ซับซ้อนเกินไป จะทำให้โค้ดทำความเข้าใจได้ยาก เมื่อผู้อื่นต้องนำโค้ดเราไปเขียนเพ่ิมเติม ทำให้เกิดความผิดพลาดได้ง่าย</p>
-<p>ในบทนี้เราจะพูดถึงโครงสร้างข้อมูลที่ซ้อนกัน ที่พบเห็นได้บ่อย ๆ ในการเขียนโค้ดเพื่อประมวลผลข้อมูล</p>
+<p>ความท้าทายของการใช้โครงสร้างข้อมูลแบบซ้อนใน คือ  การเข้าถึงข้อมูลในโครงสร้างข้อมูลที่ถูกซ้อนอยู่ ผู้ใช้จะต้องทราบว่าเมื่อเข้าถึงข้อมูลโดยใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วค่าทีได้คืนมาเป็นโครงสร้างข้อมูลประเภทใด และโครงสร้างข้อมูลนั้นเก็บข้อมูลประเภทใดอีก ในบทนี้จะมีคำถามให้ลองคิดตามดูว่าเมื่อรันโค้ดแล้วจะได้โครงสร้างข้อมูลประเภทใดคืนมา</p>
+<p>ความท้าทายอีกประการหนึ่งของการใช้โครงสร้างข้อมูลแบบซ้อนใน คือ การเลือกใช้โครงสร้างข้อมูลที่เหมาะสมกับข้อมูลที่ต้องการจะเก็บ และไม่ซับซ้อนเกินไป หากเราเลือกโครงสร้างข้อมูลที่ซับซ้อนเกินไป จะทำให้อ่านโค้ดให้เข้าใจได้ยาก เมื่อผู้อื่นต้องนำโค้ดเราไปเขียนเพิ่มเติม ก็อาจทำให้ผิดพลาดได้ง่าย</p>
+<p>ในบทนี้เราจะพูดถึงโครงสร้างข้อมูลแบบซ้อนใน ที่พบเห็นได้บ่อย ๆ ในการเขียนโค้ดเพื่อประมวลผลข้อมูล</p>
 <section id="id1">
 <h2>ลิสต์ของลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>ในการใช้งานจริงเราใช้ลิสต์ของลิสต์เพื่อเก็บข้อมูลประเภทเดี่ยวทั้ง 3 ประเภท ลิสต์ของลิสต์ของตัวเลข (ลิสต์ที่มีลิสต์ย่อยที่เก็บตัวเลข) ลิสต์ของลิสต์ของสตริง ลิสต์ของลิสต์ของบูลีน</p>
+<section id="id2">
+<h3>ลิสต์ของลิสต์ของตัวเลข<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>ขอยกตัวอย่างการใช้ลิสต์ของลิสต์ของตัวเลข ซึ่งเป็นลิสต์ของคะแนนของนักเรียน โดยแต่ละคะแนนจะประกอบไปด้วย คะแนนเก็บ คะแนนสอบกลางภาค และคะแนนสอบปลายภาค โดยเราจะเก็บคะแนนของนักเรียนแต่ละคนไว้ในลิสต์ของลิสต์ของตัวเลข ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
@@ -526,7 +530,10 @@ document.write(`
 </pre></div>
 </div>
 <p>ซึ่งเป็นลิสต์ของคะแนนของนักเรียนคนที่ 2</p>
-<p>ลิสต์ของลิสต์มักจะใช้เก็บประโยคหลาย ๆ ประโยค เราจะเก็บประโยค 1 ประโยคไว้ในลิสต์ของสตริงคำ เมื่อเราต้องเก็บหลาย ๆ ประโยคจึงกลายมาเป็นลิสต์ของลิสต์ของสตริงคำ</p>
+</section>
+<section id="id3">
+<h3>ลิสต์ของลิสต์ของสตริง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>ในการประมวลผลภาษาธรรมชาติ ลิสต์ของลิสต์มักจะใช้เก็บประโยคหลาย ๆ ประโยค เราจะเก็บประโยค 1 ประโยคไว้ในลิสต์ของสตริงคำ เมื่อเราต้องเก็บหลาย ๆ ประโยคจึงกลายมาเป็นลิสต์ของลิสต์ของสตริงคำ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;want&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;need&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -539,7 +546,7 @@ document.write(`
 <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>ในคำสั่งที่ใช้ลิสต์คอมพรีเฮนชันในตัวอย่างโค้ดข้างต้น <code class="docutils literal notranslate"><span class="pre">sentence</span></code>  เป็นสตริง เราจึงสามารถใช้ <code class="docutils literal notranslate"><span class="pre">.split</span></code> ในการเปลี่ยนให้สตริง เป็นลิสต์ของคำโดยใช้ช่องว่างเป็นตัวแยก ผลลัพธ์ที่ได้คือ</p>
+<p>ในคำสั่งที่ใช้ลิสต์คอมพริเฮนชันในตัวอย่างโค้ดข้างต้น <code class="docutils literal notranslate"><span class="pre">sentence</span></code> เป็นสตริง เราจึงสามารถใช้ <code class="docutils literal notranslate"><span class="pre">.split</span></code> ในการเปลี่ยนให้สตริง เป็นลิสต์ของคำโดยใช้ช่องว่างเป็นตัวแยก ผลลัพธ์ที่ได้คือ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;want&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;need&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -593,22 +600,24 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>รูปแบบการใช้งานที่พบเห็นบ่อย ๆ ในการประมวลผลข้อมูล ได้แก่</p>
+<p>รูปแบบการใช้งานที่พบเห็นเป็นประจำ ในการประมวลผลข้อมูล ได้แก่</p>
 <ul class="simple">
 <li><p>ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</p></li>
 <li><p>รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</p></li>
 <li><p>ทำลิสต์ให้แบนเรียบ (flatten)</p></li>
 </ul>
-<section id="id2">
-<h3>ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>สมมติว่าเราต้องให้นับจำนวนคำในประโยคที่เก็บไว้ในลิสต์ของลิสต์ของสตริง เราต้องใช้วงวนฟอร์เพื่อไล่ลิสต์ย่อยออกมาทีละตัว และแต่ในลิสต์ย่อยเราต้องใช้วงวนฟอร์อีกชั้นหนึ่งเพื่อไล่สตริงออกมาทีละคำ แปลออกมาเป็น pseudocode ได้ดังนี้</p>
+</section>
+<section id="id4">
+<h3>ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>สมมติว่าเราต้องให้นับจำนวนคำในประโยคที่เก็บไว้ในลิสต์ของลิสต์ของสตริง เราต้องใช้วงวนฟอร์เพื่อไล่ลิสต์ย่อยออกมาทีละตัว และแต่ในลิสต์ย่อยเราต้องใช้วงวนฟอร์อีกชั้นหนึ่งเพื่อไล่สตริงออกมาทีละคำ แปลออกมาเป็นโค้ดเทียมได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span>
     <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span>
         <span class="n">ทำอะไรกับข้อมูลเดี่ยว</span>
 </pre></div>
 </div>
-<section id="id3">
-<h4>ตัวอย่างที่ 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<section id="id5">
+<h4>ตัวอย่างที่ 1<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราต้องการนับจำนวนคำทั้งหมดที่อยู่ในชุดข้อมูล โดยข้อมูลที่ได้มาถูกจัดเก็บในลิสต์ของประโยค และแต่ละประโยคถูกจัดเก็บในรูปของลิสต์ของสตริง ดังนั้นโครงสร้างข้อมูลที่ได้รับมาคือ ลิสต์ของลิสต์ของสตริง ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;want&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;need&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]]</span>
 <span class="n">total_words</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
@@ -622,11 +631,15 @@ document.write(`
 </pre></div>
 </div>
 <p>ซึ่งเป็นจำนวนคำทั้งหมดในลิสต์ของลิสต์ของสตริง</p>
-<p>โปรแกรมข้างต้นมีการใช้วงวนฟอร์ซ้อนกัน (double for loop) โดยที่วงวนฟอร์ชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">sentences</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sentence</span></code> มาใช้เก็บลิสต์ย่อย และวงวนฟอร์ชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sentence</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้นับคำที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> แล้วบวกเพิ่มในตัวแปร <code class="docutils literal notranslate"><span class="pre">total_words</span></code> ที่เป็นจำนวนคำทั้งหมด</p>
+<p>โปรแกรมข้างต้นมีการใช้วงวนฟอร์ซ้อนกัน (double for loop) ที่มีวงวนฟอร์ชั้นนอก และชั้นใน</p>
+<ul class="simple">
+<li><p>วงวนฟอร์ชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">sentences</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sentence</span></code> มาใช้เก็บลิสต์ย่อย</p></li>
+<li><p>วงวนฟอร์ชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sentence</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้นับคำที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> แล้วบวกเพิ่มในตัวแปร <code class="docutils literal notranslate"><span class="pre">total_words</span></code> ที่เป็นจำนวนคำทั้งหมด</p></li>
+</ul>
 </section>
-<section id="id4">
-<h4>ตัวอย่างที่ 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
-<p>สมมติว่าเราต้องการหาคำที่สะกดด้วยตัวอักษรภาษาอังกฤษทั้งหมดโดยไม่ต้องนับตัวซ้ำ ข้อมูลที่ได้มาถูกจัดเก็บอยู่ในลิสต์ของลิสต์ของสตริงคำ</p>
+<section id="id6">
+<h4>ตัวอย่างที่ 2<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราต้องการหาคำที่สะกดด้วยตัวอักษรภาษาอังกฤษทั้งหมดโดยไม่ต้องนับตัวซ้ำ ข้อมูลที่ได้มาถูกจัดเก็บอยู่ในลิสต์ของลิสต์ของสตริงคำ เช่นเดียวกันกับตัวอย่างที่ 1</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list_sen</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
 <span class="n">eng_word_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">list_sen</span><span class="p">:</span>
@@ -635,13 +648,13 @@ document.write(`
             <span class="n">eng_word_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">list_sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sen</span></code> มาใช้เก็บลิสต์ย่อย และ <code class="docutils literal notranslate"><span class="pre">for</span></code> ลูปชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้ตรวจสอบว่าสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> เป็นสตริงที่มีแต่ตัวอักษรภาษาอังกฤษหรือไม่ โดยใช้เมท็อดของสตริง <code class="docutils literal notranslate"><span class="pre">.isalpha()</span></code> ซึ่งจะคืนค่าเป็นบูลีน ถ้าเป็นค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> ให้เพิ่มสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> ลงในเซ็ต <code class="docutils literal notranslate"><span class="pre">eng_word_set</span></code> โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">eng_word_set.add(word)</span></code> ซึ่งเป็นการเพิ่มสตริงลงในเซ็ต และเนื่องจากเราใช้เซ็ตในการเก็บ สตริงที่ซ้ำกันจะถูกลบออกไปโดยอัตโนมัติ</p>
+<p>วงวนฟอร์ชั้นนอกเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นลิสต์ออกมาจากลิสต์ของลิสต์ (<code class="docutils literal notranslate"><span class="pre">list_sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">sen</span></code> มาใช้เก็บลิสต์ย่อย และวงวนฟอร์ชั้นในเป็นการไล่เอาสมาชิกแต่ละตัวที่เป็นสตริงออกมาจากลิสต์ของสตริง (<code class="docutils literal notranslate"><span class="pre">sen</span></code>) โดยในแต่ละรอบให้ใช้ตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> มาใช้เก็บสตริง และในแต่ละรอบให้ตรวจสอบว่าสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> เป็นสตริงที่มีแต่ตัวอักษรภาษาอังกฤษหรือไม่ โดยใช้เมท็อดของสตริง <code class="docutils literal notranslate"><span class="pre">.isalpha()</span></code> ซึ่งจะคืนค่าเป็นบูลีน ถ้าเป็นค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> ให้เพิ่มสตริงที่อยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">word</span></code> ลงในเซ็ต <code class="docutils literal notranslate"><span class="pre">eng_word_set</span></code> โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">eng_word_set.add(word)</span></code> ซึ่งเป็นการเพิ่มสตริงลงในเซ็ต และเนื่องจากเราใช้เซ็ตในการเก็บ สตริงที่ซ้ำกันจะถูกลบออกไปโดยอัตโนมัติ</p>
 </section>
 </section>
-<section id="id5">
-<h3>รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p>การรันฟังก์ชันไปบนสมาชิกทุกตัว เราเรียกว่าการแม็ปฟังก์ชันให้ลองนึกทบทวนถึงการแม็ปฟังก์ชันกับลิสต์ที่ไม่มีการซ้อนลิสต์ จากตัวอย่างต่อไปนี้</p>
-<p>สมมติว่า เราต้องการแม็ปฟังก์ชันด้วยฟังก์ชันยกกำลังสองไปบนลิสต์ของตัวเลข <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[2,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">20]</span></code>(ซึ่งเป็นลิสต์ที่ยังไม่มีการซ้อนลิสต์) เริ่มจากการสร้างฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ที่รับตัวเลขเข้ามา แล้วคืนค่ากลับมาเป็นค่าที่ยกกำลังสอง</p>
+<section id="id7">
+<h3>รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>การรันฟังก์ชันไปบนสมาชิกทุกตัว เราเรียกว่าการแปลงส่งฟังก์ชัน หรือการแม็ปฟังก์ชัน ให้ลองนึกทบทวนถึงการแม็ปฟังก์ชันกับลิสต์ที่ไม่มีการซ้อนลิสต์ จากตัวอย่างต่อไปนี้</p>
+<p>สมมติว่า เราต้องการแม็ปฟังก์ชันด้วยฟังก์ชันยกกำลังสองไปบนลิสต์ของตัวเลข <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">[2,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">20]</span></code> (ซึ่งเป็นลิสต์ที่ยังไม่มีการซ้อนลิสต์) เริ่มจากการสร้างฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ที่รับตัวเลขเข้ามา แล้วคืนค่ากลับมาเป็นค่าที่ยกกำลังสอง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
@@ -654,7 +667,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">square</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">])]</span>
 </pre></div>
 </div>
-<p>แต่เนื่องจากเราไม่รู้ล่วงหน้าว่าลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> มีสมาชิกกี่ตัว เราจึงต้องเขียนโค้ดให้สามารถรัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ไปบนสมาชิกทุกตัวของลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> ได้โดยไม่ต้องระบุจำนวนรอบของวงวนฟอร์ไว้ล่วงหน้า เราจึงจำเป็นต้องแม็ปฟังก์ชัน ซึ่งมี 3 วิธี ดังนี้</p>
+<p>แต่เนื่องจากเราไม่ทราบล่วงหน้าว่าลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> มีสมาชิกกี่ตัว เราจึงต้องเขียนโค้ดให้สามารถรัน <code class="docutils literal notranslate"><span class="pre">square</span></code> ไปบนสมาชิกทุกตัวของลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> ได้โดยไม่ต้องระบุจำนวนรอบของวงวนฟอร์ไว้ล่วงหน้า เราจึงจำเป็นต้องแม็ปฟังก์ชัน ซึ่งมี 3 วิธี ดังนี้</p>
 <ol class="arabic">
 <li><p>วงวนฟอร์ซ้อนวงวนฟอร์:
 ใช้วงวนฟอร์แล้วเก็บผลลัพธ์ไว้ในลิสต์ที่ขึ้นมาเตรียมไว้</p>
@@ -677,7 +690,7 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p>ลิสต์คอมพรีเฮนชัน</p>
+<li><p>ลิสต์คอมพริเฮนชัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -687,20 +700,24 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">map</span></code> แล้วแปลงผลลัพธ์เป็นลิสต์</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">ฟังก์ชัน</span><span class="p">,</span> <span class="n">ลิสต์</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>ตัวอย่าง เช่น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
-<span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
-</pre></div>
-</div>
-</li>
+<li><p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code> เป็นฟังก์ชันที่ใช้สำหรับการนำฟังก์ชันหนึ่งมาประยุกต์ใช้กับสมาชิกแต่ละตัวของคอลเลคชันที่ให้มา เช่น ลิสต์ ดิกชันนารี เซต โดยฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code> จะคืนค่าเป็น “map object” ซึ่งสามารถแปลงเป็นลิสต์ ด้วยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">list()</span></code> เพื่อให้สามารถดูผลลัพธ์ได้ในรูปแบบลิสต์</p></li>
 </ol>
+<p>โครงสร้างการใช้งาน <code class="docutils literal notranslate"><span class="pre">map</span></code> มีดังนี้</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
+results = list(map(ฟังก์ชัน, ลิสต์))
+```
+
+ตัวอย่าง เช่น
+
+```python
+numbers = [2, 10, 12, 20]
+results = list(map(square, numbers))
+```
+</pre></div>
+</div>
 <p>เราสามารถใช้วิธีเหล่านี้ในทำนองเดียวกันเพื่อแม็ปฟังก์ชันกับลิสต์ของลิสต์</p>
-<section id="id6">
-<h4>วงวนซ้อนวงวน<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<section id="id8">
+<h4>วงวนซ้อนวงวน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <p>โครงสร้างของการใช้วงวนฟอร์เพื่อแม็ปฟังก์ชันไปบนลิสต์ซ้อนลิสต์ จะต้องมีการใช้วงวนซ้อนวงวน (nested for loop) ซึ่งมีโครงสร้างดังนี้</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -732,7 +749,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>โจทย์ข้อนี้เราทราบแล้วว่าเราต้องมีการแม็ปฟังก์ชันโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> ลงบนสมาชิกแต่ละตัวในลิสต์ย่อย ดังนั้นเราสามารถใช้โครงสร้าง double for loop มาประกอบกันได้ดังนี้</p>
+<p>โจทย์ข้อนี้เราทราบแล้วว่าเราต้องมีการแม็ปฟังก์ชันโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> ลงบนสมาชิกแต่ละตัวในลิสต์ย่อย ดังนั้นเราสามารถใช้โครงสร้างวงวนซ้อนวงวนมาประกอบกันได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
 <span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
@@ -744,12 +761,12 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h4>ลิสต์คอมพรีเฮนชันซ้อนใน<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h4>ลิสต์คอมพริเฮนชันซ้อนใน<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <p>เราสามารถใช้ลิสต์คอมพรีเฮนชันซ้อนใน (nested list comprehension) ในการแม็ปฟังก์ชันได้ดังนี้</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>ลิสต์คอมพรีเฮนชันซ้อนใน (nested list comprehension</p>
+<p>ลิสต์คอมพรีเฮนชันซ้อนใน (nested list comprehension)</p>
 </aside>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">]</span>
 </pre></div>
@@ -763,8 +780,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id8">
-<h3>ทำลิสต์ให้แบนเรียบ<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>ทำลิสต์ให้แบนเรียบ<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <p>การทำลิสต์ให้แบนเรียบ (flatten) คือ การเปลี่ยนลิสต์ที่เคยเป็นลิสต์ซ้อนลิสต์ให้เป็นลิสต์ธรรมดาที่เก็บข้อมูลเดี่ยวไว้ ในกรณีที่ข้อมูลที่เราได้รับมาเป็นข้อมูลที่มีโครงสร้างที่ซับซ้อนเกินไปอย่างลิสต์ของลิสต์ของคำซึ่งเก็บข้อมูลระดับประโยคไว้ด้วยว่ามีประโยคอยู่กี่ประโยค (ลิสต์ย่อย) และแต่ละประโยคมีคำอยู่กี่คำ (สตริงที่อยู่ในลิสต์ย่อย) หากเราไม่ต้องการข้อมูลในระดับประโยคเราอาจจะย่อลงให้เหลือเพียงลิสต์ของสตริงคำ โดยการทำลิสต์ให้เรียบ</p>
 <p>โครงสร้างของโค้ดที่ใช้ในการทำลิสต์ให้เรียบ จะมีการใช้วงวนฟอร์ซ้อนวงวนฟอร์ซึ่งมีโครงสร้างดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
@@ -796,8 +813,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id9">
-<h2>ลิสต์ของทูเปิล<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id11">
+<h2>ลิสต์ของทูเปิล<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <p>ทูเปิลเป็นโครงสร้างข้อมูลที่เหมาะกับการเก็บข้อมูลหนึ่งหน่วยที่มีหลายมิติ เช่น พิกัด 1 พิกัด มีค่า x และ y ซึ่งเป็นตัวเลข 2 ค่า เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coordinate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -865,8 +882,8 @@ document.write(`
 </tbody>
 </table>
 </div>
-<section id="id10">
-<h3>ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <p>เราสามารถไล่เข้าถึงสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิลได้ด้วยวิธีเดียวกันกับการ ไล่บนลิสต์ของข้อมูลประเภทอื่น ๆ โดยใช้วงวนฟอร์เช่นเดิม ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ทูเปิล</span> <span class="ow">in</span> <span class="n">ลิสต์ของทูเปิล</span><span class="p">:</span>
     <span class="n">ทำอะไรกับทูเปิล</span>
@@ -880,12 +897,12 @@ document.write(`
         <span class="n">western_cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>หรือใช้ list comprehension</p>
+<p>หรือใช้ลิสต์คอมพรีเฮนชัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[</span><span class="n">city</span> <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span> <span class="k">if</span> <span class="n">city</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>เวลาเรา iterate บนลิสต์ของทูเปิล ปัญหาที่เรามักจะพบคือเราอาจจะลืมว่าสมาชิกแต่ละตัวของทูเปิลเก็บค่าอะไรอยู่ เช่น เราอาจจะลิืมว่า <code class="docutils literal notranslate"><span class="pre">city[0]</span></code> เก็บละติจูดหรือลองจิจูด ทำให้เราเขียนโปรแกรมผิดพลาดได้ง่าย ด้วยเหตุนี้เรานิยม unpack tuple หรือกระจายค่าแต่ละค่าของทูเปิลแยกออกมาเก็บไว้ในตัวแปรแต่ละตัวก่อน แล้วจึงใช้ตัวแปรเหล่านั้นในการประมวลผลข้อมูล</p>
+<p>เวลาเราวนซ้ำบนลิสต์ของทูเปิล ปัญหาที่เรามักจะพบคือเราอาจจะลืมว่าสมาชิกแต่ละตัวของทูเปิลเก็บค่าอะไรอยู่ เช่น เราอาจจะลืมว่า <code class="docutils literal notranslate"><span class="pre">city[0]</span></code> เก็บละติจูดหรือลองจิจูด ทำให้เราเขียนโปรแกรมผิดพลาดได้ง่าย ด้วยเหตุนี้เรานิยมขยายทูเปิลออก (unpack tuple) หรือกระจายค่าแต่ละค่าของทูเปิลแยกออกมาเก็บไว้ในตัวแปรแต่ละตัวก่อน แล้วจึงใช้ตัวแปรเหล่านั้นในการประมวลผลข้อมูล</p>
 <p>จากตัวอย่างข้างต้นเราควรแก้ไขโค้ดให้อ่านง่ายขึ้นด้วยการกระจายค่าของทูเปิลออกมาเก็บไว้ในตัวแปรแต่ละตัวก่อน ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[]</span>
@@ -903,7 +920,7 @@ document.write(`
         <span class="n">western_cities</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>หรือใช้ลิสต์คอมพรีเฮนชัน</p>
+<p>หรือใช้ลิสต์คอมพริเฮนชัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">นิพจน์</span> <span class="k">for</span> <span class="n">ตัวแปร1</span><span class="p">,</span> <span class="n">ตัวแปร2</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="n">ตัวแปร</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ลิสต์ของทูเปิล</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -912,7 +929,7 @@ document.write(`
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[(</span><span class="n">lat</span><span class="p">,</span><span class="n">lon</span><span class="p">)</span> <span class="k">for</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="ow">in</span> <span class="n">cities</span> <span class="k">if</span> <span class="n">lon</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>หากเราต้องการ unpack tuple เราต้องทราบจำนวนสมาชิกของทูเปิลที่อยู่ในลิสต์ และทูเปิลทุกตัวที่อยู่ในลิสต์จะต้องมีจำนวนสมาชิกเท่ากัน
+<p>หากเราต้องการขยายทูเปิลออก เราต้องทราบจำนวนสมาชิกของทูเปิลที่อยู่ในลิสต์ และทูเปิลทุกตัวที่อยู่ในลิสต์จะต้องมีจำนวนสมาชิกเท่ากัน
 ถ้าหากจำนวนตัวแปรที่เราใช้น้อยกว่าจำนวนสมาชิกของทูเปิล จะเกิดความผิดพลาดขึ้น และถ้าหากจำนวนตัวแปรที่เราใช้มากกว่าจำนวนสมาชิกของทูเปิล จะเกิดความผิดพลาดขึ้นเช่นกัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[]</span>
@@ -923,10 +940,10 @@ document.write(`
 </pre></div>
 </div>
 <p>เราจะได้ผลลัพธ์เป็น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">values</span> <span class="n">to</span> <span class="n">unpack</span> <span class="p">(</span><span class="n">expected</span> <span class="mi">3</span><span class="p">,</span> <span class="n">got</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">values</span> <span class="n">to</span> <span class="n">unpack</span> <span class="p">(</span><span class="n">expected</span> <span class="mi">3</span><span class="p">,</span> <span class="n">got</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>เนื่องจากเรา unpack tuple ไปยังตัวแปรสามตัวแปร แต่ว่าสมาชิกของทูเปิลมีเพียงสองตัว ภาษาไพทอนไม่อะลุ่มอล่วยให้ <code class="docutils literal notranslate"><span class="pre">height</span></code> เป็นค่า <code class="docutils literal notranslate"><span class="pre">None</span></code> เพื่อให้โปรแกรมไหลไปได้ จึงแจ้ง <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> ออกมา</p>
+<p>เนื่องจากเราขยายทูเปิลออกไปยังตัวแปรสามตัวแปร แต่ว่าสมาชิกของทูเปิลมีเพียงสองตัว ภาษาไพทอนไม่ยอมให้ <code class="docutils literal notranslate"><span class="pre">height</span></code> เป็นค่า <code class="docutils literal notranslate"><span class="pre">None</span></code> เพื่อให้โปรแกรมดำเนินต่อไปได้ จึงแจ้ง <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> ออกมา</p>
 <p>หากทูเปิลแต่ละตัวมีจำนวนสมาชิกที่แตกต่างกัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[]</span>
@@ -936,12 +953,12 @@ document.write(`
 		<span class="n">western_cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>เราจะได้ผลลัพธ์เป็น error ที่มีข้อความแจ้งขึ้นมาเหมือนกัน</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">values</span> <span class="n">to</span> <span class="n">unpack</span> <span class="p">(</span><span class="n">expected</span> <span class="mi">3</span><span class="p">,</span> <span class="n">got</span> <span class="mi">2</span><span class="p">)</span>
+<p>เราจะได้ผลลัพธ์เป็นข้อผิดพลาดขึ้นมาเหมือนกัน</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">values</span> <span class="n">to</span> <span class="n">unpack</span> <span class="p">(</span><span class="n">expected</span> <span class="mi">3</span><span class="p">,</span> <span class="n">got</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>เพราะว่าเมื่อเรา iterate ไปถึงทูเปิล <code class="docutils literal notranslate"><span class="pre">(13.756331,</span> <span class="pre">100.501762)</span></code> จำนวนตัวแปรมีสามตัว แต่ว่าสมาชิกของทูเปิลมีสองตัวเท่านั้น</p>
-<p>จากโค้ดข้างเราสังเกตได้ว่าค่าของ <code class="docutils literal notranslate"><span class="pre">latitude</span></code> ไม่ได้ถูกใช้ในการประมวลผลข้อมูลเลย แต่เราจำเป็นต้องสร้างตัวแปรเข้ามารองรับค่าทุกค่าของทูเปิล ในกรณีดังกล่าวเรามักจะตั้งชื่อตัวแปรที่ไม่ได้ใช้เป็น <code class="docutils literal notranslate"><span class="pre">_</span></code> เพื่อบ่งบอกว่าตัวแปรนั้นตั้งมาเพื่อรับค่าไม่ให้เกิด error เฉย ๆ แต่ไม่ได้นำไปประมวลผลต่อ ดังนั้นเราสามารถแก้ไขโค้ดจากตัวอย่างเป็น</p>
+<p>เพราะว่าเมื่อเราวนซ้ำไปถึงทูเปิล <code class="docutils literal notranslate"><span class="pre">(13.756331,</span> <span class="pre">100.501762)</span></code> จำนวนตัวแปรที่เตรียมไว้ยังคงมีสามตัวเช่นเดิม แต่ว่าสมาชิกของทูเปิลมีสองตัวเท่านั้น</p>
+<p>จากโค้ดข้างเราสังเกตได้ว่าค่าของ <code class="docutils literal notranslate"><span class="pre">latitude</span></code> ไม่ได้ถูกใช้ในการประมวลผลข้อมูลเลย แต่เราจำเป็นต้องสร้างตัวแปรเข้ามารองรับค่าทุกค่าของทูเปิล ในกรณีดังกล่าวเรามีธรรมเนียมปฏิบัติ (convention) ว่าจะตั้งชื่อตัวแปรที่ไม่ได้ใช้เป็น <code class="docutils literal notranslate"><span class="pre">_</span></code> เพื่อบ่งบอกว่าตัวแปรนั้นตั้งมาเพื่อรับค่าไม่ให้เกิดข้อผิดพลาด แต่ไม่ได้นำไปประมวลผลต่อ ดังนั้นเราสามารถแก้ไขโค้ดจากตัวอย่างเป็น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
@@ -950,12 +967,12 @@ document.write(`
         <span class="n">western_cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>จากตัวอย่างทั้งหมดนี้ทำให้เห็นว่าการเขียนโค้ดเพื่อประมวลผลข้อมูลที่มีความซับซ้อนมากขึ้นมีอยู่หลายวิธี นอกจากเราต้องเขียนโค้ดให้ประมวลผลได้ผลลัพท์ถูกต้องแล้ว เรายังต้องคำนึงถึงว่าโค้ดที่เราเขียนนั้นจะอ่านง่ายและเข้าใจได้ง่าย โดยไม่ต้องใช้เวลานานในการอ่านโค้ด และไม่ต้องใช้เวลานานในการหาข้อผิดพลาดที่เกิดขึ้นในโค้ด</p>
+<p>จากตัวอย่างทั้งหมดนี้ทำให้เห็นว่าการเขียนโค้ดเพื่อประมวลผลข้อมูลที่มีความซับซ้อนมากขึ้นมีอยู่หลายวิธี นอกจากเราต้องเขียนโค้ดให้ประมวลผลได้ผลลัพท์ถูกต้องแล้ว เรายังต้องคำนึงถึงว่าโค้ดที่เราเขียนนั้นจะอ่านง่ายและเข้าใจได้ง่าย โดยไม่ต้องใช้เวลานานในการอ่าน และหาข้อผิดพลาดที่เกิดขึ้นในโค้ด</p>
 </section>
 </section>
-<section id="id11">
-<h2>ลิสต์ของดิกชันนารี<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
-<p>ลิสต์ของดิกชันนารีเป็นโครงสร้างข้อมูลอีกประเภทที่พบเห็นได้บ่อย เราอาจจะสงสัยกันว่าเมื่อไรกันที่เราต้องการเก็บรายการของสิ่งที่เก็บคู่คีย์แวลูเอาไว้เยอะ ๆ ดิกชันนารีที่ถูกเก็บอยู่ในลิสต์มักจะเป็นดิกชันนารีที่มีคีย์เหมือนกันทุกตัว ดิกชันนารีประเภทนี้มีหน้าที่คล้ายคลึงกับทูเปิล เช่น หากว่าเราใช้ลิสต์ของทูเปิลในการเก็บข้อความและผู้ส่งข้อความดังนี้</p>
+<section id="id13">
+<h2>ลิสต์ของดิกชันนารี<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<p>ลิสต์ของดิกชันนารีเป็นโครงสร้างข้อมูลอีกประเภทที่พบเห็นได้บ่อย เราอาจจะสงสัยกันว่าในกรณีใดที่เราจำเป็นต้องเก็บลิสต์ของสิ่งที่เก็บคู่คีย์แวลูเอาไว้หลาย ๆ คู่ ดิกชันนารีที่ถูกเก็บอยู่ในลิสต์มักจะเป็นดิกชันนารีที่มีชุดของคีย์ที่เหมือนกันในทุกดิกชันนารี ดิกชันนารีประเภทนี้อันทีจริงแล้วทำหน้าที่คล้ายคลึงกับทูเปิล เช่น หากเราใช้ลิสต์ของทูเปิลในการเก็บข้อความและผู้ส่งข้อความดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;แม่เป็นกำลังใจของหนู&#39;</span><span class="p">)</span>
     <span class="p">(</span><span class="s1">&#39;โกโก้&#39;</span><span class="p">,</span> <span class="s1">&#39;หนูมีแม่คนเดียว&#39;</span><span class="p">),</span> 
@@ -982,8 +999,8 @@ document.write(`
 </pre></div>
 </div>
 <p>จากตัวอย่างข้างต้นเราสามารถสังเกตได้ว่าการใช้ดิกชันนารีทำให้โค้ดอ่านง่ายขึ้น และเราไม่ต้องคอยจำลำดับของข้อมูลในทูเปิล แต่ก็มีข้อควรระวังคือ ดิกชันนารีทุกตัวที่อยู่ในลิสต์จะต้องมีคีย์ที่เหมือนกันหมด มิฉะนั้นเราจะต้องเขียนโค้ดเพิ่มเติมเพื่อตรวจสอบว่าดิกชันนารีมีคีย์ที่ต้องการเข้าถึงหรือไม่ ซึ่งอาจจะทำให้โค้ดดูซับซ้อนเกินความจำเป็น</p>
-<p>ดิกชันนารีที่เราใช้ลักษณะดังตัวอย่างข้างต้น จะมีคีย์ที่เป็นสตริงที่เป็นฟิลด์ (field) บ่งบอกว่าข้อมูลที่เป็น แวลูเป็นข้อมูลอะไร เช่น ดิกชันนารีในตัวอย่างข้างต้นมี 2 ฟิลด์ คือ <code class="docutils literal notranslate"><span class="pre">speaker</span></code> และ <code class="docutils literal notranslate"><span class="pre">message</span></code> ซึ่งบ่งบอกว่าแวลูของดิกชันนารีคือผู้พูด และข้อความที่คนนั้นพูด เราขอเรียกดิกชันนารีที่มีคีย์เป็นฟิลด์ว่าเป็น field-value dictionary</p>
-<p>ตัวอย่างที่แล้วอาจจะยังไม่ได้ทำให้เห็นภาพว่าทำไมเราถึงจำเป็นต้องใช้ ดิกชันนารีคู่ฟิลด์แวลู ให้ลองพิจารณากรณีที่เราต้องเก็บทวีตจำนวนมาก</p>
+<p>ดิกชันนารีที่เราใช้ลักษณะดังตัวอย่างข้างต้น จะมีคีย์ที่เป็นสตริงที่เป็นเขตข้อมูล หรือฟีลด์ (field) บ่งบอกว่าข้อมูลที่เป็น แวลูเป็นข้อมูลอะไร เช่น ดิกชันนารีในตัวอย่างข้างต้นมี 2 ฟีลด์ คือ <code class="docutils literal notranslate"><span class="pre">speaker</span></code> และ <code class="docutils literal notranslate"><span class="pre">message</span></code> ซึ่งบ่งบอกว่าแวลูของดิกชันนารีคือผู้พูด และข้อความที่คนนั้นพูด เราขอเรียกดิกชันนารีที่มีคีย์เป็นฟีลด์ว่า ดิกชันนารีคู่ฟีลด์แวลู (field-value dictionary)</p>
+<p>ตัวอย่างที่แล้วอาจจะยังไม่ได้ทำให้เห็นภาพว่าเหตุใดเราจึงจำเป็นต้องใช้ดิกชันนารีคู่ฟีลด์แวลู ให้ลองพิจารณากรณีที่เราต้องเก็บทวิตจำนวนมาก</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">243000</span><span class="p">,</span>
   <span class="s1">&#39;num retweets&#39;</span><span class="p">:</span> <span class="mi">37200</span><span class="p">,</span> <span class="s1">&#39;num fav&#39;</span><span class="p">:</span> <span class="mi">250300</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I was proud to work with Justin Trudeau as President&#39;</span><span class="p">},</span>
  <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;SpeakerPelosi&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;October 17, 2019&#39;</span><span class="p">,</span> <span class="s1">&#39;num comments&#39;</span><span class="p">:</span> <span class="mi">22700</span><span class="p">,</span>
@@ -993,16 +1010,16 @@ document.write(`
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>ดิกชันนารีที่เราใช้ในตัวอย่างข้างต้นเป็น ดิกชันนารีคู่ฟิลด์แวลู ที่มีฟิลด์ดังต่อไปนี้</p>
+<p>ดิกชันนารีที่เราใช้ในตัวอย่างข้างต้นเป็น ดิกชันนารีคู่ฟีลด์แวลู ที่มีฟีลด์ดังต่อไปนี้</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> บ่งบอกว่าทวีตนั้นมาจากบัญชีใคร</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> บ่งบอกว่าทวีตนั้นถูกโพสต์เมื่อวันที่ไหน</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">comments</span></code> บ่งบอกว่าทวีตนั้นมีคอมเมนต์กี่คอมเมนต์</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">retweets</span></code> บ่งบอกว่าทวีตนั้นถูก retweet กี่ครั้ง</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">fav</span></code> บ่งบอกว่าทวีตนั้นทำให้เป็น favorite โดยการกดปุ่มหัวใจบนแอปกี่ครั้ง</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> บ่งบอกว่าทวีตนั้นมีข้อความอะไร</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> บ่งบอกว่าทวิตนั้นมาจากบัญชีใคร</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> บ่งบอกว่าทวิตนั้นถูกโพสต์เมื่อวันที่ไหน</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">comments</span></code> บ่งบอกว่าทวิตนั้นมีคอมเมนต์กี่คอมเมนต์</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">retweets</span></code> บ่งบอกว่าทวิตนั้นถูกรีทวิตกี่ครั้ง</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">fav</span></code> บ่งบอกว่าทวิตนั้นทำให้เป็น favorite โดยการกดปุ่มหัวใจบนแอปกี่ครั้ง</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> บ่งบอกว่าทวิตนั้นมีข้อความอะไร</p></li>
 </ul>
-<p>สมมติต่ออีกว่าเราต้องการเขียนโปรแกรมเพื่อหาว่าแต่ละคนถูก retweet ทั้งหมดกี่ครั้ง</p>
+<p>สมมติต่ออีกว่าเราต้องการเขียนโปรแกรมเพื่อหาว่าแต่ละคนถูกรีทวิตทั้งหมดกี่ครั้ง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
 <span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
@@ -1016,7 +1033,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;BarackObama&#39;</span><span class="p">,</span> <span class="mi">42600</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;SpeakerPelosi&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p>ถ้าหากเราต้องการทำเหมือนกันด้วยการใช้ลิสต์ของทูเปิล โค้ดจะมีความซับซ้อนขึ้น และอ่านยากขึ้น อย่างแรกคือผู้เขียนโค้ดจะต้องไปตามหาว่า twitter id และจำนวนการ retweet อยู่ในตำแหน่งใดของทูเปิล ทำให้เกิดความยุ่งยากในการเขียนโค้ด เมื่อเขียนเสร็จแล้วโค้ดจะยากต่อการอ่าน ดังที่เห็นในโปรแกรมข้างล่างนี้</p>
+<p>ถ้าหากเราต้องการทำเหมือนกันด้วยการใช้ลิสต์ของทูเปิล โค้ดจะมีความซับซ้อนขึ้น และอ่านยากขึ้น อย่างแรกคือผู้เขียนโค้ดจะต้องไปตามหาว่าชื่อทวิตเตอร์ และจำนวนการรีทวิตอยู่ในตำแหน่งใดของทูเปิล ทำให้เกิดความยุ่งยากในการเขียนโค้ด เมื่อเขียนเสร็จแล้วโค้ดก็จะอ่านทำความเข้าใจได้ยาก ดังที่เห็นในโปรแกรมข้างล่างนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_list</span><span class="p">:</span>
   <span class="n">twitter_id</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1024,17 +1041,18 @@ document.write(`
   <span class="n">counter</span><span class="p">[</span><span class="n">twitter_id</span><span class="p">]</span> <span class="o">+=</span> <span class="n">retweets</span>
 </pre></div>
 </div>
-<p>หากเราต้องกลับมาอ่านโค้ดของเราเอง เราก็อาจจะลืมไปแล้วว่าตำแหน่งที่ 0 และ 3 เก็บอะไรไว้อยู่ หรือถ้าส่งต่อให้คนอื่นในทีมเพื่อตรวจสอบหรือเขียนโค้ดต่อจากเรา ก็ยากต่อการทำความเข้าใจด้วยเหตุผลเดียวกัน ปัญหาอีกประการหนึ่งคือ ถ้าหากเพิ่มข้อมูลเข้าไปในทูเปิลก็อาจจะทำให้ตำแหน่งที่เก็บเปลี่ยนไปได้ เนื่องจากทูเปิลเป็นโครงสร้างข้อมูลแบบมีลำดับ จากตัวอย่างนี้ทำให้เห็นว่าถ้าหากข้อมูลหนึ่งตัวเก็บข้อมูลอยู่หลายอย่างในลักษณะคล้ายกับกับการกรอกฟอร์มที่มีหลาย ๆ ฟิลด์ การใช้ ดิกชันนารีคู่ฟิลด์แวลูเป็นวิธีที่ดีกว่าการใช้ทูเปิล</p>
+<p>หากเราต้องกลับมาอ่านโค้ดของเราเอง เราก็อาจจะลืมไปแล้วว่าตำแหน่งที่ 0 และ 3 เก็บอะไรไว้อยู่ หรือถ้าส่งต่อให้ผู้อื่นในทีมเพื่อตรวจสอบหรือเขียนโค้ดต่อจากเรา ก็จะเข้าใจยากด้วยเหตุผลเดียวกัน ปัญหาอีกประการหนึ่งคือ ถ้าหากเพิ่มข้อมูลเข้าไปในทูเปิลก็อาจจะทำให้ตำแหน่งที่เก็บเปลี่ยนไปได้ เนื่องจากทูเปิลเป็นโครงสร้างข้อมูลแบบมีลำดับ จากตัวอย่างนี้ทำให้เห็นว่าถ้าหากข้อมูลหนึ่งตัวเก็บข้อมูลอยู่หลายอย่างในลักษณะคล้ายกับกับการกรอกฟอร์มที่มีหลาย ๆ ฟีลด์ การใช้ดิกชันนารีคู่ฟีลด์แวลูเป็นวิธีที่ดีกว่าการใช้ทูเปิล</p>
 </section>
-<section id="id12">
-<h2>ดิกชันนารีที่คีย์เป็นทูเปิล<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
-<figure class="align-center" id="id17">
-<a class="reference internal image-reference" href="../../_images/dict-tuple.jpeg"><img alt="../../_images/dict-tuple.jpeg" src="../../_images/dict-tuple.jpeg" style="height: 100px;" /></a>
+<section id="id14">
+<h2>ดิกชันนารีที่คีย์เป็นทูเปิล<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<p>จากบทที่แล้วชนิดของข้อมูลที่สามารถเป็นคีย์ในดิกชันนารีได้ล้วนแต่เป็นข้อมูลเดี่ยว เช่น ตัวเลข หรือสตริง ดิกชันนารีในภาษาไพทอนอนุญาติให้ใช้ทูเปิลที่เก็บตัวเลขหรือสตริงเป็นคีย์ได้ ทำให้มีความยืดหยุ่นในการเก็บข้อมูลมากขึ้น ดังตัวอย่างต่อไปนี้</p>
+<figure class="align-center" id="id19">
+<a class="reference internal image-reference" href="../../_images/dict-tuple.jpeg"><img alt="../../_images/dict-tuple.jpeg" src="../../_images/dict-tuple.jpeg" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 14 </span><span class="caption-text">ภาพอธิบายโครงสร้างของดิกชันนารี</span><a class="headerlink" href="#id17" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 14 </span><span class="caption-text">ภาพอธิบายโครงสร้างของดิกชันนารี</span><a class="headerlink" href="#id19" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>จากภาพจะเห็นได้ว่าเรามีทูเปิลของสตริงสองตำแหน่งไว้เก็บชื่อและชื่อเล่น มีดิกชันนารีรูปแบบที่เคยพบในบทก่อน ๆ คือมีคีย์เป็นสตริง และมีดิกชันนารีรูปแบบใหม่ที่มีคีย์เป็นทูเปิล</p>
+<p>จากภาพบนสองภาพจะเห็นได้ว่าเรามีทูเปิลของสตริงสองตำแหน่งไว้เก็บชื่อและชื่อเล่น มีดิกชันนารีรูปแบบที่เคยพบในบทก่อน ๆ คือมีคีย์เป็นสตริง และมีดิกชันนารีรูปแบบใหม่ที่มีคีย์เป็นทูเปิล</p>
 <p>หากเราต้องการดิกชันนารีไว้เก็บข้อมูลชื่อคนแล้วพบกรณีที่บางคนชื่อซ้ำกัน เช่น มีคนชื่อ <code class="docutils literal notranslate"><span class="pre">อรรถพล</span></code> 2 คน การใช้ดิกชันนารีรูปแบบเดิมที่มีคีย์เป็นสตริงในการเก็บข้อมูลโดยเพิ่มสมาชิกใหม่เข้าไปจะทำให้คีย์แวลูเดิมถูกเขียนทับไป เนื่องจากคีย์ในดิกชันนารีห้ามซ้ำกัน</p>
 <p>ดังนั้นดิกชันนารีที่มีคีย์เป็นทูเปิลจึงเป็นทางแก้ปัญหานี้ ทำให้เราสามารถใส่ข้อมูลสมาชิกได้เพิ่มขึ้น จากตัวอย่างคือเปลี่ยนรูปแบบดิกชันนารีจากที่มีคีย์เป็นสตริงไว้เก็บชื่ออย่างเดียว ให้เป็นดิกชันนารีที่มีคีย์เป็นทูเปิลไว้เก็บสตริงสองตัวเป็นชื่อกับชื่อเล่นเพื่อเลี่ยงการที่มีคีย์ซ้ำกัน</p>
 <p>สมมติว่าเราต้องการเก็บข้อมูลทำสมุดโทรศัพท์มีตัวอย่างโครงสร้างข้อมูลแบบต่าง ๆ  ดังนี้</p>
@@ -1049,10 +1067,14 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิลโดยที่ทูเปิลเก็บข้อมูลชื่อ นามสกุล และเบอร์โทรเป็นสตริง วิธีการดึงข้อมูลเบอร์โทรจากตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีีดังนี้</p>
+<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิลโดยที่ทูเปิลเก็บข้อมูลชื่อ นามสกุล และเบอร์โทรศัพท์เป็นสตริง วิธีการดึงข้อมูลเบอร์โทรศัพท์จากตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีีดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">entry_list</span><span class="p">:</span>
 	<span class="n">phone_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>หรือใช้ลิสต์คอมพริเฮนชัน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">phone</span> <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">entry_list</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีโครงสร้างข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นทูเปิล และมีแวลูเป็นสตริง วิธีการดึงข้อมูลเบอร์โทรจากตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีีดังนี้</p>
@@ -1060,7 +1082,7 @@ document.write(`
 </pre></div>
 </div>
 <p>โครงสร้างข้อมูลที่เลือกใช้มีผลอย่างมากต่อการประมวลผลข้อมูลต่อไป เช่น
-หากเราต้องการสร้างฟังก์ชันสำหรับค้นหาเบอร์โทรของคน ๆ หนึ่งจากลิสต์ เราต้องไล่วนซ้ำไปบนลิสต์เพื่อหาชื่อที่ต้องการ ดังนี้</p>
+หากเราต้องการสร้างฟังก์ชันสำหรับค้นหาเบอร์โทรของคนคนหนึ่งจากลิสต์ เราต้องไล่วนซ้ำไปบนลิสต์เพื่อหาชื่อที่ต้องการ ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_mark_from_list</span><span class="p">(</span><span class="n">entry_list</span><span class="p">):</span>
 <span class="n">query</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entry_list</span><span class="p">:</span>
@@ -1072,7 +1094,7 @@ document.write(`
 </div>
 <div class="note admonition">
 <p class="admonition-title">คำถามชวนคิด</p>
-<p>จากโปรแกรมข้างต้น ตัวแปรต่อไปนี้มี type เป็นอะไร</p>
+<p>จากโปรแกรมข้างต้น ตัวแปรต่อไปนี้ชนิดข้อมูลเป็นอะไร</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">first</span></code></p></li>
@@ -1089,12 +1111,12 @@ document.write(`
     <span class="k">return</span> <span class="n">friend_to_phone</span><span class="p">[</span><span class="n">query</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>จะเห็นได้ว่าตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> ที่มีโครงสร้างข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นทูเปิลสามารถเขียนฟังก์ชันค้นหาเบอร์โทรหรือเขียนดึงข้อมูลเบอร์โทรทั้งหมดได้ง่ายและกระชับกว่า ไม่ต้องทำการ unpack tuple ให้ซับซ้อนเหมือนกับการค้นเบอร์โทรหรือเขียนดึงข้อมูลเบอร์โทรทั้งหมดในตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code>  ที่มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิล</p>
-<p>นอกจากนี้ ดิกชันนารียังค้นหาเบอร์โทรได้รวดเร็วกว่าลิสต์ของทูเปิล จะเห็นได้ว่าในฟังก์ชันแรกมีการใช้วงวนฟอร์ซึ่งจะทำให้ช้า เพราะต้องไล่หาทีละตัว โดยเฉพาะเมื่อมี entry จำนวนมาก แต่ในฟังก์ชันที่สองค้นหาเบอร์โทรจากดิกชันนารี สามารถค้นหาแวลูจากคีย์ข้อมูลได้รวดเร็วโดยไม่ต้องคำถึงจำนวนสมาชิกในดิกชันนารี</p>
+<p>จะเห็นได้ว่าตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> ที่มีโครงสร้างข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นทูเปิลสามารถเขียนฟังก์ชันค้นหาเบอร์โทรหรือเขียนดึงข้อมูลเบอร์โทรศัพท์ทั้งหมดได้ง่ายและกระชับกว่า ไม่ต้องทำการขยายทูเปิลออกให้ซับซ้อนเหมือนกับการค้นเบอร์โทรหรือเขียนดึงข้อมูลเบอร์โทรทั้งหมดในตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code>  ที่มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิล</p>
+<p>นอกจากนี้ ดิกชันนารียังค้นหาเบอร์โทรศัพท์ได้รวดเร็วกว่าลิสต์ของทูเปิล จะเห็นได้ว่าในฟังก์ชันแรกมีการใช้วงวนฟอร์ซึ่งจะทำให้ช้า เพราะต้องไล่หาทีละตัว โดยเฉพาะเมื่อมีข้อมูลจำนวนมาก แต่ในฟังก์ชันที่สองค้นหาเบอร์โทรจากดิกชันนารี สามารถค้นหาแวลูจากคีย์ข้อมูลได้รวดเร็วโดยไม่ต้องคำถึงจำนวนสมาชิกในดิกชันนารี</p>
 <p>แต่ในการใช้ดิกชันนารีเราก็ต้องตัดสินใจก่อนว่าจะค้นหาเบอร์โทรด้วยข้อมูลอะไร จากตัวอย่างจะเป็นการใช้ชื่อนามสกุลในการค้นหา จึงใช้ทูเปิลของสตริงสองตัวที่เป็นชื่อและนามสกุลเป็นคีย์ หากยังไม่รู้ว่าจะใช้ข้อมูลอะไรในการค้นหา ลิสต์ของทูเปิลอาจเป็นตัวเลือกที่ดีกว่า</p>
 </section>
-<section id="id13">
-<h2>ดิกชันนารีที่แวลูเป็นลิสต์<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="id15">
+<h2>ดิกชันนารีที่แวลูเป็นลิสต์<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
 <p>การเก็บข้อมูลทำสมุดโทรศัพท์ในกรณีที่คนหนึ่งคนอาจมีเบอร์โทรศัพท์หลายเบอร์ด้วยโครงสร้างข้อมูลแบบลิสต์ของทูเปิลและดิกชันนารีที่มีแวลูเป็นลิสต์ เขียนได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entry_list</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">,</span> <span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">),</span>
   <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;222-333-4444&#39;</span><span class="p">),</span>
@@ -1107,7 +1129,7 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>การที่บางคนอาจมีเบอร์โทรศัพท์หลายเบอร์จะเป็นปัญหากับตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code>  ที่เป็นลิสต์ของทูเปิลในการเปิดหาเบอร์โทรทั้งหมด เนื่องจากทูเปิลแต่ละตัวในลิสต์มีจำนวนสมาชิกไม่เท่ากัน จึงทำให้ไม่สามารถ unpack tuple แบบเดิมได้ ตัวแปร <code class="docutils literal notranslate"><span class="pre">name_to_phone_list</span></code> ซึ่งเป็นดิกชันนารีที่มีคีย์เป็น tuple และมีแวลูเป็นลิสต์ของสตริงที่เก็บข้อมูลเบอร์โทรจึงเป็นทางเลือกที่เหมาะสมในกรณีนี้</p>
+<p>การที่บางคนอาจมีเบอร์โทรศัพท์หลายเบอร์จะเป็นปัญหากับตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code>  ที่เป็นลิสต์ของทูเปิลในการเปิดหาเบอร์โทรทั้งหมด เนื่องจากทูเปิลแต่ละตัวในลิสต์มีจำนวนสมาชิกไม่เท่ากัน จึงทำให้ไม่สามารถขยายทูเปิลออกแบบเดิมได้ ตัวแปร <code class="docutils literal notranslate"><span class="pre">name_to_phone_list</span></code> ซึ่งเป็นดิกชันนารีที่มีคีย์เป็น tuple และมีแวลูเป็นลิสต์ของสตริงที่เก็บข้อมูลเบอร์โทรจึงเป็นทางเลือกที่เหมาะสมในกรณีนี้</p>
 <p>ตัวอย่างการเขียนโปรแกรมเพื่อค้นหาเบอร์โทรของคนหนึ่งคน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">first_last</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span>
@@ -1121,7 +1143,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>ในการปรับโค้ดให้เราสามารถเปิดค้นหาเบอร์ของทุกคนได้ เราจะใช้โครงสร้าง double for loop โดยเพิ่มวงวนฟอร์ชั้นนอกเข้ากับโค้ดข้างบน ดังนี้</p>
+<p>ในการปรับโค้ดให้เราสามารถเปิดค้นหาเบอร์ของทุกคนได้ เราจะใช้โครงสร้างวงวนซ้อนวงวน โดยเพิ่มวงวนฟอร์ชั้นนอกเข้ากับโค้ดข้างต้น ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">first_last_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_to_phone_list</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> 
 <span class="k">for</span> <span class="n">first_last</span> <span class="ow">in</span> <span class="n">first_last_list</span><span class="p">:</span>
@@ -1153,9 +1175,9 @@ document.write(`
 </div>
 <p>เนื่องจากเวลาวงวนฟอร์ไปบนดิกชันนารี สิ่งที่เราได้ออกมาจะเป็นคีย์ดังนั้นจึงไม่จำเป็นต้องใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">list(name_to_phone_list.keys())</span></code> เพื่อทำลิสต์ของคีย์เหมือนโค้ดก่อนหน้า</p>
 </section>
-<section id="id14">
-<h2>ดิกชันนารีที่แวลูเป็นดิกชันนารี<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
-<p>ในการเก็บข้อมูลทำสมุดโทรศัพท์บางทีเราอาจอยากได้ข้อมูลช่องทางติดต่ออื่น ๆ นอกจากเบอร์โทร การใช้ดิกชันนารีที่มีแวลูเป็น ดิกชันนารีคู่ฟิลด์แวลู โดยที่แวลูแต่ละตัวจะมี field ที่เหมือนกันทั้งหมด ทำให้เราสามารถเพิ่มช่องทางติดต่ออื่น ๆ ที่เราต้องการได้โดยง่าย เช่น ในตัวอย่างมี field ที่เป็น phone และ line</p>
+<section id="id16">
+<h2>ดิกชันนารีที่แวลูเป็นดิกชันนารี<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<p>ในการเก็บข้อมูลทำสมุดโทรศัพท์บางทีเราอาจอยากได้ข้อมูลช่องทางติดต่ออื่น ๆ นอกจากเบอร์โทร การใช้ดิกชันนารีที่มีแวลูเป็น ดิกชันนารีคู่ฟีลด์แวลู โดยที่แวลูแต่ละตัวจะมีฟีลด์ที่เหมือนกันทั้งหมด ทำให้เราสามารถเพิ่มช่องทางติดต่ออื่น ๆ ที่เราต้องการได้โดยง่าย เช่น ในตัวอย่างมีฟีลด์ที่เป็น <code class="docutils literal notranslate"><span class="pre">'phone'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'line'</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_info</span> <span class="o">=</span> <span class="p">{</span> 
   <span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;Wahlberg&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="p">{</span><span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;111-222-3333&#39;</span><span class="p">,</span> <span class="s1">&#39;444-555-6666&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;itsmemark&#39;</span><span class="p">},</span>
   <span class="p">(</span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;222-3333-44444&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="s1">&#39;janehomegirl&#39;</span><span class="p">}</span>
@@ -1184,29 +1206,29 @@ document.write(`
 <tbody>
 <tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">name_to_info[('Jane',</span> <span class="pre">'Doe')]</span></code></p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">{'phone':</span> <span class="pre">['222-3333-44444']</span> <span class="pre">,</span> <span class="pre">'line':</span> <span class="pre">'janehomegirl'}</span></code></p></td>
-<td class="text-left"><p>ดิกชันนารีคู่ฟิลด์แวลู</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Jane',</span> <span class="pre">'Doe')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟิลด์แวลู</p></td>
+<td class="text-left"><p>ดิกชันนารีคู่ฟีลด์แวลู</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Jane',</span> <span class="pre">'Doe')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟีลด์แวลู</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">name_to_info[('Mark',</span> <span class="pre">'Wahlberg')]['phone']</span></code></p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">['111-222-3333',</span> <span class="pre">'444-555-6666']</span></code></p></td>
 <td class="text-left"><p>ลิสต์ของสตริง</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Mark',</span> <span class="pre">'Wahlberg')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟิลด์แวลู จากนั้น <code class="docutils literal notranslate"><span class="pre">['phone']</span></code> เป็น field จึงได้แวลูเป็นลิสต์ของสตริง</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Mark',</span> <span class="pre">'Wahlberg')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟีลด์แวลู จากนั้น <code class="docutils literal notranslate"><span class="pre">['phone']</span></code> เป็นฟีลด์จึงได้แวลูเป็นลิสต์ของสตริง</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">name_to_info[('Mark',</span> <span class="pre">'Wahlberg')]['phone'][0]</span></code></p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">'111-222-3333'</span></code></p></td>
 <td class="text-left"><p>สตริง</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Mark',</span> <span class="pre">'Wahlberg')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟิลด์แวลู จากนั้น <code class="docutils literal notranslate"><span class="pre">['phone']</span></code> เป็น field จึงได้แวลูเป็นลิสต์ของสตริง จากนั้น <code class="docutils literal notranslate"><span class="pre">[0]</span></code> เข้าถึงข้อมูลในลิสต์ของสตริง ได้สตริง</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Mark',</span> <span class="pre">'Wahlberg')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟีลด์แวลู จากนั้น <code class="docutils literal notranslate"><span class="pre">['phone']</span></code> เป็นฟีลด์จึงได้แวลูเป็นลิสต์ของสตริง จากนั้น <code class="docutils literal notranslate"><span class="pre">[0]</span></code> เข้าถึงข้อมูลในลิสต์ของสตริง ได้สตริง</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">name_to_info[('Jane',</span> <span class="pre">'Eyre')]['address']</span></code></p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p></td>
 <td class="text-left"><p>-</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Jane',</span> <span class="pre">'Eyre')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟิลด์แวลู จากนั้นเพราะ <code class="docutils literal notranslate"><span class="pre">['address']</span></code> ไม่ได้เป็น field ใน ดิกชันนารีคู่ฟิลด์แวลู จึงได้ <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">('Jane',</span> <span class="pre">'Eyre')</span></code>เป็นคีย์เข้าถึงข้อมูลในดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">name_to_info</span></code>) จึงได้แวลูที่เป็น ดิกชันนารีคู่ฟีลด์แวลู จากนั้นเพราะ <code class="docutils literal notranslate"><span class="pre">['address']</span></code> ไม่ได้เป็นฟีลด์ใน ดิกชันนารีคู่ฟีลด์แวลู จึงได้ <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<section id="id15">
-<h3>ตัวอย่าง: การนับไบแกรม<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>ตัวอย่าง: การนับไบแกรม<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
 <p>ไบแกรม (bigram) คือ คำสองคำที่อยู่ติดกันในข้อความ  เราสามารถเก็บไบแกรมและจำนวนครั้งที่เจอ ในโครงสร้างข้อมูลดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bigram</span> <span class="o">=</span> <span class="p">{</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1235</span><span class="p">,</span>
   <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">)</span> <span class="p">:</span> <span class="mi">2356</span><span class="p">,</span>
@@ -1217,8 +1239,12 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>ข้อมูลข้างต้นถูกเก็บในดิกชันนารีที่มีคีย์เป็นทูเปิลของสตริงสองตำแหน่งแสดงถึงไบแกรม และมีแวลูเป็นตัวเลขแสดงถึงจำนวนครั้งที่พบไบแกรมนั้น
-การเข้าข้อมูลในโครงสร้างนี้จะเหมาะกับกรณีที่เรารู้ไบแกรมที่เราต้องการค้นหาจำนวนครั้งแล้ว เพราะคีย์ที่ใช้ในการเข้าถึงแวลูเป็นทูเปิลของสตริงสองตัวที่เป็นไบแกรมหากเรายังไม่รู้ไบแกรมที่ชัดเจน แต่ต้องการรู้ว่าคำ ๆ นี้มีคำอะไรต่อตามมาบ้าง โครงสร้างข้อมูลต่อไปจะเหมาะสมกว่า</p>
+<p>ข้อมูลข้างต้นถูกเก็บในดิกชันนารีที่มีลักษณะดังนี้</p>
+<ul class="simple">
+<li><p>คีย์เป็นทูเปิลของสตริงสองตำแหน่ง ซึ่งแสดงถึงไบแกรม</p></li>
+<li><p>แวลูเป็นตัวเลข ซึ่งแสดงถึงจำนวนครั้งที่พบไบแกรมนั้น</p></li>
+</ul>
+<p>การจัดเก็บข้อมูลในโครงสร้างนี้จะเหมาะกับกรณีที่เรารู้ไบแกรมที่เราต้องการค้นหาจำนวนครั้งแล้ว เพราะคีย์ที่ใช้ในการเข้าถึงแวลูเป็นทูเปิลของสตริงสองตัวที่เป็นไบแกรมหากเรายังไม่รู้ไบแกรมที่ชัดเจน แต่ต้องการรู้ว่าคำ ๆ นี้มีคำอะไรต่อตามมาบ้าง โครงสร้างข้อมูลต่อไปจะเหมาะสมกว่า</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bigram</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;dog&#39;</span><span class="p">:</span> <span class="mi">1235</span><span class="p">,</span>
         <span class="s1">&#39;very&#39;</span> <span class="p">:</span> <span class="mi">2356</span><span class="p">},</span>
   <span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span> <span class="p">:</span> <span class="mi">6222</span><span class="p">,</span>
@@ -1228,7 +1254,17 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>เก็บข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นสตริงแสดงถึงคำแรกในไบแกรมและมีแวลูเป็นดิกชันนารีที่รวมคำทั้งหมดที่สามารถต่อท้ายคำแรกในไบแกรมได้ โดยที่ดิกชันนารีนี้ที่มีคีย์เป็นสตริงแสดงถึงคำที่สองในไบแกรมและแวลูเป็นตัวเลขแสดงถึงจำนวนครั้งที่พบไบแกรมนั้น โครงสร้างข้อมูลลักษณะนี้นอกจากจะทำให้เรารู้จำนวนครั้งที่พบไบแกรมแล้ว ยังทำให้เรารู้ได้ว่าคำ ๆ หนึ่งสามารถต่อท้ายด้วยคำว่าอะไรได้บ้าง เช่น หากอยากรู้ว่าคำว่า ‘in’ มีคำอะไรต่อท้ายได้บ้าง สามารถเขียนโปรแกรมได้ ดังนี้</p>
+<p>ข้อมูลข้างต้นเป็นดิกชันนารีที่มีลักษณะดังนี้</p>
+<ul class="simple">
+<li><p>คีย์เป็นสตริง ซึ่งแสดงถึงคำแรกในไบแกรม</p></li>
+<li><p>แวลูเป็นดิกชันนารีที่รวมคำทั้งหมดที่สามารถต่อท้ายคำแรกในไบแกรมได้ โดยมีลักษณะดังนี้</p>
+<ul>
+<li><p>คีย์เป็นสตริง ซึ่งแสดงถึงคำที่สองในไบแกรม</p></li>
+<li><p>แวลูเป็นตัวเลข ซึ่งแสดงถึงจำนวนครั้งที่พบไบแกรมนั้น</p></li>
+</ul>
+</li>
+</ul>
+<p>โครงสร้างข้อมูลลักษณะนี้นอกจากจะทำให้เรารู้จำนวนครั้งที่พบไบแกรมแล้ว ยังทำให้เรารู้ได้ว่าคำ ๆ หนึ่งสามารถต่อท้ายด้วยคำว่าอะไรได้บ้าง เช่น หากอยากรู้ว่าคำว่า ‘in’ มีคำอะไรต่อท้ายได้บ้าง สามารถเขียนโปรแกรมได้ ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bigram</span><span class="p">[</span><span class="s1">&#39;in&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1239,12 +1275,13 @@ document.write(`
   <span class="s1">&#39;my&#39;</span> <span class="p">:</span> <span class="mi">551</span><span class="p">}</span> 
 </pre></div>
 </div>
+<p>ซึ่งแสดงให้เห็นว่าคำ ‘in’ ต่อท้ายด้วยคำ ‘the’ 6222 ครั้ง ต่อท้ายด้วยคำว่า ‘a’ 8533 ครั้ง ต่อท้ายด้วยคำว่า ‘here’ 233 ครั้ง และคำว่า ‘my’ 551 ครั้ง</p>
 </section>
 </section>
-<section id="id16">
-<h2>สรุป<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<section id="id18">
+<h2>สรุป<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
 <p>ลิสต์ของลิสต์ ลิสต์ของทูเปิล ลิสต์ของดิกชันนารีเป็นโครงสร้างข้อมูลที่ชั้นนอกสุดคือลิสต์ที่มีหน้าที่เก็บข้อมูลที่มีลักษณะคล้ายกัน เช่น ลิสต์ที่เก็บข้อมูลเดี่ยวประเภทเดียวกัน ทูเปิลที่มีจำนวนสมาชิกเท่ากัน และข้อมูลเดี่ยวประเภทเดียวกัน ดิกชันนารีที่มีคีย์เหมือนกัน เป็นการเพิ่มกรณีการใช้งานของลิสต์จากที่เราเคยใช้เก็บข้อมูลเดี่ยว เพิ่มมาเป็นการเก็บข้อมูลแบบคอลเลกชัน</p>
-<p>นอกจากนั้นในบางกรณีเราจำเป็นต้องใช้โครงสร้างข้อมูลของดิกชันนารีที่ซับซ้อน ซึ่งที่มีประเภทของข้อมูลหลากหลายในส่วนของคีย์หรือแวลูไม่ว่าจะเป็นดิกชันนารีที่มีคีย์เป็นทูเปิล ดิกชันนารีที่มีแวลูเป็นลิสต์ ดิกชันนารีที่มีแวลูเป็นดิกชันนารี หรือดิกชันนารีที่มีแวลูเป็น ดิกชันนารีคู่ฟิลด์แวลู ซึ่งเป็นประโยชน์ในการนำไปใช้งานในหลายด้าน เราจะเห็นได้ว่าการค้นหาข้อมูลในดิกชันนารีจะสามารถเขียนโปรแกรมได้กระชับและรวดเร็วกว่าการค้นหาข้อมูลในลิสต์ และดิกชันนารีจะยังทำให้เราสามารถเก็บข้อมูลได้หลากหลายมากขึ้นขณะที่ยังสามารถค้นหาได้โดยง่ายต่างจากการใช้ทูเปิลยาว ๆ ในการเก็บข้อมูล</p>
+<p>นอกจากนั้นในบางกรณีเราจำเป็นต้องใช้โครงสร้างข้อมูลของดิกชันนารีที่ซับซ้อน ซึ่งที่มีประเภทของข้อมูลหลากหลายในส่วนของคีย์หรือแวลูไม่ว่าจะเป็นดิกชันนารีที่มีคีย์เป็นทูเปิล ดิกชันนารีที่มีแวลูเป็นลิสต์ ดิกชันนารีที่มีแวลูเป็นดิกชันนารี หรือดิกชันนารีที่มีแวลูเป็น ดิกชันนารีคู่ฟีลด์แวลู ซึ่งเป็นประโยชน์ในการนำไปใช้งานในหลายด้าน เราจะเห็นได้ว่าการค้นหาข้อมูลในดิกชันนารีจะสามารถเขียนโปรแกรมได้กระชับและรวดเร็วกว่าการค้นหาข้อมูลในลิสต์ และดิกชันนารีจะยังทำให้เราสามารถเก็บข้อมูลได้หลากหลายมากขึ้นขณะที่ยังสามารถค้นหาได้โดยง่ายต่างจากการใช้ทูเปิลยาว ๆ ในการเก็บข้อมูล</p>
 </section>
 </section>
 
@@ -1316,31 +1353,33 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ลิสต์ของลิสต์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่างที่ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างที่ 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ลิสต์ของลิสต์ของตัวเลข</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ลิสต์ของลิสต์ของสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ไล่วนซ้ำบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างที่ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างที่ 2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">วงวนซ้อนวงวน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ลิสต์คอมพรีเฮนชันซ้อนใน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">รันฟังก์ชันไปบนสมาชิกทุกตัวที่อยู่ในลิสต์ย่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">วงวนซ้อนวงวน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ลิสต์คอมพริเฮนชันซ้อนใน</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ทำลิสต์ให้แบนเรียบ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ทำลิสต์ให้แบนเรียบ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ลิสต์ของทูเปิล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ลิสต์ของทูเปิล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ลิสต์ของดิกชันนารี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ดิกชันนารีที่คีย์เป็นทูเปิล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ดิกชันนารีที่แวลูเป็นลิสต์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ดิกชันนารีที่แวลูเป็นดิกชันนารี</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ตัวอย่าง: การนับไบแกรม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ดิกชันนารีที่คีย์เป็นทูเปิล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ดิกชันนารีที่แวลูเป็นลิสต์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ดิกชันนารีที่แวลูเป็นดิกชันนารี</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวอย่าง: การนับไบแกรม</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">สรุป</a></li>
 </ul>
   </nav></div>
 

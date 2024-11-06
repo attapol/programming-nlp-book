@@ -193,8 +193,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5s-exercise-data-type.html">เฉลยโจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
@@ -202,8 +202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -214,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการข้อมูลแบบตาราง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
@@ -431,50 +431,54 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">ติดตั้งไลบรารีโดยใช้ <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">อาร์กิวเมนต์แบบมีค่าดีฟอลต์ (default argument)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">อาร์กิวเมนต์โดยปริยาย (default argument)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">การทำความสะอาดข้อมูล (data cleaning)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงให้เป็นโทเค็น (tokenization)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-word-segmentation">การตัดคำโดยอาศัยกฎเกณฑ์ (rule-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lexicon-based-word-segmentation">การตัดคำโดยอาศัยคลังศัพท์ (lexicon-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-based-word-segmentation">การตัดคำโดยอาศัยการเรียนรู้ของเครื่อง (machine-learning-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">สรุปเรื่องการแปลงให้เป็นโทเค็น</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงเป็นโทเค็น (tokenization)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การตัดคำแบบอิงกฎเกณฑ์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การตัดคำแบบอิงคลังศัพท์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การตัดคำแบบอิงการเรียนรู้ของเครื่อง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">สรุปเรื่องการแปลงให้เป็นโทเค็น</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ไลบรารีที่ใช้ในการตัดคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ไลบรารีที่ใช้ในการตัดคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nltk">ตัดคำด้วยไลบรารี NLTK</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">การตัดประโยค</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การตัดประโยคภาษาไทย และภาษาจีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การตัดประโยค</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">การตัดประโยคภาษาไทย และภาษาจีน</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ไลบรารีที่ใช้ในการตัดประโยค</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ไลบรารีที่ใช้ในการตัดประโยค</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-frequency-analysis">การวิเคราะห์ความถี่ของคำ (word frequency analysis)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">วิธีการวิเคราะห์ความถี่ของคำ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">การวิเคราะห์ความถี่ของไบแกรม</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">การสร้างเมฆคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">วิธีการวิเคราะห์ความถี่ของคำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">การวิเคราะห์ความถี่ของไบแกรม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">การสร้างเมฆคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">ข้อจำกัดของการวิเคราะห์ความถี่</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">ข้อจำกัดของการวิเคราะห์ความถี่</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -491,17 +495,17 @@ document.write(`
 <p>ข้อมูลจัดเป็นทรัพยากรที่มีค่ามหาศาล ในปัจจุบันเกือบทุกบริษัท ทุกองค์กรทั้งภาครัฐและเอกชน ต่างเก็บข้อมูลต่าง ๆ ที่เกี่ยวกับการดำเนินธุรกิจ หรือบริหารงานทุกประเภท เช่น เมื่อเราเข้าร้านสะดวกซื้อ หรือห้างสรรพสินค้า พนักงานมักจะถามหาหมายเลขสมาชิก หรือเบอร์โทรศัพท์ เพื่อเก็บข้อมูลการซื้อของลูกค้าตลอดระยะเวลาที่ยังเป็นลูกค้าอยู่ สิ่งที่บริษัทต้องการได้คือข้อมูลของลูกค้า ถึงแม้ว่าจะต้องแลกมากลับการให้ส่วนลด หรือให้่ลูกค้าแลกแต้มเพื่อได้ของสมมนาคุณต่าง ๆ ข้อมูลเหล่านี้ทำให้บริษัทได้ศึกษาพฤติกรรมของลูกค้า ทำให้เลือกสินค้ามาขายได้ถูกใจลูกค้ามากขึ้น ได้ออกกิจกรรมส่งเสริมการขายได้ตรงใจลูกค้ามากขึ้น และทำให้สามารถลูกค้าออกมาได้เป็นกลุ่ม (เช่น กลุ่มที่เป็นลูกค้าใหม่ กลุ่มที่ซื้อไม่บ่อยแต่ซื้อเยอะ กลุ่มที่ซื้อสม่ำเสมอ เป็นต้น) เพื่อสามารถให้บริการลูกค้าได้ดีขึ้น ลูกค้ามีความพึงพอใจมากขึ้น และเพิ่มยอดขายได้มากขึ้น</p>
 <p>ข้อมูลอีกประเภทที่กำลังเป็นที่นิยมมากขึ้น คือข้อมูลตัวอักษร (text data) ซึ่งได้มาจากแพลตฟอร์มสื่อสังคมออนไลน์ แพลตฟอร์มการซื้อขายออนไลน์ หรือการทำสำรวจความคิดเห็นที่มีคำถามปลายเปิด ข้อมูลเหล่านี้มีหลากมิติกว่าข้อมูลที่เป็นเชิงปริมาณ หรือข้อมูลที่เป็นตัวเลข เนื่องจากผู้ที่ให้ข้อมูลสามารถแสดงความเห็นได้อย่างอิสระ ทำให้ได้คำตอบที่หลากหลาย
 เมื่อนำมาวิเคราะห์ทำให้เกิดความรู้เชิงประจักษ์ที่เอื้อต่อการดำเนินการต่อ (actionable insight) ที่สามารถนำไปปรับใช้กับองค์กรหรือธุรกิจได้ ตัวอย่างเช่น บริษัทสามารถดึงข้อมูลรีวิวความเห็นของลูกค้าที่ได้ซื้อสินค้าจากแพลตฟอร์มการซื้อขายออนไลน์ที่บริษัทไปเปิดร้านไว้ แล้วนำข้อมูลนี้ไปวิเคราะห์ว่าลูกค้าชอบอะไรหรือไม่ชอบอะไรเกี่ยวกับผลิตภัณฑ์ของเรา หรือลูกค้าชอบอะไรเกี่ยวกับผลิตภัณฑ์ที่ทำโดยบริษัทคู่แข่ง ทำให้เกิดความรู้เชิงประจักษ์ที่สามารถนำไปพัฒนาผลิตภัณฑ์ให้ตอบโจทย์ของผู้บริโภคได้ดีขึ้น และพัฒนากระบวนการการสั่งซื้อของและส่งของให้ลูกค้าให้มีประสิทธิภาพมากขึ้น</p>
-<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (data science หรือ data analytics)  เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพทเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (computer science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ (natural language processing) ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคนิควิธีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยแบบจำลองทางภาษา เมื่อนำมาประกอบกับการวิเคราะห์ข้อมูลเพื่อพัฒนาธุรกิจ เราจะเรียกว่าการวิเคราะห์ข้อความ (text analytics)</p>
+<p>การใช้เทคโนโลยีในการวิเคราะห์ข้อมูล เพื่อสกัดความรู้เชิงประจักษ์ที่ก่อให้เกิดประโยชน์และมูลค่าทางธุรกิจ เรียกว่า วิทยาการข้อมูล (data science)  เป็นการผสมผสานระหว่างศาสตร์และความรู้การบริหารธุรกิจ ซึ่งทำให้เราเข้าใจกลไกในการประกอบธุรกิจและเข้าใจลูกค้าให้มีผลประกอบการที่ดี สถิติ ซึ่งทำให้เราสามารถวิเคราะห์และสรุปหาแพตเทิร์นในข้อมูลที่มีขนาดใหญ่ และวิทยาการคอมพิวเตอร์ (computer science) ซึ่งทำให้เราสามารถเขียนโปรแกรมที่สามารถใช้แบบจำลองที่ซับซ้อนหรือจัดการกับข้อมูลที่มีขนาดใหญ่และโครงสร้างซับซ้อนได้ แต่เมื่อเราต้องวิเคราะห์ข้อมูลตัวอักษร หรือข้อมูลที่เป็นภาษาธรรมชาติ (natural language data) ซึ่งไม่สามารถนำมาหาค่าเฉลี่ย หรือบวกลบคูณหารอย่างที่ทำกับข้อมูลเป็นเชิงปริมาณ เราจึงต้องใช้เทคนิควิธีการประมวลผลภาษาธรรมชาติ (natural language processing) ซึ่งมีแบบจำลองในการทำความเข้าใจภาษาเพื่อการวิเคราะห์ข้อมูลเหล่านี้ เพราะฉะนั้นการประมวลผลภาษาธรรมชาติ คือ เทคนิควิธีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร แบบอิงแบบจำลองทางภาษา เมื่อนำมาประกอบกับการวิเคราะห์ข้อมูลเพื่อพัฒนาธุรกิจ เราจะเรียกว่าการวิเคราะห์ข้อความ (text analytics)</p>
 <p>คำว่า “ภาษาธรรมชาติ” ใช้เพื่ออ้างอิงถึงภาษาที่มนุษย์ใช้ในการสื่อสารกัน ซึ่งรวมไปถึงทั้งภาษาพูดและภาษาเขียนที่พัฒนาขึ้นอย่างธรรมชาติในสังคมมนุษย์ ไม่ว่าจะเป็นภาษาไทย อังกฤษ จีน หรือภาษาอื่นๆ การใช้คำว่า “ภาษาธรรมชาติ” เพื่อแยกแยะจาก “ภาษาคอมพิวเตอร์” ซึ่งเป็นภาษาที่ถูกสร้างขึ้นมาเพื่อการเขียนโปรแกรมและการสื่อสารกับเครื่องคอมพิวเตอร์ เช่น ภาษาไพทอน หรือ ภาษาจาวา (Java) ซึ่งมีโครงสร้างและกฎเกณฑ์ที่เข้มงวดกว่ามาก ด้วยเหตุนี้ เทคนิคที่ถูกพัฒนามาเพื่อการประมวลผลและทำความเข้าใจภาษาที่มนุษย์ใช้จึงเรียกว่า “ประมวลผลภาษาธรรมชาติ” หรือ NLP เทคนิคเหล่านี้ออกแบบมาเพื่อให้เครื่องคอมพิวเตอร์สามารถเข้าใจและประมวลผลข้อมูลที่เป็นภาษาธรรมชาติได้อย่างมีประสิทธิภาพ เป้าหมายคือการให้คอมพิวเตอร์สามารถ “เข้าใจ” ภาษามนุษย์ได้ใกล้เคียงกับวิธีที่มนุษย์เข้าใจภาษาของกันและกัน เพื่อใช้ประโยชน์ในงานต่างๆ ที่เกี่ยวกับภาษา</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>วิทยาการข้อมูล (data science) คือสหศาสตร์ที่ใช้วิธีการทางสถิติ การคำนวณด้วยเครื่องคอมพิวเตอร์ แบบจำลอง และอัลกอริทึมในการสกัดความรู้เชิงประจักษ์จากข้อมูลที่อาจจะมีสิ่งรบกวน หรือจัดเก็บอย่างไม่เป็นระเบียบ</p>
 </aside>
-<p>นอกจากนั้นการประมวลผลภาษาธรรมชาติ เป็นเทคโนโลยีที่เป็นสันหลังของแอพพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติได้ ตัวอย่างเช่น Google Translate เป็นแอพพลิเคชันทำหน้าที่แปลภาษาโดยอาศัยแบบจำลองทางภาษาที่เข้าใจทั้งภาษาต้นทางที่ต้องการแปลและภาษาปลายทาง หรือแอพพลิเคชัน ChatGPT ที่สามารถทำหน้าที่ทางภาษาได้อย่างหลากหลาย ไม่ว่าจะเป็นการสรุปข่าว การแต่งนิยาย การปรับแก้ภาษาให้สละสลวยไร้ข้อผิดพลาด การตอบคำถามที่เป็นปลายเปิด การให้คำปรึกษาเรื่องต่าง ๆ หรือแอพพลินเคชัน Google Search เองที่สามารถทำความเข้าใจสิ่งที่ผู้ใช้ต้องการค้นหา โดยพิจารณาจากคำค้นที่ผู้ใช้พิมพ์เข้ามาในกล่อง และทำความเข้าใจเว็บไซต์ทุกเว็บไซต์ และเลือกมาเฉพาะเว็บไซต์ที่ตอบสนองโจทย์ความต้องการทางข้อมูลของผู้ใช้ตามที่ได้ระบุมาในคำค้น</p>
+<p>นอกจากนั้นการประมวลผลภาษาธรรมชาติ เป็นเทคโนโลยีที่เป็นกระดูกสันหลังของแอปพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติได้ ตัวอย่างเช่น Google Translate เป็นแอปพลิเคชันทำหน้าที่แปลภาษาโดยอาศัยแบบจำลองทางภาษาที่เข้าใจทั้งภาษาต้นทางที่ต้องการแปลและภาษาปลายทาง หรือแอปพลิเคชัน ChatGPT ที่สามารถทำหน้าที่ทางภาษาได้อย่างหลากหลาย ไม่ว่าจะเป็นการสรุปข่าว การแต่งนิยาย การปรับแก้ภาษาให้สละสลวยไร้ข้อผิดพลาด การตอบคำถามที่เป็นปลายเปิด การให้คำปรึกษาเรื่องต่าง ๆ หรือแอพพลินเคชัน Google Search เองที่สามารถทำความเข้าใจสิ่งที่ผู้ใช้ต้องการค้นหา โดยพิจารณาจากคำค้นที่ผู้ใช้พิมพ์เข้ามาในกล่อง และทำความเข้าใจเว็บไซต์ทุกเว็บไซต์ และเลือกมาเฉพาะเว็บไซต์ที่ตอบสนองโจทย์ความต้องการทางข้อมูลของผู้ใช้ตามที่ได้ระบุมาในคำค้น</p>
 <p>สรุปคือการประยุกต์ใช้ NLP สามารถนำไปใช้ประโยชน์ได้อย่างน้อย 2 ทาง คือ</p>
 <ol class="arabic simple">
-<li><p>เครื่องมือ text analytics ที่สกัดความรู้เชิงประจักษ์</p></li>
-<li><p>เทคโนโลยีหลังบ้านของแอพพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติ</p></li>
+<li><p>เครื่องมือวิเคราะห์ข้อความที่สกัดความรู้เชิงประจักษ์</p></li>
+<li><p>เทคโนโลยีเบื้องหลังของแอปพลิเคชันที่ทำหน้าที่ทางภาษาโดยอัตโนมัติ</p></li>
 </ol>
 <section id="id1">
 <h2>หลักการของการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
@@ -518,31 +522,31 @@ document.write(`
 <li><p>คำใดบ้าง และกลุ่มคำใดบ้างที่ใช้ในการสื่อความหมายในแง่บวก แง่ลบ</p></li>
 <li><p>คำใดบ้างที่ใช้เพื่อบ่งบอกว่าข้อความนั้นไม่ได้มีความคิดเห็นแฝงอยู่ แต่อาจจะเป็นการให้ข้อมูลอย่างเป็นกลางเท่านั้น</p></li>
 <li><p>ลักษณะประโยคแบบใดที่แสดงให้เห็นถึงน้ำเสียงแบบประชดประชัน หรือล้อเล่น</p></li>
-<li><p>การรีทวีทตอบโต้กันระหว่างผู้ใช้บนแพลตฟอร์ม แสดงถึงความคิดเห็นของลูกค้าต่อสินค้าของเราอย่างไร</p></li>
+<li><p>การรีทวีตตอบโต้กันระหว่างผู้ใช้บนแพลตฟอร์ม แสดงถึงความคิดเห็นของลูกค้าต่อสินค้าของเราอย่างไร</p></li>
 <li><p>ลักษณะทางภาษาใดบ้าง ทำให้เราทราบถึงอายุ เพศ ถิ่นที่อยู่ของลูกค้าได้</p></li>
 </ul>
 </section>
 <section id="id2">
 <h2>การใช้ไลบรารีในภาษาไพทอน<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>NLP ในปัจจุบันมักจะอาศัยไลบรารีของภาษาไพทอน เนื่องจากภาษาไพทอนมีไลบรารีที่หลากหลายและมีประสิทธิภาพสูงสำหรับการทำงานด้าน NLP ไลบรารีในที่นี้หมายถึงชุดของโมดูลหรือฟังก์ชันที่ถูกจัดเก็บและจัดระเบียบไว้เพื่อใช้งานร่วมกัน ซึ่งช่วยให้นักพัฒนาสามารถเรียกใช้ฟังก์ชันที่ต้องการได้อย่างง่ายดายโดยไม่ต้องเขียนโค้ดเหล่านั้นจากต้น ทำให้ประหยัดเวลาและลดความซับซ้อนในการพัฒนาโปรแกรม การใช้ไลบรารีให้ความสะดวกในหลายด้าน เช่น การเข้าถึงฟังก์ชันที่ซับซ้อนได้ง่าย การลดระยะเวลาในการพัฒนาโปรแกรม และการใช้งานโค้ดที่ได้รับการทดสอบแล้วจากชุมชนผู้พัฒนา ซึ่งช่วยลดความเสี่ยงในการเกิดบั๊กและปัญหาความปลอดภัย</p>
-<p>ในบทนี้ จะกล่าวถึงวิธีการติดตั้งไลบรารีลงในเครื่องผ่านเครื่องมือการจัดการแพ็คเกจ เช่น pip ซึ่งเป็นเครื่องมือมาตรฐานของภาษาไพทอนในการติดตั้งและจัดการไลบรารี จากนั้นจะอธิบายวิธีการใช้งานไลบรารีเหล่านั้นในโปรแกรมไพทอน เพื่อให้ผู้อ่านสามารถนำไปประยุกต์ใช้ในโปรเจกต์ NLP ของตนเองได้ นอกจากนี้ยังจะแนะนำไลบรารีที่ใช้บ่อยในการทำงานด้าน NLP ขั้นพื้นฐาน เช่น NLTK, spaCy, และ pythainlp ซึ่งแต่ละไลบรารีมีคุณสมบัติเฉพาะตัวที่เหมาะสมกับงาน NLP ต่างๆ ตั้งแต่การแยกคำ การแท็กชนิดของคำ ไปจนถึงการสร้างแบบจำลองภาษาที่ซับซ้อน</p>
+<p>NLP ในปัจจุบันมักจะอาศัยไลบรารีของภาษาไพทอน เนื่องจากภาษาไพทอนมีไลบรารีที่หลากหลายและมีประสิทธิภาพสูงสำหรับการทำงานด้าน NLP ไลบรารีในที่นี้หมายถึงชุดของโมดูลหรือฟังก์ชันที่ถูกจัดเก็บและจัดระเบียบไว้เพื่อใช้งานร่วมกัน ซึ่งช่วยให้นักพัฒนาสามารถเรียกใช้ฟังก์ชันที่ต้องการได้อย่างง่ายดายโดยไม่ต้องเขียนโค้ดเหล่านั้นตั้งแต่ต้น ทำให้ประหยัดเวลาและลดความซับซ้อนในการพัฒนาโปรแกรม การใช้ไลบรารีให้ความสะดวกในหลายด้าน เช่น การเข้าถึงฟังก์ชันที่ซับซ้อนได้ง่าย การลดระยะเวลาในการพัฒนาโปรแกรม และการใช้งานโค้ดที่ได้รับการทดสอบแล้วจากชุมชนผู้พัฒนา ซึ่งช่วยลดความเสี่ยงในการเกิดจุดบกพร่อง (bug) และปัญหาความปลอดภัย</p>
+<p>ในบทนี้ จะกล่าวถึงวิธีการติดตั้งไลบรารีลงในเครื่องผ่านเครื่องมือการจัดการแพ็กเกจ เช่น pip ซึ่งเป็นเครื่องมือมาตรฐานของภาษาไพทอนในการติดตั้งและจัดการไลบรารี จากนั้นจะอธิบายวิธีการใช้งานไลบรารีเหล่านั้นในโปรแกรมไพทอน เพื่อให้ผู้อ่านสามารถนำไปประยุกต์ใช้ในโปรเจกต์ NLP ของตนเองได้ นอกจากนี้ยังจะแนะนำไลบรารีที่ใช้บ่อยในการทำงานด้าน NLP ขั้นพื้นฐาน เช่น NLTK, spaCy, และ pythainlp ซึ่งแต่ละไลบรารีมีคุณสมบัติเฉพาะตัวที่เหมาะสมกับงาน NLP ต่างๆ ตั้งแต่การแยกคำ การแท็กชนิดของคำ ไปจนถึงการสร้างแบบจำลองภาษาที่ซับซ้อน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ไลบรารี (library) หรือ แพ็กเกจ (package) คือ โค้ดที่สามารถรวมกันเป็นกลุ่มก้อนที่เราสามารถดาวน์โหลดมาใช้ได้เลย</p>
 </aside>
 <section id="id3">
 <h3>การติดตั้งไลบรารี<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>ไลบรารีของภาษาไพทอนถูกจัดเก็บในที่เก็บรวมชื่อว่า PyPI (Python Package Index) ซึ่งเป็นระบบที่เก็บไลบรารีและโมดูลของภาษาไพทอนที่พัฒนาและแชร์โดยชุมชนผู้พัฒนาทั่วโลก การติดตั้งไลบรารีผ่านเครื่องมือจัดการแพ็คเกจเช่น pip หรือ conda จะมีการสื่อสารกับที่เก็บรวมนี้เพื่อดาวน์โหลดและติดตั้งแพ็คเกจที่ต้องการลงในระบบของผู้ใช้ ในกระบวนการนี้ อาจมีขั้นตอนหลังบ้านที่รวมถึงการตรวจสอบการขึ้นต่อกันของไลบรารี (dependencies)</p>
+<p>ไลบรารีของภาษาไพทอนถูกจัดเก็บในที่เก็บรวมชื่อว่า PyPI (Python Package Index) ซึ่งเป็นระบบที่เก็บไลบรารีและโมดูลของภาษาไพทอนที่พัฒนาและแชร์โดยชุมชนผู้พัฒนาทั่วโลก การติดตั้งไลบรารีผ่านเครื่องมือจัดการแพ็กเกจเช่น pip หรือ conda จะมีการสื่อสารกับที่เก็บรวมนี้เพื่อดาวน์โหลดและติดตั้งแพ็กเกจที่ต้องการลงในระบบของผู้ใช้ ในกระบวนการนี้ อาจมีขั้นตอนหลังบ้านที่รวมถึงการตรวจสอบการขึ้นต่อกันของไลบรารี (dependencies)</p>
 <p>ไลบรารีที่พบใน PyPI มักจะเป็นแบบโอเพนซอร์ส (open-source) หมายความว่าโค้ดของไลบรารีเหล่านี้เปิดเผยให้สาธารณะสามารถเข้าถึง ใช้งาน แก้ไข และแชร์ต่อได้ เป็นส่วนหนึ่งของวัฒนธรรมการพัฒนาซอฟต์แวร์แบบร่วมมือ ซึ่งส่งเสริมการเรียนรู้ร่วมกันและการนำไปใช้ประโยชน์อย่างกว้างขวาง การเป็นโอเพนซอร์สทำให้ไลบรารีเหล่านี้ได้รับการตรวจสอบ ทดสอบ และพัฒนาอย่างต่อเนื่องจากชุมชนผู้ใช้และผู้พัฒนาทั่วโลก นอกจากนี้ยังช่วยเพิ่มความโปร่งใสและความน่าเชื่อถือของไลบรารีเนื่องจากผู้ใช้สามารถตรวจสอบและทำความเข้าใจการทำงานภายในของไลบรารีเหล่านั้นได้ โอเพนซอร์สยังเป็นแรงบันดาลใจและเป็นฐานสำหรับนวัตกรรมใหม่ๆ เนื่องจากผู้พัฒนาสามารถนำโค้ดที่มีอยู่มาปรับปรุงหรือรวมเข้ากับโปรเจกต์ของตนเองได้โดยไม่ต้องสร้างขึ้นจากศูนย์ เพิ่มความเร็วในการพัฒนาและลดต้นทุนในการวิเคราะห์ข้อมูล หรือสร้างซอฟต์แวร์ใหม่ ๆ</p>
-<p>สภาพแวดล้อม (environment) ในบริบทของการพัฒนาซอฟต์แวร์ หมายถึง สภาพแวดล้อมการทำงานที่เราได้ติดตั้งโปรแกรมต่าง ๆ เอาไว้ที่เราจะใช้ในการรันโปรแกรมต่าง ๆ สำหรับในกรณีทั่ว ๆ ไปเรามักจะมีสภาพแวดล้อมเดียว และติดตั้งซอฟต์แวร์ทั้งหมดลงไปในสภาพแวดล้อมเดียวกัน แต่การแยกสภาพแวดล้อมเป็นสิ่งจำเป็นเมื่อทำงานกับโปรเจกต์หลายๆ โปรเจกต์ที่อาจต้องการเวอร์ชันของไลบรารีที่แตกต่างกัน ถ้าเราติดตั้งไพทอนผ่าน miniconda หรือ anaconda จะมีการแยกสภาพแวดล้อมออกมาต่างหากให้อยู่แล้ว และติดตั้ง python interpreter และไลบรารีอื่น ๆ ลงไปในสภาพแวดล้อมนั้น ซึ่งมักจะถูกตั้งชื่อไว้ว่า base หากเราติดตั้งไลบรารีไว้ในสภาพแวดล้อม base แต่ว่าไปใช้ python interpreter ที่อยู่อีกในสภาพแวดล้อมหนึ่ง เราจะไม่สามารถใช้ไลบรารีนั้นได้ เพราะว่าอยู่คนละสภาพแวดล้อมกัน</p>
+<p>สภาพแวดล้อม (environment) ในบริบทของการพัฒนาซอฟต์แวร์ หมายถึง สภาพแวดล้อมการทำงานที่เราได้ติดตั้งโปรแกรมต่าง ๆ เอาไว้ที่เราจะใช้ในการรันโปรแกรมต่าง ๆ สำหรับในกรณีทั่ว ไปเรามักจะมีสภาพแวดล้อมเดียว และติดตั้งซอฟต์แวร์ทั้งหมดลงไปในสภาพแวดล้อมเดียวกัน แต่การแยกสภาพแวดล้อมเป็นสิ่งจำเป็นเมื่อทำงานกับโปรเจกต์หลายๆ โปรเจกต์ที่อาจต้องการเวอร์ชันของไลบรารีที่แตกต่างกัน ถ้าเราติดตั้งไพทอนผ่าน miniconda หรือ anaconda จะมีการแยกสภาพแวดล้อมออกมาต่างหากให้อยู่แล้ว และติดตั้งตัวแปลภาษาไพทอน (Python interpreter) และไลบรารีอื่น ๆ ลงไปในสภาพแวดล้อมนั้น ซึ่งมักจะถูกตั้งชื่อไว้ว่า base หากเราติดตั้งไลบรารีไว้ในสภาพแวดล้อม base แต่ว่าไปใช้ตัวแปลภาษาไพทอนที่อยู่อีกในสภาพแวดล้อมหนึ่ง เราจะไม่สามารถใช้ไลบรารีนั้นได้ เพราะว่าอยู่คนละสภาพแวดล้อมกัน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>สภาพแวดล้อม (environment) คือ ระบบที่เก็บโปรแกรมและไลบรารีที่เราติดตั้งไว้ เพื่อใช้เป็นบริบทในการรันโปรแกรม</p>
 </aside>
 <section id="pip">
 <h4>ติดตั้งไลบรารีโดยใช้ <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#pip" title="Permalink to this heading">#</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> เป็นคำสั่งในเทอร์มินัลหรือคอมมานด์ไลน์ (ไม่ใช่คำสั่งภาษาไพทอน) ที่ใช้สำหรับการติดตั้งแพ็คเกจจาก PyPI โดยตรง คำสั่งนี้เป็นวิธีที่ง่ายที่สุดในการเพิ่มไลบรารีเข้าไปในสภาพแวดล้อมการพัฒนาภาษาไพทอนของคุณ เช่น <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pythainlp</span></code> จะดำเนินการดาวน์โหลดและติดตั้งไลบรารี pythainlp เราสามารถตรวจสอบว่าไลบรารีถูกติดตั้งแล้วหรือไม่โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> ซึ่งจะแสดงรายการแพ็คเกจทั้งหมดที่ติดตั้งอยู่ในสภาพแวดล้อมนั้น</p>
-<p>ถ้าหากใช้ไพทอนผ่าน jupyter notebook หรือ Google Colab ให้ใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">!</span></code> เพื่อบ่งบอกว่าเราจะใช้คำสั่งในระบบคอมมานด์ไลน์ ตามด้วย <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> ถ้าหากใช้ผ่านเทอร์มินัล เช่น โปรแกรม Terminal ของแม็ค หรือ โปรแกรม Anaconda Prompt ของวินโดว์ ก็สามารถพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> ได้เลย ในทั้งสองกรณีเราจะได้ output ดังตัวอย่างข้างล่าง</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> เป็นคำสั่งในเทอร์มินัลหรือคอมมานด์ไลน์ (ไม่ใช่คำสั่งภาษาไพทอน) ที่ใช้สำหรับการติดตั้งแพ็กเกจจาก PyPI โดยตรง คำสั่งนี้เป็นวิธีที่ง่ายที่สุดในการเพิ่มไลบรารีเข้าไปในสภาพแวดล้อมการพัฒนาภาษาไพทอนของคุณ เช่น <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pythainlp</span></code> จะดำเนินการดาวน์โหลดและติดตั้งไลบรารี pythainlp เราสามารถตรวจสอบว่าไลบรารีถูกติดตั้งแล้วหรือไม่โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> ซึ่งจะแสดงรายการแพ็กเกจทั้งหมดที่ติดตั้งอยู่ในสภาพแวดล้อมนั้น</p>
+<p>ถ้าหากใช้ไพทอนผ่าน jupyter notebook หรือ Google Colab ให้ใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">!</span></code> เพื่อบ่งบอกว่าเราจะใช้คำสั่งในระบบคอมมานด์ไลน์ ตามด้วย <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> ถ้าหากใช้ผ่านเทอร์มินัล เช่น โปรแกรม Terminal ของระบบปฏิบัติการ MacOS หรือ โปรแกรม Anaconda Prompt ของระบบปฏิบัติการ Windows ก็สามารถพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ชื่อไลบรารี</span></code> ได้เลย ทั้งสองกรณีเราจะได้ เอาท์พุตดังตัวอย่างข้างล่าง</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Collecting pythainlp
   Downloading pythainlp-5.0.1-py3-none-any.whl (17.9 MB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.9/17.9 MB 30.9 MB/s eta 0:00:00
@@ -555,22 +559,22 @@ Installing collected packages: pythainlp
 Successfully installed pythainlp-5.0.1
 </pre></div>
 </div>
-<p>คำสั่งนี้จะเริ่มจากการดาวน์โหลดโค้ดของไลบรารี pythainlp และอ่านว่าจะต้องติดตั้งไลบรารีอะไรอื่นก่อนหรือไม่ เพราะว่าไลบรารี pythainlp อาจจะพึ่งพิงไลบรารีอื่น ๆ อีก เราเรียกว่าไลบรารีเหล่านี้ว่า dependencies ในตัวอย่างข้างบนไลบรารี pythainlp พึ่งพาไลบรารีชื่อว่า requests charset-normalizer idna urllib3 certifi เวอร์ชันตามที่ pythainlp เวอร์ชันนี้กำหนดไว้ หลังจากนั้นจึงติดตั้ง pythainlp ลงสภาพแวดล้อมที่เรารันคำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>
+<p>คำสั่งนี้จะเริ่มจากการดาวน์โหลดโค้ดของไลบรารี pythainlp และอ่านว่าจะต้องติดตั้งไลบรารีอะไรอื่นก่อนหรือไม่ เพราะว่าไลบรารี pythainlp อาจจะพึ่งพิงไลบรารีอื่น ๆ อีก เราเรียกว่าไลบรารีเหล่านี้ว่าสิ่งพึ่งพิง (dependencies) ในตัวอย่างข้างบนไลบรารี pythainlp พึ่งพิงไลบรารีชื่อว่า requests charset-normalizer idna urllib3 และ certifi เวอร์ชันตามที่ pythainlp เวอร์ชันนี้กำหนดไว้ หลังจากนั้นจึงติดตั้ง pythainlp ลงสภาพแวดล้อมที่เรารันคำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>
 เมื่อเสร็จสิ้นแล้วจะแสดงข้อความว่า <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">installed</span> <span class="pre">pythainlp-5.0.1</span></code> หมายความว่าไลบรารี pythainlp เวอร์ชั่น 5.0.1 ได้ถูกติดตั้งเรียบร้อยแล้ว และเมื่อติดตั้งเสร็จแล้ว ไม่จำเป็นต้องติดตั้งอีกครั้งเมื่อต้องการเรียกใช้ เพราะว่าโค้ดทั้งหมดของไลบรารีนี้ได้ติดตั้งอยู่ในสภาพแวดล้อมนี้ที่อยู่ในเครื่องของเราแล้ว</p>
 <p>เราสามารถลองรันคำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pythainlp</span></code> เพื่อทดสอบอีกครั้งได้ ถ้าหากไม่มีข้อผิดพลาดขึ้น แสดงว่าไลบรารี pythainlp ถูกติดตั้งเรียบร้อยแล้ว แต่ถ้าหากโปรแกรมแจ้งขึ้นมาว่า <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">'pythainlp'</span></code> หมายความว่าไลบรารี pythainlp ไม่ได้ถูกติดตั้ง หรือติดตั้งไม่สำเร็จ</p>
-<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> เป็นคำสั่งในระบบจัดการแพ็คเกจที่ใช้สำหรับแสดงรายการของแพ็คเกจที่ได้ติดตั้งไว้ในสภาพแวดล้อมการพัฒนา ณ ขณะนั้น เราสามารถใช้คำสั่งนี้เพื่อตรวจสอบแพ็คเกจต่างๆ ที่ได้รับการติดตั้งแล้ว เวอร์ชันของแพ็คเกจ รวมทั้งเพื่อยืนยันว่าแพ็คเกจที่ต้องการใช้งานได้ถูกติดตั้งเรียบร้อยหรือไม่ การใช้งานคำสั่งนี้ทำได้โดยพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span> <span class="pre">ชื่อไลบรารี</span></code> และกด Enter จากนั้นระบบจะแสดงรายชื่อแพ็คเกจที่ติดตั้งอยู่พร้อมกับเวอร์ชันของแต่ละแพ็คเกจออกมา</p>
+<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> เป็นคำสั่งในระบบจัดการแพ็กเกจที่ใช้สำหรับแสดงรายการของแพ็กเกจที่ได้ติดตั้งไว้ในสภาพแวดล้อมการพัฒนา ณ ขณะนั้น เราสามารถใช้คำสั่งนี้เพื่อตรวจสอบแพ็กเกจต่างๆ ที่ได้รับการติดตั้งแล้ว เวอร์ชันของแพ็กเกจ รวมทั้งเพื่อยืนยันว่าแพ็กเกจที่ต้องการใช้งานได้ถูกติดตั้งเรียบร้อยหรือไม่ การใช้งานคำสั่งนี้ทำได้โดยพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span> <span class="pre">ชื่อไลบรารี</span></code> และกด Enter จากนั้นระบบจะแสดงรายชื่อแพ็กเกจที่ติดตั้งอยู่พร้อมกับเวอร์ชันของแต่ละแพ็กเกจออกมา</p>
 </section>
 <section id="conda">
 <h4>ติดตั้งไลบรารีโดยใช้ <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#conda" title="Permalink to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>  เป็นอีกหนึ่ง
-คำสั่งในเทอร์มินัลหรือคอมมานด์ไลน์ ซึ่งใช้ในการติดตั้งไลบรารีผ่านเครื่องมือจัดการไลบรารี คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เป็นส่วนหนึ่งของ Anaconda และ Miniconda เพราะฉะนั้นถ้าเราไม่ได้ติดตั้งภาษาไพทอนผ่าน Anaconda หรือ Miniconda เราจะไม่มีคำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เช่น หากเราใช้งานไพทอนผ่าน Google Colab เราก็จะไม่มีคำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เพราะว่า Google Colab สร้างสภาพแวดล้อมในการเขียนโค้ดเป็นของมันเอง และไม่ได้ติดตั้งโปรแกรมผ่าน Anaconda คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> มีประโยชน์ในการจัดการสภาพแวดล้อมการพัฒนาและไลบรารีสำหรับภาษาไพทอน คำสั่งนี้มีวิธีการใช้งานที่คล้ายกับ <code class="docutils literal notranslate"><span class="pre">pip</span></code> แต่มีคุณสมบัติเพิ่มเติม เช่น สามารถสร้างและจัดการสภาพแวดล้อมการพัฒนาแยกต่างหากได้ การตรวจสอบว่าการติดตั้งด้วย <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> เสร็จสมบูรณ์แล้วหรือไม่สามารถทำได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> ซึ่งจะแสดงรายการแพ็คเกจที่ติดตั้งในสภาพแวดล้อม Conda นั้นๆ</p>
+คำสั่งในเทอร์มินัลหรือคอมมานด์ไลน์ ซึ่งใช้ในการติดตั้งไลบรารีผ่านเครื่องมือจัดการไลบรารี คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เป็นส่วนหนึ่งของ Anaconda และ Miniconda เพราะฉะนั้นถ้าเราไม่ได้ติดตั้งภาษาไพทอนผ่าน Anaconda หรือ Miniconda เราจะไม่มีคำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เช่น หากเราใช้งานไพทอนผ่าน Google Colab เราก็จะไม่มีคำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> เพราะว่า Google Colab สร้างสภาพแวดล้อมในการเขียนโค้ดเป็นของมันเอง และไม่ได้ติดตั้งโปรแกรมผ่าน Anaconda คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span></code> มีประโยชน์ในการจัดการสภาพแวดล้อมการพัฒนาและไลบรารีสำหรับภาษาไพทอน คำสั่งนี้มีวิธีการใช้งานที่คล้ายกับ <code class="docutils literal notranslate"><span class="pre">pip</span></code> แต่มีคุณสมบัติเพิ่มเติม เช่น สามารถสร้างและจัดการสภาพแวดล้อมการพัฒนาแยกต่างหากได้ การตรวจสอบว่าการติดตั้งด้วย <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> เสร็จสมบูรณ์แล้วหรือไม่สามารถทำได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> ซึ่งจะแสดงรายการแพ็กเกจที่ติดตั้งในสภาพแวดล้อม Conda นั้นๆ</p>
 </section>
 </section>
 <section id="default-argument">
-<h3>อาร์กิวเมนต์แบบมีค่าดีฟอลต์ (default argument)<a class="headerlink" href="#default-argument" title="Permalink to this heading">#</a></h3>
+<h3>อาร์กิวเมนต์โดยปริยาย (default argument)<a class="headerlink" href="#default-argument" title="Permalink to this heading">#</a></h3>
 <p>ไลบรารีทุกไลบรารีมักจะมีเอกสารประกอบการใช้งาน (documentation) ที่อธิบายฟังก์ชันและคลาสต่างๆ ที่มีให้ใช้งานในไลบรารีทั้งหมด  อีกทั้งรวบรวมตัวอย่างการใช้งานที่ทำให้เข้าใจวิธีการใช้งานได้เร็วยิ่งขึ้น  ซึ่งช่วยให้เราสามารถใช้ไลบรารีได้อย่างสะดวกสบาย และเต็มศักยภาพ สามารถปรับใช้และผสานรวมเข้ากับโค้ดของตัวเองได้ง่ายขึ้น</p>
 <p>ฟังก์ชันในไลบรารีมักจะมีอาร์กิวเมนต์จำนวนมาก  ข้อดีของการออกแบบนี้คือมันช่วยให้ฟังก์ชันนั้นมีความยืดหยุ่นและสามารถปรับแต่งได้หลายอย่าง เพื่อตอบสนองความต้องการที่แตกต่างกันของผู้ใช้ อย่างไรก็ตามการเรียกใช้ฟังก์ชันที่มีอาร์กิวเมนต์จำนวนมากอาจทำให้เกิดความซับซ้อนและความยากลำบากในการทำความเข้าใจว่าแต่ละอาร์กิวเมนต์ทำงานอย่างไร อาร์กิวเมนต์โดยปริยาย (default argument) จึงเข้ามาเป็นสิ่งจำเป็น</p>
-<p>อาร์กิวเมนต์โดยปริยาย ช่วยลดความจำเป็นในการระบุอาร์กิวเมนต์ทุกครั้งที่เรียกใช้ฟังก์ชัน ข้อดีหลักๆ คือการลดความซับซ้อนในการใช้งานฟังก์ชันแต่ยังคงความยืดหยุ่นของการใช้ฟังก์ชัน เพราะว่าผู้ใช้ไม่จำเป็นต้องระบุอาร์กิวเมนต์ทั้งหมดจึงจะใช้งานได้  ทำให้ผู้ใช้สามารถปรับแต่งการใช้ฟังก์ชันเฉพาะเจาะจงกับสถานการณ์การใช้นั้น ตัวอย่างเช่น  ในไลบรารีการพล็อตกราฟ ฟังก์ชันสำหรับการวาดเส้นอาจมีอาร์กิวเมนต์สำหรับสี ความหนาของเส้น และลักษณะของเส้น (เช่น เส้นประหรือเส้นต่อเนื่อง) โดยค่าโดยปริยายสำหรับสีอาจเป็นสีดำ ความหนาของเส้นเป็น 1 หน่วย และเป็นเส้นต่อเนื่อง ถ้าผู้ใช้ไม่ได้ระบุอาร์กิวเมนต์เหล่านี้ ฟังก์ชันจะใช้ค่าโดยปริยายเหล่านี้เป็นค่าเริ่มต้น ผู้ใช้ไม่จำเป็นต้องระบุค่าเหล่านี้เมื่อใช้ฟังก์ชันเลย ผู้ใช้ระบุค่าอาร์กิวเมนต์เมื่อต้องการปรับแต่งการใช้งานฟังก์ชันให้ตรงกับความต้องการของตนเองเท่านั้น</p>
+<p>อาร์กิวเมนต์โดยปริยาย ช่วยลดความจำเป็นในการระบุอาร์กิวเมนต์ทุกครั้งที่เรียกใช้ฟังก์ชัน ข้อดีหลักๆ คือการลดความซับซ้อนในการใช้งานฟังก์ชันแต่ยังคงความยืดหยุ่นของการใช้ฟังก์ชัน เพราะว่าผู้ใช้ไม่จำเป็นต้องระบุอาร์กิวเมนต์ทั้งหมดจึงจะใช้งานได้  ทำให้ผู้ใช้สามารถปรับแต่งการใช้ฟังก์ชันเฉพาะเจาะจงกับสถานการณ์การใช้นั้น ตัวอย่างเช่น  ในไลบรารีการวาด (plot) กราฟ ฟังก์ชันสำหรับการวาดเส้นอาจมีอาร์กิวเมนต์สำหรับสี ความหนาของเส้น และลักษณะของเส้น (เช่น เส้นประหรือเส้นต่อเนื่อง) โดยค่าโดยปริยายสำหรับสีอาจเป็นสีดำ ความหนาของเส้นเป็น 1 หน่วย และเป็นเส้นต่อเนื่อง ถ้าผู้ใช้ไม่ได้ระบุอาร์กิวเมนต์เหล่านี้ ฟังก์ชันจะใช้ค่าโดยปริยายเหล่านี้เป็นค่าเริ่มต้น ผู้ใช้ไม่จำเป็นต้องระบุค่าเหล่านี้เมื่อใช้ฟังก์ชันเลย ผู้ใช้ระบุค่าอาร์กิวเมนต์เมื่อต้องการปรับแต่งการใช้งานฟังก์ชันให้ตรงกับความต้องการของตนเองเท่านั้น</p>
 <p>เรากำหนดอาร์กิวเมนต์โดยปริยายได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ตอนที่ประกาศฟังก์ชัน ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_volume</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span> <span class="o">*</span> <span class="n">height</span>
@@ -597,76 +601,76 @@ Successfully installed pythainlp-5.0.1
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">calc_volume(5)</span></code></p></td>
 <td><p>❌</p></td>
-<td><p>ไม่ได้ เพราะใส่ไม่พอ length ไม่รู้ค่าอะไร</p></td>
+<td><p>ไม่ได้ เพราะใส่ค่าไม่ครบ โปรแกรมไม่ทราบว่าค่าของอาร์กิวเมนต์ <code class="docutils literal notranslate"><span class="pre">length</span></code> จะต้องเป็นค่าอะไร</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">calc_volume(5,</span> <span class="pre">3,</span> <span class="pre">height=2)</span></code></p></td>
 <td><p>✅</p></td>
-<td><p>จะผสมก็ได้ แต่ต้องใช้ keyword arg หลังสุด</p></td>
+<td><p>จะผสมก็ได้ แต่ต้องใช้อาร์กิวเมนต์แบบตั้งชื่อหลังสุด</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">calc_volume(length=2,</span> <span class="pre">5,</span> <span class="pre">10)</span></code></p></td>
 <td><p>❌</p></td>
-<td><p>keyword argument ต้องมาทีหลังสุด</p></td>
+<td><p>อาร์กิวเมนต์แบบตั้งชื่อต้องมาทีหลังสุด</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">calc_volume(length=2,</span> <span class="pre">width=5,</span> <span class="pre">10)</span></code></p></td>
 <td><p>❌</p></td>
-<td><p>keyword argument ต้องมาทีหลังสุด</p></td>
+<td><p>อาร์กิวเมนต์แบบตั้งชื่อต้องมาทีหลังสุด</p></td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-#### ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 1
-
-ขอยกตัวอย่างจากเอกสารประกอบการใช้งานของเมท็อด `str.split`  ซึ่งเป็นเมท็อดที่เราเคยใช้กันมาแล้วในบทก่อน ๆ เป็นเมท็อดที่ใช้สำหรับการตัดข้อความให้เป็นลิสต์ โดยใช้ตัวแบ่งที่เรากำหนด ส่วนหัวของฟังก์ชันจากเอกสารประกอบการใช้งานของไพทอนมีดังนี้
-
+<section id="id4">
+<h4>ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<p>ขอยกตัวอย่างจากเอกสารประกอบการใช้งานของเมท็อด <code class="docutils literal notranslate"><span class="pre">str.split</span></code>  ซึ่งเป็นเมท็อดที่เราเคยใช้กันมาแล้วในบทก่อน ๆ เป็นเมท็อดที่ใช้สำหรับการตัดข้อความให้เป็นลิสต์ โดยใช้ตัวแบ่งที่เรากำหนด ส่วนหัวของฟังก์ชันจากเอกสารประกอบการใช้งานของไพทอนมีดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>str.split(sep=None, maxsplit=-1)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>เราเห็นได้ว่าเมท็อดนี้มีพารามิเตอร์ 2 ตัว ได้แก่ 
-- `sep` ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น `None` 
-- `maxsplit` ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น `-1`
+<p>เราเห็นได้ว่าเมท็อดนี้มีพารามิเตอร์ 2 ตัว ได้แก่</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxsplit</span></code> ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น <code class="docutils literal notranslate"><span class="pre">-1</span></code></p></li>
+</ul>
+<p>เพราะฉะนั้นเวลาเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">str.split</span></code> เราสามารถใช้ได้โดยไม่ต้องระบุอาร์กิวเมนต์ใด ๆ และผู้เขียนฟังก์ชันคิดมาแล้วว่าอาร์กิวเมนต์โดยปริยายเป็นค่าที่เหมาะสมในกรณีทั่วไป แต่ว่ายังคงให้ความยืดหยุ่นกับผู้ใช้ในการระบุอาร์กิวเมนต์เพื่อปรับแต่งการใช้งานได้</p>
+</section>
+<section id="id5">
+<h4>ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>ตัวอย่างนี้มาจากฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">nltk.tokenize.sent_tokenize</span></code> ในไลบรารี nltk ซึ่งใช้สำหรับการตัดประโยคจากข้อความ ส่วนหัวของฟังก์ชันนี้และวิธีการใช้งานตามที่ปรากฏในเอกสารประกอบการใช้งานของ nltk มีดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nltk.tokenize.sent_tokenize(text, language=&#39;english&#39;)
 
-เพราะฉะนั้นเวลาเรียกใช้เมท็อด `str.split` เราสามารถใช้ได้โดยไม่ต้องระบุอาร์กิวเมนต์ใด ๆ และผู้เขียนฟังก์ชันคิดมาแล้วว่าอาร์กิวเมนต์โดยปริยายเป็นค่าที่เหมาะสมในกรณีทั่วไป แต่ว่ายังคงให้ความยืดหยุ่นกับผู้ใช้ในการระบุอาร์กิวเมนต์เพื่อปรับแต่งการใช้งานได้ 
+Return a sentence-tokenized copy of text, using NLTK’s recommended sentence tokenizer (currently PunktSentenceTokenizer for the specified language).
 
-
-####  ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 2
-ตัวอย่างนี้มาจากฟังก์ชัน `nltk.tokenize.sent_tokenize` ในไลบรารี nltk ซึ่งใช้สำหรับการตัดประโยคจากข้อความ ส่วนหัวของฟังก์ชันนี้และวิธีการใช้งานตามที่ปรากฏในเอกสารประกอบการใช้งานของ nltk มีดังนี้
-
-</pre></div>
-</div>
-<p>nltk.tokenize.sent_tokenize(text, language=’english’)</p>
-<p>Return a sentence-tokenized copy of text, using NLTK’s recommended sentence tokenizer (currently PunktSentenceTokenizer for the specified language).</p>
-<p>Parameters
+Parameters
 text – text to split into sentences
-language – the model name in the Punkt corpus</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
- ฟังก์ชันนี้มีพารามิเตอร์ 2 ตัว ได้แก่
-- `text` ซึ่งเป็นพารามิเตอร์ที่ต้องระบุเสมอ
-- `language` ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น `&#39;english&#39;`
+language – the model name in the Punkt corpus
+</pre></div>
+</div>
+<p>ฟังก์ชันนี้มีพารามิเตอร์ 2 ตัว ได้แก่</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> ซึ่งเป็นพารามิเตอร์ที่ต้องระบุเสมอ</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">language</span></code> ซึ่งมีอาร์กิวเมนต์โดยปริยายเป็น <code class="docutils literal notranslate"><span class="pre">'english'</span></code></p></li>
+</ul>
+<p>เมื่อเราใช้ฟังก์ชันนี้ เราไม่จำเป็นต้องระบุว่ากำลังตัดประโยคภาษาอะไร อาร์กิวเมนต์โดยปริยายคือภาษาอังกฤษ แต่ว่าเราสามารถเปลี่ยนค่านี้ได้เมื่อต้องการปรับใช้กับภาษาอื่น ๆ ที่มีชื่ออยู่ใน Punkt corpus ได้</p>
+<p>ตัวอย่างการใช้งานของฟังก์ชันนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
 
-เมื่อเราใช้ฟังก์ชันนี้ เราไม่จำเป็นต้องระบุว่ากำลังตัดประโยคภาษาอะไร อาร์กิวเมนต์โดยปริยายคือภาษาอังกฤษ แต่ว่าเราสามารถเปลี่ยนค่านี้ได้เมื่อต้องการปรับใช้กับภาษาอื่น ๆ ที่มีชื่ออยู่ใน Punkt corpus ได้ 
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">()</span> <span class="c1"># ไม่ได้ เพราะว่าไม่ได้ระบุค่่าของอาร์กิวเมนต์ text ซึ่งไม่มีค่าโดยปริยาย</span>
 
-ตัวอย่างการใช้งานของฟังก์ชันนี้ 
-```python
-import nltk
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">)</span>  <span class="c1"># ได้</span>
 
-nltk.tokenize.sent_tokenize() # ไม่ได้ เพราะว่าไม่ได้ระบุ text ซึ่งไม่มีค่าโดยปริยาย
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">,</span> 
+    <span class="n">language</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">)</span> <span class="c1"># ได้</span>
 
-nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;)  
-
-nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;, language=&#39;english&#39;)
-
-nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;, language=&#39;french&#39;)  # ได้ แต่ว่าผลอาจจะออกมาไม่ถูกต้อง
+<span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="s2">&quot;The U.S. have dots. Mr. Robert met Dr. Evil in the lab.&quot;</span><span class="p">,</span> 
+    <span class="n">language</span><span class="o">=</span><span class="s1">&#39;french&#39;</span><span class="p">)</span>  <span class="c1"># ได้ แต่ว่าผลอาจจะออกมาไม่ถูกต้อง</span>
 
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="data-cleaning">
 <h2>การทำความสะอาดข้อมูล (data cleaning)<a class="headerlink" href="#data-cleaning" title="Permalink to this heading">#</a></h2>
-<p>ขั้นตอนแรกของการประมวลผลข้อมูล คือ การทำความสะอาดข้อมูล ข้อมูลที่เราได้รับมามักจะไม่สะอาด มีรอยเปื้อน มีความผิดปกติอยู่ ถ้าหากเราไม่ทำความสะอาดดี ๆ ให้มีความเพี้ยนน้อยลง ให้เหลือเฉพาะส่วนที่เราต้องการวิเคราะห์ การทำความสะอาดข้อมูลไม่ได้มีสูตรสำเร็จตายตัว เราต้องปรับกระบวนการให้เข้ากับจุดประสงค์ของการวิเคราะห์ ดังกรณีตัวอย่างต่อไปนี้</p>
-<section id="id4">
-<h3>ตัวอย่างการทำความสะอาดข้อมูล 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>ขั้นตอนแรกของการประมวลผลข้อมูล คือ การทำความสะอาดข้อมูล ข้อมูลที่เราได้รับมามักจะไม่สะอาด มีอักขระที่ไม่ต้องการปนอยู่ ข้อมูลอาจจะยังมีความผิดปกติอยู่ ถ้าหากเราไม่ทำความสะอาดอย่างระมัดระวังให้มีความเพี้ยนน้อยลง ให้เหลือเฉพาะส่วนที่เราต้องการวิเคราะห์ อาจะเกิดอุปสรรคในการวิเคราะห์ข้อมูล ทำให้วิเคราะห์คลาดเคลื่อน เชื่อถือผลการวิเคราะห์ได้ยาก การทำความสะอาดข้อมูลไม่ได้มีสูตรสำเร็จตายตัว ผู้วิเคราะห์ข้อมูลต้องปรับกระบวนการให้เข้ากับจุดประสงค์ของการวิเคราะห์ ดังกรณีตัวอย่างต่อไปนี้</p>
+<section id="id6">
+<h3>ตัวอย่างการทำความสะอาดข้อมูล 1<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>RT &#64;MatichonOnline: “บิ๊กตู่”ลั่นรบ.ทำอะไรยึดกม.ไม่ใช่ติดคุกแล้วหนี เล่นมุกพรรคร่วม “พลังปชป.ภูมิใจไทย” <a class="reference external" href="https://t.co/9nmOBJnhrq">https://t.co/9nmOBJnhrq</a> via &#64;มติชนอ…</p>
 </div></blockquote>
@@ -674,9 +678,9 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <ul class="simple">
 <li><p>RT &#64;MatichonOnline ซึ่งหมายถึงการรีทวิตข่าวจาก MatichonOnline</p></li>
 <li><p>ลิงก์ <a class="reference external" href="https://t.co/9nmOBJnhrq">https://t.co/9nmOBJnhrq</a> ซึ่งเป็นลิงก์ที่เชื่อมไปยังเว็บไซต์ที่นำเสนอข่าวฉบับเต็มอยู่</p></li>
-<li><p>via &#64;มติชนอ… ซึ่งเป็นการบอกว่าลิงก์ที่นำไปสู่เว็บไซนต์ของมติชน</p></li>
+<li><p>via &#64;มติชนอ… ซึ่งเป็นการบอกว่าลิงก์ที่นำไปสู่เว็บไซนต์ของมติชน แต่ว่าชื่อบัญชีก็ยังมีข้อผิดพลาด</p></li>
 </ul>
-<p>เราจึงจำเป็นต้องเขียนโค้ดเพื่อใช้ regular expression ในการสกัดเอาข้อมูลส่วนที่เราไม่ต้องการออกไป ให้เหลือเพียงแค่</p>
+<p>เราจึงจำเป็นต้องเขียนโค้ดเพื่อใช้นิพจน์ปรกติ หรือเรกเอกซ์ในการสกัดเอาข้อมูลส่วนที่เราไม่ต้องการออกไป ให้เหลือเพียงแค่</p>
 <blockquote>
 <div><p>“บิ๊กตู่”ลั่นรบ.ทำอะไรยึดกม.ไม่ใช่ติดคุกแล้วหนี เล่นมุกพรรคร่วม “พลังปชป.ภูมิใจไทย”</p>
 </div></blockquote>
@@ -703,8 +707,8 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h3>ตัวอย่างการทำความสะอาดข้อมูล 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>ตัวอย่างการทำความสะอาดข้อมูล 2<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>บกพร่องโดยสุจริต VS อยู่-ไม่-เป็น | ขยี้คดีโกง | 10 พ.ย. 62 | (3/3) <a class="reference external" href="https://t.co/atUF6PrXdx">https://t.co/atUF6PrXdx</a> via &#64;YouTube</p>
 </div></blockquote>
@@ -714,7 +718,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <li><p>ลิงก์ <a class="reference external" href="https://t.co/atUF6PrXdx">https://t.co/atUF6PrXdx</a> ซึ่งเป็นลิงก์ที่เชื่อมไปยังวีดีโอที่อยู่บน YouTube</p></li>
 <li><p>via &#64;YouTube ซึ่งเป็นการบอกว่าลิงก์ที่นำไปสู่วีดีโอนั้นอยู่บนแพลตฟอร์ม YouTube</p></li>
 </ul>
-<p>ในกรณีนี้จะเห็นว่าข้อมูลที่เราได้มาไม่สมบูรณ์ เนื่องจากเป็นทวีีตเป็นทวีตต่อเนื่องจากสองทวีตก่อนหน้า ผู้วิเคราะห์อาจจะเลือกไม่วิเคราะห์ทวีตที่มีความต่อเนื่องกันในลักษณะนี้ หรือไม่่เช่นนั้นต้องเตรียมข้อมูลให้เรียงลำดับตามการทวีตและเชื่อมทวีตเข้าไว้ด้วยกัน เช่น สมมติว่าเรามีข้อมูลลิสต์ของทวีต เราสามารถเขียนโค้ดเพื่อรวมทวีตที่มีการต่อเนื่องกัน เอาไว้ด้วยกันได้ดังนี้</p>
+<p>ในกรณีนี้จะเห็นว่าข้อมูลที่เราได้มาไม่สมบูรณ์ เนื่องจากเป็นทวีีตเป็นทวีตต่อเนื่องจากสองทวีตก่อนหน้า ผู้วิเคราะห์อาจจะเลือกไม่วิเคราะห์ทวีตที่มีความต่อเนื่องกันในลักษณะนี้ หรือไม่เช่นนั้นต้องเตรียมข้อมูลให้เรียงลำดับตามการทวีตและเชื่อมทวีตเข้าไว้ด้วยกัน เช่น สมมติว่าเรามีข้อมูลลิสต์ของทวีต เราสามารถเขียนโค้ดเพื่อรวมทวีตที่มีการต่อเนื่องกัน เอาไว้ด้วยกันได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">merge_tweet_in_sequence</span><span class="p">(</span><span class="n">tweet_list_time_sorted</span><span class="p">):</span>
     <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span> 
     <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
@@ -737,21 +741,21 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </pre></div>
 </div>
 </section>
-<section id="id6">
-<h3>ตัวอย่างการทำความสะอาดข้อมูล 3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>ตัวอย่างการทำความสะอาดข้อมูล 3<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>ขอไห้นึกถึงการท่องเที่ยวภายภาคหน้าด้วยคะ</p>
 </div></blockquote>
 <p>ตัวอย่างข้างต้นนี้มีการสะกดผิดสองจุด ได้แก่</p>
 <ul class="simple">
-<li><p>การใช้คำว่า ขอไห้ แทนคำว่า ขอให้</p></li>
-<li><p>การใช้คำว่า คะ แทนคำว่า ค่ะ</p></li>
+<li><p>สะกด <em>ขอไห้</em> แทนที่จะเป็น <em>ขอให้</em></p></li>
+<li><p>สะกด <em>คะ</em> แทนที่จะเป็น <em>ค่ะ</em></p></li>
 </ul>
-<p>โดยทั่วไปแล้วเรามักจะไม่แก้การสะกดผิด เพราะส่วนใหญ่แล้วเรามักจะวิเคราะห์ข้อมูลที่มีขนาดค่อนข้างใหญ่ ใหญ่เกินที่จะให้มนุษย์วิเคราะห์เองได้ทันท่วงที วิธีทางสถิติหรือการใช้โมเดลทางภาษาอาศัยการจับแพทเทิร์นต่าง ๆ ที่อยู่ในข้อมูล การสะกดผิดตามสถิติแล้วมักจะเกิดขึ้นไม่มาก เมื่อเทียบกับส่วนของข้อมูลที่สะกดถูกตามหลักพจนานุกรม หรือตามความนิยมในช่วงเวลานั้น ทำให้ส่วนใหญ่แล้วมักจะไม่ต้องกังวลว่าการวิเคราะห์จะผิดเพี้ยนเนื่องจากมีคำที่สะกดผิดอยู่
-อีกเหตุผลหนึ่งที่เรามักจะตัดสินใจไม่แก้ไขคำที่สะกดผิดก่อนวิเคราะห์ข้อมูล คือ เราไม่มีโปรแกรมที่สามารถแก้ไขการสะกดผิดได้อย่างแม่นยำพอ เครื่องตรวจตัวสะกด (spellchecker) มีความแม่นยำระดับหนึ่ง แต่ก็มีโอกาสที่จะแก้ไขส่วนที่ผิดให้ผิดไปอีกแบบหนึ่ง หรือเปลี่ยนส่วนที่ถูกอยู่แล้วให้เป็นผิด  และเมื่อการวิเคราะห์ออกมาแปลกหรือผิดเพี้ยนจากที่สิ่งที่เราคาดการณ์ไว้ ทำให้เกิดเป็นอีกขั้นตอนหนึ่งที่เราต้องมาตรวจสอบว่า ความผิดเพี้ยนนั้นเกิดจากเครื่องตรวจตัวสะกดที่เราเลือกมาใช้หรือไม่</p>
+<p>โดยทั่วไปแล้วเรามักจะไม่แก้การสะกดผิด เพราะส่วนใหญ่แล้วเรามักจะวิเคราะห์ข้อมูลที่มีขนาดค่อนข้างใหญ่ ใหญ่เกินที่จะให้มนุษย์วิเคราะห์เองด้วยมือได้ทันท่วงที วิธีทางสถิติหรือการใช้โมเดลทางภาษาอาศัยการจับแพตเทิร์นต่าง ๆ ที่อยู่ในข้อมูล การสะกดผิดตามสถิติแล้วมักจะเกิดขึ้นไม่มาก เมื่อเทียบกับส่วนของข้อมูลที่สะกดถูกตามหลักพจนานุกรม หรือตามความนิยมในช่วงเวลานั้น คำที่สะกดผิดมักจะไม่ปรากฏออกมาในแพตเทิร์นที่วิเคราะห์ได้ เนื่องจากปริมาณของคำที่สะกดผิดน้อยกว่าคำที่สะกดถูกมาก ๆ ดังนั้นส่วนใหญ่แล้วมักจะไม่ต้องกังวลว่าการวิเคราะห์จะผิดเพี้ยนเนื่องจากมีคำที่สะกดผิดอยู่</p>
+<p>อีกเหตุผลหนึ่งที่เรามักจะตัดสินใจไม่แก้ไขคำที่สะกดผิดก่อนวิเคราะห์ข้อมูล คือ เราไม่มีโปรแกรมที่สามารถแก้ไขการสะกดผิดได้อย่างแม่นยำพอ เครื่องตรวจตัวสะกด (spellchecker) ที่มีอยู่ในปัจจุบันมีความแม่นยำระดับหนึ่ง แต่ก็มีโอกาสที่จะแก้ไขส่วนที่ผิดให้ผิดไปอีกแบบหนึ่งอยู่บ้าง หรือเปลี่ยนส่วนที่ถูกอยู่แล้วให้เป็นผิด  ในกรณีที่ผลการวิเคราะห์ออกมาแปลกหรือผิดเพี้ยนจากที่สิ่งที่เราคาดการณ์ไว้มากเกินไป กลับกลายเป็นว่าผู้วิเคราะห์ต้องทำการตรวจสอบขั้นตอนการตรวจสะกดเพิ่มไปอีกขั้นตอนหนึ่ง ทำให้หาจุดที่ทำให้วิเคราะห์ผิดเพี้ยนยากขึ้นอีกขั้นตอนหนึ่ง</p>
 </section>
-<section id="id7">
-<h3>ตัวอย่างการทำความสะอาดข้อมูล 4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>ตัวอย่างการทำความสะอาดข้อมูล 4<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>ชาล็อตพาร์ทแบบนี้จึ้งเว่อ น้องเก่งมาก มืออาชีพสุดๆ ขนาดพี่ในกองส่งเสียงชมไม่หยุด สวยมาก ดีมากกกกกก
 #ENGLOTshootingTvcWinkwhite
@@ -764,13 +768,13 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <li><p>การใช้คำแสลง เช่น <em>จึ้ง</em> <em>เว่อ</em></p></li>
 <li><p>การสะกดแบบไม่มาตรฐาน เช่น <em>มากกกกกก</em></p></li>
 </ul>
-<p>ตามหลักภาษาศาสตร์แล้ว ภาษาที่เป็นมาตรฐานเป็นภาษาที่มีคนกลุ่มใดกลุ่มหนึ่งในสังคมเป็นคนกำหนดมาว่าเป็นมาตรฐาน คนกลุ่มนั้นมักจะเป็นกลุ่มคนที่มีสถานะทางสังคมและเศรษฐกิจสูง คนกลุ่มนี้มักจะกระทำการใด ๆ ให้สังคมยอมรับว่ารูปแบบภาษาที่ตนตั้งขึ้นมานั้นเป็นภาษาสำหรับคนที่ได้รับการยอมรับนับถือจากสังคมด้วยวิธีต่าง ๆ ในมุมมองของนักภาษาศาสตร์เห็นว่าเป็นการปะทะสังสรรค์ระหว่างปัจจัยทางสังคม และรูปแบบของภาษา การศึกษาภาษาในบริบทของสังคมและวัฒนธรรม เรียกว่า ภาษาศาสตร์สังคม (sociolinguistics) จากแง่มุมนี้ภาษาเป็นเพียงเครื่องมือที่ใช้ในการสื่อสาร และทุกภาษาต่างมีแบบแผนของตัวมันเอง การตีค่าว่ารูปแบบภาษาใด ภาษาหนึ่ง หรือภาษาใด ภาษาหนึ่งนั้นดีกว่าอีกภาษาหนึ่งนั้น ล้วนแต่เป็นสิ่งที่ถูกสร้างขึ้นโดยสังคม (social construct)</p>
+<p>ตามหลักภาษาศาสตร์แล้ว ภาษาที่เป็นมาตรฐานเป็นภาษาที่มีคนกลุ่มใดกลุ่มหนึ่งในสังคมเป็นคนกำหนดมาว่าเป็นมาตรฐาน คนกลุ่มนั้นมักจะเป็นกลุ่มคนที่มีสถานะทางสังคมและเศรษฐกิจสูง คนกลุ่มนี้มักจะกระทำการใด ๆ ให้สังคมยอมรับว่ารูปแบบภาษาที่ตนตั้งขึ้นมานั้นเป็นภาษาสำหรับคนที่ได้รับการยอมรับนับถือจากสังคมด้วยวิธีต่าง ๆ ในมุมมองของนักภาษาศาสตร์เห็นว่าเป็นการปะทะสังสรรค์ระหว่างปัจจัยทางสังคม และรูปแบบของภาษา การศึกษาภาษาในบริบทของสังคมและวัฒนธรรม เรียกว่า ภาษาศาสตร์สังคม (sociolinguistics) จากแง่มุมนี้ภาษาเป็นเพียงเครื่องมือที่ใช้ในการสื่อสาร และทุกภาษาต่างมีแบบแผนของตัวมันเอง การตีค่าว่ารูปแบบภาษาใดดีกว่าอีกรูปแบบภาษาหนึ่งนั้น ล้วนแต่เป็นสิ่งที่ถูกสร้างขึ้นโดยสังคม (social construct)</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ภาษาศาสตร์สังคม (sociolinguistics) คือการศึกษาเกี่ยวกับผลกระทบของปัจจัยทางสังคม (เช่น บรรทัดฐาน สถานะทางสังคม และบริบททางวัฒนธรรม) ต่อวิธีการใช้ภาษา</p>
 </aside>
-<p>หากเราต้องการวิเคราะห์ข้อมูลที่มาจากโลกโซเชียลมักจะไม่มีความจำเป็นใด ๆ ที่จะต้องแก้ภาษาให้เป็นมาตรฐาน เนื่องจากภาษาในโลกโซเชียลปรากฏเป็นแพทเทิร์นของมันเอง วิธีทางสถิติและแบบจำลองทางภาษาอาศัยการหาแพทเทิร์นที่เกิดขึ้นซ้ำ ๆ อยู่แล้ว เช่น คำว่า <em>จึ้ง</em> ปรากฏอยู่ถึง 6.7 ล้านครั้ง และ คำว่า <em>เว่อ</em> ปรากฏอยู่ถึง 18.7 ล้านครั้ง เมื่อลองค้นหาคำเหล่านี้บนกูเกิ้ล (วันที่ 2 มีนาคม 2567) ซึ่งแสดงให้เห็นว่าสองคำนี้กลายเป็นส่วนหนึ่งของภาษาแล้ว สังคมบนโลกอินเตอร์เน็ตยอมรับและนำไปใช้ต่ออย่างแพร่หลายในขณะนั้น</p>
-<p>ส่วนคำว่า <em>มากกกกกก</em> เราอาจจะทำความสะอาดให้เหลือ ก เพียงตัวเดียว เพราะคนแต่ละคนอาจจะใช้จำนวนตัว ก ไม่เท่ากัน ทำให้เครื่องมือตรวจจับได้ยากว่าใช้คำว่า <em>มาก</em> ไปแล้วกี่ครั้ง กระบวนการนี้เราเรียกว่าการเปลี่ยนให้เป็นมาตรฐาน (normalization) สำหรับภาษาไทยเรามักจะใช้กฎง่าย ๆ ในการเปลี่ยนให้เป็นมาตรฐาน โดยการตรวจจับว่ามีตัวอักษรเดียวกัน ตั้งแต่สามตัวขึ้นไปหรือไม่ ถ้ามีให้ทำให้เหลือตัวเดียว ซึ่งสามารถทำโดยใช้ regular expression ดังตัวอย่างโค้ดดังนี้</p>
+<p>หากเราต้องการวิเคราะห์ข้อมูลที่มาจากโลกโซเชียลมักจะไม่มีความจำเป็นใด ๆ ที่จะต้องแก้ภาษาให้เป็นมาตรฐาน เนื่องจากภาษาในโลกโซเชียลปรากฏเป็นแพตเทิร์นของมันเอง วิธีทางสถิติและแบบจำลองทางภาษาอาศัยการหาแพตเทิร์นที่เกิดขึ้นซ้ำ ๆ อยู่แล้ว เช่น คำว่า <em>จึ้ง</em> ปรากฏอยู่ถึง 6.7 ล้านครั้ง และ คำว่า <em>เว่อ</em> ปรากฏอยู่ถึง 18.7 ล้านครั้ง เมื่อลองค้นหาคำเหล่านี้บน Google (วันที่ 2 มีนาคม 2567) ซึ่งแสดงให้เห็นว่าสองคำนี้กลายเป็นส่วนหนึ่งของภาษาแล้ว สังคมบนโลกอินเตอร์เน็ตยอมรับและนำไปใช้ต่ออย่างแพร่หลายในขณะนั้น</p>
+<p>ส่วนคำว่า <em>มากกกกกก</em> เราอาจจะทำความสะอาดให้เหลือ ก เพียงตัวเดียว เพราะคนแต่ละคนอาจจะใช้จำนวนตัว ก ไม่เท่ากัน ทำให้เครื่องมือตรวจจับได้ยากว่าใช้คำว่า <em>มาก</em> ไปแล้วกี่ครั้ง กระบวนการนี้เราเรียกว่าการเปลี่ยนให้เป็นมาตรฐาน (normalization) สำหรับภาษาไทยเรามักจะใช้กฎง่าย ๆ ในการเปลี่ยนให้เป็นมาตรฐาน โดยการตรวจจับว่ามีตัวอักษรเดียวกัน ตั้งแต่สามตัวขึ้นไปหรือไม่ ถ้ามีให้ทำให้เหลือตัวเดียว ซึ่งสามารถทำโดยใช้เรกเอกซ์ดังตัวอย่างโค้ดดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
 <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
     <span class="c1"># ถ้าเจอ [ก-์] สามตัวขึ้นไป ทำให้เหลือตัวเดียว</span>
@@ -778,7 +782,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
     <span class="k">return</span> <span class="n">tweet</span>
 </pre></div>
 </div>
-<p>คำอธิบาย regular expression ที่ใช้ในโค้ดด้านบนคือ</p>
+<p>คำอธิบายเรกเอกซ์ที่ใช้ในโค้ดด้านบนคือ</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">([ก-์])</span></code> หมายถึง ตัวอักษรไทยที่อยู่ในช่วง ก ถึง ์ และเก็บไว้ในกลุ่มที่ 1 (เครื่องหมายวงเล็บคู่แรก)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">\1{2,}</span></code> หมายถึง อ้างกลับถึงตัวอักษรที่อยู่ในกลุ่มที่หนึ่ง (<code class="docutils literal notranslate"><span class="pre">\1</span></code>) ตรวจว่าเจอตั้งแต่ 2 ตัวขึ้นไปหรือไม่ (<code class="docutils literal notranslate"><span class="pre">{2,}</span></code>)</p></li>
@@ -823,13 +827,13 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">deduplicate</span><span class="p">(</span><span class="n">cleaned_normalized_tweets</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>ทั้งนี้เราจะเห็นว่าเราต้องใช้ 4 ฟังก์ชันในการประมวลผลทำความสะอาดข้อมูล <code class="docutils literal notranslate"><span class="pre">merge_tweet_in_sequence</span></code>, <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code>, <code class="docutils literal notranslate"><span class="pre">normalize</span></code>, และ <code class="docutils literal notranslate"><span class="pre">deduplicate</span></code><br />
-ซึ่งการแยกออกมาเป็น 4 ฟังก์ชันนั้นมีข้อดีคือทำให้เราปรับแก้เป็นส่วน ๆ ไปได้ ถ้าหากว่าเราต้องการปรับวิธีการทำความสะอาดข้อมูลให้นำเอาแฮชแท็กออกไปด้วย เราสามารถเพิ่มขั้นตอนนี้เข้าไปใน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> หรือเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_hashtag</span></code> และเรียกใช้ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> อีกชั้นหนึ่งก็ได้ ขึ้นอยู่กับการตัดสินใจของผู้เขียนโปรแกรมว่าแบบใดเข้าใจง่ายกว่า</p>
+<p>ทั้งนี้เราจะเห็นว่าเราต้องใช้ฟังก์ชัน 4 ฟังก์ชันในการประมวลผลทำความสะอาดข้อมูล <code class="docutils literal notranslate"><span class="pre">merge_tweet_in_sequence</span></code>, <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code>, <code class="docutils literal notranslate"><span class="pre">normalize</span></code>, และ <code class="docutils literal notranslate"><span class="pre">deduplicate</span></code><br />
+ซึ่งการแยกออกมาเป็น 4 ฟังก์ชันนั้นมีข้อดีคือทำให้เราปรับแก้เป็นส่วน ๆ ไปได้ ถ้าหากว่าเราต้องการปรับวิธีการทำความสะอาดข้อมูลให้นำเอาแฮชแท็กออกไปด้วย เราสามารถเพิ่มขั้นตอนนี้เข้าไปใน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> หรือเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">remove_hashtag</span></code> และเรียกใช้ในฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean_tweet</span></code> อีกชั้นหนึ่งก็ได้ ขึ้นอยู่กับการตัดสินใจของผู้ที่เขียนโปรแกรมว่าแบบใดเข้าใจง่ายกว่า</p>
 </section>
 </section>
 <section id="tokenization">
-<h2>การแปลงให้เป็นโทเค็น (tokenization)<a class="headerlink" href="#tokenization" title="Permalink to this heading">#</a></h2>
-<p>ขั้นตอนต่อจากการทำความสะอาดข้อมูล คือ การแปลงให้เป็นโทเค็น (tokenization) กระบวนการนี้เป็นกระบวนพิเศษสำหรับการเตรียมข้อมูลจากชุดข้อมูลที่เป็นตัวอักษร
+<h2>การแปลงเป็นโทเค็น (tokenization)<a class="headerlink" href="#tokenization" title="Permalink to this heading">#</a></h2>
+<p>ขั้นตอนต่อจากการทำความสะอาดข้อมูล คือ การแปลงเป็นโทเค็น (tokenization) กระบวนการนี้เป็นกระบวนพิเศษสำหรับการเตรียมข้อมูลจากชุดข้อมูลที่เป็นตัวอักษร
 โทเค็น คือ หน่วยที่เล็กที่สุดที่ใช้ในการวิเคราะห์ หน่วยที่เล็กที่สุดที่ใช้ในการวิเคราะห์ข้อมูลตัวอักษรคืออะไร โดยทั่วไปแล้วผู้วิเคราะห์ข้อมูลสามารถกำหนดได้ว่าอยากให้โทเค็นเป็นอะไร ส่วนมากเราจะอ้างอิงหลักการการวิเคราะห์ภาษาจากภาษาศาสตร์ คือใช้คำเป็นโทเค็นในการวิเคราะห์ความหมายของประโยค เพราะฉะนั้นการวิเคราะห์ความหมายของข้อความมักจะต้องอาศัยการเปลี่ยนสตริงให้เป็นลิสต์ของคำ เรียกว่า การตัดคำ (word segmentation) บางครั้งเราเรียกกระบวนการแปลงให้เป็นโทเค็น ว่าการตัดคำ ถึงแม้ที่จริงแล้วการแปลงให้เป็นโทเค็นเป็นมโนทัศน์ที่กว้างกว่าการตัดคำ  เพราะเราสามารถกำหนดให้โทเค็นเป็นอะไรก็ได้ ไม่จำเป็นต้องเป็นคำเท่านั้น</p>
 <p>คำ ในเชิงภาษาศาสตร์ คำ คือ หน่วยที่เล็กที่สุดของภาษาที่ยังคงสื่อความหมายได้ด้วยตัวเอง  ตัวอย่างเช่น</p>
 <table class="colwidths-auto table">
@@ -863,7 +867,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </tbody>
 </table>
 <p>จากตัวอย่างข้างต้น จะเห็นได้ว่าการตัดคำต้องอาศัยเกณฑ์ทางความหมาย เพื่อตัดสินว่าสตริงที่มีสตริงย่อยเป็นคำ (เช่น <em>ตัด|ใจ</em> หรือ <em>ตัด|หญ้า</em>)
-เป็นกลุ่มคำ หรือคำเดี่ยว  หากว่าความหมายไม่ได้ต่างจากการนำคำย่อยมารวมกันให้จัดว่าเป็นกลุ่มคำ ตัวอย่างเช่น คำว่า <em>ตัดหญ้า</em> มีความหมายจากคำกริยา <em>ตัด</em> รวมกับคำนามที่เป็นกรรม <em>หญ้า</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำสองคำมาอยู่ใกล้กันเป็นกลุ่มคำ ในขณะที่คำว่า <em>ตัดใจ</em> มีความหมายว่า เลิกคิด  และไม่ได้มาจากการนำคำย่อย <em>ตัด</em> และ <em>ใจ</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำเดี่ยว <span id="id8">[<a class="reference internal" href="#id44" title="Wirote Aroonmanakun. Thoughts on word and sentence segmentation in thai. In Proceedings of the Seventh Symposium on Natural language Processing, Pattaya, Thailand, December 13–15, 85–90. 2007.">Aroonmanakun, 2007</a>]</span></p>
+เป็นกลุ่มคำ หรือคำเดี่ยว  หากว่าความหมายไม่ได้ต่างจากการนำคำย่อยมารวมกันให้จัดว่าเป็นกลุ่มคำ ตัวอย่างเช่น คำว่า <em>ตัดหญ้า</em> มีความหมายจากคำกริยา <em>ตัด</em> รวมกับคำนามที่เป็นกรรม <em>หญ้า</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำสองคำมาอยู่ใกล้กันเป็นกลุ่มคำ ในขณะที่คำว่า <em>ตัดใจ</em> มีความหมายว่า เลิกคิด  และไม่ได้มาจากการนำคำย่อย <em>ตัด</em> และ <em>ใจ</em> มารวมกัน ดังนั้นเราจึงจัดเป็นคำเดี่ยว <span id="id10">[<a class="reference internal" href="#id49" title="Wirote Aroonmanakun. Thoughts on word and sentence segmentation in thai. In Proceedings of the Seventh Symposium on Natural language Processing, Pattaya, Thailand, December 13–15, 85–90. 2007.">Aroonmanakun, 2007</a>]</span></p>
 <div class="note admonition">
 <p class="admonition-title">คำถามชวนคิด</p>
 <p>จากกรณีให้ลองคิดว่ากรณีใดบ้างที่เป็นคำ กรณีใดบ้างที่เป็นกลุ่มคำ</p>
@@ -885,13 +889,13 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 ในกรณีดังกล่าว เรามักจะตัดคำให้มีจำนวนคำมากที่สุด เพราะถ้าหากหลักการวิเคราะห์เปลี่ยนไปเรายังสามารถนำคำที่ตัดไปแล้วมารวมกันใหม่ได้</p>
 <p>การตัดคำโดยอัตโนมัติสามารถทำด้วย 3 วิธีใหญ่ ๆ ได้แก่</p>
 <ol class="arabic simple">
-<li><p>การตัดคำโดยอาศัยกฎเกณฑ์ (rule-based word segmentation)</p></li>
-<li><p>การตัดคำโดยอาศัยคลังศัพท์ (lexicon-based word segmentation)</p></li>
-<li><p>การตัดคำโดยอาศัยการเรียนรู้ด้วยเครื่อง (machine-learning-based word segmentation)</p></li>
+<li><p>การตัดคำแบบอิงกฎเกณฑ์ (rule-based word segmentation)</p></li>
+<li><p>การตัดคำแบบอิงคลังศัพท์ (lexicon-based word segmentation)</p></li>
+<li><p>การตัดคำแบบอิงการเรียนรู้ด้วยเครื่อง (machine-learning-based word segmentation)</p></li>
 </ol>
-<section id="rule-based-word-segmentation">
-<h3>การตัดคำโดยอาศัยกฎเกณฑ์ (rule-based word segmentation)<a class="headerlink" href="#rule-based-word-segmentation" title="Permalink to this heading">#</a></h3>
-<p>บางภาษาเราสามารถตั้งกฏเกณฑ์ผ่านการเขียน regular expression เพื่อตัดคำได้ เช่น ภาษาอังกฤษ ภาษาเยอรมัน ภาษาอิตาเลียน และภาษาอื่น ๆ ที่ใช้ตัวอักษรลาติน กฏเกณฑ์ที่ตั้งอาจจะเป็น regular expression เพื่อบอกว่าจะแพทเทิร์นไหนเป็นตัวแบ่งบ้าง เช่น เราอาจจะใช้เครื่องหมายวรรคตอน และช่องว่างเป็นตัวแบ่ง ซึ่งตรงกับ regular expression <code class="docutils literal notranslate"><span class="pre">r'\s+'</span></code> เพราะว่า <code class="docutils literal notranslate"><span class="pre">\s</span></code> หมายถึงตัวอักษรที่เป็น whitespace ได้แก่ ช่องว่าง แท็บ และการขึ้นบรรทัดใหม่ และเราเผื่อว่ามีการใช้แท็บหลาย ๆ ครั้ง หรือขึ้นบรรทัดใหม่หลาย ๆ ครั้ง เมื่อเราอ่านเอาข้อมูลมาจากไฟล์ที่มีหลายบรรทัด ยกตัวอย่างเช่น</p>
+<section id="id11">
+<h3>การตัดคำแบบอิงกฎเกณฑ์<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>บางภาษาเราสามารถตั้งกฏเกณฑ์ผ่านการเขียนเรกเอกซ์เพื่อตัดคำได้ เช่น ภาษาอังกฤษ ภาษาเยอรมัน ภาษาอิตาเลียน และภาษาอื่น ๆ ที่ใช้ตัวอักษรลาติน กฏเกณฑ์ที่ตั้งอาจจะเป็นเรกเอกซ์เพื่อบอกว่าจะแพตเทิร์นไหนเป็นตัวแบ่งบ้าง เช่น เราอาจจะใช้เครื่องหมายวรรคตอน และช่องว่างเป็นตัวแบ่ง ซึ่งตรงกับเรกเอกซ์<code class="docutils literal notranslate"><span class="pre">r'\s+'</span></code> เพราะว่า <code class="docutils literal notranslate"><span class="pre">\s</span></code> หมายถึงตัวอักษรที่เป็น whitespace ได้แก่ ช่องว่าง แท็บ และการขึ้นบรรทัดใหม่ และเราเผื่อว่ามีการใช้แท็บหลาย ๆ ครั้ง หรือขึ้นบรรทัดใหม่หลาย ๆ ครั้ง เมื่อเราอ่านเอาข้อมูลมาจากไฟล์ที่มีหลายบรรทัด ยกตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Got a long list of ex-lovers, they&#39;ll tell you I&#39;m insane (Yeah) &quot;</span>
 <span class="n">tokens</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
@@ -903,7 +907,7 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </pre></div>
 </div>
 <p>เราสังเกตเห็นได้ว่าโทเค็นที่ถูกต้องมีทั้งหมด 8 ตัว และผิด 4 ตัว ได้แก่ <em>ex-lovers,</em> <em>they’ll</em> <em>I’m</em> และ <em>(Yeah)</em> เพราะว่าเครื่องหมายวรรคตอนไปติดอยู่กับคำ ใช้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> เป็นวิธีง่ายเหมาะกับการวิเคราะห์ข้อมูลเบื้องต้น ไม่ต้องการความละเอียดมาก แต่ว่าถูกต้องประมาณ 70% เท่านั้นสำหรับภาษาอังกฤษ</p>
-<p>อีกวิธีที่นิยมในการตัดคำ คือ การเขียน regular expression เพื่อบอกแพทเทิร์นของโทเค็น แทนที่จะเขียน regular expression เพื่อบอกแพทเทิร์นของตัวแบ่ง สำหรับภาษาที่ใช้ตัวอักษรลาติน หรือภาษาอื่น ๆ ที่มีการใช้ตัวแบ่งระหว่างคำชัดเจน เรามักจะใช้ regular expression <code class="docutils literal notranslate"><span class="pre">\w+|[^\w\s]+</span></code> ซึ่งประกอบด้วยสองแพทเทิร์นย่อย ได้แก่</p>
+<p>อีกวิธีที่นิยมในการตัดคำ คือ การเขียนเรกเอกซ์เพื่อบอกแพตเทิร์นของโทเค็น แทนที่จะเขียนเรกเอกซ์เพื่อบอกแพตเทิร์นของตัวแบ่ง สำหรับภาษาที่ใช้ตัวอักษรลาติน หรือภาษาอื่น ๆ ที่มีการใช้ตัวแบ่งระหว่างคำชัดเจน เรามักจะใช้เรกเอกซ์<code class="docutils literal notranslate"><span class="pre">\w+|[^\w\s]+</span></code> ซึ่งประกอบด้วยสองแพตเทิร์นย่อย ได้แก่</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">\w+</span></code> เราต้องการโทเค็นที่เป็น ตัวเลขหรือตัวอักษร a-z (ตัวลาติน) รวมถึงตัวอักษรที่มีเครื่องหมายแสดงการออกเสียงที่อยู่บนหรือล่างตัวอักษร (diacritics) เช่น é หรือ ä หรือตัวอักษรจากระบบการเขียนอื่น ๆ ที่จัดว่าเป็นตัวหนังสือ ไม่ใช่เครื่องหมายวรรคตอน</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[^\w\s]+</span></code> เราต้องการโทเค็นที่เป็น เครื่องหมายวรรคตอนล้วนหรือเครื่องหมายอื่น ๆ ที่ไม่ใช่ตัวเลขหรือตัวอักษร โทเค็นนี้จะมีแต่เครื่องหมายวรรคตอนไม่มีตัวอักษรปนอยู่ เพื่อที่จะแยก <code class="docutils literal notranslate"><span class="pre">ex-lovers</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">['ex',</span> <span class="pre">'-',</span> <span class="pre">'lovers']</span></code> และ <code class="docutils literal notranslate"><span class="pre">they'll</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">['they',</span> <span class="pre">&quot;'&quot;,</span> <span class="pre">'ll']</span></code> และ <code class="docutils literal notranslate"><span class="pre">(Yeah)</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">['(',</span> <span class="pre">'Yeah',</span> <span class="pre">')']</span></code></p></li>
@@ -920,45 +924,45 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Got&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">,</span> <span class="s1">&#39;ex&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;lovers&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;they&#39;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="s1">&#39;tell&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;insane&#39;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;Yeah&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>เราสังเกตเห็นได้ว่าโทเค็นที่ถูกต้องมีทั้งหมด 17 ตัว และผิด 4 ตัว ได้แก่ <em>‘ll</em> และ <em>‘m</em> ซึ่งผลลัพธ์ที่ได้จากการใช้ <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> มีความถูกต้องมากกว่าการใช้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> แต่ก็ยังไม่ถูกต้อง 100% สำหรับภาษาอังกฤษ และยังมีแพทเทิร์นอื่นอีกไม่สามารถเขียน regular expression มาตัดได้ง่าย ๆ เช่น</p>
+<p>เราสังเกตเห็นได้ว่าโทเค็นที่ถูกต้องมีทั้งหมด 17 ตัว และผิด 4 ตัว ได้แก่ <em>‘ll</em> และ <em>‘m</em> ซึ่งผลลัพธ์ที่ได้จากการใช้ <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> มีความถูกต้องมากกว่าการใช้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> แต่ก็ยังไม่ถูกต้อง 100% สำหรับภาษาอังกฤษ และยังมีแพตเทิร์นอื่นอีกไม่สามารถเขียนเรกเอกซ์มาตัดได้ง่าย ๆ เช่น</p>
 <ul class="simple">
 <li><p>ตัวเลขที่เป็นจุดทศนิยม</p></li>
 <li><p>‘s ที่ใช้แสดงความเป็นเจ้าของ เช่น <em>John’s car</em></p></li>
 <li><p>อักษรย่อ เช่น <em>U.S.A.</em></p></li>
 </ul>
-<p>การตัดคำโดยอาศัยกฎเกณฑ์และ regular expression มีข้อดีคือ เป็นวิธีที่สะดวก และรันได้อย่างรวดเร็ว เพราะมีความซับซ้อนน้อย เหมาะสำหรับการวิเคราะห์ข้อมูลเบื้องต้น ที่ไม่ได้จำเป็นต้องสนใจเรื่องคำที่มีขีดคั่น รูปย่อ หรือตัวเลข และสามารถประยุกต์ใช้ได้กับภาษาหลัก ๆ ในโลกได้หลายหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาเยอรมัน ภาษารัสเซีย ภาษาอาหรับ ภาษาฮีบรู แต่ข้อเสียของวิธีนี้ คือ ไม่สามารถใช้กับภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ เช่น ภาษาไทย ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
+<p>การตัดคำโดยอาศัยกฎเกณฑ์และเรกเอกซ์มีข้อดีคือ เป็นวิธีที่สะดวก และรันได้อย่างรวดเร็ว เพราะมีความซับซ้อนน้อย เหมาะสำหรับการวิเคราะห์ข้อมูลเบื้องต้น ที่ไม่ได้จำเป็นต้องสนใจเรื่องคำที่มีขีดคั่น รูปย่อ หรือตัวเลข และสามารถประยุกต์ใช้ได้กับภาษาหลัก ๆ ในโลกได้หลายหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาเยอรมัน ภาษารัสเซีย ภาษาอาหรับ ภาษาฮีบรู แต่ข้อเสียของวิธีนี้ คือ ไม่สามารถใช้กับภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ เช่น ภาษาไทย ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี</p>
 </section>
-<section id="lexicon-based-word-segmentation">
-<h3>การตัดคำโดยอาศัยคลังศัพท์ (lexicon-based word segmentation)<a class="headerlink" href="#lexicon-based-word-segmentation" title="Permalink to this heading">#</a></h3>
-<p>การตัดคำโดยอาศัยคลังศัพท์ เป็นวิธีการตัดคำที่มีประสิทธิภาพสูงวิธีหนึ่ง และมีหลักการคล้ายคลึงกับการเขียน regular expression เพื่อบ่งบอกว่าโทเค็นควรจะหน้าเป็นอย่างไร แต่ว่าเราจะระบุออกมาทั้งหมดเลยว่าอะไรบ้างที่ควรจะเป็นคำ (โทเค็น) ได้ เพราะฉะนั้นเราจะต้องมีลิสต์ของสตริงของภาษาที่เราต้องการจะตัดให้เป็นคำ เราเรียกลิสต์ของสตริงนั้นว่าคลังศัพท์ (lexicon) และใช้อัลกอริทึมในการไล่หาจากซ้ายไปขวาจนเจอคำที่ปรากฏอยู่ในคลังศัพท์ เช่น
+<section id="id12">
+<h3>การตัดคำแบบอิงคลังศัพท์<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<p>การตัดคำแบบอิงคลังศัพท์ เป็นวิธีการตัดคำที่มีประสิทธิภาพสูงวิธีหนึ่ง และมีหลักการคล้ายคลึงกับการเขียนเรกเอกซ์เพื่อบ่งบอกว่าโทเค็นควรจะหน้าเป็นอย่างไร แต่ว่าเราจะระบุออกมาทั้งหมดเลยว่าอะไรบ้างที่ควรจะเป็นคำ (โทเค็น) ได้ เพราะฉะนั้นเราจะต้องมีลิสต์ของสตริงของภาษาที่เราต้องการจะตัดให้เป็นคำ เราเรียกลิสต์ของสตริงนั้นว่าคลังศัพท์ (lexicon) และใช้อัลกอริทึมในการไล่หาจากซ้ายไปขวาจนเจอคำที่ปรากฏอยู่ในคลังศัพท์ เช่น
 <em>ไม่ต้องกลัวซ้ำกับใคร</em> กลายเป็น <em>ไม่|ต้อง|กลัว|ซ้ำ|กับ|ใคร</em> ได้เพราะเราลองไล่จากซ้ายไปขวาจนเจอคำว่า <em>ไม่</em> และไม่มีคำไหนเลยที่ขึ้นต้นด้วย <em>ไม่ต</em> จึงตัดคำว่า <em>ไม่</em> ออกมาได้ จากนั้นจึงไล่ต่อจนเจอคำว่า <em>ต้อง</em> และไม่มีคำไหนในคลังศัพท์เลยที่ขึ้นต้นด้วย <em>ต้องก</em> เราจึงตัด <em>ต้อง</em> ออกมา และทำเช่นเดียวกันแบบนี้ไปเรื่อย ๆ จนจบสตริง แล้วจะเห็นได้ว่าวิธีนี้ทำให้ทุกโทเค็นเป็นคำที่อยู่ในคลังศัพท์</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>คลังศัพท์ (lexicon) คือ ลิสต์ของคำศัพท์คล้ายกับพจนานุกรม แต่มุ่งเน้นไปที่คำศัพท์ที่ใช้จริงเพื่อให้เครื่องนำไปใช้เป็นส่วนหนึ่งของระบบ</p>
 </aside>
 <p>คลังศัพท์เป็นจะได้มาจากพจนานุกรมอิเล็กทรอนิกส์ซึ่งมักมีคำศัพท์ที่พบเห็นบ่อย ๆ และผู้จัดทำพจนานุกรมได้ตรวจสอบเป็นที่เรียบร้อยแล้ว  แต่อย่างไรก็ตามเราสามารถพบข้อมูลที่มีคำที่ไม่ได้อยู่ในคลังศัพท์ ไม่ว่าจะเป็นชื่อเฉพาะที่เป็นภาษาไทย และภาษาต่างประเทศ คำที่สะกดไม่เป็นมาตรฐาน (เช่น <em>อัลไล</em> <em>ทามมาย</em> <em>เส็ด</em>) คำที่สะกดผิดโดยไม่ได้ตั้งใจ สำหรับกรณีเหล่านี้เราใช้อัลกอริทึม maximal matching ในการรับมือ ซึ่งวิธีการทำงานของอัลกอริทึมและโครงสร้างข้อมูลที่ต้องใช้มีรายละเอียดค่อนข้างซับซ้อน และอยู่นอกเหนือขอบเขตของเนื้อหาของหนังสือเล่มนี้ เรามักจะใช้ไลบรารีที่มีประสิทธิภาพสูงโดยไม่ต้องเขียนโค้ดใช้อัลกอริทึมนี้ด้วยตัวเอง ซึ่งจะสาธิตวิธีการใช้ในบทต่อไป</p>
-<p>การตัดคำโดยอาศัยคลังศัพท์มีข้อดีหลายประการ การตัดคำด้วยวิธีนี้มีความแม่นยำค่อนข้างสูง ประมาณ 70%-80% ขึ้นอยู่กับข้อมูลที่ใช้ในการทดสอบ และรันได้เร็ว <span id="id9">[<a class="reference internal" href="#id43" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>]</span> นอกจากนั้นแล้วยังสามารถปรับแต่งให้เข้ากับข้อมูลได้ง่ายโดยการเปลี่ยนหรือเพิ่มคำศัพท์เข้าไปในคลังคำศัพท์ที่ใช้ในการตัดคำ เช่น สมมติว่าเราต้องการวิเคราะห์ข้อมูลที่มาจากสื่อสังคมออนไลน์ เราสามารถเพิ่มประสิทธิภาพโดยการเพิ่มคำศัพท์ที่เป็นคำแสลงนี่เป็นที่นิยมในช่วงเวลานั้น ถ้าหากว่าเราต้องการวิเคราะห์ข้อมูลที่เกี่ยวกับสินค้าต่างประเทศ เราสามารถเพิ่มชื่อแบรนด์ ชื่อรุ่นสินค้า เข้าไปในคลังศัพท์ ทำให้เครื่องทราบว่าคำเหล่านี้เป็นคำที่ต้องตรวจจับให้ได้ คลังศัพท์มักจะอยู่ในรูปของไฟล์ที่มีคำอยู่ในนั้น ทำให้ผู้ที่ไม่มีพื้นฐานด้านการเขียนโค้ดก็สามารถปรับแต่งการตัดคำได้ และที่สำคัญที่สุดคือ การตัดคำด้วยวิธีนี้สามารถใช้ได้กับภาษาทุกภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ เราสามารถพบเห็นวิธีนี้ในการวิเคราะห์ข้อมูลภาษา หรือการสร้างแอพพลิเคชันเกี่ยวกับภาษาที่ต้องประมวลผลภาษาไทย ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี ส่วนภาษาอื่น ๆ ที่มีการใช้ตัวลาติน หรือระบบการเขียนที่มีช่องว่างระหว่างคำไม่จำเป็นต้องใช้การตัดคำด้วยวิธีนี้</p>
-<p>การตัดคำโดยอาศัยคลังศัพท์มีข้อเสีย คือ ผลลัพธ์มักจะผิดพลาดเมื่อข้อมูลมีชื่อเฉพาะและคำศัพท์ภาษาต่างประเทศที่ทับศัพท์เป็นภาษาไทย ชื่อเฉพาะมักจะไม่อยู่ในคลังศัพท์ และแทบจะเป็นไปไม่ได้เลยที่จะเพิ่มคำศัพท์เข้าสู่คลังศัพท์ให้เป็นปัจจุบันตลอดเวลา เช่น ชื่อของคนไทยหลายชื่อเป็นชื่อที่ใหม่ตามสมัยนิยม และอาจจะไม่เหมือนใครเลย หรือชื่อวงดนตรี ชื่อแอพพลิเคชัน ชื่อห้างสรรพสินค้า ชื่อสถานที่ ก็มักจะเป็นชื่อใหม่ ๆ ไม่ซ้ำใคร ทำให้ปรับคลังศัพท์ได้ยาก ไม่เหมือนกับศัพท์ทางการแพทย์ หรือศัพท์เทคนิคอื่น ๆ ที่เรามักจะสามารถหาแหล่งความรู้ เช่น หนังสือตำรา ที่รวบรวมคำศัพท์เฉพาะเหล่านี้ได้อยู่แล้ว และไม่เปลี่ยนแปลงเร็วเหมือนชื่อเฉพาะ ส่วนคำศัพท์ภาษาต่างประเทศที่ทับศัพท์เป็นภาษาไทยก็สามารถรับมือได้ยาก เนื่องจากโลกสมัยปัจจุบันมีการเชื่อมต่อกับชาติอื่น ๆ มากมาก ในหนึ่งภาษาอาจจะมีคำศัพท์จากภาษาอื่น ๆ เราสามารถแปลงคลังศัพท์ทุกภาษาในโลกมาทับศัพท์เป็นภาษาไทยได้ครบ ที่สำคัญกว่านั้นคือการทับศัพท์อาจจะไม่เป็นไปตามมาตรฐานใดมาตรฐานเดียว อาทิ</p>
+<p>การตัดคำแบบอิงคลังศัพท์มีข้อดีหลายประการ การตัดคำด้วยวิธีนี้มีความแม่นยำค่อนข้างสูง ประมาณ 70%-80% ขึ้นอยู่กับข้อมูลที่ใช้ในการทดสอบ และรันได้เร็ว <span id="id13">[<a class="reference internal" href="#id48" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>]</span> นอกจากนั้นแล้วยังสามารถปรับแต่งให้เข้ากับข้อมูลได้ง่ายโดยการเปลี่ยนหรือเพิ่มคำศัพท์เข้าไปในคลังคำศัพท์ที่ใช้ในการตัดคำ เช่น สมมติว่าเราต้องการวิเคราะห์ข้อมูลที่มาจากสื่อสังคมออนไลน์ เราสามารถเพิ่มประสิทธิภาพโดยการเพิ่มคำศัพท์ที่เป็นคำแสลงนี่เป็นที่นิยมในช่วงเวลานั้น ถ้าหากว่าเราต้องการวิเคราะห์ข้อมูลที่เกี่ยวกับสินค้าต่างประเทศ เราสามารถเพิ่มชื่อแบรนด์ ชื่อรุ่นสินค้า เข้าไปในคลังศัพท์ ทำให้เครื่องทราบว่าคำเหล่านี้เป็นคำที่ต้องตรวจจับให้ได้ คลังศัพท์มักจะอยู่ในรูปของไฟล์ที่มีคำอยู่ในนั้น ทำให้ผู้ที่ไม่มีพื้นฐานด้านการเขียนโค้ดก็สามารถปรับแต่งการตัดคำได้ และที่สำคัญที่สุดคือ การตัดคำด้วยวิธีนี้สามารถใช้ได้กับภาษาทุกภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ เราสามารถพบเห็นวิธีนี้ในการวิเคราะห์ข้อมูลภาษา หรือการสร้างแอปพลิเคชันเกี่ยวกับภาษาที่ต้องประมวลผลภาษาไทย ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี ส่วนภาษาอื่น ๆ ที่มีการใช้ตัวลาติน หรือระบบการเขียนที่มีช่องว่างระหว่างคำไม่จำเป็นต้องใช้การตัดคำด้วยวิธีนี้</p>
+<p>การตัดคำแบบอิงคลังศัพท์มีข้อเสีย คือ ผลลัพธ์มักจะผิดพลาดเมื่อข้อมูลมีชื่อเฉพาะและคำศัพท์ภาษาต่างประเทศที่ทับศัพท์เป็นภาษาไทย ชื่อเฉพาะมักจะไม่อยู่ในคลังศัพท์ และแทบจะเป็นไปไม่ได้เลยที่จะเพิ่มคำศัพท์เข้าสู่คลังศัพท์ให้เป็นปัจจุบันตลอดเวลา เช่น ชื่อของคนไทยหลายชื่อเป็นชื่อที่ใหม่ตามสมัยนิยม และอาจจะไม่เหมือนใครเลย หรือชื่อวงดนตรี ชื่อแอปพลิเคชัน ชื่อห้างสรรพสินค้า ชื่อสถานที่ ก็มักจะเป็นชื่อใหม่ ๆ ไม่ซ้ำใคร ทำให้ปรับคลังศัพท์ได้ยาก ไม่เหมือนกับศัพท์ทางการแพทย์ หรือศัพท์เทคนิคอื่น ๆ ที่เรามักจะสามารถหาแหล่งความรู้ เช่น หนังสือตำรา ที่รวบรวมคำศัพท์เฉพาะเหล่านี้ได้อยู่แล้ว และไม่เปลี่ยนแปลงเร็วเหมือนชื่อเฉพาะ ส่วนคำศัพท์ภาษาต่างประเทศที่ทับศัพท์เป็นภาษาไทยก็สามารถรับมือได้ยาก เนื่องจากโลกสมัยปัจจุบันมีการเชื่อมต่อกับชาติอื่น ๆ มากมาก ในหนึ่งภาษาอาจจะมีคำศัพท์จากภาษาอื่น ๆ เราไม่สามารถแปลงคลังศัพท์ทุกภาษาในโลกมาทับศัพท์เป็นภาษาไทยได้ครบ ที่สำคัญกว่านั้นคือ การทับศัพท์ตามเกณฑ์ราชบัณฑิตยสภานั้นใช้สําหรบัเอกสารทางราชการหรอืตําราทางวิชาการเพื่อให้เป็นระบบเดียวกันป้องกันการสื่อสารคลาดเคลื่อน เช่น การทับศัพท์ชื่อสถานท่ีในการทําแผนที่ แต่สําหรับประชาชนทั่วไปแล้วสามารถทับศัพท์ได้อย่างอิสระจะไม่ยึดตามเกณฑ์ราชบัณฑิตยสภาก็ย่อมได้ อาทิ</p>
 <ul class="simple">
-<li><p>คำว่า <em>application</em> คนทั่วไปอาจจะทับศัพท์ได้หลากหลายแบบ ได้แก่ <em>แอพพลิเคชัน</em> <em>แอพพลิเคชั่น</em> <em>แอปปลิเคชั่น</em></p></li>
+<li><p>คำว่า <em>application</em> คนทั่วไปอาจจะทับศัพท์ได้หลากหลายแบบ ได้แก่ <em>แอปพลิเคชัน</em> <em>แอพพลิเคชั่น</em> <em>แอปปลิเคชั่น</em></p></li>
 <li><p>คำว่า <em>graphics</em> คนทั่วไปอาจจะทับศัพท์เป็น <em>กราฟฟิก</em> <em>กราฟฟิค</em> <em>กราฟิค</em></p></li>
 <li><p>คำว่า <em>clinic</em> คนทั่วไปอาจจะทับศัพท์เป็น <em>คลินิก</em> <em>คลินิค</em> <em>คลีนิค</em></p></li>
 </ul>
-<p>ผู้ที่วิเคราะห์มักจะไม่สามารถไปบอกผู้ให้ข้อมูลให้เขียนให้ถูกต้องตามหลัก ตามมาตรฐานที่ต้องการ เราต้องวิเคราะห์ข้อมูลภาษาที่ใช้กันจริง ๆ ไม่ใช่ภาษาที่ตรงตามมาตรฐานราชบัณฑิต หรือมาตรฐานอื่น ๆ    ดังนั้นถ้าเราพบว่าข้อมูลที่เราได้มาอาจจะมีชื่อเฉพาะ คำศัพท์เทคนิค หรือคำทับศัพท์ภาษาต่างประเทศที่ไม่ได้สะกดด้วยมาตรฐานเดียวกัน เราจำเป็นต้องเลือกใช้วิธีการตัดคำแบบอื่น</p>
+<p>ผู้ที่วิเคราะห์มักจะไม่สามารถไปบอกผู้ให้ข้อมูลให้เขียนให้ถูกต้องตามหลัก ตามเกณฑ์ที่ต้องการ เราต้องวิเคราะห์ข้อมูลภาษาที่ใช้กันจริง ๆ ไม่ใช่ภาษาที่ตรงตามเกณฑ์ราชบัณฑิต ฯ หรือมาตรฐานอื่น ๆ    ดังนั้นถ้าเราพบว่าข้อมูลที่เราได้มาอาจจะมีชื่อเฉพาะ คำศัพท์เทคนิค หรือคำทับศัพท์ภาษาต่างประเทศที่ไม่ได้สะกดด้วยเกณฑ์เดียวกัน เราจำเป็นต้องเลือกใช้วิธีการตัดคำแบบอื่น</p>
 </section>
-<section id="machine-learning-based-word-segmentation">
-<h3>การตัดคำโดยอาศัยการเรียนรู้ของเครื่อง (machine-learning-based word segmentation)<a class="headerlink" href="#machine-learning-based-word-segmentation" title="Permalink to this heading">#</a></h3>
-<p>การตัดคำโดยอาศัยการเรียนรู้ของเครื่อง คือ การตัดคำโดยการเรียนรู้จากข้อมูล ไม่มีการกำหนดแพทเทิร์นหรือคลังศัพท์โดยตรง การตัดคำวิธีนี้อาศัยแบบจำลองหรือโมเดล (model) ที่ถูกฝึกขึ้นมาจากชุดข้อมูลการตัดคำ อัลกอริทึมและเทคนิควิธีในการสร้างแบบจำลองโดยการเรียนรู้จากชุดข้อมูล เรียกว่า การเรียนรู้ของเครื่อง (machine learning) ซึ่งเป็นเทคนิคที่สำคัญที่สุดในการสร้างปัญญาประดิษฐ์ (artificial intelligence) แบบจำลองจะทำการเรียนรู้หาแพทเทิร์นของตัวอักษรที่มักจะมาประกอบเป็นคำจากข้อมูลที่มีตัวอย่างการตัดคำที่ถูกต้อง กระบวนการนี้เรียกว่ากระบวนการฝึกแบบจำลอง (training) หลังจากที่โมเดลฝึกเสร็จเรียบร้อยแล้ว เราจึงนำโมเดลที่ได้ไปใช้ตัดคำจากข้อมูลที่ไม่เคยเห็นมาก่อน โมเดลประเภทนี้สามารถตรวจหาคำมักจะพบในคลังศัพท์ อีกทั้งยังสามารถขยายผลไปตรวจับแพทเทิร์นของคำที่อาจจะไม่ได้ปรากฏมาก่อนในชุดข้อมูล ไม่ว่าจะเป็นชื่อเฉพาะ หรือคำทับศัพท์ เนื่องจากทั้งชื่อเฉพาะ และคำทับศัพท์ ต่างก็มีแพทเทิร์นของมันเองที่ยากต่อการเขียน regular expression ออกมาให้ครบถ้วน</p>
+<section id="id14">
+<h3>การตัดคำแบบอิงการเรียนรู้ของเครื่อง<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>การตัดคำแบบอิงการเรียนรู้ของเครื่อง คือ การตัดคำโดยการเรียนรู้จากข้อมูล ไม่มีการกำหนดแพตเทิร์นหรือคลังศัพท์โดยตรง การตัดคำวิธีนี้อาศัยแบบจำลองหรือโมเดล (model) ที่ถูกฝึกขึ้นมาจากชุดข้อมูลการตัดคำ อัลกอริทึมและเทคนิควิธีในการสร้างแบบจำลองโดยการเรียนรู้จากชุดข้อมูล เรียกว่า การเรียนรู้ของเครื่อง (machine learning) ซึ่งเป็นเทคนิคที่สำคัญที่สุดในการสร้างปัญญาประดิษฐ์ (artificial intelligence) แบบจำลองจะทำการเรียนรู้หาแพตเทิร์นของตัวอักษรที่มักจะมาประกอบเป็นคำจากข้อมูลที่มีตัวอย่างการตัดคำที่ถูกต้อง กระบวนการนี้เรียกว่ากระบวนการฝึกแบบจำลอง (training) หลังจากที่โมเดลฝึกเสร็จเรียบร้อยแล้ว เราจึงนำโมเดลที่ได้ไปใช้ตัดคำจากข้อมูลที่ไม่เคยเห็นมาก่อน โมเดลประเภทนี้สามารถตรวจหาคำมักจะพบในคลังศัพท์ อีกทั้งยังสามารถขยายผลไปตรวจจับแพตเทิร์นของคำที่อาจจะไม่ได้ปรากฏมาก่อนในชุดข้อมูล ไม่ว่าจะเป็นชื่อเฉพาะ หรือคำทับศัพท์ เนื่องจากทั้งชื่อเฉพาะ และคำทับศัพท์ ต่างก็มีแพตเทิร์นของมันเองที่ยากต่อการเขียนเรกเอกซ์ออกมาให้ครบถ้วน</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การเรียนรู้ของเครื่อง (machine learning) คือ เทคนิคในการฝึกแบบจำลองหรือโมเดลให้ทำงานที่ต้องอาศัยความชาญฉลาด โดยการเรียนรู้จากข้อมูล</p>
 <p>ปัญญาประดิษฐ์ (artificial intelligence) คือ โปรแกรมคอมพิวเตอร์ที่สามารถทำงานที่ต้องอาศัยความชาญฉลาดได้</p>
 </aside>
-<p>ในการใช้งานจริงเรามักจะไม่สร้างโมเดลการตัดคำด้วยตัวเอง เรามักจะใช้ไลบรารีที่มีการควบรวมโมเดลที่ถูกฝึกมาก่อนหน้านี้แล้ว และนำมาใช้โดยไม่มีการปรับแต่ง นับเป็นวิธีที่ตัดคำได้แม่นยำที่สุด โดยมักจะได้ความแม่นยำประมาณ 85% ขึ้นอยู่กับชุดข้อมูลที่ใช้ในการทดสอบ <span id="id10">[<a class="reference internal" href="#id43" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>, <a class="reference internal" href="#id42" title="Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Domain adaptation of Thai word segmentation models using stacked ensemble. In Bonnie Webber, Trevor Cohn, Yulan He, and Yang Liu, editors, Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 3841–3847. Online, November 2020. Association for Computational Linguistics. URL: https://aclanthology.org/2020.emnlp-main.315, doi:10.18653/v1/2020.emnlp-main.315.">Limkonchotiwat <em>et al.</em>, 2020</a>, <a class="reference internal" href="#id41" title="Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Handling cross- and out-of-domain samples in Thai word segmentation. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, 1003–1016. Online, August 2021. Association for Computational Linguistics. URL: https://aclanthology.org/2021.findings-acl.86, doi:10.18653/v1/2021.findings-acl.86.">Limkonchotiwat <em>et al.</em>, 2021</a>]</span> ดังนั้นการตัดคำโดยอาศัยการเรียนรู้ของเครื่องเป็นวิธีที่เหมาะสมที่สุดสำหรับการวิเคราะห์ข้อมูลตัวอักษรภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ</p>
-<p>การตัดคำโดยอาศัยการเรียนรู้ของเครื่องมีข้อเสียเรื่องความเร็ว หากใช้เครื่องคอมพิวเตอร์ทั่ว ๆ ไปมักจะใช้เวลาในการประมวลผลนานกว่าการตัดคำโดยใช้คลังศัพท์ถึง 5-10 เท่า โมเดลใช้เวลาประมาณ 10-20 วินาทีต่อการตัด 1 ล้านคำ <span id="id11">[<a class="reference internal" href="#id43" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>]</span> ถ้าหากเราต้องการวิเคราะห์ข้อมูลที่เราเก็บมาเสร็จเรียบร้อยแล้วและขนาดไม่ได้ใหญ่เกินไป เรายังสามารถใช้วิธีนี้ในการประมวลผลข้อมูลได้ เพราะเราสามารถแบ่งข้อมูลไปประมวลด้วยเครื่องคอมพิวเตอร์หลาย ๆ เครื่อง หรือใช้เครื่องที่มีกำลังในการคำนวณสูง ๆ แต่ถ้าหากเราต้องประมวลข้อมูลตามเวลาจริง (real-time) กล่าวคือเมื่อได้รับข้อมูลมาขณะนั้นแล้วต้องประมวลผลให้เสร็จในขณะนั้น การตัดคำด้วยวิธีนี้อาจจะช้าเกินไป นอกจากนั้นแล้ววิธีนีี้เป็นวิธีที่ปรับแต่งได้ยาก เพราะต้องเข้าใจวิธีการใช้การเรียนรู้ของเครื่องเพื่อฝึกโมเดลใหม่ หรือฝึกเพิ่มเติมจากโมเดลเดิม อีกทั้งยังต้องใช้ทรัพยากรในการสร้างชุดข้อมูลเพื่อฝึกโมเดลอีกด้วย</p>
+<p>ในการใช้งานจริงเรามักจะไม่สร้างโมเดลการตัดคำด้วยตัวเอง เรามักจะใช้ไลบรารีที่มีการควบรวมโมเดลที่ถูกฝึกมาก่อนหน้านี้แล้ว และนำมาใช้โดยไม่มีการปรับแต่ง นับเป็นวิธีที่ตัดคำได้แม่นยำที่สุด โดยมักจะได้ความแม่นยำประมาณ 85% ขึ้นอยู่กับชุดข้อมูลที่ใช้ในการทดสอบ <span id="id15">[<a class="reference internal" href="#id48" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>, <a class="reference internal" href="#id47" title="Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Domain adaptation of Thai word segmentation models using stacked ensemble. In Bonnie Webber, Trevor Cohn, Yulan He, and Yang Liu, editors, Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 3841–3847. Online, November 2020. Association for Computational Linguistics. URL: https://aclanthology.org/2020.emnlp-main.315, doi:10.18653/v1/2020.emnlp-main.315.">Limkonchotiwat <em>et al.</em>, 2020</a>, <a class="reference internal" href="#id46" title="Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Handling cross- and out-of-domain samples in Thai word segmentation. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, 1003–1016. Online, August 2021. Association for Computational Linguistics. URL: https://aclanthology.org/2021.findings-acl.86, doi:10.18653/v1/2021.findings-acl.86.">Limkonchotiwat <em>et al.</em>, 2021</a>]</span> ดังนั้นการตัดคำแบบอิงการเรียนรู้ของเครื่องเป็นวิธีที่เหมาะสมที่สุดสำหรับการวิเคราะห์ข้อมูลตัวอักษรภาษาที่ไม่มีการใช้ช่องว่างในการแบ่งคำ</p>
+<p>การตัดคำแบบอิงการเรียนรู้ของเครื่องมีข้อเสียเรื่องความเร็ว หากใช้เครื่องคอมพิวเตอร์ทั่วไปมักจะใช้เวลาในการประมวลผลนานกว่าการตัดคำโดยใช้คลังศัพท์ถึง 5-10 เท่า โมเดลใช้เวลาประมาณ 10-20 วินาทีต่อการตัด 1 ล้านคำ <span id="id16">[<a class="reference internal" href="#id48" title="Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, Proceedings of the 28th International Conference on Computational Linguistics, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: https://aclanthology.org/2020.coling-main.407, doi:10.18653/v1/2020.coling-main.407.">Chormai <em>et al.</em>, 2020</a>]</span> ถ้าหากเราต้องการวิเคราะห์ข้อมูลที่เราเก็บมาเสร็จเรียบร้อยแล้วและขนาดไม่ได้ใหญ่เกินไป การตัดคำประเภทนี้ยังคงเป็นวิธีที่เหมาะสมอยู่  เพราะเราสามารถแบ่งข้อมูลไปประมวลด้วยเครื่องคอมพิวเตอร์หลาย ๆ เครื่อง หรือใช้เครื่องที่มีกำลังในการคำนวณสูง ๆ แต่ถ้าหากเราต้องประมวลข้อมูลตามเวลาจริง (real-time) กล่าวคือเมื่อได้รับข้อมูลมาขณะนั้นแล้วต้องประมวลผลให้เสร็จในขณะนั้น การตัดคำด้วยวิธีนี้อาจจะช้าเกินไป นอกจากนั้นแล้ววิธีนีี้เป็นวิธีที่ปรับแต่งได้ยาก เพราะต้องเข้าใจวิธีการใช้การเรียนรู้ของเครื่องเพื่อฝึกโมเดลใหม่ หรือฝึกเพิ่มเติมจากโมเดลเดิม อีกทั้งยังต้องใช้ทรัพยากรในการสร้างชุดข้อมูลเพื่อฝึกโมเดลอีกด้วย</p>
 </section>
-<section id="id12">
-<h3>สรุปเรื่องการแปลงให้เป็นโทเค็น<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>สรุปเรื่องการแปลงให้เป็นโทเค็น<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
 <p>การตัดคำทั้งสามวิธีดังกล่าวยังคงเป็นวิธีที่นิยมและมีประสิทธิภาพในการตัดคำ การเลือกใช้ตัวตัดคำต้องคำนึงถึงภาษาของข้อมูล และลักษณะของภาษาในชุดข้อมูล เราสามารถสรุปข้อดีและข้อเสียของตัดคำทั้งสามวิธีได้ดังนี้</p>
 <table class="colwidths-auto table">
 <thead>
@@ -969,17 +973,17 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>การตัดคำโดยอาศัยกฎเกณฑ์</p></td>
-<td><p>กฎเกณฑ์ในรูป regular expression</p></td>
-<td><p>เรียบง่าย และแม่นยำมาก</p></td>
+<tr class="row-even"><td><p>ตัดคำแบบอิงกฎเกณฑ์</p></td>
+<td><p>กฎเกณฑ์ในรูปเรกเอกซ์</p></td>
+<td><p>เรียบง่าย และแม่นยำ</p></td>
 <td><p>ใช้ได้กับเฉพาะภาษาที่ใช้ช่องว่างในการแบ่งคำ</p></td>
 </tr>
-<tr class="row-odd"><td><p>ตัดคำโดยอาศัยคลังศัพท์</p></td>
+<tr class="row-odd"><td><p>ตัดคำแบบอิงคลังศัพท์</p></td>
 <td><p>คลังศัพท์</p></td>
 <td><p>แม่นยำ เร็ว และสามารถปรับแต่งได้</p></td>
-<td><p>มีปัญหาเรื่องคำที่ไม่อยู่ในคลังศัพท์ได้</p></td>
+<td><p>มักเกิดข้อผิดพลาดหากข้อมูลมีคำที่ไม่อยู่ในคลังศัพท์</p></td>
 </tr>
-<tr class="row-even"><td><p>ตัดคำโดยอาศัยการเรียนรู้ของเครื่อง</p></td>
+<tr class="row-even"><td><p>ตัดคำแบบอิงการเรียนรู้ของเครื่อง</p></td>
 <td><p>โมเดลที่ถูกฝึกแล้ว</p></td>
 <td><p>แม่นยำที่สุดสำหรับภาษาที่ไม่ใช้ช่องว่างในการแบ่งคำ</p></td>
 <td><p>ช้า ปรับแต่งได้ยาก</p></td>
@@ -988,12 +992,12 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </table>
 </section>
 </section>
-<section id="id13">
-<h2>ไลบรารีที่ใช้ในการตัดคำ<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="id18">
+<h2>ไลบรารีที่ใช้ในการตัดคำ<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
 <p>การตัดคำ หรือการแปลงให้เป็นโทเค็นเป็นกระบวนการพื้นฐานที่มักจะต้องทำเป็นอันดับแรก กลุ่มนักพัฒนาโปรแกรมจึงได้สร้างไลบรารีในการประมวลผลภาษาธรรมชาติมาหลายตัวซึ่งมีฟังก์ชันในการตัดคำ ไลบรารีที่สามารถตัดคำได้มีหลายตัว แต่ว่าปัจจุบันยังไม่มีไลบรารีตัวใดเลยที่สามารถตัดคำได้ทุกภาษา เพราะฉะนั้นวิธีการเลือกใช้ไลบรารีในการตัดคำนั้นขึ้นอยู่กับภาษาที่ต้องการตัดคำ เราจะพูดถึงไลบรารี 3 ตัวที่น่าสนใจ ได้แก่ NLTK  pythainlp และ spaCy</p>
-<section id="id14">
-<h3>การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
-<p>การตัดคำภาษาอังกฤษมักจะใช้ชุดของ regular expression ซึ่งที่จริงแล้วสามารถประยุกต์ใช้ในการตัดคำของภาษาอื่น ๆ ที่ใช้ช่องว่างเป็นตัวแบ่งคำเป็นส่วนใหญ่</p>
+<section id="id19">
+<h3>การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<p>การตัดคำภาษาอังกฤษมักจะใช้ชุดของเรกเอกซ์ซึ่งที่จริงแล้วสามารถประยุกต์ใช้ในการตัดคำของภาษาอื่น ๆ ที่ใช้ช่องว่างเป็นตัวแบ่งคำเป็นส่วนใหญ่</p>
 <ul class="simple">
 <li><p>ภาษาตระกูลอินโดยูโรเปียนที่ใช้ตัวอักษรละติน เช่น ภาษาฝรั่งเศส ภาษาเยอรมัน ภาษาสเปน</p></li>
 <li><p>ภาษาที่ใช้ตัวอักษรซิริลลิก (มักจะเป็นภาษาตระกูลสลาวิก) เช่น ภาษารัสเซีย ภาษาเบลารุส ภาษาเซอร์เบีย</p></li>
@@ -1001,8 +1005,8 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </ul>
 <section id="nltk">
 <h4>ตัดคำด้วยไลบรารี NLTK<a class="headerlink" href="#nltk" title="Permalink to this heading">#</a></h4>
-<p>ไลบรารี NLTK (Natural Language Toolkit) เป็นหนึ่งในไลบรารีที่ใช้กันอย่างแพร่หลายในการประมวลผลภาษาธรรมชาติด้วยภาษาไพทอน ไลบรารีนี้มีเครื่องมือและโมดูลที่หลากหลายสำหรับการวิเคราะห์และประมวลผลข้อความ นอกเหนือจากโมดูลการตัดคำที่ถูกใช้บ่อยที่สุดแล้ว ยังมีโมดูลที่มีโครงสร้างข้อมูลที่รองรับโครงสร้างต้นไม้ของประโยค โมดูลการตัดประโยค โมดูลการวิเคราะห์โครงสร้างประโยคอีกด้วย โมดูลในการดาวน์โหลดคลังข้อมูลอีกด้วย <span id="id15">[<a class="reference internal" href="#id39" title="Steven Bird. Nltk: the natural language toolkit. In Proceedings of the COLING/ACL 2006 Interactive Presentation Sessions, 69–72. 2006.">Bird, 2006</a>]</span></p>
-<p>วิธีการตัดคำโดยใช้ nltk ค่อนข้างตรงไปตรงมา โดยการเรียกใช้งานโมดูล <code class="docutils literal notranslate"><span class="pre">nltk.tokenize</span></code> และเรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code> โดยใส่ข้อความที่ต้องการตัดคำเข้าไป โดยฟังก์ชันนี้จะคืนค่าเป็นลิสต์ของคำที่ถูกตัดออกมา โดยตัดด้วยชุดของ regular expression ดังตัวอย่างในโค้ดที่</p>
+<p>ไลบรารี NLTK (Natural Language Toolkit) เป็นหนึ่งในไลบรารีที่ใช้กันอย่างแพร่หลายในการประมวลผลภาษาธรรมชาติด้วยภาษาไพทอน ไลบรารีนี้มีเครื่องมือและโมดูลที่หลากหลายสำหรับการวิเคราะห์และประมวลผลข้อความ นอกเหนือจากโมดูลการตัดคำที่ถูกใช้บ่อยที่สุดแล้ว ยังมีโมดูลที่มีโครงสร้างข้อมูลที่รองรับโครงสร้างต้นไม้ของประโยค โมดูลการตัดประโยค โมดูลการวิเคราะห์โครงสร้างประโยคอีกด้วย โมดูลในการดาวน์โหลดคลังข้อมูลอีกด้วย <span id="id20">[<a class="reference internal" href="#id44" title="Steven Bird. Nltk: the natural language toolkit. In Proceedings of the COLING/ACL 2006 Interactive Presentation Sessions, 69–72. 2006.">Bird, 2006</a>]</span></p>
+<p>วิธีการตัดคำโดยใช้ nltk ค่อนข้างตรงไปตรงมา โดยการเรียกใช้งานโมดูล <code class="docutils literal notranslate"><span class="pre">nltk.tokenize</span></code> และเรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">word_tokenize</span></code> โดยใส่ข้อความที่ต้องการตัดคำเข้าไป โดยฟังก์ชันนี้จะคืนค่าเป็นลิสต์ของคำที่ถูกตัดออกมา โดยตัดด้วยชุดของเรกเอกซ์ดังตัวอย่างในโค้ดที่</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
 
@@ -1068,9 +1072,9 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <p>จากโค้ดการตัดคำของ เราสังเกตได้ว่าหากเราต้องตัดคำภาษาอังกฤษ เราไม่ต้องระบุอาร์กิวเมนต์อะไรอื่นนอกจาก <code class="docutils literal notranslate"><span class="pre">text</span></code> แต่ถ้าเราต้องการตัดคำภาษาอื่น ๆ เราต้องระบุภาษาที่ต้องการตัดด้วยอาร์กิวเมนต์ <code class="docutils literal notranslate"><span class="pre">language</span></code> และถ้าเราต้องการให้ฟังก์ชันไม่ตัดประโยคก่อนเราต้องตั้งค่า <code class="docutils literal notranslate"><span class="pre">preserve_line=True</span></code> ด้วย</p>
 </section>
 </section>
-<section id="id16">
-<h3>การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
-<p>มีเพียงไม่กี่ภาษาในโลกที่ใช้ระบบการเขียนที่ไม่ใช้ช่องว่างเป็นตัวแบ่งคำ ภาษาเหล่านี้ต้องใช้คลังศัพท์ หรือแบบจำลองในการตัดคำ ที่ต้องใช้ทรัพยากรเพื่อสร้างขึ้นมาเฉพาะเจาะจงกับแต่ละภาษาโดยเฉพาะ เพราะฉะนั้นมีเพียงภาษาไม่กี่ภาษาเท่านั้นที่ได้รับความสนใจในการพัฒนาเครื่องมือในการตัดคำโดยอัตโนมัติ เช่น</p>
+<section id="id21">
+<h3>การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<p>มีเพียงไม่กี่ภาษาในโลกที่ใช้ระบบการเขียนที่ไม่ใช้ช่องว่างเป็นตัวแบ่งคำ ภาษาเหล่านี้ต้องใช้คลังศัพท์ หรือแบบจำลองในการตัดคำ ที่ต้องใช้ทรัพยากรเพื่อสร้างขึ้นมาเฉพาะเจาะจงกับแต่ละภาษาโดยเฉพาะ เพราะฉะนั้นมีเพียงภาษาไม่กี่ภาษาเท่านั้นที่มีความสำคัญทางเศรษฐกิจพอที่จะได้รับความสนใจจากนักวิจัย ในการพัฒนาเครื่องมือในการตัดคำโดยอัตโนมัติ เช่น</p>
 <ul class="simple">
 <li><p>ภาษาไทย</p></li>
 <li><p>ภาษาจีน</p></li>
@@ -1097,46 +1101,46 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </div>
 </section>
 </section>
-<section id="id17">
-<h2>การตัดประโยค<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
-<p>หากข้อมูลที่ได้มามีความยาวมากกว่า 1 ประโยค ในบางครั้งเราจำเป็นต้องแบ่งข้อความ 1 หน่วยให้ออกมาเป็นประโยค ก่อนที่จะนำไปประมวลผลและวิเคราะห์ต่อ ซึ่งกระบวนการตัดประโยคและการตัดคำเป็นสองกระบวนการที่เกี่ยวพันกัน ตัวอย่างเช่น การตัดคำและการตัดประโยคสำหรับภาษาอังกฤษต้องอาศัยการตรวจหาคำย่อ เช่น <em>U.S.A.</em> <em>Mr.</em> <em>etc.</em>  เพราะจุดสามารถใช้ในภาษาอังกฤษเพื่อแสดงคำย่อเช่นเดียวกับการแสดงจุดสิ้นสุดของประโยค ในกรณีที่จุดแสดงคำย่อ จุดมักจะถูกพิจารณาว่าเป็นส่วนหนึ่งของโทเคนคำย่อ ในขณะที่จุดที่อยู่ท้ายประโยคมักจะถูกพิจารณาว่าเป็นโทเคนโดด ๆ  การแยกโทเคนของคำย่อมีความซับซ้อนมากขึ้นเมื่อคำย่อเกิดขึ้นที่ท้ายประโยค และจุดนั้นแสดงทั้งคำย่อและขอบเขตประโยค เช่น</p>
+<section id="id22">
+<h2>การตัดประโยค<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<p>หากข้อมูลที่ได้มามีความยาวมากกว่า 1 ประโยค ในบางครั้งเราจำเป็นต้องแบ่งข้อความ 1 หน่วยให้ออกมาเป็นประโยค ก่อนที่จะนำไปประมวลผลและวิเคราะห์ต่อ ซึ่งกระบวนการตัดประโยคและการตัดคำเป็นสองกระบวนการที่เกี่ยวพันกัน ตัวอย่างเช่น การตัดคำและการตัดประโยคสำหรับภาษาอังกฤษต้องอาศัยการตรวจหาคำย่อ เช่น <em>U.S.A.</em> <em>Mr.</em> <em>etc.</em>  เพราะจุดสามารถใช้ในภาษาอังกฤษเพื่อแสดงคำย่อเช่นเดียวกับการแสดงจุดสิ้นสุดของประโยค ในกรณีที่จุดแสดงคำย่อ จุดมักจะถูกพิจารณาว่าเป็นส่วนหนึ่งของโทเค็นคำย่อ ในขณะที่จุดที่อยู่ท้ายประโยคมักจะถูกพิจารณาว่าเป็นโทเค็นโดด ๆ  การแยกโทเค็นของคำย่อมีความซับซ้อนมากขึ้นเมื่อคำย่อเกิดขึ้นที่ท้ายประโยค และจุดนั้นแสดงทั้งคำย่อและขอบเขตประโยค เช่น</p>
 <blockquote>
 <div><p>Mr. Smith will arrive in the U.S. at 4 p.m. Make sure to remind Dr. Rutherford to be on time.</p>
 </div></blockquote>
 <p>สามารถถูกตัดออกมาเป็นสองประโยคดังนี้</p>
 <ol class="arabic simple">
 <li><p><em>Mr.|Smith|will|arrive|in|the|U.S.|at|4|p.m.</em></p></li>
-<li><p><em>|Make|sure|to|remind|Dr.|Rutherford|to|be|on time|.</em></p></li>
+<li><p><em>Make|sure|to|remind|Dr.|Rutherford|to|be|on time|.</em></p></li>
 </ol>
-<p>เราสังเกตว่าจุดเป็นส่วนหนึ่งของโทเคน <em>Mr.</em> <em>U.S.</em> <em>p.m.</em> และ <em>Dr.</em> เพราะว่าเป็นจุดที่แสดงคำย่อ ประโยคแรกจึงไม่มีโทเคนที่เป็นจุดเดี่ยว ๆ เนื่องจากอักขรวิธีของภาษาอังกฤษไม่จะเขียนจุดซ้ำ หากคำสุดท้ายลงท้ายด้วยจุดอยู่แล้ว ส่วนประโยคที่ 2 มีจุดที่อยู่ท้ายประโยค แยกออกมาเป็นโทเคนเดี่ยว ๆ เนื่องจากเป็นจุดที่แสดงจุดสิ้นสุดของประโยค</p>
-<p>ประโยคในภาษาเขียนส่วนใหญ่มักคั่นด้วยเครื่องหมายวรรคตอน แต่กฎการใช้เครื่องหมายวรรคตอนไม่ได้ถูกกำหนดไว้อย่างชุดเจนเสมอไป แม้แต่ภาษาที่มีการกำหนดกฎการแบ่งประโยคไว้ชัดเจน  ผู้ใช้ภาษาอาจจะไม่ได้ยึดถือกฎเหล่านั้นเสมอไป ขึ้นอยู่กับที่มาของแหล่งข้อความและประเภทของข้อความ หากเป็นข้อความที่มาจากการเขียนพูดคุยกันผ่านโลกออนไลน์อาจจะไม่ได้ยึดถือกฎการใช้เครื่องหมายวรรคตอน และการแบ่งประโยคตามที่อักขรวิธีกำหนด แต่ว่าประกาศราชการและหนังสือมักจะยึดถือกฎการใช้เครื่องหมายวรรคตอนอย่างเคร่งครัดกว่า ไม่เหมือนกับการใช้ช่องว่างในการแบ่งคำของภาษาอังกฤษ ซึ่งคนมักจะยึดถือกันอย่างไม่ค่อยมีข้อยกเว้นเท่าใด</p>
-<p>นอกจากนั้นแล้ว ภาษาต่างๆ มักจะคั่นประโยคด้วยเครื่องหมายวรรคตอนที่แตกต่างกัน การตัดประโยคที่ถูกต้องสำหรับภาษาหนึ่ง ๆ จึงต้องอาศัยความเข้าใจในการใช้อักขระเครื่องหมายวรรคตอนต่าง ๆ ในภาษานั้น ในภาษาส่วนใหญ่ โจทย์การตัดประโยคมักจะถูกลดทอนกลายเป็นโจทย์การแก้ความกำกวมของอักขระเครื่องหมายวรรคตอน (punctuation disambiguation) กล่าวคือตรวจหาเครื่องหมายวรรคตอนทั้งหมดอาจจะเป็นเครื่องหมายวรรคตอนแบ่งขอบเขตประโยค (sentence boundary punctuation) ได้ ซึ่งโจทย์นี้มีวิธีการแก้แตกต่างกันไป ขึ้นอยู่กับแต่ละภาษา <span id="id18">[<a class="reference internal" href="#id38" title="David D Palmer. Tokenisation and sentence segmentation. Handbook of natural language processing, pages 11–35, 2000.">Palmer, 2000</a>]</span></p>
-<section id="id19">
-<h3>การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
-<p>การตัดประโยคในภาษาอังกฤษมักจะใช้เครื่องหมายวรรคตอน ซึ่งเป็นเครื่องหมายที่ใช้ในการแบ่งประโยค โดยทั่วไปแล้วเครื่องหมายวรรคตอนประกอบด้วยเครื่องหมายต่าง ๆ ที่ใช้ในการแบ่งประโยค ซึ่งมีเครื่องหมายวรรคตอนที่ใช้บ่อยที่สุด 5 ตัว คือ จุด (.) โคลอน  (:) จุด 3 จุด (…) เครื่องหมายคำถาม (?) และเครื่องหมายอัศเจรีย์ (!)  แต่ว่าเครื่องหมายวรรคตอนเหล่านี้ยังมีความกำกวมอยู่ จึงจำเป็นต้องใช้แบบจำลองเข้ามาช่วยในการแก้ความกำกวมของเครื่องหมายเหล่านี้ว่าเป็นตัวแบ่งขอบเขตประโยคหรือไม่ แบบจำลองที่นิยมใช้มากที่สุดประเภทหนึ่ง คือแบบจำลองที่เรียนรู้จากคลังข้อมูลขนาดใหญ่โดยใช้การเรียนรู้โดยไม่อาศัยผู้สอน (unsupervised learning) กล่าวคือ แบบจำลองเรียนรู้การตัดประโยคโดยไม่ต้องใช้ชุดข้อมูลที่มีการตัดประโยคด้วยมือเรียบร้อยแล้วเป็นส่วนหนึ่งของการเรียน แบบจำลองเรียนรู้จากข้อมูลที่เป็นข้อความเพียงอย่างเดียว ไม่ใช่ชุดข้อมูลที่การปิดป้ายกำกับเป็นพิเศษ</p>
+<p>เราสังเกตว่าจุดเป็นส่วนหนึ่งของโทเค็น <em>Mr.</em> <em>U.S.</em> <em>p.m.</em> และ <em>Dr.</em> เพราะว่าเป็นจุดที่แสดงคำย่อ ประโยคแรกจึงไม่มีโทเค็นที่เป็นจุดเดี่ยว ๆ เนื่องจากอักขรวิธีของภาษาอังกฤษไม่จะเขียนจุดซ้ำ หากคำสุดท้ายลงท้ายด้วยจุดอยู่แล้ว ส่วนประโยคที่ 2 มีจุดที่อยู่ท้ายประโยค แยกออกมาเป็นโทเค็นเดี่ยว ๆ เนื่องจากเป็นจุดที่แสดงจุดสิ้นสุดของประโยค</p>
+<p>ประโยคในภาษาเขียนส่วนใหญ่มักคั่นด้วยเครื่องหมายวรรคตอน แต่กฎการใช้เครื่องหมายวรรคตอนไม่ได้ถูกกำหนดไว้อย่างชัดเจนเสมอไป แม้แต่ภาษาที่มีการกำหนดกฎการแบ่งประโยคไว้ชัดเจน  ผู้ใช้ภาษาอาจจะไม่ได้ยึดถือกฎเหล่านั้นเสมอไป ขึ้นอยู่กับที่มาของแหล่งข้อความและประเภทของข้อความ หากเป็นข้อความที่มาจากการเขียนพูดคุยกันผ่านโลกออนไลน์อาจจะไม่ได้ยึดถือกฎการใช้เครื่องหมายวรรคตอน และการแบ่งประโยคตามที่อักขรวิธีกำหนด แต่ว่าประกาศราชการและหนังสือมักจะยึดถือกฎการใช้เครื่องหมายวรรคตอนอย่างเคร่งครัดกว่า ไม่เหมือนกับการใช้ช่องว่างในการแบ่งคำของภาษาอังกฤษ ซึ่งคนมักจะยึดถือกันอย่างไม่ค่อยมีข้อยกเว้นเท่าใด</p>
+<p>นอกจากนั้นแล้ว ภาษาต่างๆ มักจะคั่นประโยคด้วยเครื่องหมายวรรคตอนที่แตกต่างกัน การตัดประโยคที่ถูกต้องสำหรับภาษาหนึ่ง ๆ จึงต้องอาศัยความเข้าใจในการใช้อักขระเครื่องหมายวรรคตอนต่าง ๆ ในภาษานั้น ในภาษาส่วนใหญ่ โจทย์การตัดประโยคมักจะถูกลดทอนกลายเป็นโจทย์การแก้ความกำกวมของอักขระเครื่องหมายวรรคตอน (punctuation disambiguation) กล่าวคือตรวจหาเครื่องหมายวรรคตอนทั้งหมดอาจจะเป็นเครื่องหมายวรรคตอนแบ่งขอบเขตประโยค (sentence boundary punctuation) ได้ ซึ่งโจทย์นี้มีวิธีการแก้แตกต่างกันไป ขึ้นอยู่กับแต่ละภาษา <span id="id23">[<a class="reference internal" href="#id43" title="David D Palmer. Tokenisation and sentence segmentation. Handbook of natural language processing, pages 11–35, 2000.">Palmer, 2000</a>]</span></p>
+<section id="id24">
+<h3>การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<p>การตัดประโยคในภาษาอังกฤษมักจะใช้เครื่องหมายวรรคตอน ซึ่งเป็นเครื่องหมายที่ใช้ในการแบ่งประโยค โดยทั่วไปแล้วเครื่องหมายวรรคตอนประกอบด้วยเครื่องหมายต่าง ๆ ที่ใช้ในการแบ่งประโยค ซึ่งมีเครื่องหมายวรรคตอนที่ใช้บ่อยที่สุด 5 ตัว คือ เครื่องหมายมหัพภาค หรือจุด (.) เครื่องหมายทวิภาค หรือโคลอน (:) เครื่องหมายจุด 3 จุด (…) เครื่องหมายปรัศนีย์หรือคำถาม (?) และเครื่องหมายอัศเจรีย์ หรือเครื่องหมายตกใจ (!) แต่ว่าเครื่องหมายวรรคตอนเหล่านี้ยังมีความกำกวมอยู่ กล่าวคือเครื่องหมายวรรคตอนเหล่านี้ไม่ได้เป็นตัวบ่งบอกขอบเขตเสมอไป  จึงจำเป็นต้องใช้แบบจำลองเข้ามาช่วยในการแก้ความกำกวมของเครื่องหมายเหล่านี้ว่าเป็นตัวแบ่งขอบเขตประโยคหรือไม่ แบบจำลองที่นิยมใช้มากที่สุดประเภทหนึ่ง คือแบบจำลองที่เรียนรู้จากคลังข้อมูลขนาดใหญ่โดยใช้การเรียนรู้โดยไม่อาศัยผู้สอน (unsupervised learning) กล่าวคือ แบบจำลองเรียนรู้การตัดประโยคโดยไม่ต้องใช้ชุดข้อมูลที่มีการตัดประโยคด้วยมือเรียบร้อยแล้วเป็นส่วนหนึ่งของการเรียน แบบจำลองเรียนรู้จากข้อมูลที่เป็นข้อความเพียงอย่างเดียว ไม่ใช่ชุดข้อมูลที่การปิดป้ายกำกับเป็นพิเศษ</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การเรียนรู้โดยไม่อาศัยผู้สอน (unsupervised learning)  คือ การเรียนรู้โดยไม่มีข้อมูลเฉพาะเจาะจงในการสอน โดยมักจะใช้ข้อมูลที่ไม่มีป้ายกำกับ หรือข้อมูลที่มีป้ายกำกับเพียงบางส่วนเท่านั้น</p>
 </aside>
-<p>แบบจำลองนี้เรียกว่าระบบพุงต์ (Punkt) ซึ่งภาษาเยอรมันแปลว่าจุด
-<span id="id20">[<a class="reference internal" href="#id45" title="Tibor Kiss and Jan Strunk. Unsupervised multilingual sentence boundary detection. Computational Linguistics, 32(4):485–525, 2006. URL: https://aclanthology.org/J06-4003, doi:10.1162/coli.2006.32.4.485.">Kiss and Strunk, 2006</a>]</span> ระบบนี้ใช้การคำนวณค่าสถิติของคำที่อยู่รอบ ๆ จุด โดยเริ่มจากการตรวจหาคำย่อซึ่งมีจุดอยู่ เพราะจุดที่อยู่ในคำย่อที่มีจุดมักจะไม่ใช่ตัวแบ่งประโยค แต่ว่าก็ไม่แน่นอนเสมอไป ระบบจึงมีการใช้ค่าสถิติที่นำมาเป็นตัวช่วยในการตัดสินใจ (heuristic) เพิ่มอีก 3 ตัว
+<p>แบบจำลองนี้เรียกว่าระบบพุงคท์ (Punkt) ซึ่งภาษาเยอรมันแปลว่าจุด
+<span id="id25">[<a class="reference internal" href="#id50" title="Tibor Kiss and Jan Strunk. Unsupervised multilingual sentence boundary detection. Computational Linguistics, 32(4):485–525, 2006. URL: https://aclanthology.org/J06-4003, doi:10.1162/coli.2006.32.4.485.">Kiss and Strunk, 2006</a>]</span> ระบบนี้ใช้การคำนวณค่าสถิติของคำที่อยู่รอบ ๆ เครื่องหมายจุด โดยเริ่มจากการตรวจหาคำย่อซึ่งมีจุดอยู่ เพราะจุดที่อยู่ในคำย่อที่มีจุดมักจะไม่ใช่ตัวแบ่งประโยค แต่ว่าก็ไม่แน่นอนเสมอไป ระบบจึงมีการใช้ค่าสถิติที่นำมาเป็นตัวช่วยในการตัดสินใจ (heuristic) เพิ่มอีก 3 ตัว
 (รายละเอียดและสูตรการคำนวณค่าสถิติเหล่านี้อยู่นอกเหนือขอบเขตของหนังสือเล่มนี้) ได้แก่</p>
 <ol class="arabic simple">
 <li><p>ตัวช่วยในการตัดสินใจที่คำนวณจากอักขระวิธี (orthographic heuristic) ของคำที่อยู่รอบ ๆ จุด ซึ่งมาจากข้อสังเกตที่สำคัญ คือ  หากคำที่ตามหลังจุดขึ้นต้นถูกเขียนด้วยตัวพิมพ์ใหญ่บ่อยกว่าตัวพิมพ์เล็ก คำนั้นมักจะเป็นคำเริ่มต้นประโยค</p></li>
 <li><p>ตัวช่วยในการตัดสินใจที่คำนวณจากการปรากฏร่วมจำเพาะของคำ  (collocation heuristic) ซึ่งมาจากข้อสังเกตที่สำคัญ คือ  หากคำที่อยู่ข้างหน้าและคำที่อยู่ข้างหลังจุดมีการปรากฏร่วมจำเพาะ (collocation) สูง จุดนั้นมักจะไม่ใช่ตัวแบ่งขอบเขตของประโยค</p></li>
 <li><p>ตัวช่วยในการตัดสินใจที่คำนวณจากการขึ้นต้นประโยคบ่อย ๆ (frequent sentence starter heuristic) ซึ่งมาจากข้อสังเกตที่สำคัญ คือ  จุดที่เกิดหลังคำที่ไม่ใช่คำย่อ ชื่อย่อ หรือตัวเลข มักจะเป็นตัวแบ่งขอบเขตประโยค</p></li>
 </ol>
-<p>ระบบพุงต์เป็นระบบการตัดประโยคที่ความแม่นยำสูงถึง 97% - 99% สำหรับภาษาโปรตุเกส ดัทช์ อังกฤษ เอสโตเนียน ฝรั่งเศส เยอรมัน อิตาเลียน นอร์เวย์ สเปน สวีเดน และตุรกี โดยแต่ละภาษามีระบบพุงต์ของตัวเอง เนื่องจากต้องคำนวณค่าสถิติต่าง ๆ ข้างต้นจากคลังข้อมูลของภาษานั้น ๆ</p>
-</section>
-<section id="id21">
-<h3>การตัดประโยคภาษาไทย และภาษาจีน<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
-<p>ภาษาที่ไม่สามารถใช้วิธีการคำนวณค่าตัวช่วยในการตัดสินใจ ได้แก่ ภาษาไทย ภาษาจีน ภาษาไทยมีการใช้เครื่องหมายวรรคตอนอื่นในการแบ่งประโยคอยู่บ้าง เช่น เครื่องหมายอัศเจรีย์ และเครื่องหมายคำถาม แต่ว่ามักไม่ค่อยพบในการแบ่งประโยคภาษาไทยเท่าใดนัก ในส่วนของภาษาจีน ข้อความบางประเภทมีการใช้จุดในการแบ่งประโยคชัดเจน เช่น หนังสือพิมพ์ แต่ว่ามีข้อความจากแหล่งอื่น ๆ อีกมากที่ไม่ใช้จุดในการแบ่งประโยค เช่น สื่อสังคมออนไลน์ <span id="id22">[<a class="reference internal" href="#id49" title="Nianwen Xue and Yaqin Yang. Chinese sentence segmentation as comma classification. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, 631–635. 2011.">Xue and Yang, 2011</a>]</span> การแบ่งประโยคของภาษาไทย (โดยทั่วไป) และภาษาจีน (เฉพาะบางแหล่ง) ต้องอาศัยบริบทและโครงสร้างย่อย ๆ ของประโยค <span id="id23">[<a class="reference internal" href="#id44" title="Wirote Aroonmanakun. Thoughts on word and sentence segmentation in thai. In Proceedings of the Seventh Symposium on Natural language Processing, Pattaya, Thailand, December 13–15, 85–90. 2007.">Aroonmanakun, 2007</a>]</span> มากกว่าที่จะอาศัยเครื่องหมายวรรคตอน   ด้วยเหตุนี้ทั้งสองภาษานี้ต้องใช้ระบบตัดคำที่อาศัยการเรียนรู้แบบมีผู้สอน (supervised learning) ซึ่งการเรียนรู้ด้วยเครื่องแบบใช้ชุดข้อมูลที่มีการตัดประโยคด้วยมือเรียบร้อยแล้วเป็นส่วนหนึ่งของการเรียนรู้การตัดประโยค ด้วยเหตุผลนี้เองการสร้างระบบการตัดประโยคของภาษาเหล่านี้จำเป็นต้องมีการจ้างทีมงานในการกำกับข้อมูล (annotation) เพื่อสร้างคลังข้อมูลภาษา ทีมงานนักกำกับข้อมูล (annotator) จะต้องมีการเตรียมข้อมูลและตัดประโยคด้วยมือ ตามคำนิยามของประโยคของภาษานั้น ๆ เป็นกระบวนการที่ใช้เวลาและทรัพยากรค่อนข้างมาก</p>
-<p>เมื่อได้ชุดข้อมูลที่เหมาะสมแล้ว แบบจำลองที่ใช้ในการตัดประโยคแบบใหม่ ๆ มักจะใช้แบบจำลองแบบอาศัยฟีเจอร์ (feature-based model) แบบจำลองแบบการเรียนรู้เชิงลึก (deep learning) ในการเรียนรู้จากคลังข้อมูลที่มีกำกับข้อมูลเรียบร้อยแล้วทั้งภาษาไทย  <span id="id24">[<a class="reference internal" href="#id46" title="Chanatip Saetia, Ekapol Chuangsuwanich, Tawunrat Chalothorn, and Peerapon Vateekul. Semi-supervised thai sentence segmentation using local and distant word representations. arXiv preprint arXiv:1908.01294, 2019.">Saetia <em>et al.</em>, 2019</a>, <a class="reference internal" href="#id47" title="Sorratat Sirirattanajakarin, Duangjai Jitkongchuen, and Peerasak Intarapaiboon. Boydcut: bidirectional lstm-cnn model for thai sentence segmenter. In 2020 1st International Conference on Big Data Analytics and Practices (IBDAP), 1–4. IEEE, 2020.">Sirirattanajakarin <em>et al.</em>, 2020</a>]</span> และภาษาจีน <span id="id25">[<a class="reference internal" href="#id48" title="Srivatsan Srinivasan and Chris Dyer. Better chinese sentence segmentation with reinforcement learning. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, 293–302. 2021.">Srinivasan and Dyer, 2021</a>]</span> แบบจำลองที่ได้รับการฝึกฝนเรียบร้อยแล้วมักจะถูกนำมาเผยแพร่ในลักษณะของไลบรารีให้คนทั่วไปสามารถใช้โดยไม่เสียค่าใช้จ่าย และมีการพัฒนาอย่างต่อเนื่องโดยกลุ่มของนักพัฒนาโอเพ่นซอร์ส</p>
-</section>
+<p>ระบบพุงคท์เป็นระบบการตัดประโยคที่ความแม่นยำสูงถึง 97% - 99% สำหรับภาษาโปรตุเกส ดัทช์ อังกฤษ เอสโตเนียน ฝรั่งเศส เยอรมัน อิตาเลียน นอร์เวย์ สเปน สวีเดน และตุรกี โดยแต่ละภาษามีระบบพุงคท์ของตัวเอง เนื่องจากต้องคำนวณค่าสถิติต่าง ๆ ข้างต้นจากคลังข้อมูลของภาษานั้น ๆ</p>
 </section>
 <section id="id26">
-<h2>ไลบรารีที่ใช้ในการตัดประโยค<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h2>
-<p>ปัจจุบันมีอยู่ไลบรารีภาษาไพทอนตัวเดียวที่ใช้ในการตัดประโยคภาษาไทย นั่นคือ pythainlp ซึ่งเป็นไลบรารีที่เรานิยมใช้ในการตัดคำด้วย แบบจำลองที่ pythainlp ใช้คือแบบจำลองที่อาศัยฟีเจอร์ชื่อว่า CRFCut ซึ่งถูกพัฒนาขึ้นเพื่อตัดประโยคเพื่อนำสร้างคลังคู่ประโยคสำหรับการพัฒนาระบบการแปลด้วยเครื่อง <span id="id27">[<a class="reference internal" href="#id50" title="Lalita Lowphansirikul, Charin Polpanumas, Attapol T Rutherford, and Sarana Nutanong. A large english–thai parallel corpus from the web and machine-generated text. Language Resources and Evaluation, 56(2):477–499, 2022.">Lowphansirikul <em>et al.</em>, 2022</a>]</span> ถึงแม้ว่าตอนนี้ได้มีระบบอื่น ๆ ที่ผลดีกว่า CRFCut แล้ว  CRFCut มีอัตราความแม่นยำอยู่ประมาณ 0.62 ในขณะที่แบบจำลองแบบการเรียนรู้เชิงลึกมีอัตราความแม่นยำอยู่ที่ประมาณ 0.69 <span id="id28">[<a class="reference internal" href="#id51" title="Sumeth Yuenyong and Virach Sornlertlamvanich. Transentcut-transformer based thai sentence segmentation. Songklanakarin Journal of Science and Technology, 44(3):852–860, 2022.">Yuenyong and Sornlertlamvanich, 2022</a>]</span> ซึ่งความแม่นยำที่สามารถคาดหวังได้จริงนั้นยังขึ้นอยู่กับปัจจัยอื่น ๆ เช่น ทำการประเมินประสิทธิภาพอย่างไร แหล่งข้อมูลที่ใช้ในการฝึกฝน และแหล่งข้อมูลการประเมินความแม่นยำมีความคล้ายคลึงกันเพียงใด ผู้เขียนยังคงเห็นว่าระบบการตัดประโยคภาษาไทยยังไม่แม่นยำพอที่จะนำไปใช้ได้จริง โจทย์นี้เป็นยังคงเป็นโจทย์เปิดที่นักวิจัยจำเป็นต้องศึกษาต่อไป</p>
+<h3>การตัดประโยคภาษาไทย และภาษาจีน<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<p>ภาษาที่ไม่สามารถใช้วิธีการคำนวณค่าตัวช่วยในการตัดสินใจมักจะเป็นภาษาที่ไม่ได้ใช้เครื่องหมายวรรคตอนในการแบ่งประโยคในความถี่ที่สูง เช่น ภาษาไทย และภาษาจีน ถึงแม้ภาษาไทยมีการใช้เครื่องหมายวรรคตอนอื่นในการแบ่งประโยคอยู่บ้าง เช่น เครื่องหมายอัศเจรีย์ และเครื่องหมายคำถาม แต่ว่ามักไม่ค่อยพบในการแบ่งประโยคภาษาไทยเท่าใดนัก ในส่วนของภาษาจีน ข้อความบางประเภทมีการใช้จุดในการแบ่งประโยคชัดเจน เช่น หนังสือพิมพ์ แต่ว่ามีข้อความจากแหล่งอื่น ๆ อีกมากที่ไม่ใช้จุดในการแบ่งประโยค เช่น สื่อสังคมออนไลน์ <span id="id27">[<a class="reference internal" href="#id54" title="Nianwen Xue and Yaqin Yang. Chinese sentence segmentation as comma classification. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, 631–635. 2011.">Xue and Yang, 2011</a>]</span> การแบ่งประโยคของภาษาไทย (โดยทั่วไป) และภาษาจีน (เฉพาะบางแหล่ง) ต้องอาศัยบริบทและโครงสร้างย่อย ๆ ของประโยค <span id="id28">[<a class="reference internal" href="#id49" title="Wirote Aroonmanakun. Thoughts on word and sentence segmentation in thai. In Proceedings of the Seventh Symposium on Natural language Processing, Pattaya, Thailand, December 13–15, 85–90. 2007.">Aroonmanakun, 2007</a>]</span> มากกว่าที่จะอาศัยเครื่องหมายวรรคตอน   ด้วยเหตุนี้ทั้งสองภาษานี้ต้องใช้ระบบตัดคำที่อาศัยการเรียนรู้แบบมีผู้สอน (supervised learning) ซึ่งการเรียนรู้ด้วยเครื่องแบบใช้ชุดข้อมูลที่มีการตัดประโยคด้วยมือเรียบร้อยแล้วเป็นส่วนหนึ่งของการเรียนรู้การตัดประโยค ด้วยเหตุผลนี้เองการสร้างระบบการตัดประโยคของภาษาเหล่านี้จำเป็นต้องมีการจ้างทีมงานในการกำกับข้อมูล (annotation) เพื่อสร้างคลังข้อมูลภาษา ทีมงานนักกำกับข้อมูล (annotator) จะต้องมีการเตรียมข้อมูลและตัดประโยคด้วยมือ ตามคำนิยามของประโยคของภาษานั้น ๆ เป็นกระบวนการที่ใช้เวลาและทรัพยากรค่อนข้างมาก</p>
+<p>เมื่อได้ชุดข้อมูลที่เหมาะสมแล้ว แบบจำลองที่ใช้ในการตัดประโยคแบบใหม่ ๆ มักจะใช้แบบจำลองแบบอิงฟีเจอร์ (feature-based model) แบบจำลองแบบการเรียนรู้เชิงลึก (deep learning) ในการเรียนรู้จากคลังข้อมูลที่มีกำกับข้อมูลเรียบร้อยแล้วทั้งภาษาไทย  <span id="id29">[<a class="reference internal" href="#id51" title="Chanatip Saetia, Ekapol Chuangsuwanich, Tawunrat Chalothorn, and Peerapon Vateekul. Semi-supervised thai sentence segmentation using local and distant word representations. arXiv preprint arXiv:1908.01294, 2019.">Saetia <em>et al.</em>, 2019</a>, <a class="reference internal" href="#id52" title="Sorratat Sirirattanajakarin, Duangjai Jitkongchuen, and Peerasak Intarapaiboon. Boydcut: bidirectional lstm-cnn model for thai sentence segmenter. In 2020 1st International Conference on Big Data Analytics and Practices (IBDAP), 1–4. IEEE, 2020.">Sirirattanajakarin <em>et al.</em>, 2020</a>]</span> และภาษาจีน <span id="id30">[<a class="reference internal" href="#id53" title="Srivatsan Srinivasan and Chris Dyer. Better chinese sentence segmentation with reinforcement learning. In Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, 293–302. 2021.">Srinivasan and Dyer, 2021</a>]</span> แบบจำลองที่ได้รับการฝึกฝนเรียบร้อยแล้วมักจะถูกนำมาเผยแพร่ในลักษณะของไลบรารีให้คนทั่วไปสามารถใช้โดยไม่เสียค่าใช้จ่าย และมีการพัฒนาอย่างต่อเนื่องโดยกลุ่มของนักพัฒนาโอเพนซอร์ส</p>
+</section>
+</section>
+<section id="id31">
+<h2>ไลบรารีที่ใช้ในการตัดประโยค<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
+<p>ปัจจุบันมีอยู่ไลบรารีภาษาไพทอนตัวเดียวที่ใช้ในการตัดประโยคภาษาไทย นั่นคือ pythainlp ซึ่งเป็นไลบรารีที่เรานิยมใช้ในการตัดคำด้วย แบบจำลองที่ pythainlp ใช้คือแบบจำลองที่อาศัยฟีเจอร์ชื่อว่า CRFCut ซึ่งถูกพัฒนาขึ้นเพื่อตัดประโยคเพื่อนำสร้างคลังคู่ประโยคสำหรับการพัฒนาระบบการแปลด้วยเครื่อง <span id="id32">[<a class="reference internal" href="#id55" title="Lalita Lowphansirikul, Charin Polpanumas, Attapol T Rutherford, and Sarana Nutanong. A large english–thai parallel corpus from the web and machine-generated text. Language Resources and Evaluation, 56(2):477–499, 2022.">Lowphansirikul <em>et al.</em>, 2022</a>]</span> ถึงแม้ว่าตอนนี้ได้มีระบบอื่น ๆ ที่ผลดีกว่า CRFCut แล้ว  CRFCut มีอัตราความแม่นยำอยู่ประมาณ 0.62 ในขณะที่แบบจำลองแบบการเรียนรู้เชิงลึกมีอัตราความแม่นยำอยู่ที่ประมาณ 0.69 <span id="id33">[<a class="reference internal" href="#id56" title="Sumeth Yuenyong and Virach Sornlertlamvanich. Transentcut-transformer based thai sentence segmentation. Songklanakarin Journal of Science and Technology, 44(3):852–860, 2022.">Yuenyong and Sornlertlamvanich, 2022</a>]</span> ซึ่งความแม่นยำที่สามารถคาดหวังได้จริงนั้นยังขึ้นอยู่กับปัจจัยอื่น ๆ เช่น ทำการประเมินประสิทธิภาพอย่างไร แหล่งข้อมูลที่ใช้ในการฝึกฝน และแหล่งข้อมูลการประเมินความแม่นยำมีความคล้ายคลึงกับแหล่งข้อมูลที่ใช้ในการฝึกฝนเพียงใด ผู้เขียนยังคงเห็นว่าระบบการตัดประโยคภาษาไทยยังไม่แม่นยำพอที่จะนำไปใช้ได้จริง โจทย์นี้เป็นยังคงเป็นโจทย์เปิดที่นักวิจัยยังคำต้องศึกษาและพัฒนาต่อไป</p>
 <p>การตัดประโยคภาษาไทยด้วย pythainlp สามารถทำได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sent_tokenize</span></code> ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pythainlp.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
 
@@ -1162,12 +1166,12 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <p>เราพอจะเดาได้ว่าชุดข้อมูลที่นำมาวิเคราะห์นั้นเกี่ยวกับสายการบิน เพราะพบคำว่า <em>flight</em> <em>service</em> <em>airline</em> ด้วยความถี่รวมกว่า 50,000 ครั้ง รวมถึงพบคำอื่น ๆ ที่เกี่ยวกับสายการบินอยู่ใน 30 อันดับแรก เช่น <em>airport</em> <em>plane</em> <em>seats</em> <em>crew</em> <em>luggage</em></p>
 <p>การวิเคราะห์ความถี่ของคำจากข้อมูลที่ได้มาจากลูกค้าช่วยให้เราเข้าใจได้ว่าลูกค้าพูดถึงสินค้าหรือบริการของเราด้วยคำใดบ่อยครั้งที่สุด ซึ่งสามารถชี้วัดได้ถึงปัจจัยที่ลูกค้าพอใจหรือไม่พอใจ หรือปัจจัยใดบ้างที่ลูกค้าให้ความสนใจ  การวิเคราะห์ข้อมูลรีวิว หรือข้อมูลบนสื่อสังคมออนไลน์ในลักษณะนี้ช่วยให้ธุรกิจสามารถปรับปรุงสินค้าหรือบริการของตนเองให้ตอบสนองความต้องการของลูกค้าได้ดียิ่งขึ้น</p>
 <p>ในทำนองเดียวกันเราสามารถใช้การวิเคราะห์ความถี่ของคำในลักษณะนี้เพื่อเปรียบเทียบเนื้อหาของชุดข้อมูลหลาย ๆ ชุดได้อีกด้วย เช่น หากเราต้องการวิเคราะห์เนื้อหา และความแตกต่างของหนังสือพิมพ์จาก 2 สำนักพิมพ์ที่อาจจะมีความเห็นต่างกัน เราสามารถคำนวณและเปรียบเทียบความถี่ของคำที่พบจากข้อมูลหนังสือพิมพ์จาก 2 สำนักพิมพ์นี้</p>
-<p>การประยุกต์ใช้การวิเคราะห์ความถี่ของคำที่พบเห็นได้บ่อยที่สุด และเป็นที่นิยมมากขึ้นในขณะนี้ คือ ระบบ social listening ซึ่งเป็นระบบการติดตามและวิเคราะห์ข้อมูลจากสื่อสังคมออนไลน์และอินเทอร์เน็ตเพื่อเข้าใจถึงสิ่งที่กลุ่มเป้าหมายหรือผู้บริโภคกำลังพูดถึงแบรนด์ สินค้า บริการ หรือประเด็นที่เกี่ยวข้อง โดยเฉพาะอย่างยิ่งการตอบสนองต่อแคมเปญการตลาดหรือข่าวสารต่างๆ วิธีการนี้ช่วยให้องค์กรสามารถเก็บรวบรวมและวิเคราะห์ข้อมูลจากโซเชียลมีเดียเพื่อเข้าใจและตอบสนองต่อความต้องการและความคาดหวังของผู้บริโภคได้ดียิ่งขึ้น</p>
+<p>การประยุกต์ใช้การวิเคราะห์ความถี่ของคำที่พบเห็นได้บ่อยที่สุด และเป็นที่นิยมมากขึ้นในขณะนี้ คือ ระบบการฟังเสียงสื่อสังคมออนไลน์ (social listening) ซึ่งเป็นระบบการติดตามและวิเคราะห์ข้อมูลจากสื่อสังคมออนไลน์และอินเตอร์เน็ตเพื่อเข้าใจถึงสิ่งที่กลุ่มเป้าหมายหรือผู้บริโภคกำลังพูดถึงแบรนด์ สินค้า บริการ หรือประเด็นที่เกี่ยวข้อง โดยเฉพาะอย่างยิ่งการตอบสนองต่อแคมเพนการตลาดหรือข่าวสารต่างๆ วิธีการนี้ช่วยให้องค์กรสามารถเก็บรวบรวมและวิเคราะห์ข้อมูลจากโซเชียลมีเดียเพื่อเข้าใจและตอบสนองต่อความต้องการและความคาดหวังของผู้บริโภคได้ดียิ่งขึ้น</p>
 <p>นอกจากนั้นแล้วการวิเคราะห์ความถี่ยังช่วยเน้นคำที่มีความสำคัญและสามารถเป็นตัวชี้วัดเชิงลึกเกี่ยวกับความรู้สึกและความคิดเห็นของผู้เขียนข้อความ ในหลายๆ กรณีการวิเคราะห์ความถี่ของคำเป็นขั้นตอนแรกที่นำไปสู่การวิเคราะห์ที่ซับซ้อนมากขึ้น เช่น การวิเคราะห์อารมณ์และความรู้สึก (sentiment analysis) หรือการสร้างโมเดลทางสถิติเพื่อทำนายพฤติกรรมของผู้ใช้หรือลูกค้า</p>
-<section id="id29">
-<h3>วิธีการวิเคราะห์ความถี่ของคำ<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
-<p>การคำนวณความถี่ของคำเป็นกระบวนการที่ไม่ซับซ้อน แต่ต้องอาศัยความละเอียดในการทำความสะอาดข้อมูลเพื่อให้ได้ผลลัพธ์ที่แม่นยำ  ขั้นตอนแรกในการคำนวณความถี่ของคำคือการเตรียมข้อมูลข้อความให้พร้อมสำหรับการวิเคราะห์ การเตรียมข้อมูลอาจรวมถึงการทำความสะอาดข้อมูล เช่น การลบอักขระพิเศษ แฮชแท็ก URL วันที่ หรือข้อมูล metadata อื่น ๆ ตามที่ได้อธิบายไปในบทนี้  เมื่อข้อมูลได้รับการเตรียมพร้อมแล้ว ขั้นตอนถัดไปคือการนับจำนวนครั้งที่แต่ละคำปรากฏในชุดข้อมูล การนับนี้สามารถทำได้โดยการเขียนโปรแกรม เพื่อตัดคำ และนับว่าแต่ละคำปรากฏอยู่ในข้อมูลทั้งหมดกี่ครั้ง ผลลัพธ์จะเป็นรายการของคำพร้อมกับจำนวนครั้งที่พบในข้อมูล ซึ่งเรียกว่า “ความถี่” ของคำนั้น ๆ ความถี่ของคำสามารถนำมาใช้ในการวิเคราะห์เพื่อเห็นแนวโน้มหรือลักษณะเด่นของข้อมูล</p>
-<p>เรามักจะพบว่าการวิเคราะห์ความถี่ของคำมักจะไม่ได้ผลออกมาดี ตีความได้ หากเราไม่ทำการกรองคำหยุด (stopword) ออกไปด้วย คำหยุด  คือ คำที่มีความถี่สูงแต่ไม่มีความหมายในบริบทของการวิเคราะห์ ตัวอย่างของคำหยุด ได้แก่ <em>และ</em> <em>ที่</em> <em>ใน</em> <em>the</em> <em>to</em> <em>for</em> <em>was</em>  เป็นต้น ถ้าหากเราไม่การกรองคำหยุดออกจากชุดข้อมูล ผลการวิเคราะห์จะไม่มีความหมายอะไรเลย ตามที่เห็นในแผนภูมิ <a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 16</span></a> ซึ่งเราไม่สามารถทราบได้เลยว่าชุดข้อมูลที่วิเคราะห์มีเนื้อหาเกี่ยวกับอะไรบ้าง เพราะว่าคำที่ไม่มีนัยสำคัญอยู่ในอันดับสูงสุด กลบคำอื่น ๆ ที่มีสาระสำคัญเชิงเนื้อหา ซึ่งทำให้การวิเคราะห์ข้อมูลไม่มีประสิทธิผล</p>
+<section id="id34">
+<h3>วิธีการวิเคราะห์ความถี่ของคำ<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<p>การคำนวณความถี่ของคำเป็นกระบวนการที่ไม่ซับซ้อน แต่ต้องอาศัยความละเอียดในการทำความสะอาดข้อมูลเพื่อให้ได้ผลลัพธ์ที่แม่นยำ  ขั้นตอนแรกในการคำนวณความถี่ของคำคือการเตรียมข้อมูลข้อความให้พร้อมสำหรับการวิเคราะห์ การเตรียมข้อมูลอาจรวมถึงการทำความสะอาดข้อมูล เช่น การลบอักขระพิเศษ แฮชแท็ก URL วันที่ หรือคำอธิบายข้อมูล (metadata) อื่น ๆ ตามที่ได้อธิบายไปในบทนี้ เมื่อข้อมูลได้รับการเตรียมพร้อมแล้ว ขั้นตอนถัดไปคือการนับจำนวนครั้งที่แต่ละคำปรากฏในชุดข้อมูล การนับนี้สามารถทำได้โดยการเขียนโปรแกรม เพื่อตัดคำ และนับว่าแต่ละคำปรากฏอยู่ในข้อมูลทั้งหมดกี่ครั้ง ผลลัพธ์จะเป็นรายการของคำพร้อมกับจำนวนครั้งที่พบในข้อมูล ซึ่งเรียกว่า “ความถี่” ของคำนั้น ๆ ความถี่ของคำสามารถนำมาใช้ในการวิเคราะห์เพื่อเห็นแนวโน้มหรือลักษณะเด่นของข้อมูล</p>
+<p>เรามักจะพบว่าการวิเคราะห์ความถี่ของคำมักจะไม่ได้ผลออกมาดี ตีความได้ หากเราไม่ทำการกรองคำหยุด (stopword) ออกไปด้วย คำหยุด  คือ คำที่มีความถี่สูงแต่ไม่มีความหมายในบริบทของการวิเคราะห์ ตัวอย่างของคำหยุด ได้แก่ <em>และ</em> <em>ที่</em> <em>ใน</em> <em>the</em> <em>to</em> <em>for</em> <em>was</em>  เป็นต้น ถ้าหากเราไม่การกรองคำหยุดออกจากชุดข้อมูล ผลการวิเคราะห์จะไม่มีความหมายอะไรเลย ตามที่เห็นในแผนภูมิ <a class="reference internal" href="#airline-review-with-stopwords"><span class="std std-numref">ภาพที่ 16</span></a> ซึ่งเราไม่สามารถทราบได้เลยว่าชุดข้อมูลที่วิเคราะห์มีเนื้อหาเกี่ยวกับอะไรบ้าง เพราะว่าคำที่ไม่มีนัยสำคัญมักปรากฏอยู่ในอันดับต้น ๆ กลบคำอื่น ๆ ที่มีสาระสำคัญเชิงเนื้อหา ซึ่งทำให้การวิเคราะห์ข้อมูลไม่มีประสิทธิผล</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>คำหยุด (stopword) คือ คำที่ปรากฏบ่อยครั้งในภาษาธรรมชาติ แต่มีนัยสำคัญหรือความหมายเชิงเนื้อหาสาระน้อย</p>
@@ -1183,33 +1187,33 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <p class="sidebar-title">คำศัพท์</p>
 <p>การกระจายตัวของคำ (word distribution) หมายถึงลักษณะการปรากฏหรือความถี่ในการใช้คำแต่ละคำ</p>
 </aside>
-<figure class="align-default" id="airline-review-excluded-top-50">
-<img alt="../../_images/airline-review-excluded-top-50.png" src="../../_images/airline-review-excluded-top-50.png" />
+<figure class="align-center" id="id69">
+<a class="reference internal image-reference" href="../../_images/airline-review-excluded-top-50.png"><img alt="../../_images/airline-review-excluded-top-50.png" src="../../_images/airline-review-excluded-top-50.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 17 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 50 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-50" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 17 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 50 อันดับแรกออก</span><a class="headerlink" href="#id69" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="airline-review-excluded-top-100">
-<img alt="../../_images/airline-review-excluded-top-100.png" src="../../_images/airline-review-excluded-top-100.png" />
+<figure class="align-center" id="id70">
+<a class="reference internal image-reference" href="../../_images/airline-review-excluded-top-100.png"><img alt="../../_images/airline-review-excluded-top-100.png" src="../../_images/airline-review-excluded-top-100.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 18 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 100 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-100" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 18 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 100 อันดับแรกออก</span><a class="headerlink" href="#id70" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="airline-review-excluded-top-150">
-<img alt="../../_images/airline-review-excluded-top-150.png" src="../../_images/airline-review-excluded-top-150.png" />
+<figure class="align-center" id="id71">
+<a class="reference internal image-reference" href="../../_images/airline-review-excluded-top-150.png"><img alt="../../_images/airline-review-excluded-top-150.png" src="../../_images/airline-review-excluded-top-150.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 150 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-150" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 19 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 150 อันดับแรกออก</span><a class="headerlink" href="#id71" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="airline-review-excluded-top-200">
-<img alt="../../_images/airline-review-excluded-top-200.png" src="../../_images/airline-review-excluded-top-200.png" />
+<figure class="align-center" id="id72">
+<a class="reference internal image-reference" href="../../_images/airline-review-excluded-top-200.png"><img alt="../../_images/airline-review-excluded-top-200.png" src="../../_images/airline-review-excluded-top-200.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 200 อันดับแรกออก</span><a class="headerlink" href="#airline-review-excluded-top-200" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 20 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของคำที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยกรองคำที่มีความถี่สูงสุด 200 อันดับแรกออก</span><a class="headerlink" href="#id72" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="id30">
-<h3>การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<section id="id35">
+<h3>การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
 <p>นอกจากการกรองคำหยุดด้วยการอาศัยความถี่ของคำแล้ว เรายังสามารถกำหนดรายการคำหยุดเองได้ ซึ่งวิธีนี้มีความยืดหยุ่นและปรับแต่งได้ง่ายกว่า คำหยุดที่กำหนดเองนี้มักจะเป็นคำที่ใช้บ่อยในภาษาแต่ไม่มีความหมายหรือความสำคัญเมื่อทำการวิเคราะห์ข้อความ ซึ่งมักจะเป็นคำในหมวดที่มีหน้าที่หลักในการเชื่อมโยงคำทั้งหมดในประโยคเข้าด้วยกัน เพื่อให้เป็นไปตามหลักไวยากรณ์ หรือสื่อถึงความเชื่อมโยงระหว่างประโยค หรือเชื่อมโยงกับสถานการณ์ที่พูด  แต่ว่าไม่เพิ่มความหมายหลักในเชิงเนื้อหา คำในหมวดเหล่านี้ ได้แก่</p>
 <ul class="simple">
 <li><p>กริยาช่วย (auxiliary verb) ยกตัวอย่างเช่น กริยาช่วยอย่าง <em>am</em> หรือ <em>will</em> <em>จะ</em> <em>คง</em> มักใช้เพื่อช่วยให้กริยาหลักมีความหมายครบถ้วน</p></li>
@@ -1230,8 +1234,8 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </pre></div>
 </div>
 </section>
-<section id="id31">
-<h3>การวิเคราะห์ความถี่ของไบแกรม<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<section id="id36">
+<h3>การวิเคราะห์ความถี่ของไบแกรม<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
 <p>การวิเคราะห์ความถี่ของคำไม่จำเป็นต้องจำกัดอยู่เพียงแค่การนับคำเท่านั้น แต่ยังสามารถขยายไปถึงการวิเคราะห์ความสัมพันธ์ระหว่างคำ
 บางครั้งคำเดี่ยวอาจไม่สามารถสื่อความหมายอย่างชัดเจนหรือครบถ้วน เช่น คำว่า “แห้ง” อาจจะทำให้เราไม่ทราบว่าอะไรแห้ง ดีหรือไม่ดี หรือ คำว่า “ขาย” อาจจะไม่บ่งบอกถึงพฤติกรรมการขายได้ว่าขายอะไร ขายอย่างไร แต่เมื่อพิจารณาคำที่ปรากฏติดต่อกัน เช่น “ผิวแห้ง” หรือ “เทขาย” ความหมายที่สื่อออกมาจะชัดเจนและมีความเฉพาะเจาะจงมากขึ้น การรวมคำสองคำเข้าด้วยกันเพื่อสร้างความหมายที่เฉพาะเจาะจงนี้ เรียกว่า “ไบแกรม” (Bigram) ซึ่งเป็นเทคนิคง่าย ๆ ในการวิเคราะห์คลังข้อมูลจากความถี่ได้ลึกซึ้งมากขึ้น ไบแกรม คือ การรวมคำสองคำที่ปรากฏต่อเนื่องกันในข้อความ โดยไม่คำนึงว่าคำสองคำนั้นจะอยู่ในนามวลี หรือกริยาวลีเดียวกันหรือไม่  ตัวอย่าง เช่น</p>
 <ul class="simple">
@@ -1239,25 +1243,25 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <li><p>ประโยค *ต่าง|ชาติ|เท|ขาย|หุ้น|อย่าง|ต่อเนื่อง” มีไบแกรมทั้งหมดดังนี้ <em>ต่างชาติ</em> <em>ชาติเท</em> <em>เทขาย</em> <em>ขายหุ้น</em> <em>หุ้นอย่าง</em> <em>อย่างต่อเนื่อง</em></p></li>
 </ul>
 <p>หลังจากที่เราได้ดึงไบแกรมออกมาจากข้อความในคลังข้อมูลทั้งหมดแล้ว ขั้นตอนถัดไปคือการนับจำนวนครั้งที่ไบแกรมปรากฏขึ้นในข้อมูลของเรา เพื่อหาไบแกรมที่มีความถี่สูงสุด ในทำนองเดียวกับการวิเคราะห์ความถี่ของคำ</p>
-<figure class="align-default" id="airline-review-bigram">
-<img alt="../../_images/airline-review-bigram.png" src="../../_images/airline-review-bigram.png" />
+<figure class="align-center" id="id73">
+<a class="reference internal image-reference" href="../../_images/airline-review-bigram.png"><img alt="../../_images/airline-review-bigram.png" src="../../_images/airline-review-bigram.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 21 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#id73" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>อย่างไรก็ตาม เพื่อให้การวิเคราะห์มีประสิทธิภาพมากขึ้น เราอาจต้องพิจารณากรองเอาไบแกรมที่ประกอบด้วยคำหยุดอย่างน้อย 1 คำออกจากการวิเคราะห์ การกรองคำหยุดออกจากไบแกรมสามารถช่วยให้เก็บไว้เพียงไบแกรมที่มีความหมาย เช่น ไบแกรม <em>ผิวแห้ง</em> หรือ <em>เทขาย</em> มีประโยชน์กว่า สื่อความหมายได้มากกว่า ไบแกรมที่มีคำหยุด เช่น <em>กับคน</em> หรือ <em>นี้เหมาะ</em> ด้วยวิธีนี้ เราจึงสามารถลดภาระในการวิเคราะห์และเพิ่มความสามารถในการเข้าใจเนื้อหาของคลังข้อมูล</p>
-<figure class="align-default" id="airline-review-bigram-no-stopwords">
-<img alt="../../_images/airline-review-bigram-no-stopwords.png" src="../../_images/airline-review-bigram-no-stopwords.png" />
+<figure class="align-center" id="id74">
+<a class="reference internal image-reference" href="../../_images/airline-review-bigram-no-stopwords.png"><img alt="../../_images/airline-review-bigram-no-stopwords.png" src="../../_images/airline-review-bigram-no-stopwords.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยที่กรองเอาไบแกรมที่ประกอบด้วยคำหยุดออก</span><a class="headerlink" href="#airline-review-bigram-no-stopwords" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 22 </span><span class="caption-text">แผนภูมิแท่งแสดงความถี่ของไบแกรมที่อยู่ในชุดข้อมูลรีวิวสายการบิน โดยที่กรองเอาไบแกรมที่ประกอบด้วยคำหยุดออก</span><a class="headerlink" href="#id74" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>จากตัวอย่างการวิเคราะห์ความถี่ของไบแกรมใน <code class="docutils literal notranslate"><span class="pre">numref{airline-review-bigram-no-stopwords}</span></code> จะเห็นว่าผู้ที่เขียนรีวิวมักจะพูดถึงการบริการลูกค้า เนื่องจากไบแกรม <em>customer service</em> เป็นไบแกรมที่ปรากฏบ่อยที่สุด และผู้ที่เขียนรีวิวพูดถึงตั๋วชั้นธุรกิจบ่อยกว่าตั๋วชั้นประหยัด ถึงแม้ว่าผู้โดยสารชั้นประหยัดมักจะมีมากกว่าผู้โดยสารชั้นธุรกิจ ซึ่งอาจจะตีความได้ว่าประสบการณ์การนั่งชั้นธุรกิจมีประเด็นให้พูดถึงมากกว่า หรือเป็นประสบการณ์ที่ผู้โดยสารตั้งความหวังไว้สูง
 อีกประเด็นที่ผู้ที่เขียนรีวิวให้ความสำคัญคือ พนักงานผู้ให้บริการ (ไบแกรม <em>cabin crew</em> <em>flight attendant</em>, <em>ground staff</em>) ซึ่งพบเห็นได้เป็นอันดับแรก ๆ ส่วนเรื่องอื่น ๆ ที่ผู้ที่เขียนรีวิวให้ความสำคัญเป็นอันดับรอง ๆ ลงไป คือเรื่อง <em>leg room</em>  และ <em>inflight entertainment</em></p>
 <p>เมื่อผู้วิเคราะห์ได้ภาพรวมแล้วว่ารีวิวที่ได้รับมาพูดถึงอะไรบ้าง อาจจะเริ่มวิเคราะห์ให้ลึกขึ้นโดยการเลือกเฉพาะรีวิวที่พูดถึงไบแกรมที่เราสนใจ เช่น อาจจะเลือกเฉพาะรีวิวที่พูดถึงไบแกรม <em>cabin crew</em> หรือ <em>flight attendant</em>  หรือ <em>leg room</em> เพื่อวิเคราะห์ออกมาเป็นรายประเด็นว่าผู้โดยสารมีความคิดเห็นอย่างไรเกี่ยวกับประเด็นเหล่านี้บ้าง</p>
 </section>
-<section id="id32">
-<h3>การสร้างเมฆคำ<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<section id="id37">
+<h3>การสร้างเมฆคำ<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h3>
 <p>การสร้างเมฆคำ (Word Cloud) เป็นเทคนิคที่ใช้ในการแสดงภาพรวมของข้อมูลข้อความ โดยจะแสดงคำที่ปรากฏในข้อมูลข้อความเป็นภาพกราฟิกที่คำที่มีความถี่สูงจะปรากฏให้เห็นด้วยขนาดที่ใหญ่กว่าคำที่มีความถี่น้อย การใช้เมฆคำช่วยให้ผู้วิเคราะห์หรือผู้อ่านสามารถจับตาได้ง่ายว่าคำไหนถูกพูดถึงบ่อยครั้งในชุดข้อมูลข้อความที่กำลังศึกษาอยู่ ซึ่งส่งผลให้สามารถประเมินความสำคัญหรือความนิยมของหัวข้อหรือแนวคิดต่างๆ ได้อย่างรวดเร็ว</p>
 <p>การสร้างเมฆคำมีส่วนช่วยเสริมการวิเคราะห์ความถี่ของคำในหลาย ๆ ด้าน ข้อดีหลัก ๆ คือ การทำให้ข้อมูลดูน่าดึงดูด สะดุดตา เมื่อนำไปเป็นส่วนหนึ่งของการนำเสนอ รวมถึงทำให้ผู้วิเคราะห์และผู้ชมสามารถมองเห็นคำที่มีความสำคัญหรือถูกพูดถึงบ่อยในชุดข้อมูลได้ง่ายดาย โดยไม่ต้องดูตัวเลขความถี่โดยตรง
 การแสดงคำที่มีขนาดใหญ่ขึ้นตามความถี่ของคำนั้นๆ ช่วยให้ผู้ชมเข้าใจได้ว่าคำไหนที่มีความสำคัญหรือเป็นที่สนใจมากในหัวข้อหรือชุดข้อมูลนั้น</p>
@@ -1268,8 +1272,8 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <p><span class="caption-number">ภาพที่ 23 </span><span class="caption-text">เมฆคำแสดงไบแกรมที่พบบ่อยอันดับแรก ๆ ในชุดข้อมูลรีวิวสายการบิน</span><a class="headerlink" href="#airline-review-bigram-wordcloud" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="id33">
-<h4>ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h4>
+<section id="id38">
+<h4>ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h4>
 <p>ผู้เขียนแนะนำให้ใช้ไลบรารีชื่อว่า <code class="docutils literal notranslate"><span class="pre">wordcloud</span></code> ในการสร้างเมฆคำ ในการสร้างเมฆคำเราจำเป็นต้องกำหนดลักษณะต่าง ๆ ของเมฆคำ เช่น ขนาดของภาพ ขนาดของฟอนต์สูงสุด และสีพื้นหลัง ผู้เขียนแนะนำว่าให้ตั้งค่าสีพื้นหลังเป้นสีขาว และสีตัวอักษรเป็นสีดำ รวมถึงตั้งค่าให้คำทุกคำอยู่ในแนวนอน เพื่อให้คำทุกคำอ่านง่ายเท่ากัน และเน้นการใช้ขนาดของตัวอักษรเป็นตัวบ่งบอกความสำคัญของแต่ละคำเท่านั้น
 ไลบรารีนี้ไม่ได้ทำทุกอย่างให้อย่างสำเร็จรูปจากสตริงดิบ เราต้องเตรียมข้อมูล ทำความสะอาดข้อมูล และวิเคราะห์ความถี่ของคำให้เรียบร้อย จากนั้นจึงป้อนข้อมูลของคำที่ต้องการทำเป็นเมฆคำให้กับไลบรารี</p>
 <p>ตัวอย่างโค้ดดังนี้ สมมติว่าเรามี <code class="docutils literal notranslate"><span class="pre">filtered_biggram_counts</span></code> ซึ่งเป็น <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ที่เก็บจำนวนครั้งที่ไบแกรมปรากฏในข้อความทั้งหมด และเราต้องการสร้างเมฆคำจากไบแกรมที่พบบ่อยที่สุด 40 อันดับแรก</p>
@@ -1305,58 +1309,58 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 </ol>
 </section>
 </section>
-<section id="id34">
-<h3>ข้อจำกัดของการวิเคราะห์ความถี่<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<section id="id39">
+<h3>ข้อจำกัดของการวิเคราะห์ความถี่<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
 <p>การวิเคราะห์ความถี่ของคำและไบแกรมในชุดข้อมูลมีข้อจำกัดที่สำคัญอยู่บางประการ ที่ทำให้การวิเคราะห์ไม่สมบูรณ์ ประการแรก คือ เราไม่ได้พิจารณาการใช้คำในบริบทของทั้งประโยค หรือกลุ่มคำที่ประกอบด้วยคำมากกว่า 2 คำ เช่น <em>บริการได้ดี</em> กับ <em>บริการไม่เต็มใจ</em> อาจถูกนับเป็นคำว่า <em>บริการ</em> เท่านั้น โดยไม่สามารถแยกแยะความหมายบวกหรือลบได้ เว้นแต่จะมีการอ่านและวิเคราะห์เพิ่มเติม</p>
 <p>ประการที่สอง คือ ประเด็นที่มีความถี่น้อยอาจถูกมองข้าม การวิเคราะห์ความถี่อาจทำให้ประเด็นที่ไม่ถูกพูดถึงบ่อยครั้งเป็นจำนวนน้อยหรือมีความสำคัญในบริบทที่แตกต่างออกไปไม่ได้รับความสนใจ เนื่องจากคำที่เกี่ยวข้องกับประเด็นเหล่านี้อาจมีความถี่น้อย เช่น ประเด็นเรื่อง ความล่าช้าของเที่ยวบิน อาจถูกพูดถึงในหลายรูปแบบ เช่น “เครื่องไม่ตรงเวลา”, “ความล่าช้า”, “ดีเลย์”, “สาย” ซึ่งทำให้การวิเคราะห์ความถี่แต่ละคำแยกกันไม่สามารถจับภาพประเด็นนี้ได้อย่างชัดเจน</p>
-<p>การแก้ไขข้อจำกัดเหล่านี้ต้องอาศัยการวิเคราะห์ที่ลึกซึ้งยิ่งขึ้น เช่น การใช้การวิเคราะห์ความรู้สึก (sentiment analysis) เพื่อระบุความหมายบวกหรือลบของคำ และการรวบรวมคำที่มีความหมายใกล้เคียงกันเข้าด้วยกันเพื่อวิเคราะห์ประเด็น ซึ่งมีความจำเป็นต้องใช้เครื่องมือการประมวลผลภาษาธรรมชาติขั้นสูง ซึ่งนอกเหนือจากขอบเขตของหนังสือเล่มนี้ อย่างไรก็ตามการวิเคราะห์ความถี่ของคำในชุดข้อมูลก็ยังเป็นวิธีการวิเคราะห์คลังข้อมูลที่ถึงแม้จะเรียบง่าย แต่ว่ามีประสิทธิภาพดีในระดับที่ทำให้เราทำความเข้าใจเนื้อหาของชุดข้อมูลในภาพรวมได้ และยังเป็นวิธีเบื้องต้นที่ผู้วิเคราะห์ข้อมูลนิยมใช้เป็นด่านแรกในการวิเคราะห์ข้อมูลภาษา</p>
+<p>การแก้ไขข้อจำกัดเหล่านี้ต้องอาศัยการวิเคราะห์ที่ลึกซึ้งยิ่งขึ้น เช่น การวิเคราะห์ความรู้สึก (sentiment analysis) เพื่อระบุความหมายบวกหรือลบของคำ และการรวบรวมคำที่มีความหมายใกล้เคียงกันเข้าด้วยกันเพื่อวิเคราะห์ประเด็น ซึ่งมีความจำเป็นต้องใช้เครื่องมือการประมวลผลภาษาธรรมชาติขั้นสูง ซึ่งนอกเหนือจากขอบเขตของหนังสือเล่มนี้ อย่างไรก็ตามการวิเคราะห์ความถี่ของคำในชุดข้อมูลก็ยังเป็นวิธีการวิเคราะห์คลังข้อมูลที่ถึงแม้จะเรียบง่าย แต่ว่ามีประสิทธิภาพดีในระดับที่ทำให้เราทำความเข้าใจเนื้อหาของชุดข้อมูลในภาพรวมได้ และยังเป็นวิธีเบื้องต้นที่ผู้วิเคราะห์ข้อมูลนิยมใช้เป็นด่านแรกในการวิเคราะห์ข้อมูลภาษา</p>
 </section>
 </section>
-<section id="id35">
-<h2>สรุป<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h2>
-<p>การประมวลผลภาษาธรรมชาติ มีประโยชน์อย่างมากในการวิเคราะห์ข้อมูลภาษา เพื่อให้เข้าใจความหมายและสาระสำคัญของข้อความต่างๆ ในการวิเคราะห์ข้อมูลภาษาเหล่านี้ เรามักใช้ไลบรารีภาษา Python ซึ่งมีเครื่องมือต่างๆ ที่สนับสนุนการทำงานด้าน NLP ได้เป็นอย่างดี ขั้นตอนแรกของการวิเคราะห์คือการทำความสะอาดข้อมูล เพื่อลบส่วนที่ไม่จำเป็นออกจากข้อมูลดิบ และคำนึงถึงแหล่งที่มาของข้อมูลเพื่อให้การวิเคราะห์มีความเชื่อถือได้ การตัดคำในภาษาต่างๆ จำเป็นต้องใช้เทคนิคที่เหมาะสมกับภาษานั้นๆ โดยเทคนิคเหล่านี้อาจแตกต่างกันไปในแต่ละภาษา นอกจากนี้ การวิเคราะห์ความถี่ของคำและการใช้เมฆคำเป็นวิธีที่สะดวกและง่ายดายในการเริ่มต้นทำความเข้าใจกับข้อมูลภาษาขนาดใหญ่ เหล่านี้ช่วยให้เราสามารถมองเห็นภาพรวมและทิศทางของข้อมูลได้เป็นอย่างดี</p>
+<section id="id40">
+<h2>สรุป<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h2>
+<p>การประมวลผลภาษาธรรมชาติ มีประโยชน์อย่างมากในการวิเคราะห์ข้อมูลภาษา เพื่อให้เข้าใจความหมายและสาระสำคัญของข้อความต่างๆ ในการวิเคราะห์ข้อมูลภาษาเหล่านี้ เรามักใช้ไลบรารีภาษาไพทอน ซึ่งมีเครื่องมือต่างๆ ที่สนับสนุนการทำงานด้านการประมวลผลภาษาธรรมชาติได้เป็นอย่างดี ขั้นตอนแรกของการวิเคราะห์คือการทำความสะอาดข้อมูล เพื่อลบส่วนที่ไม่จำเป็นออกจากข้อมูลดิบ และคำนึงถึงแหล่งที่มาของข้อมูลเพื่อให้การวิเคราะห์มีความเชื่อถือได้ การตัดคำในภาษาต่างๆ จำเป็นต้องใช้เทคนิคที่เหมาะสมกับภาษานั้นๆ โดยเทคนิคเหล่านี้อาจแตกต่างกันไปในแต่ละภาษา นอกจากนี้ การวิเคราะห์ความถี่ของคำและการใช้เมฆคำเป็นวิธีที่ง่ายและสะดวกสำหรับการเริ่มต้นทำความเข้าใจข้อมูลภาษาขนาดใหญ่  วิธีการเหล่านี้ช่วยให้เราสามารถมองเห็นภาพรวมและทิศทางของข้อมูลได้เป็นอย่างดี</p>
 </section>
-<section id="id36">
-<h2>อ้างอิง<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id37">
+<section id="id41">
+<h2>อ้างอิง<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id42">
 <dl class="citation">
-<dt class="label" id="id44"><span class="brackets">1</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id23">2</a>)</span></dt>
+<dt class="label" id="id49"><span class="brackets">1</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id28">2</a>)</span></dt>
 <dd><p>Wirote Aroonmanakun. Thoughts on word and sentence segmentation in thai. In <em>Proceedings of the Seventh Symposium on Natural language Processing, Pattaya, Thailand, December 13–15</em>, 85–90. 2007.</p>
 </dd>
-<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id15">2</a></span></dt>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id20">2</a></span></dt>
 <dd><p>Steven Bird. Nltk: the natural language toolkit. In <em>Proceedings of the COLING/ACL 2006 Interactive Presentation Sessions</em>, 69–72. 2006.</p>
 </dd>
-<dt class="label" id="id43"><span class="brackets">3</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id10">2</a>,<a href="#id11">3</a>)</span></dt>
+<dt class="label" id="id48"><span class="brackets">3</span><span class="fn-backref">(<a href="#id13">1</a>,<a href="#id15">2</a>,<a href="#id16">3</a>)</span></dt>
 <dd><p>Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, and Attapol Rutherford. Syllable-based neural Thai word segmentation. In Donia Scott, Nuria Bel, and Chengqing Zong, editors, <em>Proceedings of the 28th International Conference on Computational Linguistics</em>, 4619–4637. Barcelona, Spain (Online), December 2020. International Committee on Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2020.coling-main.407">https://aclanthology.org/2020.coling-main.407</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2020.coling-main.407">doi:10.18653/v1/2020.coling-main.407</a>.</p>
 </dd>
-<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id20">4</a></span></dt>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id25">4</a></span></dt>
 <dd><p>Tibor Kiss and Jan Strunk. Unsupervised multilingual sentence boundary detection. <em>Computational Linguistics</em>, 32(4):485–525, 2006. URL: <a class="reference external" href="https://aclanthology.org/J06-4003">https://aclanthology.org/J06-4003</a>, <a class="reference external" href="https://doi.org/10.1162/coli.2006.32.4.485">doi:10.1162/coli.2006.32.4.485</a>.</p>
 </dd>
-<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id15">5</a></span></dt>
 <dd><p>Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Domain adaptation of Thai word segmentation models using stacked ensemble. In Bonnie Webber, Trevor Cohn, Yulan He, and Yang Liu, editors, <em>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 3841–3847. Online, November 2020. Association for Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2020.emnlp-main.315">https://aclanthology.org/2020.emnlp-main.315</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2020.emnlp-main.315">doi:10.18653/v1/2020.emnlp-main.315</a>.</p>
 </dd>
-<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id10">6</a></span></dt>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id15">6</a></span></dt>
 <dd><p>Peerat Limkonchotiwat, Wannaphong Phatthiyaphaibun, Raheem Sarwar, Ekapol Chuangsuwanich, and Sarana Nutanong. Handling cross- and out-of-domain samples in Thai word segmentation. In <em>Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021</em>, 1003–1016. Online, August 2021. Association for Computational Linguistics. URL: <a class="reference external" href="https://aclanthology.org/2021.findings-acl.86">https://aclanthology.org/2021.findings-acl.86</a>, <a class="reference external" href="https://doi.org/10.18653/v1/2021.findings-acl.86">doi:10.18653/v1/2021.findings-acl.86</a>.</p>
 </dd>
-<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id27">7</a></span></dt>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id32">7</a></span></dt>
 <dd><p>Lalita Lowphansirikul, Charin Polpanumas, Attapol T Rutherford, and Sarana Nutanong. A large english–thai parallel corpus from the web and machine-generated text. <em>Language Resources and Evaluation</em>, 56(2):477–499, 2022.</p>
 </dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id18">8</a></span></dt>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id23">8</a></span></dt>
 <dd><p>David D Palmer. Tokenisation and sentence segmentation. <em>Handbook of natural language processing</em>, pages 11–35, 2000.</p>
 </dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id24">9</a></span></dt>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id29">9</a></span></dt>
 <dd><p>Chanatip Saetia, Ekapol Chuangsuwanich, Tawunrat Chalothorn, and Peerapon Vateekul. Semi-supervised thai sentence segmentation using local and distant word representations. <em>arXiv preprint arXiv:1908.01294</em>, 2019.</p>
 </dd>
-<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id24">10</a></span></dt>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id29">10</a></span></dt>
 <dd><p>Sorratat Sirirattanajakarin, Duangjai Jitkongchuen, and Peerasak Intarapaiboon. Boydcut: bidirectional lstm-cnn model for thai sentence segmenter. In <em>2020 1st International Conference on Big Data Analytics and Practices (IBDAP)</em>, 1–4. IEEE, 2020.</p>
 </dd>
-<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id25">11</a></span></dt>
+<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id30">11</a></span></dt>
 <dd><p>Srivatsan Srinivasan and Chris Dyer. Better chinese sentence segmentation with reinforcement learning. In <em>Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021</em>, 293–302. 2021.</p>
 </dd>
-<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id22">12</a></span></dt>
+<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id27">12</a></span></dt>
 <dd><p>Nianwen Xue and Yaqin Yang. Chinese sentence segmentation as comma classification. In <em>Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies</em>, 631–635. 2011.</p>
 </dd>
-<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id28">13</a></span></dt>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id33">13</a></span></dt>
 <dd><p>Sumeth Yuenyong and Virach Sornlertlamvanich. Transentcut-transformer based thai sentence segmentation. <em>Songklanakarin Journal of Science and Technology</em>, 44(3):852–860, 2022.</p>
 </dd>
 </dl>
@@ -1438,50 +1442,54 @@ nltk.tokenize.sent_tokenize(&quot;The U.S. have dots. Mr. Robert met Dr. Evil in
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">ติดตั้งไลบรารีโดยใช้ <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">อาร์กิวเมนต์แบบมีค่าดีฟอลต์ (default argument)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-argument">อาร์กิวเมนต์โดยปริยาย (default argument)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างฟังก์ชันที่มีการใช้อาร์กิวเมนต์โดยปริยาย 2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">การทำความสะอาดข้อมูล (data cleaning)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ตัวอย่างการทำความสะอาดข้อมูล 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างการทำความสะอาดข้อมูล 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างการทำความสะอาดข้อมูล 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างการทำความสะอาดข้อมูล 4</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงให้เป็นโทเค็น (tokenization)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-word-segmentation">การตัดคำโดยอาศัยกฎเกณฑ์ (rule-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lexicon-based-word-segmentation">การตัดคำโดยอาศัยคลังศัพท์ (lexicon-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-based-word-segmentation">การตัดคำโดยอาศัยการเรียนรู้ของเครื่อง (machine-learning-based word segmentation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">สรุปเรื่องการแปลงให้เป็นโทเค็น</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">การแปลงเป็นโทเค็น (tokenization)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การตัดคำแบบอิงกฎเกณฑ์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การตัดคำแบบอิงคลังศัพท์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การตัดคำแบบอิงการเรียนรู้ของเครื่อง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">สรุปเรื่องการแปลงให้เป็นโทเค็น</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ไลบรารีที่ใช้ในการตัดคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ไลบรารีที่ใช้ในการตัดคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การตัดคำภาษาอังกฤษ และภาษาที่ใช้ช่องว่างในการแบ่งคำ</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nltk">ตัดคำด้วยไลบรารี NLTK</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การตัดคำภาษาไทย และภาษาอื่น ๆ ที่ไม่ใช้ช่องว่างในการแบ่งคำ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">การตัดประโยค</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การตัดประโยคภาษาไทย และภาษาจีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การตัดประโยค</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การตัดประโยคภาษาอังกฤษ และภาษาอื่น ๆ ที่มีการใช้เครื่องหมายวรรคตอนแบ่งขอบเขตประโยค</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">การตัดประโยคภาษาไทย และภาษาจีน</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ไลบรารีที่ใช้ในการตัดประโยค</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ไลบรารีที่ใช้ในการตัดประโยค</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-frequency-analysis">การวิเคราะห์ความถี่ของคำ (word frequency analysis)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">วิธีการวิเคราะห์ความถี่ของคำ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">การวิเคราะห์ความถี่ของไบแกรม</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">การสร้างเมฆคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">วิธีการวิเคราะห์ความถี่ของคำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">การกำหนดคำหยุดและการใช้คำหยุดจากไลบรารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">การวิเคราะห์ความถี่ของไบแกรม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">การสร้างเมฆคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">ตัวอย่างโค้ดที่ใช้ในการสร้างเมฆคำภาษาอังกฤษ</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">ข้อจำกัดของการวิเคราะห์ความถี่</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">ข้อจำกัดของการวิเคราะห์ความถี่</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">อ้างอิง</a></li>
 </ul>
   </nav></div>
 

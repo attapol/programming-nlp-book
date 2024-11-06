@@ -193,8 +193,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: Data type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module5/5s-exercise-data-type.html">เฉลยโจทย์: Data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5-exercise-data-type.html">โจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module5/5s-exercise-data-type.html">เฉลยโจทย์: ชนิดของโครงสร้างข้อมูล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
@@ -202,8 +202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: Object-Oriented Programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -214,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการข้อมูลแบบตาราง</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
@@ -678,81 +678,12 @@ document.write(`
 <h2>แบบฝึกหัดการวิเคราะห์ความถี่ของคำ<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <p>เขียนฟังก์ชันที่นับจำนวนคำภาษาไทยจากข้อความที่เก็บอยู่ในสตริง <code class="docutils literal notranslate"><span class="pre">news_article</span></code> โดยที่ต้องไม่นับ เครื่องหมายวรรคตอน ตัวเลข และคำหยุด (ถ้าหากไม่ได้ใช้แบบฝึกหัดนี้บน Google Colab ให้ใช้สตริงอะไรก็ได้ที่ตั้งค่าให้เป็นบทความที่มีความยาวตั้งแต่ 1000 คำขึ้นไป)</p>
 <ol class="arabic simple">
-<li><p>สตริงที่ให้มีขนาด vocabulary (จำนวนคำแบบไม่นับคำซ้ำ)อยู่ที่เท่าไร</p></li>
+<li><p>สตริงที่ให้มีขนาดคลังศัพท์ (จำนวนคำแบบไม่นับคำซ้ำ) อยู่ที่เท่าไร</p></li>
 <li><p>คำใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา</p></li>
 <li><p>ไบแกรมใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา</p></li>
 <li><p>สร้างเมฆคำจากคำที่พบบ่อยที่สุด 40 อันดับ ให้ปรับขนาดของคำให้เท่ากับความถี่ของคำนั้นๆ ไลบรารีเมฆคำไม่มีฟอนต์ภาษาไทยมาให้ เพราะฉะนั้นเราต้องดาวน์โหลดฟอนต์ภาษาไทยมาวางที่โฟลเดอร์เดียวกัน และตั้งค่า <code class="docutils literal notranslate"><span class="pre">font_path=</span></code> ให้ชี้ไปยังไฟล์ที่เก็บฟอนต์ไทย</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ที่มา: https://thestandard.co/us-prepares-to-offer-billionaire-tax/</span>
-<span class="n">news_article</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;ปัญหาความเหลื่อมล้ำไม่ได้เกิดขึ้นแค่ในประเทศไทย แต่เกิดขึ้นกับประเทศมหาอำนาจอย่างสหรัฐฯ </span>
-<span class="s2">เช่นเดียวกัน ทางออกที่สหรัฐฯ กำลังจะทำคือการร่างกฎหมาย ‘การเก็บภาษีมหาเศรษฐี’ ขึ้นมาเพื่อแก้ปัญหานี้</span>
-<span class="s2"> ซึ่งถูกเสนอโดยพรรคเดโมแครต เพื่อที่จะนำเงินจากภาษีเหล่านี้มาใช้กับโครงข่ายรองรับทางสังคม (Social </span>
-<span class="s2">Safety Net) ไม่ว่าจะเป็นการช่วยเหลือผู้ที่ได้รับผลกระทบจากวิกฤตต่างๆ ผู้ที่ตกงาน ผู้ด้อยโอกาส เป็นต้น </span>
-<span class="s2">มหาเศรษฐีที่รวยที่สุดในโลก ณ เวลานี้คือ อีลอน มัสก์ โดยบริษัทรถยนต์ไฟฟ้าของเขาอย่าง Tesla </span>
-<span class="s2">แทบจะเรียกได้ว่าถูกสร้างขึ้นมาด้วยเงินของรัฐบาลเลยก็ว่าได้ เนื่องจากหลายปีที่ผ่านมารัฐบาลต้อง</span>
-<span class="s2">การจูงใจให้ประชาชนใช้รถยนต์ไฟฟ้ามากขึ้น จึงออกนโยบายต่างๆ เพื่อสนับสนุน </span>
-<span class="s2">โดยบริษัทที่ได้รับ ผลประโยชน์ไปเต็มๆ เลยคือ Tesla ซึ่งผลกำไรส่วนใหญ่ในปัจจุบันของบริษัทมาจากการขายเครดิตรถยนต์ไฟฟ้า </span>
-<span class="s2">ที่รัฐบาลกำหนดให้ผู้ผลิตรถยนต์ต่างๆ ต้องผลิตรถยนต์ไฟฟ้าให้ได้ตามจำนวนที่กำหนด ถ้าผลิตไม่ถึงที่กำหนดจะ</span>
-<span class="s2">ต้องจ่ายค่าปรับเป็นจำนวนมหาศาล ทำให้ผู้ผลิตรถยนต์รายอื่นๆ ต้องมาซื้อเครดิตจาก Tesla แทน เนื่องจาก </span>
-<span class="s2">Tesla มีการผลิตรถยนต์ไฟฟ้าไปแล้วเป็นจำนวนมาก จนสามารถขายเครดิตให้กับผู้ผลิตรายอื่นๆ ได้อย่าง</span>
-<span class="s2">เหลือเฟือ ซึ่งการสนับสนุนของรัฐบาลนี้อาจเป็นเหตุผลที่ว่า ทำไม Tesla ถึงมีมูลค่ามากกว่า Toyota ถึง 3 </span>
-<span class="s2">เท่า ทั้งๆ ที่ขายรถยนต์ได้น้อยกว่ามาก </span>
-
-<span class="s2">นอกจากนั้นองค์กรไม่แสวงหาผลกำไรอย่าง ProPublica ได้เปิดเผยว่า</span>
-<span class="s2"> อีลอน มัสก์ ยังเป็น 1 ในเหล่ามหาเศรษฐีที่ร่ำรวยที่สุดในโลก ที่ใช้วิธีการต่างๆ เพื่อหลีกเลี่ยงการ</span>
-<span class="s2">จ่ายภาษีเงินได้บุคคลธรรมดาอีกด้วย อย่างมหาเศรษฐีอีกคนที่ใช้วิธีการเดียวกันนี้คือ เจฟฟ์ เบโซส์ </span>
-<span class="s2">เจ้าของ Amazon และบริษัทท่องอวกาศอย่าง Blue Origin </span>
-<span class="s2">ล่าสุด มัสก์ออกมาเคลื่อนไหวเกี่ยวกับประเด็นนี้ </span>
-<span class="s2">โดยทวีตว่า ‘การเก็บภาษีเหล่าเศรษฐี’ จะช่วยแก้ปัญหาหนี้สินของรัฐบาลได้เพียงเล็กน้อยเท่านั้น สิ่งที่</span>
-<span class="s2">ควรแก้ไขจริงๆ คือการใช้จ่ายของรัฐบาลมากกว่า พร้อมกล่าวเพิ่มเติมว่า หากรัฐเก็บภาษีจากเหล่ามหาเศรษฐี</span>
-<span class="s2">ได้ครบ 100% แล้วก็ยังไม่พอต่อการใช้หนี้อยู่ดี และต้องหันไปเก็บภาษีเพิ่มกับประชาชนทั่วไปในภายหลัง โดย</span>
-<span class="s2">ทวีตเพิ่มเติมว่าหากเก็บจากเหล่ามหาเศรษฐีแล้วก็ยังได้เพียงแค่ 10% ของ 3.5 ล้านล้านดอลลาร์ของหนี้ที่มี</span>
-<span class="s2">อยู่เท่านั้น และอีก 90% ที่เหลือจะเก็บจากใคร ก็เก็บจาก ‘คุณ’ ไง </span>
-
-<span class="s2">ทำไมภาษีมหาเศรษฐีจึงจำเป็น?</span>
-
-<span class="s2">มหาเศรษฐีระดับโลกหลายคนใช้การหลีกเลี่ยงภาษีโดยวิธีการ ‘ซื้อ กู้ ตาย’ อธิบายโดยศาสตราจารย์ด้านกฎหมาย</span>
-<span class="s2">ของมหาวิทยาลัยเซาเทิร์นแคลิฟอร์เนีย เอ็ดเวิร์ด เจ. แมคคอฟเฟอรี โดยมหาเศรษฐีจะนำเงินที่ได้จากบริษัทไป</span>
-<span class="s2">ซื้อทรัพย์สินต่างๆ แทนการถือเป็นเงินสด ตราบใดที่ทรัพย์สินเหล่านั้นไม่ได้ถูกนำไปขายก็จะไม่ต้องเสียภาษี</span>
-
-<span class="s2">ต่อมาคือการ ‘กู้’ มหาเศรษฐีจะเลือกรับเงินเดือนจำนวนน้อยๆ เพื่อหลีกเลี่ยงภาษีเงินได้ แต่จะ</span>
-<span class="s2">รับเป็นหุ้นแทนซึ่งมีอัตราภาษีที่น้อยกว่า หรืออีกวิธีคือใช้การกู้แทน เนื่องจากมหาเศรษฐีเหล่านี้มี</span>
-<span class="s2">เครดิตที่ดีมากจึงเสียดอกเบี้ยในอัตราที่ต่ำมากๆ ประมาณแค่ 3% เท่านั้น</span>
-<span class="s2">และวิธีสุดท้ายคือ ‘ตาย’ เมื่อเหล่ามหาเศรษฐีต้องจากโลกนี้ไป จะสามารถถ่ายโอนทรัพย์สินต่างๆ ให้กับทายาทได้โดยไม่ต้องเสียภาษี </span>
-<span class="s2">ไม่ว่าจะเป็น หุ้น ที่ดิน บ้าน รถ นอกจากนั้นเหล่ามหาเศรษฐียังจัดตั้งมูลนิธิ กองทุนต่างๆ เพื่อบริจาคให้กับ</span>
-<span class="s2">สังคมอยู่เรื่อยๆ เมื่อมหาเศรษฐีเหล่านั้นตายไปจะได้รับการยกเว้นภาษีในการถ่ายโอนอสังหาริมทรัพย์ให้กับ</span>
-<span class="s2">ลูกหลาน </span>
-
-<span class="s2">สรุปก็คือเหล่ามหาเศรษฐีมีเงินมากมายมหาศาล แต่กลับจ่ายภาษีจริงในอัตราที่ต่ำกว่าคนธรรมดา</span>
-<span class="s2">ทั่วไปมาก ยกตัวอย่าง อีลอน มัสก์ ไม่มีการเสียภาษีเลยในปี 2018 จากการใช้วิธีการต่างๆ เหล่านี้</span>
-<span class="s2">ภาษี</span>
-
-<span class="s2">มหาเศรษฐีทำงานอย่างไร?</span>
-
-<span class="s2">แผนการเก็บภาษีมหาเศรษฐีของ รอน ไวเดน วุฒิสมาชิกสหรัฐอเมริกา พรรคเดโมแครต มี</span>
-<span class="s2">ความยาวถึง 107 หน้า โดยสำนักข่าว CNN สรุปมาดังนี้ สำหรับสินทรัพย์ที่สามารถซื้อขายได้อย่างหุ้น </span>
-<span class="s2">มหาเศรษฐีจะต้องจ่ายภาษีที่ได้กำไรจากการขายหุ้นในอัตรา 23.8% แต่พวกเขาก็สามารถนำส่วนที่ขาดทุนจากหุ้น</span>
-<span class="s2">ไปชดเชยภาษีเงินได้หรือภาษีที่ได้จากกำไรในอนาคตได้ โดยสามารถนำส่วนที่ขาดทุนย้อนหลังถึง 3 ปี มาชดเชย</span>
-<span class="s2">ภาษีในอนาคตได้</span>
-
-<span class="s2">นอกจากนั้นไวเดนยังมีวิธีที่ชาญฉลาดในการจัดการกับมหาเศรษฐีที่โอนความมั่งคั่งไปยัง</span>
-<span class="s2">อสังหาริมทรัพย์และสินทรัพย์อื่นๆ ที่ไม่สามารถซื้อขายได้ โดยจะไม่เก็บภาษีทุกปี แต่จะคิดดอกเบี้ย</span>
-<span class="s2">เพิ่มเติมเมื่อขายสินทรัพย์เหล่านั้นแทน</span>
-<span class="s2">แน่นอนว่าภาษีมหาเศรษฐีจะกระทบกับเหล่ามหาเศรษฐีเป็นหลัก จาก</span>
-<span class="s2">ข้อมูลของสำนักงานสำรวจสำมะโนประชากรของสหรัฐฯ ระบุว่า มีประชากรทั้งหมดประมาณ 333 ล้านคนในสหรัฐอเมริกา</span>
-<span class="s2"> และมีไม่เกิน 700 คนเท่านั้นที่เป็นมหาเศรษฐี หรือเท่ากับ 0.0002% ของประชากรทั้งหมด โดยการเก็บภาษี</span>
-<span class="s2">มหาเศรษฐีจะเก็บกับผู้ที่มีรายได้มากกว่า 100 ล้านดอลลาร์ (3.3 พันล้านบาท) ติดต่อกันเป็นเวลา 3 ปี</span>
-
-<span class="s2">นอกจากนั้นในสหรัฐฯ ยังมีมหาเศรษฐีหน้าใหม่เกิดขึ้นตลอดเวลา อย่างบริษัทผู้ผลิตวัคซีน Moderna และบริษัท</span>
-<span class="s2">อื่นๆ ที่เกี่ยวข้องกับวัคซีน ก็ได้รับเม็ดเงินสนับสนุนจากรัฐบาลเป็นจำนวนมาก เช่นเดียวกับ Tesla ซึ่ง</span>
-<span class="s2">การเก็บภาษีมหาเศรษฐีนี้จะสามารถนำเงินมาพัฒนาสังคม และลดความเหลื่อมล้ำที่รุนแรงในสหรัฐฯ ได้</span>
-<span class="s2">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>สมมติว่าสตริง <code class="docutils literal notranslate"><span class="pre">news_article</span></code> เก็บข้อมูลข่าวจาก <a class="reference external" href="https://thestandard.co/us-prepares-to-offer-billionaire-tax/">https://thestandard.co/us-prepares-to-offer-billionaire-tax/</a></p>
 </section>
 </section>
 
