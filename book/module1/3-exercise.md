@@ -3,7 +3,7 @@
 ## ก่อนเริ่ม
 
 ### ติดตั้งไลบรารี `stanfordkarel`
-ก่อนเริ่มให้ติดตั้ง คาเรลโดยการ (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal และพิมพ์ `pip install stanfordkarel` แล้วกด Enter ถ้าลงโปรแกรมสำเร็จจะขึ้นว่า Successfully installed 
+ก่อนเริ่มให้ติดตั้งคาเรล โดยการ (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal และพิมพ์ `pip install stanfordkarel` แล้วกด Enter ถ้าลงโปรแกรมสำเร็จจะขึ้นว่า Successfully installed 
 
 ### ทดลองเขียนและรันโปรแกรมบน VSCode
 จากนั้นจึงเริ่มดาวน์โหลดไฟล์โค้ดตั้งต้นและลองทดสอบการติดตั้ง โดยมีวิธีดังนี้
