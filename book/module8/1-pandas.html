@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -478,11 +478,11 @@ document.write(`
 <p>ข้อมูลแบบตาราง (tabular data) เป็นรูปแบบข้อมูลที่ได้รับความนิยมอย่างมากในงานประมวลผลและวิเคราะห์ข้อมูล เนื่องจากมีโครงสร้างที่เป็นระเบียบและการจัดเก็บข้อมูลที่สามารถเข้าถึงได้ง่าย แต่ละแถวแทนหนึ่งรายการหรือตัวอย่าง และแต่ละคอลัมน์มีค่าของตัวแปรหนึ่งตัว ซึ่งช่วยให้สามารถจัดการและวิเคราะห์ข้อมูลได้อย่างมีประสิทธิภาพ เราจึงจัดว่าข้อมูลแบบตารางเป็นข้อมูลที่มีโครงสร้าง (structured data) และเป็นรูปแบบการจัดเก็บข้อมูลในอุดมคติ พร้อมสำหรับการวิเคราะห์</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>ข้อมูลแบบตาราง (tabular data)</p>
+<p>ข้อมูลแบบตาราง (tabular data) ข้อมูลที่ถูกจัดเก็บในรูปแบบตาราง (คอลัมม์และแถว)</p>
 </aside>
-<p>ในการจัดการกับข้อมูลชนิดนี้ เรามักใช้ pandas ซึ่งเป็นไลบรารีของภาษาไพทอน ที่ประกอบไปด้วยเครื่องมือระดับสูงสำหรับการจัดการข้อมูลแบบตาราง ไลบรารี pandas ทำงานร่วมกับข้อมูลขนาดใหญ่ได้ดี รวมถึงมีฟังก์ชันต่างๆ สำหรับการเลือก กรอง และปรับแต่งข้อมูลได้อย่างง่ายดาย นอกจากนี้ยังสามารถรวมข้อมูลจากแหล่งข้อมูลหลายแห่งและรองรับการอ่านและเขียนไฟล์ข้อมูลในรูปแบบต่างๆ ได้อย่างหลากหลาย ทำให้เป็นเครื่องมือที่ทรงพลังและได้รับความนิยมสูงในการวิเคราะห์ข้อมูลแบบตาราง การใช้ pandas นับเป็นทักษะที่สำคัญที่สุดอย่างหนึ่งของนักวิเคราะห์ข้อมูล โดยเฉพาะอย่างยิ่งข้อมูลที่เป็นข้อความ และข้อมูลที่มีขนาดใหญ่เกินกว่าที่จะเปิดด้วยโปรแกรมวิเคราะห์ข้อมูลทั่วไป เช่น SPSS Microsoft Excel หรือ Google Spreadsheet</p>
+<p>ในการจัดการกับข้อมูลชนิดนี้ เรามักใช้ pandas ซึ่งเป็นไลบรารีของภาษาไพทอน ที่ประกอบไปด้วยเครื่องมือระดับสูงสำหรับการจัดการข้อมูลแบบตาราง ไลบรารี pandas ทำงานร่วมกับข้อมูลขนาดใหญ่ได้ดี รวมถึงมีฟังก์ชันต่าง ๆ สำหรับการเลือก กรอง และปรับแต่งข้อมูลได้อย่างง่ายดาย นอกจากนี้ยังสามารถรวมข้อมูลจากแหล่งข้อมูลหลายแห่งและรองรับการอ่านและเขียนไฟล์ข้อมูลในรูปแบบต่าง ๆ ได้อย่างหลากหลาย ทำให้เป็นเครื่องมือที่ทรงพลังและได้รับความนิยมสูงในการวิเคราะห์ข้อมูลแบบตาราง การใช้ pandas นับเป็นทักษะที่สำคัญที่สุดอย่างหนึ่งของนักวิเคราะห์ข้อมูล โดยเฉพาะอย่างยิ่งข้อมูลที่เป็นข้อความ และข้อมูลที่มีขนาดใหญ่เกินกว่าที่จะเปิดด้วยโปรแกรมวิเคราะห์ข้อมูลทั่วไป เช่น SPSS Microsoft Excel หรือ Google Spreadsheet</p>
 <p>หากเราติดตั้งไพทอนผ่าน Anaconda เราจะได้ไลบรารี pandas มาพร้อมกับการติดตั้ง แต่หากเราใช้งานไพทอนผ่านการติดตั้งแบบอื่น เราสามารถติดตั้งไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code> (หากติดตั้ง miniconda) เมื่อติดตั้งเสร็จเรียบร้อยแล้ว เราสามารถนำเข้าไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งจะทำให้เราสามารถใช้ฟังก์ชันและเมท็อดที่อยู่ในไลบรารี pandas ได้</p>
-<p>เราอาจจะสงสัยว่าเพราะเหตุใดเราต้องเปลี่ยนชื่อไลบรารีเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> โดยการรัน <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งเราไม่จำเป็นต้องเปลี่ยนชื่อก็สามารถใช้ได้เหมือนกัน แต่เราเลือกเปลี่ยนชื่อเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> เพื่อให้เราสามารถเขียนโค้ดได้สั้นลง  นอกจากนั้นเราไม่ใช้ชื่ออื่นเช่น <code class="docutils literal notranslate"><span class="pre">p</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pan</span></code> หรือชื่ออื่นๆ ที่เราเลือกเอง เหตุก็เพราะว่า <code class="docutils literal notranslate"><span class="pre">pd</span></code> จะเป็นชื่อที่คนในวงการวิทยาการข้อมูลใช้กันมากที่สุด อย่างที่เราเห็นได้ว่าหากเราไปค้นหาวิธีการใช้งานของ pandas ในเว็บไซต์ที่รวมชุมชนนักวิเคราะห์ข้อมูล เช่น <a class="reference external" href="http://stackoverflow.com">stackoverflow.com</a> หรือ <a class="reference external" href="http://medium.com">medium.com</a> จะพบว่าคำตอบจะใช้ <code class="docutils literal notranslate"><span class="pre">pd</span></code> ในการอ้างถึงไลบรารี pandas ทั้งสิ้นด้วย ดังนั้นการใช้ชื่อ <code class="docutils literal notranslate"><span class="pre">pd</span></code> เป็นการตั้งชื่อตามสมัยนิยม ตามธรรมเนียมปฏิบัติ และเป็นการให้ความสะดวกในการเรียนรู้จากแหล่งข้อมูลอื่นๆ ที่มีอยู่ในอินเตอร์เน็ต</p>
+<p>เราอาจจะสงสัยว่าเพราะเหตุใดเราต้องเปลี่ยนชื่อไลบรารีเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> โดยการรัน <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งเราไม่จำเป็นต้องเปลี่ยนชื่อก็สามารถใช้ได้เหมือนกัน แต่เราเลือกเปลี่ยนชื่อเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> เพื่อให้เราสามารถเขียนโค้ดได้สั้นลง  นอกจากนั้นเราไม่ใช้ชื่ออื่นเช่น <code class="docutils literal notranslate"><span class="pre">p</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pan</span></code> หรือชื่ออื่น ๆ ที่เราเลือกเอง เหตุก็เพราะว่า <code class="docutils literal notranslate"><span class="pre">pd</span></code> จะเป็นชื่อที่คนในวงการวิทยาการข้อมูลใช้กันมากที่สุด อย่างที่เราเห็นได้ว่าหากเราไปค้นหาวิธีการใช้งานของ pandas ในเว็บไซต์ที่รวมชุมชนนักวิเคราะห์ข้อมูล เช่น <a class="reference external" href="http://stackoverflow.com">stackoverflow.com</a> หรือ <a class="reference external" href="http://medium.com">medium.com</a> จะพบว่าคำตอบจะใช้ <code class="docutils literal notranslate"><span class="pre">pd</span></code> ในการอ้างถึงไลบรารี pandas ทั้งสิ้นด้วย ดังนั้นการใช้ชื่อ <code class="docutils literal notranslate"><span class="pre">pd</span></code> เป็นการตั้งชื่อตามสมัยนิยม ตามธรรมเนียมปฏิบัติ และเป็นการให้ความสะดวกในการเรียนรู้จากแหล่งข้อมูลอื่น ๆ ที่มีอยู่ในอินเตอร์เน็ต</p>
 <section id="jupyter-notebook">
 <h2>การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">#</a></h2>
 <p>Jupyter Notebook เป็น IDE ที่ถูกออกแบบมาเพื่อการวิเคราะห์ข้อมูลโดยเฉพาะ เพราะว่าการวิเคราะห์ข้อมูลจำเป็นต้องมีการบันทึกว่าเราได้แก้ไขชุดข้อมูลอย่างไรบ้าง รันโค้ดอะไรบ้างที่นำไปสู่ผลการวิเคราะห์ เราจึงเรียกว่า notebook เพราะเปรียบเสมือนการจดบันทึกการวิเคราะห์ข้อมูล เพื่อให้ฟังดูคล้ายคลึงนักวิทยาศาสตร์จดบันทึกผลการทดลอง ด้วยเหตุนี้เอง Jupyter Notebook จึงมีการออกลูกเล่น ฟีเจอร์ใหม่อย่างต่อเนื่อง เพื่ออำนวยความสะดวกในการวิเคราะห์ข้อมูล เช่น</p>
@@ -497,10 +497,10 @@ document.write(`
 <h2>ข้อมูลแบบตาราง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>ข้อมูลแบบตารางมีส่วนประกอบหลักที่สำคัญอยู่หลายส่วน ซึ่งแต่ละส่วนมีบทบาทสำคัญในการเก็บรักษาและการจัดการข้อมูล</p>
 <ol class="arabic simple">
-<li><p>แถว (row) แสดงถึงรายการหรือตัวอย่างแต่ละชิ้น ซึ่งสามารถจัดเก็บ อธิบายลักษณะหรือสถานะของเหตุการณ์ วัตถุ หรือบุคคลที่กำลังศึกษาอยู่ ตัวอย่างเช่น ในตารางข้อมูลของผู้ป่วย แต่ละแถวอาจแทนผู้ป่วยหนึ่งคนพร้อมกับรายละเอียดต่างๆ เช่น อายุ เพศ และประวัติการรักษา ดังนั้นจำนวนแถวที่อยู่ในตารางจึงเท่ากับจำนวนตัวอย่างที่อยู่ในชุดข้อมูล</p></li>
-<li><p>คอลัมน์ (column) แสดงถึงตัวแปรหรือคุณลักษณะที่ระบุค่าข้อมูลต่างๆ ที่จำเป็นต่อการศึกษาหรือวิเคราะห์ ตัวอย่างเช่น ในตารางข้อมูลการขาย คอลัมน์อาจประกอบด้วย วันที่ จำนวนเงิน และสินค้าที่ขาย</p></li>
+<li><p>แถว (row) แสดงถึงรายการหรือตัวอย่างแต่ละชิ้น ซึ่งสามารถจัดเก็บ อธิบายลักษณะหรือสถานะของเหตุการณ์ วัตถุ หรือบุคคลที่กำลังศึกษาอยู่ ตัวอย่างเช่น ในตารางข้อมูลของผู้ป่วย แต่ละแถวอาจแทนผู้ป่วยหนึ่งคนพร้อมกับรายละเอียดต่าง ๆ เช่น อายุ เพศ และประวัติการรักษา ดังนั้นจำนวนแถวที่อยู่ในตารางจึงเท่ากับจำนวนตัวอย่างที่อยู่ในชุดข้อมูล</p></li>
+<li><p>คอลัมน์ (column) แสดงถึงตัวแปรหรือคุณลักษณะที่ระบุค่าข้อมูลต่าง ๆ ที่จำเป็นต่อการศึกษาหรือวิเคราะห์ ตัวอย่างเช่น ในตารางข้อมูลการขาย คอลัมน์อาจประกอบด้วย วันที่ จำนวนเงิน และสินค้าที่ขาย</p></li>
 <li><p>หัวตาราง (header) เป็นบรรทัดแรกของตารางที่ระบุชื่อของแต่ละคอลัมน์ เป็นส่วนที่สำคัญเพราะช่วยให้ผู้ใช้สามารถเข้าใจข้อมูลในแต่ละคอลัมน์ได้ง่ายและชัดเจน</p></li>
-<li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือชนิดข้อมูลอื่นๆ ที่เหมาะสมกับลักษณะของการศึกษา วิเคราะห์ เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นแบบชนิดข้อมูลเดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
+<li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือชนิดข้อมูลอื่น ๆ ที่เหมาะสมกับลักษณะของการศึกษา วิเคราะห์ เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นแบบชนิดข้อมูลเดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
 </ol>
 <figure class="align-default" id="id24">
 <img alt="../../_images/row-column.png" src="../../_images/row-column.png" />
@@ -544,13 +544,13 @@ document.write(`
 <h2>กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>ไลบรารี pandas มีฟังก์ชันต่าง ๆ ที่ช่วยในการจัดการข้อมูลแบบตาราง ซึ่งเป็นกระบวนการที่สำคัญในการวิเคราะห์ข้อมูล โดยปกติแล้วกระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์จะประกอบด้วยขั้นตอนดังนี้</p>
 <ol class="arabic simple">
-<li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
+<li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่ไม่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
 <li><p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis: EDA) คือ การวิเคราะห์เพื่อให้เราเข้าใจข้อมูลคร่าว ๆ เนื่องจากข้อมูลมักจะมีขนาดใหญ่มาก เราไม่สามารถนำข้อมูลออกมาดูได้ทั้งหมด เรามักจะทำ EDA โดยดูว่าข้อมูลมีทั้งหมดที่แถว แต่ละคอลัมน์เก็บข้อมูลอะไรอยู่บ้าง แต่ละคอลัมน์มีค่าสูงสุด ต่ำสุดเท่าไร ถ้าเป็นข้อความ ข้อความที่ยาวสุดยาวกี่ตัวอักษร สั้นสุดกี่ตัวอักษร เป็นต้น</p></li>
 <li><p>การขยำข้อมูล (data munging ซึ่งเป็นศัพท์แสลงที่ใช้ในวงการวิทยาการข้อมูล) หรือ การทะเลาะกับข้อมูล (data wrangling ซึ่งเป็นศัพท์ที่ทางการขึ้น) คือ การแปลงข้อมูลจากรูปเดิม นำมาทำความสะอาด และคัดให้เหลืออยู่เฉพาะส่วนที่สำคัญเพื่อนำไปวิเคราะห์ต่อ อาทิ ลบคอลัมน์ที่ไม่เกี่ยวข้องกับการวิเคราะห์  เปลี่ยนชื่อคอลัมน์ให้สื่อความหมาย ลบคอลัมน์ที่ซ้ำซ้อนกันออกไป ลบแถวที่มีข้อมูลที่สกปรก คลาดเคลื่อนมากจนใช้การไม่ได้ ลบแถวที่ซ้ำซ้อนกันออกไป แปลงหน่วยวัด แปลงแบบชนิดข้อมูลในแต่ละคอลัมน์ หรือควบรวมเอาข้อมูลจากหลายแหล่งมารวมกัน</p></li>
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis)</p>
+<p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis) กระบวนการตรวจสอบและสำรวจข้อมูลเบื้องต้นเพื่อทำความเข้าใจลักษณะข้อมูล</p>
 </aside>
 </section>
 <section id="id3">
@@ -560,7 +560,7 @@ document.write(`
 <h3>ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)<a class="headerlink" href="#csv-comma-separated-value-tsv-tab-separated-value" title="Permalink to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>อักขระคั่น (delimiter)</p>
+<p>อักขระคั่น (delimiter) อักขระที่ใช้คั่นระหว่างข้อมูล ใช้กำหนดจุดเริ่มต้นและสิ้นสุดข้อมูลในแต่ละส่วน</p>
 </aside>
 <p>ไฟล์ CSV (comma-separated value) สกุลของไฟล์คือ .csv ถูกจัดเก็บในลักษณะที่ง่ายและเป็นระเบียบเพื่อให้ง่ายต่อการเข้าใจและใช้งานได้กับโปรแกรมหลากหลายชนิด หลักการหลักของการเก็บข้อมูลแบบ CSV ได้แก่</p>
 <ol class="arabic simple">
@@ -592,8 +592,8 @@ document.write(`
 <li><p>Date Flown</p></li>
 </ul>
 <p>ซึ่งถูกเก็บอยู่ในหัวตารางในบรรทัดแรก และประกอบไปด้วยแถว 10
-แถวซึ่งเก็บข้อมูลของการรีวิวให้คะแนนจากผู้โดยสารของสายการบินต่างๆ แต่ละคน แต่ละเที่ยวบิน</p>
-<p>รูปแบบไฟล์ CSV คือมีโครงสร้างที่ง่าย ยืดหยุ่น และสามารถใช้กับโปรแกรมได้หลากหลายตัว จึงเป็นที่นิยมมาก ตัวอย่างเช่น เราสามารถใช้ Visual Studio Code เปิดไฟล์ CSV เพื่อตรวจสอบข้อมูลเบื้องต้นได้ เพราะเป็นรูปแบบไฟล์ที่มนุษย์อ่านได้ (human-readable format) และเป็นจะเป็นรูปแบบไฟล์ที่เราจะใช้เป็นตัวอย่างในบทนี้ อย่างไรก็ตามหากตัวข้อมูลเองมีการขึ้นบรรทัดใหม่ เช่น เรียงความ บทความ หรือทวีต จะทำให้ไฟล์ซับซ้อนขึ้นมาก เพราะว่าต้องมีการแบ่งแยกว่าการขึ้นบรรทัดใหม่แสดงถึง แถวใหม่ หรือเป็นการขึ้นบรรทัดใหม่ในสตริงที่เก็บอยู่ในตัวข้อมูลเอง ทำให้ไฟล์ CSV ที่เรานับว่าเป็นไฟล์ที่มนุษย์อ่านได้กลายเป็นไฟล์ที่อ่านได้ยาก หากเราใช้ไลบรารี pandas หรือโปรแกรม Excel ในการจัดการข้อมูล CSV ตัวไลบรารีเองมักจะแก้ไขปัญหาเหล่านี้ให้</p>
+แถวซึ่งเก็บข้อมูลของการรีวิวให้คะแนนจากผู้โดยสารของสายการบินต่าง ๆ แต่ละคน แต่ละเที่ยวบิน</p>
+<p>รูปแบบไฟล์ CSV คือมีโครงสร้างที่ง่าย ยืดหยุ่น และสามารถใช้กับโปรแกรมได้หลากหลายตัว จึงเป็นที่นิยมมาก ตัวอย่างเช่น เราสามารถใช้ Visual Studio Code เปิดไฟล์ CSV เพื่อตรวจสอบข้อมูลเบื้องต้นได้ เพราะเป็นรูปแบบไฟล์ที่มนุษย์อ่านได้ (human-readable format) และจะเป็นรูปแบบไฟล์ที่เราจะใช้เป็นตัวอย่างในบทนี้ อย่างไรก็ตามหากตัวข้อมูลเองมีการขึ้นบรรทัดใหม่ เช่น เรียงความ บทความ หรือทวีต จะทำให้ไฟล์ซับซ้อนขึ้นมาก เพราะว่าต้องมีการแบ่งแยกว่าการขึ้นบรรทัดใหม่แสดงถึง แถวใหม่ หรือเป็นการขึ้นบรรทัดใหม่ในสตริงที่เก็บอยู่ในตัวข้อมูลเอง ทำให้ไฟล์ CSV ที่เรานับว่าเป็นไฟล์ที่มนุษย์อ่านได้กลายเป็นไฟล์ที่อ่านได้ยาก หากเราใช้ไลบรารี pandas หรือโปรแกรม Excel ในการจัดการข้อมูล CSV ตัวไลบรารีเองมักจะแก้ไขปัญหาเหล่านี้ให้</p>
 <p>นอกจากนั้นยังมีไฟล์ตระกูล .tsv ซึ่งย่อมาจาก tab-separated value ไฟล์ TSV ที่จริงแล้วมีรูปแบบการเก็บข้อมูลใกล้เคียงกันกับไฟล์ CSV เพียงแค่เปลี่ยนตัวแบ่งระหว่างข้อมูลในแต่ละคอลัมน์เป็นแท็บ (<code class="docutils literal notranslate"><span class="pre">\t</span></code>) แทนที่จุลภาค ข้อดีของการใช้แท็บแทนจุลภาคคือ แท็บแสดงผลออกมาเป็นการเว้นระยะทำให้เห็นความแบ่งแยกระหว่างคอลัมน์ที่ชัดเจนและเป็นระเบียบ ได้ดีกว่าเมื่อเปิดด้วยโปรแกรมแก้ไขข้อความธรรมดา ทำให้เหมาะสำหรับการตรวจสอบข้อมูลด้วยตาเปล่าหรือการปรับแต่งข้อมูลเบื้องต้น ตัวอย่างเช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Airline</span> <span class="n">Name</span>	<span class="n">Rating</span>	<span class="n">Seat</span> <span class="n">Type</span>	<span class="n">Verified</span>	<span class="n">Date</span> <span class="n">Flown</span>
 <span class="n">Bangkok</span> <span class="n">Airways</span>	<span class="mi">6</span>	<span class="n">Economy</span>	<span class="n">TRUE</span>	<span class="n">March</span> <span class="mi">2019</span>
@@ -613,14 +613,14 @@ document.write(`
 </section>
 <section id="excel">
 <h3>ไฟล์ Excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h3>
-<p>ไฟล์ Excel เป็นรูปแบบไฟล์ที่ใช้กับโปรแกรม Microsoft Excel ซึ่งเป็นส่วนหนึ่งของชุดโปรแกรม Microsoft Office โดยไฟล์ Excel มักมีนามสกุลไฟล์เป็น .xls หรือ .xlsx สำหรับ Microsoft Office เวอร์ชันใหม่กว่า ซึ่งใช้รูปแบบการเก็บข้อมูลที่ซับซ้อนและสามารถรองรับคุณสมบัติต่างๆ ได้หลากหลายมากกว่า CSV ได้แก่</p>
+<p>ไฟล์ Excel เป็นรูปแบบไฟล์ที่ใช้กับโปรแกรม Microsoft Excel ซึ่งเป็นส่วนหนึ่งของชุดโปรแกรม Microsoft Office โดยไฟล์ Excel มักมีนามสกุลไฟล์เป็น .xls หรือ .xlsx สำหรับ Microsoft Office เวอร์ชันใหม่กว่า ซึ่งใช้รูปแบบการเก็บข้อมูลที่ซับซ้อนและสามารถรองรับคุณสมบัติต่าง ๆ ได้หลากหลายมากกว่า CSV ได้แก่</p>
 <ol class="arabic simple">
 <li><p><em>เวิร์กชีต (worksheet)</em> ข้อมูลใน Excel จะถูกจัดเก็บในเวิร์กชีตซึ่งแต่ละเวิร์กชีตสามารถมีข้อมูลแบบตารางได้ โดยผู้ใช้สามารถมีหลายเวิร์กชีตภายในไฟล์เดียว</p></li>
 <li><p><em>เซลล์ (cell)</em> ข้อมูลในเวิร์กชีตจะถูกจัดเก็บในเซลล์ โดยแต่ละเซลล์สามารถรองรับข้อมูลได้ทั้งข้อความ, ตัวเลข, สูตรการคำนวณ, หรือแม้กระทั่งกราฟิก</p></li>
-<li><p><em>สูตร (formula)</em> Excel รองรับสูตรการคำนวณที่ช่วยให้สามารถประมวลผลข้อมูลจากเซลล์ต่างๆ และอัปเดตผลลัพธ์อัตโนมัติเมื่อข้อมูลเปลี่ยนแปลง</p></li>
-<li><p><em>การจัดรูปแบบ</em> สามารถกำหนดรูปแบบให้กับข้อมูลได้อย่างละเอียด เช่น สี, ขนาด, และประเภทของตัวอักษร, การจัดตำแหน่ง, การใส่กรอบเซลล์, และอื่นๆ</p></li>
+<li><p><em>สูตร (formula)</em> Excel รองรับสูตรการคำนวณที่ช่วยให้สามารถประมวลผลข้อมูลจากเซลล์ต่าง ๆ และอัปเดตผลลัพธ์อัตโนมัติเมื่อข้อมูลเปลี่ยนแปลง</p></li>
+<li><p><em>การจัดรูปแบบ</em> สามารถกำหนดรูปแบบให้กับข้อมูลได้อย่างละเอียด เช่น สี, ขนาด, และประเภทของตัวอักษร, การจัดตำแหน่ง, การใส่กรอบเซลล์, และอื่น ๆ</p></li>
 </ol>
-<p>การจัดการและวิเคราะห์ข้อมูลด้วยโปรแกรม Microsoft Excel และไฟล์ตระกูล .xlsx เป็นที่นิยมเป็นอย่างมาก เนื่องจากมีฟีเจอร์หลากหลาย รองรับงานคำนวณตั้งแต่ขั้นเบื้องต้นจนไปถึงขั้นสูง ใช้งานค่อนข้างสะดวกสบายมีการแสดงผลที่สวยงาม สามารถจัดรูปแบบให้เกิดความโดดเด่น และความชัดเจนในการวิเคราะห์ข้อมูลได้ ทักษะการใช้โปรแกรมประเภทนี้เป็นทักษะจำเป็นอย่างยิ่งสำหรับนักวิเคราะห์ข้อมูล และนักวิทยาการข้อมูลทุกคน แต่ว่าข้อจำกัดที่สำคัญที่สุดของการใช้ Excel คือการรับมือกับข้อมูลขนาดใหญ่ที่มีจำนวนคอลัมน์มากจนไม่สามารถแสดงผลออกมาบนหน้าจอได้หมด หรือมีจำนวนแถวมากจนตัวโปรแกรมและเครื่องคอมพิวเตอร์ที่เราใช้ไม่สามารถเปิดขึ้นมาได้ ดังนั้นมักจะไฟล์ CSV เป็นรูปแบบการจัดเก็บไฟล์ที่เรามักเลือกใช้หากข้อมูลมีขนาดใหญ่</p>
+<p>การจัดการและวิเคราะห์ข้อมูลด้วยโปรแกรม Microsoft Excel และไฟล์ตระกูล .xlsx เป็นที่นิยมเป็นอย่างมาก เนื่องจากมีฟีเจอร์หลากหลาย รองรับงานคำนวณตั้งแต่ขั้นเบื้องต้นจนไปถึงขั้นสูง ใช้งานค่อนข้างสะดวกสบายมีการแสดงผลที่สวยงาม สามารถจัดรูปแบบให้เกิดความโดดเด่น และความชัดเจนในการวิเคราะห์ข้อมูลได้ ทักษะการใช้โปรแกรมประเภทนี้เป็นทักษะจำเป็นอย่างยิ่งสำหรับนักวิเคราะห์ข้อมูล และนักวิทยาการข้อมูลทุกคน แต่ว่าข้อจำกัดที่สำคัญที่สุดของการใช้ Excel คือการรับมือกับข้อมูลขนาดใหญ่ที่มีจำนวนคอลัมน์มากจนไม่สามารถแสดงผลออกมาบนหน้าจอได้หมด หรือมีจำนวนแถวมากจนตัวโปรแกรมและเครื่องคอมพิวเตอร์ที่เราใช้ไม่สามารถเปิดขึ้นมาได้ ดังนั้นไฟล์ CSV มักจะเป็นรูปแบบการจัดเก็บไฟล์ที่เราเลือกใช้หากข้อมูลมีขนาดใหญ่</p>
 </section>
 </section>
 <section id="dataframe">
@@ -656,11 +656,11 @@ document.write(`
 <span class="mi">2</span>      <span class="n">tangmay</span>   <span class="mi">19</span>
 </pre></div>
 </div>
-<p>ถ้าหากเรารันโค้ดข้างต้นบน Jupyter notebook หรือ Visual Studio Code หรือ Google Colab เครื่องจะแสดงผลตารางออกมาอย่างสวยงาม รวมถึงสามารถดูตารางแบบ interactive ใกล้เคียงกับการใช้งาน Excel ได้ หรือใช้ลูกเล่นในการสร้างกราฟอัตโนมัติต่อได้ แต่ถ้าหากรันโค้ดด้านบนบนโปรแกรมไพทอน ทั่วไป จะแสดงผลออกมาเป็นข้อความเท่านั้น</p>
+<p>ถ้าหากเรารันโค้ดข้างต้นบน Jupyter notebook หรือ Visual Studio Code หรือ Google Colab เครื่องจะแสดงผลตารางออกมาอย่างสวยงาม รวมถึงสามารถดูตารางแบบ interactive ใกล้เคียงกับการใช้งาน Excel ได้ หรือใช้ลูกเล่นในการสร้างกราฟอัตโนมัติต่อได้ แต่ถ้าหากรันโค้ดด้านบนบนโปรแกรมไพทอนทั่วไป จะแสดงผลออกมาเป็นข้อความเท่านั้น</p>
 </section>
 <section id="csv">
 <h3>การสร้างดาตาเฟรมจากไฟล์ CSV<a class="headerlink" href="#csv" title="Permalink to this heading">#</a></h3>
-<p>กรณีส่วนใหญ่ของการวิเคราะห์ข้อมูล เราจะต้องโหลดข้อมูลจากไฟล์ CSV ซึ่งเป็นรูปแบบไฟล์ที่ใช้งานกันอย่างแพร่หลาย เพราะใช้งานได้ง่าย ใช้งานได้ด้วยหลากหลายโปรแกรม pandas มีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>  ซึ่งจะโหลดข้อมูลจากไฟล์ CSV และสร้างดาตาเฟรมจากข้อมูลที่ได้ ตัวอย่างเช่น ถ้าเรามีไฟล์ CSV ที่เก็บข้อมูลการรีวิวของผู้โดยสารของสายการบินต่าง ๆ ชื่อว่า <code class="docutils literal notranslate"><span class="pre">airline_reviews.csv</span></code> เราสามารถอ่านไฟล์ดังกล่าวและโหลดเข้ามาใส่ในดาตาเฟรม ดังนี้</p>
+<p>กรณีส่วนใหญ่ของการวิเคราะห์ข้อมูล เราจะต้องโหลดข้อมูลจากไฟล์ CSV ซึ่งเป็นรูปแบบไฟล์ที่ใช้งานกันอย่างแพร่หลาย เพราะใช้งานได้ง่าย ใช้งานได้ด้วยหลากหลายโปรแกรม pandas มีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>  ซึ่งจะโหลดข้อมูลจากไฟล์ CSV และสร้างดาตาเฟรมจากข้อมูลที่ได้ ตัวอย่างเช่น ถ้าเรามีไฟล์ CSV ที่เก็บข้อมูลการรีวิวของผู้โดยสารของสายการบินต่าง ๆ ชื่อว่า <code class="docutils literal notranslate"><span class="pre">airline-reviews-small.csv</span></code> เราสามารถอ่านไฟล์ดังกล่าวและโหลดเข้ามาใส่ในดาตาเฟรม ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;airline-reviews-small.csv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -701,7 +701,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>จะแสดงผลลัพธ์ออกมาเป็นดาตาเฟรมที่มีแถว 2 แถวที่ถูกสุ่มออกมาจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยแต่ละครั้งจะได้ผลออกมาไม่เหมือนกัน ยกเว้นเสียแต่เราจะตั้งแต่ seed ของการสุ่มไว้เท่ากัน</p>
+<p>จะแสดงผลลัพธ์ออกมาเป็นดาตาเฟรมที่มีแถว 2 แถวที่ถูกสุ่มออกมาจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยแต่ละครั้งจะได้ผลออกมาไม่เหมือนกัน ยกเว้นเสียแต่เราจะตั้ง seed ของการสุ่มไว้เท่ากัน</p>
 </section>
 <section id="id7">
 <h3>ตรวจสอบจำนวนแถวและคอลัมน์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
@@ -854,7 +854,7 @@ document.write(`
 <span class="n">empty_boolean_df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>การเรียกโค้ดโดยวิธีข้างต้นได้ผลลัพธ์ออกมาเหมือนกัน แต่ว่าโค้ดจะยาวกว่าเล็กน้อย และมีความชัดเจนมากขึ้น ซึ่งก็ขึ้นอยู่กับความชอบส่วนตัวของแต่ละคนว่าต้องการใช้การโยงเมท็อดหรือไม่ แต่ว่าการใช้วิธีการโยงเมท็อดนี้เป็นที่นิยมในการเขียนโค้ดของ pandas เพราะว่าโค้ดสั้นกว่าและเข้่าใจง่ายสำหรับคนที่เขียนโค้ดค่อนข้างคล่องแล้ว</p>
+<p>การเรียกโค้ดโดยวิธีข้างต้นได้ผลลัพธ์ออกมาเหมือนกัน แต่ว่าโค้ดจะยาวกว่าเล็กน้อย และมีความชัดเจนมากขึ้น ซึ่งก็ขึ้นอยู่กับความชอบส่วนตัวของแต่ละคนว่าต้องการใช้การโยงเมท็อดหรือไม่ แต่ว่าการใช้วิธีการโยงเมท็อดนี้เป็นที่นิยมในการเขียนโค้ดของ pandas เพราะว่าโค้ดสั้นกว่าและเข้าใจง่ายสำหรับคนที่เขียนโค้ดค่อนข้างคล่องแล้ว</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การโยงเมท็อด (method chaining) หมายถึงการเรียกเมท็อดต่อเนื่องกันโดยไม่ต้องเก็บผลลัพธ์ของเมท็อดก่อนหน้าไว้ในตัวแปรก่อน และเรียกเมท็อดต่อไปทันที</p>
@@ -937,7 +937,7 @@ document.write(`
 </pre></div>
 </div>
 <p>จากผลลัพธ์ที่ได้ เราสามารถเห็นได้ว่าหลังจากลบแถวที่มีข้อมูลที่หายไปออกไปแล้ว เราเหลือแถวอยู่ 7 แถว และมีคอลัมน์อยู่ 6 คอลัมน์ ซึ่งเราสามารถทำการวิเคราะห์ข้อมูลต่อไปได้</p>
-<p>ถ้าสมมติว่าการวิเคราะห์ของเราไม่ได้สนใจว่าคนเขียนรีวิวบินสายการบินนั้นวันที่เท่าไรซึ่งเก็บอยู่ในคอลัมน์ <em>Date flown</em> เพราะฉะนั้นเราต้องการจะกำจัดแถวที่ไม่มีข้อมูลเกี่ยวกับคะแนน (คอลัมน์ <em>Rating</em>) และประเภทของทีนั่ง (คอลัมน์ <em>Seat type</em>) เท่านั้น ส่วนคอลัมน์ <em>Date flown</em> จะมีหรือไม่มีก็ได้ เราสามารถกำหนดคอลัมน์ที่สนใจไว้ในพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">subset</span></code> ของฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ตัวอย่างเช่น</p>
+<p>ถ้าสมมติว่าการวิเคราะห์ของเราไม่ได้สนใจว่าคนเขียนรีวิวบินสายการบินนั้นวันที่เท่าไรซึ่งเก็บอยู่ในคอลัมน์ <em>Date flown</em> เพราะฉะนั้นเราต้องการจะกำจัดแถวที่ไม่มีข้อมูลเกี่ยวกับคะแนน (คอลัมน์ <em>Rating</em>) และประเภทของที่นั่ง (คอลัมน์ <em>Seat type</em>) เท่านั้น ส่วนคอลัมน์ <em>Date flown</em> จะมีหรือไม่มีก็ได้ เราสามารถกำหนดคอลัมน์ที่สนใจไว้ในพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">subset</span></code> ของฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -949,7 +949,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>ในตัวอย่างข้างบนเราตั้งค่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> เพื่อให้การเปลี่ยนแปลงที่เกิดขึ้นกับดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ทันที และไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ ถ้าหากเราเขียนคำสั่งผิดและสั่ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ทำให้้เราย้อนกลับไปแก้ไม่ได้ ต้องกลับไปโหลดข้อมูลใหม่ตั้งแต่ต้น ทำให้การวิเคราะห์ติดขัด เพราะฉะนั้นผู้เขียนแนะนำว่าให้รันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน คำสั่งจะคืนค่าเป็นดาตาเฟรมใหม่ออกมาให้ จากนั้นเราตรวจสอบว่าผลลัพท์ที่ได้มานั้นถูกต้องหรือไม่ ถ้าหากถูกต้องแล้วให้ย้อนไปเปลี่ยนคำสั่งเป้น <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> แล้วรันคำสั่งอีกครั่้งหนึ่งเพื่อเปลี่ยนแปลงดาตาเฟรมตามที่เราต้องการ</p>
+<p>ในตัวอย่างข้างบนเราตั้งค่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> เพื่อให้การเปลี่ยนแปลงเกิดขึ้นกับดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ทันที และไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ ถ้าหากเราเขียนคำสั่งผิดและสั่ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ทำให้เราย้อนกลับไปแก้ไม่ได้ ต้องกลับไปโหลดข้อมูลใหม่ตั้งแต่ต้น ทำให้การวิเคราะห์ติดขัด เพราะฉะนั้นผู้เขียนแนะนำว่าให้รันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน คำสั่งจะคืนค่าเป็นดาตาเฟรมใหม่ออกมาให้ จากนั้นเราตรวจสอบว่าผลลัพท์ที่ได้มานั้นถูกต้องหรือไม่ ถ้าหากถูกต้องแล้วให้ย้อนไปเปลี่ยนคำสั่งเป้น <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> แล้วรันคำสั่งอีกครั้งหนึ่งเพื่อเปลี่ยนแปลงดาตาเฟรมตามที่เราต้องการ</p>
 </section>
 <section id="id13">
 <h3>การเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
@@ -987,7 +987,7 @@ document.write(`
 </pre></div>
 </div>
 <p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">['Review',</span> <span class="pre">'Rating']</span></code> ซึ่งหมายถึงการเลือกคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Review</span></code> และ <code class="docutils literal notranslate"><span class="pre">Rating</span></code> จากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> คอลัมน์อื่น ๆ ที่เหลือจะถูกตัดออกหมด</p>
-<p>นอกจากนั้นแล้ว ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> สามารถใช้เลือกคอลัมน์ที่ต้องการออกมาได้อีกหลายวิธี เช่น เลือกคอลัมน์ด้วยเรกเอกซ์ หรือเลือกตามเงื่อนไขอื่น ๆ ที่สามารถกำหนดได้ตามใจ ซึ่งผู้่อ่านสามารถอ้างอิงเอกสารประกอบการใช้บนเว็บไซต์ของ pandas</p>
+<p>นอกจากนั้นแล้ว ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> สามารถใช้เลือกคอลัมน์ที่ต้องการออกมาได้อีกหลายวิธี เช่น เลือกคอลัมน์ด้วยเรกเอกซ์ หรือเลือกตามเงื่อนไขอื่น ๆ ที่สามารถกำหนดได้ตามใจ ซึ่งผู้อ่านสามารถอ้างอิงเอกสารประกอบการใช้บนเว็บไซต์ของ pandas</p>
 </section>
 <section id="id15">
 <h3>การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
@@ -1092,7 +1092,7 @@ document.write(`
 </section>
 <section id="id19">
 <h4>4. เลือกด้วยลิสต์ของบูลีน<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
-<p>เราสามารถใช้ลิสต์ของบูลีนที่มีจำนวนสมาชิกเท่ากับจำนวนแถว หรือคอลัมน์ วิธี้นี้เรียกว่าบูลีนพราง (boolean masking) วิธีนี้เรามักจะใช้กับการเลือกแถวโดยการกำหนดเงื่อนไขตามคอลัมน์ เช่น ถ้าหากเราต้องการเลือกแถวที่ค่าคะแนนสูงกว่าสิบ ซึ่งไม่ควรจะเกิดขึ้นในชุดข้อมูลนีั้ เรามีวิธีการกำหนดเงื่อนไขดังนี้</p>
+<p>เราสามารถใช้ลิสต์ของบูลีนที่มีจำนวนสมาชิกเท่ากับจำนวนแถว หรือคอลัมน์ วิธีนี้เรียกว่าบูลีนพราง (boolean masking) วิธีนี้เรามักจะใช้กับการเลือกแถวโดยการกำหนดเงื่อนไขตามคอลัมน์ เช่น ถ้าหากเราต้องการเลือกแถวที่ค่าคะแนนสูงกว่าสิบ ซึ่งไม่ควรจะเกิดขึ้นในชุดข้อมูลนี้ เรามีวิธีการกำหนดเงื่อนไขดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span>
 </pre></div>
 </div>
@@ -1114,7 +1114,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>เมื่อนำไปใช้จริงเรามักจะไม่่เก็บบูลีนพรางไว้ในตัวแปร แต่จะใช้ไปเลยในการเลือกแถว ดังนี้</p>
+<p>เมื่อนำไปใช้จริงเรามักจะไม่เก็บบูลีนพรางไว้ในตัวแปร แต่จะใช้ไปเลยในการเลือกแถว ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
@@ -1129,7 +1129,7 @@ document.write(`
 </section>
 <section id="id20">
 <h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
-<p>คอลัมน์ที่เป็นตัวแปรจำแนกประเภท (categorical variable) มีลักษณะคล้ายคลึงกับสตริงที่เป็นข้อความ แต่มีความแตกต่างตรงที่คอลัมน์ที่เป็นตัวแปรจำแนกประเภทมีค่าที่เป็นที่ต้องมาจากเซตที่กำหนดไว้แล้ว ไม่ใช่ค่าอิสระ ตัวอย่างเช่นในชุดข้อมูลตัวอย่าง เรามีคอลัมน์ที่เป็นตัวแปรจำแนกประเภทอยู่ 2 คอลัมน์ คือ <em>Airline Name</em> และ <em>Seat Type</em> ซึ่งค่าที่อยู่ในคอลัมน์นี้มีค่าที่เป็นชื่อของสายการบิน  และชนิดของที่นั่งตามลำดับ ทั้งสองคอลัมน์ต่างเป็นค่าที่มาจากเซตที่กำหนดไว้แล้ว ได้แก่ เซตของชื่อสายการบินทั้งหมด และเซตของประเภทที่นั่งทั้งหมด เพราะฉะนั้นเราต้องตรวจสอบว่าคอลัมน์เหล่านี้มีค่าที่ไม่ได้มาจากเซตที่เหมาะสมหรือไม่่</p>
+<p>คอลัมน์ที่เป็นตัวแปรจำแนกประเภท (categorical variable) มีลักษณะคล้ายคลึงกับสตริงที่เป็นข้อความ แต่มีความแตกต่างตรงที่คอลัมน์ที่เป็นตัวแปรจำแนกประเภทมีค่าที่เป็นที่ต้องมาจากเซตที่กำหนดไว้แล้ว ไม่ใช่ค่าอิสระ ตัวอย่างเช่นในชุดข้อมูลตัวอย่าง เรามีคอลัมน์ที่เป็นตัวแปรจำแนกประเภทอยู่ 2 คอลัมน์ คือ <em>Airline Name</em> และ <em>Seat Type</em> ซึ่งค่าที่อยู่ในคอลัมน์นี้มีค่าที่เป็นชื่อของสายการบิน และชนิดของที่นั่งตามลำดับ ทั้งสองคอลัมน์ต่างเป็นค่าที่มาจากเซตที่กำหนดไว้แล้ว ได้แก่ เซตของชื่อสายการบินทั้งหมด และเซตของประเภทที่นั่งทั้งหมด เพราะฉะนั้นเราต้องตรวจสอบว่าคอลัมน์เหล่านี้มีค่าที่ไม่ได้มาจากเซตที่เหมาะสมหรือไม่่</p>
 <p>วิธีเบื้องต้นในการตรวจสอบค่าของตัวแปรจำแนกประเภท คือ การใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> คำสั่งนี้ใช้ในการแจกแจงว่าคอลัมน์นั้นมีค่าประเภทเป็นอะไรบ้าง และแต่ละค่าปรากฏในชุดข้อมูลกี่ครั้ง การแจกแจงค่าในลักษณะนี้เรียกว่า การกระจายตัว (distribution) ของค่า ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
@@ -1146,7 +1146,7 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Eco&#39;</span><span class="p">,</span> <span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Economy&#39;</span>
 </pre></div>
 </div>
-<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> โดยกำหนดเงื่อนไข <code class="docutils literal notranslate"><span class="pre">airline_reviews_small['Seat</span> <span class="pre">Type']</span> <span class="pre">==</span> <span class="pre">'Eco'</span></code> ซึ่งหมายถึงการเลือกแถวที่มีค่าของคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">Eco</span></code> และเปลี่ยนค่านั้นให้เป็น <code class="docutils literal notranslate"><span class="pre">Economy</span></code>  หลังจากนั้นเราสามารถตรวจสอบดูว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> อีกครั้ง ตัวอย่างเช่น</p>
+<p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">loc[]</span></code> โดยกำหนดเงื่อนไข <code class="docutils literal notranslate"><span class="pre">airline_reviews_small['Seat</span> <span class="pre">Type']</span> <span class="pre">==</span> <span class="pre">'Eco'</span></code> ซึ่งหมายถึงการเลือกแถวที่มีค่าของคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Seat</span> <span class="pre">Type</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">Eco</span></code> และเปลี่ยนค่านั้นให้เป็น <code class="docutils literal notranslate"><span class="pre">Economy</span></code> หลังจากนั้นเราสามารถตรวจสอบดูว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> อีกครั้ง ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1195,8 +1195,8 @@ document.write(`
 </section>
 <section id="id23">
 <h2>สรุป<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
-<p>ในบทนี้เราได้เรียนรู้วิธีการทำความสะอาดข้อมูลด้วย pandas โดยการตรวจสอบข้อมูลที่หายไป และทำการแทนที่ด้วยค่าที่เหมาะสม การตรวจสอบข้อมูลที่ผิดพลาด และทำการแก้ไขข้อมูลที่ผิดพลาด การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข ข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท และข้อมูลที่เป็นข้อมูลข้อความ นอกจากนี้เรายังได้เรียนรู้วิธีการส่งออกข้อมูลเพื่อส่งต่อให้กับโปรแกรมอื่น หรือไลบรารีอื่น ๆ ในไพทอนเอง ทักษะทั้งหมดนี้จัดเป็นทักษะที่เป็นพื้นฐานสำหรับผู้ที่ต้องการเรียนรู้เกี่ยวกับวิทยาการข้อมูล เนื่องจากว่าไลบรารี pandas สามารถรองรับข้อมูลได้หลากหลายรูปแบบ และรองรับข้อมูลที่มีขนาดใหญ่เกินที่จะใช้โปรแกรมอื่น ๆ ในการวิเคราะห์</p>
-<p>คำสั่งที่เราเรียนรู้ในบทนี้ที่จริงมีวิธีการปรับแต่งการใช้งานได้อีกมาก นอกจากนั้นไลบรารี pandas ที่จริงแล้วมีคำสั่งอื่น ๆ อีกมาก จนไม่สามารถครอบคลุมได้หมดในบทเดียว หรือในหนังสือเล่มเดียวได้  เพราะฉะนั้นเนื้อหาวิธีการใช้ในบทนี้เป็นเพียงจุดเริ่มต้นเท่านั้น และเราสามารถเรียนรู้เพิ่มเติมได้จากเอกสารอ้างอิงของ pandas (<a class="reference external" href="https://pandas.pydata.org">https://pandas.pydata.org</a>) ซึ่งอธิบายทุกเมท็อดที่มีอยู่ในไลบรารีนี้ และข้อมูลเป็นปัจจุบันเสมอ คำสั่งทั้งหมดที่เราเรียนรู้ในบทนี้สามารถสรุปได้ดังในตารางต่อไปนี้</p>
+<p>ในบทนี้เราได้เรียนรู้วิธีการทำความสะอาดข้อมูลด้วย pandas โดยการตรวจสอบข้อมูลที่หายไป และทำการแทนที่ด้วยค่าที่เหมาะสม การตรวจสอบข้อมูลที่ผิดพลาด และทำการแก้ไขข้อมูลที่ผิดพลาด การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข ข้อมูลที่เป็นข้อมูลตัวแปรจำแนกประเภท และข้อมูลที่เป็นข้อมูลข้อความ นอกจากนี้เรายังได้เรียนรู้วิธีการส่งออกข้อมูลเพื่อส่งต่อให้กับโปรแกรมอื่น หรือไลบรารีอื่น ๆ ในไพทอนเอง ทักษะทั้งหมดนี้จัดเป็นทักษะที่เป็นพื้นฐานสำหรับผู้ที่ต้องการเรียนรู้เกี่ยวกับวิทยาการข้อมูล เนื่องจากว่าไลบรารี pandas สามารถรองรับข้อมูลได้หลากหลายรูปแบบ และรองรับข้อมูลที่มีขนาดใหญ่เกินที่จะใช้โปรแกรมอื่น ๆ ในการวิเคราะห์</p>
+<p>คำสั่งที่เราเรียนรู้ในบทนี้ที่จริงมีวิธีการปรับแต่งการใช้งานได้อีกมาก นอกจากนั้นไลบรารี pandas ที่จริงแล้วมีคำสั่งอื่น ๆ อีกมาก จนไม่สามารถครอบคลุมได้หมดในบทเดียว หรือในหนังสือเล่มเดียวได้ เพราะฉะนั้นเนื้อหาวิธีการใช้ในบทนี้เป็นเพียงจุดเริ่มต้นเท่านั้น และเราสามารถเรียนรู้เพิ่มเติมได้จากเอกสารอ้างอิงของ pandas (<a class="reference external" href="https://pandas.pydata.org">https://pandas.pydata.org</a>) ซึ่งอธิบายทุกเมท็อดที่มีอยู่ในไลบรารีนี้ และข้อมูลเป็นปัจจุบันเสมอ คำสั่งทั้งหมดที่เราเรียนรู้ในบทนี้สามารถสรุปได้ดังในตารางต่อไปนี้</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>หมวดหมู่คำสั่ง</p></th>

@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -488,7 +488,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="br">
 <h1>บทที่ 4 </br> การประมวลผลข้อมูลจากไฟล์<a class="headerlink" href="#br" title="Permalink to this heading">#</a></h1>
 <p>ข้อมูลที่เราต้องการนำมาประมวลผลมักจะถูกจัดเก็บในรูปของไฟล์ เมื่อเราได้ไฟล์มาแล้วเราจะต้องเขียนโปรแกรมเพื่อเปิดไฟล์ขึ้นมา และทำความสะอาดข้อมูล (เช่น นำส่วนที่ไม่ใช่ข้อมูลจริง ๆ ออกไป หรือนำส่วนที่ไม่ใช่ข้อความออกไป) จากนั้นนำมาตัดคำ หรือใช้เครื่องมือการประมวลผลภาษาอื่น ๆ มาช่วย</p>
-<p>ในบทนี้เราจะเรียนรู้วิธีการเปิดไฟล์ และเขียนข้อมูลลงไฟล์ รวมถึงการใช้นิพจน์ปรกติ (regular exprssion) หรือเร็กเอ็กซ์ (RegEx) ซึ่งต่อไปจะเรียกอย่างย่อว่า “เรกเอกซ์” ในการทำความสะอาดข้อมูล และดึงเฉพาะส่วนของข้อมูลที่เราต้องการทำไปวิเคราะห์ต่อไป</p>
+<p>ในบทนี้เราจะเรียนรู้วิธีการเปิดไฟล์ และเขียนข้อมูลลงไฟล์ รวมถึงการใช้นิพจน์ปรกติ (regular exprssion) หรือเรกเอกซ์ (RegEx) ซึ่งต่อไปจะเรียกอย่างย่อว่า “เรกเอกซ์” ในการทำความสะอาดข้อมูล และดึงเฉพาะส่วนของข้อมูลที่เราต้องการทำไปวิเคราะห์ต่อไป</p>
 <section id="id1">
 <h2>ไฟล์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>ไฟล์สามารถถูกแบ่งออกได้เป็น 2 ประเภท</p>
@@ -513,7 +513,7 @@ document.write(`
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>พาทเต็ม (full path หรือ absolute path)</p>
+<p>พาทเต็ม (full path หรือ absolute path) ตำแหน่งของไฟล์หรือไดเรกทอรีที่ระบุตั้งแต่จุดเริ่มต้นจนถึงที่อยู่ของไฟล์หรือไดเรกทอรีนั้น ๆ</p>
 </aside>
 <p>ตัวอย่าง (Windows)</p>
 <table class="colwidths-auto table">
@@ -562,7 +562,7 @@ document.write(`
 <p>การระบุพาทเต็มค่อนข้างยืดยาว พิมพ์แล้วมีโอกาสผิดสูง พาทสัมพัทธ์ (relative path) เป็นทางเลือกที่สะดวกกว่า เพราะว่าอ้างอิงจากตำแหน่งปัจจุบันของผู้ใช้ไปยังตำแหน่งของไฟล์ พาทสัมพัทธ์จะใช้พาทของโฟลเดอร์ที่เรารันโค้ดมาต่อกันกับพาทสัมพัทธ์เพื่อให้กลายเป็นพาทแบบเต็ม เช่น ถ้าเรารันโค้ดที่โฟลเดอร์  <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP</span></code> และสั่งให้เปิดไฟล์ที่พาทสัมพัทธ์ <code class="docutils literal notranslate"><span class="pre">data/raw_text.zip</span></code> จะถูกแปลงให้กลายเป็น <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP/data/raw_text.zip</span></code> โดยอัตโนมัติ</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>พาทสัมพัทธ์ (relative path)</p>
+<p>พาทสัมพัทธ์ (relative path) ตำแหน่งไฟล์หรือไดเรกทอรีที่อ้างอิงจากตำแหน่งปัจจุบัน</p>
 </aside>
 <p>นอกจากนั้นเรายังสามารถระบุให้ถอยลงไปหนึ่งโฟลเดอร์หรือหลาย ๆ โฟลเดอร์ได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">..</span></code> เช่น ถ้าเรารันโค้ดที่โฟลเดอร์  <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP</span></code></p>
 <table class="colwidths-auto table">
@@ -623,7 +623,7 @@ document.write(`
 <p>การเข้ารหัสตัวอักษร (encoding) กระบวนการแปลงข้อมูลจากรูปแบบที่มนุษย์อ่านเข้าใจได้ เช่น ตัวอักษรหรือสัญลักษณ์ต่าง ๆ ไปเป็นรูปแบบที่คอมพิวเตอร์สามารถเข้าใจและจัดเก็บได้</p>
 </aside>
 <p>การอ่านเขียนไฟล์ข้อมูล (File Input/Output หรือ File I/O) เป็นกระบวนการสำคัญในการจัดการข้อมูลในระบบคอมพิวเตอร์ ซึ่งหมายถึงการอ่านไฟล์จากฮาร์ดดิสก์มาลงในแรม และการเขียนข้อมูลจากแรมกลับไปยังฮาร์ดดิสก์ การประมวลผลข้อมูลทำได้บนข้อมูลที่อยู่ในแรมเท่านั้น เนื่องจากแรมมีความเร็วสูงกว่าฮาร์ดดิสก์มากเมื่อต้องมาใช้รวมกันกับโปรแกรมที่เราเขียนขึ้น ทำให้การเข้าถึงและประมวลผลข้อมูลทำได้รวดเร็วขึ้น</p>
-<p>หากไฟล์มีขนาดใหญ่มาก ๆ เราอาจไม่สามารถโหลดไฟล์ทั้งหมดลงในแรมได้ในครั้งเดียว เราจึงต้องมีรูปแบบการอ่านไฟล์ที่หลากหลายเพื่อให้เหมาะสมกับขนาดของไฟล์และขนาดของหน่วยความจำที่มีอยู่ เช่น การอ่านไฟล์แบบบรรทัดต่อบรรทัด จะช่วยให้เราสามารถจัดการกับไฟล์ขนาดใหญ่ได้อย่างมีประสิทธิภาพ  และลดความเสี่ยงที่จะเกิดข้อผิดพลาดจากการที่หน่วยความจำไม่เพียงพอในการจัดการไฟล์ขนาดใหญ่ ยกตัวอย่างเช่น ในการประมวลผลข้อมูลจากไฟล์ข้อมูลขนาดใหญ่ เช่น ไฟล์ฐานข้อมูลหรือไฟล์ล็อก (log file) ซึ่งอาจจะมีขนาดใหญ่่หลายกิกะไบต์ เราอาจเลือกใช้วิธีการอ่านไฟล์แบบบรรทัดต่อบรรทัด เพื่อให้สามารถประมวลผลข้อมูลได้ทีละส่วน โดยไม่ต้องโหลดไฟล์ทั้งหมดลงในแรมพร้อมกัน</p>
+<p>หากไฟล์มีขนาดใหญ่มาก ๆ เราอาจไม่สามารถโหลดไฟล์ทั้งหมดลงในแรมได้ในครั้งเดียว เราจึงต้องมีรูปแบบการอ่านไฟล์ที่หลากหลายเพื่อให้เหมาะสมกับขนาดของไฟล์และขนาดของหน่วยความจำที่มีอยู่ เช่น การอ่านไฟล์แบบบรรทัดต่อบรรทัด จะช่วยให้เราสามารถจัดการกับไฟล์ขนาดใหญ่ได้อย่างมีประสิทธิภาพ  และลดความเสี่ยงที่จะเกิดข้อผิดพลาดจากการที่หน่วยความจำไม่เพียงพอในการจัดการไฟล์ขนาดใหญ่ ยกตัวอย่างเช่น ในการประมวลผลข้อมูลจากไฟล์ข้อมูลขนาดใหญ่ เช่น ไฟล์ฐานข้อมูลหรือไฟล์ล็อก (log file) ซึ่งอาจจะมีขนาดใหญ่หลายกิกะไบต์ เราอาจเลือกใช้วิธีการอ่านไฟล์แบบบรรทัดต่อบรรทัด เพื่อให้สามารถประมวลผลข้อมูลได้ทีละส่วน โดยไม่ต้องโหลดไฟล์ทั้งหมดลงในแรมพร้อมกัน</p>
 <section id="id6">
 <h3>อ่านไฟล์ไล่ทีละบรรทัด<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <p>ไพทอนมีคำสั่ง <code class="docutils literal notranslate"><span class="pre">open()</span></code> เป็นฟังก์ชันแบบบิวท์อินเพื่อใช้เปิดไฟล์ คำสั่งนี้ต้องการพาทเป็นอาร์กิวเมนต์เพื่อระบุว่าจะเปิดไฟล์ใด และไฟล์นั้นอยู่ที่ไหน ซึ่งจะใช้พาทเต็มหรือพาทสัมพัทธ์ก็ได้</p>
@@ -810,7 +810,7 @@ document.write(`
 <li><p>ตรวจหาเบอร์โทรศัพท์ซึ่งมีแพตเทิร์นว่า มีตัวเลขทั้งหมด 10 ตัวแต่ตัวแรกต้องเป็น 0 อีก 9 ตัวเป็นอะไรก็ได้ แต่ถ้าตัวเลขมีทั้งหมด 9 ตัว ตัวแรกไม่ต้องเป็น 0 ก็ได้</p></li>
 <li><p>ตรวจหาอีเมลของพนักงานทุกคนที่มาจากภาครัฐ ซึ่งมีแพตเทิร์นว่า ข้างหน้าเครื่องหมาย &#64; เป็นตัวภาษาอังกฤษหรือจุดหรือตัวเลขอะไรก็ได้ แต่ข้างหลังเครื่องหมาย &#64; ต้องเป็นชื่อองค์กรอะไรก็ได้แต่ต้องลงท้ายด้วย .go.th</p></li>
 <li><p>ตรวจหาอักษรย่อขององค์กรที่เป็นภาษาไทย ซึ่งมีแพตเทิร์นว่า ต้องเป็นตัวอักษรไทย 2 - 4 ตัวและลงท้ายด้วย .
-แพตเทิร์นเหล่านี้ยากที่จะอธิบายให้เป็นตัวอักษรเรกเอกซ์เป็นภาษาสื่อกลางที่ช่วยให้เราอธิบายแพตเทิร์นที่เราต้องการให้ได้อย่างชัดเจน</p></li>
+แพตเทิร์นเหล่านี้ยากที่จะอธิบายให้เป็นตัวอักษร เรกเอกซ์เป็นภาษาสื่อกลางที่ช่วยให้เราอธิบายแพตเทิร์นที่เราต้องการให้ได้อย่างชัดเจน</p></li>
 </ul>
 <p>เรกเอกซ์มีความสำคัญมากๆ ในการทำงานเกี่ยวกับการประมวลผลภาษาธรรมชาติ  เพราะทำให้เราสามารถดึงข้อมูลที่มีแพตเทิร์นเด่นชัดในภาษา (เช่น อีเมล์ เบอร์โทรศัพท์ ชื่อ ตัวย่อ) ออกมาจากข้อความที่เราต้องการประมวลผลได้สะดวก ความสำคัญของเรกเอกซ์อีกประการหนึ่งคือ การทำความสะอาดข้อมูล ข้อมูลภาษาที่เราได้รับมามักจะมีข้อความแปลกปลอมหลากหลายประเภทที่จำเป็นต้องกรองออกก่อน ตัวอย่างเช่น ข้อความที่ดาวน์โหลดมาจากทวิตเตอร์อาจจะมีข้อความที่เป็น hashtag หรือ mention ที่เราต้องการกรองออกไป หรือข้อความที่มีลิงก์ที่เราต้องการแปลงเป็นชื่อเว็บไซต์ หรือข้อความที่มีตัวอักษรพิเศษที่เราต้องการลบออกไป เป็นต้น</p>
 </section>
@@ -1245,7 +1245,7 @@ document.write(`
 </section>
 <section id="backreference">
 <h3>การอ้างอิงกลับ (Backreference)<a class="headerlink" href="#backreference" title="Permalink to this heading">#</a></h3>
-<p>การอ้างอิงกลับ คือการใช้ค่าของกลุ่มอักขระที่จับคู่ได้ก่อนหน้า (capturing group) ในส่วนอื่นของเรกเอกซ์ กลุ่มที่จับคู่ได้้จะถูกเก็บในหน่วยความจำชั่วคราวและสามารถเรียกใช้งานซ้ำได้โดยใช้ตัวบอกการอ้างอิงกลับ</p>
+<p>การอ้างอิงกลับ คือการใช้ค่าของกลุ่มอักขระที่จับคู่ได้ก่อนหน้า (capturing group) ในส่วนอื่นของเรกเอกซ์ กลุ่มที่จับคู่ได้จะถูกเก็บในหน่วยความจำชั่วคราวและสามารถเรียกใช้งานซ้ำได้โดยใช้ตัวบอกการอ้างอิงกลับ</p>
 <p>กลุ่มที่จับคู่ได้ถูกสร้างขึ้นด้วยการใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> เพื่อระบุส่วนของสตริงที่เราต้องการจับคู่และเก็บไว้ จากนั้นจึงมีการอ้างอิงกลับด้วยหมายเลขกลุ่ม <code class="docutils literal notranslate"><span class="pre">\1</span></code> เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่แรก <code class="docutils literal notranslate"><span class="pre">\2</span></code>เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่ที่สอง</p>
 <section id="id18">
 <h4>ตัวอย่างการอ้างอิงกลับ 1<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
@@ -1257,8 +1257,8 @@ document.write(`
 </section>
 <section id="id19">
 <h4>ตัวอย่างการอ้างอิงกลับ 2<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
-<p>สมมติว่าเราต้องการจับคู่ข้อความที่มีแพตเทิร์น ดังนี้ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่่ะ</span> <span class="pre">มอร์นิ่ง</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่่ะ</span> <span class="pre">ดี</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">แยกย้ายค่่ะ</span> <span class="pre">แยกย้าย</span></code> แต่ไม่จับคู่กับ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่่ะ</span> <span class="pre">คุณ</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่่ะ</span> <span class="pre">แยกย้าย</span></code> เราสามารถใช้การจัดกลุ่มเพื่ออ้างอิงกลับได้ดังนี้</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>^(\w+)ค่ะ \1$
+<p>สมมติว่าเราต้องการจับคู่ข้อความที่มีแพตเทิร์น ดังนี้ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่ะ</span> <span class="pre">มอร์นิ่ง</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่ะ</span> <span class="pre">ดี</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">แยกย้ายค่ะ</span> <span class="pre">แยกย้าย</span></code> แต่ไม่จับคู่กับ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่ะ</span> <span class="pre">คุณ</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่ะ</span> <span class="pre">แยกย้าย</span></code> เราสามารถใช้การจัดกลุ่มเพื่ออ้างอิงกลับได้ดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>^([ก-์]+)ค่ะ \1$
 </pre></div>
 </div>
 <p>คำอธิบาย</p>
@@ -1325,7 +1325,7 @@ document.write(`
     <span class="nb">print</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># โคกสูงเนิน</span>
 </pre></div>
 </div>
-<p>ข้อสังเกตแรกคือเราใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> ในเรกเอกซ์ข้างต้นเพื่อเป็นการจัดกลุ่มที่เราสามารถอ้างถึงได้ภายหลังด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">.group</span></code> โดย กลุ่มที่ 0 จะอ้างถึงทั้งแพตเทิร์น ส่วนเลขกลุ่มต่อ ๆ ไปมาจะเรียงจากซ้ายไปขวา</p>
+<p>ข้อสังเกตแรกคือเราใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> ในเรกเอกซ์ข้างต้นเพื่อเป็นการจัดกลุ่มที่เราสามารถอ้างถึงได้ภายหลังด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">.group</span></code> โดย กลุ่มที่ 0 จะอ้างถึงทั้งแพตเทิร์น ส่วนเลขกลุ่มต่อ ๆ ไปจะเรียงจากซ้ายไปขวา</p>
 </section>
 <section id="re-search">
 <h3><code class="docutils literal notranslate"><span class="pre">re.search</span></code><a class="headerlink" href="#re-search" title="Permalink to this heading">#</a></h3>
@@ -1361,7 +1361,7 @@ document.write(`
 </pre></div>
 </div>
 <p>ถ้าหากเรกเอกซ์มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หนึ่งครั้ง เราคืนค่ามาเฉพาะส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> เท่านั้นซึ่งต่างจากตอนที่เราใช้เรกเอกซ์แบบไม่มี <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งจะสตริงที่จับคู่แบบเต็ม ๆ กลับมาให้</p>
-<p>แต่ถ้าหากเรกเอกซ์มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> มากกว่าหนึ่งครั้ง เราคืนค่ามาทุกกลุ่ม กลายเป็นลิสต์ขของทูเปิล เช่น</p>
+<p>แต่ถ้าหากเรกเอกซ์มีการใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> มากกว่าหนึ่งครั้ง เราคืนค่ามาทุกกลุ่ม กลายเป็นลิสต์ของทูเปิล เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\w+(x|tch|sh|z|s)es)&#39;</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
@@ -1419,7 +1419,8 @@ document.write(`
 </section>
 <section id="id23">
 <h2>สรุป<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
-<p>ในบทนี้เราได้เรียนรู้เกี่ยวกับเรกเอกซ์ซึ่งเป็นเครื่องมือที่ใช้ในการกำหนดแพตเทิร์นในสตริง โดยใช้อักขระพิเศษต่าง ๆ เช่น  <code class="docutils literal notranslate"><span class="pre">^</span> <span class="pre">$</span> <span class="pre">.</span> <span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">\w</span> <span class="pre">\W</span> <span class="pre">\d</span> <span class="pre">\D</span> <span class="pre">\s</span> <span class="pre">\S</span> <span class="pre">\b</span></code> นอกจากนี้ เรายังได้ศึกษาวิธีการใช้งานตัวบ่งบอกปริมาณ ในเรกเอกซ์ซึ่งประกอบด้วยสัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">{n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{m,n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{n,}</span></code>, และ <code class="docutils literal notranslate"><span class="pre">{,n}</span></code> สำหรับการระบุจำนวนครั้งที่ต้องการค้นหา เรายังได้ศึกษาวิธีการใช้งาน การอ้างอิงกลับเพื่ออ้างถึงกลุ่มย่อยที่จับคู่ได้ก่อนหน้านี้ในแพตเทิร์นอีกด้วย</p>
+<p>ในบทนี้เราได้เรียนรู้เกี่ยวกับไฟล์และเรกเอกซ์ โดยได้เรียนรู้เกี่ยวกับวิธีการเข้าถึงไฟล์ ความแตกต่างของพาทเต็มและพาทสัมพัทธ์ วิธีการเขียนไฟล์ และอ่านไฟล์ด้วยคำสั่งต่าง ๆ ทั้ง <code class="docutils literal notranslate"><span class="pre">open</span></code> <code class="docutils literal notranslate"><span class="pre">with</span></code> <code class="docutils literal notranslate"><span class="pre">.read()</span></code> <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> และการจัดเก็บข้อมูลให้อยู่ในรูป <code class="docutils literal notranslate"><span class="pre">json</span></code> ซึ่งเป็นหนึ่งในเรื่องที่ต้องรู้ก่อนจะดำเนินการจัดการข้อมูลต่อไป รวมถึงยังได้เรียนเรื่องเรกเอกซ์ซึ่งมีประโยชน์มากในการจัดการทำความสะอาดข้อมูล</p>
+<p>เรกเอกซ์เป็นเครื่องมือที่ใช้ในการกำหนดแพตเทิร์นในสตริง โดยใช้อักขระพิเศษต่าง ๆ เช่น  <code class="docutils literal notranslate"><span class="pre">^</span> <span class="pre">$</span> <span class="pre">.</span> <span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">\w</span> <span class="pre">\W</span> <span class="pre">\d</span> <span class="pre">\D</span> <span class="pre">\s</span> <span class="pre">\S</span> <span class="pre">\b</span></code> นอกจากนี้ เรายังได้ศึกษาวิธีการใช้งานตัวบ่งบอกปริมาณ ในเรกเอกซ์ซึ่งประกอบด้วยสัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">{n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{m,n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{n,}</span></code>, และ <code class="docutils literal notranslate"><span class="pre">{,n}</span></code> สำหรับการระบุจำนวนครั้งที่ต้องการค้นหา และได้ศึกษาวิธีการใช้งาน การอ้างอิงกลับเพื่ออ้างถึงกลุ่มย่อยที่จับคู่ได้ก่อนหน้านี้ในแพตเทิร์นอีกด้วย</p>
 <p>ภาษาไพทอนมีโมดูล <code class="docutils literal notranslate"><span class="pre">re</span></code> ในการทำงานกับเรกเอกซ์คำสั่งที่ใช้บ่อย ๆ ในการประมวลข้อมูล ได้แก่</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">re.match</span></code>: ใช้ตรวจสอบว่าแพตเทิร์นที่กำหนดตรงกับจุดเริ่มต้นของสตริงหรือไม่</p></li>

@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -482,30 +482,54 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">เซต (Set)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การสร้างเซต และการหาขนาดของเซต</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การสร้างเซตด้วยเซตคอมพริเฮนชัน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">การวนซ้ำบนเซต</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ตัวอย่าง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การวนซ้ำบนเซต</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">ตัวอย่าง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add">การเพิ่มสมาชิกในเซตด้วย <code class="docutils literal notranslate"><span class="pre">add()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ตัวอย่าง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-discard">เอาสมาชิกออกจากเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code> และ <code class="docutils literal notranslate"><span class="pre">discard()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ตัวอย่าง</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">ตัวอย่าง: อินเตอร์เซกชัน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ตัวอย่าง: ยูเนียน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">ตัวอย่าง: ผลต่างของเซต</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">ตัวอย่าง: อินเตอร์เซกชัน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">ตัวอย่าง: ยูเนียน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ตัวอย่าง: ผลต่างของเซต</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">สรุปเรื่องเซต</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">สรุปเรื่องเซต</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension">คอมพริเฮนชัน (Comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">ลิสต์คอมพริเฮนชัน (List comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">คอมพริเฮนชันแบบมีเงื่อนไข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">สรุปการใช้คอมพริเฮนชันแบบมีเงื่อนไข</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-comprihension">เซตคอมพริเฮนชัน (Set comprihension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dict-comprehension">ดิกต์คอมพริเฮนชัน (Dict comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">สรุปข้อดี ข้อเสียของการใช้คอมพริเฮนชัน</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -523,7 +547,7 @@ document.write(`
 <div class="admonition- admonition">
 <p class="admonition-title">จุดมุ่งหมายของบทนี้</p>
 <ul class="simple">
-<li><p>เลือกใช้โครงสร้างข้อมูลประเภทสต์ (list) ดิกชันนารี (dictionary) ทูเปิล (tuple) เคาน์เตอร์ (counter) และเซต (set) ให้เข้ากับโจทย์ได้อย่างถูกต้อง</p></li>
+<li><p>เลือกใช้โครงสร้างข้อมูลประเภทลิสต์ (list) ดิกชันนารี (dictionary) ทูเปิล (tuple) เคาน์เตอร์ (counter) และเซต (set) ให้เข้ากับโจทย์ได้อย่างถูกต้อง</p></li>
 <li><p>การใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> และ <code class="docutils literal notranslate"><span class="pre">while</span></code> ร่วมกับโครงสร้างข้อมูลที่ซับซ้อนขึ้น</p></li>
 <li><p>ใช้เมท็อดของโครงสร้างข้อมูลเพื่อแก้โจทย์ได้อย่างมีประสิทธิภาพ</p></li>
 </ul>
@@ -755,7 +779,7 @@ document.write(`
 <p>เรายังสามารถเขียนทับสมาชิกหลายตัวพร้อมกันได้โดยใช้ช่วงของดัชนี เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;แนน&#39;</span><span class="p">,</span> <span class="s1">&#39;ไอซ์&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
-<span class="c1"># เอาท์พุต: [&#39;โจ้&#39;, &#39;แนน&#39;, &#39;ไอซ์&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
+<span class="c1"># เอาท์พุต: [&#39;โจ้&#39;, &#39;แนน&#39;, &#39;ไอซ์&#39;, &#39;เมย์&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
 </div>
 <p>การเขียนทับสมาชิกในลิสต์จะช่วยให้สามารถเปลี่ยนแปลงข้อมูลภายในลิสต์ได้โดยตรง โดยไม่ต้องสร้างลิสต์ใหม่</p>
@@ -849,7 +873,7 @@ document.write(`
 <span class="c1"># เอาท์พุต: 40</span>
 </pre></div>
 </div>
-<p>ในตัวอย่างนี้ ฟังก์ชัน sum() จะคืนค่าผลรวมของสมาชิกในลิสต์ ส่วนฟังก์ชัน max() จะคืนค่าสมาชิกที่มีค่ามากที่สุด และฟังก์ชัน min() จะคืนค่าสมาชิกที่มีค่าน้อยที่สุด</p>
+<p>ในตัวอย่างนี้ ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> จะคืนค่าผลรวมของสมาชิกในลิสต์ ส่วนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">max()</span></code> จะคืนค่าสมาชิกที่มีค่ามากที่สุด และฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">min()</span></code> จะคืนค่าสมาชิกที่มีค่าน้อยที่สุด</p>
 <p>คุณสมบัติของฟังก์ชันเหล่านี้</p>
 <ul class="simple">
 <li><p>อินพุต: ลิสต์ที่ประกอบด้วยตัวเลข</p></li>
@@ -867,7 +891,7 @@ document.write(`
 </pre></div>
 </div>
 <p>จะทำให้เกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> เนื่องจากไม่สามารถเปรียบเทียบจำนวนเต็มกับสตริงได้</p>
-<p>ข้อควรระวังอีกประการ คือฟังก์ชันเหล่านี้ไม่ใช่่เมท็อดแต่ว่าเป็นฟังก์ชันแบบบิวท์อิน เพราะฉะนั้นลิสต์ไม่สามารถเรียกใช้ในรูปแบบ <code class="docutils literal notranslate"><span class="pre">ลิสต์.sum()</span></code> ได้ หากมีการเรียกใช้งานในลักษณะนี้ จะเกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> ซึ่งเป็นข้อผิดพลาดที่เกิดขึ้นเมื่อพยายามเรียกเมท็อดที่ไม่มีอยู่ในข้อมูลประเภทนั้น ๆ</p>
+<p>ข้อควรระวังอีกประการ คือฟังก์ชันเหล่านี้ไม่ใช่เมท็อดแต่ว่าเป็นฟังก์ชันแบบบิวท์อิน เพราะฉะนั้นลิสต์ไม่สามารถเรียกใช้ในรูปแบบ <code class="docutils literal notranslate"><span class="pre">ลิสต์.sum()</span></code> ได้ หากมีการเรียกใช้งานในลักษณะนี้ จะเกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> ซึ่งเป็นข้อผิดพลาดที่เกิดขึ้นเมื่อพยายามเรียกเมท็อดที่ไม่มีอยู่ในข้อมูลประเภทนั้น ๆ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">class_size_list</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
@@ -906,10 +930,11 @@ document.write(`
 </section>
 <section id="count">
 <h3>นับจำนวนของสมาชิกที่ระบุมา: <code class="docutils literal notranslate"><span class="pre">.count()</span></code><a class="headerlink" href="#count" title="Permalink to this heading">#</a></h3>
-<p>เมท็อด .count() ใช้สำหรับนับจำนวนครั้งที่สมาชิกที่กำหนดปรากฏอยู่ในลิสต์ เมท็อดนี้จะคืนค่าจำนวนครั้งที่พบ</p>
+<p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.count()</span></code>
+ใช้สำหรับนับจำนวนครั้งที่สมาชิกที่กำหนดปรากฏอยู่ในลิสต์ เมท็อดนี้จะคืนค่าจำนวนครั้งที่พบ</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;เมย์&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;เมย์&#39;</span><span class="p">))</span>
 <span class="c1"># เอาท์พุต: 3</span>
 </pre></div>
 </div>
@@ -919,7 +944,7 @@ document.write(`
 <li><p>อินพุต: สมาชิกที่ต้องการนับจำนวนครั้งที่ปรากฏในลิสต์</p></li>
 <li><p>เอาท์พุต: จำนวนครั้งที่สมาชิกนั้นปรากฏในลิสต์</p></li>
 </ul>
-<p>หากสมาชิกที่กำหนดไม่ปรากฏอยู่ในลิสต์ เมท็อด .count() จะคืนค่าเป็น 0 โดยไม่ทำให้เกิดข้อผิดพลาด เช่น</p>
+<p>หากสมาชิกที่กำหนดไม่ปรากฏอยู่ในลิสต์ เมท็อด <code class="docutils literal notranslate"><span class="pre">.count()</span></code> จะคืนค่าเป็น 0 โดยไม่ทำให้เกิดข้อผิดพลาด เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;จิว&#39;</span><span class="p">))</span>
 <span class="c1"># ผลลัพธ์: 0</span>
 </pre></div>
@@ -944,7 +969,7 @@ document.write(`
 <ul class="simple">
 <li><p>อินพุต:</p>
 <ol class="arabic simple">
-<li><p>ดัชนี(สามารถใช้ negativeดัชนีได้)</p></li>
+<li><p>ดัชนี (สามารถใช้ negative ดัชนีได้)</p></li>
 <li><p>สมาชิกใหม่</p></li>
 </ol>
 </li>
@@ -957,7 +982,7 @@ document.write(`
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.remove()</span></code> ใช้สำหรับลบสมาชิกตัวแรกที่มีค่าตรงกับข้อมูลที่ระบุ เมท็อดนี้จะทำการค้นหาจากซ้ายไปขวา และลบสมาชิกตัวแรกที่พบ</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
-<span class="n">accountant_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">accountant_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;จอย&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accountant_list</span><span class="p">)</span>
 <span class="c1"># [&#39;เจ&#39;, &#39;เมย์&#39;, &#39;มิว&#39;]</span>
 </pre></div>
@@ -1008,7 +1033,7 @@ document.write(`
 <section id="dictionary">
 <h2>ดิกชันนารี (Dictionary)<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h2>
 <p>ดิกชันนารี หรือที่โปรแกรมเมอร์มักเรียกย่อว่า “ดิกต์ (dict)” เป็นโครงสร้างข้อมูลที่ใช้เก็บคู่ของคีย์ (key) และแวลู (value) โดยคีย์และแวลูสามารถเป็นข้อมูลประเภทใดก็ได้ ดิกชันนารีมีการทำงานคล้ายคลึงกับพจนานุกรมที่เราคุ้นเคย ซึ่งคีย์เปรียบเสมือนคำที่เราต้องการค้นหา และแวลูเปรียบเสมือนความหมายของคำนั้น ๆ อย่างไรก็ตาม ดิกชันนารีในภาษาไพทอนสามารถมีคีย์และแวลูเป็นข้อมูลประเภทใดก็ได้ ไม่จำกัดแค่คำศัพท์และความหมายเหมือนพจนานุกรม</p>
-<p>อีกประการหนึ่งที่ดิกชันนารีในวิทยาการคอมพิวเตอร์มีความคล้ายคลึงกับพจนานุกรม คือ ดิกชันนารีถูกใช้เพื่อตอบคำถามว่า <em>คีย์นี้มีคู่กับแวลูอะไร</em> แต่ไม่สามารถตอบคำถามในทิศทางตรงกันข้ามได้ว่า <em>แวลูนี้คู่กับคีย์อะไร</em> ในการใช้งานดิกชันนารี เราสามารถค้นหาว่าคีย์ที่ได้รับมานั้นจับคู่กับแวลูใดได้อย่างรวดเร็ว แต่ไม่สามารถใช้แวลูเพื่อค้นหาคีย์ได้โดยตรง</p>
+<p>อีกประการหนึ่งที่ดิกชันนารีในวิทยาการคอมพิวเตอร์มีความคล้ายคลึงกับพจนานุกรม คือ ดิกชันนารีถูกใช้เพื่อตอบคำถามว่า <em>คีย์นี้คู่กับแวลูอะไร</em> แต่ไม่สามารถตอบคำถามในทิศทางตรงกันข้ามได้ว่า <em>แวลูนี้คู่กับคีย์อะไร</em> ในการใช้งานดิกชันนารี เราสามารถค้นหาว่าคีย์ที่ได้รับมานั้นจับคู่กับแวลูใดได้อย่างรวดเร็ว แต่ไม่สามารถใช้แวลูเพื่อค้นหาคีย์ได้โดยตรง</p>
 <p>ตัวอย่างการใช้ดิกชันนารีในการเก็บข้อมูล ได้แก่</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1059,8 +1084,7 @@ document.write(`
 </pre></div>
 </div>
 <p>ในรูปแบบนี้ คีย์และแวลูจะถูกจับคู่กันโดยใช้เครื่องหมายโคลอน <code class="docutils literal notranslate"><span class="pre">:</span></code> และแต่ละคู่คีย์แวลูจะถูกคั่นด้วยเครื่องหมายจุลภาค <code class="docutils literal notranslate"><span class="pre">,</span></code> เช่นเดียวกับการสร้างลิสต์ที่ใช้ <code class="docutils literal notranslate"><span class="pre">,</span></code> ในการคั่นสมาชิกแต่ละตัว</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> 
-			 <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>ดิกชันนารีนี้เก็บข้อมูลเกี่ยวกับชื่อและหมายเลขโทรศัพท์ในลักษณะของคู่คีย์และแวลู ดังนี้</p>
@@ -1095,9 +1119,8 @@ document.write(`
 </section>
 <section id="len">
 <h3>หาจำนวนคู่คีย์แวลูด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code><a class="headerlink" href="#len" title="Permalink to this heading">#</a></h3>
-<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> เมื่อใช้กับดิกชันนารีจะ คืนค่าจำนวนคู่ของคีย์แวลูที่อยู่ในดิก</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> เมื่อใช้กับดิกชันนารีจะ คืนค่าจำนวนคู่ของคีย์แวลูที่อยู่ในดิกต์</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">name_to_phone_number</span><span class="p">)</span> <span class="c1">#--&gt; 3</span>
 </pre></div>
 </div>
@@ -1106,12 +1129,11 @@ document.write(`
 <section id="key-value">
 <h3>เพิ่มข้อมูล (คู่ key-value) เข้าดิกชันนารี<a class="headerlink" href="#key-value" title="Permalink to this heading">#</a></h3>
 <p>เมื่อเราสร้างดิกชันนารีขึ้นมาแล้วอันหนึ่ง เราสามารถเพิ่มคู่คีย์แวลูได้ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">d[คีย์]</span> <span class="pre">=</span> <span class="pre">แวลู</span></code> โดยที่คีย์อาจเป็นได้ทั้งสตริงหรือตัวเลข แต่ไม่สามารถใช้ประเภทข้อมูลเช่นบูลีนหรือลิสต์เป็นคีย์ได้ ตัวอย่างเช่น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
 </pre></div>
 </div>
-<p>บรรทัดแรกเราสร้างดิกชันนารรีที่เก็บค่าคีย์แวลู ดังนี้</p>
+<p>บรรทัดแรกเราสร้างดิกชันนารีที่เก็บค่าคีย์แวลู ดังนี้</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คีย์</p></th>
@@ -1153,8 +1175,7 @@ document.write(`
 </tbody>
 </table>
 <p>ข้อควรระวัง คือคีย์ในดิกชันนารีต้องไม่ซ้ำกัน หากพยายามเพิ่มคู่คีย์-แวลูที่มีคีย์ซ้ำกับคีย์ที่มีอยู่แล้วในดิกชันนารี ข้อมูลเดิมจะถูกเขียนทับ เช่น</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;011-222-3333&#39;</span>
 </pre></div>
@@ -1181,34 +1202,33 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>ดิกชันนารีมีคีย์แวลู อยู่ 4 คู่ เท่าเดิม  <code class="docutils literal notranslate"><span class="pre">name_to_phone_number['ตังเม']</span> <span class="pre">=</span> <span class="pre">'011-222-3333'</span></code> เปลี่ยนคู่คีย์แวลู ที่มี <code class="docutils literal notranslate"><span class="pre">'ตังเม'</span></code> เป็นคีย์ให้เป็นค่าใหม่ที่ป้อนเข้าไป  ให้สังเกตด้วยว่าดิกชันนารีไม่ได้ลบคู่คีย์แวลู เก่าและเติมคู่ใหม่เข้าไป ดิกชันนารีจะเขียนทับตำแหน่งเดิม</p>
+<p>ดิกชันนารีมีคีย์แวลู อยู่ 4 คู่ เท่าเดิม  <code class="docutils literal notranslate"><span class="pre">name_to_phone_number['ตังเม']</span> <span class="pre">=</span> <span class="pre">'011-222-3333'</span></code> เปลี่ยนคู่คีย์แวลู ที่มี <code class="docutils literal notranslate"><span class="pre">'ตังเม'</span></code> เป็นคีย์ให้เป็นค่าใหม่ที่ป้อนเข้าไป  ให้สังเกตด้วยว่าดิกชันนารีไม่ได้ลบคู่คีย์แวลูเก่า
+และเติมคู่ใหม่เข้าไป ดิกชันนารีจะเขียนทับตำแหน่งเดิม</p>
 </section>
 <section id="get">
 <h3>เข้าถึงแวลูด้วยคีย์: <code class="docutils literal notranslate"><span class="pre">[]</span></code> และ <code class="docutils literal notranslate"><span class="pre">.get()</span></code><a class="headerlink" href="#get" title="Permalink to this heading">#</a></h3>
 <p>เราสามารถเข้าถึงค่าที่ตรงกับคีย์ในดิกชันนารีได้โดยระบุคีย์ที่ต้องการ ตัวอย่างเช่น หากเราต้องการทราบหมายเลขโทรศัพท์ของ ‘ตังเม’ จากดิกชันนารีที่เก็บหมายเลขโทรศัพท์ สามารถทำได้ดังนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">]</span> <span class="c1"># ---&gt; &#39;088-888-8888&#39;</span>
 </pre></div>
 </div>
 <p>การเข้าถึงข้อมูลในดิกชันนารีในลักษณะนี้เรียกว่า การเปิดหาข้อมูลในดิกชันนารี (dictionary lookup) ซึ่งเป็นการดึงข้อมูลจากดิกชันนารีโดยไม่ต้องค้นหาจากแหล่งอื่น</p>
 <p>ข้อควรระวังคือ หากค้นหาด้วยคีย์ที่ไม่มีในดิกชันนารี จะเกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> 
-<span class="gp">... </span>                     <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">KeyError</span>: <span class="n">&#39;โนโซมิ&#39;</span>
 </pre></div>
 </div>
-<p>ข้อควรระวังอีกประการคือ เราไม่สามารถค้นหาด้วยแวลูในหาคีย์ที่คู่กันได้ เนื่องจากดิกชันนารีเก็บข้อมูลในลักษณะที่ทำให้ค้นหาด้วยคีย์ไปสู่แวลูได้เท่านั้น  แต่ทำกลับกันไม่ได้ หากแวลูนั้นที่ค้นหาไม่ตรงกับคีย์ใดเลยจะเกิด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> เช่นกัน</p>
+<p>ข้อควรระวังอีกประการคือ เราไม่สามารถค้นหาด้วยแวลูในหาคีย์ที่คู่กันได้ เนื่องจากดิกชันนารีเก็บข้อมูลในลักษณะที่ทำให้ค้นหาจากคีย์ไปสู่แวลูได้เท่านั้น  แต่ทำกลับกันไม่ได้ หากแวลูนั้นที่ค้นหาไม่ตรงกับคีย์ใดเลยจะเกิด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> เช่นกัน</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;011-111-1111&#39;</span><span class="p">]</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">KeyError</span>: <span class="n">&#39;011-111-1111&#39;</span>
 </pre></div>
 </div>
-<p>เพื่อป้องกันการเกิด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> เราสามารถใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.get()</span></code> เพื่อค้นหาคีย์ โดยสามารระบุค่าที่จะคืนค่าได้ ในกรณีที่คีย์นั้นไม่มีอยู่ในดิกชันนารี</p>
+<p>เพื่อป้องกันการเกิด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> เราสามารถใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.get()</span></code> เพื่อค้นหาคีย์ โดยสามารถระบุค่าที่จะคืนค่าได้ ในกรณีที่คีย์นั้นไม่มีอยู่ในดิกชันนารี</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">word_to_freq</span><span class="p">[</span><span class="s1">&#39;Jack&#39;</span><span class="p">]</span>
 <span class="go">KeyError: &#39;Jack&#39;</span>
@@ -1227,8 +1247,7 @@ document.write(`
 <h4>วนซ้ำไปบนคีย์<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
 <p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ในการวนซ้ำไปบนดิกชันนารีได้โดยตรง ในการวนซ้ำแบบนี้ ระบบจะตีความว่าต้องการวนซ้ำไปบนคีย์แต่ละตัว (ไม่ใช่การวนซ้ำบนคู่คีย์แวลู)</p>
 <p>ตัวอย่างการวนซ้ำไปบนคีย์</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;011-222-3333&#39;</span>
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">name_to_phone_number</span><span class="p">:</span> 
@@ -1257,8 +1276,7 @@ document.write(`
 <section id="value">
 <h4>วนซ้ำไปบน value<a class="headerlink" href="#value" title="Permalink to this heading">#</a></h4>
 <p>ดิกชันนารีมีเมท็อด<code class="docutils literal notranslate"><span class="pre">.values()</span></code> ที่ทำให้เราวนซ้ำไปบนแวลูได้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span>
-	<span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
 <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">name_to_phone_number</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
 	<span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
@@ -1309,17 +1327,25 @@ document.write(`
 <p>การตรวจสอบว่าแวลูมีอยู่ในดิกชันนารีหรือไม่ทำได้ยากกว่า เนื่องจากดิกชันนารีไม่ได้ออกแบบมาเพื่อการตรวจสอบแวลูโดยตรง เราจำเป็นต้องวนซ้ำไปบนแวลูทั้งหมดเพื่อหาแวลูที่ตรงกัน ตัวอย่างการใช้วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code> เพื่อตรวจสอบว่าแวลู 200 มีอยู่ในดิกชันนารีหรือไม่</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value_to_find</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
-<span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">word_to_freq</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-	<span class="k">if</span> <span class="n">value_to_find</span> <span class="o">==</span> <span class="n">freq</span><span class="p">:</span>
-		<span class="k">return</span> <span class="kc">True</span>
-<span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">find_value</span><span class="p">(</span><span class="n">value_to_find</span><span class="p">,</span> <span class="n">word_to_freq</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">word_to_freq</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">value_to_find</span> <span class="o">==</span> <span class="n">freq</span><span class="p">:</span>
+      <span class="k">return</span> <span class="kc">True</span>
+  <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">find_value</span><span class="p">(</span><span class="n">value_to_find</span><span class="p">,</span> <span class="n">word_to_freq</span><span class="p">)</span> <span class="c1">#---&gt; True</span>
 </pre></div>
 </div>
 <p>อีกวิธีหนึ่งคือการแปลงแวลูทั้งหมดในดิกชันนารีให้เป็นลิสต์ แล้วใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">in</span></code> ในการตรวจสอบ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value_to_find</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
-<span class="n">freq_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word_to_freq</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="k">return</span> <span class="n">value_to_find</span> <span class="ow">in</span> <span class="n">freq_list</span>
+
+<span class="k">def</span> <span class="nf">find_value</span><span class="p">(</span><span class="n">value_to_find</span><span class="p">,</span> <span class="n">word_to_freq</span><span class="p">):</span>
+  <span class="n">freq_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word_to_freq</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+  <span class="k">return</span> <span class="n">value_to_find</span> <span class="ow">in</span> <span class="n">freq_list</span>
+
+<span class="n">find_value</span><span class="p">(</span><span class="n">value_to_find</span><span class="p">,</span> <span class="n">word_to_freq</span><span class="p">)</span> <span class="c1">#---&gt; True</span>
 </pre></div>
 </div>
 <p>ซึ่งทั้งสองวิธีเป็นมักจะใช้เวลานานเนื่องจากเราจะต้องวนไล่ไปบนแวลูแต่ละตัว ยิ่งดิกชันนารีใหญ่แค่ไหนเวลาในการรันโปรแกรมก็จะนานตามไปด้วย ซึ่งต่างจากการตรวจสอบคีย์ซึ่งใช้เวลาในการรันโปรแกรมเป็นค่าคงตัว ไม่ขึ้นกับขนาดของดิกชันนารี ถ้าหากเราจำเป็นต้องมีการตรวจสอบว่ามีแวลูอะไรอยู่หรือไม่ เราไม่ควรใช้ดิกชันนารีในการเก็บข้อมูล</p>
@@ -1352,24 +1378,24 @@ document.write(`
 </div>
 <p>ข้อแตกต่างสำคัญระหว่างทูเปิลและลิสต์คือ ทูเปิลเป็นโครงสร้างข้อมูลที่ไม่สามารถเปลี่ยนแปลงได้ (immutable) กล่าวคือ เมื่อสร้างทูเปิลขึ้นมาแล้ว เราไม่สามารถเปลี่ยนแปลงค่าของสมาชิกภายในทูเปิล หรือเพิ่มหรือลดจำนวนสมาชิกในทูเปิลได้ แม้ว่าลักษณะดังกล่าวอาจถูกมองว่าเป็นข้อจำกัด แต่การใช้ทูเปิลช่วยลดโอกาสในการเกิดข้อผิดพลาดในโปรแกรม เนื่องจากค่าต่าง ๆ ภายในทูเปิลจะไม่ถูกแก้ไขโดยไม่ตั้งใจ</p>
 <ul class="simple">
-<li><p>พิกัดบนแผนที่โลก อาจจะถูกเก็บในทูเปิดโดยที่ดัชนี 0 เป็น latitude และดัชนี1 เป็น longtitude อาจจะถูกเก็บในทูเปิล ดังนี้  <code class="docutils literal notranslate"><span class="pre">('13.7563°</span> <span class="pre">N',</span> <span class="pre">'100.5018°')</span></code></p></li>
+<li><p>พิกัดบนแผนที่โลก อาจจะถูกเก็บในทูเปิลโดยที่ดัชนี 0 เป็น latitude และดัชนี 1 เป็น longtitude อาจจะถูกเก็บในทูเปิล ดังนี้  <code class="docutils literal notranslate"><span class="pre">('13.7563°</span> <span class="pre">N',</span> <span class="pre">'100.5018°')</span></code></p></li>
 <li><p>ชื่อนามสกุล อาจจะถูกเก็บในทูเปิลโดยที่ดัชนี 0 เป็นชื่อดัชนี 1 เป็นนามสกุล ดังนี้ <code class="docutils literal notranslate"><span class="pre">('อรรถพล',</span> <span class="pre">'ธำรงรัตนฤทธิ์')</span></code></p></li>
-<li><p>สี มักจะถูกจัดเก็บเป็นค่าแดงเขียวน้ำเงิน (RGB) โดยที่ดัชนี 0 เป็นค่าของสีแด งดัชนี 1 เป็นค่าของสีเขียว ดัชนี 2 เป็นค่าของสีน้ำเงิน ดังนี้ <code class="docutils literal notranslate"><span class="pre">(256,</span> <span class="pre">256,</span> <span class="pre">256)</span></code></p></li>
+<li><p>สี มักจะถูกจัดเก็บเป็นค่าแดงเขียวน้ำเงิน (RGB) โดยที่ดัชนี 0 เป็นค่าของสีแดง ดัชนี 1 เป็นค่าของสีเขียว ดัชนี 2 เป็นค่าของสีน้ำเงิน ดังนี้ <code class="docutils literal notranslate"><span class="pre">(256,</span> <span class="pre">256,</span> <span class="pre">256)</span></code></p></li>
 </ul>
 <p>ในกรณีเหล่านี้ การเพิ่มหรือลดสมาชิกในทูเปิลจะทำให้ข้อมูลสูญเสียความหมายและความชัดเจน เนื่องจากจำนวนสมาชิกของทูเปิลนั้นมีความหมายเฉพาะเจาะจง เช่น พิกัดควรมีเพียงสองตำแหน่งเท่านั้น หรือค่าของสีแบบ RGB ควรประกอบด้วยสามค่าเสมอ</p>
 <p>การเข้าถึงข้อมูลในทูเปิลสามารถทำได้เช่นเดียวกับลิสต์ โดยใช้ดัชนีบวกและดัชนีลบ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
 <span class="n">first_name</span> <span class="o">=</span> <span class="n">first_last_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="n">first_last_name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span> <span class="c1"># อรรถพล</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span> <span class="c1"># ธำรงรัตนฤทธิ์</span>
 </pre></div>
 </div>
 <p>เพื่อความสะดวกเรามักจะ<em>กระจาย</em>ค่าของทูเปิลใส่ตัวแปรหลาย ๆ ตัวพร้อม ๆ กัน เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
 <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">first_last_name</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">first_name</span><span class="p">)</span> <span class="c1"># อรรถพล</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">last_name</span><span class="p">)</span> <span class="c1"># ธำรงรัตนฤทธิ์</span>
 </pre></div>
 </div>
 <p>แม้ว่าการกระจายค่าเช่นนี้สามารถทำกับลิสต์ได้เช่นกัน แต่ในทางปฏิบัติ การใช้กับทูเปิลจะเหมาะสมกว่า เนื่องจากเราสามารถมั่นใจได้ว่าจำนวนสมาชิกในทูเปิลจะไม่เปลี่ยนแปลงเมื่อโปรแกรมทำงาน ซึ่งแตกต่างจากลิสต์ที่สามารถเพิ่มหรือลดสมาชิกได้ ทำให้การคาดการณ์จำนวนสมาชิกในลิสต์ยากขึ้น</p>
@@ -1418,7 +1444,7 @@ document.write(`
         <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">word_counter[word]</span></code> คืนค่ามาเป็น 0 หากคำนั้นไม่ได้ปรากฏในเคานเตอร์ซึ่งทำให้นิพจน์ ทางขวามือของเครื่องหมายเท่ากับเป็น <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">1</span></code> ซ่ึงเป็นผลที่เราต้องการ
+<p><code class="docutils literal notranslate"><span class="pre">word_counter[word]</span></code> คืนค่ามาเป็น 0 หากคำนั้นไม่ได้ปรากฏในเคานเตอร์ซึ่งทำให้นิพจน์ ทางขวามือของเครื่องหมายเท่ากับเป็น <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">1</span></code> ซึ่งเป็นผลที่เราต้องการ
 ถ้าหากเราจะใช้ดิกชันนารีแทนเคาน์เตอร์ก็สามารถทำได้ ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_counter</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
@@ -1428,7 +1454,7 @@ document.write(`
         <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>หากเราใช้ดิกชันนารีปกติ ราต้องตรวจสอบว่าคีย์อยู่ในดิกชันนารีอยู่แล้วหรือไม่ ถ้าไม่ได้อยู่ในดิกชันนารี เราต้องเพิ่มคู่คีย์แวลูใหม่โดยตั้งให้ค่าแวลูเป็น 0 เตรียมเอาไว้ก่อน เพื่อป้องกัน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
+<p>หากเราใช้ดิกชันนารีปกติ เราต้องตรวจสอบว่าคีย์อยู่ในดิกชันนารีอยู่แล้วหรือไม่ ถ้าไม่ได้อยู่ในดิกชันนารี เราต้องเพิ่มคู่คีย์แวลูใหม่โดยตั้งให้ค่าแวลูเป็น 0 เตรียมเอาไว้ก่อน เพื่อป้องกัน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
 </section>
 <section id="most-common">
 <h3>หาค่าคีย์ที่คู่กับแวลูที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code><a class="headerlink" href="#most-common" title="Permalink to this heading">#</a></h3>
@@ -1482,31 +1508,7 @@ document.write(`
 </div>
 </section>
 <section id="id23">
-<h3>การสร้างเซตด้วยเซตคอมพริเฮนชัน<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
-<p>เซตคอมพริเฮนชัน (set comprehension) คือ วิธีการสร้างเซตที่ใช้คำสั่งแบบกระชับ และสร้างเซตขึ้นมาโดยใช้เวลาน้อยกว่าการสร้างเซตโดยวิธีอื่น ๆ เซตคอมพริเฮนชันคล้ายคลึงกับลิสต์คอมพรีเฮนชัน ตรงที่เราเริ่มจากแปลงข้อมูลจากลิสต์ ดิกชันนารี หรือเซตอื่นๆ ให้กลายเป็นเซต (แทนที่จะเป็นลิสต์)</p>
-<p>โครงสร้างของการสร้างเซตด้วยเซตคอมพริเฮนชันคล้ายคลึงกับลิสต์คอมพรีเฮนชัน เพียงแต่เปลี่ยน <code class="docutils literal notranslate"><span class="pre">[]</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">{}</span></code> แทน ดังนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">นิพจน์</span> <span class="k">for</span> <span class="n">สมาชิก</span> <span class="ow">in</span> <span class="n">ลิสต์</span> <span class="n">เซต</span> <span class="n">หรือดิกชันนารี</span> <span class="k">if</span> <span class="n">เงื่อนไข</span><span class="p">}</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>นิพจน์ (expression) คือสูตรหรือคำสั่งที่ใช้แปลงไอเท็มแต่ละไอเท็มในลิสต์ เซต หรือดิกชันนารี ให้กลายเป็นสมาชิกของเซตที่เรากำลังสร้างขึ้น</p></li>
-<li><p>สิ่งที่วนซ้ำได้ (iterable) คือข้อมูลที่สามารถวนซ้ำได้ เช่น ลิสต์ เซต หรือดิกชันนารี</p></li>
-<li><p>เงื่อนไขการเข้าสู่เซต (มีหรือไม่มีก็ได้) เป็นนิพจน์ที่แปลงสมาชิกให้เป็นค่าบูลีน ถ้าบูลีนเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> สมาชิกตัวนั้นจะถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น แต่ถ้าบูลีนเป็น <code class="docutils literal notranslate"><span class="pre">False</span></code> สมาชิกตัวนั้นจะไม่ถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น</p></li>
-</ul>
-<p>สมมติว่าเราต้องการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาจากลิสต์รายชื่อนักเรียน</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;อาทิตยา&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;สุชาดา&#39;</span><span class="p">]</span>
-<span class="n">aa_name_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;า&#39;</span><span class="p">)}</span>
-</pre></div>
-</div>
-<p>เราสามารถใช้เซตคอมพริเฮนชันในการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาได้ด้วยคำสั่งบรรทัดเดียว โครงสร้างของคำสั่งแบ่งเป็นสามส่วนดังนี้</p>
-<ul class="simple">
-<li><p>นิพจน์ ไม่มีการเปลี่ยนแปลงชื่อนักเรียน แต่เราใช้ <code class="docutils literal notranslate"><span class="pre">name</span></code> ในการเข้าถึงชื่อนักเรียนแต่ละคน</p></li>
-<li><p>สมาชิกเป็นชื่อที่ได้จากการใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ในการวนซ้ำเพื่อเข้าถึงชื่อนักเรียนทุกคนในลิสต์ <code class="docutils literal notranslate"><span class="pre">student_names</span></code> ซึ่งเป็นสิ่งที่วนซ้ำได้</p></li>
-<li><p>เงื่อนไขการเข้าสู่เซต เราใช้ <code class="docutils literal notranslate"><span class="pre">name.endswith('า')</span></code> ในการตรวจสอบว่าชื่อนักเรียนลงท้ายด้วยสระอาหรือไม่ ถ้าลงท้ายด้วยสระอา ชื่อนักเรียนจะถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น แต่ถ้าไม่ลงท้ายด้วยสระอา ชื่อนักเรียนจะไม่ถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น</p></li>
-</ul>
-</section>
-<section id="id24">
-<h3>การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<h3>การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
 <p>เราสามารถใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">in</span></code> เพื่อตรวจสอบว่าข้อมูลที่ได้มาเป็นสมาชิกของเซตหรือไม่ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;French&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">,</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">}</span>
 <span class="s1">&#39;English&#39;</span> <span class="ow">in</span> <span class="n">languages</span> <span class="c1"># True</span>
@@ -1515,11 +1517,11 @@ document.write(`
 </div>
 <p>เซตสละความสามารถในการเก็บลำดับของข้อมูล เพื่อแลกมากับความเร็วในการหาข้อมูล การตรวจสอบการเป็นสมาชิกในลิสต์ต้องไล่ตรวจสอบสมาชิกทีละตัวโดยใช้เวลาเชิงเส้น (linear time) ซึ่งหมายความว่าเวลาที่ใช้ในการค้นหาจะเพิ่มขึ้นตามจำนวนสมาชิกในลิสต์ ในทางตรงกันข้ามเซตใช้โครงสร้างข้อมูลแฮช (hashing) ซึ่งช่วยให้การค้นหาสมาชิกสามารถทำได้ในเวลาคงที่ (constant time) โดยไม่ขึ้นกับจำนวนสมาชิกที่อยู่ในเซต ทำให้เซตเหมาะสมกว่าลิสต์สำหรับการตรวจสอบการเป็นสมาชิก โดยเฉพาะเมื่อมีจำนวนข้อมูลมาก</p>
 </section>
-<section id="id25">
-<h3>การวนซ้ำบนเซต<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<section id="id24">
+<h3>การวนซ้ำบนเซต<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
 <p>เราสามารถใช้ for ลูปเพื่อเข้าถึงสมาชิกทุกตัวในเซตได้ เช่นเดียวกับการวนซ้ำในลิสต์ แต่เนื่องจากเซตไม่มีการเก็บลำดับของข้อมูล การวนซ้ำด้วย for จึงไม่ได้เรียงลำดับตามที่เราเพิ่มข้อมูลเข้าไป</p>
-<section id="id26">
-<h4>ตัวอย่าง<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
+<section id="id25">
+<h4>ตัวอย่าง<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;French&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
@@ -1537,8 +1539,8 @@ document.write(`
 <section id="add">
 <h3>การเพิ่มสมาชิกในเซตด้วย <code class="docutils literal notranslate"><span class="pre">add()</span></code><a class="headerlink" href="#add" title="Permalink to this heading">#</a></h3>
 <p>เราสามารถเพิ่มสมาชิกในเซตได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">add</span></code> ซึ่งต่างจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">append</span></code> ของลิสต์ คำว่า append ภาษาอังกฤษแปลว่าเพิ่มไปตรงท้าย แต่คำว่า add แปลว่าเพิ่มเข้าไปโดยไม่ได้คำนึงถึงลำดับของสมาชิก ผู้พัฒนาภาษาไพทอนเลือกใช้คำว่า add เพื่อแสดงให้เห็นว่าเซตไม่เก็บลำดับของสมาชิก</p>
-<section id="id27">
-<h4>ตัวอย่าง<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h4>
+<section id="id26">
+<h4>ตัวอย่าง<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเราทำโจทย์เดียวกับตัวอย่างที่ผ่านมา เราต้องการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาจากลิสต์รายชื่อนักเรียน เราสามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">add</span></code> เพื่อเพิ่มสมาชิกที่ต้องการเข้าไปทีละตัว แทนที่การใช้เซตคอมพลิเฮนชันได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;อาทิตยา&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;สุชาดา&#39;</span><span class="p">]</span>
 <span class="n">aa_name_set</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># จะใช้ aa_name_set = set() แทนก็ได้</span>
@@ -1552,15 +1554,15 @@ document.write(`
 <section id="remove-discard">
 <h3>เอาสมาชิกออกจากเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code> และ <code class="docutils literal notranslate"><span class="pre">discard()</span></code><a class="headerlink" href="#remove-discard" title="Permalink to this heading">#</a></h3>
 <p>แม้ว่าคำสั่งนี้อาจไม่ถูกใช้งานบ่อยนัก แต่การลบสมาชิกออกจากเซตเป็นสิ่งที่ควรรู้เพื่อความสมบูรณ์ของการใช้งานเซต เมท็อด <code class="docutils literal notranslate"><span class="pre">remove()</span></code> ใช้ในการลบสมาชิกออกจากเซตโดยเราต้องระบุสมาชิกที่ต้องการลบ หากสมาชิกนั้นไม่มีอยู่ในเซต จะทำให้เกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
-<section id="id28">
-<h4>ตัวอย่าง<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h4>
+<section id="id27">
+<h4>ตัวอย่าง<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเรามีเซตของตัวเลือกที่เป็นไปได้ในแบบสอบถาม เช่น Strongly disagree, Disagree, Neutral, Agree, และ Strongly agree และเราต้องการลบตัวเลือก “Strongly disagree” และ “Strongly agree” ออกจากเซต</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">possible_responses</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Strongly disagree&#39;</span><span class="p">,</span> <span class="s1">&#39;Disagree&#39;</span><span class="p">,</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;Agree&#39;</span><span class="p">,</span> <span class="s1">&#39;Strongly agree&#39;</span><span class="p">}</span>
 <span class="n">possible_responses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Strongly disagree&#39;</span><span class="p">)</span>
 <span class="n">possible_responses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Strongly agree&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>หากพยายามลบสมาชิกที่ไม่มีอยู่ในเซตด้วย remove() จะทำให้เกิดข้อผิดพลาด KeyError ดังตัวอย่างนี้</p>
+<p>หากพยายามลบสมาชิกที่ไม่มีอยู่ในเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code>  จะทำให้เกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> ดังตัวอย่างนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">possible_responses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Maybe&#39;</span><span class="p">)</span>  <span class="c1"># จะเกิด KeyError เพราะ &#39;Maybe&#39; ไม่มีอยู่ในเซต</span>
 </pre></div>
 </div>
@@ -1571,8 +1573,8 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">discard()</span></code> มีประโยชน์ในกรณีที่ไม่แน่ใจว่าสมาชิกที่ต้องการลบมีอยู่ในเซตหรือไม่ ช่วยให้โปรแกรมไม่เกิดข้อผิดพลาดและทำงานต่อไปได้อย่างราบรื่น</p>
 </section>
 </section>
-<section id="id29">
-<h3>การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<section id="id28">
+<h3>การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
 <p>เซตในภาษาไพทอนรองรับการดำเนินการของเซตทุกตัว สมมติว่าเรามีเซต A เก็บอยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">setA</span></code> และเซต B เก็บอยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">setB</span></code></p>
 <ul class="simple">
 <li><p>อินเตอร์เซกชัน (A ∩ B) คือ การสร้างเซตที่ประกอบด้วยสมาชิกที่อยู่ทั้งในเซต A และเซต B ภาษาไพทอนใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">setA.intersection(setB)</span></code></p></li>
@@ -1581,8 +1583,8 @@ document.write(`
 </ul>
 <p>เซตในโลกของการประมวลผลภาษาธรรมชาติมักจะใช้ในการเก็บรายการคำศัพท์ (vocabulary หรือ vocab) เช่น คำศัพท์ที่ปรากฎทั้งหมดในข้อสอบชุดหนึ่ง คำศัพท์ที่เห็นทั้งหมดในคลังข้อมูล (corpus ชุดข้อมูลที่รวบรวมข้อมูลภาษาเอาไว้จำนวนมาก) คำศัพท์ที่แบบจำลองเข้าใจความหมายอยู่แล้ว เซตเหมาะแก่การเก็บรายการคำศํพท์ เพราะ รายการคำศัพท์มักประกอบด้วยคำศัพท์ที่พบเห็นอย่างน้อยหนึ่งครั้ง โดยไม่คำนึงว่าเกิดขึ้นซ้ำหรือไม่ และไม่คำนึงถึงลำดับการเกิดของคำศัพท์ นอกจากนั้นแล้วเซตในภาษาไพทอนยังรองรับการใช้การดำเนินการของเซตได้อย่างสะดวกสบายอีกด้วย
 ในตัวอย่างต่อไปนี้ เรามีคำศัพท์จากแบบจำลองภาษาขนาดใหญ่ที่ครอบคลุมหลายภาษา เก็บไว้ในตัวแปร <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> และมีคำศัพท์จากแบบจำลองภาษาไทย เก็บไว้ในตัวแปร <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code></p>
-<section id="id30">
-<h4>ตัวอย่าง: อินเตอร์เซกชัน<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
+<section id="id29">
+<h4>ตัวอย่าง: อินเตอร์เซกชัน<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการหาว่าคำศัพท์ที่ปรากฎในทั้งสองเซต คือ <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> และ <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code> สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">intersection</span></code> ในการหาคำศัพท์ที่ปรากฎในทั้งสองตัวแปรได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1619,8 +1621,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id31">
-<h4>ตัวอย่าง: ยูเนียน<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
+<section id="id30">
+<h4>ตัวอย่าง: ยูเนียน<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการขยายความสามารถของโมเดลหลากภาษา โดยการขยายคำศัพท์ ของโมเดลหลากภาษาให้มีคำศัพท์ที่มาจากแบบจำลองภาษาไทยด้วย สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">union</span></code> ในการขยายคำศัพท์ของโมเดลหลากภาษาได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1640,14 +1642,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">larger_vocab</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>เอาท์พุธที่ปรากฎบนหน้าจอ คือ</p>
+<p>เอาท์พุตที่ปรากฎบนหน้าจอ คือ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>สังเกตว่าผลที่ได้จะออกมาเป็นลิสต์ ซึ่งเป็นพฤติกรรมที่สมเหตุสมผลของคำสั่ง <code class="docutils literal notranslate"><span class="pre">sorted</span></code> เนื่องจากเราจำเป็นต้องใช้โครงสร้างข้อมูลที่มีการเก็บลำดับของสมาชิกแต่ละตัว</p>
 </section>
-<section id="id32">
-<h4>ตัวอย่าง: ผลต่างของเซต<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h4>
+<section id="id31">
+<h4>ตัวอย่าง: ผลต่างของเซต<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
 <p>สมมติเราต้องการทราบว่า <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code> มีคำศัพท์ภาษาไทยคำใดบ้าง ที่ <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> ไม่มี สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">difference</span></code> ในการหาคำศัพท์ได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1662,8 +1664,8 @@ document.write(`
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">difference</span></code> คืนค่าเป็นเซตใหม่ขึ้นมาต่างหาก แยกต่างหากจาก <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> และ <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code> ที่เราใช้ในการเรียกคำสั่ง เช่นเดียวกับการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">intersection</span></code> และ <code class="docutils literal notranslate"><span class="pre">union</span></code></p>
 </section>
 </section>
-<section id="id33">
-<h3>สรุปเรื่องเซต<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h3>
+<section id="id32">
+<h3>สรุปเรื่องเซต<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
 <p>เซตในภาษาไพทอนเป็นโครงสร้างข้อมูลที่เหมาะสมกับการเก็บข้อมูลที่ไม่มีการจัดลำดับ และไม่มีการเก็บข้อมูลที่ซ้ำกัน โดยเซตในภาษาไพทอนมีความสามารถในการใช้ set operation ได้ทั้งหมด 3 ตัว คือ intersection union และการลบกันของเซต ในการประมวลผลภาษาธรรมชาติเซตมักถูกใช้ในการเก็บรายการคำศัพท์ หรือเรียกว่า vocabulary</p>
 <p>คำสั่งของเซตในภาษาไพทอน สรุปเป็นตารางได้ดังนี้</p>
 <table class="colwidths-auto table">
@@ -1691,8 +1693,229 @@ document.write(`
 <p>ทั้งสามคำสั่งจะคืนค่าออกมาเป็นเซตใหม่แยกต่างหากจาก <code class="docutils literal notranslate"><span class="pre">setA</span></code> และ <code class="docutils literal notranslate"><span class="pre">setB</span></code> ที่เราใช้ในการเรียกคำสั่ง หลังจากเรียกคำสั่ง set operation แล้ว สมาชิกของ <code class="docutils literal notranslate"><span class="pre">setA</span></code> และ <code class="docutils literal notranslate"><span class="pre">setB</span></code> จะไม่เปลี่ยนแปลง</p>
 </section>
 </section>
+<section id="comprehension">
+<h2>คอมพริเฮนชัน (Comprehension)<a class="headerlink" href="#comprehension" title="Permalink to this heading">#</a></h2>
+<p>ก่อนหน้านี้เราได้เรียนวิธีการสร้างลิสต์ ดิกต์ และเซ็ตด้วยวิธีการดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">my_list2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">my_dict2</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="list-comprehension">
+<h3>ลิสต์คอมพริเฮนชัน (List comprehension)<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h3>
+<p>ลิสต์คอมพริเฮนชัน (List comprehension) คือสร้างลิสต์ขึ้นมาจากสิ่งที่เป็น iterable เช่น ลิสต์ ดิกชันนารี และเซ็ต ซึ่งเป็นกรณีการใช้ที่เกิดขึ้นบ่อย เนื่องจากมีหลายครั้งที่เราต้องแปลงจากลิสต์เป็นอีกลิสต์หนึ่งซึ่งสมาชิกข้างในถูกแปลงให้เป็นอย่างหนึ่ง</p>
+<section id="id33">
+<h4>ตัวอย่าง<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเรามีลิสต์ของสตริง แต่เราต้องการเปลี่ยนให้เป็นตัวใหญ่ทั้งหมด เราสามารถสร้างลิสต์ใหม่เตรียมไว้รับ output จากนั้นทำการวนลูปบนสมาชิกของลิสต์ แปลงเป็นตัวใหญ่ จากนั้นก็ <code class="docutils literal notranslate"><span class="pre">.append</span></code> เข้าสู่ลิสต์ที่จะเป็น output ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">new_sentence</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="n">new_sentence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_sentence</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [&#39;PROGRAMMING&#39;, &#39;IS&#39;, &#39;VERY&#39;, &#39;INTERESTING&#39;]</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนให้กระชับได้โดยการใช้ list comprehension ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">new_sentence2</span> <span class="o">=</span><span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_sentence2</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [&#39;PROGRAMMING&#39;, &#39;IS&#39;, &#39;VERY&#39;, &#39;INTERESTING&#39;]</span>
+</pre></div>
+</div>
+</section>
 <section id="id34">
-<h2>สรุป<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h2>
+<h4>ตัวอย่าง<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราต้องการเปลี่ยนให้จากลิสต์เดิมให้เป็นลิสต์ที่มีความยาวของสตริงแต่ละตัวแทน เราสามารถทำด้วยวิธีที่คล้ายคลึงกัน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">length_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="n">length_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">length_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [11, 2, 4, 11]</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนให้กระชับได้โดยการใช้ list comprehension ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">length_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">length_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [11, 2, 4, 11]</span>
+</pre></div>
+</div>
+<p>วิธีการใช้ list comprehension มีดังนี้
+<code class="docutils literal notranslate"><span class="pre">[expression</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable]</span></code> เช่น</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[w.upper()</span> <span class="pre">for</span> <span class="pre">w</span> <span class="pre">in</span> <span class="pre">sentence]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[len(w)</span> <span class="pre">for</span> <span class="pre">w</span> <span class="pre">in</span> <span class="pre">sentence]</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">นิพจน์</span> <span class="pre">(expression</span></code>) คือสูตรหรือคำสั่งที่ใช้แปลงไอเท็มแต่ละไอเท็มในลิสต์ เซต หรือดิกชันนารี ให้กลายเป็นสมาชิกของเซตที่เรากำลังสร้างขึ้น</p>
+<p><code class="docutils literal notranslate"><span class="pre">สิ่งที่วนซ้ำได้</span> <span class="pre">(iterable)</span></code> คือข้อมูลที่สามารถวนซ้ำได้ เช่น ลิสต์ เซต หรือดิกชันนารี</p>
+</section>
+</section>
+<section id="id35">
+<h3>คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<p>เราสามารถระบุเพิ่มเติมได้ด้วยว่าสมาชิกตัวไหนบ้างใน iterable ที่เป็น input จะถูกรวมไว้ในลิสต์ output</p>
+<section id="id36">
+<h4>ตัวอย่าง<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราอยากแปลงลิสต์ที่มีคำในประโยคมาเป็นลิสต์ที่มีความยาวของแต่ละคำในประโยคอยู่ โดยที่เราสนใจเฉพาะคำที่มีความยาวมากกว่า 2 ตัวอักษร</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">length_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">length_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">length_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [11, 4, 11]</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนโค้ดให้กระชับขึ้นโดยใช้ list comprehension ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
+<span class="n">length_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">sentence</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">length_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [11, 4, 11]</span>
+</pre></div>
+</div>
+</section>
+<section id="id37">
+<h4>ตัวอย่าง<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเรามีลิสต์ของคำในประโยคอยู่ แต่ว่าเราอยากได้ลิสต์ที่มีคำที่เป็นตัวอักษรภาษาไทยเท่านั้น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;บท&#39;</span><span class="p">,</span> <span class="s1">&#39;นี้&#39;</span><span class="p">,</span> <span class="s1">&#39;เกี่ยวกับ&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;comprehension&#39;</span><span class="p">,</span> <span class="s1">&#39;และ&#39;</span><span class="p">,</span> <span class="s1">&#39;อื่นๆ&#39;</span><span class="p">]</span>
+<span class="n">new_word_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;[ก-์]+&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="n">new_word_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_word_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [&#39;บท&#39;, &#39;นี้&#39;, &#39;เกี่ยวกับ&#39;, &#39;และ&#39;, &#39;อื่นๆ&#39;]</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนโค้ดให้กระชับขึ้นโดยใช้ list comprehension ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;บท&#39;</span><span class="p">,</span> <span class="s1">&#39;นี้&#39;</span><span class="p">,</span> <span class="s1">&#39;เกี่ยวกับ&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;comprehension&#39;</span><span class="p">,</span> <span class="s1">&#39;และ&#39;</span><span class="p">,</span> <span class="s1">&#39;อื่นๆ&#39;</span><span class="p">]</span>
+<span class="n">new_word_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;[ก-์]+&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_word_list</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : [&#39;บท&#39;, &#39;นี้&#39;, &#39;เกี่ยวกับ&#39;, &#39;และ&#39;, &#39;อื่นๆ&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="id38">
+<h4>สรุปการใช้คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h4>
+<p>วิธีการใช้ list comprehension แบบมีเงื่อนไข มีดังนี้
+<code class="docutils literal notranslate"><span class="pre">[expression</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข]</span></code> เช่น</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[len(w)</span> <span class="pre">for</span> <span class="pre">w</span> <span class="pre">in</span> <span class="pre">sentence</span> <span class="pre">if</span> <span class="pre">len(w)</span> <span class="pre">&gt;2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[word</span> <span class="pre">for</span> <span class="pre">word</span> <span class="pre">in</span> <span class="pre">word_list</span> <span class="pre">if</span> <span class="pre">re.match('[ก-์]+',</span> <span class="pre">word)]</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">เงื่อนไข</span> <span class="pre">(มีหรือไม่มีก็ได้)</span></code> เป็นนิพจน์ที่แปลงสมาชิกให้เป็นค่าบูลีน ถ้าบูลีนเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> สมาชิกตัวนั้นจะถูกเพิ่มเข้าไปในลิสต์ เซต หรือดิกต์ที่กำลังสร้างขึ้น แต่ถ้าบูลีนเป็น <code class="docutils literal notranslate"><span class="pre">False</span></code> สมาชิกตัวนั้นจะไม่ถูกเพิ่มเข้าไปในลิสต์ เซต หรือดิกต์ที่กำลังสร้างขึ้น</p>
+</section>
+</section>
+<section id="set-comprihension">
+<h3>เซตคอมพริเฮนชัน (Set comprihension)<a class="headerlink" href="#set-comprihension" title="Permalink to this heading">#</a></h3>
+<p>หลักการและวิธีการใช้ set comprehension แทบจะเหมือนกันกับ list comprehension เป็นการสร้างเซ็ตขึ้นมาจาก iterable อีกอันหนึ่งโดยอาจมีแปลงค่าของสมาชิกด้วยฟังก์ชันต่าง ๆ และ/หรือกรองเอาสมาชิกบางตัวออกโดยการกำหนดเงื่อนไขบูลีน</p>
+<p>วิธีการใช้ set comprehension เหมือน list comprehension เพียงแค่เปลี่ยนเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">{expression</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข}</span></code></p>
+<section id="id39">
+<h4>ตัวอย่าง<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h4>
+<p>Vocabulary หมายถึงเซ็ตของคำศัพท์ทั้งหมดที่เราต้องการวิเคราะห์ หรือนำมาเป็นส่วนหนึ่งของโมเดล จะนับเฉพาะคำที่รูปไม่ซ้ำกัน</p>
+<p>สมมติว่าเรามีลิสต์ของคำทั้งหมดที่มีอยู่ในคลังข้อมูล เราต้องการทราบ vocabulary ของคลังข้อมูลนี้ว่ามีคำว่าอะไรบ้าง โดยนับเฉพาะคำที่เป็นตัวภาษาอังกฤษเท่านั้น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">vocab</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;baby&#39;, &#39;oh&#39;, &#39;no&#39;}</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนโค้ดให้กระชับขึ้นโดยใช้ set comprehension ได้ดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
+<span class="n">vocab2</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vocab2</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;baby&#39;, &#39;oh&#39;, &#39;no&#39;}</span>
+</pre></div>
+</div>
+</section>
+<section id="id40">
+<h4>ตัวอย่าง<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเราต้องการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาจากลิสต์รายชื่อนักเรียน</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;อาทิตยา&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;สุชาดา&#39;</span><span class="p">]</span>
+<span class="n">aa_name_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;า&#39;</span><span class="p">)}</span>
+</pre></div>
+</div>
+<p>เราสามารถใช้เซตคอมพริเฮนชันในการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาได้ด้วยคำสั่งบรรทัดเดียว โครงสร้างของคำสั่งแบ่งเป็นสามส่วนดังนี้</p>
+<ul class="simple">
+<li><p>นิพจน์ ไม่มีการเปลี่ยนแปลงชื่อนักเรียน แต่เราใช้ <code class="docutils literal notranslate"><span class="pre">name</span></code> ในการเข้าถึงชื่อนักเรียนแต่ละคน</p></li>
+<li><p>สมาชิกเป็นชื่อที่ได้จากการใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ในการวนซ้ำเพื่อเข้าถึงชื่อนักเรียนทุกคนในลิสต์ <code class="docutils literal notranslate"><span class="pre">student_names</span></code> ซึ่งเป็นสิ่งที่วนซ้ำได้</p></li>
+<li><p>เงื่อนไขการเข้าสู่เซต เราใช้ <code class="docutils literal notranslate"><span class="pre">name.endswith('า')</span></code> ในการตรวจสอบว่าชื่อนักเรียนลงท้ายด้วยสระอาหรือไม่ ถ้าลงท้ายด้วยสระอา ชื่อนักเรียนจะถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น แต่ถ้าไม่ลงท้ายด้วยสระอา ชื่อนักเรียนจะไม่ถูกเพิ่มเข้าไปในเซตที่กำลังสร้างขึ้น</p></li>
+</ul>
+</section>
+</section>
+<section id="dict-comprehension">
+<h3>ดิกต์คอมพริเฮนชัน (Dict comprehension)<a class="headerlink" href="#dict-comprehension" title="Permalink to this heading">#</a></h3>
+<p>หลักการใช้ dict comprehension ก็คล้ายคลึงกันกับ list comprehension และ set comprehension เพียงแต่ว่าเราต้องกำหนดว่า key และ value ของดิกต์ที่เราต้องการสร้างขึ้นจะต้องเป็นอะไรบ้าง</p>
+<p>วิธีการใช้ dict comprehension มีดังนี้</p>
+<p><code class="docutils literal notranslate"><span class="pre">{expression-key:expression-value</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข}</span></code></p>
+<section id="id41">
+<h4>ตัวอย่าง<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h4>
+<p>สมมติว่าเรามีรายชื่อของนักเรียนอยู่ในลิสต์ และเราต้องการสร้างดิกต์ที่ key เป็นชื่อนักเรียน และ value เป็นหมายเลขกลุ่ม 1-3 เพื่อที่จะจัดนักเรียนออกเป็น 3 กลุ่ม</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Panyut&#39;</span><span class="p">,</span> <span class="s1">&#39;Mild&#39;</span><span class="p">,</span> <span class="s1">&#39;Bew&#39;</span><span class="p">,</span> <span class="s1">&#39;Fluke&#39;</span><span class="p">,</span> <span class="s1">&#39;Paolong&#39;</span><span class="p">,</span> <span class="s1">&#39;Tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;Ya&#39;</span><span class="p">]</span>
+<span class="n">student_to_group</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="n">student_to_group</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student_to_group</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;Panyut&#39;: 2, &#39;Mild&#39;: 3, &#39;Bew&#39;: 1, &#39;Fluke&#39;: 2, &#39;Paolong&#39;: 2, &#39;Tangmay&#39;: 2, &#39;Ya&#39;: 1}</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนโปรแกรมข้างบนให้กระชับขึ้นโดยใช้ dict comprehension ได้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Panyut&#39;</span><span class="p">,</span> <span class="s1">&#39;Mild&#39;</span><span class="p">,</span> <span class="s1">&#39;Bew&#39;</span><span class="p">,</span> <span class="s1">&#39;Fluke&#39;</span><span class="p">,</span> <span class="s1">&#39;Paolong&#39;</span><span class="p">,</span> <span class="s1">&#39;Tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;Ya&#39;</span><span class="p">]</span>
+<span class="n">student_to_group</span> <span class="o">=</span> <span class="p">{</span><span class="n">student</span><span class="p">:</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student_to_group</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;Panyut&#39;: 2, &#39;Mild&#39;: 3, &#39;Bew&#39;: 1, &#39;Fluke&#39;: 2, &#39;Paolong&#39;: 2, &#39;Tangmay&#39;: 2, &#39;Ya&#39;: 1}</span>
+</pre></div>
+</div>
+</section>
+<section id="id42">
+<h4>ตัวอย่าง<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h4>
+<p>ในการสร้างโมเดลเกี่ยวกับภาษา ขั้นตอนที่จะต้องเจอบ่อย ๆ คือการแทนคำด้วยหมายเลขประจำตัว (id หรือ index) ซึ่งเราต้องกำหนดให้แต่ละคำใน vocabulary นั้นไม่ซ้ำกัน</p>
+<p>สมมติว่าเรามีลิสต์ของคำทั้งหมดในคลังข้อมูล เราต้องการสร้างดิกที่ key เป็นคำ และ value เป็นหมายเลขประจำตัวของคำคำนั้น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
+<span class="n">word_to_index</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_to_index</span><span class="p">:</span>
+        <span class="n">word_to_index</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_to_index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_to_index</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;baby&#39;: 0, &#39;oh&#39;: 1, &#39;...&#39;: 2, &#39;no&#39;: 3, &#39;!&#39;: 4}</span>
+</pre></div>
+</div>
+<p>เราสามารถเขียนโดย dict comprehension ให้กระชับขึ้นดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
+<span class="n">word_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+<span class="n">word_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word_set</span><span class="p">)</span> <span class="c1"># ทำให้เหลือเฉพาะคำที่ไม่ซ้ำ</span>
+<span class="n">word_to_index</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span><span class="n">index</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">word_list</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_to_index</span><span class="p">)</span>
+<span class="c1">#ผลลัพธ์ : {&#39;...&#39;: 0, &#39;baby&#39;: 1, &#39;oh&#39;: 2, &#39;!&#39;: 3, &#39;no&#39;: 4}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id43">
+<h3>สรุปข้อดี ข้อเสียของการใช้คอมพริเฮนชัน<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<p>ข้อดีของการใช้ comprehension คือ</p>
+<ul class="simple">
+<li><p>โค้ดสั้นกระชับสวยงาม ทำให้มีโอกาสเขียนโค้ดผิดน้อยลง เมื่อเทียบกับการใช้ for loop ในการแก้ปัญหาเดียวกัน</p></li>
+<li><p>เร็วกว่าการใช้ for loop มาก เนื่องจากไพทอนจะทำการ optimize โค้ดให้สำหรับ comprehension</p></li>
+</ul>
+<p>ข้อเสียของการใช้ comprehension คือ</p>
+<ul class="simple">
+<li><p>ผู้ที่ไม่ได้คล่องการเขียนโค้ดด้วยภาษาไพทอนอาจจะอ่านไม่เข้าใจ เนื่องจากไม่มีภาษาคอมพิวเตอร์อื่นที่มีหรือนิยมใช้ comprehension</p></li>
+<li><p>ถ้า expression ที่อยู่ใน comprehension ซับซ้อน จะทำให้อ่านได้ยาก ในกรณีนี้เราอาจจะเลี่ยงไปใช้ for loop แทน</p></li>
+</ul>
+</section>
+</section>
+<section id="id44">
+<h2>สรุป<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h2>
 <p>ในบทนี้เราได้สำรวจการใช้โครงสร้างข้อมูลที่สำคัญ ได้แก่ ลิสต์ ดิกชันนารี และเซต ซึ่งเป็นเครื่องมือสำคัญในการจัดการข้อมูลที่หลากหลาย ลิสต์ช่วยให้เราจัดเก็บข้อมูลในลำดับที่ยืดหยุ่นและเข้าถึงได้โดยดัชนี ดิกชันนารีช่วยให้เราจัดการข้อมูลในรูปแบบคู่คีย์-ค่า ทำให้การค้นหาและจัดการข้อมูลที่มีโครงสร้างซับซ้อนมีประสิทธิภาพมากขึ้น ส่วนเซตช่วยในการเก็บข้อมูลที่ไม่ซ้ำและตรวจสอบสมาชิกภาพอย่างรวดเร็ว การเข้าใจและเลือกใช้โครงสร้างข้อมูลที่เหมาะสมจะช่วยให้เราพัฒนาโปรแกรมที่มีประสิทธิภาพและจัดการกับข้อมูลได้อย่างมีระบบ</p>
 </section>
 </section>
@@ -1822,30 +2045,54 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">เซต (Set)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การสร้างเซต และการหาขนาดของเซต</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การสร้างเซตด้วยเซตคอมพริเฮนชัน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">การวนซ้ำบนเซต</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ตัวอย่าง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">การวนซ้ำบนเซต</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">ตัวอย่าง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add">การเพิ่มสมาชิกในเซตด้วย <code class="docutils literal notranslate"><span class="pre">add()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ตัวอย่าง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-discard">เอาสมาชิกออกจากเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code> และ <code class="docutils literal notranslate"><span class="pre">discard()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ตัวอย่าง</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">ตัวอย่าง: อินเตอร์เซกชัน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ตัวอย่าง: ยูเนียน</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">ตัวอย่าง: ผลต่างของเซต</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">ตัวอย่าง: อินเตอร์เซกชัน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">ตัวอย่าง: ยูเนียน</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">ตัวอย่าง: ผลต่างของเซต</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">สรุปเรื่องเซต</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">สรุปเรื่องเซต</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension">คอมพริเฮนชัน (Comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehension">ลิสต์คอมพริเฮนชัน (List comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">คอมพริเฮนชันแบบมีเงื่อนไข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">สรุปการใช้คอมพริเฮนชันแบบมีเงื่อนไข</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-comprihension">เซตคอมพริเฮนชัน (Set comprihension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dict-comprehension">ดิกต์คอมพริเฮนชัน (Dict comprehension)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">ตัวอย่าง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">สรุปข้อดี ข้อเสียของการใช้คอมพริเฮนชัน</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">สรุป</a></li>
 </ul>
   </nav></div>
 

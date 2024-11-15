@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -470,7 +470,7 @@ document.write(`
 <li><p>ข้อมูลแบบค่าเดี่ยว ได้แก่ เลขจำนวนเต็ม สตริง เลขทศนิยม และบูลีน</p></li>
 <li><p>ข้อมูลแบบคอลเลกชัน ได้แก่ ลิสต์ ทูเปิล ดิกชันนารี เซ็ต</p></li>
 </ol>
-<p>ข้อมูลแบบคอลเลกชันจัดเป็นโครงสร้างข้อมูลที่มีหน้าที่ในการเก็บข้อมูลเอาไว้หลาย ๆ ตัว ทำให้เกิดเป็นโครงสร้างขึ้นมา เช่น ลิสต์เป็นโครงสร้างมีลำดับ ดิกชันนารีเป็นโครงสร้างแบบมีการจับคู่ ในบทที่ผ่านมาเราได้เรียนรู้วิธีการใช้โครงสร้างข้อมูลเหล่านี้ในการเก็บข้อมูลแบบค่าเดี่ยวหลาย ๆ ตัวไว้ในโครงสร้างเดียวกัน เช่น ลิสต์ของตัวเลขเพื่อใช้เก็บรายการคะแนนของนักเรียนในห้อง ลิสต์ของสตริงเพื่อใช้เก็บรายชื่อของพนักงานในบริษัท ดิกชันนารีที่คีย์เป็นสตริงและแวลูเป็นตัวเลขเพื่อใช้เก็บคำและความถี่เกิดขึ้นของตคำนั้น เซ็ตของสตริงเพื่อใช้เก็บรายการคำศัพท์ เป็นต้น</p>
+<p>ข้อมูลแบบคอลเลกชันจัดเป็นโครงสร้างข้อมูลที่มีหน้าที่ในการเก็บข้อมูลเอาไว้หลาย ๆ ตัว ทำให้เกิดเป็นโครงสร้างขึ้นมา เช่น ลิสต์เป็นโครงสร้างมีลำดับ ดิกชันนารีเป็นโครงสร้างแบบมีการจับคู่ ในบทที่ผ่านมาเราได้เรียนรู้วิธีการใช้โครงสร้างข้อมูลเหล่านี้ในการเก็บข้อมูลแบบค่าเดี่ยวหลาย ๆ ตัวไว้ในโครงสร้างเดียวกัน เช่น ลิสต์ของตัวเลขเพื่อใช้เก็บรายการคะแนนของนักเรียนในห้อง ลิสต์ของสตริงเพื่อใช้เก็บรายชื่อของพนักงานในบริษัท ดิกชันนารีที่คีย์เป็นสตริงและแวลูเป็นตัวเลขเพื่อใช้เก็บคำและความถี่เกิดขึ้นของคำนั้น เซ็ตของสตริงเพื่อใช้เก็บรายการคำศัพท์ เป็นต้น</p>
 <p><img alt="basic data structures" src="../../_images/data-structures.svg" /></p>
 <p>โครงสร้างข้อมูลทั้งสองประเภทนี้ไม่ตอบโจทย์การใช้งานบางประเภท ที่ต้องการโครงสร้างที่ซับซ้อนขึ้น  โครงสร้างข้อมูลแบบซ้อนใน (nested data structure) คือ โครงสร้างข้อมูลที่เก็บโครงสร้างข้อมูลอีกประเภทนึงเอาไว้  โครงสร้างข้อมูลทั้งหมดที่เราได้เรียนมาแล้วสามารถเก็บโครงสร้างข้อมูลอื่น ๆ ซ้อนเข้าไปได้อีกชั้นหนึ่ง เพื่อรองรับข้อมูลที่มีโครงสร้างซับซ้อนขึ้น เช่น</p>
 <ul class="simple">
@@ -505,12 +505,12 @@ document.write(`
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>ความท้าทายของการใช้โครงสร้างข้อมูลแบบซ้อนใน คือ  การเข้าถึงข้อมูลในโครงสร้างข้อมูลที่ถูกซ้อนอยู่ ผู้ใช้จะต้องทราบว่าเมื่อเข้าถึงข้อมูลโดยใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วค่าทีได้คืนมาเป็นโครงสร้างข้อมูลประเภทใด และโครงสร้างข้อมูลนั้นเก็บข้อมูลประเภทใดอีก ในบทนี้จะมีคำถามให้ลองคิดตามดูว่าเมื่อรันโค้ดแล้วจะได้โครงสร้างข้อมูลประเภทใดคืนมา</p>
+<p>ความท้าทายของการใช้โครงสร้างข้อมูลแบบซ้อนใน คือ  การเข้าถึงข้อมูลในโครงสร้างข้อมูลที่ถูกซ้อนอยู่ ผู้ใช้จะต้องทราบว่าเมื่อเข้าถึงข้อมูลโดยใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> แล้วค่าที่ได้คืนมาเป็นโครงสร้างข้อมูลประเภทใด และโครงสร้างข้อมูลนั้นเก็บข้อมูลประเภทใดอีก ในบทนี้จะมีคำถามให้ลองคิดตามดูว่าเมื่อรันโค้ดแล้วจะได้โครงสร้างข้อมูลประเภทใดคืนมา</p>
 <p>ความท้าทายอีกประการหนึ่งของการใช้โครงสร้างข้อมูลแบบซ้อนใน คือ การเลือกใช้โครงสร้างข้อมูลที่เหมาะสมกับข้อมูลที่ต้องการจะเก็บ และไม่ซับซ้อนเกินไป หากเราเลือกโครงสร้างข้อมูลที่ซับซ้อนเกินไป จะทำให้อ่านโค้ดให้เข้าใจได้ยาก เมื่อผู้อื่นต้องนำโค้ดเราไปเขียนเพิ่มเติม ก็อาจทำให้ผิดพลาดได้ง่าย</p>
 <p>ในบทนี้เราจะพูดถึงโครงสร้างข้อมูลแบบซ้อนใน ที่พบเห็นได้บ่อย ๆ ในการเขียนโค้ดเพื่อประมวลผลข้อมูล</p>
 <section id="id1">
 <h2>ลิสต์ของลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>ในการใช้งานจริงเราใช้ลิสต์ของลิสต์เพื่อเก็บข้อมูลประเภทเดี่ยวทั้ง 3 ประเภท ลิสต์ของลิสต์ของตัวเลข (ลิสต์ที่มีลิสต์ย่อยที่เก็บตัวเลข) ลิสต์ของลิสต์ของสตริง ลิสต์ของลิสต์ของบูลีน</p>
+<p>ในการใช้งานจริงเราใช้ลิสต์ของลิสต์เพื่อเก็บข้อมูลประเภทเดี่ยวทั้ง 3 ประเภท ลิสต์ของลิสต์ของตัวเลข (ลิสต์ที่มีลิสต์ย่อยที่เก็บตัวเลข) ลิสต์ของลิสต์ของสตริง และ ลิสต์ของลิสต์ของบูลีน</p>
 <section id="id2">
 <h3>ลิสต์ของลิสต์ของตัวเลข<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>ขอยกตัวอย่างการใช้ลิสต์ของลิสต์ของตัวเลข ซึ่งเป็นลิสต์ของคะแนนของนักเรียน โดยแต่ละคะแนนจะประกอบไปด้วย คะแนนเก็บ คะแนนสอบกลางภาค และคะแนนสอบปลายภาค โดยเราจะเก็บคะแนนของนักเรียนแต่ละคนไว้ในลิสต์ของลิสต์ของตัวเลข ดังนี้</p>
@@ -700,28 +700,26 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code> เป็นฟังก์ชันที่ใช้สำหรับการนำฟังก์ชันหนึ่งมาประยุกต์ใช้กับสมาชิกแต่ละตัวของคอลเลคชันที่ให้มา เช่น ลิสต์ ดิกชันนารี เซต โดยฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code> จะคืนค่าเป็น “map object” ซึ่งสามารถแปลงเป็นลิสต์ ด้วยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">list()</span></code> เพื่อให้สามารถดูผลลัพธ์ได้ในรูปแบบลิสต์</p></li>
-</ol>
+<li><p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code>:
+เป็นฟังก์ชันที่ใช้สำหรับการนำฟังก์ชันหนึ่งมาประยุกต์ใช้กับสมาชิกแต่ละตัวของคอลเลคชันที่ให้มา เช่น ลิสต์ ดิกชันนารี เซต โดยฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">map</span></code> จะคืนค่าเป็น “map object” ซึ่งสามารถแปลงเป็นลิสต์ ด้วยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">list()</span></code> เพื่อให้สามารถดูผลลัพธ์ได้ในรูปแบบลิสต์</p>
 <p>โครงสร้างการใช้งาน <code class="docutils literal notranslate"><span class="pre">map</span></code> มีดังนี้</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
-results = list(map(ฟังก์ชัน, ลิสต์))
-```
-
-ตัวอย่าง เช่น
-
-```python
-numbers = [2, 10, 12, 20]
-results = list(map(square, numbers))
-```
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">ฟังก์ชัน</span><span class="p">,</span> <span class="n">ลิสต์</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>ตัวอย่าง เช่น</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>เราสามารถใช้วิธีเหล่านี้ในทำนองเดียวกันเพื่อแม็ปฟังก์ชันกับลิสต์ของลิสต์</p>
+</li>
+</ol>
 <section id="id8">
 <h4>วงวนซ้อนวงวน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <p>โครงสร้างของการใช้วงวนฟอร์เพื่อแม็ปฟังก์ชันไปบนลิสต์ซ้อนลิสต์ จะต้องมีการใช้วงวนซ้อนวงวน (nested for loop) ซึ่งมีโครงสร้างดังนี้</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>วงวนซ้อนวงวน (nested for loop)</p>
+<p>วงวนซ้อนวงวน (nested for loop) การใช้วงวนซ้อนอยู่ภายในวงวนอื่น</p>
 </aside>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">:</span>
@@ -746,7 +744,7 @@ results = list(map(square, numbers))
 </pre></div>
 </div>
 <p>โปรแกรมจะต้องคืนค่ามาเป็นลิสต์ของลิสต์ของตัวเลข ซึ่งตัวเลขแต่ละตัวคือความยาวของคำในแต่ละตำแหน่ง</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 </pre></div>
 </div>
 <p>โจทย์ข้อนี้เราทราบแล้วว่าเราต้องมีการแม็ปฟังก์ชันโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> ลงบนสมาชิกแต่ละตัวในลิสต์ย่อย ดังนั้นเราสามารถใช้โครงสร้างวงวนซ้อนวงวนมาประกอบกันได้ดังนี้</p>
@@ -763,10 +761,10 @@ results = list(map(square, numbers))
 </section>
 <section id="id9">
 <h4>ลิสต์คอมพริเฮนชันซ้อนใน<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
-<p>เราสามารถใช้ลิสต์คอมพรีเฮนชันซ้อนใน (nested list comprehension) ในการแม็ปฟังก์ชันได้ดังนี้</p>
+<p>เราสามารถใช้ลิสต์คอมพริเฮนชันซ้อนใน (nested list comprehension) ในการแม็ปฟังก์ชันได้ดังนี้</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
-<p>ลิสต์คอมพรีเฮนชันซ้อนใน (nested list comprehension)</p>
+<p>ลิสต์คอมพริเฮนชันซ้อนใน (nested list comprehension) การเขียนวงวนซ้อนในรูปแบบลิสต์คอมพริเฮนชัน</p>
 </aside>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">]</span>
 </pre></div>
@@ -790,17 +788,17 @@ results = list(map(square, numbers))
         <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>หรือ จะใช้ลิสต์คอมพรีเฮนชันซ้อนกันในการทำลิสต์ให้เรียบแบน ดังนี้</p>
+<p>หรือ จะใช้ลิสต์คอมพริเฮนชันซ้อนกันในการทำลิสต์ให้เรียบแบน ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">ข้อมูลเดี่ยว</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>สังเกตว่าโครงสร้างลิสต์คอมพรีเฮนชันซ้อนในแบบนี้มีลักษณะคล้ายคลึงกับ การแม็ปฟังก์ชันบนลิสต์ซ้อนในซึ่งมีโครงสร้างดังนี้</p>
+<p>สังเกตว่าโครงสร้างลิสต์คอมพริเฮนชันซ้อนในแบบนี้มีลักษณะคล้ายคลึงกับ การแม็ปฟังก์ชันบนลิสต์ซ้อนในซึ่งมีโครงสร้างดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ฟังก์ชัน</span><span class="p">(</span><span class="n">ข้อมูลเดี่ยว</span><span class="p">)</span> <span class="k">for</span> <span class="n">ข้อมูลเดี่ยว</span> <span class="ow">in</span> <span class="n">ลิสต์ย่อย</span><span class="p">]</span> <span class="k">for</span> <span class="n">ลิสต์ย่อย</span> <span class="ow">in</span> <span class="n">ลิสต์ใหญ่</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>ข้อแตกต่าง คือนิพจน์ที่ใช้ในการทำลิสต์ให้เรียบมีอยู่ตำแหน่งเดียวเท่านั้น และไม่มีการใช้ฟังก์ชันใด ๆ ในการประมวลผลข้อมูล แต่ว่าลิสต์คอมพรีเฮนชันซ้อนในสำหรับการแม็ปฟังก์ชันจะมีนิพจน์สำหรับวงวนฟอร์ชั้นนอกคือ <code class="docutils literal notranslate"><span class="pre">[ฟังก์ชัน(ข้อมูลเดี่ยว)</span> <span class="pre">for</span> <span class="pre">ข้อมูลเดี่ยว</span> <span class="pre">in</span> <span class="pre">ลิสต์ย่อย]</span></code> ซึ่งให้ค่าเป็นลิสต์ และนิพจน์สำหรับวงวนฟอร์ชั้นในคือ <code class="docutils literal notranslate"><span class="pre">ฟังก์ชัน(ข้อมูลเดี่ยว)</span></code></p>
-<p>ข้อแตกต่างของโครงสร้างอีกอย่างคือลิสต์คอมพรีเฮนชันซ้อนในสำหรับทำให้ลิสต์ให้เรียบ จะมีการใช้วงวนฟอร์ชั้นนอกก่อน และวงวนฟอร์ชั้นในทีหลัง แต่สำหรับการแม็ปฟังก์ชันจะมีการใช้วงวนฟอร์ชั้นในก่อน และวงวนฟอร์ชั้นนอกหลัง</p>
-<p><img alt="illustration of the structures" src="book/module5/img/nopic.jpg" /></p>
+<p>ข้อแตกต่าง คือนิพจน์ที่ใช้ในการทำลิสต์ให้เรียบมีอยู่ตำแหน่งเดียวเท่านั้น และไม่มีการใช้ฟังก์ชันใด ๆ ในการประมวลผลข้อมูล แต่ว่าลิสต์คอมพริเฮนชันซ้อนในสำหรับการแม็ปฟังก์ชันจะมีนิพจน์สำหรับวงวนฟอร์ชั้นนอกคือ <code class="docutils literal notranslate"><span class="pre">[ฟังก์ชัน(ข้อมูลเดี่ยว)</span> <span class="pre">for</span> <span class="pre">ข้อมูลเดี่ยว</span> <span class="pre">in</span> <span class="pre">ลิสต์ย่อย]</span></code> ซึ่งให้ค่าเป็นลิสต์ และนิพจน์สำหรับวงวนฟอร์ชั้นในคือ <code class="docutils literal notranslate"><span class="pre">ฟังก์ชัน(ข้อมูลเดี่ยว)</span></code></p>
+<p>ข้อแตกต่างของโครงสร้างอีกอย่างคือลิสต์คอมพริเฮนชันซ้อนในสำหรับทำให้ลิสต์ให้เรียบ จะมีการใช้วงวนฟอร์ชั้นนอกก่อน และวงวนฟอร์ชั้นในทีหลัง แต่สำหรับการแม็ปฟังก์ชันจะมีการใช้วงวนฟอร์ชั้นในก่อน และวงวนฟอร์ชั้นนอกหลัง</p>
+<p><img alt="illustration of the structures" src="../../_images/structure_example.png" /></p>
 <p><em>ตัวอย่าง</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;แซม&#39;</span><span class="p">,</span><span class="s1">&#39;ซื้อ&#39;</span><span class="p">,</span><span class="s1">&#39;tv&#39;</span><span class="p">,</span><span class="s1">&#39;ใหม่&#39;</span><span class="p">],[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ไม่&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้&#39;</span><span class="p">,</span><span class="s1">&#39;ถูก&#39;</span><span class="p">,</span> <span class="s1">&#39;กว่า&#39;</span><span class="p">,</span> <span class="s1">&#39;iphone&#39;</span><span class="p">]]</span>
 <span class="n">flattened_word_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">sen</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sen</span><span class="p">]</span>
@@ -877,14 +875,14 @@ results = list(map(square, numbers))
 <tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">cities[1][0]</span></code></p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">13.756331</span></code></p></td>
 <td class="text-left"><p>float</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[1]</span></code>เข้าถึงข้อมูลในลิสต์ของทูเปิล (<code class="docutils literal notranslate"><span class="pre">cities</span></code>) จึงแกะลิสต์ออกหนึ่งชั้น ได้ทูเปิล จากนั้น <code class="docutils literal notranslate"><span class="pre">[0]</span></code> เข้าถึงจำนวนเต็มในทูเปิล ได้จำนวนเต็ม</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">[1]</span></code>เข้าถึงข้อมูลในลิสต์ของทูเปิล (<code class="docutils literal notranslate"><span class="pre">cities</span></code>) จึงแกะลิสต์ออกหนึ่งชั้น ได้ทูเปิล จากนั้น <code class="docutils literal notranslate"><span class="pre">[0]</span></code> เข้าถึงเลขทศนิยมในทูเปิล ได้เลขทศนิยม</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <section id="id12">
 <h3>ไล่วนซ้ำสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิล<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>เราสามารถไล่เข้าถึงสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิลได้ด้วยวิธีเดียวกันกับการ ไล่บนลิสต์ของข้อมูลประเภทอื่น ๆ โดยใช้วงวนฟอร์เช่นเดิม ดังนี้</p>
+<p>เราสามารถไล่เข้าถึงสมาชิกทุกตัวที่อยู่ในลิสต์ของทูเปิลได้ด้วยวิธีเดียวกันกับการไล่บนลิสต์ของข้อมูลประเภทอื่น ๆ โดยใช้วงวนฟอร์เช่นเดิม ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ทูเปิล</span> <span class="ow">in</span> <span class="n">ลิสต์ของทูเปิล</span><span class="p">:</span>
     <span class="n">ทำอะไรกับทูเปิล</span>
 </pre></div>
@@ -897,7 +895,7 @@ results = list(map(square, numbers))
         <span class="n">western_cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>หรือใช้ลิสต์คอมพรีเฮนชัน</p>
+<p>หรือใช้ลิสต์คอมพริเฮนชัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">37.774929</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.419418</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.756331</span><span class="p">,</span> <span class="mf">100.501762</span><span class="p">)]</span>
 <span class="n">western_cities</span> <span class="o">=</span> <span class="p">[</span><span class="n">city</span> <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span> <span class="k">if</span> <span class="n">city</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
@@ -1045,7 +1043,7 @@ results = list(map(square, numbers))
 </section>
 <section id="id14">
 <h2>ดิกชันนารีที่คีย์เป็นทูเปิล<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
-<p>จากบทที่แล้วชนิดของข้อมูลที่สามารถเป็นคีย์ในดิกชันนารีได้ล้วนแต่เป็นข้อมูลเดี่ยว เช่น ตัวเลข หรือสตริง ดิกชันนารีในภาษาไพทอนอนุญาติให้ใช้ทูเปิลที่เก็บตัวเลขหรือสตริงเป็นคีย์ได้ ทำให้มีความยืดหยุ่นในการเก็บข้อมูลมากขึ้น ดังตัวอย่างต่อไปนี้</p>
+<p>จากบทที่แล้วชนิดของข้อมูลที่สามารถเป็นคีย์ในดิกชันนารีได้ล้วนแต่เป็นข้อมูลเดี่ยว เช่น ตัวเลข หรือสตริง ดิกชันนารีในภาษาไพทอนอนุญาตให้ใช้ทูเปิลที่เก็บตัวเลขหรือสตริงเป็นคีย์ได้ ทำให้มีความยืดหยุ่นในการเก็บข้อมูลมากขึ้น ดังตัวอย่างต่อไปนี้</p>
 <figure class="align-center" id="id19">
 <a class="reference internal image-reference" href="../../_images/dict-tuple.jpeg"><img alt="../../_images/dict-tuple.jpeg" src="../../_images/dict-tuple.jpeg" style="height: 300px;" /></a>
 <figcaption>
@@ -1067,7 +1065,7 @@ results = list(map(square, numbers))
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิลโดยที่ทูเปิลเก็บข้อมูลชื่อ นามสกุล และเบอร์โทรศัพท์เป็นสตริง วิธีการดึงข้อมูลเบอร์โทรศัพท์จากตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีีดังนี้</p>
+<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีโครงสร้างข้อมูลเป็นลิสต์ของทูเปิลโดยที่ทูเปิลเก็บข้อมูลชื่อ นามสกุล และเบอร์โทรศัพท์เป็นสตริง วิธีการดึงข้อมูลเบอร์โทรศัพท์จากตัวแปร <code class="docutils literal notranslate"><span class="pre">entry_list</span></code> มีดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">entry_list</span><span class="p">:</span>
 	<span class="n">phone_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
@@ -1077,8 +1075,8 @@ results = list(map(square, numbers))
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">phone</span> <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">entry_list</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีโครงสร้างข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นทูเปิล และมีแวลูเป็นสตริง วิธีการดึงข้อมูลเบอร์โทรจากตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีีดังนี้</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_to_phone</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<p>ตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีโครงสร้างข้อมูลเป็นดิกชันนารีที่มีคีย์เป็นทูเปิล และมีแวลูเป็นสตริง วิธีการดึงข้อมูลเบอร์โทรจากตัวแปร <code class="docutils literal notranslate"><span class="pre">friend_to_phone</span></code> มีดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">friend_to_phone</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>โครงสร้างข้อมูลที่เลือกใช้มีผลอย่างมากต่อการประมวลผลข้อมูลต่อไป เช่น

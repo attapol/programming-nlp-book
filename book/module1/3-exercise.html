@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>แบบฝึกหัด: แคเริล &#8212; Programming for NLP</title>
+    <title>แบบฝึกหัด: คาเรล &#8212; Programming for NLP</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module1/3-exercise';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="เฉลยแบบฝึกหัด: แคเริล" href="3s-exercise-solution.html" />
+    <link rel="next" title="เฉลยแบบฝึกหัด: คาเรล" href="3s-exercise-solution.html" />
     <link rel="prev" title="Video: การคิดเชิงคำนวณ และ control flow" href="2-videos-karel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -414,7 +414,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>แบบฝึกหัด: แคเริล</h1>
+    <h1>แบบฝึกหัด: คาเรล</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -449,12 +449,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>แบบฝึกหัด: แคเริล<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>แบบฝึกหัด: คาเรล<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="id2">
 <h2>ก่อนเริ่ม<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <section id="stanfordkarel">
 <h3>ติดตั้งไลบรารี <code class="docutils literal notranslate"><span class="pre">stanfordkarel</span></code><a class="headerlink" href="#stanfordkarel" title="Permalink to this heading">#</a></h3>
-<p>ก่อนเริ่มให้ติดตั้ง แคเริลโดยการ (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal และพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">stanfordkarel</span></code> แล้วกด Enter ถ้าลงโปรแกรมสำเร็จจะขึ้นว่า Successfully installed</p>
+<p>ก่อนเริ่มให้ติดตั้งคาเรล โดยการ (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal และพิมพ์ <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">stanfordkarel</span></code> แล้วกด Enter ถ้าลงโปรแกรมสำเร็จจะขึ้นว่า Successfully installed</p>
 </section>
 <section id="vscode">
 <h3>ทดลองเขียนและรันโปรแกรมบน VSCode<a class="headerlink" href="#vscode" title="Permalink to this heading">#</a></h3>
@@ -464,15 +464,15 @@ document.write(`
 <li><p>ขยาย zip file ไปที่โฟลเดอร์ใดก็ได้บนเครื่อง</p></li>
 <li><p>เปิด Visual studio code กด Open Folder .. แล้วเลือกโฟลเดอร์จากขั้นตอนที่แล้ว (karel-exercise)</p></li>
 <li><p>คลิกแถบฟ้ามุมขวาล่างที่เขียนว่า Python 3.x (ให้คลิกตรงตัวเลข) แล้วจะมีแถบด้านบนเด้งออกมาให้เลือกตัว interpreter สำหรับการเขียนโค้ดในโฟลเดอร์นี้ เพราะว่าบางเครื่องอาจจะมี interpreter ติดตั้งไว้แล้วหลายตัว ให้เราเลือก Python interpreter ที่เขียนว่า anaconda3 ซึ่งก็คือ Python interpreter ที่มากับ anaconda ที่เรา install ไว้</p></li>
-<li><p>ทดสอบโดยการรันโค้ด ให้คลิกขวาบนไฟล์ที่ต้องการจะรันที่อยู่ Editor Tab ทางซ้าย เช่น  <code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> แล้วกด Run Python File on Terminal ถ้าหน้าต่างแคเริลเปิดขึ้นมา แสดงว่าติดตั้งโปรแกรมต่าง ๆ สำเร็จ</p></li>
+<li><p>ทดสอบโดยการรันโค้ด ให้คลิกขวาบนไฟล์ที่ต้องการจะรันที่อยู่ Editor Tab ทางซ้าย เช่น  <code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> แล้วกด Run Python File on Terminal ถ้าหน้าต่างคาเรลเปิดขึ้นมา แสดงว่าติดตั้งโปรแกรมต่าง ๆ สำเร็จ</p></li>
 </ol>
-<p>เมื่อจะเริ่มเขียนโค้ดให้ลบ <code class="docutils literal notranslate"><span class="pre">pass</span></code> ออกไปก่อน และเริ่มแก้ <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">main():</span></code> หรือเพิ่มฟังก์ชันต่าง ๆ เข้าไป ทุกครั้งที่แก้โค้ด ต้องเซฟโค้ดให้เรียบร้อยและปิดหน้าต่างแคเริลก่อนที่จะรันโค้ดใหม่อีกครั้ง
+<p>เมื่อจะเริ่มเขียนโค้ดให้ลบ <code class="docutils literal notranslate"><span class="pre">pass</span></code> ออกไปก่อน และเริ่มแก้ <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">main():</span></code> หรือเพิ่มฟังก์ชันต่าง ๆ เข้าไป ทุกครั้งที่แก้โค้ด ต้องเซฟโค้ดให้เรียบร้อยและปิดหน้าต่างคาเรลก่อนที่จะรันโค้ดใหม่อีกครั้ง
 หากต้องการทดสอบกับ world แบบอื่น ๆ ให้ลองกด Load world เพื่อเลือกไฟล์ที่ต้องการทดสอบ</p>
 <!---
 3. (สำหรับ Windows) เปิด Anaconda prompt (สำหรับ Mac) เปิด Terminal แล้วเปลี่ยนโฟลเดอร์ที่ยืนอยู่โดยการรัน `cd "ที่อยู่ของโฟลเดอร์"`
 	- (Windows) คลิกขวาที่โฟล์เดอร์แล้วกด Copy as path เพื่อหาที่อยู่ของโฟลเดอร์
 	- (Mac) คลิกขวาที่โฟลเดอร์ กดปุ่ม option แช่ไว้แล้วกด Copy ... as pathname
-4. ทดสอบโดยการรัน `python ชื่อไฟล์.py` เช่น `python collect_newspaper_karel.py` และจะมีหน้าต่างใหม่เปิดเพิ่มขึ้นมาที่มีแคเริลอยู่ใน world ที่ระบุไว้ในโค้ด กดรันโปรแกรมโดยการกด Run Program
+4. ทดสอบโดยการรัน `python ชื่อไฟล์.py` เช่น `python collect_newspaper_karel.py` และจะมีหน้าต่างใหม่เปิดเพิ่มขึ้นมาที่มีคาเรลอยู่ใน world ที่ระบุไว้ในโค้ด กดรันโปรแกรมโดยการกด Run Program
 !-->
 </section>
 </section>
@@ -480,23 +480,23 @@ document.write(`
 <h2>โจทย์แบบฝึกหัด<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="id4">
 <h3>ข้อ 1<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลหยิบ beeper และเดินกลับมาที่เดิม โดยให้เขียนฟังก์ชันย่อยตามหลักการย่อยโจทย์ (decomposition) เพื่อทำให้โค้ดดูสะอาดตา อ่านง่ายเข้าใจง่ายขึ้น</p>
+<p><code class="docutils literal notranslate"><span class="pre">collect_newspaper_karel.py</span></code> จงเขียนโปรแกรมสั่งให้คาเรลหยิบ beeper และเดินกลับมาที่เดิม โดยให้เขียนฟังก์ชันย่อยตามหลักการย่อยโจทย์ (decomposition) เพื่อทำให้โค้ดดูสะอาดตา อ่านง่ายเข้าใจง่ายขึ้น</p>
 </section>
 <section id="id5">
 <h3>ข้อ 2<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">corner_to_corner_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้แคเริล วิ่งจากจุดเริ่มต้นที่มุมซ้ายล่างไปมุมขวาบน โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
+<p><code class="docutils literal notranslate"><span class="pre">corner_to_corner_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้คาเรล วิ่งจากจุดเริ่มต้นที่มุมซ้ายล่างไปมุมขวาบน โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลาย ๆ แบบ</p>
 </section>
 <section id="id6">
 <h3>ข้อ 3<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">four_corner_karel.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลวาง beeper ไปทั้งสี่มุม มุมละ 3 beeper โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
+<p><code class="docutils literal notranslate"><span class="pre">four_corner_karel.py</span></code> จงเขียนโปรแกรมสั่งให้คาเรลวาง beeper ไปทั้งสี่มุม มุมละ 3 beeper โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลาย ๆ แบบ</p>
 </section>
 <section id="id7">
 <h3>ข้อ 4<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">roomba_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้แคเริลเก็บ beeper ที่กระจัดกระจายอยู่ทั้งห้อง โดยโปรแกรมจะต้องทำงานทั้ง <code class="docutils literal notranslate"><span class="pre">roomba_karel.w</span></code> และ <code class="docutils literal notranslate"><span class="pre">roomba_karel2.w</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">roomba_karel.py</span></code>  จงเขียนโปรแกรมสั่งให้คาเรลเก็บ beeper ที่กระจัดกระจายอยู่ทั้งห้อง โดยโปรแกรมจะต้องทำงานทั้ง <code class="docutils literal notranslate"><span class="pre">roomba_karel.w</span></code> และ <code class="docutils literal notranslate"><span class="pre">roomba_karel2.w</span></code></p>
 </section>
 <section id="id8">
 <h3>ข้อ 5<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">alternate_beeper.py</span></code> จงเขียนโปรแกรมสั่งให้แคเริลวาง beeper แบบช่องเว้นช่องเฉพาะแถวล่าง โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลายๆ แบบ</p>
+<p><code class="docutils literal notranslate"><span class="pre">alternate_beeper.py</span></code> จงเขียนโปรแกรมสั่งให้คาเรลวาง beeper แบบช่องเว้นช่องเฉพาะแถวล่าง โดยที่เราไม่รู้ว่า world จะมีขนาดเท่าไร ให้ลองทดสอบกับ world หลาย ๆ แบบ</p>
 </section>
 </section>
 </section>
@@ -546,7 +546,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">เฉลยแบบฝึกหัด: แคเริล</p>
+        <p class="prev-next-title">เฉลยแบบฝึกหัด: คาเรล</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -468,7 +468,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยุ่ในสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การหั่นสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">
@@ -524,7 +524,7 @@ document.write(`
 <p><em>การกำหนดค่าให้ตัวแปร (variable assignment)</em> การเชื่อมโยงชื่อตัวแปรกับค่าที่ต้องการเก็บ</p>
 </aside>
 <p>การเก็บข้อมูลใส่ตัวแปรเพื่อนำค่ามาใช้ทีหลัง เรียกว่า <em>การกำหนดค่าให้ตัวแปร (variable assignment)</em> ซึ่งจะต้องบอกเครื่องว่าชื่อของตัวแปรคืออะไร และค่าที่ต้องการ คำสั่งภาษาไพทอนมีกฏดังนี้</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ชื่อตัวแปร</span> <span class="o">=</span> <span class="n">ค่่าที่ต้องการเก็บ</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ชื่อตัวแปร</span> <span class="o">=</span> <span class="n">ค่าที่ต้องการเก็บ</span>
 </pre></div>
 </div>
 <p>ตัวอย่าง เช่น ถ้าเราต้องการสร้างตัวแปรที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">num_words</span></code> เพื่อให้เก็บจำนวนคำที่เรานับมาได้จากบทความชิ้นหนึ่ง ซึ่งสมมติว่ามีค่าเท่ากับ 5000</p>
@@ -686,7 +686,7 @@ document.write(`
 <span class="go">TypeError: can only concatenate str (not &quot;int&quot;) to str</span>
 </pre></div>
 </div>
-<p>Python interpreter จะให้โยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> ซึ่งแปลว่า error ที่เกิดจากการใช้ข้อมูลผิดชนิด พร้อมทั้งบอกว่าผิดชนิดอย่างไร ในตัวอย่างนี้ บอกว่าตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">+</span></code> ต้องใช้กับสตริงและสตริง ไม่ใช่ สตริงกับ <code class="docutils literal notranslate"><span class="pre">int</span></code></p>
+<p>Python interpreter จะโยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> ให้ ซึ่งแปลว่า error ที่เกิดจากการใช้ข้อมูลผิดชนิด พร้อมทั้งบอกว่าผิดชนิดอย่างไร ในตัวอย่างนี้ บอกว่าตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">+</span></code> ต้องใช้กับสตริงและสตริง ไม่ใช่ สตริงกับ <code class="docutils literal notranslate"><span class="pre">int</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">+</span> <span class="s1">&#39;ฉันรักภาษาไทย&#39;</span>
 <span class="go">Traceback (most recent call last)</span>
 <span class="go">&lt;ipython-input-12-1c1a443c69f4&gt; in &lt;module&gt;</span>
@@ -1240,7 +1240,7 @@ document.write(`
 </section>
 </section>
 <section id="id15">
-<h3>เข้าถึงตัวอักษรที่อยุ่ในสตริง<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<h3>เข้าถึงตัวอักษรที่อยู่ในสตริง<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
 <a class="reference internal image-reference" href="../../_images/char-index.png"><img alt="../../_images/char-index.png" class="align-center" src="../../_images/char-index.png" style="height: 150px;" /></a>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -1279,7 +1279,7 @@ document.write(`
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">IndexError</span></code> คือ ข้อผิดพลาดที่เกิดจากการที่ใช้เลขดัชนี ที่ไม่อยู่ในช่วงที่เหมาะสม</p>
 </aside>
-<p>ถ้าหากเรารัน <code class="docutils literal notranslate"><span class="pre">s[9]</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">s[-10]</span></code> เราได้ข้อความบอกข้อผิดพลาด ดังนี้</p>
+<p>ถ้าหากเรารัน <code class="docutils literal notranslate"><span class="pre">s[9]</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">s[-10]</span></code> เราจะได้ข้อความบอกข้อผิดพลาด ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">IndexError</span><span class="p">:</span> <span class="n">string</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
@@ -1753,7 +1753,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยุ่ในสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การหั่นสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">

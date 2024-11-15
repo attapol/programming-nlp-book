@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -491,6 +491,15 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for loop ธรรมดา</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">1. สร้างลิสต์ใหม่ (new_list) เพื่อเก็บชื่อที่ฟอร์แมตแล้ว</span>
+<span class="sd">2. วนลูป (loop) ทุกตัวอักษรในรายชื่อ (names)</span>
+<span class="sd">3. ฟอร์แมตชื่อภาษาอังกฤษ (eng_name) </span>
+<span class="sd">    3.1 ตรวจสอบว่า eng_name เป็นตัวอักษรเล็กทั้งหมดหรือไม่ (islower())</span>
+<span class="sd">    3.2  ถ้าเป็นตัวอักษรเล็กทั้งหมด ให้แปลงเป็นตัวพิมพ์ใหญ่ตัวแรก (capitalize())</span>
+<span class="sd">4. เพิ่มชื่อที่ฟอร์แมตแล้ว (eng_name) ลงในรายการใหม่ (new_list)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
 <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
   <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
@@ -509,18 +518,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List comprehension</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">1. สร้างลิสต์ใหม่ (new_list) เพื่อเก็บชื่อที่ฟอร์แมตแล้ว</span>
-<span class="sd">2. วนลูป (loop) ทุกตัวอักษรในรายชื่อ (names)</span>
-<span class="sd">3. ฟอร์แมตชื่อภาษาอังกฤษ (eng_name) </span>
-<span class="sd">    3.1 ตรวจสอบว่า eng_name เป็นตัวอักษรเล็กทั้งหมดหรือไม่ (islower())</span>
-<span class="sd">    3.2  ถ้าเป็นตัวอักษรเล็กทั้งหมด ให้แปลงเป็นตัวพิมพ์ใหญ่ตัวแรก (capitalize())</span>
-<span class="sd">4. เพิ่มชื่อที่ฟอร์แมตแล้ว (eng_name) ลงในรายการใหม่ (new_list)</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
-  <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
-    <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+
+<span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">islower</span><span class="p">()]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
 </pre></div>
@@ -573,8 +572,9 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">1. วนลูปผ่านทุกตัวอักษรในรายการ inputLst</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#for loop ธรรมดา</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">1. วนลูปผ่านทุกตัวอักษรในรายการ inputList</span>
 <span class="sd">2. กรองสระออกจากคำ</span>
 <span class="sd">2.1 สร้างสตริงเปล่า</span>
 <span class="sd">2.2 เพิ่มตัวอักษรแต่ละตัวในคำลงในสตริงเปล่า โดยไม่รวมสระ</span>
@@ -587,6 +587,21 @@ document.write(`
     <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">:</span>
       <span class="n">new_word</span> <span class="o">+=</span> <span class="n">char</span>
   <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mnKy&#39;, &#39;rch&#39;, &#39;v&#39;, &#39;&#39;, &#39;Jm&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#list comprehension</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">char</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
 </pre></div>

@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1/3-exercise.html">แบบฝึกหัด: แคเริล</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: แคเริล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -458,7 +458,7 @@ document.write(`
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจและกระทำการ (execute) ตามคำสั่งที่ป้อนเข้าไป</p>
-<p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นนส่วนหนึ่งของโค้ดเราได้ทันที</p>
+<p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นส่วนหนึ่งของโค้ดเราได้ทันที</p>
 <p>เทอร์มินัล (Terminal) เป็นโปรแกรมที่ทำให้เราสั่งคอมพิวเตอร์ให้ทำงานต่าง ๆ ได้โดยการพิมพ์คำสั่งและกดปุ่ม Enter</p>
 </aside>
 <p>ไพทอน (Python) เป็นชื่อภาษาเขียนโปรแกรม (programming language) เป็นภาษาที่ได้รับความนิยมที่สุดในการประมวลผลและวิเคราะห์ข้อมูลต่าง ๆ ไม่ว่าจะเป็นข้อมูลที่เป็นตัวเลข ข้อมูลที่อยู่ในฐานข้อมูลเรียบร้อยแล้ว หรือข้อมูลที่เป็นภาษา  โปรแกรมชิ้นหนึ่งประกอบด้วยชุดคำสั่งที่เราจะเขียนขึ้นเป็นภาษาไพทอน</p>
@@ -466,7 +466,7 @@ document.write(`
 <h3>ติดตั้งโปรแกรม Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this heading">#</a></h3>
 <p>ส่วนประกอบต่าง ๆ ที่จำเป็นในการเขียนโปรแกรมเป็นภาษาไพทอน สามารถดาวน์โหลดพร้อมกันเป็นก้อนเดียวโดยการลงโปรแกรม Anaconda ซึ่งมีเครื่องมือต่าง ๆ ดังต่อไปนี้</p>
 <ul class="simple">
-<li><p>Python Interpreter ตัวแปลคำสั่งที่เขียนเป็นภาษาไพทอน เป็นภาษาที่เครื่องคอมพิวเตอร์เข้าใจ เพื่อจะได้นำไปรัน ตามที่เขียนได้ ต้องสังเกตุเวอร์ชันที่ใช้ด้วยให้เป็นปัจจุบันที่สุด</p></li>
+<li><p>Python Interpreter ตัวแปลคำสั่งที่เขียนเป็นภาษาไพทอน เป็นภาษาที่เครื่องคอมพิวเตอร์เข้าใจ เพื่อจะได้นำไปรัน ตามที่เขียนได้ ต้องสังเกตเวอร์ชันที่ใช้ด้วยให้เป็นปัจจุบันที่สุด</p></li>
 <li><p>ไลบรารีภาษาไพทอนหลาย ๆ ตัวที่มักใช้สำหรับการประมวลผล และวิเคราะห์ข้อมูล ทำให้สะดวกสบายในการลงโปรแกรม</p></li>
 <li><p>Anaconda prompt คือ Terminal ประเภทหนึ่ง ซึ่งมักจะประกอบด้วยหน้าจอสีดำ ๆ และข้อความที่แสดงผลให้ผู้ใช้พิมพ์คำสั่งลงไป Anaconda prompt ลงไปโดยตรง เราจะใช้เทอร์มินัลในการรันคำสั่งลง library ต่าง ๆ และรันคำสั่งในการไฟล์โค้ดไพทอน</p></li>
 <li><p>สิ่งแวดล้อมสำหรับการพัฒนาแบบเบ็ดเสร็จ (Interactive Development Environment หรือ IDE)  เป็นเครื่องมือที่ไว้สำหรับอำนวยความสะดวกในการเขียนโค้ด ส่วนหลักคือหน้าต่างที่ไว้สำหรับพิมพ์โค้ด และบันทึกโค้ดเก็บลงไฟล์ รวมถึงฟีเจอร์อื่น ๆ ที่ทำให้เขียนโค้ดได้อย่างมีประสิทธิภาพมากขึ้น เช่น ปรับเปลี่ยนสีตัวอักษรต่าง ๆ เพื่อให้ดูง่ายขึ้น และสามารถปรับหน้าต่างเพื่อแสดงโค้ดหลาย ๆ ไฟล์ หรือหลาย ๆ หน้า ได้ตามความพอใจ</p></li>
@@ -520,7 +520,7 @@ Hello, world!
 In [2]:
 </pre></div>
 </div>
-<p>โปรแกรม <code class="docutils literal notranslate"><span class="pre">ipython</span></code> เป็นโปรแกรมที่ทำให้เราสามารถพิมพ์คำสั่งภาษาไพทอนและกดรันเพื่อเห็นผลลัพท์ได้ทันที ทำให้เราสามารถตอบโต้กับเครื่องไปมาเป็นภาษาไพทอนได้</p>
+<p>โปรแกรม <code class="docutils literal notranslate"><span class="pre">ipython</span></code> เป็นโปรแกรมที่ทำให้เราสามารถพิมพ์คำสั่งภาษาไพทอนและกดรันเพื่อเห็นผลลัพธ์ได้ทันที ทำให้เราสามารถตอบโต้กับเครื่องไปมาเป็นภาษาไพทอนได้</p>
 </section>
 <section id="id2">
 <h2>เขียนโปรแกรมใส่ไฟล์ และสั่งรันทั้งไฟล์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
