@@ -4,6 +4,8 @@
 format: jb-book
 root: book/intro
 chapters:
+- file: book/installation
+
 - file: book/1-comp_thinking
   sections:
   - glob: book/module1/*
