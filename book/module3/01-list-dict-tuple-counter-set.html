@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>บทที่ 3 โครงสร้างข้อมูล (Data Structure) I &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module3/01-list-dict-tuple-counter-set';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -539,10 +566,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br-data-structure-i">
-<h1>บทที่ 3 </br> โครงสร้างข้อมูล (Data Structure) I<a class="headerlink" href="#br-data-structure-i" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-structure-i">
+<h1>บทที่ 3 </br> โครงสร้างข้อมูล (Data Structure) I<a class="headerlink" href="#data-structure-i" title="Link to this heading">#</a></h1>
 <p>โครงสร้างข้อมูล (data structure) เป็นกลไกที่ใช้สำหรับการจัดเก็บข้อมูลในรูปแบบที่มีโครงสร้าง เพื่อให้สามารถจัดเก็บ ค้นหา และจัดการข้อมูลได้อย่างมีประสิทธิภาพ การเข้าใจโครงสร้างข้อมูลเป็นสิ่งสำคัญอย่างยิ่งสำหรับโปรแกรมเมอร์ โดยเฉพาะอย่างยิ่งผู้ที่สนใจทางด้านวิทยาการข้อมูล (data science) เนื่องจากต้องมีการจัดเก็บ เคลื่อนย้าย และประมวลผลข้อมูลอยู่เป็นประจำ</p>
 <div class="admonition- admonition">
 <p class="admonition-title">จุดมุ่งหมายของบทนี้</p>
@@ -572,11 +599,11 @@ document.write(`
 <p>โครงสร้างข้อมูล คือ วิธีการจัดเก็บข้อมูลในคอมพิวเตอร์ เพื่อให้ค้นหา และประมวลผลข้อมูลได้อย่างมีประสิทธิภาพ</p>
 </aside>
 <section id="id1">
-<h2>ลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>ลิสต์<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>ลิสต์ (list) เป็นโครงสร้างข้อมูลที่ใช้ในการจัดเก็บข้อมูลเป็นลำดับ ซึ่งข้อมูลภายในลิสต์จะถูกเรียงตามลำดับตามกำหนด ลิสต์มีคุณสมบัติที่สามารถเก็บข้อมูลได้หลายประเภทในคราวเดียวกัน ไม่ว่าจะเป็นจำนวนเต็ม จำนวนทศนิยม หรือสตริง</p>
 <p>ลิสต์มีความคล้ายคลึงกับสตริงอย่างมาก ในความเป็นจริงสายอักขระก็ถือเป็นลิสต์ชนิดหนึ่งที่เก็บตัวอักขระเท่านั้น เพียงแต่สายอักขระมีเมท็อดบางอย่างที่แตกต่างจากลิสต์ ดังนั้นการทำความเข้าใจวิธีการทำงานของสายอักขระจะช่วยให้เข้าใจการทำงานของลิสต์ได้ดีขึ้น</p>
 <section id="id2">
-<h3>การสร้างลิสต์ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างลิสต์ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>ลิสต์สามารถสร้างได้โดยใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> ในการคร่อมข้อมูล โดยไม่สามารถใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">{}</span></code> แทนได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_list</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
@@ -596,7 +623,7 @@ document.write(`
 <p>โปรแกรมเมอร์มักไม่แนะนำให้ใช้ลิสต์ในลักษณะนี้ เนื่องจากอาจทำให้ยากต่อการทำความเข้าใจว่าข้อมูลแต่ละตัวในลิสต์มีความหมายอย่างไร ดังนั้นจึงควรให้ข้อมูลภายในลิสต์เป็นประเภทเดียวกันเพื่อความชัดเจน</p>
 </section>
 <section id="id3">
-<h3>ชื่อตัวแปรที่เก็บลิสต์<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>ชื่อตัวแปรที่เก็บลิสต์<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>ชื่อตัวแปรที่ใช้ในการเก็บลิสต์โดยกฎแล้วจะเป็นอะไรก็ได้ แต่เพื่อทำให้โค้ดเข้าใจได้ง่ายขึ้น โปรแกรมเมอร์มักตั้งชื่อลิสต์ตามสิ่งที่เก็บอยู่ตามด้วย <code class="docutils literal notranslate"><span class="pre">_list</span></code> หรือเปลี่ยนให้เป็นพหูพจน์แทน เช่น</p>
 <ul class="simple">
 <li><p>ถ้าลิสต์เก็บนามสกุลก็ควรจะตั้งชื่อตัวแปรว่า <code class="docutils literal notranslate"><span class="pre">last_name_list</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">last_names</span></code></p></li>
@@ -604,7 +631,7 @@ document.write(`
 </ul>
 </section>
 <section id="id4">
-<h3>การสร้างลิสต์จากสตริง<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างลิสต์จากสตริง<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
@@ -612,7 +639,7 @@ document.write(`
 <p>สตริงเมท็อด<code class="docutils literal notranslate"><span class="pre">.split</span></code> ใช้เวลาเราต้องการเปลี่ยนสตริงให้เป็นลิสต์ โดยที่ต้องกำหนดว่าจะใช้สตริงอะไรแบ่งสมาชิกแต่ละตัว ในตัวอย่างนี้เราใช้ <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> ช่องว่างในการแบ่ง ในการประมวลผลภาษาธรรมชาติเราใช้คำสั่งนี้บ่อยมากในการตัดคำ ซึ่งก็คือการเปลี่ยนสตริงให้เป็นลิสต์ของคำ</p>
 </section>
 <section id="id5">
-<h3>การหาความยาวของลิสต์ (จำนวนสมาชิก)<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>การหาความยาวของลิสต์ (จำนวนสมาชิก)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>ไพทอนมีฟังก์ชันบิวท์อิน <code class="docutils literal notranslate"><span class="pre">len</span></code> ที่ใช้หาจำนวนสมาชิกของลิสต์ ซึ่งสามารถใช้ได้กับโครงสร้างข้อมูลอื่น ๆ ของไพทอนทั้งหมดอีกด้วย เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Let&#39;s go crazy crazy crazy &#39;til we see the sun&quot;</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
@@ -622,14 +649,14 @@ document.write(`
 <p>ฟังก์ชันนี้จะคืนค่า <code class="docutils literal notranslate"><span class="pre">int</span></code> เสมอ ตัวอย่างที่ใช้บ่อย ๆ คือใช้ในการสร้างลิสต์จากสตริงเพื่อนับจำนวนคำที่อยู่ในประโยคหรือข้อความ เนื่องจากภาษาที่ใช้ตัวเขียนเป็นตัวลาตินสามารถตัดคำโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">split</span></code> ได้ง่าย ๆ ถึงแม้ว่าจะไม่ได้แม่นยำเสมอไป</p>
 </section>
 <section id="id6">
-<h3>เข้าถึงสมาชิกในลิสต์โดยใช้ดัชนี<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>เข้าถึงสมาชิกในลิสต์โดยใช้ดัชนี<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>การเข้าถึงสมาชิกแต่ละตัว เราจะใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code> คร่อมดัชนี และกฎการใช้ดัชนีเหมือนกับสตริงทุกประการ สมาชิกตัวแรกอยู่ที่ดัชนี 0 และสามารถใช้ดัชนีติดลบ ในการนับดัชนีถอยหลังจากท้ายลิสต์ได้ โดยดัชนี -1 หมายถึงสมาชิกตัวสุดท้าย, ดัชนี -2 หมายถึงสมาชิกถัดจากตัวสุดท้ายเป็นต้น</p>
 <p>ตัวอย่างเช่น หากเรามีลิสต์ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Let&#39;s&quot;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;crazy&#39;</span><span class="p">,</span> <span class="s1">&#39;crazy&#39;</span><span class="p">,</span> <span class="s1">&#39;crazy&#39;</span><span class="p">,</span> <span class="s2">&quot;&#39;til&quot;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;see&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;sun&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>เราสามารถเข้าถึงสมาชิกในลิสต์ได้โดยใช้ดัชนี เช่น</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>ผลลัพธ์</p></th>
@@ -650,6 +677,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ในกรณีที่พยายามเข้าถึงดัชนีที่ไม่อยู่ในช่วงของลิสต์ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">words</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span>
 </pre></div>
@@ -657,13 +685,13 @@ document.write(`
 <p>จะทำให้เกิดข้อผิดพลาดที่เรียกว่า <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> เนื่องจากไม่มีสมาชิกอยู่ที่ดัชนี 20 วิธีที่ดีที่สุดในการหลีกเลี่ยงข้อผิดพลาดนี้คือการตรวจสอบขอบเขตของลิสต์ก่อนเรียกใช้ดัชนี</p>
 </section>
 <section id="id7">
-<h3>การหั่นลิสต์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>การหั่นลิสต์<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>การหั่นลิสต์ (list slicing) เป็นการดึงข้อมูลบางส่วนจากลิสต์ โดยใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> พร้อมระบุช่วงของดัชนีที่ต้องการ การหั่นลิสต์สามารถทำได้ในลักษณะเดียวกับการหั่นสตริง โดยใช้รูปแบบ <code class="docutils literal notranslate"><span class="pre">list[start:end]</span></code> ซึ่ง <code class="docutils literal notranslate"><span class="pre">start</span></code> คือดัชนีเริ่มต้น และ <code class="docutils literal notranslate"><span class="pre">end</span></code> คือดัชนีสุดท้าย (ไม่รวมค่าที่ดัชนี <code class="docutils literal notranslate"><span class="pre">end</span></code>)</p>
 <p>ตัวอย่างการใช้งานการหั่นลิสต์</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </pre></div>
 </div>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>ผลลัพธ์</p></th>
@@ -685,10 +713,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>การหั่นลิสต์เป็นฟังก์ชันที่มีประโยชน์อย่างมากในการจัดการข้อมูล เราสามารถใช้มันในการดึงข้อมูลย่อย ๆ ที่ต้องการได้โดยง่าย</p>
 </section>
 <section id="for">
-<h3>การวนซ้ำบนลิสต์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Permalink to this heading">#</a></h3>
+<h3>การวนซ้ำบนลิสต์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Link to this heading">#</a></h3>
 <p>เราสามารถวนซ้ำ (iterate) บนลิสต์ได้ในลักษณะเดียวกับการวนซ้ำบนสตริง โดยสามารถวนซ้ำผ่านสมาชิกของลิสต์โดยตรง หรือวนซ้ำผ่านดัชนีของลิสต์ได้</p>
 <p>ตัวอย่างเช่น หากเราต้องการนับจำนวนคำที่สะกดด้วยตัวพิมพ์เล็กทั้งหมดในลิสต์</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rick&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;Michonne&#39;</span><span class="p">,</span> <span class="s1">&#39;protect&#39;</span><span class="p">,</span> <span class="s1">&#39;Carl&#39;</span><span class="p">]</span>
@@ -721,9 +750,9 @@ document.write(`
 <p>การใช้ <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> มีประโยชน์มากเมื่อต้องการทำงานกับข้อมูลในลิสต์ที่ต้องอ้างอิงทั้งดัชนีและสมาชิกในลิสต์พร้อมกัน เช่น การประมวลผลข้อมูลที่ต้องพิจารณาสมาชิกก่อนหน้าและถัดไปในลิสต์</p>
 </section>
 <section id="id8">
-<h3>ตัวดำเนินการของลิสต์ และฟังก์ชันแบบบิวท์อิน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>ตัวดำเนินการของลิสต์ และฟังก์ชันแบบบิวท์อิน<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>ลิสต์ใช้ตัวดำเนินการ และฟังก์ชันแบบบิวท์อิน หลายรูปแบบ ซึ่งคล้ายคลึงกับการทำงานของสตริง</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -765,9 +794,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id9">
-<h3>การเขียนทับสมาชิกในลิสต์ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3>การเขียนทับสมาชิกในลิสต์ด้วย <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>เราสามารถเขียนทับ (update) สมาชิกในลิสต์โดยใช้ดัชนีร่วมกับตัวดำเนินการกำหนดค่า <code class="docutils literal notranslate"><span class="pre">=</span></code> คล้าย ๆ กับการใช้ตัวแปร เราอาจจะคิดเสมือนว่าลิสต์เป็นการเก็บตัวแปรไว้หลาย ๆ ตัวแปร แบบเรียงลำดับกันตามที่เราต้องการ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;โจ้&#39;</span>
@@ -786,11 +816,11 @@ document.write(`
 </section>
 </section>
 <section id="id10">
-<h2>เมท็อดของลิสต์<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<h2>เมท็อดของลิสต์<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>ลิสต์ของเมท็อดของไพทอน เวอร์ชัน 3.12 มีอยู่ 11 เมท็อด แต่ว่าเมท็อดที่ใช้บ่อย ๆ ในการประมวลผลข้อมูลที่เกี่ยวข้องกับวิทยาการข้อมูล และการประมวลผลภาษาธรรมชาติ มีอยู่ 8 เมท็อด ได้แก่ <code class="docutils literal notranslate"><span class="pre">.append()</span> <span class="pre">.extend()</span> <span class="pre">.sort()</span> <span class="pre">.index()</span> <span class="pre">.count()</span> <span class="pre">.insert()</span> <span class="pre">.pop()</span> <span class="pre">.remove()</span></code></p>
 <p>นอกจากนั้นยังมีฟังก์ชันบิวอินที่ใช้กับลิสต์ได้ 4 ฟังก์ชัน ได้แก่ <code class="docutils literal notranslate"><span class="pre">sort()</span> <span class="pre">sum()</span> <span class="pre">max()</span> <span class="pre">min()</span></code> ซึ่งเราจะเรียนรู้วิธีการใช้เมท็อดและฟังก์ชันเหล่านี้ในบทนี้</p>
 <section id="append">
-<h3>เพิ่มข้อมูลเข้าท้ายลิสต์: <code class="docutils literal notranslate"><span class="pre">.append()</span></code><a class="headerlink" href="#append" title="Permalink to this heading">#</a></h3>
+<h3>เพิ่มข้อมูลเข้าท้ายลิสต์: <code class="docutils literal notranslate"><span class="pre">.append()</span></code><a class="headerlink" href="#append" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.append()</span></code> เป็นเมท็อดที่ใช้ในการเพิ่มสมาชิกใหม่เข้าไปที่ท้ายลิสต์ เมท็อดนี้จะทำการแก้ไขลิสต์โดยตรง ซึ่งหมายความว่าหลังจากเรียกใช้งานแล้ว ลิสต์เดิมจะถูกเปลี่ยนแปลงทันที</p>
 <p>ตัวอย่างการใช้งาน <code class="docutils literal notranslate"><span class="pre">.append()</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">]</span> <span class="c1"># สร้างลิสต์</span>
@@ -816,7 +846,7 @@ document.write(`
 <p>ในตัวอย่างนี้ เราใช้ <code class="docutils literal notranslate"><span class="pre">.append()</span></code> เพื่อเพิ่มข้อมูลเข้าไปในลิสต์ <code class="docutils literal notranslate"><span class="pre">numbers</span></code> ทีละตัว โดยค่าที่เพิ่มเข้าไปคือผลคูณของ <code class="docutils literal notranslate"><span class="pre">i</span></code> และ 2 ลิสต์สุดท้ายจะประกอบด้วยค่าคูณสองของตัวเลขตั้งแต่ 0 ถึง 4</p>
 </section>
 <section id="extend">
-<h3>นำลิสต์หลาย ๆ ลิสต์มาต่อกัน: <code class="docutils literal notranslate"><span class="pre">.extend()</span></code><a class="headerlink" href="#extend" title="Permalink to this heading">#</a></h3>
+<h3>นำลิสต์หลาย ๆ ลิสต์มาต่อกัน: <code class="docutils literal notranslate"><span class="pre">.extend()</span></code><a class="headerlink" href="#extend" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.extend()</span></code> ใช้สำหรับการเพิ่มสมาชิกหลายตัวจากลิสต์หนึ่งเข้ากับลิสต์อีกลิสต์หนึ่ง โดยสมาชิกทั้งหมดจากลิสต์ที่เป็นอินพุตจะถูกคัดลอกและเพิ่มต่อท้ายลิสต์ปัจจุบัน</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_first_six_months</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
@@ -833,10 +863,10 @@ document.write(`
 <p>ข้อควรสังเกตคือ เมท็อด <code class="docutils literal notranslate"><span class="pre">.extend()</span></code> จะคัดลอกสมาชิกจากลิสต์ที่เป็นอินพุตมาใส่ในลิสต์ปัจจุบันโดยตรง ไม่ได้ย้ายสมาชิกจากลิสต์อินพุต นั่นหมายความว่า ลิสต์ที่เป็นอินพุตจะไม่ถูกเปลี่ยนแปลงแต่อย่างใด</p>
 </section>
 <section id="sorted-list-sort">
-<h3>เรียงลำดับสมาชิกในลิสต์: <code class="docutils literal notranslate"><span class="pre">sorted(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sorted-list-sort" title="Permalink to this heading">#</a></h3>
+<h3>เรียงลำดับสมาชิกในลิสต์: <code class="docutils literal notranslate"><span class="pre">sorted(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sorted-list-sort" title="Link to this heading">#</a></h3>
 <p>การเรียงลำดับลิสต์สามารถทำได้สองวิธี คือการใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> และการใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> ทั้งสองวิธีนี้ทำงานคล้ายกัน แต่มีความแตกต่างสำคัญที่ควรทราบ</p>
 <section id="sorted">
-<h4>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted()</span></code><a class="headerlink" href="#sorted" title="Permalink to this heading">#</a></h4>
+<h4>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted()</span></code><a class="headerlink" href="#sorted" title="Link to this heading">#</a></h4>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> จะคืนค่าลิสต์ใหม่ที่มีสมาชิกเรียงลำดับตามลำดับที่กำหนด โดยลิสต์ต้นฉบับจะไม่ถูกเปลี่ยนแปลง ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sales_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">sorted_sales_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sales_list</span><span class="p">)</span>
@@ -848,7 +878,7 @@ document.write(`
 </div>
 </section>
 <section id="sort">
-<h4>เมท็อด <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sort" title="Permalink to this heading">#</a></h4>
+<h4>เมท็อด <code class="docutils literal notranslate"><span class="pre">.sort()</span></code><a class="headerlink" href="#sort" title="Link to this heading">#</a></h4>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.sort()</span></code> จะทำการเรียงลำดับสมาชิกของลิสต์โดยตรง ซึ่งหมายความว่าลิสต์ต้นฉบับจะถูกเปลี่ยนแปลงและไม่คืนค่าลิสต์ใหม่ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
 <span class="n">accountant_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
@@ -861,7 +891,7 @@ document.write(`
 </section>
 </section>
 <section id="sum-list-max-list-min-list">
-<h3>หาผลรวม ค่าสูงสุด ต่ำสุด ในลิสต์: <code class="docutils literal notranslate"><span class="pre">sum(list)</span></code>, <code class="docutils literal notranslate"><span class="pre">max(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">min(list)</span></code><a class="headerlink" href="#sum-list-max-list-min-list" title="Permalink to this heading">#</a></h3>
+<h3>หาผลรวม ค่าสูงสุด ต่ำสุด ในลิสต์: <code class="docutils literal notranslate"><span class="pre">sum(list)</span></code>, <code class="docutils literal notranslate"><span class="pre">max(list)</span></code> และ <code class="docutils literal notranslate"><span class="pre">min(list)</span></code><a class="headerlink" href="#sum-list-max-list-min-list" title="Link to this heading">#</a></h3>
 <p>ฟังก์ชันแบบบิวท์อิน <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code> และ <code class="docutils literal notranslate"><span class="pre">min()</span></code> เป็นฟังก์ชันที่ใช้ในการหาผลรวม ค่าสูงสุด และค่าต่ำสุดของสมาชิกในลิสต์ที่ประกอบด้วยข้อมูลประเภทตัวเลข</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">class_size_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
@@ -901,7 +931,7 @@ document.write(`
 <p>ข้อผิดพลาดนี้เกิดขึ้นเนื่องจากลิสต์ไม่มีเมท็อด <code class="docutils literal notranslate"><span class="pre">sum()</span> </code>ผู้ใช้ควรใช้ฟังก์ชันในตัว <code class="docutils literal notranslate"><span class="pre">sum(class_size_list)</span></code> แทน</p>
 </section>
 <section id="index">
-<h3>หาดัชนีของสมาชิก: <code class="docutils literal notranslate"><span class="pre">.index()</span></code><a class="headerlink" href="#index" title="Permalink to this heading">#</a></h3>
+<h3>หาดัชนีของสมาชิก: <code class="docutils literal notranslate"><span class="pre">.index()</span></code><a class="headerlink" href="#index" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.index()</span></code> ใช้สำหรับหาดัชนี (ตำแหน่ง) ของสมาชิกในลิสต์ โดยเมท็อดนี้จะคืนค่าดัชนีของสมาชิกตัวแรกที่พบ</p>
 <p>ตัวอย่างการใช้งาน:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">]</span>
@@ -929,7 +959,7 @@ document.write(`
 </div>
 </section>
 <section id="count">
-<h3>นับจำนวนของสมาชิกที่ระบุมา: <code class="docutils literal notranslate"><span class="pre">.count()</span></code><a class="headerlink" href="#count" title="Permalink to this heading">#</a></h3>
+<h3>นับจำนวนของสมาชิกที่ระบุมา: <code class="docutils literal notranslate"><span class="pre">.count()</span></code><a class="headerlink" href="#count" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.count()</span></code>
 ใช้สำหรับนับจำนวนครั้งที่สมาชิกที่กำหนดปรากฏอยู่ในลิสต์ เมท็อดนี้จะคืนค่าจำนวนครั้งที่พบ</p>
 <p>ตัวอย่างการใช้งาน</p>
@@ -952,10 +982,10 @@ document.write(`
 <p>ในกรณีนี้ ค่าที่ได้คือ 0 เนื่องจาก <code class="docutils literal notranslate"><span class="pre">'จิว'</span></code> ไม่ปรากฏอยู่ในลิสต์</p>
 </section>
 <section id="insert-pop-remove">
-<h3>แก้ไขลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span> <span class="pre">.pop()</span> <span class="pre">.remove()</span></code><a class="headerlink" href="#insert-pop-remove" title="Permalink to this heading">#</a></h3>
+<h3>แก้ไขลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span> <span class="pre">.pop()</span> <span class="pre">.remove()</span></code><a class="headerlink" href="#insert-pop-remove" title="Link to this heading">#</a></h3>
 <p>เมท็อดเหล่านี้ใช้สำหรับการแก้ไขสมาชิกในลิสต์โดยตรง ไม่ว่าจะเป็นการเพิ่มสมาชิก แทรกสมาชิก หรือนำสมาชิกออกจากลิสต์ เมท็อดเหล่านี้จะปรับเปลี่ยนลิสต์ต้นฉบับโดยไม่สร้างลิสต์ใหม่ ทำให้ดัชนีของสมาชิกในลิสต์เปลี่ยนแปลงไปทุกครั้งที่มีการเพิ่มหรือนำสมาชิกออก ดังนั้น เมื่อใช้งานร่วมกับวงวนฟอร์ ควรต้องใช้ความระมัดระวัง เพราะอาจทำให้เกิดความสับสนในการจัดการดัชนีของสมาชิก</p>
 <section id="insert">
-<h4>แทรกสมาชิกเข้าลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span></code><a class="headerlink" href="#insert" title="Permalink to this heading">#</a></h4>
+<h4>แทรกสมาชิกเข้าลิสต์: <code class="docutils literal notranslate"><span class="pre">.insert()</span></code><a class="headerlink" href="#insert" title="Link to this heading">#</a></h4>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.insert()</span></code> ใช้สำหรับแทรกสมาชิกใหม่เข้าไปในตำแหน่งที่กำหนดภายในลิสต์ สมาชิกที่ถูกแทรกจะเลื่อนตำแหน่งสมาชิกที่มีอยู่เดิมต่อไปทางขวา</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
@@ -978,7 +1008,7 @@ document.write(`
 <p>หากดัชนีที่ระบุมากกว่าความยาวของลิสต์ เมท็อดจะทำการเพิ่มสมาชิกใหม่ต่อท้ายลิสต์โดยอัตโนมัติ และไม่ทำให้เกิดข้อผิดพลาด</p>
 </section>
 <section id="remove">
-<h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.remove()</span></code><a class="headerlink" href="#remove" title="Permalink to this heading">#</a></h4>
+<h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.remove()</span></code><a class="headerlink" href="#remove" title="Link to this heading">#</a></h4>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.remove()</span></code> ใช้สำหรับลบสมาชิกตัวแรกที่มีค่าตรงกับข้อมูลที่ระบุ เมท็อดนี้จะทำการค้นหาจากซ้ายไปขวา และลบสมาชิกตัวแรกที่พบ</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
@@ -1002,7 +1032,7 @@ document.write(`
 </div>
 </section>
 <section id="pop">
-<h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.pop()</span></code><a class="headerlink" href="#pop" title="Permalink to this heading">#</a></h4>
+<h4>นำสมาชิกออกจากลิสต์: <code class="docutils literal notranslate"><span class="pre">.pop()</span></code><a class="headerlink" href="#pop" title="Link to this heading">#</a></h4>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.pop()</span></code> ใช้สำหรับนำสมาชิกออกจากลิสต์ตามดัชนีที่กำหนด และคืนค่าสมาชิกนั้นกลับมา เมท็อดนี้จะลบสมาชิกที่ตำแหน่งที่ระบุ และหากไม่มีการระบุดัชนี จะลบสมาชิกตัวสุดท้ายในลิสต์</p>
 <p>ตัวอย่างการใช้งาน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accountant_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;เจ&#39;</span><span class="p">,</span> <span class="s1">&#39;เมย์&#39;</span><span class="p">,</span> <span class="s1">&#39;จอย&#39;</span><span class="p">,</span> <span class="s1">&#39;มิว&#39;</span><span class="p">]</span>
@@ -1031,11 +1061,11 @@ document.write(`
 </section>
 </section>
 <section id="dictionary">
-<h2>ดิกชันนารี (Dictionary)<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h2>
+<h2>ดิกชันนารี (Dictionary)<a class="headerlink" href="#dictionary" title="Link to this heading">#</a></h2>
 <p>ดิกชันนารี หรือที่โปรแกรมเมอร์มักเรียกย่อว่า “ดิกต์ (dict)” เป็นโครงสร้างข้อมูลที่ใช้เก็บคู่ของคีย์ (key) และแวลู (value) โดยคีย์และแวลูสามารถเป็นข้อมูลประเภทใดก็ได้ ดิกชันนารีมีการทำงานคล้ายคลึงกับพจนานุกรมที่เราคุ้นเคย ซึ่งคีย์เปรียบเสมือนคำที่เราต้องการค้นหา และแวลูเปรียบเสมือนความหมายของคำนั้น ๆ อย่างไรก็ตาม ดิกชันนารีในภาษาไพทอนสามารถมีคีย์และแวลูเป็นข้อมูลประเภทใดก็ได้ ไม่จำกัดแค่คำศัพท์และความหมายเหมือนพจนานุกรม</p>
 <p>อีกประการหนึ่งที่ดิกชันนารีในวิทยาการคอมพิวเตอร์มีความคล้ายคลึงกับพจนานุกรม คือ ดิกชันนารีถูกใช้เพื่อตอบคำถามว่า <em>คีย์นี้คู่กับแวลูอะไร</em> แต่ไม่สามารถตอบคำถามในทิศทางตรงกันข้ามได้ว่า <em>แวลูนี้คู่กับคีย์อะไร</em> ในการใช้งานดิกชันนารี เราสามารถค้นหาว่าคีย์ที่ได้รับมานั้นจับคู่กับแวลูใดได้อย่างรวดเร็ว แต่ไม่สามารถใช้แวลูเพื่อค้นหาคีย์ได้โดยตรง</p>
 <p>ตัวอย่างการใช้ดิกชันนารีในการเก็บข้อมูล ได้แก่</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>การใช้งาน</p></th>
 <th class="head"><p>คีย์</p></th>
@@ -1069,11 +1099,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>จากตัวอย่างแรกหากเราจัดเก็บสมุดโทรศัพท์ โดยให้คีย์เป็นชื่อแวลูเป็นเบอร์โทรศัพท์ เราจะไม่สามารถเปิดหาได้ว่าเบอร์ปริศนาที่ได้มานั้นเป็นเบอร์ของใคร</p>
 <p>ดิกชันนารีถูกออกแบบมาเพื่อค้นหาแวลูจากคีย์ได้อย่างรวดเร็ว การค้นหาแวลูโดยใช้คีย์สามารถทำได้ในระยะเวลาคงที่ (constant time) โดยไม่ขึ้นกับจำนวนคู่คีย์แวลูที่เก็บอยู่ในดิกชันนารี ตัวอย่างเช่น หากเราต้องการค้นหาเบอร์โทรศัพท์ของคนหนึ่งในสมุดโทรศัพท์ที่เก็บในดิกชันนารี เราสามารถใช้คีย์ซึ่งเป็นชื่อของบุคคลนั้นเพื่อดึงแวลูที่เป็นหมายเลขโทรศัพท์ได้ทันที โดยไม่ต้องคำนึงถึงจำนวนข้อมูลที่เก็บอยู่</p>
 <p>อย่างไรก็ตาม ดิกชันนารีไม่สามารถทำงานในทิศทางตรงกันข้ามได้ กล่าวคือ เราไม่สามารถค้นหาคีย์จากแวลูได้โดยตรง นั่นหมายความว่า เราไม่สามารถใช้หมายเลขโทรศัพท์เพื่อค้นหาชื่อเจ้าของหมายเลขได้ในดิกชันนารี หากต้องการค้นหาในทิศทางนี้เราจะต้องดึงเอาข้อมูลทั้งหมดจากดิกชันนารีและใช้วงวนฟอร์ในการตรวจสอบสมาชิกทุกตัวในดิกชันนารี ซึ่งเป็นอัลกอริทึมที่ใช้เวลาแบบเชิงเส้น (linear time) กล่าวคือระยะเวลาที่ใช้ขึ้นอยู่กับจำนวนคู่คีย์แวลูที่เก็บอยู่ในดิกชันนารี</p>
 <section id="id11">
-<h3>การสร้างดิกชันนารีด้วย <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างดิกชันนารีด้วย <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>ดิกชันนารีถูกสร้างได้ด้วยการใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span> <span class="o">=</span> <span class="p">{}</span>
 </pre></div>
@@ -1088,7 +1119,7 @@ document.write(`
 </pre></div>
 </div>
 <p>ดิกชันนารีนี้เก็บข้อมูลเกี่ยวกับชื่อและหมายเลขโทรศัพท์ในลักษณะของคู่คีย์และแวลู ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คีย์</p></th>
 <th class="head"><p>แวลู</p></th>
@@ -1106,9 +1137,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="id12">
-<h3>ชื่อตัวแปรที่เก็บดิกชันนารี<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<h3>ชื่อตัวแปรที่เก็บดิกชันนารี<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>ชื่อตัวแปรที่ใช้เก็บดิกชันนารีควรบ่งบอกให้ชัดเจนว่าคีย์และแวลูคืออะไร และคั่นด้วย <code class="docutils literal notranslate"><span class="pre">_to_</span></code> เพื่อเป็นการบ่งบอกว่าตัวแปรเก็บดิกชันนารีอยู่  เช่น</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name_to_phone_number</span></code> เก็บชื่อเป็นคีย์ และเบอร์โทรศัพท์เป็นแวลู</p></li>
@@ -1118,7 +1150,7 @@ document.write(`
 <p>แม้ว่าชื่อตัวแปรจะไม่มีผลต่อการทำงานของโปรแกรม แต่การตั้งชื่อตัวแปรที่สื่อความหมายชัดเจนจะช่วยให้โค้ดอ่านง่ายและเข้าใจง่ายมากยิ่งขึ้น โดยเฉพาะเมื่อใช้ดิกชันนารีซึ่งเป็นโครงสร้างข้อมูลที่อาจซับซ้อน</p>
 </section>
 <section id="len">
-<h3>หาจำนวนคู่คีย์แวลูด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code><a class="headerlink" href="#len" title="Permalink to this heading">#</a></h3>
+<h3>หาจำนวนคู่คีย์แวลูด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code><a class="headerlink" href="#len" title="Link to this heading">#</a></h3>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">len</span></code> เมื่อใช้กับดิกชันนารีจะ คืนค่าจำนวนคู่ของคีย์แวลูที่อยู่ในดิกต์</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">name_to_phone_number</span><span class="p">)</span> <span class="c1">#--&gt; 3</span>
@@ -1127,14 +1159,14 @@ document.write(`
 <p>ในตัวอย่างนี้ ดิกชันนารี <code class="docutils literal notranslate"><span class="pre">name_to_phone_number</span></code> มีคู่คีย์-แวลูทั้งหมด 3 คู่ ดังนั้น <code class="docutils literal notranslate"><span class="pre">len(name_to_phone_number)</span></code> จะคืนค่า 3</p>
 </section>
 <section id="key-value">
-<h3>เพิ่มข้อมูล (คู่ key-value) เข้าดิกชันนารี<a class="headerlink" href="#key-value" title="Permalink to this heading">#</a></h3>
+<h3>เพิ่มข้อมูล (คู่ key-value) เข้าดิกชันนารี<a class="headerlink" href="#key-value" title="Link to this heading">#</a></h3>
 <p>เมื่อเราสร้างดิกชันนารีขึ้นมาแล้วอันหนึ่ง เราสามารถเพิ่มคู่คีย์แวลูได้ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">d[คีย์]</span> <span class="pre">=</span> <span class="pre">แวลู</span></code> โดยที่คีย์อาจเป็นได้ทั้งสตริงหรือตัวเลข แต่ไม่สามารถใช้ประเภทข้อมูลเช่นบูลีนหรือลิสต์เป็นคีย์ได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
 </pre></div>
 </div>
 <p>บรรทัดแรกเราสร้างดิกชันนารีที่เก็บค่าคีย์แวลู ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คีย์</p></th>
 <th class="head"><p>แวลู</p></th>
@@ -1152,8 +1184,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>หลังจากรันบรรทัดที่ 2 ข้อมูลในดิกชันนารีจะกลายเป็น</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คีย์</p></th>
 <th class="head"><p>แวลู</p></th>
@@ -1174,6 +1207,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ข้อควรระวัง คือคีย์ในดิกชันนารีต้องไม่ซ้ำกัน หากพยายามเพิ่มคู่คีย์-แวลูที่มีคีย์ซ้ำกับคีย์ที่มีอยู่แล้วในดิกชันนารี ข้อมูลเดิมจะถูกเขียนทับ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
@@ -1181,7 +1215,7 @@ document.write(`
 </pre></div>
 </div>
 <p>หลังจากรันโค้ดนี้แล้ว ข้อมูลในดิกชันนารีจะเปลี่ยนไปเป็นดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คีย์</p></th>
 <th class="head"><p>แวลู</p></th>
@@ -1202,11 +1236,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ดิกชันนารีมีคีย์แวลู อยู่ 4 คู่ เท่าเดิม  <code class="docutils literal notranslate"><span class="pre">name_to_phone_number['ตังเม']</span> <span class="pre">=</span> <span class="pre">'011-222-3333'</span></code> เปลี่ยนคู่คีย์แวลู ที่มี <code class="docutils literal notranslate"><span class="pre">'ตังเม'</span></code> เป็นคีย์ให้เป็นค่าใหม่ที่ป้อนเข้าไป  ให้สังเกตด้วยว่าดิกชันนารีไม่ได้ลบคู่คีย์แวลูเก่า
 และเติมคู่ใหม่เข้าไป ดิกชันนารีจะเขียนทับตำแหน่งเดิม</p>
 </section>
 <section id="get">
-<h3>เข้าถึงแวลูด้วยคีย์: <code class="docutils literal notranslate"><span class="pre">[]</span></code> และ <code class="docutils literal notranslate"><span class="pre">.get()</span></code><a class="headerlink" href="#get" title="Permalink to this heading">#</a></h3>
+<h3>เข้าถึงแวลูด้วยคีย์: <code class="docutils literal notranslate"><span class="pre">[]</span></code> และ <code class="docutils literal notranslate"><span class="pre">.get()</span></code><a class="headerlink" href="#get" title="Link to this heading">#</a></h3>
 <p>เราสามารถเข้าถึงค่าที่ตรงกับคีย์ในดิกชันนารีได้โดยระบุคีย์ที่ต้องการ ตัวอย่างเช่น หากเราต้องการทราบหมายเลขโทรศัพท์ของ ‘ตังเม’ จากดิกชันนารีที่เก็บหมายเลขโทรศัพท์ สามารถทำได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">]</span> <span class="c1"># ---&gt; &#39;088-888-8888&#39;</span>
@@ -1241,10 +1276,10 @@ document.write(`
 <p>บรรทัดที่สุดท้ายคือการเปิดหาคีย์ <code class="docutils literal notranslate"><span class="pre">'Jack'</span></code> ในดิกชันนารี แต่ถ้าหากไม่เจอให้ คืนค่า 0 ทำให้เราไม่ต้องเจอกับ <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
 </section>
 <section id="id13">
-<h3>การวนซ้ำบนดิกชันนารี<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h3>การวนซ้ำบนดิกชันนารี<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> วนซ้ำไปบนคีย์ (iterate on keys) วนซ้ำไปบนแวลู (iterate on values) หรือวนซ้ำไปบนคู่คีย์แวลู (iterate on key-value pairs) ขึ้นอยู่กับการใช้งาน โดยเราจะใช้เมท็อด<code class="docutils literal notranslate"><span class="pre">.keys()</span></code>, <code class="docutils literal notranslate"><span class="pre">.values()</span></code>, <code class="docutils literal notranslate"><span class="pre">.items()</span></code> ตามลำดับ ซึ่งเมท็อดเหล่านี้จะคืนค่าประเภท<em>สิ่งที่วนซ้ำได้</em> (iterable) ซึ่งหมายถึงข้อมูลที่สามารถวนซ้ำได้</p>
 <section id="id14">
-<h4>วนซ้ำไปบนคีย์<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
+<h4>วนซ้ำไปบนคีย์<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
 <p>เราสามารถใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> ในการวนซ้ำไปบนดิกชันนารีได้โดยตรง ในการวนซ้ำแบบนี้ ระบบจะตีความว่าต้องการวนซ้ำไปบนคีย์แต่ละตัว (ไม่ใช่การวนซ้ำบนคู่คีย์แวลู)</p>
 <p>ตัวอย่างการวนซ้ำไปบนคีย์</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
@@ -1274,7 +1309,7 @@ document.write(`
 <p>การแปลงคีย์เป็นลิสต์นี้สามารถนำไปใช้งานในกรณีที่ต้องการประมวลผลคีย์ทั้งหมดในลำดับที่ชัดเจน</p>
 </section>
 <section id="value">
-<h4>วนซ้ำไปบน value<a class="headerlink" href="#value" title="Permalink to this heading">#</a></h4>
+<h4>วนซ้ำไปบน value<a class="headerlink" href="#value" title="Link to this heading">#</a></h4>
 <p>ดิกชันนารีมีเมท็อด<code class="docutils literal notranslate"><span class="pre">.values()</span></code> ที่ทำให้เราวนซ้ำไปบนแวลูได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_to_phone_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ตังเม&#39;</span><span class="p">:</span> <span class="s1">&#39;088-888-8888&#39;</span><span class="p">,</span> <span class="s1">&#39;เป่าหลง&#39;</span> <span class="p">:</span> <span class="s1">&#39;099-999-9999&#39;</span><span class="p">,</span> <span class="s1">&#39;เจนนี่&#39;</span><span class="p">:</span> <span class="s1">&#39;011-111-1111&#39;</span><span class="p">}</span>
 <span class="n">name_to_phone_number</span><span class="p">[</span><span class="s1">&#39;โนโซมิ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;066-666-6666&#39;</span>
@@ -1296,7 +1331,7 @@ document.write(`
 </div>
 </section>
 <section id="id15">
-<h4>วนซ้ำไปบนคู่คีย์แวลู<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<h4>วนซ้ำไปบนคู่คีย์แวลู<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <p>เราสามารถใช้เมท็อด<code class="docutils literal notranslate"><span class="pre">.items()</span></code> ในการวนซ้ำไปบนคู่คีย์แวลู ซึ่งเมท็อดนี้จะคืนค่าเป็นคู่คีย์แวลูที่เป็นสิ่งที่วนซ้ำได้ ตัวอย่างการใช้งานเมท็อดนี้ ดังต่อไปนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">name_to_phone_number</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
 	<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -1318,7 +1353,7 @@ document.write(`
 </section>
 </section>
 <section id="in">
-<h3>ตรวจสอบว่ามีคีย์นั้นอยู่ในดิกชันนารีหรือไม่: <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#in" title="Permalink to this heading">#</a></h3>
+<h3>ตรวจสอบว่ามีคีย์นั้นอยู่ในดิกชันนารีหรือไม่: <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#in" title="Link to this heading">#</a></h3>
 <p>เราสามารถใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">in</span></code> เพื่อตรวจสอบว่าคีย์ที่ต้องการมีอยู่ในดิกชันนารีหรือไม่ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
 <span class="s1">&#39;Jack&#39;</span> <span class="ow">in</span> <span class="n">word_to_freq</span> <span class="c1">#---&gt; False</span>
@@ -1351,7 +1386,7 @@ document.write(`
 <p>ซึ่งทั้งสองวิธีเป็นมักจะใช้เวลานานเนื่องจากเราจะต้องวนไล่ไปบนแวลูแต่ละตัว ยิ่งดิกชันนารีใหญ่แค่ไหนเวลาในการรันโปรแกรมก็จะนานตามไปด้วย ซึ่งต่างจากการตรวจสอบคีย์ซึ่งใช้เวลาในการรันโปรแกรมเป็นค่าคงตัว ไม่ขึ้นกับขนาดของดิกชันนารี ถ้าหากเราจำเป็นต้องมีการตรวจสอบว่ามีแวลูอะไรอยู่หรือไม่ เราไม่ควรใช้ดิกชันนารีในการเก็บข้อมูล</p>
 </section>
 <section id="id16">
-<h3>ลบคู่คีย์แวลู: <code class="docutils literal notranslate"><span class="pre">.pop</span></code><a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<h3>ลบคู่คีย์แวลู: <code class="docutils literal notranslate"><span class="pre">.pop</span></code><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.pop()</span></code> ใช้สำหรับลบคู่คีย์แวลูออกจากดิกชันนารี โดยต้องระบุคีย์ที่ต้องการลบ เมท็อดนี้จะคืนค่าแวลูที่ถูกลบออกมา หากคีย์ที่ระบุไม่มีอยู่ในดิกชันนารี จะเกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_to_freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;the&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Andy&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
 <span class="n">word_to_freq</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;the&#39;</span><span class="p">)</span>
@@ -1371,7 +1406,7 @@ document.write(`
 </section>
 </section>
 <section id="tuple">
-<h2>ทูเปิล (tuple)<a class="headerlink" href="#tuple" title="Permalink to this heading">#</a></h2>
+<h2>ทูเปิล (tuple)<a class="headerlink" href="#tuple" title="Link to this heading">#</a></h2>
 <p>ทูเปิล เป็นโครงสร้างข้อมูลที่ใช้เก็บข้อมูลในลำดับที่แน่นอน ซึ่งมีลักษณะคล้ายคลึงกับลิสต์ โดยลิสต์สามารถทำหน้าที่ต่าง ๆ ได้เช่นเดียวกับทูเปิล การสร้างทูเปิลนั้นแตกต่างจากลิสต์ โดยเราจะใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">()</span></code> แทนวงเล็บเหลี่ยม <code class="docutils literal notranslate"><span class="pre">[]</span></code> เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_last_name</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;ธำรงรัตนฤทธิ์&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1402,11 +1437,11 @@ document.write(`
 <p>ทูเปิลมีเมท็อด<code class="docutils literal notranslate"><span class="pre">.count</span></code> และ <code class="docutils literal notranslate"><span class="pre">.index</span></code> เช่นเดียวกับลิสต์ และสามารถหั่นเป็นทูเปิลย่อยได้เหมือนกับลิสต์เช่นกัน  แต่เนื่องจากทูเปิลมีโครงสร้างที่แน่นอนและข้อมูลแต่ละตำแหน่งมักมีประเภทที่แตกต่างกัน การใช้งานเมท็อดเหล่านี้จึงมักไม่เป็นที่นิยม</p>
 </section>
 <section id="id17">
-<h2>เคาน์เตอร์<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
+<h2>เคาน์เตอร์<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
 <p>เคาน์เตอร์ เป็นคลาสย่อย หรือซับคลาส (subclass) ซึ่งหมายความว่าเคาน์เตอร์สามารถทำงานได้เกือบทุกอย่างที่ดิกชันนารีทำได้ แต่มีเมท็อดเพิ่มเติมที่ช่วยในการนับจำนวน คีย์ในเคาน์เตอร์สามารถเป็นข้อมูลประเภทใดก็ได้ แต่แวลูต้องเป็นตัวเลข (จำนวน) เท่านั้น จุดประสงค์หลักของเคาน์เตอร์คือการเก็บจำนวนครั้งที่พบคีย์แต่ละตัว</p>
 <p>เคาน์เตอร์ไม่ใช่คลาสแบบบิวท์ (built-in class) ดังนั้นก่อนจะใช้จะต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อนที่จะเรียกใช้ เคาน์เตอร์เป็นคลาสที่เป็นส่วนหนึ่งของโมดูล <code class="docutils literal notranslate"><span class="pre">collections</span></code></p>
 <section id="id18">
-<h3>การสร้างเคาน์เตอร์ว่าง ๆ<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างเคาน์เตอร์ว่าง ๆ<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">Counter()</span></code> ในการสร้างเคาน์เตอร์ซึ่งเป็นคำสั่งที่ต้อง <code class="docutils literal notranslate"><span class="pre">import</span></code> เข้ามาก่อน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
@@ -1414,14 +1449,14 @@ document.write(`
 </div>
 </section>
 <section id="id19">
-<h3>การสร้างเคาน์เตอร์จากดิกชันนารี<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างเคาน์เตอร์จากดิกชันนารี<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p>หากมีดิกชันนารีที่แวลูเป็นจำนวนอยู่แล้ว เราสามารถแปลงดิกชันนารีนั้นเป็นเคาน์เตอร์ได้โดยตรง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
 </pre></div>
 </div>
 </section>
 <section id="id20">
-<h3>การสร้างเคาน์เตอร์จากลิสต์<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างเคาน์เตอร์จากลิสต์<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p>การสร้างเคาน์เตอร์จากลิสต์ คือ การใช้เคาน์เตอร์นับค่าต่าง ๆ ที่เก็บอยู่ในลิสต์ และจัดเก็บให้ค่าทั้งหมดเป็นคีย์และจำนวนครั้งที่พบให้เก็บเป็นแวลู</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
 <span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
@@ -1432,7 +1467,7 @@ document.write(`
 </div>
 </section>
 <section id="id21">
-<h3>คีย์ที่ไม่ได้อยู่ในเคาน์เตอร์แวลูจะเป็น 0<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<h3>คีย์ที่ไม่ได้อยู่ในเคาน์เตอร์แวลูจะเป็น 0<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <p>เมื่อเราค้นหาคีย์ที่ไม่ได้อยู่ในเคาน์เตอร์ ค่าแวลูที่ได้จะเป็น 0 เสมอ ซึ่งต่างจากดิกชันนารีที่ถ้าค้นหาคีย์ที่ไม่มี จะทำให้เกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_count</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="c1">#--&gt; 0</span>
 </pre></div>
@@ -1457,7 +1492,7 @@ document.write(`
 <p>หากเราใช้ดิกชันนารีปกติ เราต้องตรวจสอบว่าคีย์อยู่ในดิกชันนารีอยู่แล้วหรือไม่ ถ้าไม่ได้อยู่ในดิกชันนารี เราต้องเพิ่มคู่คีย์แวลูใหม่โดยตั้งให้ค่าแวลูเป็น 0 เตรียมเอาไว้ก่อน เพื่อป้องกัน <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
 </section>
 <section id="most-common">
-<h3>หาค่าคีย์ที่คู่กับแวลูที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code><a class="headerlink" href="#most-common" title="Permalink to this heading">#</a></h3>
+<h3>หาค่าคีย์ที่คู่กับแวลูที่สูงที่สุด: <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code><a class="headerlink" href="#most-common" title="Link to this heading">#</a></h3>
 <p>เคาน์เตอร์มีเมท็อด <code class="docutils literal notranslate"><span class="pre">.most_common()</span></code> ซึ่งใช้สำหรับหาคีย์ที่พบบ่อยที่สุด</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letter_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
 <span class="n">letter_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">letter_list</span><span class="p">)</span>
@@ -1469,7 +1504,7 @@ document.write(`
 </section>
 </section>
 <section id="set">
-<h2>เซต (Set)<a class="headerlink" href="#set" title="Permalink to this heading">#</a></h2>
+<h2>เซต (Set)<a class="headerlink" href="#set" title="Link to this heading">#</a></h2>
 <p>เซต เป็นโครงสร้างข้อมูลที่เก็บข้อมูลที่ไม่ซ้ำกัน และไม่มีลำดับ ซึ่งล้อกับเซตในคณิตศาสตร์ เซตมีความคล้ายคลึงกับลิสต์ คือ สามารถเก็บข้อมูล และเรียกใช้ข้อมูลที่เก็บเอาไว้ได้ แต่ข้อแตกต่างที่สำคัญ ได้แก่</p>
 <ol class="arabic simple">
 <li><p>เซตไม่เก็บลำดับของข้อมูล เพราะฉะนั้นเราไม่สามารถใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code> ในการเข้าถึงข้อมูลได้ ไม่สามารถใช้ <code class="docutils literal notranslate"><span class="pre">[]</span></code> ในการหั่นเซตได้ เนื่องจากเซตไม่มีลำดับที่แน่นอน ถึงแม้จะสามารถใช้วงวนฟอร์เพื่อเข้าถึงสมาชิกในเซตได้ แต่ลำดับการเข้าถึงสมาชิกแต่ละตัวจะไม่ตรงกับลำดับที่เราเพิ่มสมาชิกเข้าไป</p></li>
@@ -1478,7 +1513,7 @@ document.write(`
 เนื่องจากเซตไม่เก็บลำดับข้อมูล การตรวจสอบสมาชิกในเซตจึงทำได้เร็วกว่าการตรวจสอบในลิสต์ โดยอัลกอริทึมที่ใช้ในการตรวจสอบสมาชิกของเซตจะทำงานในเวลาคงที่ (เวลาที่ใช้ในการตรวจสอบสมาชิกภาพไม่ขึ้นอยู่กับขนาดของเซต)</p></li>
 </ol>
 <section id="id22">
-<h3>การสร้างเซต และการหาขนาดของเซต<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างเซต และการหาขนาดของเซต<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>เซตถูกสร้างขึ้นได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> หรือคำสั่ง <code class="docutils literal notranslate"><span class="pre">set()</span></code> ถ้าต้องการสร้างเซตว่าง สามารถใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> หรือคำสั่ง <code class="docutils literal notranslate"><span class="pre">set()</span></code> ได้เลย ดังตัวอย่างต่อไปนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">basket</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">basket</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -1508,7 +1543,7 @@ document.write(`
 </div>
 </section>
 <section id="id23">
-<h3>การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<h3>การตรวจสอบการเป็นสมาชิกโดยใช้ <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p>เราสามารถใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">in</span></code> เพื่อตรวจสอบว่าข้อมูลที่ได้มาเป็นสมาชิกของเซตหรือไม่ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;French&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">,</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">}</span>
 <span class="s1">&#39;English&#39;</span> <span class="ow">in</span> <span class="n">languages</span> <span class="c1"># True</span>
@@ -1518,10 +1553,10 @@ document.write(`
 <p>เซตสละความสามารถในการเก็บลำดับของข้อมูล เพื่อแลกมากับความเร็วในการหาข้อมูล การตรวจสอบการเป็นสมาชิกในลิสต์ต้องไล่ตรวจสอบสมาชิกทีละตัวโดยใช้เวลาเชิงเส้น (linear time) ซึ่งหมายความว่าเวลาที่ใช้ในการค้นหาจะเพิ่มขึ้นตามจำนวนสมาชิกในลิสต์ ในทางตรงกันข้ามเซตใช้โครงสร้างข้อมูลแฮช (hashing) ซึ่งช่วยให้การค้นหาสมาชิกสามารถทำได้ในเวลาคงที่ (constant time) โดยไม่ขึ้นกับจำนวนสมาชิกที่อยู่ในเซต ทำให้เซตเหมาะสมกว่าลิสต์สำหรับการตรวจสอบการเป็นสมาชิก โดยเฉพาะเมื่อมีจำนวนข้อมูลมาก</p>
 </section>
 <section id="id24">
-<h3>การวนซ้ำบนเซต<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<h3>การวนซ้ำบนเซต<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
 <p>เราสามารถใช้ for ลูปเพื่อเข้าถึงสมาชิกทุกตัวในเซตได้ เช่นเดียวกับการวนซ้ำในลิสต์ แต่เนื่องจากเซตไม่มีการเก็บลำดับของข้อมูล การวนซ้ำด้วย for จึงไม่ได้เรียงลำดับตามที่เราเพิ่มข้อมูลเข้าไป</p>
 <section id="id25">
-<h4>ตัวอย่าง<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id25" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;French&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
@@ -1537,10 +1572,10 @@ document.write(`
 </section>
 </section>
 <section id="add">
-<h3>การเพิ่มสมาชิกในเซตด้วย <code class="docutils literal notranslate"><span class="pre">add()</span></code><a class="headerlink" href="#add" title="Permalink to this heading">#</a></h3>
+<h3>การเพิ่มสมาชิกในเซตด้วย <code class="docutils literal notranslate"><span class="pre">add()</span></code><a class="headerlink" href="#add" title="Link to this heading">#</a></h3>
 <p>เราสามารถเพิ่มสมาชิกในเซตได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">add</span></code> ซึ่งต่างจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">append</span></code> ของลิสต์ คำว่า append ภาษาอังกฤษแปลว่าเพิ่มไปตรงท้าย แต่คำว่า add แปลว่าเพิ่มเข้าไปโดยไม่ได้คำนึงถึงลำดับของสมาชิก ผู้พัฒนาภาษาไพทอนเลือกใช้คำว่า add เพื่อแสดงให้เห็นว่าเซตไม่เก็บลำดับของสมาชิก</p>
 <section id="id26">
-<h4>ตัวอย่าง<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id26" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราทำโจทย์เดียวกับตัวอย่างที่ผ่านมา เราต้องการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาจากลิสต์รายชื่อนักเรียน เราสามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">add</span></code> เพื่อเพิ่มสมาชิกที่ต้องการเข้าไปทีละตัว แทนที่การใช้เซตคอมพลิเฮนชันได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;อาทิตยา&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;สุชาดา&#39;</span><span class="p">]</span>
 <span class="n">aa_name_set</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># จะใช้ aa_name_set = set() แทนก็ได้</span>
@@ -1552,10 +1587,10 @@ document.write(`
 </section>
 </section>
 <section id="remove-discard">
-<h3>เอาสมาชิกออกจากเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code> และ <code class="docutils literal notranslate"><span class="pre">discard()</span></code><a class="headerlink" href="#remove-discard" title="Permalink to this heading">#</a></h3>
+<h3>เอาสมาชิกออกจากเซตด้วย <code class="docutils literal notranslate"><span class="pre">remove()</span></code> และ <code class="docutils literal notranslate"><span class="pre">discard()</span></code><a class="headerlink" href="#remove-discard" title="Link to this heading">#</a></h3>
 <p>แม้ว่าคำสั่งนี้อาจไม่ถูกใช้งานบ่อยนัก แต่การลบสมาชิกออกจากเซตเป็นสิ่งที่ควรรู้เพื่อความสมบูรณ์ของการใช้งานเซต เมท็อด <code class="docutils literal notranslate"><span class="pre">remove()</span></code> ใช้ในการลบสมาชิกออกจากเซตโดยเราต้องระบุสมาชิกที่ต้องการลบ หากสมาชิกนั้นไม่มีอยู่ในเซต จะทำให้เกิดข้อผิดพลาด <code class="docutils literal notranslate"><span class="pre">KeyError</span></code></p>
 <section id="id27">
-<h4>ตัวอย่าง<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id27" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเรามีเซตของตัวเลือกที่เป็นไปได้ในแบบสอบถาม เช่น Strongly disagree, Disagree, Neutral, Agree, และ Strongly agree และเราต้องการลบตัวเลือก “Strongly disagree” และ “Strongly agree” ออกจากเซต</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">possible_responses</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Strongly disagree&#39;</span><span class="p">,</span> <span class="s1">&#39;Disagree&#39;</span><span class="p">,</span> <span class="s1">&#39;Neutral&#39;</span><span class="p">,</span> <span class="s1">&#39;Agree&#39;</span><span class="p">,</span> <span class="s1">&#39;Strongly agree&#39;</span><span class="p">}</span>
 <span class="n">possible_responses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Strongly disagree&#39;</span><span class="p">)</span>
@@ -1574,7 +1609,7 @@ document.write(`
 </section>
 </section>
 <section id="id28">
-<h3>การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<h3>การดำเนินการของเซต: อินเตอร์เซกชัน ยูเนียน และผลต่างของเซต<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p>เซตในภาษาไพทอนรองรับการดำเนินการของเซตทุกตัว สมมติว่าเรามีเซต A เก็บอยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">setA</span></code> และเซต B เก็บอยู่ในตัวแปร <code class="docutils literal notranslate"><span class="pre">setB</span></code></p>
 <ul class="simple">
 <li><p>อินเตอร์เซกชัน (A ∩ B) คือ การสร้างเซตที่ประกอบด้วยสมาชิกที่อยู่ทั้งในเซต A และเซต B ภาษาไพทอนใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">setA.intersection(setB)</span></code></p></li>
@@ -1584,7 +1619,7 @@ document.write(`
 <p>เซตในโลกของการประมวลผลภาษาธรรมชาติมักจะใช้ในการเก็บรายการคำศัพท์ (vocabulary หรือ vocab) เช่น คำศัพท์ที่ปรากฎทั้งหมดในข้อสอบชุดหนึ่ง คำศัพท์ที่เห็นทั้งหมดในคลังข้อมูล (corpus ชุดข้อมูลที่รวบรวมข้อมูลภาษาเอาไว้จำนวนมาก) คำศัพท์ที่แบบจำลองเข้าใจความหมายอยู่แล้ว เซตเหมาะแก่การเก็บรายการคำศํพท์ เพราะ รายการคำศัพท์มักประกอบด้วยคำศัพท์ที่พบเห็นอย่างน้อยหนึ่งครั้ง โดยไม่คำนึงว่าเกิดขึ้นซ้ำหรือไม่ และไม่คำนึงถึงลำดับการเกิดของคำศัพท์ นอกจากนั้นแล้วเซตในภาษาไพทอนยังรองรับการใช้การดำเนินการของเซตได้อย่างสะดวกสบายอีกด้วย
 ในตัวอย่างต่อไปนี้ เรามีคำศัพท์จากแบบจำลองภาษาขนาดใหญ่ที่ครอบคลุมหลายภาษา เก็บไว้ในตัวแปร <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> และมีคำศัพท์จากแบบจำลองภาษาไทย เก็บไว้ในตัวแปร <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code></p>
 <section id="id29">
-<h4>ตัวอย่าง: อินเตอร์เซกชัน<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง: อินเตอร์เซกชัน<a class="headerlink" href="#id29" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการหาว่าคำศัพท์ที่ปรากฎในทั้งสองเซต คือ <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> และ <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code> สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">intersection</span></code> ในการหาคำศัพท์ที่ปรากฎในทั้งสองตัวแปรได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1622,7 +1657,7 @@ document.write(`
 </div>
 </section>
 <section id="id30">
-<h4>ตัวอย่าง: ยูเนียน<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง: ยูเนียน<a class="headerlink" href="#id30" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการขยายความสามารถของโมเดลหลากภาษา โดยการขยายคำศัพท์ ของโมเดลหลากภาษาให้มีคำศัพท์ที่มาจากแบบจำลองภาษาไทยด้วย สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">union</span></code> ในการขยายคำศัพท์ของโมเดลหลากภาษาได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1649,7 +1684,7 @@ document.write(`
 <p>สังเกตว่าผลที่ได้จะออกมาเป็นลิสต์ ซึ่งเป็นพฤติกรรมที่สมเหตุสมผลของคำสั่ง <code class="docutils literal notranslate"><span class="pre">sorted</span></code> เนื่องจากเราจำเป็นต้องใช้โครงสร้างข้อมูลที่มีการเก็บลำดับของสมาชิกแต่ละตัว</p>
 </section>
 <section id="id31">
-<h4>ตัวอย่าง: ผลต่างของเซต<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง: ผลต่างของเซต<a class="headerlink" href="#id31" title="Link to this heading">#</a></h4>
 <p>สมมติเราต้องการทราบว่า <code class="docutils literal notranslate"><span class="pre">thai_vocab</span></code> มีคำศัพท์ภาษาไทยคำใดบ้าง ที่ <code class="docutils literal notranslate"><span class="pre">multilingual_vocab</span></code> ไม่มี สามารถใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">difference</span></code> ในการหาคำศัพท์ได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multilingual_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;สวัสดี&#39;</span><span class="p">}</span>
 <span class="n">thai_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;สวัสดี&#39;</span><span class="p">,</span> <span class="s1">&#39;ขอบคุณ&#39;</span><span class="p">}</span>
@@ -1665,10 +1700,10 @@ document.write(`
 </section>
 </section>
 <section id="id32">
-<h3>สรุปเรื่องเซต<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<h3>สรุปเรื่องเซต<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <p>เซตในภาษาไพทอนเป็นโครงสร้างข้อมูลที่เหมาะสมกับการเก็บข้อมูลที่ไม่มีการจัดลำดับ และไม่มีการเก็บข้อมูลที่ซ้ำกัน โดยเซตในภาษาไพทอนมีความสามารถในการใช้ set operation ได้ทั้งหมด 3 ตัว คือ intersection union และการลบกันของเซต ในการประมวลผลภาษาธรรมชาติเซตมักถูกใช้ในการเก็บรายการคำศัพท์ หรือเรียกว่า vocabulary</p>
 <p>คำสั่งของเซตในภาษาไพทอน สรุปเป็นตารางได้ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>operation</p></th>
 <th class="head"><p>สัญลักษณ์ทางคณิตศาสตร์</p></th>
@@ -1690,11 +1725,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ทั้งสามคำสั่งจะคืนค่าออกมาเป็นเซตใหม่แยกต่างหากจาก <code class="docutils literal notranslate"><span class="pre">setA</span></code> และ <code class="docutils literal notranslate"><span class="pre">setB</span></code> ที่เราใช้ในการเรียกคำสั่ง หลังจากเรียกคำสั่ง set operation แล้ว สมาชิกของ <code class="docutils literal notranslate"><span class="pre">setA</span></code> และ <code class="docutils literal notranslate"><span class="pre">setB</span></code> จะไม่เปลี่ยนแปลง</p>
 </section>
 </section>
 <section id="comprehension">
-<h2>คอมพริเฮนชัน (Comprehension)<a class="headerlink" href="#comprehension" title="Permalink to this heading">#</a></h2>
+<h2>คอมพริเฮนชัน (Comprehension)<a class="headerlink" href="#comprehension" title="Link to this heading">#</a></h2>
 <p>ก่อนหน้านี้เราได้เรียนวิธีการสร้างลิสต์ ดิกต์ และเซ็ตด้วยวิธีการดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 <span class="n">my_list2</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1705,10 +1741,10 @@ document.write(`
 </pre></div>
 </div>
 <section id="list-comprehension">
-<h3>ลิสต์คอมพริเฮนชัน (List comprehension)<a class="headerlink" href="#list-comprehension" title="Permalink to this heading">#</a></h3>
+<h3>ลิสต์คอมพริเฮนชัน (List comprehension)<a class="headerlink" href="#list-comprehension" title="Link to this heading">#</a></h3>
 <p>ลิสต์คอมพริเฮนชัน (List comprehension) คือสร้างลิสต์ขึ้นมาจากสิ่งที่เป็น iterable เช่น ลิสต์ ดิกชันนารี และเซ็ต ซึ่งเป็นกรณีการใช้ที่เกิดขึ้นบ่อย เนื่องจากมีหลายครั้งที่เราต้องแปลงจากลิสต์เป็นอีกลิสต์หนึ่งซึ่งสมาชิกข้างในถูกแปลงให้เป็นอย่างหนึ่ง</p>
 <section id="id33">
-<h4>ตัวอย่าง<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id33" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเรามีลิสต์ของสตริง แต่เราต้องการเปลี่ยนให้เป็นตัวใหญ่ทั้งหมด เราสามารถสร้างลิสต์ใหม่เตรียมไว้รับ output จากนั้นทำการวนลูปบนสมาชิกของลิสต์ แปลงเป็นตัวใหญ่ จากนั้นก็ <code class="docutils literal notranslate"><span class="pre">.append</span></code> เข้าสู่ลิสต์ที่จะเป็น output ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
 <span class="n">new_sentence</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1727,7 +1763,7 @@ document.write(`
 </div>
 </section>
 <section id="id34">
-<h4>ตัวอย่าง<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id34" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการเปลี่ยนให้จากลิสต์เดิมให้เป็นลิสต์ที่มีความยาวของสตริงแต่ละตัวแทน เราสามารถทำด้วยวิธีที่คล้ายคลึงกัน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
 <span class="n">length_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1755,10 +1791,10 @@ document.write(`
 </section>
 </section>
 <section id="id35">
-<h3>คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<h3>คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
 <p>เราสามารถระบุเพิ่มเติมได้ด้วยว่าสมาชิกตัวไหนบ้างใน iterable ที่เป็น input จะถูกรวมไว้ในลิสต์ output</p>
 <section id="id36">
-<h4>ตัวอย่าง<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id36" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราอยากแปลงลิสต์ที่มีคำในประโยคมาเป็นลิสต์ที่มีความยาวของแต่ละคำในประโยคอยู่ โดยที่เราสนใจเฉพาะคำที่มีความยาวมากกว่า 2 ตัวอักษร</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;programming&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;very&#39;</span><span class="p">,</span> <span class="s1">&#39;interesting&#39;</span><span class="p">]</span>
 <span class="n">length_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1778,7 +1814,7 @@ document.write(`
 </div>
 </section>
 <section id="id37">
-<h4>ตัวอย่าง<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id37" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเรามีลิสต์ของคำในประโยคอยู่ แต่ว่าเราอยากได้ลิสต์ที่มีคำที่เป็นตัวอักษรภาษาไทยเท่านั้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;บท&#39;</span><span class="p">,</span> <span class="s1">&#39;นี้&#39;</span><span class="p">,</span> <span class="s1">&#39;เกี่ยวกับ&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;comprehension&#39;</span><span class="p">,</span> <span class="s1">&#39;และ&#39;</span><span class="p">,</span> <span class="s1">&#39;อื่นๆ&#39;</span><span class="p">]</span>
@@ -1800,7 +1836,7 @@ document.write(`
 </div>
 </section>
 <section id="id38">
-<h4>สรุปการใช้คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h4>
+<h4>สรุปการใช้คอมพริเฮนชันแบบมีเงื่อนไข<a class="headerlink" href="#id38" title="Link to this heading">#</a></h4>
 <p>วิธีการใช้ list comprehension แบบมีเงื่อนไข มีดังนี้
 <code class="docutils literal notranslate"><span class="pre">[expression</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข]</span></code> เช่น</p>
 <ul class="simple">
@@ -1811,12 +1847,12 @@ document.write(`
 </section>
 </section>
 <section id="set-comprihension">
-<h3>เซตคอมพริเฮนชัน (Set comprihension)<a class="headerlink" href="#set-comprihension" title="Permalink to this heading">#</a></h3>
+<h3>เซตคอมพริเฮนชัน (Set comprihension)<a class="headerlink" href="#set-comprihension" title="Link to this heading">#</a></h3>
 <p>หลักการและวิธีการใช้ set comprehension แทบจะเหมือนกันกับ list comprehension เป็นการสร้างเซ็ตขึ้นมาจาก iterable อีกอันหนึ่งโดยอาจมีแปลงค่าของสมาชิกด้วยฟังก์ชันต่าง ๆ และ/หรือกรองเอาสมาชิกบางตัวออกโดยการกำหนดเงื่อนไขบูลีน</p>
 <p>วิธีการใช้ set comprehension เหมือน list comprehension เพียงแค่เปลี่ยนเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">{expression</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข}</span></code></p>
 <section id="id39">
-<h4>ตัวอย่าง<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id39" title="Link to this heading">#</a></h4>
 <p>Vocabulary หมายถึงเซ็ตของคำศัพท์ทั้งหมดที่เราต้องการวิเคราะห์ หรือนำมาเป็นส่วนหนึ่งของโมเดล จะนับเฉพาะคำที่รูปไม่ซ้ำกัน</p>
 <p>สมมติว่าเรามีลิสต์ของคำทั้งหมดที่มีอยู่ในคลังข้อมูล เราต้องการทราบ vocabulary ของคลังข้อมูลนี้ว่ามีคำว่าอะไรบ้าง โดยนับเฉพาะคำที่เป็นตัวภาษาอังกฤษเท่านั้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
@@ -1837,7 +1873,7 @@ document.write(`
 </div>
 </section>
 <section id="id40">
-<h4>ตัวอย่าง<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id40" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการสร้างเซตของชื่อนักเรียนที่ลงท้ายด้วยสระอาจากลิสต์รายชื่อนักเรียน</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;อาทิตยา&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;อรรถพล&#39;</span><span class="p">,</span> <span class="s1">&#39;วิภา&#39;</span><span class="p">,</span> <span class="s1">&#39;คริส&#39;</span><span class="p">,</span> <span class="s1">&#39;สุชาดา&#39;</span><span class="p">]</span>
 <span class="n">aa_name_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">student_names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;า&#39;</span><span class="p">)}</span>
@@ -1852,12 +1888,12 @@ document.write(`
 </section>
 </section>
 <section id="dict-comprehension">
-<h3>ดิกต์คอมพริเฮนชัน (Dict comprehension)<a class="headerlink" href="#dict-comprehension" title="Permalink to this heading">#</a></h3>
+<h3>ดิกต์คอมพริเฮนชัน (Dict comprehension)<a class="headerlink" href="#dict-comprehension" title="Link to this heading">#</a></h3>
 <p>หลักการใช้ dict comprehension ก็คล้ายคลึงกันกับ list comprehension และ set comprehension เพียงแต่ว่าเราต้องกำหนดว่า key และ value ของดิกต์ที่เราต้องการสร้างขึ้นจะต้องเป็นอะไรบ้าง</p>
 <p>วิธีการใช้ dict comprehension มีดังนี้</p>
 <p><code class="docutils literal notranslate"><span class="pre">{expression-key:expression-value</span> <span class="pre">for</span> <span class="pre">ตัวแปร</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">if</span> <span class="pre">เงื่อนไข}</span></code></p>
 <section id="id41">
-<h4>ตัวอย่าง<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id41" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเรามีรายชื่อของนักเรียนอยู่ในลิสต์ และเราต้องการสร้างดิกต์ที่ key เป็นชื่อนักเรียน และ value เป็นหมายเลขกลุ่ม 1-3 เพื่อที่จะจัดนักเรียนออกเป็น 3 กลุ่ม</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Panyut&#39;</span><span class="p">,</span> <span class="s1">&#39;Mild&#39;</span><span class="p">,</span> <span class="s1">&#39;Bew&#39;</span><span class="p">,</span> <span class="s1">&#39;Fluke&#39;</span><span class="p">,</span> <span class="s1">&#39;Paolong&#39;</span><span class="p">,</span> <span class="s1">&#39;Tangmay&#39;</span><span class="p">,</span> <span class="s1">&#39;Ya&#39;</span><span class="p">]</span>
@@ -1877,7 +1913,7 @@ document.write(`
 </div>
 </section>
 <section id="id42">
-<h4>ตัวอย่าง<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h4>
+<h4>ตัวอย่าง<a class="headerlink" href="#id42" title="Link to this heading">#</a></h4>
 <p>ในการสร้างโมเดลเกี่ยวกับภาษา ขั้นตอนที่จะต้องเจอบ่อย ๆ คือการแทนคำด้วยหมายเลขประจำตัว (id หรือ index) ซึ่งเราต้องกำหนดให้แต่ละคำใน vocabulary นั้นไม่ซ้ำกัน</p>
 <p>สมมติว่าเรามีลิสต์ของคำทั้งหมดในคลังข้อมูล เราต้องการสร้างดิกที่ key เป็นคำ และ value เป็นหมายเลขประจำตัวของคำคำนั้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;oh&#39;</span><span class="p">,</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;baby&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">]</span>
@@ -1901,7 +1937,7 @@ document.write(`
 </section>
 </section>
 <section id="id43">
-<h3>สรุปข้อดี ข้อเสียของการใช้คอมพริเฮนชัน<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<h3>สรุปข้อดี ข้อเสียของการใช้คอมพริเฮนชัน<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <p>ข้อดีของการใช้ comprehension คือ</p>
 <ul class="simple">
 <li><p>โค้ดสั้นกระชับสวยงาม ทำให้มีโอกาสเขียนโค้ดผิดน้อยลง เมื่อเทียบกับการใช้ for loop ในการแก้ปัญหาเดียวกัน</p></li>
@@ -1915,7 +1951,7 @@ document.write(`
 </section>
 </section>
 <section id="id44">
-<h2>สรุป<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h2>
+<h2>สรุป<a class="headerlink" href="#id44" title="Link to this heading">#</a></h2>
 <p>ในบทนี้เราได้สำรวจการใช้โครงสร้างข้อมูลที่สำคัญ ได้แก่ ลิสต์ ดิกชันนารี และเซต ซึ่งเป็นเครื่องมือสำคัญในการจัดการข้อมูลที่หลากหลาย ลิสต์ช่วยให้เราจัดเก็บข้อมูลในลำดับที่ยืดหยุ่นและเข้าถึงได้โดยดัชนี ดิกชันนารีช่วยให้เราจัดการข้อมูลในรูปแบบคู่คีย์-ค่า ทำให้การค้นหาและจัดการข้อมูลที่มีโครงสร้างซับซ้อนมีประสิทธิภาพมากขึ้น ส่วนเซตช่วยในการเก็บข้อมูลที่ไม่ซ้ำและตรวจสอบสมาชิกภาพอย่างรวดเร็ว การเข้าใจและเลือกใช้โครงสร้างข้อมูลที่เหมาะสมจะช่วยให้เราพัฒนาโปรแกรมที่มีประสิทธิภาพและจัดการกับข้อมูลได้อย่างมีระบบ</p>
 </section>
 </section>
@@ -1945,11 +1981,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../3-data_structure1.html"
@@ -1969,10 +2004,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1980,6 +2012,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2114,6 +2147,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -2140,8 +2174,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>บทที่ 8 การจัดการและวิเคราะห์ข้อมูลแบบตาราง &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module8/1-pandas';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -425,43 +452,43 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อมูลแบบตาราง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-comma-separated-value-tsv-tab-separated-value">ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">ไฟล์ Excel</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv">การสร้างดาตาเฟรมจากไฟล์ CSV</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">สำรวจข้อมูล</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขหัวตาราง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">สำรวจข้อมูล</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตรวจสอบและแก้ไขหัวตาราง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การตรวจหาข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">4. เลือกด้วยลิสต์ของบูลีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การตรวจหาข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">4. เลือกด้วยลิสต์ของบูลีน</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การส่งออกข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การส่งออกข้อมูล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -471,10 +498,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br">
-<h1>บทที่ 8 </br> การจัดการและวิเคราะห์ข้อมูลแบบตาราง<a class="headerlink" href="#br" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>บทที่ 8 </br> การจัดการและวิเคราะห์ข้อมูลแบบตาราง<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>ข้อมูลแบบตาราง (tabular data) เป็นรูปแบบข้อมูลที่ได้รับความนิยมอย่างมากในงานประมวลผลและวิเคราะห์ข้อมูล เนื่องจากมีโครงสร้างที่เป็นระเบียบและการจัดเก็บข้อมูลที่สามารถเข้าถึงได้ง่าย แต่ละแถวแทนหนึ่งรายการหรือตัวอย่าง และแต่ละคอลัมน์มีค่าของตัวแปรหนึ่งตัว ซึ่งช่วยให้สามารถจัดการและวิเคราะห์ข้อมูลได้อย่างมีประสิทธิภาพ เราจึงจัดว่าข้อมูลแบบตารางเป็นข้อมูลที่มีโครงสร้าง (structured data) และเป็นรูปแบบการจัดเก็บข้อมูลในอุดมคติ พร้อมสำหรับการวิเคราะห์</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -484,7 +511,7 @@ document.write(`
 <p>หากเราติดตั้งไพทอนผ่าน Anaconda เราจะได้ไลบรารี pandas มาพร้อมกับการติดตั้ง แต่หากเราใช้งานไพทอนผ่านการติดตั้งแบบอื่น เราสามารถติดตั้งไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code> (หากติดตั้ง miniconda) เมื่อติดตั้งเสร็จเรียบร้อยแล้ว เราสามารถนำเข้าไลบรารี pandas ได้โดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งจะทำให้เราสามารถใช้ฟังก์ชันและเมท็อดที่อยู่ในไลบรารี pandas ได้</p>
 <p>เราอาจจะสงสัยว่าเพราะเหตุใดเราต้องเปลี่ยนชื่อไลบรารีเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> โดยการรัน <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> ซึ่งเราไม่จำเป็นต้องเปลี่ยนชื่อก็สามารถใช้ได้เหมือนกัน แต่เราเลือกเปลี่ยนชื่อเป็น <code class="docutils literal notranslate"><span class="pre">pd</span></code> เพื่อให้เราสามารถเขียนโค้ดได้สั้นลง  นอกจากนั้นเราไม่ใช้ชื่ออื่นเช่น <code class="docutils literal notranslate"><span class="pre">p</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">pan</span></code> หรือชื่ออื่น ๆ ที่เราเลือกเอง เหตุก็เพราะว่า <code class="docutils literal notranslate"><span class="pre">pd</span></code> จะเป็นชื่อที่คนในวงการวิทยาการข้อมูลใช้กันมากที่สุด อย่างที่เราเห็นได้ว่าหากเราไปค้นหาวิธีการใช้งานของ pandas ในเว็บไซต์ที่รวมชุมชนนักวิเคราะห์ข้อมูล เช่น <a class="reference external" href="http://stackoverflow.com">stackoverflow.com</a> หรือ <a class="reference external" href="http://medium.com">medium.com</a> จะพบว่าคำตอบจะใช้ <code class="docutils literal notranslate"><span class="pre">pd</span></code> ในการอ้างถึงไลบรารี pandas ทั้งสิ้นด้วย ดังนั้นการใช้ชื่อ <code class="docutils literal notranslate"><span class="pre">pd</span></code> เป็นการตั้งชื่อตามสมัยนิยม ตามธรรมเนียมปฏิบัติ และเป็นการให้ความสะดวกในการเรียนรู้จากแหล่งข้อมูลอื่น ๆ ที่มีอยู่ในอินเตอร์เน็ต</p>
 <section id="jupyter-notebook">
-<h2>การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">#</a></h2>
+<h2>การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h2>
 <p>Jupyter Notebook เป็น IDE ที่ถูกออกแบบมาเพื่อการวิเคราะห์ข้อมูลโดยเฉพาะ เพราะว่าการวิเคราะห์ข้อมูลจำเป็นต้องมีการบันทึกว่าเราได้แก้ไขชุดข้อมูลอย่างไรบ้าง รันโค้ดอะไรบ้างที่นำไปสู่ผลการวิเคราะห์ เราจึงเรียกว่า notebook เพราะเปรียบเสมือนการจดบันทึกการวิเคราะห์ข้อมูล เพื่อให้ฟังดูคล้ายคลึงนักวิทยาศาสตร์จดบันทึกผลการทดลอง ด้วยเหตุนี้เอง Jupyter Notebook จึงมีการออกลูกเล่น ฟีเจอร์ใหม่อย่างต่อเนื่อง เพื่ออำนวยความสะดวกในการวิเคราะห์ข้อมูล เช่น</p>
 <ul class="simple">
 <li><p>แสดงผลข้อมูลตารางออกมาในรูปแบบที่อ่านได้ง่าย ไม่ล้นออกมาทั้งแนวตั้งและแนวนอน ทำให้ตรวจสอบข้อมูลได้ง่าย ข้อผิดพลาดน้อยลง</p></li>
@@ -493,8 +520,8 @@ document.write(`
 </ul>
 <p>ด้วยข้อดีดังกล่าวข้างต้นวงการวิทยาการข้อมูลจึงนิยมใช้ pandas บน Jupyter Notebook ในการเตรียมข้อมูลและวิเคราะห์ข้อมูล ซึ่งจัดเป็นแนวปฏิบัติที่ดีที่สุดในขณะนี้</p>
 </section>
-<section id="id1">
-<h2>ข้อมูลแบบตาราง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h2>ข้อมูลแบบตาราง<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>ข้อมูลแบบตารางมีส่วนประกอบหลักที่สำคัญอยู่หลายส่วน ซึ่งแต่ละส่วนมีบทบาทสำคัญในการเก็บรักษาและการจัดการข้อมูล</p>
 <ol class="arabic simple">
 <li><p>แถว (row) แสดงถึงรายการหรือตัวอย่างแต่ละชิ้น ซึ่งสามารถจัดเก็บ อธิบายลักษณะหรือสถานะของเหตุการณ์ วัตถุ หรือบุคคลที่กำลังศึกษาอยู่ ตัวอย่างเช่น ในตารางข้อมูลของผู้ป่วย แต่ละแถวอาจแทนผู้ป่วยหนึ่งคนพร้อมกับรายละเอียดต่าง ๆ เช่น อายุ เพศ และประวัติการรักษา ดังนั้นจำนวนแถวที่อยู่ในตารางจึงเท่ากับจำนวนตัวอย่างที่อยู่ในชุดข้อมูล</p></li>
@@ -502,14 +529,14 @@ document.write(`
 <li><p>หัวตาราง (header) เป็นบรรทัดแรกของตารางที่ระบุชื่อของแต่ละคอลัมน์ เป็นส่วนที่สำคัญเพราะช่วยให้ผู้ใช้สามารถเข้าใจข้อมูลในแต่ละคอลัมน์ได้ง่ายและชัดเจน</p></li>
 <li><p>ตัวข้อมูล (data) เป็นสาระสำคัญที่แสดงถึงค่าเฉพาะของแต่ละรายการตามที่ถูกกำหนดไว้ในคอลัมน์ ข้อมูลนี้สามารถเป็นตัวเลข ข้อความ วันที่ หรือชนิดข้อมูลอื่น ๆ ที่เหมาะสมกับลักษณะของการศึกษา วิเคราะห์ เพราะฉะนั้นข้อมูลที่อยู่ในคอลัมน์เดียวกันจะต้องเป็นแบบชนิดข้อมูลเดียวกัน เนื่องจากเป็นตัวแปรชนิดเดียวกัน</p></li>
 </ol>
-<figure class="align-default" id="id24">
+<figure class="align-default" id="id25">
 <img alt="../../_images/row-column.png" src="../../_images/row-column.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 24 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 24 </span><span class="caption-text">ส่วนประกอบที่สำคัญของข้อมูลแบบตาราง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ส่วนประกอบอีกอย่างหนึ่งที่สำคัญของข้อมูลแบบตารางคือ พจนานุกรมข้อมูล (data dictionary) ซึ่งเป็นเอกสารที่ระบุความหมายของแต่ละคอลัมน์ และค่าข้อมูลที่เป็นไปได้ของแต่ละคอลัมน์ ซึ่งช่วยให้ผู้ใช้เข้าใจข้อมูลได้ง่ายขึ้น และช่วยให้ผู้ใช้สามารถใช้ข้อมูลได้อย่างถูกต้องและเหมาะสม พจนานุกรมข้อมูลนี้มักจะถูกเก็บแยกออกมาอีกไฟล์หนึ่ง หรือเป็นส่วนหนึ่งของเอกสารคู่มือการใช้งานข้อมูล แต่ในหลาย ๆ กรณีผู้ดูแลรักษาข้อมูลอาจจะไม่ได้เตรียมพจนานุกรมข้อมูลเอาไว้ให้พร้อมใช้ ผู้ใช้ข้อมูลจะต้องไปสอบถามผู้ดูแลรักษาข้อมูลหรือค้นหาข้อมูลเพิ่มเติมเองโดยตรง ตัวอย่างของพจนานุกรมข้อมูลของข้อมูลการรีวิวสายการบิน อาจมีดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ชื่อคอลัมน์</p></th>
 <th class="head"><p>คำอธิบาย</p></th>
@@ -539,9 +566,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="id2">
-<h2>กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h2>กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>ไลบรารี pandas มีฟังก์ชันต่าง ๆ ที่ช่วยในการจัดการข้อมูลแบบตาราง ซึ่งเป็นกระบวนการที่สำคัญในการวิเคราะห์ข้อมูล โดยปกติแล้วกระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์จะประกอบด้วยขั้นตอนดังนี้</p>
 <ol class="arabic simple">
 <li><p>การทำความสะอาดข้อมูล (data cleaning) คือ การคัดแยกข้อมูลที่สกปรกออกไป เช่น ข้อมูลที่ไม่สมบูรณ์ สั้นเกินไป ยาวเกินไป ผิดเพี้ยน หรือข้อความมีข้อมูลเราไม่ต้องการเช่น url หรือเครื่องหมายวรรคตอน หรือ สิ่งอื่น ๆ ที่อาจจะทำให้การวิเคราะห์ข้อมูลคลาดเคลื่อนไปได้</p></li>
@@ -553,11 +581,11 @@ document.write(`
 <p>การวิเคราะห์ข้อมูลเชิงสำรวจ (exploratory data analysis) กระบวนการตรวจสอบและสำรวจข้อมูลเบื้องต้นเพื่อทำความเข้าใจลักษณะข้อมูล</p>
 </aside>
 </section>
-<section id="id3">
-<h2>รูปแบบการจัดเก็บข้อมูลแบบตาราง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h2>รูปแบบการจัดเก็บข้อมูลแบบตาราง<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>ข้อมูลแบบตารางสามารถเก็บได้ในหลายรูปแบบไฟล์ (file format) ที่มีลักษณะและคุณสมบัติที่ต่างกัน ทำให้เหมาะสมกับการใช้งานในสถานการณ์ที่ต่างกันด้วย รูปแบบไฟล์ที่พบบ่อยมีดังนี้</p>
 <section id="csv-comma-separated-value-tsv-tab-separated-value">
-<h3>ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)<a class="headerlink" href="#csv-comma-separated-value-tsv-tab-separated-value" title="Permalink to this heading">#</a></h3>
+<h3>ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)<a class="headerlink" href="#csv-comma-separated-value-tsv-tab-separated-value" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>อักขระคั่น (delimiter) อักขระที่ใช้คั่นระหว่างข้อมูล ใช้กำหนดจุดเริ่มต้นและสิ้นสุดข้อมูลในแต่ละส่วน</p>
@@ -612,7 +640,7 @@ document.write(`
 <p>ทั้งไฟล์ CSV และ TSV ต่างเป็นไฟล์ที่ได้รับความนิยมในวงการวิทยาการข้อมูล เนื่องจากมีโครงสร้างที่ง่าย มนุษย์สามารถอ่านได้ และสามารถใช้กับโปรแกรมหลายตัวได้ ทำให้เหมาะสำหรับการใช้งานในสถานการณ์ที่ต่างกัน รวมถึงรองรับการบันทึกชุดข้อมูลขนาดใหญ่อีกด้วย</p>
 </section>
 <section id="excel">
-<h3>ไฟล์ Excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h3>
+<h3>ไฟล์ Excel<a class="headerlink" href="#excel" title="Link to this heading">#</a></h3>
 <p>ไฟล์ Excel เป็นรูปแบบไฟล์ที่ใช้กับโปรแกรม Microsoft Excel ซึ่งเป็นส่วนหนึ่งของชุดโปรแกรม Microsoft Office โดยไฟล์ Excel มักมีนามสกุลไฟล์เป็น .xls หรือ .xlsx สำหรับ Microsoft Office เวอร์ชันใหม่กว่า ซึ่งใช้รูปแบบการเก็บข้อมูลที่ซับซ้อนและสามารถรองรับคุณสมบัติต่าง ๆ ได้หลากหลายมากกว่า CSV ได้แก่</p>
 <ol class="arabic simple">
 <li><p><em>เวิร์กชีต (worksheet)</em> ข้อมูลใน Excel จะถูกจัดเก็บในเวิร์กชีตซึ่งแต่ละเวิร์กชีตสามารถมีข้อมูลแบบตารางได้ โดยผู้ใช้สามารถมีหลายเวิร์กชีตภายในไฟล์เดียว</p></li>
@@ -624,10 +652,10 @@ document.write(`
 </section>
 </section>
 <section id="dataframe">
-<h2>ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์<a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h2>
+<h2>ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์<a class="headerlink" href="#dataframe" title="Link to this heading">#</a></h2>
 <p>ดาตาเฟรม (dataframe) เป็นโครงสร้างข้อมูลหลักของ pandas ที่ใช้ในการจัดเก็บข้อมูลแบบตาราง เป็นโครงสร้างข้อมูลสองมิติที่คล้ายคลึงกับตารางข้อมูลที่ใช้ในโปรแกรม Excel หรือโปรแกรมตารางคำนวณอื่น ๆ ดาตาเฟรม ใช้เพื่อจัดเก็บข้อมูลในรูปแบบที่จัดระเบียบเป็นแถวและคอลัมน์ ซึ่งแต่ละแถวและคอลัมน์สามารถมีป้ายกำกับได้ เพราะฉะนั้นขั้นตอนแรกของการเตรียมข้อมูลสำหรับการวิเคราะห์ คือ การโหลดเอาข้อมูลมาใส่ในดาตาเฟรม</p>
-<section id="id4">
-<h3>การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารีเป็นวิธีที่ถูกใช้ในหลายสถานการณ์ เมื่อทำงานกับไลบรารี pandas เช่น</p>
 <ul class="simple">
 <li><p>การแปลงข้อมูลจาก API หรือ JSON: ข้อมูลที่ได้จากการเรียกใช้ API หรือจากไฟล์ JSON มักจะอยู่ในรูปแบบของดิกชันนารีหรือลิสต์ของดิกชันนารี ซึ่งมักจะมีโครงสร้างซ้อนในที่ซับซ้อนทำให้เขียนโปรแกรมวิเคราะห์ได้ไม่ค่อยสะดวก ดังนั้นเรามักแปลงถ่ายข้อมูลเหล่านี้เข้าสู่ดาตาเฟรม ช่วยให้สามารถวิเคราะห์และประมวลผลข้อมูลได้ง่ายขึ้น</p></li>
@@ -659,7 +687,7 @@ document.write(`
 <p>ถ้าหากเรารันโค้ดข้างต้นบน Jupyter notebook หรือ Visual Studio Code หรือ Google Colab เครื่องจะแสดงผลตารางออกมาอย่างสวยงาม รวมถึงสามารถดูตารางแบบ interactive ใกล้เคียงกับการใช้งาน Excel ได้ หรือใช้ลูกเล่นในการสร้างกราฟอัตโนมัติต่อได้ แต่ถ้าหากรันโค้ดด้านบนบนโปรแกรมไพทอนทั่วไป จะแสดงผลออกมาเป็นข้อความเท่านั้น</p>
 </section>
 <section id="csv">
-<h3>การสร้างดาตาเฟรมจากไฟล์ CSV<a class="headerlink" href="#csv" title="Permalink to this heading">#</a></h3>
+<h3>การสร้างดาตาเฟรมจากไฟล์ CSV<a class="headerlink" href="#csv" title="Link to this heading">#</a></h3>
 <p>กรณีส่วนใหญ่ของการวิเคราะห์ข้อมูล เราจะต้องโหลดข้อมูลจากไฟล์ CSV ซึ่งเป็นรูปแบบไฟล์ที่ใช้งานกันอย่างแพร่หลาย เพราะใช้งานได้ง่าย ใช้งานได้ด้วยหลากหลายโปรแกรม pandas มีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>  ซึ่งจะโหลดข้อมูลจากไฟล์ CSV และสร้างดาตาเฟรมจากข้อมูลที่ได้ ตัวอย่างเช่น ถ้าเรามีไฟล์ CSV ที่เก็บข้อมูลการรีวิวของผู้โดยสารของสายการบินต่าง ๆ ชื่อว่า <code class="docutils literal notranslate"><span class="pre">airline-reviews-small.csv</span></code> เราสามารถอ่านไฟล์ดังกล่าวและโหลดเข้ามาใส่ในดาตาเฟรม ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;airline-reviews-small.csv&#39;</span><span class="p">)</span>
@@ -673,8 +701,8 @@ document.write(`
 <p>ปัญหาที่พบบ่อยในการอ่านไฟล์ CSV คือ ไฟล์มีการจัดรูปแบบไม่เหมาะสม เช่น อาจจะไม่ได้ใช้จุลภาคในการแบ่งคอลัมน์จริง อาจจะใช้ <code class="docutils literal notranslate"><span class="pre">\t</span></code> เป็นอักขระคั่นแทนแต่ว่าใช้สกุลไฟล์เป็น .csv  หรือว่าแต่ละแถวมีจำนวนอักขระคั่นไม่เท่ากันทุกแถว ในกรณีเหล่านี้เราต้องเปิดไฟล์และตรวจสอบว่าข้อมูลถูกแบ่งอย่างถูกต้องหรือไม่ และแก้ไขข้อมูลด้วยมือให้ถูกต้องก่อนที่จะโหลดข้อมูลเข้ามาในดาตาเฟรม</p>
 </section>
 </section>
-<section id="id5">
-<h2>การตรวจสอบส่วนประกอบหลักของดาตาเฟรม<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h2>การตรวจสอบส่วนประกอบหลักของดาตาเฟรม<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>ส่วนประกอบหลักของดาตาเฟรมล้อไปกับส่วนประกอบหลักของข้อมูลแบบตาราง ได้แก่</p>
 <ol class="arabic simple">
 <li><p>แถว</p></li>
@@ -684,8 +712,8 @@ document.write(`
 <li><p>ตัวข้อมูล</p></li>
 </ol>
 <p>ในการเตรียมข้อมูลเบื้องต้น ควรมีการตรวจสอบข้อมูลดังนี้</p>
-<section id="id6">
-<h3>สำรวจข้อมูล<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>สำรวจข้อมูล<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>ขั้นตอนแรกเราต้องทำความรู้จักกับข้อมูลในมิติต่าง ๆ เพื่อทำให้เราเห็นภาพคร่าว ๆ ว่าตารางข้อมูลของเรามีลักษณะเป็นอย่างไร ในกรณีส่วนใหญ่เรามักจะมีข้อมูลอยู่จำนวนหลายแถวด้วยกัน เราเลยมักจะดูข้อมูลด้วยตาเปล่าเพียงส่วนหนึ่งเท่านั้น ได้แก่ ดูข้อมูล 15 แถวแรกโดยการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.head</span></code> ดูข้อมูล 15 แถวสุดท้าย <code class="docutils literal notranslate"><span class="pre">.tail</span></code> สุ่มดูข้อมูล 15 แถว <code class="docutils literal notranslate"><span class="pre">.sample</span></code></p>
 <p>คำสั่ง <code class="docutils literal notranslate"><span class="pre">.head</span></code> จะแสดงดาตาเฟรมเฉพาะแถวบนสุดเท่านั้น และเรากำหนดเองได้ว่าอยากให้แสดงผลทั้งหมดกี่แถว คำสั่งนี้จะคืนค่าออกมาเป็นดาตาเฟรมใหม่ที่มีจำนวนแถวตามที่กำหนด ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -703,8 +731,8 @@ document.write(`
 </div>
 <p>จะแสดงผลลัพธ์ออกมาเป็นดาตาเฟรมที่มีแถว 2 แถวที่ถูกสุ่มออกมาจากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> โดยแต่ละครั้งจะได้ผลออกมาไม่เหมือนกัน ยกเว้นเสียแต่เราจะตั้ง seed ของการสุ่มไว้เท่ากัน</p>
 </section>
-<section id="id7">
-<h3>ตรวจสอบจำนวนแถวและคอลัมน์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>ตรวจสอบจำนวนแถวและคอลัมน์<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>เมื่อได้ข้อมูลมาทุกครั้งเราควรตรวจสอบว่าปริมาณข้อมูลตรงกับที่ควรจะเป็นหรือไม่ และมีปริมาณมากพอสำหรับการวิเคราะห์ที่ต้องการทำต่อไปหรือไม่ และจำนวนคอลัมน์ตรงกับที่พจนานุกรมข้อมูล หรือตรงกับจำนวนคอลัมน์ที่ควรจะเป็นหรือไม่ เราสามารถตรวจสอบจำนวนแถวและจำนวนคอลัมน์ของดาตาเฟรมได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">shape</span></code> ซึ่งจะแสดงจำนวนแถวและจำนวนคอลัมน์ของดาตาเฟรม ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
@@ -716,8 +744,8 @@ document.write(`
 </div>
 <p>จะแสดงผลลัพธ์ออกมาเป็นจำนวนแถวของดาตาเฟรม</p>
 </section>
-<section id="id8">
-<h3>ตรวจสอบและแก้ไขหัวตาราง<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>ตรวจสอบและแก้ไขหัวตาราง<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>เราควรเปลี่ยนชื่อคอลัมน์ที่อยู่ในหัวตารางให้สื่อความหมาย และเข้าใจง่าย หัวตารางของดาตาเฟรมจะถูกเก็บในรูปของลิสต์ของสตริง ซึ่งแสดงชื่อของคอลัมน์ หากเราต้องการดูหัวตารางของดาตาเฟรม เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">columns</span></code> ได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
@@ -747,8 +775,8 @@ document.write(`
 </div>
 <p>หากเราต้องการรันคำสั่งที่มีการเปลี่ยนแปลงค่าของตัวดาตาเฟรม เราควรรันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน และให้ Jupyter notebook แสดงผลออกมาและตรวจสอบว่าผลตรงกับที่คาดหวังหรือไม่ จากนั้นค่อยรันคำสั่งเดิม แต่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> และรันอีกครั้ง</p>
 </section>
-<section id="id9">
-<h3>ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>ตัวข้อมูลที่อยู่ในคอลัมน์เดียวกันในดาตาเฟรมของ pandas จะต้องมีชนิดของข้อมูลเดียวกัน นั่นเป็นเพราะว่าการประมวลผลข้อมูลใน pandas จะมีประสิทธิภาพมากขึ้นเมื่อข้อมูลในคอลัมน์นั้นเป็นประเภทเดียวกัน เช่น ตัวเลขทั้งหมดหรือข้อความทั้งหมด หากมีการผสมกันของชนิดข้อมูลในคอลัมน์เดียวกัน อาจทำให้เกิดข้อผิดพลาดในการคำนวณและวิเคราะห์ข้อมูล</p>
 <p>ยกตัวอย่างเช่น หากเรามีคอลัมน์ที่ควรจะเก็บตัวเลขเพื่อนำมาหาค่าสถิติ แต่กลับมีตัวอักษรปนอยู่ เมื่อเราพยายามหาค่าเฉลี่ย (mean) ของคอลัมน์นั้น การคำนวณจะไม่สามารถทำได้ เนื่องจากการหาค่าเฉลี่ยต้องการข้อมูลที่เป็นตัวเลขทั้งหมด การมีตัวข้อมูลที่เป็นตัวอักษรในคอลัมน์จะทำให้เกิดข้อผิดพลาดในการคำนวณ ดังนั้น การรักษาความเป็นหนึ่งเดียวของชนิดข้อมูลในคอลัมน์จึงเป็นสิ่งสำคัญ เพื่อให้เราสามารถใช้ประโยชน์จากฟังก์ชันต่าง ๆ ของ pandas ได้อย่างเต็มที่</p>
 <p>เราสามารถตรวจสอบชนิดของข้อมูลในคอลัมน์ของดาตาเฟรมได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dtypes</span></code> ซึ่งจะแสดงชนิดของข้อมูลของแต่ละคอลัมน์ ตัวอย่างเช่น</p>
@@ -801,11 +829,11 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id10">
-<h2>การทำความสะอาดข้อมูล<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
-<p>การทำความสะอาดข้อมูล (data cleaning) เป็นขั้นตอนที่สำคัญในการเตรียมข้อมูลเพื่อนำมาวิเคราะห์ ประกอบไปด้วยการตรวจสอบความครบถ้วนว่ามีแถวหรือคอลัมน์ใดหรือไม่ที่ไม่มีตัวข้อมูลอยู่ และการตรวจสอบความถูกต้องมีแถวหรือคอลัมน์ใดหรือไม่ที่มีข้อมูลที่ไม่ถูกต้องอยู่</p>
 <section id="id11">
-<h3>การตรวจหาข้อมูลที่หายไป<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h2>การทำความสะอาดข้อมูล<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>การทำความสะอาดข้อมูล (data cleaning) เป็นขั้นตอนที่สำคัญในการเตรียมข้อมูลเพื่อนำมาวิเคราะห์ ประกอบไปด้วยการตรวจสอบความครบถ้วนว่ามีแถวหรือคอลัมน์ใดหรือไม่ที่ไม่มีตัวข้อมูลอยู่ และการตรวจสอบความถูกต้องมีแถวหรือคอลัมน์ใดหรือไม่ที่มีข้อมูลที่ไม่ถูกต้องอยู่</p>
+<section id="id12">
+<h3>การตรวจหาข้อมูลที่หายไป<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>ข้อมูลที่หายไป (missing data) คือข้อมูลที่ไม่มีค่าในคอลัมน์ หรือข้อมูลที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">NaN</span></code> ใน pandas ข้อมูลที่หายไปจะมีผลกระทบต่อการวิเคราะห์ข้อมูล และการสร้างโมเดลที่ถูกต้อง การตรวจหาข้อมูลที่หายไปสามารถทำได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">isna()</span></code> ซึ่งจะแสดงข้อมูลที่หายไปในรูปของ <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">False</span></code> ตามที่ข้อมูลหายไปหรือไม่ จากนั้นเราจึงพิจารณาการบริบทของเก็บข้อมูลของชุดข้อมูลนี้ และตัดสินใจว่าควรจะเติมค่าอะไรเข้าไป หรือว่าควรจะลบแถวหรือคอลัมน์ที่มีข้อมูลที่หายไปออกไป</p>
 <p>ในบริบทของการวิเคราะห์ข้อมูลด้วย pandas คำว่า NaN หมายถึง “Not a Number” ซึ่งเป็นค่าที่ใช้แทนข้อมูลที่หายไปหรือข้อมูลที่ไม่สามารถแสดงเป็นตัวเลขได้ ในการทำงานกับข้อมูลที่เป็นเชิงปริมาณ NaN จะถูกใช้บ่อยในการจัดการกับข้อมูลที่ขาดหายไป ตัวอย่างเช่น หากเรามีชุดข้อมูลของคะแนนสอบนักเรียน และบางคนไม่ได้เข้าสอบ คะแนนเหล่านี้อาจถูกแทนที่ด้วย NaN สืบเนื่องจากไฟล์ CSV หรือ Excel อาจจะบันทึกข้อมูลของนักเรียนที่ขาดสอบเป็นเซลล์ว่าง ๆ แทนที่จะใส่ค่าเป็น 0 ไปซึ่งอาจจะแปลว่า เข้าสอบแต่ว่าตอบข้อสอบผิดทุกข้อ</p>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> และ <code class="docutils literal notranslate"><span class="pre">isna()</span></code> ใช้สำหรับตรวจสอบข้อมูลที่หายไปในดาตาเฟรมโดยจะคืนค่าเป็นดาตาเฟรมที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หากข้อมูลในช่องนั้นเป็น NaN และเป็น <code class="docutils literal notranslate"><span class="pre">False</span></code> หากข้อมูลในช่องนั้นมีค่าข้อมูลอยู่ ตัวอย่างเช่น หากเรามีดาตาเฟรมที่มีข้อมูลคะแนนสอบและมีบางช่องที่ตัวข้อมูลหายไป เมื่อใช้ <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> เราจะเห็นว่าในช่องที่ไม่มีค่าจะแสดงเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">isna()</span></code> มีการทำงานที่เหมือนกับ <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> ทุกประการ การใช้งานทั้งสองฟังก์ชันนี้ไม่ได้มีความแตกต่างกันในเชิงปฏิบัติ ทั้งคู่สามารถใช้แทนกันได้ ขึ้นอยู่กับความชอบส่วนบุคคลในการเขียนโค้ดหรือการอ่านโค้ด</p>
@@ -829,10 +857,10 @@ document.write(`
 <span class="n">bad_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id25">
+<figure class="align-default" id="id26">
 <img alt="../../_images/df-null.png" src="../../_images/df-null.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 25 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 25 </span><span class="caption-text">(บน) ดาตาเฟรมที่มีข้อมูลที่หายไป แทนค่าด้วย NaN</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
 <div class="legend">
 <p>(ล่าง) ดาตาเฟรมที่ถูกคืนค่ามาจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">.isnull()</span></code></p>
 <p>(ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</p>
@@ -843,10 +871,10 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id26">
+<figure class="align-default" id="id27">
 <img alt="../../_images/df-null-sum-0.png" src="../../_images/df-null-sum-0.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 26 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id26" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 26 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละคอลัมน์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นทำความเข้าใจได้ยากเล็กน้อย เพราะมีการเรียกสองเมท็อดต่อเนื่องกันในบรรทัดเดียว เราเรียกวิธีนี้ว่าการโยงเมท็อด (method chaining) ซึ่งการเรียกเมท็อดต่อเนื่องกันโดยไม่ต้องเก็บผลลัพธ์ของเมท็อดก่อนหน้าไว้ในตัวแปรก่อน และเรียกเมท็อดต่อไปได้ทันที ในตัวอย่างข้างต้นเราให้ดาตาเฟรมเรียกเมท็อด <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> ก่อน และให้ผลลัพธ์เป็นดาตาเฟรม จากนั้นใช้ดาตาเฟรมนั้นเรียกเมท็อด <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ต่อ โดยให้พารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> ซึ่งหมายถึงให้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> นับจำนวนข้อมูลที่หายไปในแต่ละคอลัมน์ ดังนั้นจึงมีค่าเท่ากับการเรียกเมท็อดแยกกัน โดยใช้คำสั่งดังนี้</p>
@@ -874,10 +902,10 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id27">
+<figure class="align-default" id="id28">
 <img alt="../../_images/df-null-sum-1.png" src="../../_images/df-null-sum-1.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 27 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id27" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 27 </span><span class="caption-text">หาผลรวมของบูลีนที่อยู่ในแต่ละแถว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id28" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ผลลัพธ์ที่ได้จะเป็นจำนวนข้อมูลที่หายไปในแต่ละแถว คืนค่ามาเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่ดัชนี เป็นชื่อแถวของดาตาเฟรมเดิมดังนี้</p>
@@ -899,10 +927,10 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id28">
+<figure class="align-default" id="id29">
 <img alt="../../_images/df-null-any-sum.png" src="../../_images/df-null-any-sum.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 28 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 28 </span><span class="caption-text">หาจำนวนแถวที่มีช่องที่ข้อมูลหายไปอย่างน้อยหนึ่งช่องโดยการโยงเมท็อดสามเมท็อด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><code class="docutils literal notranslate"><span class="pre">airline_reviews_small.isnull().any(axis=1)</span></code> จะคืนค่าเป็น <code class="docutils literal notranslate"><span class="pre">Series</span></code> ที่มีค่าเป็น <code class="docutils literal notranslate"><span class="pre">True</span></code> หากแถวนั้นมีข้อมูลที่หายไปอย่างน้อยหนึ่งช่อง และ <code class="docutils literal notranslate"><span class="pre">False</span></code> หากแถวนั้นไม่มีข้อมูลที่หายไปเลย ตัวอย่างเช่น</p>
@@ -921,8 +949,8 @@ document.write(`
 </div>
 <p>เมื่อได้ผลลัพธ์ข้างต้นแล้วเราสามารถหาผลรวมของจำนวนแถวที่มีข้อมูลที่หายไปอย่างน้อยหนึ่งช่องได้ โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ต่อท้าย ซึ่งจะคืนค่าเป็นจำนวนแถวที่มีข้อมูลที่หายไปอย่างน้อยหนึ่งช่อง</p>
 </section>
-<section id="id12">
-<h3>การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<section id="id13">
+<h3>การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>เมื่อเราพบแล้วว่าแถวใดบ้างมีข้อมูลที่หายไป วิธีที่ง่ายที่สุดคือการลบแถวที่มีข้อมูลที่หายไปออกไป แต่ว่าเราต้องคำนวณก่อนว่าถ้าหากลบแถวเหล่านั้นออกไปแล้ว เราจะเหลือข้อมูลอยู่ร้อยละเท่าไร ถ้าหากลบแถวที่มีข้อมูลที่หายไปออกไปแล้วเราจะเหลือข้อมูลอยู่น้อยกว่า 75% ให้ตรวจสอบว่าข้อมูลที่เหลืออยู่เพียงพอที่จะทำการวิเคราะห์ข้อมูลต่อไปหรือไม่ และอาจจะต้องปรึกษากับผู้ที่รวบรวมและจัดเก็บข้อมูลว่า เพราะเหตุใดจึงข้อมูลที่หายไปในสัดส่วนที่มากดังที่ปรากฏ</p>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> ใช้สำหรับลบแถวที่มีข้อมูลที่หายไปออกไป ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -951,8 +979,8 @@ document.write(`
 </div>
 <p>ในตัวอย่างข้างบนเราตั้งค่า <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> เพื่อให้การเปลี่ยนแปลงเกิดขึ้นกับดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ทันที และไม่ต้องเก็บผลลัพธ์ไว้ในตัวแปรใหม่ ถ้าหากเราเขียนคำสั่งผิดและสั่ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ทำให้เราย้อนกลับไปแก้ไม่ได้ ต้องกลับไปโหลดข้อมูลใหม่ตั้งแต่ต้น ทำให้การวิเคราะห์ติดขัด เพราะฉะนั้นผู้เขียนแนะนำว่าให้รันคำสั่งโดยไม่ตั้ง <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> ก่อน คำสั่งจะคืนค่าเป็นดาตาเฟรมใหม่ออกมาให้ จากนั้นเราตรวจสอบว่าผลลัพท์ที่ได้มานั้นถูกต้องหรือไม่ ถ้าหากถูกต้องแล้วให้ย้อนไปเปลี่ยนคำสั่งเป้น <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> แล้วรันคำสั่งอีกครั้งหนึ่งเพื่อเปลี่ยนแปลงดาตาเฟรมตามที่เราต้องการ</p>
 </section>
-<section id="id13">
-<h3>การเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<section id="id14">
+<h3>การเติมค่าให้กับข้อมูลที่หายไป<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>การแก้ไขข้อมูลที่หายไป สามารถทำได้โดยใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> ซึ่งจะแทนที่ข้อมูลที่หายไปด้วยค่าที่เรากำหนด สมมติว่าเราไปสืบทราบมาจากผู้ดูแลชุดข้อมูลนี้มาว่า ถ้าหากคอลัมน์ <em>Seat Type</em> ถูกเว้นว่างไว้ แปลว่าลูกค้าที่รีวิวนั่งตั๋วชั้นประหยัด เราสามารถเติมแถวที่มีค่าของ <em>Seat Type</em> เว้นว่างไว้ด้วยค่า <code class="docutils literal notranslate"><span class="pre">'Economy'</span></code> ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;Economy&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -974,8 +1002,8 @@ document.write(`
 </div>
 <p>จากผลลัพธ์ที่ได้ เราสามารถเห็นได้ว่าคอลัมน์ <em>Seat Type</em> ไม่มีข้อมูลที่หายไปอีกแล้ว</p>
 </section>
-<section id="id14">
-<h3>การกำจัดคอลัมน์ที่ไม่ต้องการ<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<section id="id15">
+<h3>การกำจัดคอลัมน์ที่ไม่ต้องการ<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>ในบางกรณีข้อมูลของเราอาจจะมีจำนวนคอลัมน์เยอะมาก ๆ และเราอาจจะไม่ได้ต้องการนำมาวิเคราะห์ทุกคอลัมน์ เราควรจะกำจัดคอลัมน์ที่ไม่ต้องการออกไป เพื่อให้ดาตาเฟรมมีขนาดเล็กลง ใช้พื้นที่ในหน่วยความจำของเครื่องน้อยลง และสะดวกต่อการวิเคราะห์ เพราะ คอลัมน์ไม่ล้นทางขวาของจอ ทำให้เรามองเห็นข้อมูลที่สำคัญได้ชัดเจนขึ้น</p>
 <p>เราสามารถใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">drop()</span></code> ในการลบคอลัมน์ที่ไม่ต้องการออกไป ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date Flown&#39;</span><span class="p">,</span> <span class="s1">&#39;Verified&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -989,8 +1017,8 @@ document.write(`
 <p>ในตัวอย่างข้างต้น เราใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> โดยกำหนดพารามิเตอร์ <code class="docutils literal notranslate"><span class="pre">['Review',</span> <span class="pre">'Rating']</span></code> ซึ่งหมายถึงการเลือกคอลัมน์ <code class="docutils literal notranslate"><span class="pre">Review</span></code> และ <code class="docutils literal notranslate"><span class="pre">Rating</span></code> จากดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> คอลัมน์อื่น ๆ ที่เหลือจะถูกตัดออกหมด</p>
 <p>นอกจากนั้นแล้ว ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">filter()</span></code> สามารถใช้เลือกคอลัมน์ที่ต้องการออกมาได้อีกหลายวิธี เช่น เลือกคอลัมน์ด้วยเรกเอกซ์ หรือเลือกตามเงื่อนไขอื่น ๆ ที่สามารถกำหนดได้ตามใจ ซึ่งผู้อ่านสามารถอ้างอิงเอกสารประกอบการใช้บนเว็บไซต์ของ pandas</p>
 </section>
-<section id="id15">
-<h3>การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id16">
+<h3>การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>นอกเหนือจากการหาแถวที่มีข้อมูลที่หายไปแล้ว เรายังจะต้องตรวจสอบด้วยว่าข้อมูลที่มีอยู่แล้วนั้นถูกต้องหรือไม่ วิธีการตรวจสอบง่าย ๆ คือการเปิดไฟล์ขึ้นมาและกวาดสายตาดูคร่าว ๆ ว่ามีสิ่งแปลกปลอมหรือไม่ แต่ว่าเราสามารถใช้ฟังก์ชันต่าง ๆ ของ pandas ในการคำนวณสถิติเชิงพรรณนา (descriptive statistics) เพื่อตรวจสอบข้อมูลได้ง่ายขึ้น โดยเราจะตรวจสอบดังนี้</p>
 <ul class="simple">
 <li><p>ค่าเฉลี่ย อยู่ในช่วงที่ควรจะเป็นหรือไม่</p></li>
@@ -1023,31 +1051,31 @@ document.write(`
 </pre></div>
 </div>
 <p>การกำหนดตัวเลือกแถว หรือตัวเลือกคอลัมน์สามารถกำหนดได้ 4 วิธี ดังนี้</p>
-<section id="id16">
-<h4>1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
+<section id="id17">
+<h4>1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
 <p>เราสามารถใช้สตริงในการระบุชื่อคอลัมน์ หรือชื่อแถว (ดัชนี) โดยส่วนใหญ่แล้วชื่อแถวมักจะเป็นตัวเลขที่แสดงหมายเลขแถว เราจึงมักจะใช้ตัวเลขในการระบุแถว
 ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id29">
+<figure class="align-default" id="id30">
 <img alt="../../_images/df-loc-5-rating.png" src="../../_images/df-loc-5-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 29 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยค่าเดี่ยว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 29 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยค่าเดี่ยว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นแก้ไขค่าข้อมูลในแถวที่ 5 (ค่าดัชนีเท่ากับ 5) และคอลัมน์ <em>Rating</em> ให้เป็น 10</p>
 </section>
-<section id="id17">
-<h4>2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
+<section id="id18">
+<h4>2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
 <p>ในกรณีที่เราต้องการเลือกหลายคอลัมน์และหลายแถวในเวลาเดียวกัน เราสามารถใช้ในลิสต์ที่มีสตริงหรือตัวเลขในการเลือกได้ ตัวอย่าง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Review&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id30">
+<figure class="align-default" id="id31">
 <img alt="../../_images/df-loc-5-7-rating-review.png" src="../../_images/df-loc-5-7-rating-review.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 30 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยลิสต์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 30 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยลิสต์ (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นเลือกแถวที่ 5 และ 7 และคอลัมน์ Rating และ Review</p>
@@ -1055,17 +1083,17 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id31">
+<figure class="align-default" id="id32">
 <img alt="../../_images/df-loc-5-7-rating.png" src="../../_images/df-loc-5-7-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 31 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยลิสต์และค่าเดี่ยว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 31 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยลิสต์และค่าเดี่ยว (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="id18">
-<h4>3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
+<section id="id19">
+<h4>3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
 <p>เราสามารถกำหนดช่วงของคอลัมน์หรือแถวโดยใช้เครื่องหมาย : เป็นตัวคั่นระหว่างจุดเริ่มต้นไปถึงจุดหมาย คล้ายคลึงกับการหั่นลิสต์ เช่น</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>คำอธิบาย</p></th>
@@ -1083,15 +1111,16 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id32">
+</div>
+<figure class="align-default" id="id33">
 <img alt="../../_images/df-loc-colons.png" src="../../_images/df-loc-colons.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 32 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยช่วง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 32 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> เพื่อระบุตำแหน่งในตารางด้วยช่วง (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="id19">
-<h4>4. เลือกด้วยลิสต์ของบูลีน<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
+<section id="id20">
+<h4>4. เลือกด้วยลิสต์ของบูลีน<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
 <p>เราสามารถใช้ลิสต์ของบูลีนที่มีจำนวนสมาชิกเท่ากับจำนวนแถว หรือคอลัมน์ วิธีนี้เรียกว่าบูลีนพราง (boolean masking) วิธีนี้เรามักจะใช้กับการเลือกแถวโดยการกำหนดเงื่อนไขตามคอลัมน์ เช่น ถ้าหากเราต้องการเลือกแถวที่ค่าคะแนนสูงกว่าสิบ ซึ่งไม่ควรจะเกิดขึ้นในชุดข้อมูลนี้ เรามีวิธีการกำหนดเงื่อนไขดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span>
 </pre></div>
@@ -1118,17 +1147,17 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
-<figure class="align-default" id="id33">
+<figure class="align-default" id="id34">
 <img alt="../../_images/df-loc-rating.png" src="../../_images/df-loc-rating.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 33 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> ร่วมกับการใช้บูลีนพรางในเลือกแแถว และสตริงในการเลือกคอลัมน์ ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 33 </span><span class="caption-text">การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">.loc</span></code> ร่วมกับการใช้บูลีนพรางในเลือกแแถว และสตริงในการเลือกคอลัมน์ ก่อนที่จะแทนค่าด้วยค่าที่กำหนด (ข้อมูลดัดแปลงจาก Airline Reviews Dataset จาก <a class="reference external" href="http://airlinequality.com">airlinequality.com</a>)</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>คำสั่งข้างต้นเลือกแถวที่มีคะแนนสูงกว่า 10 โดยการใช้บูลีนพราง และเลือกคอลัมน์ด้วยการใช้สตริงเดี่ยว ๆ จากนั้นกำหนดให้คะแนนเป็น 10 เพราะฉะนั้นแถวที่มีค่าคอลัมน์ <em>Rating</em> มากกว่า 10 จะถูกเปลี่ยนเป็น 10 ทั้งหมด</p>
 </section>
 </section>
-<section id="id20">
-<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<section id="id21">
+<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <p>คอลัมน์ที่เป็นตัวแปรจำแนกประเภท (categorical variable) มีลักษณะคล้ายคลึงกับสตริงที่เป็นข้อความ แต่มีความแตกต่างตรงที่คอลัมน์ที่เป็นตัวแปรจำแนกประเภทมีค่าที่เป็นที่ต้องมาจากเซตที่กำหนดไว้แล้ว ไม่ใช่ค่าอิสระ ตัวอย่างเช่นในชุดข้อมูลตัวอย่าง เรามีคอลัมน์ที่เป็นตัวแปรจำแนกประเภทอยู่ 2 คอลัมน์ คือ <em>Airline Name</em> และ <em>Seat Type</em> ซึ่งค่าที่อยู่ในคอลัมน์นี้มีค่าที่เป็นชื่อของสายการบิน และชนิดของที่นั่งตามลำดับ ทั้งสองคอลัมน์ต่างเป็นค่าที่มาจากเซตที่กำหนดไว้แล้ว ได้แก่ เซตของชื่อสายการบินทั้งหมด และเซตของประเภทที่นั่งทั้งหมด เพราะฉะนั้นเราต้องตรวจสอบว่าคอลัมน์เหล่านี้มีค่าที่ไม่ได้มาจากเซตที่เหมาะสมหรือไม่่</p>
 <p>วิธีเบื้องต้นในการตรวจสอบค่าของตัวแปรจำแนกประเภท คือ การใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> คำสั่งนี้ใช้ในการแจกแจงว่าคอลัมน์นั้นมีค่าประเภทเป็นอะไรบ้าง และแต่ละค่าปรากฏในชุดข้อมูลกี่ครั้ง การแจกแจงค่าในลักษณะนี้เรียกว่า การกระจายตัว (distribution) ของค่า ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="p">[</span><span class="s1">&#39;Seat Type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -1158,8 +1187,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id21">
-<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<section id="id22">
+<h3>การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <p>ในบทที่แล้วเราได้เรียนรู้วิธีการทำความสะอาดข้อมูลที่เป็นข้อความไปแล้ว เราสามารถนำฟังก์ชันเดียวกันนี้นำมาใช้กับดาตาเฟรมได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
 <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
@@ -1180,8 +1209,8 @@ document.write(`
 <p>นิพจน์ทางฝั่งซ้ายมือของเครื่องหมาย = คล้ายคลึงกับการเข้าถึงคอลัมน์อย่างที่เราเคยเห็นมาแล้ว แต่เป็นการเข้าถึงคอลัมน์ที่เราสร้างขึ้นมาใหม่ ซึ่งเราสามารถใช้ชื่อคอลัมน์ใหม่นี้ในการเข้าถึงคอลัมน์นี้ในภายหลัง ในกรณีนี้เราสร้างคอลัมน์ใหม่ที่ชื่อว่า <em>Cleaned review</em> ซึ่งเป็นคอลัมน์ที่เก็บข้อมูลที่มาจากผลลัพธ์ของคำสั่งทางขวามือของเครื่องหมาย = ซึ่งก็คือผลจากการรันฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">normalize</span></code> ลงบนแต่แถวในคอลัมน์ <em>Review</em> ในดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code></p>
 </section>
 </section>
-<section id="id22">
-<h2>การส่งออกข้อมูล<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<section id="id23">
+<h2>การส่งออกข้อมูล<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <p>ดาตาเฟรมเป็นโครงสร้างที่สามารถนำไปใช้กับไลบรารีทางวิทยาการข้อมูลได้หลายไลบรารี เช่น scikit-learn TensorFlow PyTorch huggingface และอื่น ๆ ซึ่งเราสามารถนำดาตาเฟรมที่เราทำความสะอาดแล้วไปใช้กับไลบรารีเหล่านี้ได้โดยไม่ต้องทำการเปลี่ยนแปลงข้อมูลใด ๆ อีกต่อไป แต่ในบางกรณีเราอาจจะต้องการส่งออกข้อมูลเป็นไฟล์เพื่อนำไปใช้กับโปรแกรมอื่น ๆ หรือเพื่อนำไปแสดงผล ในกรณีนี้เราสามารถใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code> ในการส่งออกข้อมูลเป็นไฟล์ CSV ได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">airline_reviews_small</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;airline_reviews_small_cleaned.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -1193,11 +1222,11 @@ document.write(`
 </div>
 <p>ผลลัพธ์ที่ได้จะเป็นลิสต์ของสตริงที่อยู่ในคอลัมน์ <em>Review</em> ของดาตาเฟรม <code class="docutils literal notranslate"><span class="pre">airline_reviews_small</span></code> ซึ่งเราสามารถนำไปใช้กับไลบรารี NLP ได้โดยตรง เช่น เราอาจจะใช้ไลบรารี pythainlp ในการตัดคำ ตัดประโยค หรือใช้ไลบรารี spacy ในการตรวจจับชื่อเฉพาะ หรือไลบรารีอื่น ๆ ในภาษาไพทอนได้ทั้งหมด</p>
 </section>
-<section id="id23">
-<h2>สรุป<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
+<section id="id24">
+<h2>สรุป<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
 <p>ในบทนี้เราได้เรียนรู้วิธีการทำความสะอาดข้อมูลด้วย pandas โดยการตรวจสอบข้อมูลที่หายไป และทำการแทนที่ด้วยค่าที่เหมาะสม การตรวจสอบข้อมูลที่ผิดพลาด และทำการแก้ไขข้อมูลที่ผิดพลาด การทำความสะอาดข้อมูลที่เป็นข้อมูลตัวเลข ข้อมูลที่เป็นข้อมูลตัวแปรจำแนกประเภท และข้อมูลที่เป็นข้อมูลข้อความ นอกจากนี้เรายังได้เรียนรู้วิธีการส่งออกข้อมูลเพื่อส่งต่อให้กับโปรแกรมอื่น หรือไลบรารีอื่น ๆ ในไพทอนเอง ทักษะทั้งหมดนี้จัดเป็นทักษะที่เป็นพื้นฐานสำหรับผู้ที่ต้องการเรียนรู้เกี่ยวกับวิทยาการข้อมูล เนื่องจากว่าไลบรารี pandas สามารถรองรับข้อมูลได้หลากหลายรูปแบบ และรองรับข้อมูลที่มีขนาดใหญ่เกินที่จะใช้โปรแกรมอื่น ๆ ในการวิเคราะห์</p>
 <p>คำสั่งที่เราเรียนรู้ในบทนี้ที่จริงมีวิธีการปรับแต่งการใช้งานได้อีกมาก นอกจากนั้นไลบรารี pandas ที่จริงแล้วมีคำสั่งอื่น ๆ อีกมาก จนไม่สามารถครอบคลุมได้หมดในบทเดียว หรือในหนังสือเล่มเดียวได้ เพราะฉะนั้นเนื้อหาวิธีการใช้ในบทนี้เป็นเพียงจุดเริ่มต้นเท่านั้น และเราสามารถเรียนรู้เพิ่มเติมได้จากเอกสารอ้างอิงของ pandas (<a class="reference external" href="https://pandas.pydata.org">https://pandas.pydata.org</a>) ซึ่งอธิบายทุกเมท็อดที่มีอยู่ในไลบรารีนี้ และข้อมูลเป็นปัจจุบันเสมอ คำสั่งทั้งหมดที่เราเรียนรู้ในบทนี้สามารถสรุปได้ดังในตารางต่อไปนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>หมวดหมู่คำสั่ง</p></th>
 <th class="head"><p>คลาส</p></th>
@@ -1303,6 +1332,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 </section>
 
@@ -1331,11 +1361,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../8-pandas.html"
@@ -1355,10 +1384,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1367,6 +1393,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1374,43 +1401,43 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">การเตรียมและวิเคราะห์ข้อมูลด้วย Jupyter Notebook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ข้อมูลแบบตาราง</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ข้อมูลแบบตาราง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">กระบวนการเตรียมข้อมูลสำหรับการวิเคราะห์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">รูปแบบการจัดเก็บข้อมูลแบบตาราง</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-comma-separated-value-tsv-tab-separated-value">ไฟล์ CSV (comma-separated value) และ TSV (tab-separated value)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">ไฟล์ Excel</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe">ดาตาเฟรม (dataframe) และการโหลดข้อมูลจากไฟล์</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การสร้างดาตาเฟรมจากลิสต์ของดิกชันนารี</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv">การสร้างดาตาเฟรมจากไฟล์ CSV</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">สำรวจข้อมูล</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบและแก้ไขหัวตาราง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การตรวจสอบส่วนประกอบหลักของดาตาเฟรม</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">สำรวจข้อมูล</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตรวจสอบจำนวนแถวและคอลัมน์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตรวจสอบและแก้ไขหัวตาราง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตรวจสอบและแปลงแบบชนิดของข้อมูลให้ถูกต้อง</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การตรวจหาข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">4. เลือกด้วยลิสต์ของบูลีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การทำความสะอาดข้อมูล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การตรวจหาข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การกำจัดแถวที่มีข้อมูลที่หายไป หรือเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การเติมค่าให้กับข้อมูลที่หายไป</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การกำจัดคอลัมน์ที่ไม่ต้องการ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การทำความสะอาดและแก้ไขข้อมูลที่เป็นข้อมูลตัวเลข</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">1. เลือกด้วยชื่อแถว (มักจะเป็นสตริง) หรือ ชื่อคอลัมน์ (มักจะเป็นตัวเลข)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2. เลือกด้วยลิสต์ของชื่อคอลัมน์ หรือ ลิสต์ของชื่อแถว</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3. เลือกด้วยช่วงของชื่อคอลัมน์ หรือ ชื่อแถว</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">4. เลือกด้วยลิสต์ของบูลีน</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">การทำความสะอาดข้อมูลที่เป็นข้อมูลที่เป็นตัวแปรจำแนกประเภท</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การทำความสะอาดข้อมูลที่เป็นข้อมูลข้อความ</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">การส่งออกข้อมูล</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">การส่งออกข้อมูล</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
 </ul>
   </nav></div>
 
@@ -1432,6 +1459,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1458,8 +1486,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

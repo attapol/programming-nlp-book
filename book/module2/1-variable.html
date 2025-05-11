@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>บทที่ 2 ตัวแปร ฟังก์ชัน และสตริง &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module2/1-variable';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -427,60 +454,60 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable">ตัวแปร (variable)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-type-data-type">ชนิดของตัวแปร (variable type) และข้อมูล (data type)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#int-float"><code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">สตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">บูลีน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวดำเนินการให้ค่าใหม่</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">สตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">บูลีน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวดำเนินการให้ค่าใหม่</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function">ฟังก์ชัน (function)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-call">การเรียกฟังก์ชัน (function call)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print"><code class="docutils literal notranslate"><span class="pre">print</span></code>: แสดงผลของจากการตีความนิพจน์</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อควรระวัง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อควรระวัง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input"><code class="docutils literal notranslate"><span class="pre">input</span></code>: รับข้อมูลสตริงจากผู้ใช้</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#str-int-float"><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code>: แปลงชนิดของข้อมูล</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type"><code class="docutils literal notranslate"><span class="pre">type</span></code>: ตรวจสอบชนิดของข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">โมดูล (module)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การนำเข้าโมดูล</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การนำเข้าโมดูล</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import">ข้อผิดพลาดที่อาจเกิดขึ้นจากการไม่ import โมดูล</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การใช้งานตัวแปรภายในวงวนฟอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การอัปเดตค่าตัวแปรภายในวงวนฟอร์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การใช้งานตัวแปรภายในวงวนฟอร์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การอัปเดตค่าตัวแปรภายในวงวนฟอร์</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">สตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การสร้างสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">สตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การสร้างสตริง</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-quote">1. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศเดี่ยว (single quote)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#double-quote">2. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศคู่ (double quote)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การหั่นสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการประยุกต์ใช้การวนซ้ำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">การหั่นสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ตัวอย่างการประยุกต์ใช้การวนซ้ำ</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">เมท็อดของสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">สร้างสตริงจากตัวแปรอื่น ๆ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานเอฟสตริง</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานเพิ่มเติม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">เมท็อดของสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">สร้างสตริงจากตัวแปรอื่น ๆ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานเอฟสตริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ตัวอย่างการใช้งานเพิ่มเติม</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-upper">เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code></a></li>
@@ -491,7 +518,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างหน้าหลังของสตริง: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -501,10 +528,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br">
-<h1>บทที่ 2 </br> ตัวแปร ฟังก์ชัน และสตริง<a class="headerlink" href="#br" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>บทที่ 2 </br> ตัวแปร ฟังก์ชัน และสตริง<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>การเรียนรู้การใช้ ตัวแปร ฟังก์ชัน และสตริงเป็นพื้นฐานสำคัญในการพัฒนาโปรแกรม เนื่องจากช่วยให้นักพัฒนาสามารถจัดการข้อมูลและควบคุมการทำงานของโปรแกรมได้อย่างมีประสิทธิภาพ ตัวแปรทำหน้าที่ในการเก็บค่าต่างๆ ไว้ในหน่วยความจำ ซึ่งสามารถเป็นได้ทั้งค่าคงที่และค่าที่เปลี่ยนแปลงได้ ขึ้นอยู่กับลักษณะของการใช้งาน ฟังก์ชันช่วยให้โปรแกรมสามารถดำเนินการตามขั้นตอนที่กำหนดได้ และสามารถนำกลับมาใช้ซ้ำได้ ซึ่งเป็นการเพิ่มประสิทธิภาพและความยืดหยุ่นในการพัฒนาโปรแกรม ส่วนสตริงเป็นชนิดข้อมูลที่สำคัญในการจัดการข้อความ โดยสามารถทำการเชื่อม การแบ่ง หรือการค้นหาข้อความได้ เมื่อผู้เรียนมีความเข้าใจในหลักการเหล่านี้ ก็จะสามารถพัฒนาโปรแกรมที่ซับซ้อนและมีประสิทธิภาพมากยิ่งขึ้น การเริ่มต้นด้วยพื้นฐานเหล่านี้จึงเป็นการวางรากฐานที่มั่นคงสำหรับการเขียนโปรแกรมที่มีคุณภาพและมีประสิทธิผล</p>
 <div class="admonition- admonition">
 <p class="admonition-title">จุดมุ่งหมายของบทนี้</p>
@@ -516,7 +543,7 @@ document.write(`
 </ul>
 </div>
 <section id="variable">
-<h2>ตัวแปร (variable)<a class="headerlink" href="#variable" title="Permalink to this heading">#</a></h2>
+<h2>ตัวแปร (variable)<a class="headerlink" href="#variable" title="Link to this heading">#</a></h2>
 <p>ในระดับชั้นประถมศึกษา เราได้เริ่มเรียนรู้วิธีการตั้งหารยาว หรือการคูณเลขที่มีหลายหลัก ซึ่งเป็นกระบวนการหรืออัลกอริทึมที่ค่อนข้างซับซ้อน ต้องอาศัยการทำซ้ำอย่างต่อเนื่องจนเกิดความชำนาญ หนึ่งในกระบวนการสำคัญของการตั้งหารยาวคือการ “ทดเลข” หรือการบันทึกผลชั่วคราวจากการคำนวณในแต่ละขั้นตอน จากนั้นจึงนำผลที่ทดไว้ทั้งหมดมารวมกันในขั้นตอนสุดท้ายเพื่อให้ได้ผลลัพธ์ที่สมบูรณ์ กระบวนการทดเลขนี้สามารถเปรียบเทียบได้กับการเก็บข้อมูลไว้ในตัวแปร (variable) ในการเขียนโปรแกรม ซึ่งข้อมูลที่เก็บในตัวแปรสามารถนำมาใช้ในการคำนวณหรือดำเนินการขั้นต่อไปได้อย่างมีประสิทธิภาพ ตัวอย่างเช่น ในโปรแกรมคอมพิวเตอร์ ตัวแปรอาจถูกใช้ในการเก็บผลลัพธ์ระหว่างการคำนวณเพื่อใช้งานในกระบวนการที่ตามมา ซึ่งสอดคล้องกับแนวคิดการทดเลขในทางคณิตศาสตร์</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -586,7 +613,7 @@ document.write(`
 <p>หน้าจอจะแสดงผลเป็น <code class="docutils literal notranslate"><span class="pre">4800</span></code> เท่ากับตัวอย่างก่อนหน้า เนื่องจากตัวแปลภาษาประมวลผลของนิพจน์ <code class="docutils literal notranslate"><span class="pre">num_words</span> <span class="pre">-</span> <span class="pre">num_punctuations</span></code> ไปเสร็จเรียบร้อยแล้ว การแก้ค่าของตัวแปร <code class="docutils literal notranslate"><span class="pre">num_punctuations</span> <span class="pre">=</span> <span class="pre">1000</span></code> ในบรรทัดต่อมา ไม่มีผลต่อค่าของ <code class="docutils literal notranslate"><span class="pre">num_words_no_puncs</span></code> ที่ถูกจัดเก็บไว้ก่อนหน้า</p>
 </section>
 <section id="variable-type-data-type">
-<h2>ชนิดของตัวแปร (variable type) และข้อมูล (data type)<a class="headerlink" href="#variable-type-data-type" title="Permalink to this heading">#</a></h2>
+<h2>ชนิดของตัวแปร (variable type) และข้อมูล (data type)<a class="headerlink" href="#variable-type-data-type" title="Link to this heading">#</a></h2>
 <p>ตัวแปรในภาษาไพทอนมีหลายชนิด (type)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> ย่อมาจาก integer มีไว้เก็บจำนวนเต็ม ตัวเลขที่ไม่มีจุดทศนิยม</p></li>
@@ -598,10 +625,10 @@ document.write(`
 <p>ในภาษาไพทอน เมื่อเราทำการสร้างตัวแปรและกำหนดค่าให้กับตัวแปร เราไม่จำเป็นต้องระบุชนิดของตัวแปรล่วงหน้า เนื่องจากไพทอนเป็นภาษาที่มีคุณลักษณะชนิดข้อมูลแบบไดนามิก (dynamic typing) ซึ่งหมายความว่าตัวแปลภาษาไพทอนจะทำการประมวลผลนิพจน์ทางด้านขวามือของเครื่องหมายเท่าก่อน แล้วจึงกำหนดชนิดของตัวแปรโดยอัตโนมัติตามค่าที่ได้จากนิพจน์นั้น</p>
 <p>อย่างไรก็ตาม ผู้เขียนโปรแกรมจำเป็นต้องเข้าใจชนิดข้อมูลของค่าที่นิพจน์จะให้ผลลัพธ์ออกมา เพื่อเลือกใช้ตัวดำเนินการ (operator) และการดำเนินการอื่นๆ ได้อย่างถูกต้อง เนื่องจากในบางกรณี ตัวดำเนินการที่ใช้กับชนิดข้อมูลต่างกันจะให้ผลลัพธ์ที่ต่างกัน ตัวอย่างเช่น การบวกจำนวนเต็ม จะแตกต่างจากการบวกสตริงที่เป็นการเชื่อมต่อข้อความ</p>
 <section id="int-float">
-<h3><code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-float" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-float" title="Link to this heading">#</a></h3>
 <p>เราสามารถสร้างนิพจน์ที่ประกอบด้วย <code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code> ด้วยตัวดำเนินการเลขคณิต (arithmetic operator)
 ในภาษาไพทอนมีดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -639,8 +666,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>นอกจากนั้นแล้วยังมีตัวดำเนินการเปรียบเทียบ (comparison operator) ที่ให้ค่าเป็นบูลีน</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -666,6 +694,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ตัวอย่าง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">5000</span>
 <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
@@ -698,15 +727,15 @@ document.write(`
 <p>Python interpreter โยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> และอธิบายว่าตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">+</span></code> ไม่สามารถใช้กับ <code class="docutils literal notranslate"><span class="pre">int</span></code> และสตริงได้</p>
 <p>เพราะเหตุนี้เวลาเราเขียนโปรแกรมเราควรจำให้ได้ว่าชนิดข้อมูลที่ตัวแปรและตัวเก็บเป็นข้อมูลชนิดไหน และควรจะทราบด้วยว่าถ้าเครื่องโยน <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> มาให้ตอนที่เรารันโปรแกรม เราควรจะแก้ไขโดยการตรวจชนิดของข้อมูลให้เหมาะสม</p>
 </section>
-<section id="id1">
-<h3>สตริง<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>สตริง<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>เบื้องต้นเราสามารถสร้างสตริงเพื่อเก็บข้อความได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">welcome_message</span> <span class="o">=</span> <span class="s1">&#39;Welcome to my world!&#39;</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">welcome_message</span></code> เป็นตัวแปรชนิดสตริง เนื่องจากนิพจน์เป็นข้อความโดยเห็นได้จากเครื่อง <code class="docutils literal notranslate"><span class="pre">'</span></code> ที่คร่อมข้อความอยู่</p>
 <p>ภาษาไพทอนสามารถใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">+</span></code> และ <code class="docutils literal notranslate"><span class="pre">*</span></code> กับสตริงได้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -724,10 +753,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>เราจะศึกษารายละเอียดของการสร้างสตริงในรูปอื่น ๆ ทั้งหมดในบทต่อไป</p>
 </section>
-<section id="id2">
-<h3>บูลีน<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h3>บูลีน<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>ชื่อของตัวแปรที่เก็บค่าบูลีนควรจะขึ้นต้นด้วย <code class="docutils literal notranslate"><span class="pre">is_</span></code> + adjective หรือคำนาม เช่น <code class="docutils literal notranslate"><span class="pre">is_too_long</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">is_newspaper</span></code> เป็นต้น</p>
@@ -740,8 +770,8 @@ document.write(`
 <p>จากตัวอย่างข้างบน <code class="docutils literal notranslate"><span class="pre">is_long_book</span></code> เป็นตัวแปรชนิดบูลีน เพราะว่านิพจน์ตีผลออกมาเป็น <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>ตัวดำเนินการของบูลีนกับบูลีน ได้แก่ <code class="docutils literal notranslate"><span class="pre">and</span></code> <code class="docutils literal notranslate"><span class="pre">or</span></code> ซึ่งเหมือนกับตัวดำเนินการที่ใช้ในโปรแกรมคาเรลในบทที่ 1</p>
 </section>
-<section id="id3">
-<h3>ตัวดำเนินการให้ค่าใหม่<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>ตัวดำเนินการให้ค่าใหม่<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>การให้ค่าใหม่กับตัวแปร (reassign หรือ update) สามารถทำได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">=</span></code> ซ้ำอีกครั้งได้เลย เช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">5000</span>
 <span class="n">num_words</span> <span class="o">=</span> <span class="mi">100</span>
@@ -774,11 +804,12 @@ document.write(`
 </section>
 </section>
 <section id="function">
-<h2>ฟังก์ชัน (function)<a class="headerlink" href="#function" title="Permalink to this heading">#</a></h2>
+<h2>ฟังก์ชัน (function)<a class="headerlink" href="#function" title="Link to this heading">#</a></h2>
 <p>ในบทที่ 1 เราได้ศึกษาเกี่ยวกับวิธีการเขียนฟังก์ชันที่สามารถนำกลับมาใช้ใหม่ได้ในสถานการณ์ที่คล้ายคลึงกัน การแบ่งโจทย์ออกเป็นส่วนย่อย ๆ ช่วยให้เราจัดการกับปัญหาได้ง่ายขึ้น และยังช่วยให้โค้ดมีความกระชับและอ่านง่ายมากขึ้น ซึ่งเป็นแนวทางสำคัญในการพัฒนาโปรแกรมอย่างมีประสิทธิภาพ</p>
 <p>นอกจากนี้ เรายังสามารถเพิ่มความยืดหยุ่นให้กับฟังก์ชันได้โดยการเขียนฟังก์ชันที่รับ พารามิเตอร์ (parameter) หรือ อาร์กิวเมนต์ (argument) ซึ่งหมายถึงค่าที่เราส่งเข้าไปในฟังก์ชันเพื่อใช้ในการคำนวณหรือดำเนินการต่าง ๆ พารามิเตอร์ทำให้ฟังก์ชันสามารถทำงานได้หลากหลายมากขึ้น โดยการเปลี่ยนค่าที่ส่งเข้าไป ทำให้เราสามารถนำฟังก์ชันมาใช้ซ้ำได้ในหลายบริบทตามที่ต้องการ</p>
 <p>แม้ว่าทั้งสองคำนี้มีความหมายเฉพาะที่แตกต่างกันในเชิงเทคนิค แต่ในทางปฏิบัติ นักเขียนโปรแกรมมักใช้คำว่า “พารามิเตอร์” และ “อาร์กิวเมนต์” แทนกันอย่างไม่เป็นทางการ ส่งผลให้ทั้งสองคำมักถูกใช้สับสนหรือแทนกันได้ในบางกรณี อย่างไรก็ตาม</p>
-<a class="reference internal image-reference" href="../../_images/input-output.png"><img alt="../../_images/input-output.png" class="align-center" src="../../_images/input-output.png" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/input-output.png"><img alt="../../_images/input-output.png" class="align-center" src="../../_images/input-output.png" style="height: 100px;" />
+</a>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>พารามิเตอร์ (parameter) หมายถึง ตัวแปรที่ถูกกำหนดในขณะที่ทำการประกาศฟังก์ชัน ซึ่งเป็นส่วนหนึ่งของนิยามฟังก์ชัน และใช้ในการรับข้อมูลที่ถูกส่งเข้ามาในฟังก์ชันเมื่อมีการเรียกใช้งาน</p>
@@ -817,8 +848,8 @@ document.write(`
 </li>
 </ul>
 <p>เราสามารถสังเกตได้ว่าฟังก์ชันมีความยืดหยุ่นสูง และสามารถนำมาปรับใช้ในสถานการณ์ที่แตกต่างกันได้โดยการเปลี่ยนแปลงค่าของอาร์กิวเมนต์ที่ส่งเข้าไปในฟังก์ชัน ตัวอย่างเช่น หากในอนาคตมีการเปลี่ยนแปลงอัตราภาษี เราไม่จำเป็นต้องเขียนฟังก์ชันใหม่ทั้งหมด เพียงแค่ปรับเปลี่ยนอัตราภาษีที่ส่งเข้าไปเป็นอาร์กิวเมนต์ใหม่เท่านั้น ฟังก์ชันก็จะสามารถคำนวณภาษีตามอัตราใหม่ได้ทันที</p>
-<section id="id4">
-<h3>การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>ฟังก์ชันแบบมีอาร์กิวเมนต์ในภาษาไพทอนมีลักษณะดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_vat</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">vat_rate</span><span class="p">,</span> <span class="n">round_decimal</span><span class="p">):</span>
   <span class="n">vat</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">*</span> <span class="n">vat_rate</span>
@@ -855,7 +886,7 @@ document.write(`
 <p>อย่างไรก็ตาม การกำกับชนิดข้อมูลในภาษาไพทอน ไม่มีผลต่อการทำงานของตัวแปลภาษาในขณะรันโปรแกรม  ซึ่งหมายความว่าตัวแปลภาษาจะไม่บังคับให้ชนิดข้อมูลตรงตามที่ระบุไว้ หากมีการส่งข้อมูลที่ไม่ตรงตามชนิดที่กำหนด โปรแกรมอาจทำงานผิดพลาดและแสดงข้อผิดพลาดขึ้นมาในขณะรันโปรแกรม ซึ่งมีผลเท่ากับการไม่กำกับชนิดข้อมูลเลย  ถึงแม้ว่าการกำกับชนิดข้อมูลจะช่วยเพิ่มความชัดเจน แต่ก็ทำให้โค้ดดูซับซ้อนและไม่เรียบง่ายเหมือนเดิม นักเขียนโปรแกรมหลายคนอาจเลือกที่จะไม่ใช้การกำกับชนิดข้อมูล หากมองว่าไม่จำเป็นต่อโค้ดที่เขียน</p>
 </section>
 <section id="function-call">
-<h3>การเรียกฟังก์ชัน (function call)<a class="headerlink" href="#function-call" title="Permalink to this heading">#</a></h3>
+<h3>การเรียกฟังก์ชัน (function call)<a class="headerlink" href="#function-call" title="Link to this heading">#</a></h3>
 <p>ถ้าหากว่าฟังก์ชันที่เราต้องการเรียกเป็นฟังก์ชันแบบที่มีพารามิเตอร์ เราจำเป็นต้องส่งผ่านค่าพารามิเตอร์ให้กับฟังก์ชันให้ครบทุกตัว ตัวอย่างเช่น ถ้าหากเราต้องการเรียกฟังก์ชันนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_vat</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">vat_rate</span><span class="p">,</span> <span class="n">round_decimal</span><span class="p">):</span>
   <span class="n">vat</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">*</span> <span class="n">vat_rate</span>
@@ -887,15 +918,15 @@ document.write(`
 <p>ข้อความแสดงข้อผิดพลาดแจ้งว่าฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">compute_vat</span></code> ต้องการอาร์กิวเมนต์เพิ่มอีกสองค่าได้แก่ <code class="docutils literal notranslate"><span class="pre">vat_rate</span></code> และ <code class="docutils literal notranslate"><span class="pre">round_decimal</span></code> ไม่เช่นนั้นแล้วฟังก์ชันจะไม่ทราบว่าควรจะแทนค่าพารามิเตอร์เหล่านี้ด้วยค่าอะไร เมื่อถึงบรรทัดที่จำเป็นต้องเรียกใช้ค่าพารามิเตอร์เหล่านี้</p>
 </section>
 </section>
-<section id="id5">
-<h2>ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h2>ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน (built-in function) คือฟังก์ชันที่มีมาให้กับตัวแปลภาษาไพทอนอยู่แล้ว ผู้ใช้สามารถเรียกใช้ได้เลย โดยไม่ต้องประกาศฟังก์ชันก่อน</p>
 </aside>
 <p>เมื่อติดตั้งตัวแปลภาษาไพทอน เราจะได้รับฟังก์ชันแบบบิวท์อิน ซึ่งเป็นฟังก์ชันที่มีให้ใช้งานโดยไม่จำเป็นต้องนิยามขึ้นมาใหม่ ฟังก์ชันเหล่านี้มีไว้เพื่ออำนวยความสะดวกในการเขียนโปรแกรม ตัวอย่างของฟังก์ชันแบบบิวท์อินที่ควรรู้จัก ได้แก่</p>
 <section id="print">
-<h3><code class="docutils literal notranslate"><span class="pre">print</span></code>: แสดงผลของจากการตีความนิพจน์<a class="headerlink" href="#print" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">print</span></code>: แสดงผลของจากการตีความนิพจน์<a class="headerlink" href="#print" title="Link to this heading">#</a></h3>
 <p>ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_rectangle_area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
   <span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
@@ -907,8 +938,8 @@ document.write(`
 <span class="go">9</span>
 </pre></div>
 </div>
-<section id="id6">
-<h4>ข้อควรระวัง<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<section id="id7">
+<h4>ข้อควรระวัง<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <p>ผู้เริ่มต้นเขียนโปรแกรมมักจะสับสนระหว่างการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">print</span></code> กับ <code class="docutils literal notranslate"><span class="pre">return</span></code> ฟังก์ชันตัวอย่างต่อไปนี้จะอธิบายความแตกต่างของการใช้ <code class="docutils literal notranslate"><span class="pre">return</span></code> ซึ่งเป็นการส่งค่ากลับจากฟังก์ชันแทนการแสดงผลออกมาทันที</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_rectangle_area2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
   <span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
@@ -938,7 +969,7 @@ document.write(`
 </section>
 </section>
 <section id="input">
-<h3><code class="docutils literal notranslate"><span class="pre">input</span></code>: รับข้อมูลสตริงจากผู้ใช้<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">input</span></code>: รับข้อมูลสตริงจากผู้ใช้<a class="headerlink" href="#input" title="Link to this heading">#</a></h3>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">input</span></code> ต้องใส่พารามิเตอร์ 1 ตัว คือ ข้อความที่บอกให้ผู้ใช้ใส่ข้อความ เมื่อฟังก์ชันนี้ถูกเรียกโปรแกรมจะหยุดรอให้ผู้ใช้พิมพ์ข้อความลงไป
 ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_welcome_message</span><span class="p">():</span>
@@ -959,7 +990,7 @@ document.write(`
 </div>
 </section>
 <section id="str-int-float">
-<h3><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code>: แปลงชนิดของข้อมูล<a class="headerlink" href="#str-int-float" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code>: แปลงชนิดของข้อมูล<a class="headerlink" href="#str-int-float" title="Link to this heading">#</a></h3>
 <p>การแปลงชนิดของข้อมูลเป็นสิ่งที่มีความสำคัญ เพราะข้อมูลที่เราป้อนเข้ามาในโปรแกรมนั้นอาจไม่ได้อยู่ในชนิดข้อมูลที่ถูกต้องตามที่ต้องการ เช่น ข้อมูลจากผู้ใช้ที่ป้อนผ่านทางคีย์บอร์ดมักจะเป็นข้อมูลชนิดสตริง (<code class="docutils literal notranslate"><span class="pre">str</span></code>) แม้ว่าผู้ใช้จะป้อนตัวเลขก็ตาม ดังนั้นเราจำเป็นต้องทำการแปลงชนิดข้อมูลเพื่อให้โปรแกรมทำงานได้อย่างถูกต้อง</p>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">str</span></code> ใช้แปลงข้อมูลให้เป็นสตริง ตัวอย่างเช่น</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">code</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -1037,11 +1068,11 @@ document.write(`
 <p>การแปลงชนิดข้อมูลเป็นส่วนสำคัญที่ช่วยให้โปรแกรมทำงานได้อย่างถูกต้อง และหลีกเลี่ยงข้อผิดพลาดที่อาจเกิดขึ้นจากการใช้ข้อมูลชนิดที่ไม่ถูกต้อง</p>
 </section>
 <section id="type">
-<h3><code class="docutils literal notranslate"><span class="pre">type</span></code>: ตรวจสอบชนิดของข้อมูล<a class="headerlink" href="#type" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">type</span></code>: ตรวจสอบชนิดของข้อมูล<a class="headerlink" href="#type" title="Link to this heading">#</a></h3>
 <p>การตรวจสอบชนิดของข้อมูลในตัวแปรเป็นเรื่องที่สำคัญ เนื่องจากข้อมูลแต่ละชนิดมีวิธีการประมวลผลที่แตกต่างกัน คำสั่ง type ใช้สำหรับตรวจสอบชนิดของข้อมูลในตัวแปร ว่าข้อมูลนั้นเป็นข้อมูลประเภทใด เช่น ข้อมูลชนิดสตริง ข้อมูลชนิดจำนวนเต็ม หรือข้อมูลชนิดจำนวนจริง การตรวจสอบชนิดข้อมูลจะช่วยให้เราแน่ใจว่าข้อมูลที่กำลังใช้งานอยู่มีรูปแบบที่ถูกต้องตามที่โปรแกรมต้องการ ซึ่งสามารถลดข้อผิดพลาดที่อาจเกิดขึ้นจากการใช้ข้อมูลผิดชนิดได้</p>
 <p>เราสามารถตรวจสอบชนิดข้อมูลในตัวแปรได้โดยใช้คำสั่ง type ดังตัวอย่างต่อไปนี้</p>
-<section id="id7">
-<h4>ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<section id="id8">
+<h4>ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">5000</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">average_words_per_page</span> <span class="o">=</span> <span class="n">num_words</span> <span class="o">/</span> <span class="mi">6</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">average_words_per_page</span><span class="p">))</span>
@@ -1050,8 +1081,8 @@ document.write(`
 </div>
 <p>จากตัวอย่างนี้ เราทำการตรวจสอบชนิดข้อมูลของตัวแปร <code class="docutils literal notranslate"><span class="pre">average_words_per_page</span></code>  ซึ่งเกิดจากการหารจำนวนคำทั้งหมดด้วยจำนวนหน้า ผลลัพธ์ที่ได้คือชนิดข้อมูล <code class="docutils literal notranslate"><span class="pre">float</span></code> ซึ่งหมายถึงข้อมูลจำนวนจริง หรือข้อมูลที่มีจุดทศนิยม</p>
 </section>
-<section id="id8">
-<h4>ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h4>ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">welcome_message</span> <span class="o">=</span> <span class="s1">&#39;Welcome to my world!&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">welcome_message</span><span class="p">))</span>
 <span class="go">&lt;class &#39;str&#39;&gt;</span>
@@ -1063,10 +1094,10 @@ document.write(`
 </section>
 </section>
 <section id="module">
-<h2>โมดูล (module)<a class="headerlink" href="#module" title="Permalink to this heading">#</a></h2>
+<h2>โมดูล (module)<a class="headerlink" href="#module" title="Link to this heading">#</a></h2>
 <p>โมดูล (module) ในภาษาไพทอน หมายถึง กลุ่มของฟังก์ชัน ตัวแปร และคลาสที่ถูกจัดเก็บไว้ในไฟล์เดียวกัน การนำโมดูลมาใช้งานช่วยให้โค้ดของโปรแกรมมีโครงสร้างที่เป็นระเบียบ และสามารถเรียกใช้ฟังก์ชันที่มีอยู่แล้วได้โดยไม่ต้องเขียนโค้ดใหม่ทั้งหมด นอกจากนี้ การใช้โมดูลยังช่วยเพิ่มประสิทธิภาพในการพัฒนาโปรแกรม เนื่องจากเราสามารถนำฟังก์ชันจากโมดูลที่สร้างขึ้นแล้วกลับมาใช้ใหม่ได้ในหลาย ๆ โปรแกรม</p>
-<section id="id9">
-<h3>การนำเข้าโมดูล<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>การนำเข้าโมดูล<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>การนำโมดูลมาใช้ในโปรแกรมทำได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">import</span></code> ตามด้วยชื่อของโมดูลที่ต้องการใช้ เมื่อทำการนำเข้าแล้ว เราสามารถเรียกใช้ฟังก์ชันหรือตัวแปรจากโมดูลนั้น ๆ ได้ทันทีตลอดการทำงานของโปรแกรม ตัวอย่างการใช้งานโมดูล <code class="docutils literal notranslate"><span class="pre">math</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>             <span class="c1"># โหลดโมดูลชื่อว่า math</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>   <span class="c1"># เรียกฟังก์ชัน sqrt ที่อยู่ในโมดูล math</span>
@@ -1077,7 +1108,7 @@ document.write(`
 <p>ในตัวอย่างนี้ เรานำเข้าโมดูล <code class="docutils literal notranslate"><span class="pre">math</span></code> ซึ่งมีฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> สำหรับหาค่ารากที่สองของตัวเลข เมื่อเรียกใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">sqrt(9)</span></code> จะได้ผลลัพธ์เป็น <code class="docutils literal notranslate"><span class="pre">3.0</span></code></p>
 </section>
 <section id="import">
-<h3>ข้อผิดพลาดที่อาจเกิดขึ้นจากการไม่ import โมดูล<a class="headerlink" href="#import" title="Permalink to this heading">#</a></h3>
+<h3>ข้อผิดพลาดที่อาจเกิดขึ้นจากการไม่ import โมดูล<a class="headerlink" href="#import" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">NameError</span></code> คือ error ที่เกิดขึ้นเวลาตัวแปลภาษาไพทอนหาไม่เจอว่าชื่อที่ใช้อ้างถึงตัวแปร หรือฟังก์ชันอะไร</p>
@@ -1110,10 +1141,10 @@ document.write(`
 <p>ในบทถัด ๆ ไป เราจะได้ศึกษาเกี่ยวกับวิธีการดาวน์โหลดและติดตั้งโมดูลจากแหล่งภายนอก (เช่น ไลบรารีจาก PyPI) เพื่อนำฟังก์ชันที่ซับซ้อนยิ่งขึ้นมาช่วยในการประมวลผลข้อมูล</p>
 </section>
 </section>
-<section id="id10">
-<h2>ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
 <section id="id11">
-<h3>การใช้งานตัวแปรภายในวงวนฟอร์<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h2>ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h3>การใช้งานตัวแปรภายในวงวนฟอร์<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>ในการเขียนโปรแกรม เราสามารถใช้วงวนฟอร์เพื่อสั่งให้โปรแกรมทำงานซ้ำ ๆ โดยวงวนฟอร์จะใช้ตัวแปรสำหรับเก็บค่ารอบการทำงานและอัปเดตค่าไปเรื่อย ๆ ในแต่ละรอบของการวนซ้ำ</p>
 <p>ตัวอย่างโจทย์: จงเขียนโปรแกรมที่พิมพ์ตัวเลขตั้งแต่ 1 ถึง 10</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -1132,8 +1163,8 @@ document.write(`
 <li><p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">range(beginning,</span> <span class="pre">end)</span></code> รับพารามิเตอร์สองตัว: พารามิเตอร์ตัวแรก คือ ค่าจุดเริ่มต้น (<code class="docutils literal notranslate"><span class="pre">beginning</span></code>) และพารามิเตอร์ตัวที่สอง คือ ค่าขอบเขต (<code class="docutils literal notranslate"><span class="pre">end</span></code>) โดยค่าขอบเขตนี้จะเป็นค่าที่วงวนฟอร์จะหยุดการทำงานเมื่อถึงค่า</p></li>
 </ul>
 </section>
-<section id="id12">
-<h3>การอัปเดตค่าตัวแปรภายในวงวนฟอร์<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<section id="id13">
+<h3>การอัปเดตค่าตัวแปรภายในวงวนฟอร์<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>การอัปเดตค่าตัวแปรภายในวงวนฟอร์เป็นแนวทางการเขียนโปรแกรมที่พบเห็นได้บ่อย โดยเฉพาะในกรณีที่ต้องการคำนวณหรือเก็บผลลัพธ์จากการวนซ้ำหลาย ๆ ครั้ง</p>
 <p>ตัวอย่างโจทย์: จงเขียนโปรแกรมเพื่อหาผลรวมของตัวเลขตั้งแต่ 1 + 2 + 3 + 4 + 5 จนถึง n โดยให้ n เป็นพารามิเตอร์ที่ผู้ใช้สามารถกำหนดได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_up_number_until</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1162,8 +1193,8 @@ document.write(`
 <p>การอัปเดตตัวแปรภายในวงวนนี้สามารถใช้ในสถานการณ์ต่าง ๆ เช่น การหาผลคูณ การหาค่าเฉลี่ย หรือการคำนวณสถิติต่าง ๆ</p>
 </section>
 </section>
-<section id="id13">
-<h2>สตริง<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h2>สตริง<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>สตริง หรือสายอักขระ เป็นประเภทของข้อมูลที่ใช้สำหรับเก็บข้อมูลที่เป็นรูปแบบตัวหนังสือหรืออักขระ (character) อื่น ๆ สตริงที่พบบ่อยและจัดเก็บได้ มีหลากหลายประเภท ดังนี้</p>
 <ul class="simple">
 <li><p>ตัวเลข เช่น <code class="docutils literal notranslate"><span class="pre">'007'</span></code></p></li>
@@ -1178,11 +1209,11 @@ document.write(`
 </ul>
 </li>
 </ul>
-<section id="id14">
-<h3>การสร้างสตริง<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<section id="id15">
+<h3>การสร้างสตริง<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>วิธีการสร้างสตริงโดยการพิมพ์ข้อความเข้าไปในตัวโค้ดโดยตรง เรียกว่าการสร้างสตริงแบบตัวอักษรแท้ หรือสตริงลิเตอรัล (string literal) ซึ่งต่างจากการสร้างสตริงขึ้นมาโดยการเรียกฟังก์ชันอื่น ๆ สามารถทำได้ 3 วิธีหลัก ๆ ดังนี้</p>
 <section id="single-quote">
-<h4>1. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศเดี่ยว (single quote)<a class="headerlink" href="#single-quote" title="Permalink to this heading">#</a></h4>
+<h4>1. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศเดี่ยว (single quote)<a class="headerlink" href="#single-quote" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_sentence</span> <span class="o">=</span> <span class="s1">&#39;I dreamed a dream in times gone by&#39;</span>
 </pre></div>
 </div>
@@ -1206,7 +1237,7 @@ document.write(`
 </div>
 </section>
 <section id="double-quote">
-<h4>2. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศคู่ (double quote)<a class="headerlink" href="#double-quote" title="Permalink to this heading">#</a></h4>
+<h4>2. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศคู่ (double quote)<a class="headerlink" href="#double-quote" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climax_sentence</span> <span class="o">=</span> <span class="s2">&quot;So different from this hell I&#39;m living&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">climax_sentence</span><span class="p">)</span>
 <span class="go">So different from this hell I&#39;m living</span>
@@ -1226,7 +1257,7 @@ document.write(`
 </div>
 </section>
 <section id="triple-quote">
-<h4>3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)<a class="headerlink" href="#triple-quote" title="Permalink to this heading">#</a></h4>
+<h4>3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)<a class="headerlink" href="#triple-quote" title="Link to this heading">#</a></h4>
 <p>การใช้เครื่องหมายอัญประกาศสามตัว (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">'''</span></code>) เป็นวิธีการสร้างสตริงที่สามารถรองรับข้อความหลายบรรทัดได้ โดยที่บรรทัดใหม่ในข้อความจะถูกแทนที่ด้วยตัวอักขระพิเศษ <code class="docutils literal notranslate"><span class="pre">\n</span></code> (newline)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">juliet_speech</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;O Romeo, Romeo, wherefore art thou Romeo?</span>
 <span class="gp">... </span><span class="s2">Deny thy father and refuse thy name.&quot;&quot;&quot;</span>
@@ -1239,9 +1270,10 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id15">
-<h3>เข้าถึงตัวอักษรที่อยู่ในสตริง<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
-<a class="reference internal image-reference" href="../../_images/char-index.png"><img alt="../../_images/char-index.png" class="align-center" src="../../_images/char-index.png" style="height: 150px;" /></a>
+<section id="id16">
+<h3>เข้าถึงตัวอักษรที่อยู่ในสตริง<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../../_images/char-index.png"><img alt="../../_images/char-index.png" class="align-center" src="../../_images/char-index.png" style="height: 150px;" />
+</a>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ดัชนี (index) คือ เลขชี้ตำแหน่ง</p>
@@ -1249,7 +1281,7 @@ document.write(`
 <p>ในภาษาไพทอน เราสามารถเข้าถึงตัวอักษรที่อยู่ในสตริงได้โดยใช้ดัชนี (index) ผ่านการใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code> ซึ่งเป็นการระบุว่าต้องการดึงตัวอักษรจากตำแหน่งใดในสตริง ดัชนีของสตริงในภาษาไพทอนจะเริ่มต้นที่เลข 0 ซึ่งหมายความว่าตัวอักษรตัวแรกในสตริงจะอยู่ที่ตำแหน่ง 0 และตัวอักษรถัดไปจะอยู่ที่ตำแหน่ง 1, 2, 3 ตามลำดับ เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[a]</span></code> คืนตัวอักขระจากช่องที่ index <code class="docutils literal notranslate"><span class="pre">a</span></code> ตามที่เห็นดังภาพข้างบน</p>
 <p>นอกจากนี้ เราสามารถใช้ดัชนีติดลบเพื่อดึงตัวอักษรจากด้านหลังของสตริงได้ โดยตัวอักษรตัวสุดท้ายจะอยู่ที่ตำแหน่ง -1 ตัวอักษรก่อนหน้าจะอยู่ที่ตำแหน่ง -2 และถอยหลังไปเรื่อย ๆ ตามลำดับ เพราะฉะนั้น <code class="docutils literal notranslate"><span class="pre">string[-a]</span></code> คืนตัวอักขระจากช่องที่ดัชนี <code class="docutils literal notranslate"><span class="pre">-a</span></code> ซึ่งเราเรียกว่าการใช้เลขดัชนีติดลบ (negative indexing)</p>
 <p>ตัวอย่าง สมมติว่าเรามีสตริงดังนี้ <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'นายสมชาย'</span></code></p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>ผลลัพธ์</p></th>
@@ -1275,6 +1307,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">IndexError</span></code> คือ ข้อผิดพลาดที่เกิดจากการที่ใช้เลขดัชนี ที่ไม่อยู่ในช่วงที่เหมาะสม</p>
@@ -1287,8 +1320,8 @@ document.write(`
 </div>
 <p>จะเกิดข้อผิดพลาดประเภท <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> ซึ่งเป็นข้อผิดพลาดที่เกิดขึ้นเมื่อเราพยายามเข้าถึงดัชนีที่ไม่อยู่ในขอบเขตของสตริง จากข้อความข้างต้น โปรแกรมแจ้งว่า ดัชนีที่เราพยายามใช้นั้นเกินขอบเขตของสตริง s = ‘นายสมชาย’ ที่มีดัชนีตั้งแต่ 0 ถึง 7 (เมื่อใช้นับจากซ้าย) และ -1 ถึง -8 (เมื่อใช้นับจากขวา)</p>
 </section>
-<section id="id16">
-<h3>การหั่นสตริง<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>การหั่นสตริง<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>การหั่นสตริง (string slicing) คือ การดึงสตริงย่อย (substring) ออกมาจากสตริงต้นฉบับ เพื่อตัดเอาส่วนของข้อความที่เราต้องการ โดยการระบุตำแหน่งเริ่มต้นและตำแหน่งสิ้นสุดของสตริงย่อยที่ต้องการดึงออกมา ซึ่งไพทอนสามารถทำได้อย่างง่ายดายด้วยตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 <p>ตัวอย่างการหั่นสตริง</p>
 <ul class="simple">
@@ -1303,10 +1336,11 @@ document.write(`
 </aside>
 <p>การหั่นสตริงสามารถทำได้โดยใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code> ในรูปแบบ  <code class="docutils literal notranslate"><span class="pre">[ตำแหน่งที่เริ่ม:ตำแหน่งที่จบ]</span></code> โดยค่าดัชนีที่ระบุจะชี้ไปที่ร่องระหว่างตัวอักษรในสตริง</p>
 <p>สมมติว่าเราต้องการดึงสตริงย่อยจากสตริง <code class="docutils literal notranslate"><span class="pre">s</span></code> ที่เก็บข้อความอยู่ดังนี้</p>
-<a class="reference internal image-reference" href="../../_images/substring-index.png"><img alt="../../_images/substring-index.png" class="align-center" src="../../_images/substring-index.png" style="height: 150px;" /></a>
+<a class="reference internal image-reference" href="../../_images/substring-index.png"><img alt="../../_images/substring-index.png" class="align-center" src="../../_images/substring-index.png" style="height: 150px;" />
+</a>
 <p>การดึง substring ให้นึกถึงว่าตัวเลข index ชี้ไปที่ร่องระหว่างตัวอักขระสองตัว เช่น index 3 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ย'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'ส'</span></code> หรือ index -2 อยู่ระหว่าง <code class="docutils literal notranslate"><span class="pre">'ช'</span></code> และ <code class="docutils literal notranslate"><span class="pre">'า'</span></code></p>
 <p>ตัวอย่าง สมมติว่าเราได้รัน <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'นายสมชาย'</span></code></p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>เอาท์พุต</p></th>
@@ -1344,9 +1378,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ไพทอนมีความยืดหยุ่นสูงในการใช้ดัชนีสำหรับการหั่นสตริง ซึ่งหมายความว่าหากเราใช้ดัชนีที่เกินขอบเขตของสตริง ไพทอนจะไม่แสดงข้อผิดพลาด แต่จะดึงข้อมูลที่มีอยู่เท่าที่สามารถดึงได้
 ทำให้ได้รับเอาท์พุตที่เราไม่ได้คาดคิดมา ทำให้โปรแกรมเกิดข้อผิดพลาดอีก เวลานำผลไปใช้ต่อกับคำสั่งอื่น ๆ</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>เอาท์พุต</p></th>
@@ -1376,11 +1411,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="id17">
-<h3>ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<section id="id18">
+<h3>ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>นอกเหนือจากการใช้ตัวดำเนินการ <code class="docutils literal notranslate"><span class="pre">[]</span></code> เพื่อเข้าถึงตัวอักษรในสตริง และหั่นสตริงแล้ว ภาษาไพทอนยังมีตัวดำเนินการอื่น ๆ ที่สามารถใช้งานกับสตริงได้ ซึ่งตัวดำเนินการเหล่านี้ช่วยให้เราสามารถต่อสตริง ตรวจสอบเนื้อหาในสตริง และเปรียบเทียบสตริงได้อย่างสะดวก โดยมีตัวดำเนินการหลัก ๆ 4 ตัว ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ตัวดำเนินการ</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -1422,10 +1458,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ตัวดำเนินการสตริงและฟังก์ชันที่เกี่ยวข้องช่วยให้เราจัดการและประมวลผลสตริงในภาษาไพทอนได้อย่างสะดวก ไม่ว่าจะเป็นการต่อสตริง การทำซ้ำ การตรวจสอบสตริงย่อย การเปรียบเทียบสตริง หรือการหาความยาวของสตริง การทำความเข้าใจการใช้งานตัวดำเนินการเหล่านี้จะช่วยอำนวยความสะดวกในการเขียนโปรแกรมที่เกี่ยวข้องกับสตริง</p>
 </section>
-<section id="id18">
-<h3>การวนซ้ำบนสตริง<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<section id="id19">
+<h3>การวนซ้ำบนสตริง<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การวนซ้ำ (iteration) หมายถึง กระบวนการที่โค้ดทำงานซ้ำ ๆ กับข้อมูลที่เข้ามาเป็นลำดับจากชุดข้อมูลที่กำหนด</p>
@@ -1454,8 +1491,8 @@ document.write(`
 </pre></div>
 </div>
 <p>ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">range()</span></code> ใช้ในการสร้างชุดของตัวเลขตั้งแต่ 0 ถึงค่าความยาวของสตริง โดยค่าความยาวของสตริงนั้นได้จากฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">len()</span></code> ซึ่งจะคืนค่าความยาว (จำนวนอักขระ) ของสตริง การใช้วิธีวนซ้ำนี้เหมาะสำหรับกรณีที่ต้องการเข้าถึงตำแหน่งดัชนีหรือประมวลผลตามตำแหน่งอักขระในสตริง</p>
-<section id="id19">
-<h4>ตัวอย่างการประยุกต์ใช้การวนซ้ำ<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
+<section id="id20">
+<h4>ตัวอย่างการประยุกต์ใช้การวนซ้ำ<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
 <p>หากเราต้องการนับจำนวนสระในสตริง เราสามารถเขียนโค้ดดังนี้:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abcdefg&#39;</span>
 <span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiou&#39;</span>
@@ -1470,8 +1507,8 @@ document.write(`
 </section>
 </section>
 </section>
-<section id="id20">
-<h2>เมท็อดของสตริง<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<section id="id21">
+<h2>เมท็อดของสตริง<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p><em>อ็อบเจกต์ (object)</em> คือ สิ่งที่ใช้ในการเก็บข้อมูล ซึ่งมี <em>เมท็อด (method)</em> ซึ่งเป็นฟังก์ชันที่ช่วยให้เราสามารถนำข้อมูลนั้นไปใช้งานได้ง่ายขึ้น</p>
@@ -1489,8 +1526,8 @@ document.write(`
 </div>
 <p>ในตัวอย่างนี้ ตัวแปร <code class="docutils literal notranslate"><span class="pre">name</span></code> เก็บสตริง <code class="docutils literal notranslate"><span class="pre">'james'</span></code> ซึ่งสร้างขึ้นด้วยการใช้เครื่องหมายอัญประกาศเดี่ยว หลังจากนั้นเราเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">isupper</span></code> ซึ่งเป็นเมท็อดที่ไม่ต้องการพารามิเตอร์ เมท็อดนี้จะคืนค่าผลลัพธ์เป็นข้อมูลชนิดบูลีน ที่บ่งบอกว่าสตริงทั้งหมดเป็นอักษรลาตินพิมพ์ใหญ่หรือไม่</p>
 <p>เมท็อดของสตริงในภาษาไพทอนมีจำนวนมาก และไม่มีความจำเป็นที่ผู้เขียนโปรแกรมจะต้องจดจำเมท็อดทั้งหมด ควรจดจำเฉพาะเมท็อดที่ใช้งานบ่อย ๆ เท่านั้น หากจำไม่ได้สามารถค้นหาเพิ่มเติมได้จากแหล่งข้อมูลออนไลน์ ซึ่งเป็นวิธีปฏิบัติที่เป็นปกติในวงการเขียนโปรแกรม อย่างไรก็ตาม เพื่อความสะดวกและความคล่องตัวในการเขียนโปรแกรมที่เกี่ยวข้องกับการประมวลผลข้อมูลประเภทข้อความ ควรรู้จักและใช้งานเมท็อดของสตริงที่สำคัญ ๆ ดังนี้</p>
-<section id="id21">
-<h3>สร้างสตริงจากตัวแปรอื่น ๆ<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<section id="id22">
+<h3>สร้างสตริงจากตัวแปรอื่น ๆ<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
 <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;My name is </span><span class="si">{}</span><span class="s2">, I&#39;m </span><span class="si">{}</span><span class="s2">&quot;</span>
@@ -1502,8 +1539,8 @@ document.write(`
 </div>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">format</span></code> ใช้เมื่อเราต้องการสร้างเทมเพลต (template) เพื่อเติมค่าต่าง ๆ ภายหลัง โดยจะใช้ <code class="docutils literal notranslate"><span class="pre">{}</span></code> เป็นสัญลักษณ์แทนช่องว่าง (placeholder) สำหรับใส่ค่าที่ต้องการ ซึ่งสามารถระบุจำนวนได้ตามต้องการ แต่เมื่อเรียกใช้ <code class="docutils literal notranslate"><span class="pre">.format</span></code> ต้องระบุจำนวนพารามิเตอร์ให้ตรงกับจำนวนช่องว่าง หากจำนวนพารามิเตอร์น้อยเกินไปจะเกิดข้อผิดพลาดชนิด <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> แต่ถ้าหากใส่พารามิเตอร์มากเกินไป ระบบจะไม่แสดงข้อผิดพลาดแต่อย่างใด</p>
 <p>นอกจากนี้ ยังมีอีกวิธีหนึ่งที่สามารถใช้เพื่อสร้างสตริงที่เรียกว่า “เอฟสตริง” (f-string) โดยการใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">f</span></code> นำหน้าสตริง เพื่อระบุว่าเป็นสตริงสำหรับการจัดรูปแบบ (formatting string) เราสามารถใส่ชื่อตัวแปรภายใน <code class="docutils literal notranslate"><span class="pre">{}</span></code> ได้โดยตรง ซึ่งระบบจะทำการแปลงค่าของตัวแปรเป็นสตริงโดยอัตโนมัติ ทำให้การเขียนโค้ดมีความกระชับและอ่านง่ายขึ้น</p>
-<section id="id22">
-<h4>ตัวอย่างการใช้งานเอฟสตริง<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h4>
+<section id="id23">
+<h4>ตัวอย่างการใช้งานเอฟสตริง<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;Thailand&#39;</span>
 <span class="n">welcome_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Welcome to </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">&#39;</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">welcome_message</span><span class="p">)</span>
@@ -1517,8 +1554,8 @@ document.write(`
 </div>
 <p>เครื่องจะแสดงผลคำว่า <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">country</span></code> เนื่องจากตัวแปร <code class="docutils literal notranslate"><span class="pre">country</span></code> ไม่ได้ถูกใช้งานจริงเพราะไม่ได้ใส่ไว้ภายใน <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
 </section>
-<section id="id23">
-<h4>ตัวอย่างการใช้งานเพิ่มเติม<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h4>
+<section id="id24">
+<h4>ตัวอย่างการใช้งานเพิ่มเติม<a class="headerlink" href="#id24" title="Link to this heading">#</a></h4>
 <p>นอกจากการใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">format</span></code> แบบพื้นฐาน เรายังสามารถระบุรายละเอียดเพิ่มเติม เช่น การกำหนดตำแหน่งตัวแปรหรือจัดรูปแบบการแสดงผลได้ เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;My name is </span><span class="si">{0}</span><span class="s2">, I&#39;m </span><span class="si">{1:.2f}</span><span class="s2"> years old&quot;</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="mf">36.756</span><span class="p">)</span>
@@ -1537,7 +1574,7 @@ document.write(`
 </section>
 </section>
 <section id="lower-upper">
-<h3>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Permalink to this heading">#</a></h3>
+<h3>เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code><a class="headerlink" href="#lower-upper" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">string.lower()</span></code> จะส่งคืนสตริงที่ประกอบด้วยอักขระตัวพิมพ์เล็กทั้งหมด โดยที่เนื้อหาของสตริงยังคงเหมือนเดิมแต่เปลี่ยนเฉพาะอักขระตัวพิมพ์ใหญ่ให้เป็นตัวพิมพ์เล็ก</p>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">string.upper()</span></code> จะส่งคืนสตริงที่ประกอบด้วยอักขระตัวพิมพ์ใหญ่ทั้งหมด โดยเปลี่ยนเฉพาะอักขระตัวพิมพ์เล็กให้เป็นตัวพิมพ์ใหญ่ แต่ยังคงเนื้อหาของสตริงเดิมเอาไว้</p>
 <p>ข้อควรระวัง เมท็อดทั้งสองจะสร้างสตริงชุดใหม่ขึ้นมา โดยสตริงเดิมจะไม่ถูกเปลี่ยนแปลง การเรียกใช้เมท็อดเหล่านี้จะส่งคืนสตริงใหม่ที่มีลักษณะตามที่ระบุไว้ข้างต้น ขณะที่สตริงต้นฉบับยังคงมีค่าเหมือนเดิม</p>
@@ -1549,7 +1586,7 @@ document.write(`
 </div>
 </section>
 <section id="islower-isupper">
-<h3>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Permalink to this heading">#</a></h3>
+<h3>เช็คว่าเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.islower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code><a class="headerlink" href="#islower-isupper" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">string.islower()</span></code> จะตรวจสอบว่าอักขระทั้งหมดในสตริงนั้นเป็นตัวพิมพ์เล็กหรือไม่ หากทุกอักขระในสตริงเป็นตัวพิมพ์เล็ก จะส่งคืนค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่หากมีอักขระใดที่ไม่ใช่ตัวพิมพ์เล็ก จะส่งคืนค่า <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>ในลักษณะเดียวกัน เมท็อด <code class="docutils literal notranslate"><span class="pre">string.isupper()</span></code> จะตรวจสอบว่าอักขระทั้งหมดในสตริงนั้นเป็นตัวพิมพ์ใหญ่หรือไม่ หากทุกอักขระเป็นตัวพิมพ์ใหญ่ จะส่งคืนค่า <code class="docutils literal notranslate"><span class="pre">True</span></code> แต่หากมีอักขระใดที่ไม่ใช่ตัวพิมพ์ใหญ่ จะส่งคืนค่า <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>เมท็อดทั้งสองนี้มีประโยชน์ในกรณีที่ต้องการตรวจสอบความถูกต้องของการใช้อักขระพิมพ์เล็กและพิมพ์ใหญ่ เช่น การตรวจสอบชื่อย่อขององค์กร (ซึ่งมักเขียนด้วยตัวพิมพ์ใหญ่) หรือการตรวจสอบว่าอักขระตัวแรกในคำภาษาอังกฤษเป็นตัวพิมพ์ใหญ่หรือไม่ ซึ่งมักใช้ในการเขียนประโยคภาษาอังกฤษ แต่ควรระวังว่าเมท็อดเหล่านี้ไม่มีประโยชน์ในการใช้งานกับภาษาที่ไม่ได้ใช้ตัวอักษรลาติน เช่น ภาษาจีน ภาษาไทย ภาษาเกาหลี และภาษารัสเซีย เนื่องจากภาษาเหล่านี้ไม่มีการแบ่งแยกอักขระพิมพ์ใหญ่และพิมพ์เล็ก ดังนั้นเมท็อดสองเมท็อดนี้จะคืนค่า <code class="docutils literal notranslate"><span class="pre">False</span></code> ทุกครั้ง เช่น</p>
@@ -1570,7 +1607,7 @@ document.write(`
 </div>
 </section>
 <section id="count-substring">
-<h3>นับสตริงย่อยในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#count-substring" title="Permalink to this heading">#</a></h3>
+<h3>นับสตริงย่อยในสตริง: <code class="docutils literal notranslate"><span class="pre">.count(substring)</span></code><a class="headerlink" href="#count-substring" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">string.count(substring)</span></code>  ใช้ในการส่งคืนจำนวนครั้งที่พบส่วนย่อย (substring) ในสตริง หากอินพุตที่ใส่เป็นอักขระตัวเดียว เมท็อดนี้จะนับจำนวนครั้งที่พบอักขระนั้นในสตริง ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">laughter</span> <span class="o">=</span> <span class="s1">&#39;hahahahaha&#39;</span>
 <span class="n">laughter</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;ha&#39;</span><span class="p">)</span> <span class="c1">#--&gt; 5</span>
@@ -1582,7 +1619,7 @@ document.write(`
 <p>การใช้เมท็อดนี้ยังมีประโยชน์เมื่อต้องการนับจำนวนการปรากฏของคำหรืออักขระในสตริงที่มีข้อมูลจำนวนมาก เช่น การนับจำนวนคำในหนังสือทั้งเล่ม หรือการนับจำนวนการปรากฏของคำในเอกสาร นอกจากนี้ ยังสามารถใช้เมท็อดนี้ในการนับจำนวนคำคร่าว ๆ ในข้อความภาษาอังกฤษ โดยการนับจำนวนช่องว่าง (<code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>) ซึ่งเป็นตัวแบ่งคำในภาษาอังกฤษได้อีกด้วย</p>
 </section>
 <section id="isdigit-isalpha-isalnum">
-<h3>ตรวจสอบประเภทของอักขระในสตริง: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Permalink to this heading">#</a></h3>
+<h3>ตรวจสอบประเภทของอักขระในสตริง: <code class="docutils literal notranslate"><span class="pre">isdigit()</span></code> <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code> <code class="docutils literal notranslate"><span class="pre">isalnum()</span></code><a class="headerlink" href="#isdigit-isalpha-isalnum" title="Link to this heading">#</a></h3>
 <p>เมท็อดเหล่านี้ใช้ในการตรวจสอบว่าสตริงประกอบด้วยอักขระประเภทใด โดยสามารถแยกเป็นประเภทได้ดังนี้:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.isdigit()</span></code>: ส่งคืนค่า True หากสตริงประกอบด้วยตัวเลขอารบิกทั้งหมด หากมีอักขระใดที่ไม่ใช่ตัวเลขอารบิกจะส่งคืนค่า False</p></li>
@@ -1610,7 +1647,7 @@ document.write(`
 <p>เมท็อดเหล่านี้มีประโยชน์ในการตรวจสอบข้อมูลต่าง ๆ เช่น รหัสนักศึกษา เลขทะเบียนรถ รหัสบัตรประชาชน หรือชื่อผู้ใช้งาน เพื่อให้มั่นใจว่าข้อมูลที่ได้รับนั้นตรงตามเงื่อนไขที่กำหนด</p>
 </section>
 <section id="replace-old-new">
-<h3>แทนสตริงย่อยด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#replace-old-new" title="Permalink to this heading">#</a></h3>
+<h3>แทนสตริงย่อยด้วยสตริงอื่น: <code class="docutils literal notranslate"><span class="pre">.replace(old,</span> <span class="pre">new)</span></code><a class="headerlink" href="#replace-old-new" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> ใช้ในการแทนที่สตริงย่อยด้วยสตริงใหม่ โดยระบุสตริงย่อยที่ต้องการค้นหา และสตริงที่ต้องการใช้แทนที่ การทำงานของเมท็อดนี้มีลักษณะคล้ายกับฟังก์ชัน “ค้นหาและแทนที่” (Find and Replace) ที่ใช้ในโปรแกรมประมวลผลคำ</p>
 <p>การเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> จะไม่เปลี่ยนแปลงสตริงต้นฉบับ แต่จะสร้างสตริงใหม่ขึ้นมาแทนที่ สตริงใหม่นี้จะต้องเก็บไว้ในตัวแปรใหม่หากต้องการใช้งานต่อ เช่นเดียวกับเมท็อด <code class="docutils literal notranslate"><span class="pre">.lower()</span></code>, <code class="docutils literal notranslate"><span class="pre">.upper()</span></code>, หรือ <code class="docutils literal notranslate"><span class="pre">.format()</span></code> ที่จะสร้างสตริงใหม่โดยไม่เปลี่ยนแปลงสตริงต้นฉบับ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ประเภทของคำมี 7 ประเภทใหญ่&#39;</span>
@@ -1623,7 +1660,7 @@ document.write(`
 </div>
 </section>
 <section id="strip">
-<h3>ลบช่องว่างหน้าหลังของสตริง: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Permalink to this heading">#</a></h3>
+<h3>ลบช่องว่างหน้าหลังของสตริง: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code><a class="headerlink" href="#strip" title="Link to this heading">#</a></h3>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.strip()</span></code> ใช้สำหรับลบช่องว่างที่อยู่ด้านหน้าและด้านหลังของสตริง ซึ่งมักใช้ในการทำความสะอาดข้อมูล เช่น ข้อมูลที่โหลดมาจากไฟล์หรือฐานข้อมูล ซึ่งอาจมีช่องว่างเกินเข้ามาทำให้การประมวลผลข้อมูลผิดพลาด</p>
 <p>เมท็อด <code class="docutils literal notranslate"><span class="pre">.strip()</span></code> จะสร้างสตริงใหม่ที่ไม่มีช่องว่างหน้าหลัง โดยไม่เปลี่ยนแปลงสตริงต้นฉบับ ดังนั้นจึงต้องเก็บสตริงใหม่นี้ไว้ในตัวแปรใหม่หากต้องการนำไปใช้งานต่อ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;  loveme123&#39;</span>
@@ -1635,8 +1672,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id24">
-<h2>สรุป<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h2>
+<section id="id25">
+<h2>สรุป<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
 <p>ตัวแปรและฟังก์ชันเป็นพื้นฐานสำคัญของการเขียนโปรแกรมที่ช่วยในการจัดการและใช้ข้อมูล ตัวแปรเป็นที่เก็บข้อมูลที่สามารถเปลี่ยนแปลงได้ตามความต้องการของโปรแกรม ช่วยให้โปรแกรมทำงานได้อย่างยืดหยุ่น ส่วนฟังก์ชันเป็นชุดของคำสั่งที่ทำงานตามที่กำหนด ช่วยลดความซับซ้อนของโค้ด และสามารถนำกลับมาใช้ซ้ำได้</p>
 <p>สตริงเป็นประเภทข้อมูลที่ใช้ในการจัดเก็บข้อความ และสามารถนำไปประมวลผลได้หลากหลายวิธี โดยในบทนี้เราได้เรียนรู้เกี่ยวกับการใช้งานสตริงในภาษาไพทอน รวมถึงเมท็อดที่ใช้ในการจัดการข้อมูลสตริง เช่น การเปลี่ยนเป็นตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก การตรวจสอบประเภทของอักขระในสตริง การนับสตริงย่อยในสตริง การแทนสตริงย่อยด้วยสตริงอื่น การลบช่องว่างหน้าหลังของสตริง และการวนซ้ำสตริงด้วยวงวน <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
 </section>
@@ -1667,11 +1704,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../2-basics.html"
@@ -1691,10 +1727,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1702,6 +1735,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1712,60 +1746,60 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable">ตัวแปร (variable)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-type-data-type">ชนิดของตัวแปร (variable type) และข้อมูล (data type)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#int-float"><code class="docutils literal notranslate"><span class="pre">int</span></code> และ <code class="docutils literal notranslate"><span class="pre">float</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">สตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">บูลีน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวดำเนินการให้ค่าใหม่</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">สตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">บูลีน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ตัวดำเนินการให้ค่าใหม่</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function">ฟังก์ชัน (function)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การประกาศฟังก์ชันแบบมีอาร์กิวเมนต์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-call">การเรียกฟังก์ชัน (function call)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ฟังก์ชันที่มีมาให้อยู่แล้ว หรือฟังก์ชันแบบบิวท์อิน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print"><code class="docutils literal notranslate"><span class="pre">print</span></code>: แสดงผลของจากการตีความนิพจน์</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">ข้อควรระวัง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ข้อควรระวัง</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input"><code class="docutils literal notranslate"><span class="pre">input</span></code>: รับข้อมูลสตริงจากผู้ใช้</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#str-int-float"><code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, และ <code class="docutils literal notranslate"><span class="pre">float</span></code>: แปลงชนิดของข้อมูล</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type"><code class="docutils literal notranslate"><span class="pre">type</span></code>: ตรวจสอบชนิดของข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ตัวอย่างที่ 1: ตรวจสอบชนิดของข้อมูลจำนวนจริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">ตัวอย่างที่ 2: ตรวจสอบชนิดของข้อมูลสตริง</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">โมดูล (module)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การนำเข้าโมดูล</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การนำเข้าโมดูล</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import">ข้อผิดพลาดที่อาจเกิดขึ้นจากการไม่ import โมดูล</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การใช้งานตัวแปรภายในวงวนฟอร์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การอัปเดตค่าตัวแปรภายในวงวนฟอร์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">ตัวอย่าง และรูปแบบการเขียนโปรแกรมที่พบเห็นได้บ่อย</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">การใช้งานตัวแปรภายในวงวนฟอร์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การอัปเดตค่าตัวแปรภายในวงวนฟอร์</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">สตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">การสร้างสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">สตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การสร้างสตริง</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-quote">1. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศเดี่ยว (single quote)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#double-quote">2. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศคู่ (double quote)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-quote">3. การคร่อมข้อความด้วยเครื่องหมายอัญประกาศสามตัว (triple quote)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การหั่นสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการประยุกต์ใช้การวนซ้ำ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">เข้าถึงตัวอักษรที่อยู่ในสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">การหั่นสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวดำเนินการสตริง และฟังก์ชันแบบบิวท์อินที่เกี่ยวกับสตริง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">การวนซ้ำบนสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ตัวอย่างการประยุกต์ใช้การวนซ้ำ</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">เมท็อดของสตริง</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">สร้างสตริงจากตัวแปรอื่น ๆ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานเอฟสตริง</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานเพิ่มเติม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">เมท็อดของสตริง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">สร้างสตริงจากตัวแปรอื่น ๆ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานเอฟสตริง</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ตัวอย่างการใช้งานเพิ่มเติม</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lower-upper">เปลี่ยนเป็นตัวเล็กหรือตัวใหญ่: <code class="docutils literal notranslate"><span class="pre">.lower()</span></code> และ <code class="docutils literal notranslate"><span class="pre">.upper()</span></code></a></li>
@@ -1776,7 +1810,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strip">ลบช่องว่างหน้าหลังของสตริง: <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">สรุป</a></li>
 </ul>
   </nav></div>
 
@@ -1798,6 +1832,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1824,8 +1859,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

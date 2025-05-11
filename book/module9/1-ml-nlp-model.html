@@ -1,67 +1,63 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>บทที่ 9 โมเดลการประมวลผลภาษาธรรมชาติ &#8212; Programming for NLP</title>
+    <title>บทที่ 9 โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป &#8212; Programming for NLP</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module9/1-ml-nlp-model';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -414,7 +441,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>บทที่ 9 </br> โมเดลการประมวลผลภาษาธรรมชาติ</h1>
+    <h1>บทที่ 9 </br> โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -424,18 +451,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การติดป้ายกำกับชนิดของคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การจำแนกชนิดของคำ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างโมเดลประมวลผลภาษาธรรมชาติโดยอาศัยการเรียนรู้ของเครื่อง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1) โมเดลที่ทำงานได้เฉพาะเจาะจง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2) โมเดลที่ทำงานได้หลากหลาย</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การรู้จำเอนทิตี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การติดป้ายกำกับชนิดของคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การจำแนกชนิดของคำ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การรู้จำเอนทิตี</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการรู้จำเอนทิตี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">โมเดลหัวเรื่อง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">โมเดลหัวเรื่อง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -445,15 +477,31 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br">
-<h1>บทที่ 9 </br> โมเดลการประมวลผลภาษาธรรมชาติ<a class="headerlink" href="#br" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>บทที่ 9 </br> โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>การประมวลผลภาษาธรรมชาติ คือ เทคนิควิธีที่ใช้ในการประมวลผลและทำความเข้าใจข้อมูลตัวอักษร โดยอาศัยโมเดลทางภาษา โมเดลหรือโมเดลที่เราพูดถึงนี้หมายถึง การเขียนโปรแกรมที่จำลองการทำความเข้าใจภาษาในด้านต่าง ๆ ซึ่งการจำลองอาจจะไม่ได้สอดคล้องกับวิธีที่มนุษย์ทำความเข้าใจภาษา แต่ว่าโมเดลจำลองพฤติกรรมการประมวลผลภาษาได้ดีพอ ที่จะนำไปใช้ในการทำงานที่เกี่ยวข้องกับภาษาธรรมชาติได้
 งานที่สามารถใช้โมเดลการประมวลผลภาษาธรรมชาติได้อย่างมีประสิทธิภาพ และพบเห็นได้บ่อย ๆ ได้แก่ การติดป้ายกำกับชนิดของคำ (part-of-speech tagging) การตรวจจับเอนติตี้ (named-entity recognition) การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) โมเดลหัวเรื่อง (topic model) การแปลด้วยเครื่อง (machine translation) ซึ่งทั้งหมดนี้คือต่างใช้การเรียนรู้ของเครื่อง (machine learning) ในการสร้างโมเดลสำหรับงานเหล่านี้ขึ้นมา กล่าวคือเราเขียนโปรแกรมที่เรียนรู้การทำงานเหล่านี้โดยการหาแพทเทิร์นจากชุดข้อมูลที่เหมาะสม เราไม่ได้ตั้งโปรแกรมให้ทำงานตามกฎของภาษาศาสตร์โดยตรง</p>
-<p>ในปัจจุบันเราสามารถดาวน์โหลดโมเดลและนำมาประยุกต์ใช้ได้ทันทีโดยที่ต้องไม่ทำการสร้างโมเดลใหม่ตั้งแต่ต้น แต่ว่าอาจจะมีโมเดลสำหรับบางงานและบางภาษาเท่านั้น และโมเดลของแต่ละภาษามีประสิทธิภาพ และความแม่นยำแตกต่างกันไป ในบทนี้เราจะเรียนรู้วิธีการใช้ไลบรารีเพื่อดาวน์โหลดและประยุกต์ใช้โมเดลในการวิเคราะห์ข้อมูลภาษาโดยอัตโนมัติ</p>
-<section id="id1">
-<h2>การติดป้ายกำกับชนิดของคำ<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>ในปัจจุบันเราสามารถดาวน์โหลดโมเดลและนำมาประยุกต์ใช้ได้ทันทีโดยที่ต้องไม่ทำการสร้างโมเดลใหม่ตั้งแต่ต้น โมเดลเหล่านี้เราเรียกว่า โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป (off-the-shelf) แต่ว่าอาจจะมีโมเดลสำหรับบางงานและบางภาษาเท่านั้น และโมเดลของแต่ละภาษามีประสิทธิภาพ และความแม่นยำแตกต่างกันไป ในบทนี้เราจะเรียนรู้วิธีการใช้ไลบรารีเพื่อดาวน์โหลดและประยุกต์ใช้โมเดลในการวิเคราะห์ข้อมูลภาษาโดยอัตโนมัติ</p>
+<section id="id2">
+<h2>การสร้างโมเดลประมวลผลภาษาธรรมชาติโดยอาศัยการเรียนรู้ของเครื่อง<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>โมเดลประมวลผลภาษาธรรมชาติปัจจุบันสามารถแบ่งออกมาได้เป็นสองประเภทใหญ่ ๆ ได้แก่</p>
+<section id="id3">
+<h3>1) โมเดลที่ทำงานได้เฉพาะเจาะจง<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>โมเดลประเภทนี้เป็นโมเดลที่สร้างขึ้นมาเพื่อทำงานได้เพียงแค่หนึ่งอย่าง เช่น โมเดลติดป้ายกำกับชนิดของคำสามารถประมวลผลข้อความเพื่อวิเคราะห์ชนิดคำของคำแต่ละคำในข้อความได้เพียงอย่างเดียวเท่านั้น ไม่สามารถทำงานประเภทอื่น ๆ ได้  อีกหนึ่งตัวอย่างโมเดลที่ทำงานได้เฉพาะเจาะจงได้เห็นไปแล้วในบทที่แล้วคือ โมเดลตัดคำภาษาไทย ซึ่งสามารถทำได้เพียงหนึ่งอย่างเท่านั้น หากเราต้องการติดป้ายกำกับชนิดของคำ เราจำเป็นต้องใช้โมเดลตัดคำภาษาไทยเพื่อแปลงข้อความให้เป็นลิสต์ของคำให้เรียบร้อยก่อนที่นำไปป้อนให้โมเดลติดป้ายกำกับชนิดของคำต่อไป เพราะฉะนั้นจึงจำเป็นต้องใช้โมเดลสองโมเดล แต่ละโมเดลที่หน้าที่ต่างกันตามแต่การใช้งาน</p>
+<p>โมเดลประเภทนี้เป็นโมเดลที่มักจะอาศัยการเรียนรู้แบบมีผู้สอน (supervised learning) กล่าวคือต้องมีการสร้างชุดข้อมูลเพื่อฝึกฝนโมเดลให้ทำงานที่ต้องการ เช่น หากต้องการสร้างโมเดลติดป้ายกำกับชนิดของคำ ต้องสร้างชุดข้อมูลที่มีตัวอย่างการติดป้ายกำกับชนิดของคำอย่างถูกต้องขึ้นมาก่อน เพื่อให้โมเดลได้เรียนรู้การทำงานนี้จากชุดข้อมูลชุดนี้ โมเดลการเรียนรู้ของเครื่องประเภทนี้มีความสามารถในการจับหาแพทเทิร์นในข้อมูลภาษาที่อยู่ในชุดข้อมูล แล้วกลั่นเก็บออกมาในรูปของตัวเลขซึ่งเรียกว่าพารามิเตอร์ของโมเดล (model parameter) กระบวนการนี้เรียกว่ากระบวนการฝึกโมเดล (model training) จากชุดฝึกฝน (training set) วิธีการทำงานและฝึกฝนโมเดลมักจะเริ่มจากการแปลงภาษาให้เป็นตัวเลขที่มีประโยชน์ในการคำนวณและวิเคราะห์ภาษา แต่ละโมเดลจะมีวิธีการแปลงภาษาเป็นตัวเลขที่ต่างกันไป ตัวอย่างเช่น โมเดลการถดถอยโลจิสติก (logistic regression model) อาจมีการแปลงข้อมูลที่ต้องการวิเคราะห์ให้เป็นตัวเลข โดยการนับความถี่ของคำแต่ละคำที่ปรากฏอยู่ในข้อความ จากนั้นนำความถี่ (ซึ่งเป็นข้อมูลที่เป็นตัวเลขล้วน ๆ ไม่มีสตริงเข้ามาเป็นส่วนเกี่ยวข้องอีกต่อไป) เข้าสู่สมการที่สามารถพยากรณ์ได้ว่าคำแต่คำจัดเป็นคำประเภทใด รายละเอียดสมการของโมเดลที่ใช้ในการประมวลผลภาษาธรรมชาตินั้นอยู่เกินขอบเขตของหนังสือเล่มนี้</p>
+<p>การพัฒนาโมเดลการประมวลภาษาธรรมชาติมักจะอาศัยการประเมินความแม่นยำของโมเดล เพื่อจะได้ทราบว่าโมเดลใดมีความแม่นยำสูงสุดในงานใดบ้าง  ทำให้ง่ายต่อการพัฒนาและเลือกใช้โมเดลได้อย่างเหมาะสม ซึ่งมักจะแยกประเมินความแม่นยำของแต่ละงานไป โมเดลที่แม่นยำที่สุดของแต่ละงานมักจะถูกเรียกว่าเป็นโมเดลที่ทันสมัยที่สุด (State-of-the-art model หรือ SOTA) เรามักจะไม่เรียกว่า “โมเดลที่ดีที่สุด” เนื่องจากโมเดลเหล่านี้เป็นเพียงโมเดลที่แม่นยำที่สุดเท่าที่ถูกค้นพบ พัฒนา และทดสอบในช่วงขณะที่กำลังอ้างถึง เพื่อหลีกเลี่ยงการอ้างว่าเป็นโมเดลที่ดีที่สุดเท่าที่จะพึงมีได้ โมเดลที่ทันสมัยที่สุดของแต่ละงานการประมวลผลภาษาธรรมชาติโดยทั่วไปแล้วมักจะเป็นโมเดลที่ทำงานได้เฉพาะเจาะจง และอาศัยการเรียนรู้แบบมีผู้สอน เนื่องจากเป็นการพัฒนาเพื่อมุ่งเน้นเพียงจุดประสงค์เดียว และโมเดลเหล่านี้มักจะมีความสามารถในการเรียนรู้เรื่องที่เจาะจงจากข้อมูลปริมาณมากได้อย่างมีประสิทธิภาพ กล่าวคือพยายามตรวจจับหาแพทเทิร์นที่มีประโยชน์ให้ได้มากที่สุดตามแต่ปริมาณข้อมูลที่อยู่ในชุดฝึกฝน
+เนื้อหาในบทนี้จะเน้นโมเดลประเภทนี้สำหรับการประมวลภาษาไทย โมเดลบางประเภทที่แนะนำในบทนี้อาจจะไม่ใช่โมเดลที่ทันสมัยที่สุด หากแต่เป็นโมเดลสำเร็จรูปที่สามารถนำไปใช้งานได้ง่าย และความแม่นยำไม่ได้ห่างจากโมเดลที่ทันสมัยที่สุดมากนัก ทั้งนี้ผู้เขียนโปรแกรมควรทราบว่าโมเดลที่นำมาใช้โดยผ่านไลบรารีนั้นมีความแม่นยำเพียงใด หรือมีการประเมินผลโดยอิงชุดข้อมูลที่ได้รับการยอมรับว่ามีคุณภาพดีหรือไม่</p>
+</section>
+<section id="id4">
+<h3>2) โมเดลที่ทำงานได้หลากหลาย<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>ปัจจุบันนี้โมเดลภาษาขนาดใหญ่ (Large Language Model) เช่น GPT4 และ Gemini ได้เข้ามีบทบาทอย่างมากในการประมวลผลภาษาธรรมชาติ เนื่องจากเป็นโมเดลที่ถูกพัฒนาขึ้นมาเพื่อให้ทำงานได้อย่างหลากหลาย และได้ถูกฝึกฝนบนชุดข้อมูลตัวอย่างงานการประมวลภาษาธรรมชาติโดยเฉพาะอีกด้วย เช่น การติดป้ายกำกับชนิดของคำ การตรวจจับเอนทิตี หรือการแปล ส่งผลให้เป็นโมเดลสามารถประมวลผลภาษาธรรมชาติได้อย่างแม่นยำในระดับหนึ่ง และเป็นโมเดลที่ใช้งานสะดวก เพราะสามารถใช้โมเดลเดียวกันกับหลาย ๆ งานได้ เพียงแค่ปรับคำสั่งที่ป้อนให้กับโมเดล ทว่าโมเดลภาษาขนาดใหญ่มักจะไม่แม่นยำเท่าโมเดลแบบเฉพาะเจาะจง เนื่องจากโมเดลภาษาขนาดใหญ่ถูกพัฒนาขึ้นให้ใช้ได้โดยกว้าง ผู้พัฒนาไม่ได้ตั้งใจให้โมเดลแม่นสำหรับงานการประมวลผลภาษาธรรมชาติอย่างใดอย่างหนึ่งเท่านั้น
+โมเดลภาษาขนาดใหญ่ได้เปรียบโมเดลแบบเฉพาะเจาะจงตรงที่โมเดลภาษาขนาดใหญ่ไม่จำเป็นต้องใช้ชุดข้อมูลในการฝึกฝนงานใดงานหนึ่งโดยตรง ดังนั้นหากมีงานที่การสร้างชุดข้อมูลอาจจะใช้เวลานานเกินไป ตัวอย่างข้อมูลเข้าถึงได้ยาก หรือไม่สามารถหาผู้เชี่ยวชาญได้เพียงพอต่อการสร้างชุดข้อมูลที่มีขนาดใหญ่พอที่จะนำไปฝึกโมเดลได้ เช่น หากต้องการสร้างชุดข้อมูลการวิเคราะห์อารมณ์ของผู้ป่วยโรคซึมเศร้าจากบทสนทนากับจิตแพทย์ ข้อมูลมักจะเป็นความลับของผู้ป่วย เข้าถึงได้ยาก รวมถึงอาจจะหาเวลาจากจิตแพทย์ที่ยินดีมาช่วยกำกับข้อมูลได้ยาก ทำให้การสร้างชุดข้อมูลชุดนี้ต้องใช้ทรัพยากรมาก และอาจจะใช้เวลานานในการขออนุญาตเข้าถึงข้อมูลของผู้ป่วย ในกรณีนี้โมเดลภาษาขนาดใหญ่นับว่าเป็นทางเลือกที่ดีที่สุด เพราะความสามารถภาษาของโมเดลภาษาขนาดใหญ่สามารถปรับใช้ได้กับข้อมูลหลากหลายบริบท ทั้งนี้การนำไปใช้ต้องคำนึงถึงความแม่นยำที่สามารถคาดหวังได้ และจึงอาจจะต้องมีการสร้างชุดข้อมูลปริมาณหนึ่งเพื่อใช้ประเมินความแม่นยำของโมเดล ก่อนที่จะนำโมเดลไปใช้จริง ในบทต่อไปจะพูดถึงวิธีการปรับใช้โมเดลภาษาขนาดใหญ่กับงานการประมวลผลภาษาธรรมชาติที่อาจจะไม่มีโมเดลแบบเฉพาะเจาะจง</p>
+</section>
+</section>
+<section id="id5">
+<h2>การติดป้ายกำกับชนิดของคำ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>ป้ายกำกับชนิดของคำ (part-of-speech tag) ในเชิงภาษาศาสตร์ถูกสร้างขึ้นมาเป็นส่วนหนึ่งของกฎไวยากรณ์ของภาษาที่กำหนดว่าคำชนิดใดสามารถมีความสัมพันธ์กับคำชนิดใด ในลักษณะไหนได้บ้าง  นอกจากนั้นแล้วยังมีบทบาทสำคัญในการทำความเข้าใจความหมายและโครงสร้างของประโยค
 เนื่องจากช่วยให้เรารู้ว่าแต่ละคำในประโยคทำหน้าที่อะไร  เช่น คำนาม (noun) มักจะทำหน้าที่เป็นประธานของประโยค หรือเป็นส่วนเติมเต็มของกริยา หรือ คุณศัพท์ (adjective) มักจะทำหน้าที่เป็นตัวขยายความหมายของคำนาม เป็นต้น</p>
 <aside class="margin sidebar">
@@ -465,9 +513,9 @@ document.write(`
 <p class="sidebar-title">คำศัพท์</p>
 <p>การสกัดข้อมูล (information extraction) การสกัดข้อมูลเฉพาะที่ต้องการจากข้อมูลที่ไม่มีโครงสร้าง เช่น ข้อความ ข่าว</p>
 </aside>
-<section id="id2">
-<h3>การจำแนกชนิดของคำ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>ทฤษฎีการจำแนกชนิดของคำมีอยู่หลากหลายทฤษฎี แต่ละทฤษฎีต่างก็จำแนกชนิดของคำในจำนวนแตกต่างกัน ทั้งนี้นักเรียนไทยมักจะคุ้นเคยกับการจำแนกชนิดของคำตามหลักภาษาไทยของพระยาอุปกิตศิลปสารซึ่งจำแนกชนิดของคำเป็น 7 ชนิด ได้แก่ คำนาม คำสรรพนาม คำวิเศษณ์ คำกริยา คำบุพบท คำสันธาน และคำอุทาน อย่างไรก็ตามในการประมวลผลภาษาธรรมชาติ เรามักใช้ทฤษฎีของ ชุดป้ายกำกับชนิดของคำสากล (Universal Part-of-speech Tagset) <span id="id3">[<a class="reference internal" href="#id29" title="Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12), 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf.">Petrov <em>et al.</em>, 2012</a>]</span>      ทฤษฎีนี้กำหนดชนิดของคำออกเป็น 17 ชนิด ซึ่งสามารถจัดออกเป็น 3 กลุ่มใหญ่ ได้แก่</p>
+<section id="id6">
+<h3>การจำแนกชนิดของคำ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>ทฤษฎีการจำแนกชนิดของคำมีอยู่หลากหลายทฤษฎี แต่ละทฤษฎีต่างก็จำแนกชนิดของคำในจำนวนแตกต่างกัน ทั้งนี้นักเรียนไทยมักจะคุ้นเคยกับการจำแนกชนิดของคำตามหลักภาษาไทยของพระยาอุปกิตศิลปสารซึ่งจำแนกชนิดของคำเป็น 7 ชนิด ได้แก่ คำนาม คำสรรพนาม คำวิเศษณ์ คำกริยา คำบุพบท คำสันธาน และคำอุทาน อย่างไรก็ตามในการประมวลผลภาษาธรรมชาติ เรามักใช้ทฤษฎีของ ชุดป้ายกำกับชนิดของคำสากล (Universal Part-of-speech Tagset) <span id="id7">[<a class="reference internal" href="#id35" title="Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12), 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf.">Petrov <em>et al.</em>, 2012</a>]</span>      ทฤษฎีนี้กำหนดชนิดของคำออกเป็น 17 ชนิด ซึ่งสามารถจัดออกเป็น 3 กลุ่มใหญ่ ได้แก่</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>ชุดป้ายกำกับชนิดของคำสากล (Universal Part-of-speech Tagset) ชุดป้ายกำกับที่ถูกพัฒนาขึ้นเพื่อรองรับการกำกับชนิดคำต่างภาษาให้เป็นไปในรูปแบบเดียวกัน</p>
@@ -506,8 +554,8 @@ document.write(`
 <p>ชุดป้ายกำกับชนิดของคำสากลเป็นระบบการจำแนกชนิดของคำที่มีมาตรฐานเดียวกันทุกภาษา เพื่อให้การทำงานของโมเดลภาษาต่าง ๆ สามารถทำงานร่วมกันได้โดยสะดวกต่อการใช้โมเดลที่มีการใช้การถ่ายโอนข้ามภาษา (cross-lingual transfer) การใช้ชุดป้ายกำกับชนิดของคำสากล จึงเป็นเครื่องมือที่สำคัญและได้รับความนิยมในการพัฒนาระบบประมวลผลภาษาธรรมชาติที่มีประสิทธิภาพ</p>
 </section>
 </section>
-<section id="id4">
-<h2>การรู้จำเอนทิตี<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h2>การรู้จำเอนทิตี<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>เอนทิตี (entity) ในเชิงทฤษฎี คือ สิ่งที่มีตัวตนจริงและอิสระไม่เกี่ยวพันกับสิ่งอื่น ๆ ซึ่งเรามักจะหมายถึงบุคคล องค์กร บริษัท หรือสถานที่ ดังนั้นเอนทิตีที่มีชื่อเรียก (named entity) แปลตรงตัวแล้วจะหมายถึงบุคคล องค์กร บริษัท หรือสถานที่ที่มีการตั้งชื่อเรียก
 แต่ในบริบทของการประมวลผลภาษาธรรมชาติ การรู้จำเอนทิตี (Named-Entity Recognition หรือ NER) หมายความกว้างกว่านั้น การรู้จำเอนทิตี หมายถึงการตรวจจับชื่อของบุคคล ชื่อขององค์กร ชื่อของสถานที่ ชื่อของเหตุการณ์ วันเดือนปี หรือชื่อของสิ่งของอื่น ๆ ที่มีความสำคัญออกมาจากข้อความ และในทางปฏิบัติแล้วการรู้จำเอนทิตีไม่ได้จำกัดเพียงแต่เอนทิตีอย่างเดียว แต่หมายความรวมถึงการตรวจจับส่วนอื่นของข้อความที่มีความสำคัญ​และอาจจะไม่ได้มีตัวตนอิสระตามความหมายของเอนทิตี เช่น</p>
 <aside class="margin sidebar">
@@ -530,8 +578,8 @@ document.write(`
 <p>การรู้จำเอนทิตีมักจะใช้เทคนิคการประมวลผลภาษาธรรมชาติเช่นเดียวกับการจำแนกชนิดของคำ โดยใช้โมเดลการเรียนรู้ของเครื่องที่เรียนรู้จากชุดข้อมูลที่มีเอนทิตีที่ถูกติดป้ายกำกับไว้ และใช้เอนทิตีที่ติดป้ายกำกับเหล่านั้นในการสร้างโมเดลที่สามารถรู้จำเอนทิตีใหม่ได้</p>
 </section>
 <section id="spacy">
-<h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการรู้จำเอนทิตี<a class="headerlink" href="#spacy" title="Permalink to this heading">#</a></h2>
-<p>การติดป้ายชนิดของคำ (part-of-speech tagging) และการรู้จำเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีโมเดลการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำโมเดลไปใช้จริง  <span id="id5">[<a class="reference internal" href="#id28" title="Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.">Honnibal and Montani, 2017</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี แต่ว่า spacy ยังไม่มีโมเดลในการประมวลผลภาษาไทย</p>
+<h2>ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการรู้จำเอนทิตี<a class="headerlink" href="#spacy" title="Link to this heading">#</a></h2>
+<p>การติดป้ายชนิดของคำ (part-of-speech tagging) และการรู้จำเอนทิตีอัตโนมัติจำเป็นต้องใช้โมเดลแบบการเรียนรู้ของเครื่องในการแยก เพราะฉะนั้นไลบรารีที่ใช้จะต้องมีโมเดลเหล่านี้เตรียมไว้ให้พร้อมใช้ ไลบรารี spacy เป็นไลบรารีที่รองรับการประมวลผลภาษาธรรมชาติหลากหลายภาษา รวมถึงมีโมเดลการประมวลผลภาษาธรรมชาติหลากหลายขนาดให้เลือกใช้ตามความเหมาะสม และตามข้อจำกัดในการนำโมเดลไปใช้จริง  <span id="id9">[<a class="reference internal" href="#id34" title="Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.">Honnibal and Montani, 2017</a>]</span> ปัจจุบัน (2024) spacy รองรับการติดป้ายชนิดของคำสำหรับภาษาหลายภาษา เช่น ภาษาอังกฤษ ภาษาสเปน ภาษาฝรั่งเศส ภาษาจีน ภาษาญี่ปุ่น ภาษาเกาหลี แต่ว่า spacy ยังไม่มีโมเดลในการประมวลผลภาษาไทย</p>
 <p>ขั้นแรกต้องหาชื่อชุดโมเดลที่เราต้องการใช้ รายชื่อชุดโมเดลอยู่บนเว็บไซต์ของ spacy ซึ่งมีเอกสารประกอบการใช้งานที่เป็นปัจจุบันอยู่ โมเดลเหล่านี้ประกอบไปด้วยโมเดลย่อยหลาย ๆ โมเดลด้วยกัน เราสามารถตรวจสอบดูบนเว็บไซต์ได้ว่าโมเดลแต่ละชุดประกอบด้วยโมเดลอะไรบ้าง  ตัวอย่างเช่น สำหรับภาษาจีน มีชุดโมเดลที่มีโมเดลการแยกชนิดของคำได้อยู่สามโมเดลได้แก่ <code class="docutils literal notranslate"><span class="pre">zh_core_web_sm</span></code> (ขนาดเล็ก) <code class="docutils literal notranslate"><span class="pre">zh_core_web_md</span></code> (ขนาดกลาง) และ  <code class="docutils literal notranslate"><span class="pre">zh_core_web_lg</span></code> (ขนาดใหญ่) ทั้งสามชุดในเวอร์ชันปี 2024 ประกอบไปด้วย 5 โมเดลย่อย ได้แก่ โมเดลการตัดคำ โมเดลการตัดประโยค โมเดลการวิเคราะห์โครงสร้างประโยค โมเดลการติดป้ายชนิดของคำ โมเดลการรู้จำเอนทิตี</p>
 <p>หากเรายังไม่ได้ติดตั้งไลบรารี spacy เราสามารถติดตั้งโดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacy</span></code> หลังจากนั้นเราสามารถดาวน์โหลดและติดตั้งโมเดลที่ต้องการได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spacy</span> <span class="pre">download</span></code> ตามด้วยชื่อโมเดลที่ต้องการดาวน์โหลดและติดตั้ง เช่น</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>zh_core_web_md
@@ -572,9 +620,9 @@ document.write(`
 </div>
 <p>จากข้อความตัวอย่างที่ป้อนเข้าไป ตัวประมวลผลรู้จำชื่อเอนทิตีที่เป็นบุคคลทั้งหมดสองชื่อ ได้แก่  张伟 (จางเหว่ย) และ 李娜 (หลีน่า) และเอนทิตีแบบภูมิรัฐศาสตร์ (GPE ซึ่งย่อมาจาก geopolitical entity) หนึ่งชื่อ 上海 (เมืองเซี่ยงไฮ้)</p>
 </section>
-<section id="sentiment-analysis">
-<h2>การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h2>
-<p>การวิเคราะห์อารมณ์ความรู้สึก คือ กระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านการประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ที่ใช้งานระบบ หรือผู้บริโภคที่มีต่อผลิตภัณฑ์ บริการ รวมถึงการประเมินความคิดเห็นของบุคคลทั่วไปที่มีต่อเหตุการณ์ต่าง ๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง การวิเคราะห์อารมณ์ความรู้สึกนับว่าเป็นการประยุกต์ใช้การประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดชนิดหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
+<section id="id10">
+<h2>การวิเคราะห์อารมณ์ความรู้สึก<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) คือ กระบวนการในการตรวจจับและจำแนกอารมณ์หรือความรู้สึกที่แสดงออกมาในข้อความ โดยใช้เทคนิคทางด้านการประมวลผลภาษาธรรมชาติ และการเรียนรู้ของเครื่อง การวิเคราะห์อารมณ์ความรู้สึกมักถูกใช้เพื่อประเมินความคิดเห็นของผู้ที่ใช้งานระบบ หรือผู้บริโภคที่มีต่อผลิตภัณฑ์ บริการ รวมถึงการประเมินความคิดเห็นของบุคคลทั่วไปที่มีต่อเหตุการณ์ต่าง ๆ โดยสามารถจำแนกออกเป็นอารมณ์เชิงบวก เชิงลบ หรือเป็นกลาง การวิเคราะห์อารมณ์ความรู้สึกนับว่าเป็นการประยุกต์ใช้การประมวลผลภาษาธรรมชาติในโลกของวิทยาการข้อมูลที่เห็นเด่นชัด และเป็นที่นิยมที่สุดชนิดหนึ่งในปัจจุบัน ตัวอย่างของการวิเคราะห์อารมณ์ความรู้สึกมีอยู่หลากหลายแบบ เช่น</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) การวิเคราะห์และจัดกลุ่มอารมณ์ความรู้สึกที่ปรากฏในข้อความหรือข้อมูล</p>
@@ -584,10 +632,10 @@ document.write(`
 <li><p>การประเมินความพึงพอใจของลูกค้าในบทวิจารณ์ออนไลน์:
 การวิเคราะห์อารมณ์ความรู้สึกสามารถแยกแยะได้ว่าอาจจะมีความรู้สึกเชิงบวกต่อผลิตภัณฑ์ แต่มีความรู้สึกเชิงลบต่อการบริการ ร้านอาหารสามารถใช้ข้อมูลนี้เพื่อปรับปรุงการบริการและรักษาคุณภาพอาหารให้ดีอยู่เสมอ</p></li>
 <li><p>การวิเคราะห์อารมณ์ความรู้สึกที่อยู่เอกสารทางการเงิน ทุก ๆ ปีบริษัทที่มีการซื้อขายหุ้นอยู่ในตลาดหลักทรัพย์ จะต้องเผยแพร่เอกสารรายงานผลประกอบการที่จะต้องพูดถึงบริษัทในหลากหลายด้าน เช่น เรื่องผลกำไรขาดทุน ความเสี่ยงในการประกอบธุรกิจ การควบรวมกับบริษัทอื่น การพัฒนากำลังคน หรือการเปลี่ยนแปลงในโครงสร้างบริษัท นักวิเคราะห์สามารถวิเคราะห์อารมณ์ความรู้สึกในเอกสารรายงานผลประกอบการ เพื่อให้ได้ดัชนีในการชี้วัดว่าผู้เขียนมีความคิดเห็นในด้านบวก ลบ หรือกลางในด้านใดบ้างในปีที่ผ่านมา ซึ่งมีการศึกษามาว่าผลการวิเคราะห์ในลักษณะดังกล่าวมีความสัมพันธ์ร่วมกันกับผลตอบแทนเกินปกติ (abnormal return) ดังนั้นการวิเคราะห์อารมณ์ความรู้สึกจึงสามารถช่วยให้นักลงทุนหรือผู้บริหารบริษัทมีดัชนีชี้วัดเพิ่มอีกตัวหนึ่งที่ช่วยในการตัดสินใจลงทุนในสินทรัพย์ต่าง ๆ ได้อย่างมีประสิทธิภาพมากขึ้น</p></li>
-<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id6">[<a class="reference internal" href="#id30" title="Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In Proceedings of the International AAAI Conference on Web and Social Media, volume 15, 703–713. 2021.">Tachaiya <em>et al.</em>, 2021</a>]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่าง ๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
+<li><p>การติดตามความคิดเห็นเรื่องการเมืองบนสื่อออนไลน์: การศึกษาเรื่องวิเคราะห์อารมณ์ความรู้สึกที่อยู่บนสื่อออนไลน์ เช่น เว็บไซต์ reddit สามารถช่วยให้นักวิเคราะห์เข้าใจความคิดเห็นของประชาชนต่อเรื่องการเมือง เนื่องจากเหตุการณ์ทางการเมืองต่าง ๆ ส่งผลต่ออารมณ์ความรู้สึกที่ปรากฏอยู่ในสื่อเหล่านี้ <span id="id11">[<a class="reference internal" href="#id36" title="Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In Proceedings of the International AAAI Conference on Web and Social Media, volume 15, 703–713. 2021.">Tachaiya <em>et al.</em>, 2021</a>]</span> การวิเคราะห์อารมณ์ความรู้สึกบนฟอรัมออนไลน์มีประโยชน์อย่างมากในการทำความเข้าใจและตอบสนองต่อความคิดเห็นของประชาชนได้อย่างมีประสิทธิภาพ โดยช่วยให้เราสามารถติดตามการเปลี่ยนแปลงของอารมณ์ความรู้สึกในช่วงเวลาต่าง ๆ เมื่อเกิดเหตุการณ์สำคัญ เช่น การถอดถอนประธานาธิบดี ซึ่งจะเป็นประโยชน์ในการระบุแนวโน้มทางการเมืองและสังคม นอกจากนี้ ยังสามารถช่วยในการวิเคราะห์แนวโน้มการแบ่งขั้วทางการเมืองหรือความรู้สึกที่มีต่อประเด็นสำคัญในสังคมอีกด้วย</p></li>
 </ul>
-<p>การวิเคราะห์อารมณ์ความรู้สึกในเชิงปฏิบัติ คือ การแยกประเภทของข้อความว่าเป็นข้อความที่แสดงความเห็นในด้านบวก ด้านลบ หรือเป็นกลาง เราสามารถคิดว่าตัววิเคราะห์อารมณ์ความรู้สึก (sentiment analyzer) เป็นฟังก์ชันที่รับสตริงข้อความ และคืนค่าเป็นป้ายกำกับ (label) ที่บ่งบอกว่าข้อความนั้นเป็นเชิงบวก ลบ หรือเป็นกลาง โดยใช้เทคนิคการเรียนรู้ของเครื่อง ซึ่งสามารถทำได้ด้วยการใช้ชุดข้อมูลที่มีป้ายกำกับความรู้สึกเช่นข้อความที่มีป้ายกำกับว่าเป็นเชิงบวก ลบ หรือเป็นกลาง ในการสร้างโมเดลการเรียนรู้ของเครื่อง โดยใช้ข้อมูลเหล่านี้ในการเรียนรู้ว่าคุณลักษณะของข้อความที่เป็นเชิงบวก ลบ หรือกลาง คืออะไร และใช้คุณลักษณะเหล่านั้นในการจำแนกประเภทของข้อความใหม่ที่ยังไม่เคยเห็นมาก่อน หนึ่งในชุดข้อมูลที่ได้รับความนิยมมากในการนำมาสร้างตัววิเคราะห์อารมณ์ความรู้สึก คือ Sentiment Treebank  ซึ่งนำมาแสดงให้ดูเป็นตัวอย่างดังนี้ โดยเลือกเฉพาะตัวอย่างที่มีคำว่า <em>excellent</em> ซึ่งแปลว่ายอดเยี่ยมอยู่อย่างน้อย 1 จุด <span id="id7">[<a class="reference internal" href="#id31" title="Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing, 1631–1642. 2013.">Socher <em>et al.</em>, 2013</a>]</span></p>
-<table class="colwidths-auto table">
+<p>การวิเคราะห์อารมณ์ความรู้สึกในเชิงปฏิบัติ คือ การแยกประเภทของข้อความว่าเป็นข้อความที่แสดงความเห็นในด้านบวก ด้านลบ หรือเป็นกลาง เราสามารถคิดว่าตัววิเคราะห์อารมณ์ความรู้สึก (sentiment analyzer) เป็นฟังก์ชันที่รับสตริงข้อความ และคืนค่าเป็นป้ายกำกับ (label) ที่บ่งบอกว่าข้อความนั้นเป็นเชิงบวก ลบ หรือเป็นกลาง โดยใช้เทคนิคการเรียนรู้ของเครื่อง ซึ่งสามารถทำได้ด้วยการใช้ชุดข้อมูลที่มีป้ายกำกับความรู้สึกเช่นข้อความที่มีป้ายกำกับว่าเป็นเชิงบวก ลบ หรือเป็นกลาง ในการสร้างโมเดลการเรียนรู้ของเครื่อง โดยใช้ข้อมูลเหล่านี้ในการเรียนรู้ว่าคุณลักษณะของข้อความที่เป็นเชิงบวก ลบ หรือกลาง คืออะไร และใช้คุณลักษณะเหล่านั้นในการจำแนกประเภทของข้อความใหม่ที่ยังไม่เคยเห็นมาก่อน หนึ่งในชุดข้อมูลที่ได้รับความนิยมมากในการนำมาสร้างตัววิเคราะห์อารมณ์ความรู้สึก คือ Sentiment Treebank  ซึ่งนำมาแสดงให้ดูเป็นตัวอย่างดังนี้ โดยเลือกเฉพาะตัวอย่างที่มีคำว่า <em>excellent</em> ซึ่งแปลว่ายอดเยี่ยมอยู่อย่างน้อย 1 จุด <span id="id12">[<a class="reference internal" href="#id37" title="Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empirical methods in natural language processing, 1631–1642. 2013.">Socher <em>et al.</em>, 2013</a>]</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>ข้อความ</p></th>
@@ -617,10 +665,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ข้อสังเกตที่สำคัญอย่างหนึ่งจากตัวอย่างข้างต้น คือ ถึงแม้ว่าทุกข้อความจะมีคำว่า <em>excellent</em> อยู่  แต่ก็ไม่ได้หมายความว่าอารมณ์ความรู้สึกที่ส่งผ่านข้อความนั้นจะเป็นบวกเสมอไป ยังมีปัจจัยทางบริบทที่มีผลต่อการตีความโดยรวม เช่น บริบททางโครงสร้างประโยคในตัวอย่าง (c) นำเอาคำว่า <em>excellent</em> มาใช้เป็นส่วนขยายของนามแต่ว่าไม่ได้นำมาใช้เป็นส่วนหนึ่งของกริยาหลัก ซึ่งมีผลต่อความหมายโดยรวมของประโยคมากกว่า ทำให้เห็นว่าเราต้องคำนึงปัจจัยทางภาษาศาสตร์อื่น ๆ อีกมาก นอกเหนือจากความหมายของคำ จึงจะสามารถวิเคราะห์อารมณ์ความรู้สึกได้ถูกต้อง</p>
 </section>
 <section id="huggingface-transformers">
-<h2>แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก<a class="headerlink" href="#huggingface-transformers" title="Permalink to this heading">#</a></h2>
+<h2>แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก<a class="headerlink" href="#huggingface-transformers" title="Link to this heading">#</a></h2>
 <p>Huggingface เป็นแพลตฟอร์ม (ระบบที่ทุกคนเข้าใช้ร่วมกัน แทนที่จะมีคนกลุ่มเดียวที่เข้าใช้ได้) ที่มุ่งเน้นการพัฒนาและแบ่งปันโมเดลการประมวลผลภาษาธรรมชาติที่มีความสามารถหลากหลาย กล่าวคือนักพัฒนาสามารถนำโมเดลที่ตนสร้างขึ้นมาฝากไว้บนแพลตฟอร์มนี้ เพื่อให้ผู้ใช้คนอื่นเข้ามาโหลดเพื่อนำไปใช้ได้อย่างสะดวก ซึ่งหน้าที่ของแพลตฟอร์มคืออำนวยความสะดวกให้ทั้งสองฝ่ายโดยไม่ต้องพัฒนาโมเดลทั้งหมดเอง</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
@@ -659,7 +708,7 @@ document.write(`
  <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Positive&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.5197721719741821</span><span class="p">}]</span>
 </pre></div>
 </div>
-<p>ข้อควรระวังอย่างหนึ่งของการวิเคราะห์อารมณ์ความรู้สึก คือการเลือกใช้โมเดลให้เหมาะสมกับขอบเขตเนื้อหา (domain) ของข้อมูลที่เราต้องการวิเคราะห์  ถ้าหากชุดข้อมูลที่ใช้พัฒนาโมเดลมีขอบเขตเนื้อหาที่ไม่ตรงกับ ขอบเขตเนื้อหาของข้อมูลที่เราต้องการวิเคราะห์ อาจจะทำให้ความแม่นยำลดลง หรือผลลัพธ์ที่ได้ไม่เป็นที่พอใจ สมมติว่าโมเดลการวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) ถูกพัฒนามาด้วยข้อมูลรีวิวภาพยนตร์ ซึ่งข้อมูลนี้มีลักษณะเฉพาะ เช่น คำศัพท์และรูปแบบการใช้ภาษาที่เกี่ยวข้องกับการรีวิวภาพยนตร์ หากเรานำโมเดลนี้ไปใช้วิเคราะห์ความคิดเห็นเกี่ยวกับการเงินการลงทุน  โมเดลก็จะมีความแม่นยำลดลง เพราะลักษณะทางภาษาหรือขอบเขตเนื้อหาของข้อมูลรีวิวภาพยนตร์อาจมีความแตกต่างจากข้อมูลความเห็นเกี่ยวกับการเงินการลงทุน  เรียกอีกอย่างว่า ปัญหาการกระจายตัวแบบออกนอกขอบเขต (out-of-distribution) ซึ่งเป็นปัญหาที่สำคัญในการใช้โมเดลการเรียนรู้ของเครื่องในงานปัญญาประดิษฐ์ <span id="id8">[<a class="reference internal" href="#id32" title="Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. Transactions on Machine Learning Research, 2023.">Lang <em>et al.</em>, 2023</a>]</span></p>
+<p>ข้อควรระวังอย่างหนึ่งของการวิเคราะห์อารมณ์ความรู้สึก คือการเลือกใช้โมเดลให้เหมาะสมกับขอบเขตเนื้อหา (domain) ของข้อมูลที่เราต้องการวิเคราะห์  ถ้าหากชุดข้อมูลที่ใช้พัฒนาโมเดลมีขอบเขตเนื้อหาที่ไม่ตรงกับ ขอบเขตเนื้อหาของข้อมูลที่เราต้องการวิเคราะห์ อาจจะทำให้ความแม่นยำลดลง หรือผลลัพธ์ที่ได้ไม่เป็นที่พอใจ สมมติว่าโมเดลการวิเคราะห์อารมณ์ความรู้สึก (sentiment analysis) ถูกพัฒนามาด้วยข้อมูลรีวิวภาพยนตร์ ซึ่งข้อมูลนี้มีลักษณะเฉพาะ เช่น คำศัพท์และรูปแบบการใช้ภาษาที่เกี่ยวข้องกับการรีวิวภาพยนตร์ หากเรานำโมเดลนี้ไปใช้วิเคราะห์ความคิดเห็นเกี่ยวกับการเงินการลงทุน  โมเดลก็จะมีความแม่นยำลดลง เพราะลักษณะทางภาษาหรือขอบเขตเนื้อหาของข้อมูลรีวิวภาพยนตร์อาจมีความแตกต่างจากข้อมูลความเห็นเกี่ยวกับการเงินการลงทุน  เรียกอีกอย่างว่า ปัญหาการกระจายตัวแบบออกนอกขอบเขต (out-of-distribution) ซึ่งเป็นปัญหาที่สำคัญในการใช้โมเดลการเรียนรู้ของเครื่องในงานปัญญาประดิษฐ์ <span id="id13">[<a class="reference internal" href="#id38" title="Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. Transactions on Machine Learning Research, 2023.">Lang <em>et al.</em>, 2023</a>]</span></p>
 <p>ในตัวอย่างการใช้ huggingface ข้างต้น เราได้ลองใช้โมเดลภาษาไทยสองตัวที่ถูกพัฒนาขึ้นมาจากชุดข้อมูลคนละขอบเขตกัน ตัวแรกสร้างขึ้นเพื่อใช้วิเคราะห์รีวิวและทวีต และโมเดลตัวที่สองสร้างขึ้นเพื่อใช้วิเคราะห์ข้อความที่ขอบเขตเนื้อหาคือการเงิน และผลประกอบการของบริษัท
 หากเราใช้โมเดลตัวแรกมาวิเคราะห์ข้อความที่พูดถึงเรื่องการเงิน จะได้ผลดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;neu&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mf">0.9173294305801392</span><span class="p">},</span>
@@ -677,13 +726,13 @@ document.write(`
 </div>
 <p>เมื่อโมเดลทั้งสองตัวถูกนำไปใช้กับข้อมูลที่ไม่ตรงกับขอบเขตเนื้อหาที่ใช้พัฒนา ความแม่นยำจะลดลง และผลลัพธ์ที่ได้ไม่เป็นที่พอใจ ดังนั้นการเลือกใช้โมเดลที่เหมาะสมกับข้อมูลที่ต้องการวิเคราะห์เป็นสิ่งสำคัญ โดยทั่วไปแล้วโมเดลที่ได้รับความนิยมบนแพลตฟอร์ม huggingface มักจะระบุว่าโมเดลถูกพัฒนาขึ้นมาด้วยชุดข้อมูลอะไร ที่มาของข้อความอยู่ในขอบเขตเนื้อหาอะไร เพื่อผู้ใช้จะได้นำไปประยุกต์ใช้ได้อย่างเหมาะสมกับข้อมูลที่ต้องการวิเคราะห์</p>
 </section>
-<section id="id9">
-<h2>โมเดลหัวเรื่อง<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h2>โมเดลหัวเรื่อง<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>โมเดลหัวเรื่อง (topic model) เป็นหนึ่งในโมเดลที่เป็นที่นิยมในการวิเคราะห์หาหัวเรื่องที่อยู่ในชุดเอกสาร จุดประสงค์ของโมเดลหัวเรื่องคือระบุและจัดกลุ่มข้อความที่มีเนื้อหาคล้ายคลึงกัน การทำงานของโมเดลหัวเรื่องนั้นคล้ายกับการวิเคราะห์ความถี่ของคำ (word frequency analysis) เพียงแต่ว่าเราไม่ต้องจัดคำที่ปรากฏบ่อยให้เป็นหมวดหมู่ด้วยตัวเอง โมเดลหัวเรื่องที่ได้รับความนิยมและใช้กันอย่างแพร่หลายคือ Latent Dirichlet Allocation (LDA) ซึ่งเป็นเทคนิคที่ช่วยในการหาหัวเรื่องทั้งหมดที่อยู่ในชุดเอกสารโดยการวิเคราะห์ความน่าจะเป็นของการเกิดร่วมกันของคำในเอกสาร นอกจากนั้นแล้วโมเดล LDA ยังช่วยในการระบุหัวเรื่องหลักในเอกสารแต่ละเอกสารอีกด้วย  ตัวอย่างเช่น หากเรามีชุดเอกสารที่เกี่ยวกับข่าวต่างประเทศ โมเดล LDA อาจช่วยในการระบุหัวเรื่องเช่น “การเมือง”, “เศรษฐกิจ”, และ “กีฬา” ทำให้เราสามารถจัดหมวดหมู่ข้อมูลและวิเคราะห์เชิงลึกได้ง่ายขึ้น นอกจากนี้ โมเดลหัวเรื่องยังสามารถนำไปใช้ในงานต่างๆ เช่น การจัดหมวดหมู่บทความในเว็บไซต์ข่าว การวิเคราะห์เอกสารทางวิชาการเพื่อค้นหาประเด็นวิจัยสำคัญ และการประมวลผลข้อความจากโซเชียลมีเดียเพื่อหาแนวโน้มและความสนใจของผู้ใช้งาน เป็นต้น</p>
-<p>โมเดล LDA มีรายละเอียดทางคณิตศาสตร์ที่ซับซ้อน ซึ่งอยู่นอกเหนือขอบเขตของหนังสือเล่มนี้ <span id="id10">[<a class="reference internal" href="#id33" title="David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. Journal of machine Learning research, 3(Jan):993–1022, 2003.">Blei <em>et al.</em>, 2003</a>]</span> อย่างไรก็ตาม เราสามารถเข้าใจหลักการทำงานของ LDA ได้อย่างง่าย ๆ โดยไม่ต้องลงลึกในรายละเอียดสมการของ LDA มากนัก LDA ทำงานโดยการหาคำที่เกิดขึ้นร่วมกันบ่อย ๆ ในเอกสารเดียวกัน สมมติว่าชุดเอกสารที่เราวิเคราะห์มีบทความข่าวทั้งหมด 10 ข่าว ซึ่งอาจจะประกอบไปด้วยข่าวการเมือง ข่าวเศรษฐกิจ และข่าวกีฬา แต่เราไม่ทราบมาก่อนเลยว่าข่าวทั้ง 10 ข่าวนี้จัดกลุ่มเป็นข่าวประเภทใดได้บ้าง แต่เราพอจะคาดเดาได้ว่าน่าจะมีสัก 3 ประเภทด้วยกัน</p>
+<p>โมเดล LDA มีรายละเอียดทางคณิตศาสตร์ที่ซับซ้อน ซึ่งอยู่นอกเหนือขอบเขตของหนังสือเล่มนี้ <span id="id15">[<a class="reference internal" href="#id39" title="David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. Journal of machine Learning research, 3(Jan):993–1022, 2003.">Blei <em>et al.</em>, 2003</a>]</span> อย่างไรก็ตาม เราสามารถเข้าใจหลักการทำงานของ LDA ได้อย่างง่าย ๆ โดยไม่ต้องลงลึกในรายละเอียดสมการของ LDA มากนัก LDA ทำงานโดยการหาคำที่เกิดขึ้นร่วมกันบ่อย ๆ ในเอกสารเดียวกัน สมมติว่าชุดเอกสารที่เราวิเคราะห์มีบทความข่าวทั้งหมด 10 ข่าว ซึ่งอาจจะประกอบไปด้วยข่าวการเมือง ข่าวเศรษฐกิจ และข่าวกีฬา แต่เราไม่ทราบมาก่อนเลยว่าข่าวทั้ง 10 ข่าวนี้จัดกลุ่มเป็นข่าวประเภทใดได้บ้าง แต่เราพอจะคาดเดาได้ว่าน่าจะมีสัก 3 ประเภทด้วยกัน</p>
 <p>ข้อสังเกตที่สำคัญที่ทำให้ LDA ทำงานได้อย่างมีประสิทธิภาพคือ เราสามารถจัดหัวเรื่องตามคำหลักได้ และคำหลักที่มาจากหัวเรื่องเดียวกันเหล่านี้มักพบเห็นพร้อมกันในเอกสารเดียวกัน เช่น  ข่าวการเมืองมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับการเมือง เช่น <em>นายกรัฐมนตรี รัฐบาล รัฐสภา เลือกตั้ง ประกาศ ลงมติ</em> และข่าวการเมืองหนึ่งข่าวมักจะใช้คำเหล่านี้หลาย ๆ คำในข่าวเดียวกัน  ข่าวเศรษฐกิจมักจะมีคำเฉพาะเจาะจงที่เกี่ยวข้องกับเศรษฐกิจ เช่น <em>ธุรกิจ ชะลอตัว ลด การลงทุน ดอกเบี้ย อัตรา เศรษฐกิจ</em> ข่าวการเมืองก็อาจจะใช้คำหลักเหล่านี้บ้าง เพราะว่าข่าวการเมืองก็อาจจะพูดถึงเศรษฐกิจด้วย แต่ว่าไม่ใช่ข่าวการเมืองทุกข่าวจะพูดถึงเศรษฐกิจ เพราะเหตุนี้ผลนี้เอง โมเดล LDA จึงทำงานโดยการตรวจหาคำที่เกิดร่วมกันบ่อย ๆ ในเอกสารเดียวกัน และรวบรวมรายการของคำเหล่านี้รวมกันเป็นหัวเรื่อง เพราะฉะนั้น<em>หัวเรื่อง</em> ที่ได้จาก LDA คือรายการของคำและแต่ละคำมีค่าน้ำหนักบ่งบอกถึงความสำคัญ</p>
 <p>หากเราฝึกโมเดล LDA บนเอกสารที่เป็นข่าว 10 ข่าวและกำหนดให้แยกออกมาเป็น 3 หัว หัวเรื่องที่ได้ออกมาเป็นผลลัพท์อาจมีลักษณะดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>หัวเรื่อง</p></th>
 <th class="head"><p>คำหลัก</p></th>
@@ -745,9 +794,10 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>หัวเรื่องที่ได้จาก LDA มักจะเรียกอีกอย่างหนึ่งว่าคำสำคัญของหัวเรื่อง (topic key) ซึ่งเราจะต้องอ่านและตีความว่าหัวเรื่องแต่ละหัวเรื่องเกี่ยวกับอะไรโดยการเชื่อมโยงหาธีมด้วยตัวเอง ตัวโมเดลเองไม่ได้ประกาศชัดเจนว่าหัวเรื่องที่ 1 2 หรือ 3 เกี่ยวกับอะไร จากตัวอย่างข้างต้นเราตีความว่าหัวเรื่องที่ 1 เกี่ยวกับการเมือง หัวเรื่องที่ 2 เกี่ยวกับเศรษฐกิจ และหัวเรื่องที่ 3 เกี่ยวกับกีฬา</p>
 <p>ในกระบวนการวิเคราะห์เดียวกัน LDA ยังจัดกลุ่มเอกสารโดยดูว่ามีเอกสารแต่ละเอกสารมีคำจากหัวเรื่องใดเป็นสัดส่วนเท่าไร ผลลัพธ์คือสัดส่วนของหัวเรื่องแต่ละหัวเรื่องในแต่ละเอกสาร ซึ่งเราจะเรียกว่าตาราง doc-topic เพราะว่าตารางผลลัพธ์จะมีเอกสารอยู่ที่แถวแต่ละแถว และมีหัวเรื่องอยู่ใน เช่น ถ้าหากเรามี 10 เอกสาร</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>เอกสาร</p></th>
 <th class="head"><p>หัวเรื่อง 1</p></th>
@@ -808,13 +858,14 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>จากตัวอย่างผลลัพธ์ข้างต้น เอกสารที่ 3 5 7 และ 9 น่าจะเป็นข่าวการเมือง เนื่องจากมีสัดส่วนของหัวเรื่อง 1 มากที่สุด แต่เราสังเกตว่าเอกสารที่ 5 มีสัดส่วนของหัวเรื่อง 1 และ 2 พอ ๆ กัน ซึ่งอาจจะตีความได้ว่าเป็นเอกสารที่พูดถึงทั้งการเมืองและเศรษฐกิจ
 ส่วนเอกสารที่ 2 8 และ 10 น่าจะเป็นข่าวเศรษฐกิจ เนื่องจากมีสัดส่วนของหัวเรื่อง 2 มากที่สุด และเอกสารที่ 1 และ 4 น่าจะเป็นข่าวกีฬา เนื่องจากมีสัดส่วนของหัวเรื่อง 3 มากที่สุด</p>
 <p>สรุปแล้ว LDA ช่วยในการหาหัวเรื่องที่อยู่ในชุดเอกสาร และจัดกลุ่มเอกสารตามหัวเรื่องที่พบในเอกสารไปในคราวเดียวกัน โดยที่เราไม่ต้องระบุหัวเรื่องล่วงหน้า แต่เราต้องระบุจำนวนหัวเรื่องที่เราคิดว่าเหมาะสมกับชุดเอกสาร
 เมื่อฝึกโมเดลเสร็จแล้วเราสามารถตีความหัวเรื่องที่ได้จาก LDA ได้อย่างง่าย ๆ โดยการดูคำหลักที่เกี่ยวข้องกับหัวเรื่องนั้น และดูสัดส่วนของหัวเรื่องในแต่ละเอกสาร</p>
 </section>
 <section id="gensim-lda">
-<h2>ไลบรารี gensim สำหรับการฝึกโมเดล LDA<a class="headerlink" href="#gensim-lda" title="Permalink to this heading">#</a></h2>
+<h2>ไลบรารี gensim สำหรับการฝึกโมเดล LDA<a class="headerlink" href="#gensim-lda" title="Link to this heading">#</a></h2>
 <p>ไลบรารี gensim เป็นไลบรารีภาษาไพทอนที่เป็นที่นิยมมากสำหรับการใช้โมเดล LDA ไลบรารีนี้ทำให้การฝึกและใช้งานโมเดล LDA เป็นเรื่องง่ายและมีประสิทธิภาพ ไลบรารีนี้มีฟังก์ชันอำนวยความสะดวกในการเตรียมข้อมูลและการฝึกโมเดล gensim มีเครื่องมือที่ช่วยในการแปลงเอกสารให้เป็นเวกเตอร์และสร้างดิกชันนารีของคำ (dictionary) ซึ่งเป็นขั้นตอนที่สำคัญก่อนที่จะเริ่มฝึกโมเดล LDA นอกจากนี้ gensim ยังมีฟังก์ชันที่ช่วยในการปรับพารามิเตอร์ของโมเดลเพื่อให้ได้ผลลัพท์ที่ออกมามีประโยชน์ที่สุด</p>
 <p>ขั้นตอนแรกของการฝึกโมเดลคือการเปลี่ยนข้อมูลให้อยู่ในรูปของลิสต์ของเอกสาร ซึ่งเอกสารหนึ่งเอกสารจะต้องถูกเก็บอยู่ในรูปลิสต์ของคำที่ปราศจากคำหยุด เพราะฉะนั้นเราจะต้องทำการตัดคำ สมมติว่าเราต้องการวิเคราะห์ข้อมูลรีวิวสายการบิน ที่อยู่ในไฟล์ zip ที่มีชื่อไฟล์ว่า Airline_review.csv.zip ซึ่งมีคอลัมน์ <em>Review</em> ที่เก็บข้อมูลรีวิว ขั้นตอนแรกเราจะทำการอ่านข้อมูลจากไฟล์ zip และทำการตัดคำด้วยไลบรารี nltk และเก็บข้อมูลในรูปลิสต์ของคำ โดยเราจะใช้ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">clean</span></code> ที่เราได้สร้างขึ้นมาเพื่อทำความสะอาดข้อมูล และการตัดคำ</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -902,33 +953,39 @@ document.write(`
 <li><p>ทำความสะอาดข้อมูลให้ดีขึ้น หากเจอคำที่เกิดขึ้นในหลาย ๆ หัวเรื่องที่ไม่ได้มีประโยชน์ในการตีความ ทำความเข้าใจหัวเรื่อง อาจจะสกัดเอาคำเหล่านั้นออกไป เช่น ในตัวอย่างข้างต้น เราอาจจะเอาคำว่า <em>flight</em> และ <em>flights</em> ออกไปเนื่องจาก เราทราบอยู่แล้วว่าข้อมูลเกี่ยวกับสายการบิน คำว่า <em>flight</em> ย่อมปรากฏอยู่ในทุกรีวิว และไม่มีประโยชน์ในการตีความหัวเรื่อง</p></li>
 </ol>
 </section>
-<section id="id11">
-<h2>สรุป<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<section id="id16">
+<h2>สรุป<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <p>ในบทนี้เราเรียนรู้เทคนิควิธีการประมวลผลภาษาธรรมชาติที่ใช้บ่อย ๆ ได้แก่ การติดป้ายกำกับชนิดของคำ การรู้จำเอนทิตี การวิเคราะห์อารมณ์ความรู้สึก การวิเคราะห์หัวเรื่องที่ปรากฏในชุดเอกสาร ในปัจจุบันมีไลบรารีที่สามารถดึงโมเดลต่าง ๆ ลงมาใช้ในภาษาไพทอนได้สะดวก เนื่องจากมีซอฟต์แวร์ที่เป็นโอเพนซอร์สมากมายที่ได้รับการพัฒนาอย่างต่อเนื่อง ทำให้สามารถทำการประมวลผลภาษาธรรมชาติได้ง่ายขึ้น หรือสามารถเทรนโมเดลบนชุดข้อมูลของเราเองอย่างการทำโมเดลหัวเรื่องได้</p>
 </section>
-<section id="id12">
-<h2>อ้างอิง<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id13">
-<dl class="citation">
-<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id10">1</a></span></dt>
-<dd><p>David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. <em>Journal of machine Learning research</em>, 3(Jan):993–1022, 2003.</p>
-</dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p>Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.</p>
-</dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
-<dd><p>Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. <em>Transactions on Machine Learning Research</em>, 2023.</p>
-</dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
-<dd><p>Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, <em>Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</em>, 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: <a class="reference external" href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf</a>.</p>
-</dd>
-<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id7">5</a></span></dt>
-<dd><p>Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In <em>Proceedings of the 2013 conference on empirical methods in natural language processing</em>, 1631–1642. 2013.</p>
-</dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In <em>Proceedings of the International AAAI Conference on Web and Social Media</em>, volume 15, 703–713. 2021.</p>
-</dd>
-</dl>
+<section id="id17">
+<h2>อ้างอิง<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id18">
+<div role="list" class="citation-list">
+<div class="citation" id="id39" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">1</a><span class="fn-bracket">]</span></span>
+<p>David M Blei, Andrew Y Ng, and Michael I Jordan. Latent dirichlet allocation. <em>Journal of machine Learning research</em>, 3(Jan):993–1022, 2003.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">2</a><span class="fn-bracket">]</span></span>
+<p>Matthew Honnibal and Ines Montani. spaCy 2: natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear, 2017.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">3</a><span class="fn-bracket">]</span></span>
+<p>Hao Lang, Yinhe Zheng, Yixuan Li, SUN Jian, Fei Huang, and Yongbin Li. A survey on out-of-distribution detection in nlp. <em>Transactions on Machine Learning Research</em>, 2023.</p>
+</div>
+<div class="citation" id="id35" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">4</a><span class="fn-bracket">]</span></span>
+<p>Slav Petrov, Dipanjan Das, and Ryan McDonald. A universal part-of-speech tagset. In Nicoletta Calzolari, Khalid Choukri, Thierry Declerck, Mehmet Uğur Doğan, Bente Maegaard, Joseph Mariani, Asuncion Moreno, Jan Odijk, and Stelios Piperidis, editors, <em>Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</em>, 2089–2096. Istanbul, Turkey, May 2012. European Language Resources Association (ELRA). URL: <a class="reference external" href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf</a>.</p>
+</div>
+<div class="citation" id="id37" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">5</a><span class="fn-bracket">]</span></span>
+<p>Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. Recursive deep models for semantic compositionality over a sentiment treebank. In <em>Proceedings of the 2013 conference on empirical methods in natural language processing</em>, 1631–1642. 2013.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">6</a><span class="fn-bracket">]</span></span>
+<p>Jakapun Tachaiya, Joobin Gharibshah, Kevin E Esterling, and Michalis Faloutsos. Raffman: measuring and analyzing sentiment in online political forum discussions with an application to the trump impeachment. In <em>Proceedings of the International AAAI Conference on Web and Social Media</em>, volume 15, 703–713. 2021.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -958,11 +1015,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../9-nlp-models.html"
@@ -982,10 +1038,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -994,24 +1047,30 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">การติดป้ายกำกับชนิดของคำ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การจำแนกชนิดของคำ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การสร้างโมเดลประมวลผลภาษาธรรมชาติโดยอาศัยการเรียนรู้ของเครื่อง</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1) โมเดลที่ทำงานได้เฉพาะเจาะจง</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2) โมเดลที่ทำงานได้หลากหลาย</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การรู้จำเอนทิตี</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การติดป้ายกำกับชนิดของคำ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การจำแนกชนิดของคำ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">การรู้จำเอนทิตี</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacy">ไลบรารี spacy สำหรับการติดป้ายชนิดของคำ และการรู้จำเอนทิตี</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">การวิเคราะห์อารมณ์ความรู้สึก (Sentiment Analysis)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การวิเคราะห์อารมณ์ความรู้สึก</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huggingface-transformers">แพลตฟอร์ม huggingface และไลบรารี transformers สำหรับการวิเคราะห์อารมณ์ความรู้สึก</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">โมเดลหัวเรื่อง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">โมเดลหัวเรื่อง</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gensim-lda">ไลบรารี gensim สำหรับการฝึกโมเดล LDA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">อ้างอิง</a></li>
 </ul>
   </nav></div>
 
@@ -1033,6 +1092,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1059,8 +1119,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

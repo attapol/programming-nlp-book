@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>บทที่ 4 การประมวลผลข้อมูลจากไฟล์ &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module4/1-file-regex';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -424,56 +451,56 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ไฟล์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การระบุพาท</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">พาทเต็ม</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">พาทสัมพัทธ์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ไฟล์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การระบุพาท</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">พาทเต็ม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">พาทสัมพัทธ์</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การอ่านเขียนไฟล์ข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">อ่านไฟล์ไล่ทีละบรรทัด</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การอ่านเขียนไฟล์ข้อมูล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">อ่านไฟล์ไล่ทีละบรรทัด</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with">เปิดไฟล์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read">อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่สตริง: <code class="docutils literal notranslate"><span class="pre">.read()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readline">อ่านไฟล์เพียงบางบรรทัด: <code class="docutils literal notranslate"><span class="pre">.readline()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readlines">อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่ลิสต์: <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">เขียนสตริงใส่ไฟล์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">เขียนสตริงใส่ไฟล์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">เขียนดิกชันนารี หรือลิสต์ใส่ไฟล์โดยใช้ไลบรารี <code class="docutils literal notranslate"><span class="pre">json</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">นิพจน์ปรกติ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">อักขระปกติ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">อักขระพิเศษ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">นิพจน์ปรกติ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">อักขระปกติ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">อักขระพิเศษ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การจัดเซตของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ตัวบอกปริมาณ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การจัดเซตของตัวอักษร</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวบอกปริมาณ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backreference">การอ้างอิงกลับ (Backreference)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวอย่างการอ้างอิงกลับ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการอ้างอิงกลับ 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการอ้างอิงกลับ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ตัวอย่างการอ้างอิงกลับ 2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">นิพจน์ปรกติในภาษาไพทอน</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">นิพจน์ปรกติในภาษาไพทอน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match"><code class="docutils literal notranslate"><span class="pre">re.match</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search"><code class="docutils literal notranslate"><span class="pre">re.search</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall"><code class="docutils literal notranslate"><span class="pre">re.findall</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ตัวอย่างการใช้งานเบื้องต้น</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split"><code class="docutils literal notranslate"><span class="pre">re.split</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
 </ul>
             </nav>
         </div>
@@ -483,14 +510,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br">
-<h1>บทที่ 4 </br> การประมวลผลข้อมูลจากไฟล์<a class="headerlink" href="#br" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>บทที่ 4 </br> การประมวลผลข้อมูลจากไฟล์<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>ข้อมูลที่เราต้องการนำมาประมวลผลมักจะถูกจัดเก็บในรูปของไฟล์ เมื่อเราได้ไฟล์มาแล้วเราจะต้องเขียนโปรแกรมเพื่อเปิดไฟล์ขึ้นมา และทำความสะอาดข้อมูล (เช่น นำส่วนที่ไม่ใช่ข้อมูลจริง ๆ ออกไป หรือนำส่วนที่ไม่ใช่ข้อความออกไป) จากนั้นนำมาตัดคำ หรือใช้เครื่องมือการประมวลผลภาษาอื่น ๆ มาช่วย</p>
 <p>ในบทนี้เราจะเรียนรู้วิธีการเปิดไฟล์ และเขียนข้อมูลลงไฟล์ รวมถึงการใช้นิพจน์ปรกติ (regular exprssion) หรือเรกเอกซ์ (RegEx) ซึ่งต่อไปจะเรียกอย่างย่อว่า “เรกเอกซ์” ในการทำความสะอาดข้อมูล และดึงเฉพาะส่วนของข้อมูลที่เราต้องการทำไปวิเคราะห์ต่อไป</p>
-<section id="id1">
-<h2>ไฟล์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h2>ไฟล์<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>ไฟล์สามารถถูกแบ่งออกได้เป็น 2 ประเภท</p>
 <ol class="arabic simple">
 <li><p>ไฟล์ไบนารี (binary file) เป็นไฟล์ที่เราไม่สามารถเปิดอ่านเป็นตัวหนังสือได้ ข้อมูลถูกจัดเก็บรหัสประเภทอื่น ที่จะต้องใช้โปรแกรมเฉพาะเจาะจงในการเปิดอ่านและประมวลผล เช่น ไฟล์ภาพ ไฟล์เพลง ไฟล์ .docx ซึ่งต้องใช้โปรแกรม Microsoft Word ในการเปิดประมวลผล หรือ .xlsx ซึ่งต้องใช้โปรแกรม Microsoft Excel ในการเปิดประมวลผล ไฟล์เหล่านี้มีไลบรารีภาษาไพทอนที่สามารถใช้เปิดเพื่อนำข้อมูลมาประมวลผลได้เช่นกัน</p></li>
@@ -500,11 +527,11 @@ document.write(`
 <p>ทั้งนี้การตั้งชื่อและสกุลของไฟล์นั้นไม่มีผลต่อตัวข้อมูลที่เก็บในไฟล์ใด ๆ ทั้งสิ้น แต่อาจจะทำให้เกิดความสับสน ถ้าเราจะตั้งสกุลของไฟล์ที่เก็บข้อความเป็น .mytext ก็สามารถทำได้และไม่ได้มีผลต่อข้อความที่เก็บอยู่ในไฟล์ แต่ก็จะไม่เป็นมาตรฐาน เมื่อส่งไฟล์ต่อให้คนอื่น ก็จะไม่ทราบแน่ชัดว่าไฟล์นั้นเก็บอะไรไว้อยู่ จะต้องเปิดด้วยวิธีใด หรือจะตั้งหลอกว่าเป็น .docx ก็ได้เช่นกัน แต่ว่าผู้ที่นำไฟล์ไปใช้ต่อก็อาจจะนำไปใช้ผิดวิธี พอเปิดด้วย Microsoft Word ก็อาจจะไม่ได้ หรือไม่ได้ผลตามที่ควรจะเป็น</p>
 <p>ในบทนี้เราจะเรียนรู้คำสั่งที่ใช้ในการเปิดไฟล์โดยทั่วไป แต่จะเน้นไปที่ไฟล์ข้อความ (text file) เท่านั้นเพราะเป็นระบบที่ใช้ในการเก็บข้อมูลที่เป็นข้อความ (text data) อย่างเป็นสากล</p>
 </section>
-<section id="id2">
-<h2>การระบุพาท<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>วิถี หรือ พาท (path) หรือชื่อพาท (pathname) เป็นสตริงที่ไว้ระบุที่อยู่ของไฟล์ที่อยู่บนเครื่องของเรา เพื่อที่เราจะได้เขียนคำสั่งได้ถูกต้องว่าไฟล์ที่เราต้องการจะเปิดนั้นอยู่ที่ไหนบนเครื่อง หรือไฟล์ที่เราต้องการจะสร้างนั้นมีชื่อว่าอะไรอยู่ไหน เพราะว่าไฟล์ต่าง ๆ ถูกเก็บอยู่ในโฟลเดอร์ (folder) ซึ่งในโฟลเดอร์นั้นอาจจะมีโฟลเดอร์อื่น ๆ ซ้อนกันอยู่ เราสามารถเปรียบเทียบการจัดเก็บไฟล์กับการจัดเรียงเอกสารในตู้เก็บเอกสาร โดยที่แต่ละโฟลเดอร์ในระบบไฟล์ทำหน้าที่เหมือนกับลิ้นชักในตู้เอกสาร เมื่อเราต้องการเข้าถึงไฟล์ที่ต้องการ เราต้องระบุเส้นทางที่ถูกต้องจากโฟลเดอร์หลักไปยังโฟลเดอร์ย่อยจนถึงไฟล์ที่ต้องการ</p>
 <section id="id3">
-<h3>พาทเต็ม<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h2>การระบุพาท<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>วิถี หรือ พาท (path) หรือชื่อพาท (pathname) เป็นสตริงที่ไว้ระบุที่อยู่ของไฟล์ที่อยู่บนเครื่องของเรา เพื่อที่เราจะได้เขียนคำสั่งได้ถูกต้องว่าไฟล์ที่เราต้องการจะเปิดนั้นอยู่ที่ไหนบนเครื่อง หรือไฟล์ที่เราต้องการจะสร้างนั้นมีชื่อว่าอะไรอยู่ไหน เพราะว่าไฟล์ต่าง ๆ ถูกเก็บอยู่ในโฟลเดอร์ (folder) ซึ่งในโฟลเดอร์นั้นอาจจะมีโฟลเดอร์อื่น ๆ ซ้อนกันอยู่ เราสามารถเปรียบเทียบการจัดเก็บไฟล์กับการจัดเรียงเอกสารในตู้เก็บเอกสาร โดยที่แต่ละโฟลเดอร์ในระบบไฟล์ทำหน้าที่เหมือนกับลิ้นชักในตู้เอกสาร เมื่อเราต้องการเข้าถึงไฟล์ที่ต้องการ เราต้องระบุเส้นทางที่ถูกต้องจากโฟลเดอร์หลักไปยังโฟลเดอร์ย่อยจนถึงไฟล์ที่ต้องการ</p>
+<section id="id4">
+<h3>พาทเต็ม<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>พาทเต็ม (full path หรือ absolute path) คือการเขียนพาทแบบเต็ม ๆ ประกอบไปด้วย 3 ส่วนสำหรับ Windows และ 2 ส่วนสำหรับระบบปฏิบัติการ (Operating system: OS) MacOS และ Linux</p>
 <ol class="arabic simple">
 <li><p>(Windows เท่านั้น) ชื่อไดรฟ์ตามด้วยเครื่องหมาย :</p></li>
@@ -516,7 +543,7 @@ document.write(`
 <p>พาทเต็ม (full path หรือ absolute path) ตำแหน่งของไฟล์หรือไดเรกทอรีที่ระบุตั้งแต่จุดเริ่มต้นจนถึงที่อยู่ของไฟล์หรือไดเรกทอรีนั้น ๆ</p>
 </aside>
 <p>ตัวอย่าง (Windows)</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>พาทเต็ม</p></th>
 <th class="head"><p>ไดรฟ์</p></th>
@@ -537,8 +564,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ตัวอย่าง (MacOS)</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>พาทเต็ม</p></th>
 <th class="head"><p>โฟลเดอร์</p></th>
@@ -556,16 +584,17 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="id4">
-<h3>พาทสัมพัทธ์<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>พาทสัมพัทธ์<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>การระบุพาทเต็มค่อนข้างยืดยาว พิมพ์แล้วมีโอกาสผิดสูง พาทสัมพัทธ์ (relative path) เป็นทางเลือกที่สะดวกกว่า เพราะว่าอ้างอิงจากตำแหน่งปัจจุบันของผู้ใช้ไปยังตำแหน่งของไฟล์ พาทสัมพัทธ์จะใช้พาทของโฟลเดอร์ที่เรารันโค้ดมาต่อกันกับพาทสัมพัทธ์เพื่อให้กลายเป็นพาทแบบเต็ม เช่น ถ้าเรารันโค้ดที่โฟลเดอร์  <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP</span></code> และสั่งให้เปิดไฟล์ที่พาทสัมพัทธ์ <code class="docutils literal notranslate"><span class="pre">data/raw_text.zip</span></code> จะถูกแปลงให้กลายเป็น <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP/data/raw_text.zip</span></code> โดยอัตโนมัติ</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>พาทสัมพัทธ์ (relative path) ตำแหน่งไฟล์หรือไดเรกทอรีที่อ้างอิงจากตำแหน่งปัจจุบัน</p>
 </aside>
 <p>นอกจากนั้นเรายังสามารถระบุให้ถอยลงไปหนึ่งโฟลเดอร์หรือหลาย ๆ โฟลเดอร์ได้โดยการใช้ <code class="docutils literal notranslate"><span class="pre">..</span></code> เช่น ถ้าเรารันโค้ดที่โฟลเดอร์  <code class="docutils literal notranslate"><span class="pre">/Users/te/Prog</span> <span class="pre">NLP</span></code></p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>พาทสัมพัทธ์</p></th>
 <th class="head"><p>ถูกแปลงเป็นพาทเต็ม</p></th>
@@ -583,12 +612,13 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 </section>
-<section id="id5">
-<h2>การอ่านเขียนไฟล์ข้อมูล<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h2>การอ่านเขียนไฟล์ข้อมูล<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>ไฟล์ถูกจัดเก็บไว้ในฮาร์ดดิสก์ ซึ่งเป็นหน่วยความจำถาวรที่ทำหน้าที่เก็บรักษาข้อมูลไว้อย่างถาวร ฮาร์ดดิสก์แต่ละเครื่องมีขนาดความจุไม่เท่ากัน โดยไฟล์ขนาด 1 เมกะไบต์ (megabyte: MB) หรือเท่ากับ 1,024,000 ไบต์  สามารถเก็บตัวอักษรได้ประมาณ 500,000 - 1,000,000 ตัว ขึ้นอยู่กับรูปแบบการเข้ารหัสตัวอักษร (encoding) ที่ใช้ เมื่อเราต้องการนำข้อมูลในไฟล์มาประมวลผล จะต้องคัดลอกข้อมูลจากฮาร์ดดิสก์ไปยังแรม (RAM) ซึ่งเป็นหน่วยความจำชั่วคราว ข้อมูลในแรมจะหายไปทันทีเมื่อปิดเครื่อง ในปัจจุบันเครื่องคอมพิวเตอร์สำนักงานทั่วไปมักจะมีแรมมีความจุอยู่ที่ 4 - 16 กิกะไบต์ (gigabyte: GB) ซึ่ง 1GB เท่ากับ 1,024 MB หรือ 1,073,741,824 ไบต์ ซึ่งเล็กกว่าความจุของฮาร์ดดิสก์มาก ๆ เครื่องคอมพิวเตอร์สำนักงานในปัจจุบันมักจะมีฮาร์ดดิสก์ที่มีความจุอยู่ที่ 250 - 500 กิกะไบต์</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คุณลักษณะ</p></th>
 <th class="head"><p>แรม</p></th>
@@ -618,14 +648,15 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <aside class="margin sidebar">
 <p class="sidebar-title">คำศัพท์</p>
 <p>การเข้ารหัสตัวอักษร (encoding) กระบวนการแปลงข้อมูลจากรูปแบบที่มนุษย์อ่านเข้าใจได้ เช่น ตัวอักษรหรือสัญลักษณ์ต่าง ๆ ไปเป็นรูปแบบที่คอมพิวเตอร์สามารถเข้าใจและจัดเก็บได้</p>
 </aside>
 <p>การอ่านเขียนไฟล์ข้อมูล (File Input/Output หรือ File I/O) เป็นกระบวนการสำคัญในการจัดการข้อมูลในระบบคอมพิวเตอร์ ซึ่งหมายถึงการอ่านไฟล์จากฮาร์ดดิสก์มาลงในแรม และการเขียนข้อมูลจากแรมกลับไปยังฮาร์ดดิสก์ การประมวลผลข้อมูลทำได้บนข้อมูลที่อยู่ในแรมเท่านั้น เนื่องจากแรมมีความเร็วสูงกว่าฮาร์ดดิสก์มากเมื่อต้องมาใช้รวมกันกับโปรแกรมที่เราเขียนขึ้น ทำให้การเข้าถึงและประมวลผลข้อมูลทำได้รวดเร็วขึ้น</p>
 <p>หากไฟล์มีขนาดใหญ่มาก ๆ เราอาจไม่สามารถโหลดไฟล์ทั้งหมดลงในแรมได้ในครั้งเดียว เราจึงต้องมีรูปแบบการอ่านไฟล์ที่หลากหลายเพื่อให้เหมาะสมกับขนาดของไฟล์และขนาดของหน่วยความจำที่มีอยู่ เช่น การอ่านไฟล์แบบบรรทัดต่อบรรทัด จะช่วยให้เราสามารถจัดการกับไฟล์ขนาดใหญ่ได้อย่างมีประสิทธิภาพ  และลดความเสี่ยงที่จะเกิดข้อผิดพลาดจากการที่หน่วยความจำไม่เพียงพอในการจัดการไฟล์ขนาดใหญ่ ยกตัวอย่างเช่น ในการประมวลผลข้อมูลจากไฟล์ข้อมูลขนาดใหญ่ เช่น ไฟล์ฐานข้อมูลหรือไฟล์ล็อก (log file) ซึ่งอาจจะมีขนาดใหญ่หลายกิกะไบต์ เราอาจเลือกใช้วิธีการอ่านไฟล์แบบบรรทัดต่อบรรทัด เพื่อให้สามารถประมวลผลข้อมูลได้ทีละส่วน โดยไม่ต้องโหลดไฟล์ทั้งหมดลงในแรมพร้อมกัน</p>
-<section id="id6">
-<h3>อ่านไฟล์ไล่ทีละบรรทัด<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>อ่านไฟล์ไล่ทีละบรรทัด<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>ไพทอนมีคำสั่ง <code class="docutils literal notranslate"><span class="pre">open()</span></code> เป็นฟังก์ชันแบบบิวท์อินเพื่อใช้เปิดไฟล์ คำสั่งนี้ต้องการพาทเป็นอาร์กิวเมนต์เพื่อระบุว่าจะเปิดไฟล์ใด และไฟล์นั้นอยู่ที่ไหน ซึ่งจะใช้พาทเต็มหรือพาทสัมพัทธ์ก็ได้</p>
 <p>สมมติว่าเรามีไฟล์ชื่อว่า lydia.txt ซึ่งเป็นข้อมูลเนื้อเพลงที่เราขูดออกมาจากหน้าเว็บ จึงมีความไม่สมบูรณ์อยู่บ้าง</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ไม่ว่างจริง</span> <span class="n">ๆ</span>
@@ -692,7 +723,7 @@ document.write(`
 </div>
 </section>
 <section id="with">
-<h3>เปิดไฟล์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">with</span></code><a class="headerlink" href="#with" title="Permalink to this heading">#</a></h3>
+<h3>เปิดไฟล์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">with</span></code><a class="headerlink" href="#with" title="Link to this heading">#</a></h3>
 <p>วิธีนี้เป็นวิธีที่ปลอดภัยที่สุดในเปิดปิดไฟล์ เพราะเป็นการป้องกันการลืมปิดไฟล์ไปในตัว การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">with</span></code> เป็นการจำกัดว่าเราจะใช้งานไฟล์นั้นจากจุดใดถึงจุดใด ตัวอย่าง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;lydia.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">songfile</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">songfile</span><span class="p">:</span>
@@ -705,7 +736,7 @@ document.write(`
 <p>การเปิดปิดไฟล์ในวิธีนี้มีข้อดีคือ เราจำกัดการเข้าถึงไฟล์ที่เปิดให้อยู่ในโค้ดบล็อกเท่านั้น  เราสามารถอ่านหรือเปลี่ยนแปลงไฟล์ในช่วงโค้ดที่จำกัด ทำให้เราไม่ลืมปิดไฟล์ และทำให้เรารู้ว่าไฟล์ถูกเปลี่ยนแปลงโดยส่วนไหนของโค้ดของเราบ้าง</p>
 </section>
 <section id="read">
-<h3>อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่สตริง: <code class="docutils literal notranslate"><span class="pre">.read()</span></code><a class="headerlink" href="#read" title="Permalink to this heading">#</a></h3>
+<h3>อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่สตริง: <code class="docutils literal notranslate"><span class="pre">.read()</span></code><a class="headerlink" href="#read" title="Link to this heading">#</a></h3>
 <p>เราสามารถเก็บข้อมูลทั้งหมดในไฟล์ใส่สตริงโดยใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.read()</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">song_lyrics</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;lydia.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">song_lyrics</span><span class="p">)</span>
@@ -729,7 +760,7 @@ document.write(`
 <p>ถ้าหากไฟล์ที่ต้องการประมวลผลมีขนาดใหญ่ และมีหลายบรรทัด แนะนำให้ใช้ <code class="docutils literal notranslate"><span class="pre">for</span></code> เพื่อค่อยลำเลียงข้อมูลเข้ามาประมวลผลทีละบรรทัด หน่วยความจำแรม ของเครื่องเก็บข้อมูลไว้แค่ทีละหนึ่งบรรทัดเท่านั้น พอประมวลผลเสร็จหนึ่งบรรทัด พื้นที่หน่วยความจำก็จะถูกแทนที่ด้วยข้อมูลจากบรรทัดถัดไป เช่นนี้ไปเรื่อย ๆ</p>
 </section>
 <section id="readline">
-<h3>อ่านไฟล์เพียงบางบรรทัด: <code class="docutils literal notranslate"><span class="pre">.readline()</span></code><a class="headerlink" href="#readline" title="Permalink to this heading">#</a></h3>
+<h3>อ่านไฟล์เพียงบางบรรทัด: <code class="docutils literal notranslate"><span class="pre">.readline()</span></code><a class="headerlink" href="#readline" title="Link to this heading">#</a></h3>
 <p>ในบางกรณีเราไม่ต้องการอ่านไฟล์ทั้งไฟล์ ทุกบรรทัด เราสามารถใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> ในการดึงข้อมูลออกมาทีละบรรทัด สมมติว่าเราต้องการเขียนโปรแกรมที่ประมวลผลเพียงสามบรรทัดแรกเท่านั้น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;lydia.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">songfile</span><span class="p">:</span>
     <span class="n">line1</span> <span class="o">=</span> <span class="n">songfile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -749,7 +780,7 @@ document.write(`
 <p>ดังนั้นหากเราต้องการอ่านไฟล์แค่บรรทัดสุดท้าย เราต้องไล่อ่านตั้งแต่บรรทัดแรกไปจนถึงบรรทัดสุดท้าย เนื่องจากระบบจัดเก็บไฟล์ของเครื่องคอมพิวเตอร์ไม่ได้รองรับการอ่านข้อมูลจากท้ายไฟล์มายังต้นไฟล์ การอ่านไฟล์ต้องเริ่มต้นจากต้นไฟล์ (ตัวอักษรตัวแรกของไฟล์) เสมอ</p>
 </section>
 <section id="readlines">
-<h3>อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่ลิสต์: <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code><a class="headerlink" href="#readlines" title="Permalink to this heading">#</a></h3>
+<h3>อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่ลิสต์: <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code><a class="headerlink" href="#readlines" title="Link to this heading">#</a></h3>
 <p>เราสามารถอ่านไฟล์แล้วเก็บใส่ลิสต์ที่สมาชิกแต่ละตัวเป็นข้อความแต่ละบรรทัดที่อยู่ในไฟล์ คำสั่งนี้เป็นการรวม <code class="docutils literal notranslate"><span class="pre">.read()</span></code> ซึ่งอ่านไฟล์ทั้งไฟล์จะย้ายมาเก็บในตัวแปร และ <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> ซึ่งอ่านไฟล์โดยการแบ่งบรรทัด เพราะฉะนั้นมีข้อควรระวังในการใช้เหมือนการใช้ <code class="docutils literal notranslate"><span class="pre">.read</span></code> ก็คือห้ามเปิดไฟล์ที่มีขนาดใหญ่เกินไป เพราะเครื่องคอมพิวเตอร์อาจจะมีหน่วยความจำไม่พอในการเก็บข้อมูล</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;lydia.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#--&gt; &#39;ไม่ว่างจริง ๆ\n&#39;</span>
@@ -757,8 +788,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h3>เขียนสตริงใส่ไฟล์<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>เขียนสตริงใส่ไฟล์<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>เมื่อเราประมวลผลข้อมูลเสร็จแล้ว เรามักจะต้องบันทึกข้อมูลจากสตริงลงไฟล์ โดยเฉพาะอย่างยิ่งถ้าสตริงเริ่มมีขนาดใหญ่เกินกว่าความจุของแรม เราต้องทยอยถ่ายข้อมูลใส่ไฟล์ซึ่งอาศัยอยู่ในฮาร์ดดิสก์</p>
 <p>วิธีการเขียนสตริงลงไฟล์ ให้เราเปิดไฟล์ขึ้นมาโดยระบุ <code class="docutils literal notranslate"><span class="pre">mode</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">w</span></code> (write) แล้วใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.write</span></code> เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_fav_song.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -774,7 +805,7 @@ document.write(`
 </ol>
 </section>
 <section id="json">
-<h3>เขียนดิกชันนารี หรือลิสต์ใส่ไฟล์โดยใช้ไลบรารี <code class="docutils literal notranslate"><span class="pre">json</span></code><a class="headerlink" href="#json" title="Permalink to this heading">#</a></h3>
+<h3>เขียนดิกชันนารี หรือลิสต์ใส่ไฟล์โดยใช้ไลบรารี <code class="docutils literal notranslate"><span class="pre">json</span></code><a class="headerlink" href="#json" title="Link to this heading">#</a></h3>
 <p>ถ้าข้อมูลของเราอยู่ในรูปของดิกชันนารี ลิสต์ ตัวเลข และสตริง เราสามารถจัดเก็บในรูปแบบของ JSON (อ่านว่า เจซอน หรือ เจสัน) ซึ่งจะแปลงโครงสร้างข้อมูลให้เป็นสตริง เพื่อที่จะนำเขียนลงไฟล์ในรูปแบบที่มนุษย์อ่านได้
 ไพทอนมีไลบรารี <code class="docutils literal notranslate"><span class="pre">json</span></code> ที่มีฟังก์ชันที่ช่วยในการอ่านและเขียน JSON เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -803,8 +834,8 @@ document.write(`
 <p>วิธีนี้ใช้ได้ผลไม่ว่าตอนจัดเก็บเราจะจัดเก็บแบบโดยตั้ง <code class="docutils literal notranslate"><span class="pre">ensure_ascii</span></code> ด้วยหรือไม่ เพราะเครื่องคอมพิวเตอร์ในปัจจุบันสามารถประมวลผลยูนิโค้ดได้เป็นปกติ</p>
 </section>
 </section>
-<section id="id8">
-<h2>นิพจน์ปรกติ<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<section id="id9">
+<h2>นิพจน์ปรกติ<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>นิพจน์ปรกติ (regular expression) โปรแกรมเมอร์เรียกกันย่อ ๆ ว่าเรกเอกซ์ (regex อ่านว่า /regeks/)  เป็นภาษาในการระบุเขียนจับแพตเทิร์นของตัวอักษรที่เราต้องการตรวจหา เพื่อที่จะได้ดึงหรือแก้ไขข้อมูลที่อยากได้โดยสะดวก ตัวอย่างเช่น</p>
 <ul class="simple">
 <li><p>ตรวจหาเบอร์โทรศัพท์ซึ่งมีแพตเทิร์นว่า มีตัวเลขทั้งหมด 10 ตัวแต่ตัวแรกต้องเป็น 0 อีก 9 ตัวเป็นอะไรก็ได้ แต่ถ้าตัวเลขมีทั้งหมด 9 ตัว ตัวแรกไม่ต้องเป็น 0 ก็ได้</p></li>
@@ -814,22 +845,22 @@ document.write(`
 </ul>
 <p>เรกเอกซ์มีความสำคัญมากๆ ในการทำงานเกี่ยวกับการประมวลผลภาษาธรรมชาติ  เพราะทำให้เราสามารถดึงข้อมูลที่มีแพตเทิร์นเด่นชัดในภาษา (เช่น อีเมล์ เบอร์โทรศัพท์ ชื่อ ตัวย่อ) ออกมาจากข้อความที่เราต้องการประมวลผลได้สะดวก ความสำคัญของเรกเอกซ์อีกประการหนึ่งคือ การทำความสะอาดข้อมูล ข้อมูลภาษาที่เราได้รับมามักจะมีข้อความแปลกปลอมหลากหลายประเภทที่จำเป็นต้องกรองออกก่อน ตัวอย่างเช่น ข้อความที่ดาวน์โหลดมาจากทวิตเตอร์อาจจะมีข้อความที่เป็น hashtag หรือ mention ที่เราต้องการกรองออกไป หรือข้อความที่มีลิงก์ที่เราต้องการแปลงเป็นชื่อเว็บไซต์ หรือข้อความที่มีตัวอักษรพิเศษที่เราต้องการลบออกไป เป็นต้น</p>
 </section>
-<section id="id9">
-<h2>สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h2>สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>เรกเอกซ์มีความพิเศษกว่าสตริงปกติ คือการตีความหมายสัญลักษณ์พิเศษต่าง ๆ ที่ช่วยระบุแพตเทิร์นที่ซับซ้อนและยืดหยุ่นมาก  เช่น</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[a-z.]+&#64;[a-z]+\.com</span></code> เป็นเรกเอกซ์สำหรับแพตเทิร์นของ email address ที่ลงท้ายด้วย .com</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">\d\d\d-\d\d\d-\d\d\d\d</span></code> เป็นเรกเอกซ์ สำหรับแพตเทิร์นของหมายถึงเลขโทรศัพท์ เช่น 123-123-1234</p></li>
 </ul>
 <p>สัญลักษณ์ที่ใช้ในเรกเอกซ์มีอยู่ 5 ประเภท ได้แก่</p>
-<section id="id10">
-<h3>อักขระปกติ<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>อักขระปกติ<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>อักขระปกติ  (literal character) คือตัวอักษรที่เราต้องการให้เรกเอกซ์จับคู่กับตัวอักษรนั้น ๆ ที่รูปเดียวกัน ดังนั้นอักขระปกติสามารถเป็นตัวอักษรอะไรก็ได้ในระบบยูนิโค้ด แต่ตัวอักษรบางตัวจะมีความหมายพิเศษในเรกเอกซ์ทำให้เราต้องทำการหนี (escape) โดยการเพิ่ม \ เข้าไปข้างหน้า เพื่อบอกว่าเป็นตัวอักษรปกติ ไม่ใช่อักขระพิเศษ ตัวอักษรที่ต้องทำการหนี (escape) ได้แก่ <code class="docutils literal notranslate"><span class="pre">\</span></code> <code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">*</span></code> <code class="docutils literal notranslate"><span class="pre">?</span></code> <code class="docutils literal notranslate"><span class="pre">^</span></code> <code class="docutils literal notranslate"><span class="pre">$</span></code> <code class="docutils literal notranslate"><span class="pre">(</span></code> <code class="docutils literal notranslate"><span class="pre">)</span></code> <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code> <code class="docutils literal notranslate"><span class="pre">|</span></code> และ <code class="docutils literal notranslate"><span class="pre">.</span></code></p>
 </section>
-<section id="id11">
-<h3>อักขระพิเศษ<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>อักขระพิเศษ<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>อักขระพิเศษ (metacharacter)เป็นหัวใจสำคัญของการเขียนเรกเอกซ์เพื่อระบุแพตเทิร์น เพราะอักขระพิเศษใช้แทนกลุ่มของตัวอักษร อักขระพิเศษมีหลายตัว แต่ในบทนี้เราจะเรียนรู้เพียงอักขระพิเศษที่ใช้บ่อย ๆ ซึ่งเราควรจะจำให้ได้ทั้งหมด ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
 <th class="head"><p>แทนตัวอะไรบ้าง</p></th>
@@ -868,11 +899,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ข้อสังเกตอย่างหนึ่งเพื่อให้ช่วยจำได้ง่ายขึ้น คือ \w \d และ \s จะจับคู่กับเวอร์ชั่นที่เป็นตัวพิมพ์ใหญ่ซึ่งเป็นเวอร์ชันที่เป็นนิเสธของ \w \d และ \s ตามลำดับ เช่น \w หมายถึง a-z A-Z 0-9 และ _ แต่ \W เป็นนิเสธของ \w จึงจับกับอะไรก็ได้ที่ไม่ใช่ a-z A-Z 0-9 และ _ ดังนั้น \W จะจับคู่กับตัวอักษรพิเศษ และช่องว่าง แต่ไม่จับคู่กับตัวอักษรทั่วไป เป็นต้น</p>
-<section id="id12">
-<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h4>
+<section id="id13">
+<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">\d\d\d-\d\d\d-\d\d\d\d</span></code> เป็นเรกเอกซ์ สำหรับแพตเทิร์นของหมายเลขโทรศัพท์ เริ่มต้นด้วยตัวเลข (\d) 3 ตัว ตามด้วยเครื่องหมายขีดกลาง แล้วตามด้วยตัวเลข (\d) 3 ตัว ตามด้วยเครื่องหมายขีดกลาง แล้วตามด้วยตัวเลข (\d) 4 ตัว</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สตริง</p></th>
 <th class="head"><p>จับคู่กับเรกเอกซ์</p></th>
@@ -902,11 +934,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="id13">
-<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
+<section id="id14">
+<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">^\d\d\d-\d\d\d-\d\d\d\d$</span></code> เป็นเรกเอกซ์ สำหรับแพตเทิร์นของหมายเลขโทรศัพท์เหมือนกับตัวอย่างข้างต้น แต่ว่าเราใช้เครื่องหมาย ^ เพื่อเพิ่มเงื่อนไขเพิ่มเติมว่าตัวเลขตัวแรกจะต้องอยู่ที่หน้าสุดของสตริง และใช้เครื่องหมาย $ เพื่อเพิ่มเงื่อนไขว่าตัวเลขตัวสุดท้ายจะต้องอยู่ที่ท้ายสุดของสตริง</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สตริง</p></th>
 <th class="head"><p>จับคู่กับเรกเอกซ์</p></th>
@@ -928,11 +961,12 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="id14">
-<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
+<section id="id15">
+<h4>ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">\w\.\w\.\w\.</span></code> เป็นเรกเอกซ์สำหรับแพตเทิร์นของตัวย่อที่มีสามตัวอักษร แต่แต่ละตัวอักษรคั่นด้วยจุด เช่น <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> <code class="docutils literal notranslate"><span class="pre">a.b.c.</span></code> เป็นต้น อย่าลืมว่าเราต้องทำการหนี <code class="docutils literal notranslate"><span class="pre">.</span></code> โดยการใช้ <code class="docutils literal notranslate"><span class="pre">\.</span></code> เนื่องจาก <code class="docutils literal notranslate"><span class="pre">.</span></code> เป็นอักขระพิเศษ</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สตริง</p></th>
 <th class="head"><p>จับคู่กับเรกเอกซ์</p></th>
@@ -954,14 +988,15 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>อักขระพิเศษถูกออกแบบมาตอนที่ชุดอักขระมีเพียงแค่ตัวลาตินและเครื่องหมายวรรคตอนเท่านั้น เพราะฉะนั้นถึงแม้ว่า \w ถูกตีความหมายมาให้จับกับตัวอักษรที่ประกอบขึ้นมาเป็นคำ แต่ว่า \w ครอบคลุมถึงสตริงไม่ได้ใช้ได้ตัวลาตินสำหรับภาษาไพทอนเท่านั้น</p>
 </section>
 </section>
-<section id="id15">
-<h3>การจัดเซตของตัวอักษร<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id16">
+<h3>การจัดเซตของตัวอักษร<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>อักขระพิเศษมีข้อจำกัด เพราะมีการจัดกลุ่มมาแน่นอนอยู่แล้ว เช่น ตัวเลข (\d) ตัวอักษรลาติน (\w) ช่องว่าง (\s) แต่ถ้าหากเราต้องการจัดกลุ่มตัวอักษรตามที่เราต้องการเอง เราสามารถทำได้โดยการใช้เครื่องหมายวงเล็บเหลี่ยม <code class="docutils literal notranslate"><span class="pre">[]</span></code> เพื่อจับกลุ่มตัวอักษร และเครื่องหมายขีดตั้ง <code class="docutils literal notranslate"><span class="pre">|</span></code> เพื่อจัดกลุ่มแพตเทิร์น</p>
 <p>เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">[]</span></code> ใช้ในการระบุว่าตัวอักษรใดบ้างที่จะจับคู่กับแพตเทิร์น เช่น <code class="docutils literal notranslate"><span class="pre">[abc]</span></code> แปลว่าตัวอักษร a หรือ b หรือ c แต่ถ้าหากเราต้องการให้จับคู่กับตัวอักษรที่ไม่ใช่ a หรือ b หรือ c เราสามารถใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">^</span></code> นำหน้าได้ เช่น <code class="docutils literal notranslate"><span class="pre">[^abc]</span></code> แปลว่าตัวอักษรอะไรก็ได้ที่ไม่ใช่ a หรือ b หรือ c สรุปได้ดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
 <th class="head"><p>แทนตัวอะไรบ้าง</p></th>
@@ -983,13 +1018,14 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">-</span></code> ที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">[]</span></code> ใช้สำหรับการไล่ตัวอักษร เช่น</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> แปลว่าตัวอักษรที่อยู่ใน a ถึง z</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> แปลว่าตัวอักษรที่อยู่ใน 0 ถึง 9 ซึ่งความหมายเหมือนกับ \d</p></li>
 </ul>
 <p>ตัวอย่างการใช้งาน</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สัญลักษณ์</p></th>
 <th class="head"><p>แทนตัวอะไรบ้าง</p></th>
@@ -1011,8 +1047,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>หากต้องการเขียนสัญลักษณ์ที่ให้จับกับเฉพาะตัวอักษรไทย เราจะต้องสร้างเซ็ตที่ไล่ตัวอักษรไทยให้ครบทั้งพยัญชนะ สระ และวรรณยุกต์ ลำดับในการไล่ตัวอักษรในเรกเอกซ์จะอิงจากรหัสในระบบยูนิโค้ด ซึ่งจะไล่ตัวอักษรไทยตามตารางต่อไปนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>0</p></th>
@@ -1144,6 +1181,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ดังนั้นเซตของตัวอักษรที่ใช้บ่อยสำหรับภาษาไทย มีดังนี้</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[ก-๛]</span></code> จะจับกับตัวอักษรไทยทุกตัวโดยรวมถึงพินทุ นิคหิต ฟองมัน และสัญลักษณ์เงินบาท</p></li>
@@ -1152,11 +1190,11 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">[ก-์๐-๙]</span></code> จะจับกับพยัญชนะ สระ และวรรณยุกต์ทุกตัว เลขไทยทุกตัว และยังรวมถึงสัญลักษณ์เงินบาท และเครื่องหมายไปรยาลน้อย</p></li>
 </ul>
 </section>
-<section id="id16">
-<h3>ตัวบอกปริมาณ<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>ตัวบอกปริมาณ<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>ตัวบอกปริมาณ (quantifier)  ใช้เพื่อกำหนดจำนวนครั้งที่อักขระหรือกลุ่มอักขระสามารถปรากฏในสตริงที่เรากำลังตรวจสอบ
 เราสามารถระบุปริมาณของตัวอักษรหรือกลุ่มของตัวอักษรโดยการใช้ตัวอักษรร่วมกับตัวบอกปริมาณ การใช้ตัวบอกปริมาณมี 7 แบบ ได้แก่</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ตัวบอกปริมาณ</p></th>
 <th class="head"><p>ความหมาย</p></th>
@@ -1186,8 +1224,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ตัวอย่าง</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>เรกเอกซ์</p></th>
 <th class="head"><p>แปลว่า</p></th>
@@ -1205,8 +1244,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<section id="id17">
-<h4>ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
+</div>
+<section id="id18">
+<h4>ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">\w{3,}\.\w&#64;chula\.ac\.th</span></code> เป็นเรกเอกซ์สำหรับแพตเทิร์นของ email address ที่โดเมนคือ <a class="reference external" href="http://chula.ac.th">chula.ac.th</a></p>
 <ul class="simple">
 <li><p>เริ่มต้นด้วยตัวอักษร (\w) 3 ตัวขึ้นไป</p></li>
@@ -1215,7 +1255,7 @@ document.write(`
 <li><p>ตามด้วยเครื่องหมาย &#64;</p></li>
 <li><p>ตามด้วยคำว่า <a class="reference external" href="http://chula.ac.th">chula.ac.th</a> ซึ่งเครื่องหมายจุดทั้งสองตัวต้องมีการหนีโดยการใช้ <code class="docutils literal notranslate"><span class="pre">\.</span></code> เพราะ <code class="docutils literal notranslate"><span class="pre">.</span></code> เป็นอักขระพิเศษ</p></li>
 </ul>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>สตริง</p></th>
 <th class="head"><p>จับกับเรกเอกซ์</p></th>
@@ -1241,22 +1281,23 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 </section>
 <section id="backreference">
-<h3>การอ้างอิงกลับ (Backreference)<a class="headerlink" href="#backreference" title="Permalink to this heading">#</a></h3>
+<h3>การอ้างอิงกลับ (Backreference)<a class="headerlink" href="#backreference" title="Link to this heading">#</a></h3>
 <p>การอ้างอิงกลับ คือการใช้ค่าของกลุ่มอักขระที่จับคู่ได้ก่อนหน้า (capturing group) ในส่วนอื่นของเรกเอกซ์ กลุ่มที่จับคู่ได้จะถูกเก็บในหน่วยความจำชั่วคราวและสามารถเรียกใช้งานซ้ำได้โดยใช้ตัวบอกการอ้างอิงกลับ</p>
 <p>กลุ่มที่จับคู่ได้ถูกสร้างขึ้นด้วยการใช้วงเล็บ <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> เพื่อระบุส่วนของสตริงที่เราต้องการจับคู่และเก็บไว้ จากนั้นจึงมีการอ้างอิงกลับด้วยหมายเลขกลุ่ม <code class="docutils literal notranslate"><span class="pre">\1</span></code> เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่แรก <code class="docutils literal notranslate"><span class="pre">\2</span></code>เพื่ออ้างอิงกลับถึงจับกลุ่มด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> คู่ที่สอง</p>
-<section id="id18">
-<h4>ตัวอย่างการอ้างอิงกลับ 1<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
+<section id="id19">
+<h4>ตัวอย่างการอ้างอิงกลับ 1<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>\<span class="n">w</span><span class="o">+</span><span class="p">)</span> \<span class="mi">1</span> 
 </pre></div>
 </div>
 <p>แปลว่าแพตเทิร์นที่ขึ้นตัวด้วยตัวอักษรอย่างน้อยหนึ่งตัว ซึ่งให้เรียกว่ากลุ่มที่ 1 เนื่องจากเราจัดกลุ่มไว้โดยการใส่ในวงเล็บ จากนั้นตามด้วยช่องว่างหนึ่งช่อง และตามด้วยแพตเทิร์นที่เราจับคู่ไปแล้วในกลุ่มที่หนึ่ง ซึ่งเราใช้ <code class="docutils literal notranslate"><span class="pre">\1</span></code> ในการอ้างถึงกลับไปยังกลุ่มที่หนึ่ง  ดังนั้นเรกเอกซ์นี้จะจับคู่กับสตริงที่มีคำที่ซ้ำกันอยู่ติดกัน เช่น
 <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">hello</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">bye</span> <span class="pre">bye</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">hi</span> <span class="pre">hi</span></code> แต่ว่าไม่จับคู่กับ <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">hi</span></code> เพราะว่า <code class="docutils literal notranslate"><span class="pre">\1</span></code> จะต้องจับคู่กับสตริงที่จับคู่กับเรกเอกซ์ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> แรก</p>
 </section>
-<section id="id19">
-<h4>ตัวอย่างการอ้างอิงกลับ 2<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
+<section id="id20">
+<h4>ตัวอย่างการอ้างอิงกลับ 2<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการจับคู่ข้อความที่มีแพตเทิร์น ดังนี้ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่ะ</span> <span class="pre">มอร์นิ่ง</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่ะ</span> <span class="pre">ดี</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">แยกย้ายค่ะ</span> <span class="pre">แยกย้าย</span></code> แต่ไม่จับคู่กับ <code class="docutils literal notranslate"><span class="pre">มอร์นิ่งค่ะ</span> <span class="pre">คุณ</span></code> <code class="docutils literal notranslate"><span class="pre">ดีค่ะ</span> <span class="pre">จบ</span></code> <code class="docutils literal notranslate"><span class="pre">จบค่ะ</span> <span class="pre">แยกย้าย</span></code> เราสามารถใช้การจัดกลุ่มเพื่ออ้างอิงกลับได้ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>^([ก-์]+)ค่ะ \1$
 </pre></div>
@@ -1271,10 +1312,10 @@ document.write(`
 </section>
 </section>
 </section>
-<section id="id20">
-<h2>นิพจน์ปรกติในภาษาไพทอน<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<section id="id21">
+<h2>นิพจน์ปรกติในภาษาไพทอน<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <p>คำสั่งที่เกี่ยวกับเรกเอกซ์อยู่ในโมดูล <code class="docutils literal notranslate"><span class="pre">re</span></code> ของไพทอน คำสั่งที่จำเป็นต้องทราบสำหรับการใช้เรกเอกซ์มีอยู่ 5 คำสั่ง ได้แก่</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>ฟังก์ชัน</p></th>
 <th class="head"><p>จุดประสงค์การใช้</p></th>
@@ -1298,13 +1339,14 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>ทั้ง 5 คำสั่งเป็นคำสั่งที่ต้องเราเขียนเรกเอกซ์เพื่อระบุแพตเทิร์นที่เราต้องการหา ในภาษาไพทอนเรามักจะระบุเรกเอกซ์โดยการใช้สตริงดิบ หรืออาร์สตริง (raw string หรือ r string) อาร์สตริงมีวิธีการสร้างเหมือนกับสตริงทั่วไปเพียงแต่ใช้ตัวอักษร <code class="docutils literal notranslate"><span class="pre">r</span></code> ก่อนเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">'</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> ที่เราใช้นำหน้าสตริงทั่วไป เช่น เรกเอกซ์สำหรับหาหมายเลขโทรศัพท์ประเทศไทย 10 หลัก จะเขียนได้เป็น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phone_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\d\d\d-\d\d\d-\d\d\d\d&#39;</span>
 </pre></div>
 </div>
 <p>ที่จริงแล้วเราจะใช้สตริงธรรมดาแทนก็ได้ แต่ว่ามีอักขระพิเศษบางสัญลักษณ์ที่สตริงธรรมดา และอาร์สตริงมีความหมายต่างกัน เช่น ‘\b’ ในสตริงธรรมดาหมายถึง backspace แต่ในอาร์สตริงหมายถึงตัวแบ่งคำ ดังนั้นเราจึงควรใช้อาร์สตริงในการเขียนเรกเอกซ์แทน</p>
 <section id="re-match">
-<h3><code class="docutils literal notranslate"><span class="pre">re.match</span></code><a class="headerlink" href="#re-match" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">re.match</span></code><a class="headerlink" href="#re-match" title="Link to this heading">#</a></h3>
 <p>คำสั่งนี้ใช้สำหรับการจับคู่สตริงกับแพตเทิร์นที่ระบุด้วยเรกเอกซ์ โดยจะพยายามจับคู่จากจุดเริ่มต้นของสตริงเท่านั้น หากตรงตามแพตเทิร์น ฟังก์ชันจะส่งคืนค่าอ็อบเจกต์ <code class="docutils literal notranslate"><span class="pre">Match</span></code> หากไม่ตรงจะส่งคืน <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>ตัวอย่าง</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -1328,7 +1370,7 @@ document.write(`
 <p>ข้อสังเกตแรกคือเราใช้ <code class="docutils literal notranslate"><span class="pre">()</span></code> ในเรกเอกซ์ข้างต้นเพื่อเป็นการจัดกลุ่มที่เราสามารถอ้างถึงได้ภายหลังด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">.group</span></code> โดย กลุ่มที่ 0 จะอ้างถึงทั้งแพตเทิร์น ส่วนเลขกลุ่มต่อ ๆ ไปจะเรียงจากซ้ายไปขวา</p>
 </section>
 <section id="re-search">
-<h3><code class="docutils literal notranslate"><span class="pre">re.search</span></code><a class="headerlink" href="#re-search" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">re.search</span></code><a class="headerlink" href="#re-search" title="Link to this heading">#</a></h3>
 <p>คำสั่งนี้คล้ายคลึงกับ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> เกือบทุกประการ เพียงแต่ว่าจะคำสั่งนี้จะสแกนหาทั้งสตริง เพื่อหาว่าแพตเทิร์นไปจับคู่กับส่วนใดส่วนหนึ่งของสตริงหรือไม่ ไม่ได้จำกัดแค่ตัวอักษรแรกของสตริงเหมือนกับ <code class="docutils literal notranslate"><span class="pre">.match</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;นาย([ก-์]+)พล ([ก-์]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;ได้เข้าพบนายณัฐพล โคกสูงเนิน&#39;</span><span class="p">)</span> <span class="c1"># None เพราะไม่ได้จับคู่ได้ตั้งแต่ต้นสตริง</span>
@@ -1341,7 +1383,7 @@ document.write(`
 <p>อ็อบเจกต์ <code class="docutils literal notranslate"><span class="pre">Match</span></code> ที่คืนค่ากลับมามีวิธีการใช้เช่นเดิม</p>
 </section>
 <section id="re-findall">
-<h3><code class="docutils literal notranslate"><span class="pre">re.findall</span></code><a class="headerlink" href="#re-findall" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">re.findall</span></code><a class="headerlink" href="#re-findall" title="Link to this heading">#</a></h3>
 <p>คำสั่งนี้ใช้ในสถานการณ์ที่เราทราบว่าแพตเทิร์นที่เราระบุในเรกเอกซ์นั่นเกิดขึ้นซ้ำกันหลาย ๆ ครั้ง และเราต้องการดึงข้อความที่จับคู่กับเรกเอกซ์ทั้งหมดมาเก็บไว้ในลิสต์ ซึ่งต่างจาก <code class="docutils literal notranslate"><span class="pre">re.search</span></code> และ <code class="docutils literal notranslate"><span class="pre">re.match</span></code> ซึ่งจะให้ส่วนของสตริงที่จับคู่มาแค่ส่วนเดียวเท่านั้น</p>
 <p>สมมติว่าเราต้องการหาคำที่ลงท้ายด้วย -s ทั้งหมด</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -1372,13 +1414,13 @@ document.write(`
 <p>ในทั้งสองตัวอย่างให้สังเกตว่าคำสั่งนี้จะคืนค่ามาเป็นลิสต์ของสตริง หรือลิสต์ของทูเปิล ไม่ได้คืนค่ามาเป็นอ็อบเจกต์ <code class="docutils literal notranslate"><span class="pre">Match</span></code> เหมือนคำสั่ง <code class="docutils literal notranslate"><span class="pre">re.match</span></code> และ <code class="docutils literal notranslate"><span class="pre">re.search</span></code></p>
 </section>
 <section id="re-sub">
-<h3><code class="docutils literal notranslate"><span class="pre">re.sub</span></code><a class="headerlink" href="#re-sub" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">re.sub</span></code><a class="headerlink" href="#re-sub" title="Link to this heading">#</a></h3>
 <p>คำสั่งนี้ย่อมาจากภาษาอังกฤษ <strong>sub</strong>stitute แปลว่าการแทนค่า คำสั่งนี้ไว้สำหรับการแทนที่ส่วนของสตริงที่จับคู่กับเรกเอกซ์ด้วยสตริงอื่น ๆ หรือสตริงว่างก็ได้ ซึ่งเป็นคำสั่งที่ใช้บ่อยในการประมวลผลข้อความ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">เรกเอกซ์ที่ต้องการใช้จับคู่</span><span class="p">,</span> <span class="n">สตริงที่จะมาใช้แทนค่า</span><span class="p">,</span> <span class="n">สตริงที่ต้องทำการจับคู่และแทนค่า</span><span class="p">)</span>
 </pre></div>
 </div>
-<section id="id21">
-<h4>ตัวอย่างการใช้งานเบื้องต้น<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h4>
+<section id="id22">
+<h4>ตัวอย่างการใช้งานเบื้องต้น<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการแทนที่คำว่า “สวัสดี” ด้วยคำว่า “สวัสดีครับ” ในประโยค ในกรณีนี้เราไม่จำเป็นต้องใช้อักขระพิเศษของเรกเอกซ์เลย สามารถใช้สตริงเป็นแพตเทิร์นได้เลย</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;สวัสดีทุกท่านที่มาร่วมงานในวันนี้&#39;</span>
@@ -1394,8 +1436,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id22">
-<h4>ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h4>
+<section id="id23">
+<h4>ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
 <p>สมมติว่าเราต้องการเปลี่ยนคำนามที่เป็นรูปพหูพจน์ทีเกิดจากการเติม -es ต่อท้ายคำ ให้กลายเป็นคำนามที่เป็นรูปเอกพจน์ ในกรณีนี้เราจะใช้สัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">()</span></code> ในเรกเอกซ์เพื่อบอกว่าเราต้องการแทนที่ส่วนที่จับคู่กับเรกเอกซ์ด้วยสตริงอื่น ๆ ซึ่งสตริงนั้นจะเป็นส่วนที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งเราสามารถอ้างถึงได้ด้วย <code class="docutils literal notranslate"><span class="pre">.group</span></code> ของอ็อบเจกต์ <code class="docutils literal notranslate"><span class="pre">Match</span></code>ที่คืนค่ากลับมาจาก <code class="docutils literal notranslate"><span class="pre">re.sub</span></code> ได้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;James misses the stitches that Carlos fixes&#39;</span>
@@ -1406,7 +1448,7 @@ document.write(`
 </section>
 </section>
 <section id="re-split">
-<h3><code class="docutils literal notranslate"><span class="pre">re.split</span></code><a class="headerlink" href="#re-split" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">re.split</span></code><a class="headerlink" href="#re-split" title="Link to this heading">#</a></h3>
 <p>คำสั่งนี้ใช้ในการหั่นสตริงออกเป็นลิสต์ โดยใช้เรกเอกซ์เป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง คำสั่งนี้คล้ายคลึงกับสตริงเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">.split</span></code> แต่ว่า <code class="docutils literal notranslate"><span class="pre">re.split</span></code> มีความยืดหยุ่นกว่า เพราะว่า <code class="docutils literal notranslate"><span class="pre">str.split</span></code> ต้องระบุตัวแบ่ง (delimiter) เป็นสตริงไม่สามารถระบุเป็นแพตเทิร์นที่ซับซ้อนได้ <code class="docutils literal notranslate"><span class="pre">re.split</span></code> ใช้เรกเอกซ์ในการกำหนดตัวแบ่ง</p>
 <p>สมมติว่าเราต้องการหั่นสตริงด้านล่างออกเป็นลิสต์ โดยใช้เครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างเป็นตัวบ่งบอกส่วนที่ใช้หั่นสตริง ในกรณีนี้เราจะใช้เรกเอกซ์<code class="docutils literal notranslate"><span class="pre">[,;\s]+</span></code> ซึ่งหมายถึงเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">,</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">;</span></code> หรือช่องว่างหนึ่งช่องหรือมากกว่า ในการหั่นสตริงออกเป็นลิสต์ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -1417,8 +1459,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id23">
-<h2>สรุป<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
+<section id="id24">
+<h2>สรุป<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
 <p>ในบทนี้เราได้เรียนรู้เกี่ยวกับไฟล์และเรกเอกซ์ โดยได้เรียนรู้เกี่ยวกับวิธีการเข้าถึงไฟล์ ความแตกต่างของพาทเต็มและพาทสัมพัทธ์ วิธีการเขียนไฟล์ และอ่านไฟล์ด้วยคำสั่งต่าง ๆ ทั้ง <code class="docutils literal notranslate"><span class="pre">open</span></code> <code class="docutils literal notranslate"><span class="pre">with</span></code> <code class="docutils literal notranslate"><span class="pre">.read()</span></code> <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> และการจัดเก็บข้อมูลให้อยู่ในรูป <code class="docutils literal notranslate"><span class="pre">json</span></code> ซึ่งเป็นหนึ่งในเรื่องที่ต้องรู้ก่อนจะดำเนินการจัดการข้อมูลต่อไป รวมถึงยังได้เรียนเรื่องเรกเอกซ์ซึ่งมีประโยชน์มากในการจัดการทำความสะอาดข้อมูล</p>
 <p>เรกเอกซ์เป็นเครื่องมือที่ใช้ในการกำหนดแพตเทิร์นในสตริง โดยใช้อักขระพิเศษต่าง ๆ เช่น  <code class="docutils literal notranslate"><span class="pre">^</span> <span class="pre">$</span> <span class="pre">.</span> <span class="pre">+</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">{</span> <span class="pre">}</span> <span class="pre">|</span> <span class="pre">(</span> <span class="pre">)</span> <span class="pre">\w</span> <span class="pre">\W</span> <span class="pre">\d</span> <span class="pre">\D</span> <span class="pre">\s</span> <span class="pre">\S</span> <span class="pre">\b</span></code> นอกจากนี้ เรายังได้ศึกษาวิธีการใช้งานตัวบ่งบอกปริมาณ ในเรกเอกซ์ซึ่งประกอบด้วยสัญลักษณ์ <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">{n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{m,n}</span></code>, <code class="docutils literal notranslate"><span class="pre">{n,}</span></code>, และ <code class="docutils literal notranslate"><span class="pre">{,n}</span></code> สำหรับการระบุจำนวนครั้งที่ต้องการค้นหา และได้ศึกษาวิธีการใช้งาน การอ้างอิงกลับเพื่ออ้างถึงกลุ่มย่อยที่จับคู่ได้ก่อนหน้านี้ในแพตเทิร์นอีกด้วย</p>
 <p>ภาษาไพทอนมีโมดูล <code class="docutils literal notranslate"><span class="pre">re</span></code> ในการทำงานกับเรกเอกซ์คำสั่งที่ใช้บ่อย ๆ ในการประมวลข้อมูล ได้แก่</p>
@@ -1458,11 +1500,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../4-text_file.html"
@@ -1482,10 +1523,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1494,62 +1532,63 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">ไฟล์</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การระบุพาท</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">พาทเต็ม</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">พาทสัมพัทธ์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ไฟล์</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">การระบุพาท</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">พาทเต็ม</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">พาทสัมพัทธ์</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">การอ่านเขียนไฟล์ข้อมูล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">อ่านไฟล์ไล่ทีละบรรทัด</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การอ่านเขียนไฟล์ข้อมูล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">อ่านไฟล์ไล่ทีละบรรทัด</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with">เปิดไฟล์ด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">with</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read">อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่สตริง: <code class="docutils literal notranslate"><span class="pre">.read()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readline">อ่านไฟล์เพียงบางบรรทัด: <code class="docutils literal notranslate"><span class="pre">.readline()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readlines">อ่านไฟล์และถ่ายข้อมูลทั้งหมดใส่ลิสต์: <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">เขียนสตริงใส่ไฟล์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">เขียนสตริงใส่ไฟล์</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">เขียนดิกชันนารี หรือลิสต์ใส่ไฟล์โดยใช้ไลบรารี <code class="docutils literal notranslate"><span class="pre">json</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">นิพจน์ปรกติ</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">อักขระปกติ</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">อักขระพิเศษ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">นิพจน์ปรกติ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">สัญลักษณ์ที่ใช้ในนิพจน์ปรกติ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">อักขระปกติ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">อักขระพิเศษ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">ตัวอย่างเรกเอกซ์ที่ใช้อักขระพิเศษ 3</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การจัดเซตของตัวอักษร</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">ตัวบอกปริมาณ</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">การจัดเซตของตัวอักษร</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">ตัวบอกปริมาณ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวอย่างเรกเอกซ์ที่ใช้ตัวบอกปริมาณ 1</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backreference">การอ้างอิงกลับ (Backreference)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">ตัวอย่างการอ้างอิงกลับ 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการอ้างอิงกลับ 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ตัวอย่างการอ้างอิงกลับ 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ตัวอย่างการอ้างอิงกลับ 2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">นิพจน์ปรกติในภาษาไพทอน</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">นิพจน์ปรกติในภาษาไพทอน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-match"><code class="docutils literal notranslate"><span class="pre">re.match</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-search"><code class="docutils literal notranslate"><span class="pre">re.search</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-findall"><code class="docutils literal notranslate"><span class="pre">re.findall</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-sub"><code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ตัวอย่างการใช้งานเบื้องต้น</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ตัวอย่างการใช้งานเบื้องต้น</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ตัวอย่างการใช้งานแบบมีการอ้างอิงกลับ</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-split"><code class="docutils literal notranslate"><span class="pre">re.split</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">สรุป</a></li>
 </ul>
   </nav></div>
 
@@ -1571,6 +1610,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1597,8 +1637,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

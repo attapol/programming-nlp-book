@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>แบบฝึกหัด: โครงสร้างข้อมูล I &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module3/03-exercise-data-structure';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -287,14 +312,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/attapol/programming-nlp-book/blob/main/book/module3/03-exercise-data-structure.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -415,26 +440,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -494,14 +521,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="i">
-<h1>แบบฝึกหัด: โครงสร้างข้อมูล I<a class="headerlink" href="#i" title="Permalink to this heading">#</a></h1>
+<h1>แบบฝึกหัด: โครงสร้างข้อมูล I<a class="headerlink" href="#i" title="Link to this heading">#</a></h1>
 <section id="id1">
-<h2>โจทย์เรื่องลิสต์<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>โจทย์เรื่องลิสต์<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="id2">
-<h3>ข้อ 1. สลากกินแบ่ง<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 1. สลากกินแบ่ง<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันเพื่อตรวจสอบว่าสลากกินแบ่ง (lottery) ที่มีอยู่ (อาจมีมากกว่า 1 ใบ) ถูกรางวัลทั้งหมดเท่าไร
 โดยที่ฟังก์ชันจะรับข้อมูล 3 อย่าง ได้แก่</p>
 <ol class="arabic simple">
@@ -547,7 +574,7 @@ document.write(`
 </div>
 </section>
 <section id="id3">
-<h3>ข้อ 2. ลิสต์อาหาร<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 2. ลิสต์อาหาร<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>เพื่อนของคุณซึ่งเป็นผู้ชนะจากรายการ Master Top Iron Supercook Thailand ได้รับมอบหมายให้ไปทำอาหารให้เด็กนักเรียนโรงเรียน Sarasas Cadbury International แต่กลับโชคไม่ดีที่ว่าเด็กนักเรียนโรงเรียนนี้เป็นเด็กที่เลือกกินมาก เด็กแต่ละคนจะมี ลิสต์ของอาหารที่ตัวเองไม่กิน เพราะฉะนั้นเพื่อนของคุณจะต้องตรวจสอบวัตถุดิบของทุกจาน เพื่อเลือกสิ่งที่เด็กแต่ละคนไม่กินออก</p>
 <p>จงเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">select_ingredients</span></code> ซึ่งรับ input ดังนี้</p>
 <ol class="arabic simple">
@@ -572,7 +599,7 @@ document.write(`
 </div>
 </section>
 <section id="a-an">
-<h3>ข้อ 3. a/an<a class="headerlink" href="#a-an" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 3. a/an<a class="headerlink" href="#a-an" title="Link to this heading">#</a></h3>
 <p>เราเรียนกันมาแล้วว่า a ใช้นำหน้าคำที่ขึ้นต้นด้วยเสียงพยัญชนะ และ an ใช้นำหน้าคำที่ขึ้นต้นด้วยเสียงสระ</p>
 <p>จงเขียนฟังก์ชันที่รับสตริงเป็น input และ return สตริงที่มีแก้การใช้ a/an โดยให้ assume ว่า</p>
 <ul class="simple">
@@ -596,7 +623,7 @@ document.write(`
 </div>
 </section>
 <section id="id4">
-<h3>ข้อ 4. ทำความสะอาดข้อมูล<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 4. ทำความสะอาดข้อมูล<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่รับสตริงประโยคภาษาอังกฤษ และ return ลิสต์ของคำในประโยคนั้น โดยไม่มีเครื่องหมายวรรคตอน (<code class="docutils literal notranslate"><span class="pre">.,!?:</span></code>)</p>
 <p>คำใบ้</p>
 <ol class="arabic simple">
@@ -620,7 +647,7 @@ document.write(`
 </div>
 </section>
 <section id="id5">
-<h3>ข้อ 5. ความยาวเฉลี่ยของคำ<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 5. ความยาวเฉลี่ยของคำ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันหาความยาวเฉลี่ยของคำที่อยู่ในข้อความ โดยให้ใช้ฟังก์ชันจากข้อที่แล้วมาใช้ในการช่วยในการหาลิสต์ของคำทั้งหมดที่ไม่มีเครื่องหมายวรรคตอนอยู่เลย</p>
 <p>คำใบ้: ใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">sum()</span></code> ในการหาผลรวมของตัวเลขที่อยู่ในลิสต์ทั้งหมด</p>
 <div class="cell docutils container">
@@ -633,7 +660,7 @@ document.write(`
 </div>
 </section>
 <section id="id6">
-<h3>ข้อ 6. ตรวจข้อสอบ<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 6. ตรวจข้อสอบ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>จงเขียนฟังก์ชันตรวจข้อสอบโดยรับค่า parameter 2 ตัว ได้แก่ ลิสต์ของเฉลยข้อสอบ และลิสต์ของคำตอบที่ต้องการตรวจในลำดับเดียวกัน ให้ข้อที่ถูกได้คะแนน 1 คะแนน หลังจากนั้นให้ฟังก์ชันคืนค่าเปอร์เซนต์ของข้อที่ตอบทั้งหมด</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -651,7 +678,7 @@ document.write(`
 </div>
 </section>
 <section id="id7">
-<h3>ข้อ 7. เปลี่ยนตัว<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 7. เปลี่ยนตัว<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>สมมติว่าเรามีลิสต์ของแขกที่จะมาร่วมงานวันเกิด แต่ว่าแขกมักจะมีการเปลี่ยนตัวกระทันหันเนื่องจากอาจจะติดธุระมาไม่ได้ จงเขียนฟังก์ชันที่รับ 3 พารามิเตอร์</p>
 <ol class="arabic simple">
 <li><p>ลิสต์ของสตริงที่ชื่อแขกทั้งหมดอยู่</p></li>
@@ -676,7 +703,7 @@ document.write(`
 </div>
 </section>
 <section id="id8">
-<h3>ข้อ 8. คำนวณสถิติ<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 8. คำนวณสถิติ<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่รับลิสต์ของตัวเลขเข้ามาเป็น input และคำนวณหาค่าต่ำสุด สูงสุด เรนจ์ (สูงสุด - ต่ำสุด) ค่ามัธยฐาน และค่าเฉลี่ย โดย <code class="docutils literal notranslate"><span class="pre">print</span></code> ออกมาและไม่ return ค่าใด ๆ และเพ่ือทำให้โจทย์นี้ง่ายลง เราสามารถ assume ได้ว่าจำนวนสมาชิกของลิสต์เป็นเลขคี่</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score_nlps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stats_summary</span><span class="p">(</span><span class="n">score_nlps</span><span class="p">)</span>
@@ -698,7 +725,7 @@ document.write(`
 </div>
 </section>
 <section id="id9">
-<h3>ข้อ 9. เลือกคำ<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 9. เลือกคำ<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>จงเขียน function หาคำที่สนใจ โดยกำหนดให้ function รับ parameter เข้ามา 2 ตัว</p>
 <ol class="arabic simple">
 <li><p>list ของประโยคที่ถูกตัดคำแล้ว เช่น [‘She’, ‘went’, ‘to’, ‘eat’, ‘pizza’, ‘at’, ‘Huahin’ ,’yesterday’]</p></li>
@@ -725,9 +752,9 @@ document.write(`
 </section>
 </section>
 <section id="id10">
-<h2>โจทย์เรื่องดิกชันนารี<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<h2>โจทย์เรื่องดิกชันนารี<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <section id="id11">
-<h3>ข้อ 1. ตัดเกรด<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 1. ตัดเกรด<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่ตัดเกรดให้กับนักเรียนโดยที่ดูจากคะแนนการสอบสองครั้งที่ผ่านมา คะแนนสอบแต่ละครั้งนั้นถูกเก็บในรูปของ dictionary ที่ key=ชื่อนักเรียน value=คะแนนสอบ 0-10 คะแนน ถ้านักเรียนไม่ได้เข้าสอบชื่อก็จะไม่ได้อยู่ใน dictionary  เรามีเกณฑ์การตัดเกรดง่ายๆ ดังนี้</p>
 <ul class="simple">
 <li><p>นักเรียนที่สอบผ่านทั้งสองครั้ง (คะแนน &gt; 5 ทั้งสองครั้ง) จะได้ A</p></li>
@@ -754,7 +781,7 @@ document.write(`
 </div>
 </section>
 <section id="recode-part-1">
-<h3>ข้อ 2. Recode part 1<a class="headerlink" href="#recode-part-1" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 2. Recode part 1<a class="headerlink" href="#recode-part-1" title="Link to this heading">#</a></h3>
 <p>หลายครั้งเวลาเราประมวลผลข้อมูลที่เป็นคำ เราต้องเปลี่ยนคำให้เป็นตัวเลข (เรียกว่า index)
 เพราะว่าตัวเลขกินพื้นที่น้อยกว่าและจัดเก็บได้ง่ายกว่าตัวหนังสือ จงเขียนฟังก์ชันที่เปลี่ยนคำใน list เป็น list of index โดยมองหา index จาก dictionary ที่กำหนดให้</p>
 <p>dictionary จะมีลักษณะดังนี้คือ ถ้ามี key อยู่ 3 ตัว value จะเป็น 0, 1, 2 และจะไม่ซ้ำกันเช่น</p>
@@ -786,7 +813,7 @@ document.write(`
 </div>
 </section>
 <section id="recode-part-2">
-<h3>ข้อ 3. Recode part 2<a class="headerlink" href="#recode-part-2" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 3. Recode part 2<a class="headerlink" href="#recode-part-2" title="Link to this heading">#</a></h3>
 <p>เมื่อเวลาเราประมวลผลข้อมูลเสร็จแล้ว เราจะต้องการแปลงค่าที่เป็น index ของคำกลับไปเป็นคำเหมือนเดิม เช่น ถ้าดิกชันนารีจากคำไป index มีลักษณะดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;mat&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bat&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;eat&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
@@ -816,7 +843,7 @@ document.write(`
 </div>
 </section>
 <section id="id12">
-<h3>ข้อ 4.<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 4.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>โนโน่เป็นคนชอบเขียนโปรแกรมและกินผลไม้มาก โนโน่เลยเก็บจำนวนผลไม้ที่มีในตู้เย็นไว้ใน python dictionary เช่น <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;apple&quot;:</span> <span class="pre">1,</span> <span class="pre">&quot;banana&quot;:</span> <span class="pre">2</span> <span class="pre">}</span></code> คือมีแอปเปิ้ล 1 ลูก กล้วย 2 ลูก ต่อมา โนโน่ซื้อตู้เย็นมาอีกตู้ จึงมี dictionary อีกอันหนึ่งไว้เก็บจำนวนผลไม้</p>
 <p>โนโน่อยากรู้จำนวนผลไม้ที่มีทั้งหมด ช่วยโนโน่หน่อย เขียนฟังก์ชันที่รับ dictionary 2 ตัวเป็น parameters (คือ dictionary ที่แทนผลไม้ในตู้ที่ 1 และ 2 ตามลำดับ) และ return dictionary แสดงจำนวนผลไม้ทั้งหมด เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">count_fruits</span><span class="p">({</span><span class="s2">&quot;apple&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;apple&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
@@ -843,7 +870,7 @@ document.write(`
 </div>
 </section>
 <section id="id13">
-<h3>ข้อ 5. สนุกกำลังสอง<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 5. สนุกกำลังสอง<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่รับค่า n แล้ว return dictionary ที่มี key ตั้งแต่ 1 ถึง n โดย value ของแต่ละตัวคือ key ยกกำลังสอง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">squared_dict</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  
 <span class="o">&gt;&gt;&gt;</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span> <span class="p">}</span>
@@ -863,7 +890,7 @@ document.write(`
 </div>
 </section>
 <section id="dictionary">
-<h3>ข้อ 6. สร้าง dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 6. สร้าง dictionary<a class="headerlink" href="#dictionary" title="Link to this heading">#</a></h3>
 <p>สมมติว่าเรามี list ของคำศัพท์ และ list ของคำแปล</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">english_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;floor&#39;</span><span class="p">]</span>
 <span class="n">thai_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;คอมพิวเตอร์&#39;</span><span class="p">,</span> <span class="s1">&#39;หมา&#39;</span><span class="p">,</span> <span class="s1">&#39;พื้น&#39;</span><span class="p">]</span>
@@ -885,7 +912,7 @@ document.write(`
 </div>
 </section>
 <section id="simplify">
-<h3>ข้อ 7. Simplify<a class="headerlink" href="#simplify" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 7. Simplify<a class="headerlink" href="#simplify" title="Link to this heading">#</a></h3>
 <p>สมมติว่าเราต้องการทำให้ข้อความเข้าใจง่ายขึ้นโดยการแทนที่คำยากด้วยคำง่าย โดยเราจะเก็บคู่ของคำยาก คำง่ายไว้ใน ใน dictionary ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">censor_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;utilize&#39;</span><span class="p">:</span> <span class="s1">&#39;use&#39;</span><span class="p">,</span>
@@ -921,9 +948,9 @@ document.write(`
 </section>
 </section>
 <section id="id14">
-<h2>โจทย์เรื่องเซ็ต<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<h2>โจทย์เรื่องเซ็ต<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <section id="id15">
-<h3>ข้อ 1 - คำที่ไม่ซ้ำ<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 1 - คำที่ไม่ซ้ำ<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>จงเขียนฟังก์ชันที่รับสตริงที่เป็นประโยคภาษาอังกฤษแบบไม่มีเครื่องหมายวรรคตอนใด ๆ (ยกเว้นช่องว่าง) และเป็นตัวพิมพ์เล็กทั้งหมด ให้ฟังก์ชันนี้ return คำทั้งหมดที่เจอในสตริง เรียงตามลำดับตัวอักษรรวมกันเป็นสตริงเดียวไม่มีคำที่ซ้ำ (duplicate) แต่ละคำถูกคั่นด้วย <code class="docutils literal notranslate"><span class="pre">|</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -939,7 +966,7 @@ document.write(`
 </div>
 </section>
 <section id="id16">
-<h3>ข้อ 2 - ตัวอักษรที่ไม่ซ้ำ<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 2 - ตัวอักษรที่ไม่ซ้ำ<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>จงเขียนฟังก์ชันที่หาว่าสตริงที่ได้รับมามีตัวอักษรซ้ำกันบ้างหรือไม่</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -962,7 +989,7 @@ document.write(`
 </div>
 </section>
 <section id="id17">
-<h3>ข้อ 3 - สินค้าที่ร้านอื่นไม่มี<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 3 - สินค้าที่ร้านอื่นไม่มี<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่เปรียบเทียบรายการสินค้าของร้าน A กับร้าน B โดยให้หาว่าอะไรบ้างที่ร้าน A ขายแต่ร้าน B ไม่ได้ขาย ฟังก์ชันนี้รับ list ของสตริงที่แสดงรายการสินค้าจากร้าน A และอีก list แสดงรายการสินค้าของร้าน B ฟังก์ชันนี้ต้อง return list ของสินค้า</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -982,7 +1009,7 @@ document.write(`
 </div>
 </section>
 <section id="out-of-vocabulary">
-<h3>ข้อ 4 - Out of vocabulary<a class="headerlink" href="#out-of-vocabulary" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 4 - Out of vocabulary<a class="headerlink" href="#out-of-vocabulary" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันที่รับ list ของคำ (สตริง) และ vocabulary ซึ่งเป็นเซ็ตของสตริง ให้ฟังก์ชันนี้ return จำนวนคำในลิสต์ที่ไม่อยู่ใน vocabulary ได้รับมา</p>
 <p>ข้อนี้ให้ลองแก้สองวิธี</p>
 <ol class="arabic simple">
@@ -999,7 +1026,7 @@ document.write(`
 </div>
 </section>
 <section id="dinner">
-<h3>ข้อ 5 - Dinner<a class="headerlink" href="#dinner" title="Permalink to this heading">#</a></h3>
+<h3>ข้อ 5 - Dinner<a class="headerlink" href="#dinner" title="Link to this heading">#</a></h3>
 <p>เขียนฟังก์ชันชื่อ agree_dinner ที่รับ parameter เป็นชื่อ list จำนวน 3 list ซึ่งแต่ละ list จะเป็นประเภทของอาหารที่เพื่อนแต่ละคนอยากทาน ให้ฟังก์ชันนี้ return ค่าเป็น list ของประเภทอาหารที่ทุกคนอยากทาน โดยเรียงลำดับตามตัวอักษร เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">agree_dinner</span><span class="p">(</span>
   <span class="p">[</span><span class="s1">&#39;thai&#39;</span><span class="p">,</span> <span class="s1">&#39;chinese&#39;</span><span class="p">,</span> <span class="s1">&#39;japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;shabu&#39;</span><span class="p">],</span>
@@ -1046,11 +1073,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="02-videos-list.html"
@@ -1070,10 +1096,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1081,6 +1104,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1139,6 +1163,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1165,8 +1190,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

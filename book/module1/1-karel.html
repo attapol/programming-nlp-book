@@ -1,67 +1,63 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>บทที่ 1 การคิดเชิงคำนวณ (Computational Thinking) &#8212; Programming for NLP</title>
+    <title>บทที่ 1 การเขียนโปรแกรม และการคิดเชิงคำนวณ &#8212; Programming for NLP</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module1/1-karel';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module6/1-OOP.html">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module6/3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -414,7 +441,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>บทที่ 1 </br> การคิดเชิงคำนวณ (Computational Thinking)</h1>
+    <h1>บทที่ 1 </br> การเขียนโปรแกรม และการคิดเชิงคำนวณ</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -424,29 +451,41 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">หุ่นยนต์คาเรล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การติดตั้งไพทอน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">ติดตั้งโปรแกรม Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-vscode">Visual Studio Code (VSCode)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">โปรแกรมและฟังก์ชัน</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">คอมเมนต์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การนำเข้าไลบรารี</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การประกาศฟังก์ชัน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">กำหนดคำสั่งการรันไฟล์ไพทอน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">เขียนโปรแกรมแบบตอบโต้ (Interactive)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เขียนโปรแกรมใส่ไฟล์ และสั่งรันทั้งไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterlab">รันด้วย JupyterLab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">รันด้วย VS Code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การแบ่งปัญหาออกเป็นส่วนย่อย</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อควรระวัง</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การคิดเชิงคำนวณ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">หุ่นยนต์คาเรล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">โปรแกรมและฟังก์ชัน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">คอมเมนต์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การนำเข้าไลบรารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การประกาศฟังก์ชัน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">กำหนดคำสั่งการรันไฟล์ไพทอน</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การแบ่งปัญหาออกเป็นส่วนย่อย</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อควรระวัง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for">วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while">วงวน <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-elif">การตั้งเงื่อนไขด้วย <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code> และตัวปฏิบัติการบูลีน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-while">ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">บูลีน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">บูลีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">อ้างอิง</a></li>
 </ul>
             </nav>
         </div>
@@ -456,13 +495,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br-computational-thinking">
-<h1>บทที่ 1 </br> การคิดเชิงคำนวณ (Computational Thinking)<a class="headerlink" href="#br-computational-thinking" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>บทที่ 1 </br> การเขียนโปรแกรม และการคิดเชิงคำนวณ<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <div class="admonition- admonition">
 <p class="admonition-title">จุดมุ่งหมายของบทนี้</p>
 <ul class="simple">
+<li><p>เรียนรู้วิธีการติดตั้งและใช้ซอฟต์แวร์ในการเขียนโปรแกรมภาษาไพทอน</p></li>
 <li><p>แบ่งปัญหาออกเป็นส่วนย่อย ที่ต้องแก้ออกเป็นส่วนเล็ก ๆ</p></li>
 <li><p>การเขียนฟังก์ชันที่นำกลับมาใช้อีกได้</p></li>
 <li><p>การใช้วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code> <code class="docutils literal notranslate"><span class="pre">while</span></code> แบบไม่มีตัวแปร</p></li>
@@ -470,6 +510,117 @@ document.write(`
 <li><p>การใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">break</span></code></p></li>
 </ul>
 </div>
+<p>ไพทอน (Python) เป็นชื่อภาษาเขียนโปรแกรม (programming language) เป็นภาษาที่ได้รับความนิยมที่สุดในการประมวลผลและวิเคราะห์ข้อมูลต่าง ๆ ไม่ว่าจะเป็นข้อมูลที่เป็นตัวเลข ข้อมูลที่อยู่ในฐานข้อมูลเรียบร้อยแล้ว หรือข้อมูลที่เป็นภาษา  โปรแกรมชิ้นหนึ่งประกอบด้วยชุดคำสั่งที่เราจะเขียนขึ้นเป็นภาษาไพทอน</p>
+<section id="id2">
+<h2>การติดตั้งไพทอน<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>ตัวแปลคำสั่ง (interpreter) มีหน้าที่แปลคำสั่งจากภาษาโปรแกรมมิ่ง (programming language) เป็นภาษาเครื่อง (machine code) เพื่อทำให้เครื่องเข้าใจและกระทำการ (execute) ตามคำสั่งที่ป้อนเข้าไป</p>
+<p>ไลบรารี (library) โค้ดที่คนอื่นเขียนขึ้นมาให้แล้วพร้อมสำหรับใช้เป็นส่วนหนึ่งของโค้ดเราได้ทันที</p>
+<p>เทอร์มินัล (Terminal) เป็นโปรแกรมที่ทำให้เราสั่งคอมพิวเตอร์ให้ทำงานต่าง ๆ ได้โดยการพิมพ์คำสั่งและกดปุ่ม Enter</p>
+</aside>
+<section id="anaconda">
+<h3>ติดตั้งโปรแกรม Anaconda<a class="headerlink" href="#anaconda" title="Link to this heading">#</a></h3>
+<p>ส่วนประกอบต่าง ๆ ที่จำเป็นในการเขียนโปรแกรมเป็นภาษาไพทอน สามารถดาวน์โหลดพร้อมกันเป็นก้อนเดียวโดยการลงโปรแกรม Anaconda ซึ่งมีเครื่องมือต่าง ๆ ดังต่อไปนี้</p>
+<ul class="simple">
+<li><p>Python Interpreter ตัวแปลคำสั่งที่เขียนเป็นภาษาไพทอน เป็นภาษาที่เครื่องคอมพิวเตอร์เข้าใจ เพื่อจะได้นำไปรัน ตามที่เขียนได้ ต้องสังเกตเวอร์ชันที่ใช้ด้วยให้เป็นปัจจุบันที่สุด</p></li>
+<li><p>ไลบรารีภาษาไพทอนหลาย ๆ ตัวที่มักใช้สำหรับการประมวลผล และวิเคราะห์ข้อมูล ทำให้สะดวกสบายในการลงโปรแกรม</p></li>
+<li><p>Anaconda prompt คือ Terminal ประเภทหนึ่ง ซึ่งมักจะประกอบด้วยหน้าจอสีดำ ๆ และข้อความที่แสดงผลให้ผู้ใช้พิมพ์คำสั่งลงไป Anaconda prompt ลงไปโดยตรง เราจะใช้เทอร์มินัลในการรันคำสั่งลง library ต่าง ๆ และรันคำสั่งในการไฟล์โค้ดไพทอน</p></li>
+<li><p>สิ่งแวดล้อมสำหรับการพัฒนาแบบเบ็ดเสร็จ (Interactive Development Environment หรือ IDE)  เป็นเครื่องมือที่ไว้สำหรับอำนวยความสะดวกในการเขียนโค้ด ส่วนหลักคือหน้าต่างที่ไว้สำหรับพิมพ์โค้ด และบันทึกโค้ดเก็บลงไฟล์ รวมถึงฟีเจอร์อื่น ๆ ที่ทำให้เขียนโค้ดได้อย่างมีประสิทธิภาพมากขึ้น เช่น ปรับเปลี่ยนสีตัวอักษรต่าง ๆ เพื่อให้ดูง่ายขึ้น และสามารถปรับหน้าต่างเพื่อแสดงโค้ดหลาย ๆ ไฟล์ หรือหลาย ๆ หน้า ได้ตามความพอใจ</p></li>
+</ul>
+<figure class="align-default" id="id47">
+<img alt="../../_images/jupyternb.png" src="../../_images/jupyternb.png" />
+<figcaption>
+<p><span class="caption-number">ภาพที่ 1 </span><span class="caption-text">ภาพตัวอย่างหน้าต่าง Jupyter notebook</span><a class="headerlink" href="#id47" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Jupyter notebook เป็น IDE ที่เรียบง่ายที่สุด และเป็นที่นิยมเป็นอย่างมากในหมู่นักวิเคราะห์ข้อมูล เพราะถูกออกแบบมาเพื่อการวิเคราะห์ข้อมูลโดยเฉพาะ เนื่องจาก Jupyter notebook รองรับการรันโค้ดทีละก้อนเล็ก ๆ และแสดงผลการคำนวณออกมาให้เห็นชัดเจน IDE นี้จึงถูกเรียกว่า notebook เพราะเปรียบเสมือนกับนักวิทยาศาสตร์ข้อมูลทำการวิเคราะห์ข้อมูลและจดบันทึกกระบวนการวิเคราะห์และผลวิเคราะห์ไว้ในสมุด  เพื่อให้ทราบที่มาที่ไปของผลสรุปต่าง ๆ ที่ได้จากการวิเคราะห์ ไฟล์ที่จะสามารถเปิดด้วย Jupyter notebook ได้นั้นจะต้องมีนามสกุลไฟล์ (file extension) เป็น .ipynb</p></li>
+</ul>
+<figure class="align-center" id="id48">
+<a class="reference internal image-reference" href="../../_images/jupyterlab.png"><img alt="../../_images/jupyterlab.png" src="../../_images/jupyterlab.png" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">ภาพที่ 2 </span><span class="caption-text">ภาพตัวอย่างหน้าต่าง JupyterLab</span><a class="headerlink" href="#id48" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Jupyterlab เป็น IDE ที่เบาและ feature น้อยกว่า VSCode ทำให้ใช้ได้ไม่ยากนักสำหรับมือใหม่ ถูกออกแบบมาเพื่อการประมวลผลและวิเคราะห์ข้อมูลเป็นจุดประสงค์หลัก เหมาะกับการจัดการกับงานที่ต้องอาจจะต้องใช้ไฟล์ข้อมูล หลายไฟล์ และไฟล์ jupyter notebook (.ipynb) หลาย ๆ ไฟล์ และใช้ Terminal ควบคู่ไปกับการทำงานด้วย</p></li>
+</ul>
+</section>
+<section id="visual-studio-code-vscode">
+<h3>Visual Studio Code (VSCode)<a class="headerlink" href="#visual-studio-code-vscode" title="Link to this heading">#</a></h3>
+<p>นอกจากนั้นให้ลงโปรแกรม IDE ที่ชื่อว่า Visual Studio Code (VSCode)</p>
+<figure class="align-center" id="id49">
+<a class="reference internal image-reference" href="../../_images/vscode.png"><img alt="../../_images/vscode.png" src="../../_images/vscode.png" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">ภาพที่ 3 </span><span class="caption-text">ภาพตัวอย่างหน้าต่าง Visual Studio Code</span><a class="headerlink" href="#id49" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Visual Studio Code (VSCode) เป็น IDE ที่มีฟีเจอร์หลากหลายชนิด สามารถปรับรูปลักษณ์ตามความชอบได้หลายแบบ รวมถึงรองรับภาษาโปรแกรมหลายภาษา เหมาะกับการเขียนโปรแกรมที่ประกอบด้วยหลาย ๆ ไฟล์ และต้องมีการตรวจสอบโค้ดอย่างรัดกุม เป็น IDE ที่ดาวน์โหลดได้โดยไม่มีค่าใช้จ่าย และเป็นที่แพร่หลายมากในการเขียนโปรแกรมภาษาไพทอน VSCode สามารถเปิด Terminal ขึ้นมาใช้ในโปรแกรมได้อีกด้วย</p>
+<p>หลังจากติดตั้งเรียบร้อยแล้ว ให้ไปที่ View &gt; Extension จากนั้นพิมพ์ python และติดตั้ง python extension (อย่าลืมเช็คว่าเป็นของ Microsoft)</p>
+</section>
+</section>
+<section id="interactive">
+<h2>เขียนโปรแกรมแบบตอบโต้ (Interactive)<a class="headerlink" href="#interactive" title="Link to this heading">#</a></h2>
+<p>หลังจากที่ลงโปรแกรม Anaconda เรียบร้อยแล้ว เราสามารถเริ่มเขียนโปรแกรมเป็นภาษาไพทอนได้ทันทีเพื่อทดสอบว่าลงโปรแกรมได้โดยสมบูรณ์แล้ว ให้เริ่มจากการเปิด Anaconda Prompt หรือ Anaconda Powershell ก็ได้ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Windows หรือเปิด Terminal App ซึ่งเป็นเทอร์มินัลสำหรับผู้ที่ใช้ Mac จากนั้นให้พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">ipython</span></code> ลงไปเพื่อเปิด Interactive Python Interpreter (ipython) และลองพิมพ์</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>และกด Enter เพื่อทำการส่งคำสั่งที่เขียนเป็นภาษาไพทอนเพื่อให้ Python interpreter  แปลเป็นภาษาเครื่องและรันคำสั่ง จากนั้นหน้าจอจะแสดงผลดังนี้</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Python 3.7.6 (default, Jan  8 2020, 13:42:34)
+Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
+IPython 7.29.0 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
+
+In [1]: print(&#39;Hello, world!&#39;)
+Hello, world!
+
+In [2]:
+</pre></div>
+</div>
+<p>โปรแกรม <code class="docutils literal notranslate"><span class="pre">ipython</span></code> เป็นโปรแกรมที่ทำให้เราสามารถพิมพ์คำสั่งภาษาไพทอนและกดรันเพื่อเห็นผลลัพธ์ได้ทันที ทำให้เราสามารถตอบโต้กับเครื่องไปมาเป็นภาษาไพทอนได้</p>
+</section>
+<section id="id3">
+<h2>เขียนโปรแกรมใส่ไฟล์ และสั่งรันทั้งไฟล์<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title">คำศัพท์</p>
+<p>Editor โปรแกรมที่ใช้สำหรับเปิดแก้ไขไฟล์</p>
+</aside>
+<p>ในบางครั้งเราต้องการเขียนโปรแกรมที่ค่อนข้างยาว และต้องการรันโปรแกรมทั้งหมดที่อยู่ในไฟล์  เราสามารถเขียนโปรแกรมโดยการเขียนคำสั่งทั้งหมดใส่ไว้ในไฟล์ก่อน ซึ่งจะต้องมีสกุลไฟล์ <code class="docutils literal notranslate"><span class="pre">.py</span></code> จากนั้นค่อยสั่งให้ Python interpreter แปลและรันคำสั่งทั้งหมดในครั้งเดียว ไล่ไปทีละบรรทัด</p>
+<section id="jupyterlab">
+<h3>รันด้วย JupyterLab<a class="headerlink" href="#jupyterlab" title="Link to this heading">#</a></h3>
+<p>วิธีการเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่าน JupyterLab มีดังนี้</p>
+<ol class="arabic simple">
+<li><p>เปิด Anaconda navigator</p></li>
+<li><p>กด Install (ถ้ายังไม่ได้ install) JupyterLab</p></li>
+<li><p>กด Launch JupyterLab</p></li>
+<li><p>กด File -&gt; New -&gt; Python file และตั้งชื่อว่า <code class="docutils literal notranslate"><span class="pre">myfirstprogram.py</span></code> ไฟล์จะถูกเปิดขึ้นบนหน้าต่างใหม่</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">print('Hello,</span> <span class="pre">world!')</span></code> ใส่ในไฟล์และกด Save</p></li>
+<li><p>(Mac) กด File -&gt; New -&gt; Terminal เพื่อเปิด Terminal เป็นหน้าต่างใหม่บน JupyterLab (Windows) เปิด Anaconda Powershell</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myfirstprogram.py</span></code> ลงไปบนเทอร์มินัล จากนั้นให้กด enter</p></li>
+</ol>
+<p>หน้าต่างเทอร์มินัลจะแสดงคำว่า <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code> แต่ว่าเทอร์มินัลของแต่ละเครื่องก็จะต่างกันไป</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python myfirstprogram.py
+Hello, world!
+</pre></div>
+</div>
+</section>
+<section id="vs-code">
+<h3>รันด้วย VS Code<a class="headerlink" href="#vs-code" title="Link to this heading">#</a></h3>
+<p>วิธีการเขียนโปรแกรมใส่ไฟล์และรันโปรแกรมที่อยู่ในไฟล์นั้นผ่าน VS Code มีดังนี้</p>
+<ol class="arabic simple">
+<li><p>เปิด VS Code</p></li>
+<li><p>กด File -&gt; New File และตั้งชื่อว่า <code class="docutils literal notranslate"><span class="pre">myfirstprogram.py</span></code> ไฟล์จะถูกเปิดขึ้นบนหน้าต่างใหม่</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">print('Hello,</span> <span class="pre">world!')</span></code> ใส่ในไฟล์และกด Save</p></li>
+<li><p>กด Terminal -&gt; New Terminal เพื่อเปิด Terminal เป็นหน้าต่างใหม่บน VS Code</p></li>
+<li><p>พิมพ์คำว่า <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myfirstprogram.py</span></code> ลงไปบนเทอร์มินัล จากนั้นให้กด enter</p></li>
+</ol>
+<p>หน้าต่างเทอร์มินัลจะแสดงคำว่า <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code> แต่ว่าเทอร์มินัลของแต่ละเครื่องก็จะต่างกันไป</p>
+</section>
+</section>
+<section id="id4">
+<h2>การคิดเชิงคำนวณ<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>หลักสำคัญของการเขียนโปรแกรมมิได้อยู่ที่การจดจำคำสั่งทั้งหมด แต่เน้นที่การนำคำสั่งมาประยุกต์ใช้และประกอบกันอย่างเหมาะสมเพื่อให้ระบบสามารถปฏิบัติงานตามที่ผู้พัฒนาต้องการได้อย่างมีประสิทธิภาพ เมื่อได้รับโจทย์ เช่น การดึงข้อมูลความคิดเห็นจากโซเชียลมีเดียเพื่อนำมาวิเคราะห์ว่าผู้สมัครรับเลือกตั้งรายใดได้รับความสนใจจากสาธารณชนมากที่สุด หรือเขียนแอปพลิเคชันในการวิเคราะห์การใช้ภาษาของข้อความที่กำหนดให้  จะพบว่าโจทย์ดังกล่าวมีขอบเขตที่กว้างและซับซ้อน จนอาจไม่รู้ว่าจะเริ่มจากจุดไหนก่อน  การแก้ปัญหาเชิงคำนวณ (computational thinking) เป็นหลักการสำคัญที่จะช่วยในการแก้โจทย์ลักษณะนี้ โดยมีองค์ประกอบหลัก 4 ประการ</p>
 <ol class="arabic simple">
 <li><p>การแบ่งปัญหาออกเป็นส่วนย่อย  (Decomposition) หมายถึง การวิเคราะห์และแบ่งแยกโจทย์ปัญหาออกเป็นส่วนย่อย ๆ เพื่อให้สามารถจัดการและแก้ไขได้ง่ายขึ้น ตัวอย่างเช่น หากเราต้องการประกอบตู้ลิ้นชักใส่เสื้อผ้า กระบวนการนี้สามารถแบ่งออกเป็นขั้นตอนต่าง ๆ ได้แก่ การประกอบลิ้นชัก การประกอบโครงตู้ และการติดตั้งขาตู้ จากนั้นนำแต่ละส่วนมาประกอบรวมกันเป็นตู้ลิ้นชักที่สมบูรณ์</p></li>
@@ -485,11 +636,12 @@ document.write(`
 </pre></div>
 </div>
 <p>จะสังเกตได้ว่าอัลกอริทึมดังกล่าวมีการแบ่งแยกโจทย์ออกเป็นส่วนย่อย ๆ เพื่อให้สามารถแก้ไขปัญหาได้ทีละส่วน นอกจากนี้ ยังมีการนำกระบวนการคิดแบบนามธรรมมาใช้ โดยที่อัลกอริทึมไม่จำเป็นต้องคำนึงถึงจำนวนหรือขนาดของลิ้นชักที่ต้องประกอบ ซึ่งทำให้อัลกอริทึมสามารถนำไปประยุกต์ใช้ได้กับลิ้นชักทุกประเภทและทุกขนาด</p>
-<section id="id1">
-<h2>หุ่นยนต์คาเรล<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>ทักษะการคิดเชิงคำนวณตามตัวอย่างที่กล่าวมาข้างต้น ถือเป็นทักษะที่สำคัญยิ่งสำหรับการเขียนโปรแกรม ซึ่งในบทนี้เราจะฝึกฝนผ่านการใช้โปรแกรมที่ชื่อว่า คาเรล (Karel) <span id="id2">[<a class="reference internal" href="#id18" title="Richard E Pattis. Karel the robot: a gentle introduction to the art of programming. John Wiley &amp; Sons, 1994.">Pattis, 1994</a>]</span> คาเรลเป็นหุ่นยนต์จำลองขนาดเล็กที่สามารถเคลื่อนที่ไปมาภายในโลกสี่เหลี่ยมที่ถูกกำหนดไว้ โดยผู้ใช้สามารถเขียนโปรแกรมด้วยภาษาไพทอนเพื่อสั่งการคาเรลให้ปฏิบัติตามคำสั่งต่าง ๆ ที่ตั้งไว้สำหรับการแก้โจทย์ในสถานการณ์ที่กำหนดได้ ในขั้นตอนนี้ เราจะใช้คาเรลเพื่อฝึกฝนทักษะการคิดเชิงคำนวณ ก่อนที่จะเข้าสู่การเขียนโปรแกรมภาษาไพทอนในระดับที่ซับซ้อนขึ้น ซึ่งจำเป็นต้องเรียนรู้คำสั่งเพิ่มเติมอีกมากมาย วัตถุประสงค์ของการฝึกฝนผ่านคาเรล คือ การพัฒนาทักษะการคิดเชิงคำนวณของนักเขียนโปรแกรม โดยไม่ต้องจำคำสั่งที่ซับซ้อนจำนวนมาก</p>
+</section>
+<section id="id5">
+<h2>หุ่นยนต์คาเรล<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>ทักษะการคิดเชิงคำนวณตามตัวอย่างที่กล่าวมาข้างต้น ถือเป็นทักษะที่สำคัญยิ่งสำหรับการเขียนโปรแกรม ซึ่งในบทนี้เราจะฝึกฝนผ่านการใช้โปรแกรมที่ชื่อว่า คาเรล (Karel) <span id="id6">[<a class="reference internal" href="#id23" title="Richard E Pattis. Karel the robot: a gentle introduction to the art of programming. John Wiley &amp; Sons, 1994.">Pattis, 1994</a>]</span> คาเรลเป็นหุ่นยนต์จำลองขนาดเล็กที่สามารถเคลื่อนที่ไปมาภายในโลกสี่เหลี่ยมที่ถูกกำหนดไว้ โดยผู้ใช้สามารถเขียนโปรแกรมด้วยภาษาไพทอนเพื่อสั่งการคาเรลให้ปฏิบัติตามคำสั่งต่าง ๆ ที่ตั้งไว้สำหรับการแก้โจทย์ในสถานการณ์ที่กำหนดได้ ในขั้นตอนนี้ เราจะใช้คาเรลเพื่อฝึกฝนทักษะการคิดเชิงคำนวณ ก่อนที่จะเข้าสู่การเขียนโปรแกรมภาษาไพทอนในระดับที่ซับซ้อนขึ้น ซึ่งจำเป็นต้องเรียนรู้คำสั่งเพิ่มเติมอีกมากมาย วัตถุประสงค์ของการฝึกฝนผ่านคาเรล คือ การพัฒนาทักษะการคิดเชิงคำนวณของนักเขียนโปรแกรม โดยไม่ต้องจำคำสั่งที่ซับซ้อนจำนวนมาก</p>
 <p>หุ่นยนต์คาเรลในโปรแกรมนี้สามารถเคลื่อนที่ไปข้างหน้าได้ครั้งละหนึ่งก้าว แต่ไม่สามารถทะลุผ่านกำแพงได้ หากคาเรลชนกับกำแพงจะทำให้เกิดข้อผิดพลาดในโปรแกรม (error) และโปรแกรมจะหยุดทำงานทันที โจทย์ในโลกของคาเรลจะเริ่มจากการกำหนดจุดเริ่มต้นของคาเรล ขนาดของโลกที่เขาอยู่ รวมถึงตำแหน่งของกำแพงและตำแหน่งของกระดิ่ง (beeper) คาเรลสามารถเก็บหรือวางกระดิ่งในจุดต่าง ๆ ได้ แต่หากพยายามเก็บกระดิ่งในจุดที่ไม่มี จะทำให้โปรแกรมเกิดข้อผิดพลาดเช่นกัน คำสั่งที่ใช้ในการแก้ปัญหาประกอบด้วยคำสั่งดังต่อไปนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่ง</p></th>
 <th class="head"><p>คำอธิบาย</p></th>
@@ -510,13 +662,15 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<section id="id3">
-<h3>ตัวอย่าง<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+</div>
+<section id="id7">
+<h3>ตัวอย่าง<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>หากคาเรลอยู่ในโลกขนาด 2x2 และจุดเริ่มต้นอยู่ที่มุมซ้ายล่างของโลกและหันหน้าไปทางทิศตะวันออก และจุดหมายคือให้คาเรลเก็บกระดิ่งที่มุมขวาล่าง และไปเดินทางไปยังมุมซ้ายบน ดังภาพข้างล่าง</p>
-<figure class="align-center" id="id42">
-<a class="reference internal image-reference" href="../../_images/karel-ex1.png"><img alt="../../_images/karel-ex1.png" src="../../_images/karel-ex1.png" style="height: 200px;" /></a>
+<figure class="align-center" id="id50">
+<a class="reference internal image-reference" href="../../_images/karel-ex1.png"><img alt="../../_images/karel-ex1.png" src="../../_images/karel-ex1.png" style="height: 200px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 4 </span><span class="caption-text">โลกของคาเรลในโจทย์ จุดเริ่มต้นของโจทย์แสดงอยู่ในภาพด้านซ้าย จุดมุ่งหมายของโจทย์แสดงอยู่ในภาพด้านขวา</span><a class="headerlink" href="#id42" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 4 </span><span class="caption-text">โลกของคาเรลในโจทย์ จุดเริ่มต้นของโจทย์แสดงอยู่ในภาพด้านซ้าย จุดมุ่งหมายของโจทย์แสดงอยู่ในภาพด้านขวา</span><a class="headerlink" href="#id50" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>โจทย์นี้อาศัยนำคำสั่งหลาย ๆ คำสั่งมาต่อกันในลำดับที่เหมาะสม ดังนี้</p>
@@ -545,13 +699,14 @@ document.write(`
 <p>โปรแกรมจะเกิดข้อผิดพลาด และจะหยุดทำงานทันทีเช่นกัน</p>
 </section>
 </section>
-<section id="id4">
-<h2>โปรแกรมและฟังก์ชัน<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h2>โปรแกรมและฟังก์ชัน<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>สมมติว่าโจทย์คือ ให้คาเรลไปหยิบกระดิ่งตรงหน้าเนินแล้วเดินข้ามเนินไปวางกระดิ่งที่คอลัมน์ที่ 5 ดังภาพด้านล่าง</p>
-<figure class="align-center" id="id43">
-<a class="reference internal image-reference" href="../../_images/karel-ex2.png"><img alt="../../_images/karel-ex2.png" src="../../_images/karel-ex2.png" style="height: 300px;" /></a>
+<figure class="align-center" id="id51">
+<a class="reference internal image-reference" href="../../_images/karel-ex2.png"><img alt="../../_images/karel-ex2.png" src="../../_images/karel-ex2.png" style="height: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 5 </span><span class="caption-text">โลกของคาเรลในโจทย์ จุดเริ่มต้นของโจทย์แสดงอยู่ในภาพด้านซ้าย จุดมุ่งหมายของโจทย์แสดงอยู่ในภาพด้านขวา</span><a class="headerlink" href="#id43" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 5 </span><span class="caption-text">โลกของคาเรลในโจทย์ จุดเริ่มต้นของโจทย์แสดงอยู่ในภาพด้านซ้าย จุดมุ่งหมายของโจทย์แสดงอยู่ในภาพด้านขวา</span><a class="headerlink" href="#id51" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>โจทย์นี้ซับซ้อนขึ้นมาก เนื่องจากต้องใช้คำสั่งหลายบรรทัด สมมติว่าเขียนโค้ดไพทอนเก็บไว้ในไฟล์ <code class="docutils literal notranslate"><span class="pre">my_karel_first.py</span></code> ดังนี้</p>
@@ -577,22 +732,22 @@ document.write(`
 </pre></div>
 </div>
 <p>ส่วนประกอบของโปรแกรมในไฟล์นี้มีดังนี้</p>
-<section id="id5">
-<h3>คอมเมนต์<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>คอมเมนต์<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># โปรแกรมสำหรับแก้โจทย์แรกในบทนี้</span>
 </pre></div>
 </div>
 <p>ข้อความที่นำหน้าด้วยเครื่องหมาย <code class="docutils literal notranslate"><span class="pre">#</span></code> เรียกว่า หมายเหตุ หรือคอมเมนต์ (comment) ซึ่งเป็นการแสดงความคิดเห็นหรือให้ข้อมูลเพิ่มเติมสำหรับผู้อ่านโค้ด โดยคอมเมนต์จะช่วยอธิบายการทำงานของโปรแกรมและจุดสำคัญที่ควรทราบ เพื่อให้ผู้ที่นำโค้ดไปใช้งานต่อสามารถเข้าใจการทำงานได้อย่างชัดเจน นอกจากนี้ การใช้คอมเมนต์ยังเป็นแนวทางในการเพิ่มความเข้าใจร่วมกันในทีมพัฒนาหรือในกรณีที่ต้องกลับมาทบทวนโปรแกรมในภายหลัง</p>
 </section>
-<section id="id6">
-<h3>การนำเข้าไลบรารี<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>การนำเข้าไลบรารี<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">stanfordkarel</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>ไลบรารี (Library) คือ คลังของโค้ดหรือฟังก์ชันที่ถูกเขียนขึ้นล่วงหน้าและรวบรวมไว้เพื่อให้นักพัฒนาสามารถนำไปใช้งานได้โดยไม่ต้องเขียนโค้ดใหม่ตั้งแต่ต้น ไลบรารีมักจะประกอบไปด้วยฟังก์ชัน และเครื่องมือที่ช่วยในการทำงานเฉพาะด้าน ในบทนี้ไลบรารีที่ต้องนำเข้ามาคือ <code class="docutils literal notranslate"><span class="pre">stanfordkarel</span></code> ซึ่งมีฟังก์ชันในการสั่งการคาเรลให้ปฏิบัติงานต่าง ๆ ได้ เช่น <code class="docutils literal notranslate"><span class="pre">move()</span></code> และ <code class="docutils literal notranslate"><span class="pre">put_beeper()</span></code></p>
 </section>
-<section id="id7">
-<h3>การประกาศฟังก์ชัน<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>การประกาศฟังก์ชัน<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">move</span><span class="p">()</span>
     <span class="n">pick_beeper</span><span class="p">()</span>
@@ -610,8 +765,8 @@ document.write(`
 <li><p>ส่วนเนื้อหาของฟังก์ชัน (function body) คือ กลุ่มของคำสั่งที่ประกอบอยู่ภายในฟังก์ชัน โดยคำสั่งเหล่านี้จะต้องมีการย่อหน้า (indentation) ในทุกบรรทัด เพื่อบ่งชี้ว่าคำสั่งเหล่านี้เป็นส่วนหนึ่งของฟังก์ชันนั้น</p></li>
 </ul>
 </section>
-<section id="id8">
-<h3>กำหนดคำสั่งการรันไฟล์ไพทอน<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>กำหนดคำสั่งการรันไฟล์ไพทอน<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">run_karel_program</span><span class="p">()</span>
 </pre></div>
@@ -619,8 +774,8 @@ document.write(`
 <p>โปรแกรมตัวอย่างนี้ถูกจัดเก็บในไฟล์ที่มีนามสกุล <code class="docutils literal notranslate"><span class="pre">.py</span></code> ซึ่งเมื่อไฟล์ถูกเรียกใช้ โปรแกรมจะทำงานทั้งไฟล์ โค้ดที่แสดงข้างต้นเป็นการกำหนดลำดับการทำงานของโปรแกรม โดยใช้โครงสร้าง <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> เพื่อระบุว่า หากโปรแกรมถูกรันโดยตรง ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">run_karel_program()</span></code> จะถูกเรียกใช้งานก่อน ซึ่งฟังก์ชันนี้มีหน้าที่ในการโหลดหน้าต่างที่แสดงผลหุ่นยนต์คาเรล จากนั้นโปรแกรมจะไปเรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main()</span></code> ซึ่งได้ถูกประกาศไว้ในไฟล์เดียวกันนี้</p>
 </section>
 </section>
-<section id="id9">
-<h2>การแบ่งปัญหาออกเป็นส่วนย่อย<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="id13">
+<h2>การแบ่งปัญหาออกเป็นส่วนย่อย<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <p>สิ่งแรกที่เราสังเกตได้คือ โค้ดยาวและเข้าใจยาก เราจำเป็นต้องวาดแผนภาพและตรวจสอบการทำงานแต่ละส่วนของโค้ดเพื่อทำความเข้าใจ ซึ่งอาจส่งผลให้ปรับแก้โค้ดได้ยาก จึงถือได้ว่าโค้ดนี้ยังไม่มีประสิทธิภาพเท่าที่ควร เพื่อแก้ปัญหานี้ เราจะสร้างฟังก์ชันใหม่ขึ้นมาเพื่อปรับปรุงโครงสร้างของโค้ดให้ชัดเจนและเข้าใจง่ายขึ้น เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">turn_left</span><span class="p">()</span>
 <span class="n">turn_left</span><span class="p">()</span>
@@ -655,11 +810,12 @@ document.write(`
 <p>หลังจากที่ฟังก์ชันถูกสร้างขึ้น เราสามารถเรียกใช้งานฟังก์ชันจากส่วนต่าง ๆ ของโปรแกรมได้โดยการพิมพ์ชื่อฟังก์ชันตามด้วยเครื่องหมายวงเล็บ <code class="docutils literal notranslate"><span class="pre">()</span></code> ซึ่งเป็นส่วนที่จำเป็นสำหรับการเรียกใช้งานฟังก์ชัน ตัวอย่างเช่น คำสั่ง <code class="docutils literal notranslate"><span class="pre">turn_right()</span></code> หรือฟังก์ชันพื้นฐานอื่น ๆ เช่น <code class="docutils literal notranslate"><span class="pre">move()</span></code> และ <code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code> เป็นคำสั่งที่ทำงานในลักษณะเดียวกัน แต่เราไม่จำเป็นต้องสร้างขึ้นใหม่ เนื่องจากมีการนำเข้าจากไลบรารีที่เกี่ยวข้องแล้ว</p>
 <p>สรุปส่วนต่าง ๆ ของฟังก์ชันได้ดังนี้</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/function.png"><img alt="../../_images/function.png" src="../../_images/function.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/function.png"><img alt="../../_images/function.png" src="../../_images/function.png" style="height: 250px;" />
+</a>
 </figure>
 </section>
-<section id="id10">
-<h2>ข้อควรระวัง<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h2>ข้อควรระวัง<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>การสร้างฟังก์ชันในภาษาไพทอนจำเป็นต้องปฏิบัติตามรูปแบบที่ถูกต้องตามกฎไวยากรณ์ (syntax) เนื่องจากภาษาไพทอน เป็นภาษาการเขียนโปรแกรมที่มีโครงสร้างชัดเจนและยึดกับไวยากรณ์อย่างเคร่งครัด การเขียนโค้ดผิดจากไวยากรณ์แม้แต่เพียงเล็กน้อยจะส่งผลให้โปรแกรมไม่สามารถทำงานได้ตามที่คาดหมาย ตัวแปลภาษาไพทอนจะตรวจสอบโค้ดเมื่อมีการรันโปรแกรม และหากพบความผิดพลาด
 โปรแกรมจะหยุดทำงานทันทีพร้อมแสดงข้อความแจ้งข้อผิดพลาด (error message) ซึ่งศัพท์เทคนิคในการเขียนโปรแกรมเรียกว่าโยน (throw) ข้อผิดพลาด เพื่อช่วยให้ผู้เขียนโปรแกรมสามารถตรวจสอบและแก้ไขโค้ดได้อย่างถูกต้อง
 ข้อผิดพลาดมีหลายประเภท ข้อผิดพลาดที่พบบ่อยประเภทหนึ่งคือ ข้อผิดพลาดทางไวยากรณ์ (syntax error) เช่น การลืมวงเล็บ การพิมพ์ชื่อฟังก์ชันผิด หรือการจัดวางบรรทัดโค้ดที่ไม่ถูกต้อง ตัวแปลภาษาไพทอนก็จะทำการโยน <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> ดังตัวอย่างดังนี้</p>
@@ -687,12 +843,13 @@ document.write(`
 <p>ตัวแปลภาษาไพทอนโยน <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code> มาให้ถ้าเราลืมกั้นย่อหน้าให้คำสั่ง <code class="docutils literal notranslate"><span class="pre">move()</span></code> ในบรรทัดที่ 5 พร้อมแนะนำวิธีการแก้ว่าอาจจะต้องเพิ่มย่อหน้าให้เป็นบล็อกใหม่ (<em>expected an indented block</em>)</p>
 <p>เมื่อผู้เขียนโปรแกรมเรียนรู้การใช้คำสั่งใหม่ ๆ มากขึ้น จะพบกับข้อผิดพลาดประเภทต่าง ๆ มากขึ้นด้วย ผู้เขียนโปรแกรมควรจะสามารถอ่านและทำความเข้าใจได้ว่าตัวแปลภาษาไพทอนพยายามชี้ให้เห็นถึงข้อผิดพลาดประเภทใด เช่น ข้อผิดพลาดทางไวยากรณ์ (<code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>) หรือข้อผิดพลาดในเรื่องของคีย์ (<code class="docutils literal notranslate"><span class="pre">KeyError</span></code>) และจะต้องแก้ไขอย่างไรเพื่อให้โปรแกรมสามารถทำงานได้อย่างถูกต้อง ซึ่งในบทต่อ ๆ ไปจะพูดถึงข้อผิดพลาดประเภทอื่น ๆ เพิ่มเติม</p>
 </section>
-<section id="id11">
-<h2>การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<section id="id15">
+<h2>การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
 <p>ในการแก้ปัญหาทางการเขียนโปรแกรมทุกครั้ง ควรเริ่มต้นจากการแบ่งปัญหาออกเป็นส่วนย่อยก่อนเสมอ ซึ่งการแบ่งปัญหาเป็นส่วนย่อยช่วยลดความซับซ้อนและทำให้เราสามารถจัดการกับแต่ละส่วนได้อย่างเป็นระบบ นอกจากนี้ เรายังสามารถทดสอบโปรแกรมแต่ละส่วนได้ง่ายและรวดเร็วขึ้น ทำให้สามารถระบุข้อผิดพลาดและปรับปรุงได้อย่างมีประสิทธิภาพ</p>
 <p>ตัวอย่างเช่น หากพิจารณาโจทย์ที่กำหนดให้คาเรลยืนอยู่บนถนนที่มีหลุมบ่อ ซึ่งเราจะต้องวางกระดิ่งลงในหลุมเพื่อทำให้ถนนเรียบและสะดวกต่อการเดิน สมมติว่าโลกที่คาเรลเริ่มต้นอยู่นั้นเป็นไปตามภาพซ้ายล่าง หลังจากที่เราได้รันโปรแกรมเสร็จสมบูรณ์แล้ว ถนนจะมีลักษณะเป็นไปตามภาพขวาล่าง ในกระบวนการนี้ คาเรลต้องตัดสินใจและดำเนินการแก้ปัญหาด้วยการตรวจสอบตำแหน่งของหลุมบ่อ และวางกระดิ่งลงในตำแหน่งที่เหมาะสม ซึ่งเป็นการแก้ไขปัญหาตามลำดับขั้นตอนอย่างเป็นระบบ</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/repair-road.png"><img alt="../../_images/repair-road.png" src="../../_images/repair-road.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/repair-road.png"><img alt="../../_images/repair-road.png" src="../../_images/repair-road.png" style="height: 250px;" />
+</a>
 </figure>
 <p>ในความเป็นจริงแล้ว โจทย์นี้ไม่ได้ซับซ้อนมากนัก แนวทางการแก้ปัญหาที่ได้มาโดยไม่อาศัยกระบวนการคิดเชิงคำนวณ จะมีลักษณะดังโค้ดด้านล่างนี้ ซึ่งในที่นี้เราจะหยิบยกขึ้นมาเฉพาะฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">main</span></code> และสมมติว่าเราได้ดำเนินการนำเข้าไลบรารีที่จำเป็นทั้งหมด และได้บันทึกโค้ดลงในไฟล์ที่มีนามสกุล <code class="docutils literal notranslate"><span class="pre">.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -739,10 +896,11 @@ document.write(`
 <p>การมองหาแบบแผน เป็นขั้นตอนที่ 2 ของการคิดเขิงคำนวณ</p>
 </aside>
 <p>หากพิจารณาอย่างละเอียด จะพบว่าปัญหาย่อยที่ 1 และปัญหาย่อยที่ 3 มีรูปแบบการแก้ปัญหาที่เหมือนกัน โดยทั้งสองปัญหาเกี่ยวข้องกับการซ่อมแซมหลุมที่อยู่ข้าง ๆ จุดที่คาเรลยืนอยู่ ดังนั้น เราสามารถใช้ฟังก์ชันเดียวกันในการแก้ไขทั้งสองปัญหา (แต่ต้องให้คาเรลยืนอยู่ที่จุดฝั่งซ้ายของหลุมก่อนเรียกฟังก์ชัน) ซึ่งจะช่วยลดความซ้ำซ้อนของโค้ดและทำให้โปรแกรมมีประสิทธิภาพมากขึ้น</p>
-<figure class="align-center" id="id44">
-<a class="reference internal image-reference" href="../../_images/deposed-repair-road.png"><img alt="../../_images/deposed-repair-road.png" src="../../_images/deposed-repair-road.png" style="height: 250px;" /></a>
+<figure class="align-center" id="id52">
+<a class="reference internal image-reference" href="../../_images/deposed-repair-road.png"><img alt="../../_images/deposed-repair-road.png" src="../../_images/deposed-repair-road.png" style="height: 250px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 6 </span><span class="caption-text">กรอบสีแดงแสดงให้ว่าสองปัญหาย่อยเป็นแบบแผนของปัญหาที่เหมือนกัน</span><a class="headerlink" href="#id44" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 6 </span><span class="caption-text">กรอบสีแดงแสดงให้ว่าสองปัญหาย่อยเป็นแบบแผนของปัญหาที่เหมือนกัน</span><a class="headerlink" href="#id52" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เพราะฉะนั้นโค้ดในการแก้ปัญหานี้จะมีการเรียกใช้ฟังก์ชันซ้ำ เพื่อแก้ปัญหาย่อยที่มีแบบแผนเดียวกัน ฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">fill_hole1</span></code> และ <code class="docutils literal notranslate"><span class="pre">fill_hole2</span></code> จึงถูกแทนที่ด้วยการเรียกฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">fill_hole</span></code> สองครั้งในตำแหน่งที่เหมาะสมดังนี้</p>
@@ -815,7 +973,7 @@ document.write(`
 </aside>
 </section>
 <section id="for">
-<h2>วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Permalink to this heading">#</a></h2>
+<h2>วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Link to this heading">#</a></h2>
 <p>โปรแกรมที่เราเขียนมาจนถึงขณะนี้จะทำการประมวลผลชุดคำสั่งตั้งแต่บรรทัดแรกไปจนถึงบรรทัดสุดท้าย โดยอาจมีการเรียกใช้ฟังก์ชันย่อยระหว่างการประมวลผล แต่ก็ยังคงเป็นการทำงานตามลำดับจากบรรทัดแรกไปจนถึงบรรทัดสุดท้าย ทั้งนี้ ภาษาคอมพิวเตอร์มีสิ่งที่เรียกว่า <em>โครงสร้างการควบคุม (control flow)</em> ซึ่งเป็นชุดคำสั่งพิเศษที่ช่วยให้เราสามารถกำหนดได้ว่าจะประมวลผลโค้ดส่วนใด หรือจำนวนกี่ครั้ง การใช้โครงสร้างการควบคุมนี้ทำให้เราสามารถเขียนโปรแกรมเพื่อแก้ปัญหาต่าง ๆ ได้อย่างหลากหลายยิ่งขึ้น</p>
 <p>วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code> เป็นการควบคุมการทำงานของโปรแกรมให้วนซ้ำ ๆ ตามจำนวนครั้งที่กำหนดไว้ล่วงหน้า ตัวอย่างเช่น ถ้าเราต้องการให้คาเรลวางกระดิ่งลงบนถนนที่มีหลุมบ่อ 5 หลุม โดยที่คาเรลต้องวางกระดิ่งลงในทุก ๆ หลุม โดยเริ่มจากหลุมที่ 1 จนถึงหลุมที่ 5  โค้ดที่เขียนด้วยวงวน <code class="docutils literal notranslate"><span class="pre">for</span></code> จะมีลักษณะดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -851,19 +1009,21 @@ document.write(`
 <p>กลุ่มคำสั่ง (code block) ที่ต้องการให้ทำงานซ้ำภายใต้คำสั่ง for จำเป็นต้องมีการจัดย่อหน้า (indentation) ให้เห็นอย่างชัดเจนว่าคำสั่งใดบ้างที่อยู่ภายในโครงสร้างการวนซ้ำ <code class="docutils literal notranslate"><span class="pre">for</span></code> การย่อหน้าแบบนี้เหมือนกับการกำหนดโครงสร้างภายในฟังก์ชัน ซึ่งช่วยให้โปรแกรมสามารถแยกแยะได้ว่าคำสั่งใดที่เป็นส่วนหนึ่งของการวนซ้ำ และคำสั่งใดที่เป็นส่วนหนึ่งของโปรแกรมแต่อยู่นอกการวนซ้ำ</p>
 </section>
 <section id="while">
-<h2>วงวน <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Permalink to this heading">#</a></h2>
+<h2>วงวน <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Link to this heading">#</a></h2>
 <p>โครงสร้างการควบคุมอีกประเภทหนึ่งที่พบบ่อยในการเขียนโปรแกรมคือการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">while</span></code> ซึ่งเป็นการวนซ้ำคำสั่งเช่นเดียวกับคำสั่ง <code class="docutils literal notranslate"><span class="pre">for</span></code> โดยที่เรากำหนดเงื่อนไขให้โปรแกรมวนซ้ำตามที่กำหนด เมื่อเงื่อนไขที่ระบุไม่เป็นจริง โปรแกรมจะหยุดการทำงานของโครงสร้างการวนซ้ำนี้ กล่าวคือคำสั่ง <code class="docutils literal notranslate"><span class="pre">while</span></code> ทำงานโดยการตรวจสอบเงื่อนไขก่อนเสมอว่าเป็นจริงหรือไม่ หากเงื่อนไขเป็นจริง โปรแกรมจะดำเนินการคำสั่งภายในโครงสร้างการวนซ้ำต่อไป และจะหลุดออกจากโครงสร้างเมื่อเงื่อนไขไม่เป็นจริง</p>
 <p>ตัวอย่างเช่น หากเรามีโจทย์ว่าให้คาเรลวางกระดิ่งบนแถวแรกให้ครบ ยกเว้นจุดริมซ้ายสุดและริมขวาสุด โดยที่จุดเริ่มต้นของคาเรลอยู่ที่มุมซ้ายล่าง และหันหน้าไปทางทิศตะวันออก ความท้าทายของโจทย์นี้คือโปรแกรมจะต้องทำงานได้กับโลกที่ขนาดอย่างน้อยสามคอลัมน์ขึ้นไป ตัวอย่าง เช่น</p>
-<figure class="align-center" id="id45">
-<a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" /></a>
+<figure class="align-center" id="id53">
+<a class="reference internal image-reference" href="../../_images/while-ex1.png"><img alt="../../_images/while-ex1.png" src="../../_images/while-ex1.png" style="height: 100px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 7 </span><span class="caption-text">จุดเริ่มต้นของโจทย์</span><a class="headerlink" href="#id45" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 7 </span><span class="caption-text">จุดเริ่มต้นของโจทย์</span><a class="headerlink" href="#id53" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id46">
-<a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" /></a>
+<figure class="align-center" id="id54">
+<a class="reference internal image-reference" href="../../_images/while-ex2.png"><img alt="../../_images/while-ex2.png" src="../../_images/while-ex2.png" style="height: 100px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 8 </span><span class="caption-text">จุดมุ่งหมายของโจทย์</span><a class="headerlink" href="#id46" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 8 </span><span class="caption-text">จุดมุ่งหมายของโจทย์</span><a class="headerlink" href="#id54" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>จากการสังเกตการทำงานของคาเรล เราจะพบรูปแบบการทำงานที่คาเรลต้องเดินไปข้างหน้าและวางกระดิ่งทั้งหมด 6 ครั้งติดต่อกัน จากนั้นจึงต้องเดินไปอีกหนึ่งก้าวเพื่อหยุดที่ริมขวาสุดตามที่โจทย์กำหนด กล่าวคือ คาเรลจะเริ่มต้นที่ตำแหน่งมุมซ้ายล่าง ข้ามช่องแรกที่ไม่ต้องวางกระดิ่ง จากนั้นวางกระดิ่งในแต่ละช่องที่อยู่ถัดไปจนถึงช่องที่หก และในขั้นตอนสุดท้าย คาเรลจะก้าวอีกหนึ่งก้าวเพื่อไปถึงจุดสิ้นสุดของแถวที่ริมขวาสุด โดยไม่วางกระดิ่งที่ตำแหน่งนั้น ดังนี้</p>
@@ -890,14 +1050,15 @@ document.write(`
 </pre></div>
 </div>
 <p>เราเปลี่ยน <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(6):</span></code> เป็น <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">front_is_clear():</span></code>  ซึ่งหมายความว่า ก่อนที่โปรแกรมจะทำการประมวลผลในแต่ละรอบของการวนซ้ำ จะมีการตรวจสอบเงื่อนไขว่าด้านหน้าของคาเรลว่างอยู่หรือไม่ (<code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code>) หากด้านหน้ายังว่างอยู่ โปรแกรมจะทำการประมวลผลคำสั่งที่อยู่ภายในโครงสร้างการวนซ้ำ เมื่อประมวลผลคำสั่งในแต่ละรอบเสร็จสิ้น โปรแกรมจะตรวจสอบเงื่อนไขอีกครั้ง หากเงื่อนไขยังคงเป็นจริง (ด้านหน้ายังว่าง) โปรแกรมจะวนซ้ำและทำงานตามคำสั่งในโครงสร้างการวนซ้ำอีกหนึ่งครั้ง  กระบวนการนี้จะดำเนินไปเรื่อย ๆ จนกว่าเงื่อนไขจะไม่เป็นจริงอีกต่อไป กล่าวคือ คาเรลจะหยุดเมื่อด้านหน้ามีกำแพง</p>
-<figure class="align-center" id="id47">
-<a class="reference internal image-reference" href="../../_images/while-flow-chart.png"><img alt="../../_images/while-flow-chart.png" src="../../_images/while-flow-chart.png" style="height: 400px;" /></a>
+<figure class="align-center" id="id55">
+<a class="reference internal image-reference" href="../../_images/while-flow-chart.png"><img alt="../../_images/while-flow-chart.png" src="../../_images/while-flow-chart.png" style="height: 400px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 9 </span><span class="caption-text">แผนภูมิการทำงาน (flowchart) ที่แสดงลำดับขั้นตอนการทำงานของโปรแกรม</span><a class="headerlink" href="#id47" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 9 </span><span class="caption-text">แผนภูมิการทำงาน (flowchart) ที่แสดงลำดับขั้นตอนการทำงานของโปรแกรม</span><a class="headerlink" href="#id55" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>นอกเหนือจากคำสั่ง <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> คาเรลมีฟังก์ชันที่ใช้ในการตรวจสอบเงื่อนไขสถานะของคาเรลทั้งหมดดังนี้</p>
-<table class="colwidths-auto table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>คำสั่งตรวจสอบ</p></th>
 <th class="head"><p>คำสั่งที่ตรงข้าม</p></th>
@@ -943,6 +1104,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <p>เงื่อนไขเหล่านี้สามารถเรียกได้ว่าเป็น <em>บูลีน (boolean)</em> ซึ่งหมายถึงการตรวจสอบค่าที่มีเพียงสองสถานะ คือ <em>จริง</em> หรือ <em>เท็จ</em> (<em>True</em> หรือ <em>False</em>) เงื่อนไขบูลีนมีบทบาทสำคัญในการควบคุมการทำงานของโครงสร้างการวนซ้ำและคำสั่งควบคุมอื่น ๆ ในการเขียนโปรแกรมซึ่งกล่าวถึงในหัวข้อถัดไป</p>
 <p>โดยสรุป โครงสร้างในการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">while</span></code> มีดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">เงื่อนไขบูลีน</span><span class="p">:</span>
@@ -952,7 +1114,7 @@ document.write(`
 </div>
 </section>
 <section id="if-else-elif">
-<h2>การตั้งเงื่อนไขด้วย <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code> และตัวปฏิบัติการบูลีน<a class="headerlink" href="#if-else-elif" title="Permalink to this heading">#</a></h2>
+<h2>การตั้งเงื่อนไขด้วย <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code> และตัวปฏิบัติการบูลีน<a class="headerlink" href="#if-else-elif" title="Link to this heading">#</a></h2>
 <p>โครงสร้างควบคุมการทำงานอีกประเภทหนึ่งที่มีความสำคัญมากในการเขียนโปรแกรมคือ การเลือกว่าคำสั่งใดควรได้รับการประมวลผลภายใต้เงื่อนไขที่กำหนด โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code>  ซึ่งช่วยให้โปรแกรมสามารถเลือกรันกลุ่มคำสั่งตามเงื่อนไขที่กำหนดได้</p>
 <p>ตัวอย่างเช่น หากเราต้องการให้คาเรลเดินไปข้างหน้า ถ้าด้านหน้าไม่มีสิ่งกีดขวาง เราสามารถเขียนฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">safe_move()</span></code> เพื่อควบคุมการเดินของคาเรลได้ดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">safe_move</span><span class="p">():</span>
@@ -963,13 +1125,15 @@ document.write(`
 <p>ในตัวอย่างนี้ เราใช้เงื่อนไขบูลีน <code class="docutils literal notranslate"><span class="pre">front_is_clear()</span></code> เพื่อกำหนดการทำงานของคาเรล โดยโปรแกรมจะตรวจสอบว่าเงื่อนไขนี้เป็นจริงหรือไม่ ถ้าเงื่อนไขเป็นจริงกล่าวคือหมายความว่าด้านหน้าของคาเรลว่าง คาเรลจะเดินไปข้างหน้า แต่ถ้าเงื่อนไขนี้ไม่เป็นจริง คาเรลจะไม่เดิน การทำงานของ <code class="docutils literal notranslate"><span class="pre">if</span></code>  นี้จะช่วยให้โปรแกรมสามารถตัดสินใจได้ว่าคาเรลควรทำงานอย่างไรในกรณีใด</p>
 <p>โครงสร้างคำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code> คล้ายคลึงกับคำสั่ง <code class="docutils literal notranslate"><span class="pre">while</span></code> โดยทั้งสองแบบนี้ทำงานร่วมกับเงื่อนไขบูลีน แต่ในกรณีของคำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code> คำสั่งภายใต้โครงสร้างของ <code class="docutils literal notranslate"><span class="pre">if</span></code> จะถูกประมวลผลเพียงครั้งเดียวเมื่อเงื่อนไขเป็นจริง ในขณะที่คำสั่ง <code class="docutils literal notranslate"><span class="pre">while</span></code> จะวนซ้ำจนกว่าเงื่อนไขจะไม่เป็นจริง การย่อหน้าใต้คำสั่ง if ทำหน้าที่กำหนดขอบเขตของคำสั่งที่ต้องการให้ประมวลผลเมื่อเงื่อนไขเป็นจริง</p>
 <p>เราสามารถแสดงกระบวนการทำงานของฟังก์ชันนี้เป็นแผนภูมิเพื่อให้เห็นลำดับขั้นตอนการทำงานดังนี้</p>
-<a class="reference internal image-reference" href="../../_images/safe-move-diagram.png"><img alt="../../_images/safe-move-diagram.png" class="align-center" src="../../_images/safe-move-diagram.png" style="height: 150px;" /></a>
+<a class="reference internal image-reference" href="../../_images/safe-move-diagram.png"><img alt="../../_images/safe-move-diagram.png" class="align-center" src="../../_images/safe-move-diagram.png" style="height: 150px;" />
+</a>
 <p>ตัวอย่างต่อไปจะเป็นตัวอย่างการใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code> ที่มีความซับซ้อนขึ้น ในกรณีนี้เราต้องการให้คาเรลวางกระดิ่งในช่องที่ยังไม่มีกระดิ่งอยู่ก่อนแล้ว  และให้เก็บกระดิ่งออกหากในช่องนั้นมีกระดิ่งวางอยู่แล้ว โดยในตัวอย่างนี้ คาเรลจะทำงานเฉพาะที่แถวล่างสุดเท่านั้น ซึ่งเป็นตำแหน่งที่คาเรลยืนอยู่ในขณะเริ่มต้น</p>
 <p>การแก้ปัญหานี้สามารถทำได้โดยใช้คำสั่ง <code class="docutils literal notranslate"><span class="pre">if</span></code> และ <code class="docutils literal notranslate"><span class="pre">else</span></code> เพื่อแยกแยะสถานการณ์ที่มีและไม่มีการวางกระดิ่งในช่องปัจจุบัน ซึ่งจะทำให้คาเรลสามารถเลือกได้ว่าจะวางกระดิ่งหรือเก็บกระดิ่งตามเงื่อนไขที่กำหนด</p>
-<figure class="align-center" id="id48">
-<a class="reference internal image-reference" href="../../_images/invert-beeper-world.png"><img alt="../../_images/invert-beeper-world.png" src="../../_images/invert-beeper-world.png" style="height: 300px;" /></a>
+<figure class="align-center" id="id56">
+<a class="reference internal image-reference" href="../../_images/invert-beeper-world.png"><img alt="../../_images/invert-beeper-world.png" src="../../_images/invert-beeper-world.png" style="height: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">ภาพที่ 10 </span><span class="caption-text">(ซ้าย) จุดเริ่มต้นของคาเรล (ขวา) ผลลัพธ์ที่คาดหวังหลังจากรันโปรแกรมแล้ว</span><a class="headerlink" href="#id48" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 10 </span><span class="caption-text">(ซ้าย) จุดเริ่มต้นของคาเรล (ขวา) ผลลัพธ์ที่คาดหวังหลังจากรันโปรแกรมแล้ว</span><a class="headerlink" href="#id56" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราจะเริ่มแก้ปัญหานี้โดยการแบ่งปัญหาออกเป็นส่วนย่อย และสังเกตลักษณะที่ซ้ำกันในแต่ละช่อง สิ่งที่สังเกตได้คือไม่ว่าคาเรลจะยืนอยู่ช่องใดก็ตาม สิ่งที่คาเรลต้องทำคือตัดสินใจว่าจะเก็บหรือวางกระดิ่งบนช่องนั้น และไม่สำคัญด้วยว่าโลกของคาเรลในโจทย์จะมีขนาดเท่าไร เราจะทำกระบวนการเดียวกันในทุกช่อง ดังนั้นเราสามารถแยกเขียนฟังก์ชันออกมาเพื่อจัดการการวางและการเก็บกระดิ่งได้ดังนี้</p>
@@ -983,7 +1147,8 @@ document.write(`
 <p>ในฟังก์ชันนี้ เราใช้โครงสร้าง <code class="docutils literal notranslate"><span class="pre">if</span></code>-<code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งทำงานโดยการตรวจสอบเงื่อนไข <code class="docutils literal notranslate"><span class="pre">if</span></code> ก่อน หากเงื่อนไขเป็นจริง (มีกระดิ่งอยู่ในช่อง) โปรแกรมจะทำการเก็บกระดิ่งด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">pick_beeper()</span></code> แต่หากเงื่อนไขไม่เป็นจริง (ไม่มีกระดิ่ง) โปรแกรมจะดำเนินการตามคำสั่งในส่วน <code class="docutils literal notranslate"><span class="pre">else</span></code> ซึ่งจะทำการวางกระดิ่งในช่องนั้นด้วยคำสั่ง <code class="docutils literal notranslate"><span class="pre">put_beeper()</span></code></p>
 <p>สิ่งที่ต้องระวังคือ หากเราไม่ใช้คำสั่ง else คำสั่งที่ตามมาจะถูกรันในทุกกรณี ซึ่งอาจทำให้โปรแกรมทำงานไม่ตรงตามที่เราต้องการ ดังนั้นจึงต้องใช้ else ในกรณีที่ต้องการให้โปรแกรมทำงานอย่างชัดเจนในกรณีที่เงื่อนไขไม่เป็นจริง</p>
 <p>ขั้นตอนการทำงานของฟังก์ชัน <code class="docutils literal notranslate"><span class="pre">invert()</span></code> สามารถแสดงเป็นแผนภูมิการทำงานได้ดังนี้</p>
-<a class="reference internal image-reference" href="../../_images/invert-beeper-flow-chart.png"><img alt="../../_images/invert-beeper-flow-chart.png" class="align-center" src="../../_images/invert-beeper-flow-chart.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/invert-beeper-flow-chart.png"><img alt="../../_images/invert-beeper-flow-chart.png" class="align-center" src="../../_images/invert-beeper-flow-chart.png" style="height: 250px;" />
+</a>
 <p>ถึงขั้นนี้แล้วเราสามารถแก้โจทย์นี้ต่อไปได้ หากเราเห็นว่าเราไม่ต้องสนใจว่าในช่องนั้นจะมีหรือไม่มีกระดิ่งอยู่แล้ว</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">invert</span><span class="p">()</span>
@@ -999,7 +1164,7 @@ document.write(`
 </div>
 <p>ซึ่งทั้งหมดนี้อยากให้เห็นว่าเป็นการใช้การคิดเชิงคำนวณในการแก้ปัญหาโดยใช้การแบ่งปัญหาออกเป็นส่วนย่อย การสังเกตหาแพทเทิร์น (ต้องทำซ้ำเหมือนกันทุกช่อง) การคิดแบบนามธรรม (หาเงื่อนไขในการวน) และการออกแบบอัลกอริทึม (เริ่มเขียนโค้ดรวมกันทั้งหมด) และเราได้ใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> รวมกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งเป็นโครงสร้างการควบคุมที่สำคัญในการเขียนโปรแกรม</p>
 <section id="if-while">
-<h3>ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#if-while" title="Permalink to this heading">#</a></h3>
+<h3>ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#if-while" title="Link to this heading">#</a></h3>
 <p>ผู้เรียนเขียนโปรแกรมมือใหม่อาจจะสับสนระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code> เนื่องจากไวยากรณ์ค่อนข้างคล้ายกัน แต่ว่าความหมายของทั้งสองคำสั่งนี้ต่างกันพอสมควร กล่าวคือ <code class="docutils literal notranslate"><span class="pre">if</span></code> จะรันกลุ่มคำสั่ง ข้างใต้เพียงหนึ่งครั้งเท่านั้น ถ้าเงื่อนไขที่กำหนดเป็นจริง</p>
 <p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> ได้ดังนี้</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
@@ -1012,7 +1177,8 @@ document.write(`
 </pre></div>
 </div>
 <figure class="align-left">
-<a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/if-vs-while-flow-chart.png"><img alt="../../_images/if-vs-while-flow-chart.png" src="../../_images/if-vs-while-flow-chart.png" style="width: 178.0px; height: 191.5px;" />
+</a>
 </figure>
 <p>เราสามารถสรุปวิธีการใช้ <code class="docutils literal notranslate"><span class="pre">while</span></code> ได้ดังนี้ เพื่อเปรียบเทียบกันกับ <code class="docutils literal notranslate"><span class="pre">if</span></code> ซึ่งรันคำสั่งเพียงแค่ครั้งเดียว</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span>
@@ -1024,19 +1190,20 @@ document.write(`
 </pre></div>
 </div>
 <figure class="align-left">
-<a class="reference internal image-reference" href="../../_images/while-vs-if-flow-chart.png"><img alt="../../_images/while-vs-if-flow-chart.png" src="../../_images/while-vs-if-flow-chart.png" style="width: 215.5px; height: 210.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/while-vs-if-flow-chart.png"><img alt="../../_images/while-vs-if-flow-chart.png" src="../../_images/while-vs-if-flow-chart.png" style="width: 215.5px; height: 210.0px;" />
+</a>
 </figure>
 </section>
 </section>
-<section id="id12">
-<h2>บูลีน<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<section id="id16">
+<h2>บูลีน<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <p>การกำหนดเงื่อนไขด้วยบูลีนเป็นเครื่องมือที่สำคัญมากในการเขียนโปรแกรม เราสามารถเขียนเงื่อนไขที่ซับซ้อนขึ้นไปอีกได้โดยใช้โอเปอร์เรเตอร์ทางตรรกศาสตร์ เช่น <code class="docutils literal notranslate"><span class="pre">or</span></code> และ <code class="docutils literal notranslate"><span class="pre">and</span></code> เพื่อให้เห็นการใช้งานที่ชัดขึ้น เราจะลองแก้โจทย์คาเรลอีกหนึ่งข้อ</p>
 <p>สมมติว่าเราต้องการให้คาเรลเอากระดิ่งที่อยู่รอบรั้วออกไปให้หมด ดังตัวอย่าง</p>
-<figure class="align-default" id="id49">
+<figure class="align-default" id="id57">
 <img alt="../../_images/boolean-remove-fence.png" src="../../_images/boolean-remove-fence.png" />
 <figcaption>
 <p><span class="caption-number">ภาพที่ 11 </span><span class="caption-text">ซ้าย: จุดเริ่มต้น
-ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id49" title="Permalink to this image">#</a></p>
+ขวา: จุดมุ่งหมาย</span><a class="headerlink" href="#id57" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เราสามารถสังเกตหาแบบแผนได้ว่าการเก็บกระดิ่งแต่ละข้างมีวิธีการเหมือนกันทุกประการ เราสามารถแบ่งปัญหาออกเป็นส่วนย่อย ออกมาเป็นฟังก์ชันที่เก็บกระดิ่งของหนึ่งข้าง และใช้ฟังก์ชันนั้นซ้ำ ๆ</p>
@@ -1054,18 +1221,18 @@ document.write(`
 </pre></div>
 </div>
 <p>เพื่อทดสอบว่าตรรกะตามฟังก์ชันนั้นถูกต้องหรือไม่ เราอาจจะเขียนตารางออกมาเพื่อตรวจสอบอีกครั้ง</p>
-<figure class="align-default" id="id50">
+<figure class="align-default" id="id58">
 <img alt="../../_images/or-operation.png" src="../../_images/or-operation.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 12 </span><span class="caption-text">ตัวอย่างการใช้ตัวปฏิบัติการ <code class="docutils literal notranslate"><span class="pre">or</span></code></span><a class="headerlink" href="#id50" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 12 </span><span class="caption-text">ตัวอย่างการใช้ตัวปฏิบัติการ <code class="docutils literal notranslate"><span class="pre">or</span></code></span><a class="headerlink" href="#id58" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>เงื่อนไขด้านล่างสุดแสดงให้เห็นว่าคาเรลได้เดินมาถึงมุมแล้วหรือถึงช่องที่ไม่ได้อยู่ติดกับรั้วอีกต่อไปแล้ว ทำให้ส่งต่อไปยังรั้วอีกข้างที่เหลือต่อไปได้</p>
 <p>นอกจากนั้นแล้วภาษาไพทอนยังมีตัวปฏิบัติการ <code class="docutils literal notranslate"><span class="pre">and</span></code> ซึ่งมีการตีค่าบูลีนเหมือนกันกับ <em>และ</em> ในตรรกศาสตร์ ดังนี้</p>
-<figure class="align-default" id="id51">
+<figure class="align-default" id="id59">
 <img alt="../../_images/and-operation.png" src="../../_images/and-operation.png" />
 <figcaption>
-<p><span class="caption-number">ภาพที่ 13 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id51" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">ภาพที่ 13 </span><span class="caption-text">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">and</span></code> operator</span><a class="headerlink" href="#id59" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>กลับมาที่โจทย์ซึ่งเราสามารถแก้โจทย์สำหรับรั้วหนึ่งข้างได้แล้ว ที่เหลือที่ต้องทำคือเชื่อมให้คาเรลวนโค้ดแบบเดิมกับด้านที่เหลือ</p>
@@ -1083,8 +1250,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id13">
-<h2>สรุป<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="id17">
+<h2>สรุป<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
 <p>การใช้โครงสร้างการควบคุม ในการเขียนโปรแกรมเป็นเครื่องมือที่สำคัญมากในการแก้ปัญหา โดยเฉพาะการใช้วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code> และวงวน <code class="docutils literal notranslate"><span class="pre">while</span></code>  ในการวนรันโค้ดซ้ำ ๆ และการใช้ <code class="docutils literal notranslate"><span class="pre">if</span></code> เพื่อเลือกว่าจะรันโค้ดใดในเงื่อนไขใด การใช้โครงสร้างการควบคุมชี้ให้เห็นว่าเราสามารถแก้ปัญหาที่ซับซ้อนได้โดย</p>
 <ol class="arabic simple">
 <li><p>การแบ่งปัญหาออกเป็นส่วนย่อย</p></li>
@@ -1093,14 +1260,15 @@ document.write(`
 <li><p>การออกแบบอัลกอริทึม ซึ่งเป็นทักษะที่สำคัญในการเขียนโปรแกรมที่ดี</p></li>
 </ol>
 </section>
-<section id="id14">
-<h2>อ้างอิง<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id15">
-<dl class="citation">
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>Richard E Pattis. <em>Karel the robot: a gentle introduction to the art of programming</em>. John Wiley &amp; Sons, 1994.</p>
-</dd>
-</dl>
+<section id="id18">
+<h2>อ้างอิง<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id19">
+<div role="list" class="citation-list">
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
+<p>Richard E Pattis. <em>Karel the robot: a gentle introduction to the art of programming</em>. John Wiley &amp; Sons, 1994.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1130,11 +1298,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../1-comp_thinking.html"
@@ -1154,10 +1321,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1166,35 +1330,48 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">หุ่นยนต์คาเรล</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ตัวอย่าง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">การติดตั้งไพทอน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">ติดตั้งโปรแกรม Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-vscode">Visual Studio Code (VSCode)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">โปรแกรมและฟังก์ชัน</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">คอมเมนต์</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">การนำเข้าไลบรารี</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">การประกาศฟังก์ชัน</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">กำหนดคำสั่งการรันไฟล์ไพทอน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive">เขียนโปรแกรมแบบตอบโต้ (Interactive)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">เขียนโปรแกรมใส่ไฟล์ และสั่งรันทั้งไฟล์</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterlab">รันด้วย JupyterLab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">รันด้วย VS Code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">การแบ่งปัญหาออกเป็นส่วนย่อย</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">ข้อควรระวัง</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">การคิดเชิงคำนวณ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">หุ่นยนต์คาเรล</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">ตัวอย่าง</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">โปรแกรมและฟังก์ชัน</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">คอมเมนต์</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">การนำเข้าไลบรารี</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">การประกาศฟังก์ชัน</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">กำหนดคำสั่งการรันไฟล์ไพทอน</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">การแบ่งปัญหาออกเป็นส่วนย่อย</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">ข้อควรระวัง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">การคิดเชิงคำนวณเพื่อในการเขียนโปรแกรม</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for">วงวน <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while">วงวน <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-elif">การตั้งเงื่อนไขด้วย <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span> <span class="pre">elif</span></code> และตัวปฏิบัติการบูลีน</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-while">ข้อแตกต่างระหว่าง <code class="docutils literal notranslate"><span class="pre">if</span></code> กับ <code class="docutils literal notranslate"><span class="pre">while</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">บูลีน</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">สรุป</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">อ้างอิง</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">บูลีน</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">สรุป</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">อ้างอิง</a></li>
 </ul>
   </nav></div>
 
@@ -1216,6 +1393,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1242,8 +1420,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

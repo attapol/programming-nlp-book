@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>บทที่ 6 การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming) &#8212; Programming for NLP</title>
   
@@ -15,53 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/module6/1-OOP';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -76,19 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -138,10 +149,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Programming for NLP</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -152,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การคิดเชิงคำนวณ (Computational Thinking)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1-comp_thinking.html">การคิดเชิงคำนวณ (computational thinking)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module1/1-karel.html">บทที่ 1  การเขียนโปรแกรม และการคิดเชิงคำนวณ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/2-videos-karel.html">Video: การคิดเชิงคำนวณ และ control flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3-exercise.html">แบบฝึกหัด: คาเรล</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module1/3s-exercise-solution.html">เฉลยแบบฝึกหัด: คาเรล</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2-basics.html">ตัวแปร ฟังก์ชัน และสตริง</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module2/1-variable.html">บทที่ 2  ตัวแปร ฟังก์ชัน และสตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/2-videos-variable.html">Video: ตัวแปรและฟังก์ชัน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/3-exercise-variable-function.html">แบบฝึกหัด: ตัวแปร และฟังก์ชัน</a></li>
@@ -168,8 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module2/5-exercise-string.html">แบบฝึกหัด: สตริง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/5s-exercise-string.html">เฉลยแบบฝึกหัด: สตริง</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3-data_structure1.html">โครงสร้างข้อมูล (Data Structure I)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module3/01-list-dict-tuple-counter-set.html">บทที่ 3  โครงสร้างข้อมูล (Data Structure) I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/02-videos-list.html">Video: List and Data Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/03-exercise-data-structure.html">แบบฝึกหัด: โครงสร้างข้อมูล I</a></li>
@@ -180,16 +203,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module3/09-exercise-comprehension.html">โจทย์: Comprehension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module3/09s-exercise-comprehension.html">เฉลยโจทย์: Comprehension</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4-text_file.html">การประมวลผลข้อมูลจากไฟล์</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module4/1-file-regex.html">บทที่ 4  การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/2-videos-file.html">Video: file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/4-videos-regex.html">Video: Regular Expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5-exercise-file-regex.html">โจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module4/5s-exercise-file-regex.html">เฉลยโจทย์: การประมวลผลข้อมูลจากไฟล์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5-data_structure2.html">โครงสร้างข้อมูลแบบซ้อนใน</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module5/1-nested-list.html">บทที่ 5  โครงสร้างข้อมูลแบบซ้อนใน (Nested Data Structure)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/2-videos-nested-list.html">Video: Advance list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/4-videos-nested-dictionary.html">Video: Advance dictionary</a></li>
@@ -198,38 +221,40 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../module5/6-exercise-nested.html">โจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module5/6s-exercise-nested.html">เฉลยโจทย์: โครงสร้างข้อมูลซ้อนใน</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../6-oop.html">การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">บทที่ 6  การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-videos-OOP.html">Video: Object-Oriented Programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-exercise-OOP.html">โจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3s-exercise-OOP.html">เฉลยโจทย์: การเขียนโปรแกรมเชิงอ็อบเจกต์</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7-nlp.html">การประมวลผลภาษาธรรมชาติ (Natural Language Processing)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module7/1-intro-NLP.html">บทที่ 7  การประมวลผลภาษาธรรมชาติขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/2-videos-intro-NLP.html">Video: Natural Language Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3-workshop-text-processing.html">แบบฝึกหัด: การประมวลผลข้อความขั้นพื้นฐาน</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module7/3s-workshop-text-processing.html">เฉลยแบบฝึกหัดการประมวลผลข้อความ</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8-pandas.html">การจัดการข้อมูลด้วย pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module8/1-pandas.html">บทที่ 8  การจัดการและวิเคราะห์ข้อมูลแบบตาราง</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/2-example-pandas.html">ตัวอย่างการใช้ <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3-exercise-pandas.html">แบบฝึกหัด</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module8/3s-pandas-exercise-solution.html">เฉลยแบบฝึกหัด</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติ</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9-nlp-models.html">โมเดลการประมวลภาษาธรรมชาติ</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../module9/1-ml-nlp-model.html">บทที่ 9  โมเดลการประมวลผลภาษาธรรมชาติแบบสำเร็จรูป</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/4-workshop-word-cloud.html">Workshop - Word cloud</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module9/5-workshop-lda.html">Workshop - Topic modeling</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10-llm.html">โมเดลภาษาขนาดใหญ่</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../module10/1-large-language-model.html">บทที่ 10  โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2-exercise-llm.html">โจทย์: โมเดลภาษาขนาดใหญ่</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module10/2s-exercise-llm-solution.html">เฉลยโจทย์: โมเดลภาษาขนาดใหญ่</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">บรรณานุกรม</a></li>
 </ul>
 
@@ -246,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -255,14 +280,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,26 +409,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -443,10 +470,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="br-object-oriented-programming">
-<h1>บทที่ 6 </br> การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)<a class="headerlink" href="#br-object-oriented-programming" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="object-oriented-programming">
+<h1>บทที่ 6 </br> การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming)<a class="headerlink" href="#object-oriented-programming" title="Link to this heading">#</a></h1>
 <p>สมมติว่าเราต้องการเก็บข้อมูลของคำแต่ละคำที่อยู่ในย่อหน้าย่อหน้าหนึ่ง  โครงสร้างข้อมูลที่เหมาะกับข้อมูลประเภทนี้ คือ ลิสต์ที่เก็บสตริง เช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paragraph</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Inc.&#39;</span> <span class="s1">&#39;is&#39;</span> <span class="s1">&#39;an&#39;</span> <span class="s1">&#39;American&#39;</span> <span class="s1">&#39;multinational&#39;</span> <span class="s1">&#39;technology&#39;</span> <span class="s1">&#39;firm&#39;</span>  <span class="s1">&#39;headquartered&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span> <span class="s1">&#39;.&#39;</span><span class="p">]</span>
 </pre></div>
@@ -537,7 +564,7 @@ document.write(`
 </div>
 <p>อย่างแรกที่เราสังเกตได้คือ ดิกชันนารีที่เราใช้มีฟีลด์ถึง 6 ฟีลด์ การจะเขียนโปรแกรมขึ้นมาเพื่อประมวลผลวิเคราะห์ข้อมูลประเภทนี้ เราจะต้องระวังว่าดิกชันนารีแต่ละอันที่เก็บข้อมูลของคำจะต้องมีฟีลด์เท่ากันหมด และผู้ที่เขียนฟังก์ชันเพื่อประมวลผลดิกชันนารีจะต้องทราบด้วยว่าฟีลด์เหล่านี้มีอะไรบ้าง เก็บอะไรไว้บ้าง ถ้าหากมีการเปลี่ยนแปลงชื่อฟีลด์ หรือเพิ่มฟีลด์ใหม่ ฟังก์ชันที่เขียนขึ้นมาเพื่อประมวลผลดิกชันนารีจะต้องถูกแก้ไขใหม่ทั้งหมด ซึ่งอาจจะทำให้เกิดข้อผิดพลาดได้ เพราะว่าโค้ดที่ใช้ในการสร้างดิกชันนารีขึ้นมา กับโค้ดที่ใช้ในการประมวลผลอาจจะอยู่คนละที่ คนละไฟล์กัน ทำให้โค้ดที่เขียนขึ้นมานั้นยากต่อการบำรุงรักษา และยากต่อการเปลี่ยนแปลง</p>
 <section id="class-object">
-<h2>คลาส (class) และอ็อบเจกต์ (object)<a class="headerlink" href="#class-object" title="Permalink to this heading">#</a></h2>
+<h2>คลาส (class) และอ็อบเจกต์ (object)<a class="headerlink" href="#class-object" title="Link to this heading">#</a></h2>
 <p>การเขียนโปรแกรมเชิงอ็อบเจกต์ (Object-Oriented Programming: OOP) คือหลักการที่เราจะใช้ในการออกแบบโครงสร้างข้อมูลเพื่อให้สะดวกกับกรณีการใช้งานดังตัวอย่างข้างต้น หลักการของ OOP คือการออกแบบโครงสร้างข้อมูลขี้นมาเป็นพิเศษ เจาะจงกับข้อมูลที่เราต้องการจะเก็บ โครงสร้างข้อมูลนี้เรียกว่าคลาส (class)</p>
 <p>ไพทอนไม่ได้รองรับลักษณะเด่นอื่น ๆ ของการเขียนโปรแกรมเชิงอ็อบเจกต์ เช่น การกำหนดสาระสำคัญ (abstraction) การห่อหุ้ม (encapsulation) ภาวะพหุสัณฐาน
 (polymorphism) หรือการควบคุมการเข้าถึงข้อมูลที่อยู่ในอ็อบเจกต์   ผู้เขียนจึงขอเน้นเฉพาะลักษณะที่ภาษาไพทอนรองรับเท่านั้น
@@ -549,7 +576,7 @@ document.write(`
 </ol>
 </section>
 <section id="attribute">
-<h2>ลักษณะประจำ (attribute)<a class="headerlink" href="#attribute" title="Permalink to this heading">#</a></h2>
+<h2>ลักษณะประจำ (attribute)<a class="headerlink" href="#attribute" title="Link to this heading">#</a></h2>
 <p>ลักษณะประจำ เป็นตัวแปรที่เก็บซ้อนอยู่ในคลาส ใช้เก็บข้อมูลคล้ายคลึงกับตัวแปร เพื่อให้เห็นภาพมากขึ้น เราจะลองเขียนคลาสเพื่อใช้เก็บข้อมูลเกี่ยวกับคำในประโยคแทนที่ดิกชันนารี เราขอเรียกว่าโทเค็น (token) แทนที่คำว่า <em>คำ</em> เนื่องจากคำในความหมายที่อ้างอิงตามมโนทัศน์ทางภาษาศาสตร์มีคำนิยามเฉพาะซึ่งไม่เหมือนกับโทเค็น โทเค็น หมายถึง หน่วยหนึ่งหน่วยที่ผู้วิเคราะห์ใช้เป็นหน่วยที่เล็กที่สุดในการประมวลผล ตัวอย่างโค้ดในการกำหนดคลาสมีดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -596,10 +623,10 @@ document.write(`
 <p>ภาษาโปรแกรมที่เป็นภาษาเชิงอ็อบเจกต์ที่เก่าแก่กว่าภาษาไพทอน เช่น จาวา (Java) หรือ ซีพลัสพลัส (C++) จะมีการแบ่งแยกระดับการเข้าถึงตัวแปรชัดเจนว่าคลาสอื่น ๆ สามารถเข้าถึงแปรที่อยู่ในอ็อบเจกต์นี้ได้หรือไม่ (เช่น การใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">public</span></code> <code class="docutils literal notranslate"><span class="pre">private</span></code>และ <code class="docutils literal notranslate"><span class="pre">protected</span></code>) แต่ภาษาไพทอนตัวพื้นฐานแบบที่ไม่ได้ใช้ไลบรารีตัวอื่น ๆ ช่วย ไม่ได้มีการแบ่งแยกระดับการเข้าถึง ทุกคลาส ทุกโปรแกรมสามารถเข้าถึงตัวแปรในอ็อบเจกต์และในคลาสได้ นักเขียนโปรแกรมบางกลุ่มแนะนำว่าให้ใส่ <code class="docutils literal notranslate"><span class="pre">_</span></code> ไปข้างหน้าชื่อตัวแปรเพื่อเป็นการบ่งบอกว่าโปรแกรมอื่น ๆ คลาสอื่น ๆ ไม่ควรจะเข้าถึงตัวแปรตัวนี้โดยตรง แต่ว่าภาษาไพทอนไม่มีการบังคับใช้กฎนี้แต่อย่างใด อย่างมากที่สุด คือ ไอดีอี อาจจะมีการเตือนผู้เขียนโปรแกรมอยู่บ้าง</p>
 </section>
 <section id="method">
-<h2>เมท็อด (method)<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h2>
+<h2>เมท็อด (method)<a class="headerlink" href="#method" title="Link to this heading">#</a></h2>
 <p>ก่อนถึงบทนี้เราได้มีการใช้เมท็อดโดยการใช้ <code class="docutils literal notranslate"><span class="pre">.</span></code> มาหลายครั้งแล้ว เพราะว่าทั้งสตริง ทั้งลิสต์ ทั้งดิกชันนารีที่ใช้ในการเก็บข้อมูลเพื่อเขียนโปรแกรมที่ผ่านมาต่างก็เป็นอ็อบเจกต์ทั้งหมด เมท็อดที่เราได้ใช้ล้วนแต่เป็นฟังกืชันที่ใช้ประมวลผลข้อมูลที่อยู่ในอ็อบเจกต์ เพราะฉะนั้นเราจึงถือได้ว่า เมท็อดเป็นฟังก์ชันที่เป็นลักษณะเฉพาะเจาะจงของคลาส เช่น ลิสต์มีเมท็อดที่ชื่อว่า <code class="docutils literal notranslate"><span class="pre">append</span></code> และ <code class="docutils literal notranslate"><span class="pre">pop</span></code> ซึ่งเป็นเมท็อดที่ใช้ในการปฏิสัมพันธ์กับข้อมูลที่อยู่ในอ็อบเจกต์ที่เป็นลิสต์ ดิกชันนารี หรือเซตไม่มีเมท็อดเหล่านี้ เพราะว่าเป็นคนละคลาสกัน</p>
 <section id="id1">
-<h3>เมท็อดของคลาส<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>เมท็อดของคลาส<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>ในการกำหนดคลาส เราสามารถกำหนดเมท็อดให้คลาสได้ด้วย โดยการใช้คีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">def</span></code> ตามด้วยชื่อเมท็อด <code class="docutils literal notranslate"><span class="pre">()</span></code> และ <code class="docutils literal notranslate"><span class="pre">:</span></code> และอาร์กิวเมนต์แรกจะต้องเป็นคีย์เวิร์ด <code class="docutils literal notranslate"><span class="pre">self</span></code> ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -631,7 +658,7 @@ document.write(`
 <p>สังเกตว่าเวลาเรียกใช้เมท็อด <code class="docutils literal notranslate"><span class="pre">.to_plural_form</span></code> เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไป เวลาเราเรียกใช้เมท็อด ไพทอนทราบเองโดยอัตโนมัติว่าเป็นการใช้เมท็อดของอ็อบเจกต์ที่อยู่ใน <code class="docutils literal notranslate"><span class="pre">word</span></code>  และจะส่งอ็อบเจกต์ที่เรียกเมท็อดนี้เข้าไปในอาร์กิวเมนต์แรกของเมท็อด ซึ่งเป็นเหตุผลที่ทำให้เราไม่ต้องใส่ <code class="docutils literal notranslate"><span class="pre">self</span></code> ลงไปในอาร์กิวเมนต์ของเมท็อดอีก</p>
 </section>
 <section id="constructor">
-<h3>ตัวสร้าง (Constructor)<a class="headerlink" href="#constructor" title="Permalink to this heading">#</a></h3>
+<h3>ตัวสร้าง (Constructor)<a class="headerlink" href="#constructor" title="Link to this heading">#</a></h3>
 <p>ตัวสร้าง (constructor) คือเมท็อดที่ถูกเรียกทำงานทันทีที่อ็อบเจกต์ถูกสร้างขึ้นมาในคลาสโดยการเรียกชื่อคลาสตามด้วย <code class="docutils literal notranslate"><span class="pre">()</span></code> ในภาษาไพทอน เมท็อดตัวสร้างจะต้องมีชื่อเป็น <code class="docutils literal notranslate"><span class="pre">__init__</span></code> ไม่สามารถเป็นชื่ออื่นได้ แต่ว่าเราสามารถกำหนดอาร์กิวเมนต์เองได้ ตัวอย่างเช่น</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Token</span><span class="p">:</span>
     <span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -676,7 +703,7 @@ document.write(`
 </section>
 </section>
 <section id="inheritance">
-<h2>สิ่งสืบทอด (inheritance)<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h2>
+<h2>สิ่งสืบทอด (inheritance)<a class="headerlink" href="#inheritance" title="Link to this heading">#</a></h2>
 <p>ตอนนี้ทุกคนอาจจะยังไม่ได้เห็นประโยชน์ของการเขียนโปรแกรมเชิงอ็อบเจกต์เท่าไรนัก เพราะว่าเราสามารถใช้ดิกชันนารีแทนคลาสได้ และเขียนโปรแกรมอย่างระมัดระวังไม่ให้เกิดการเข้าถึงข้อมูลผ่านคีย์ที่ไม่ได้มีอยู่ในดิกชันนารี และเราสามารถเขียนฟังก์ชันแทนการเขียนเมท็อดได้ ถ้าหากเราจัดระเบียบโค้ดดี ๆ ก็ทำให้เราหลีกเลี่ยงข้อผิดพลาดในการเขียนโปรแกรมได้</p>
 <p>การใช้สิ่งสืบทอด (inheritance) เป็นรูปแบบการใช้งาน (feature) ที่ทำให้การเขียนโปรแกรมสะดวกขึ้น สิ่งสืบทอดเป็นการรับทอดลักษณะประจำและเมท็อดจากคลาสหนึ่งไปยังอีกคลาสหนึ่ง  ซึ่งทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ คลาสที่เป็นซับคลาส (subclass) รับทอด (inherit) เอาลักษณะประจำ และเมท็อดจากคลาสที่เป็นซูเปอร์คลาส (superclass) และซับคลาสสามารถลบล้าง (override) เมท็อดที่สืบทอดมาให้เป็นไปตามต้องการได้ด้วย ดังนั้นเราพูดได้ว่าซับคลาสทำทุกอย่างที่ซูเปอร์คลาสทำได้ และอาจจะมีเมท็อดหรือลักษณะประจำอื่น ๆ เพิ่มเติมขึ้นมาได้อีกด้วย</p>
 <p>ตัวอย่าง เช่น คลาสที่ชื่อว่าเคาน์เตอร์ (<code class="docutils literal notranslate"><span class="pre">Counter</span></code>) ที่มากับไพทอน เป็นซับคลาสของคลาสที่ชื่อว่าดิกชันนารี (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) หมายความว่าเคาน์เตอร์มีตัวแปรและเมท็อดของดิกชันนารีทั้งหมด แต่สามารถปรับแก้เมท็อดที่สืบทอดมา และเพิ่มเมท็อดอื่น ๆ เพิ่มเติมเข้าไปได้อีกด้วย เพราะฉะนั้นหากเราทราบแล้วว่า <code class="docutils literal notranslate"><span class="pre">Counter</span></code> เป็นซับคลาสของ <code class="docutils literal notranslate"><span class="pre">dict</span></code> เราคิดไปก่อนได้เลยว่า <code class="docutils literal notranslate"><span class="pre">Counter</span></code> จะต้องมีเมท็อด <code class="docutils literal notranslate"><span class="pre">items</span></code> <code class="docutils literal notranslate"><span class="pre">keys</span></code> <code class="docutils literal notranslate"><span class="pre">values</span></code> <code class="docutils literal notranslate"><span class="pre">update</span></code> <code class="docutils literal notranslate"><span class="pre">clear</span></code> และเมท็อดอื่น ๆ ที่ <code class="docutils literal notranslate"><span class="pre">dict</span></code> มี เพราะว่า <code class="docutils literal notranslate"><span class="pre">Counter</span></code> รับทอดเมท็อดเหล่านี้มาจากซูเปอร์คลาสซึ่งก็คือ <code class="docutils literal notranslate"><span class="pre">dict</span></code> นอกจากนั้นแล้วเนื่องจาก <code class="docutils literal notranslate"><span class="pre">Counter</span></code> เป็นซับคลาสจึงอาจจะมีเมท็อดพิเศษเพิ่มเข้ามาอย่าง <code class="docutils literal notranslate"><span class="pre">most_common</span></code></p>
@@ -701,7 +728,7 @@ document.write(`
 <p>ในมุมมองของนักเขียนโปรแกรม การใช้สิ่งสืบทอดทำให้เราสามารถใช้โค้ดที่เขียนไว้แล้วมาใช้ใหม่ได้ และปรับแก้เฉพาะส่วนที่ต้องการเท่านั้น</p>
 </section>
 <section id="id2">
-<h2>ตัวอย่างการใช้สิ่งสืบทอด<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>ตัวอย่างการใช้สิ่งสืบทอด<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>การเปลี่ยนให้เป็นโทเค็น เป็นกระบวนการแรกในการประมวลผลภาษาธรรมชาติ คือการตัดสตริงของข้อมูลภาษาให้เป็นหน่วยที่ชื่อว่าโทเค็น ซึ่งแปลว่าหน่วยที่เหมาะในการประมวลผล โทเค็นส่วนใหญ่แล้วจะคล้ายคลึงกับคำเป็นส่วนใหญ่ โทเค็นจะเป็นอะไรนั้นขึ้นอยู่กับผู้ที่วิเคราะห์และประมวลผลข้อความที่จะปรับให้โทเค็นเป็นลักษณะอย่างไร</p>
 <p>ตัวอย่างเช่น หากเราต้องการสร้างตัวตัดคำภาษาไทย โดยการใช้รายการคำศัพท์เป็นเกณฑ์ในการตัด และถ้าหากว่าเราได้รับประโยคที่เราเคยตัดคำมาแล้ว ให้คืนค่าเป็นผลลัพท์เดิม เพื่อความรวดเร็ว เราอาจจะออกแบบคลาส <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer&quot;</span></code> ขึ้นมาดังนี้</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ThaiTokenizer</span><span class="p">:</span>
@@ -756,7 +783,7 @@ document.write(`
 <code class="docutils literal notranslate"><span class="pre">MedicalThaiTokenizer</span></code> หรือ <code class="docutils literal notranslate"><span class="pre">ThaiTokenizer</span></code> ได้</p>
 </section>
 <section id="id3">
-<h2>สรุป<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h2>สรุป<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>ผู้เขียนโปรแกรมต้องตัดสินใจออกแบบว่า OOP นั้นเหมาะสมกับโจทย์หรือไม่ เพราะไพทอน ไม่ได้บังคับให้ใช้ OOP ในทุกสถานการณ์ แต่ก็มีคุณสมบัติหลักๆ ของ OOP อยู่ ข้อดีของการใช้ OOP คือช่วยให้โค้ดมีความสะอาด และง่ายต่อการอ่าน การแบ่งโปรแกรมเป็นส่วนย่อย ๆ ช่วยให้สามารถจัดการกับความซับซ้อนของโปรแกรมได้ดีขึ้น นอกจากนี้ยังช่วยในเรื่องของการนำโค้ดไปใช้ซ้ำ และการปรับเปลี่ยนโค้ดในอนาคตได้ง่ายขึ้น เพราะการแก้ไขหรือต่อเติมเมท็อดในคลาสหนึ่ง ๆ ไม่จำเป็นต้องกระทบกับส่วนอื่น ๆ ของโปรแกรม</p>
 <p>อย่างไรก็ตาม ข้อเสียของการใช้ OOP คืออาจทำให้โค้ดมีความซับซ้อนเกินความจำเป็นในบางสถานการณ์ การออกแบบที่ไม่ดีอาจนำไปสู่โค้ดที่ยุ่งเหยิง และการอ้างอิงที่ซับซ้อน ซึ่งสามารถทำให้การบำรุงรักษาโค้ดเป็นเรื่องยาก</p>
 <p>การตัดสินใจใช้ OOP ในภาษาไพทอน ควรขึ้นอยู่กับลักษณะของโปรเจกต์และทีมพัฒนา หากโปรเจกต์ต้องอาศัยความยืดหยุ่นในการจัดการกับออบเจกต์และข้อมูล หรือต้องการทำงานร่วมกับโค้ดที่มีอยู่แล้วซึ่งออกแบบมาในแบบ OOP การใช้แนวทางนี้อาจเป็นทางเลือกที่ดี แต่สำหรับโปรเจกต์ที่เรียบง่ายหรือทีมที่ไม่คุ้นเคยกับ OOP อาจพิจารณาใช้วิธีการเขียนโปรแกรมแบบอื่นที่ไพทอนรองรับได้เช่นกัน</p>
@@ -788,11 +815,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../6-oop.html"
@@ -812,10 +838,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -823,6 +846,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -861,6 +885,7 @@ By Attapol Thamrongrattanarit
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -887,8 +912,8 @@ By Attapol Thamrongrattanarit
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
