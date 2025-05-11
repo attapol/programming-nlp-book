@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
@@ -555,16 +555,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /Users/te/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -656,15 +647,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /Users/te/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -703,14 +685,15 @@ document.write(`
 </section>
 <section id="id10">
 <h2>แบบฝึกหัดการวิเคราะห์ความถี่ของคำ<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
-<p>เขียนฟังก์ชันที่นับจำนวนคำภาษาไทยจากข้อความที่เก็บอยู่ในสตริง <code class="docutils literal notranslate"><span class="pre">news_article</span></code> โดยที่ต้องไม่นับ เครื่องหมายวรรคตอน ตัวเลข และคำหยุด (ถ้าหากไม่ได้ใช้แบบฝึกหัดนี้บน Google Colab ให้ใช้สตริงอะไรก็ได้ที่ตั้งค่าให้เป็นบทความที่มีความยาวตั้งแต่ 1000 คำขึ้นไป)</p>
+<p>เขียนฟังก์ชันที่นับจำนวนคำภาษาไทยจากข้อความที่เก็บอยู่ในสตริง <code class="docutils literal notranslate"><span class="pre">news_article</span></code>
+โดยให้ใช้ข่าวที่มาจาก <code class="docutils literal notranslate"><span class="pre">https://thestandard.co/us-prepares-to-offer-billionaire-tax/</span></code> หรือดาวน์โหลดจาก <code class="docutils literal notranslate"><span class="pre">https://github.com/attapol/programming-nlp-book/tree/main/module7/data/sample-news-article.txt</span></code> ได้โดยตรง หรือใช้ข้อความจากแหล่งอื่นที่ความยาวเกิน 1000 คำทดแทนได้</p>
 <ol class="arabic simple">
 <li><p>สตริงที่ให้มีขนาดคลังศัพท์ (จำนวนคำแบบไม่นับคำซ้ำ) อยู่ที่เท่าไร</p></li>
-<li><p>คำใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา</p></li>
-<li><p>ไบแกรมใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา</p></li>
+<li><p>คำใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา โดยที่ไม่ต้องกรองเอาคำหยุดออก</p></li>
+<li><p>ไบแกรมใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา โดยที่ไม่ต้องกรองเอาคำหยุดออก</p></li>
+<li><p>คำใดพบบ่อยที่สุด 10 อันดับในสตริงที่ให้มา โดยที่กรองเอาคำหยุดออก และเปรียบเทียบผล</p></li>
 <li><p>สร้างเมฆคำจากคำที่พบบ่อยที่สุด 40 อันดับ ให้ปรับขนาดของคำให้เท่ากับความถี่ของคำนั้นๆ ไลบรารีเมฆคำไม่มีฟอนต์ภาษาไทยมาให้ เพราะฉะนั้นเราต้องดาวน์โหลดฟอนต์ภาษาไทยมาวางที่โฟลเดอร์เดียวกัน และตั้งค่า <code class="docutils literal notranslate"><span class="pre">font_path=</span></code> ให้ชี้ไปยังไฟล์ที่เก็บฟอนต์ไทย</p></li>
 </ol>
-<p>สมมติว่าสตริง <code class="docutils literal notranslate"><span class="pre">news_article</span></code> เก็บข้อมูลข่าวจาก <a class="reference external" href="https://thestandard.co/us-prepares-to-offer-billionaire-tax/">https://thestandard.co/us-prepares-to-offer-billionaire-tax/</a></p>
 </section>
 </section>
 

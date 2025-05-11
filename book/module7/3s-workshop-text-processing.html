@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/bookstyle.css?v=50ee47dc" />
@@ -488,38 +488,44 @@ document.write(`
 <h1>เฉลยแบบฝึกหัดการประมวลผลข้อความ<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">pythainlp</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythainlp</span>
+<span class="kn">import</span> <span class="nn">attacut</span>
+<span class="kn">import</span> <span class="nn">re</span>
 
-<span class="k">def</span> <span class="nf">get_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">thai_stopwords</span><span class="p">())</span>
-    <span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[^ก-์0-9a-zA-Z]&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
-        <span class="n">token_list</span> <span class="o">=</span> <span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">token_list</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">patt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-                <span class="n">filtered_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">filtered_tokens</span>
-
-<span class="n">tokens</span> <span class="o">=</span> <span class="n">get_tokens</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/sample-news-article.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">pythainlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;attacut&#39;</span><span class="p">)</span>
+<span class="n">patt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[ก-์a-zA-Z]+&#39;</span><span class="p">)</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">patt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of unique tokens:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of unique tokens: 293
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
 <span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;มหาเศรษฐี&#39;, 25),
- (&#39;ภาษี&#39;, 10),
- (&#39;เก็บภาษี&#39;, 8),
- (&#39;รถยนต์&#39;, 8),
- (&#39;รัฐบาล&#39;, 7),
- (&#39;บริษัท&#39;, 6),
- (&#39;Tesla&#39;, 6),
- (&#39;ขาย&#39;, 6),
- (&#39;สหรัฐฯ&#39;, 5),
- (&#39;ไฟฟ้า&#39;, 5)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;ที่&#39;, 36),
+ (&#39;ได้&#39;, 28),
+ (&#39;การ&#39;, 27),
+ (&#39;ภาษี&#39;, 25),
+ (&#39;มหาเศรษฐี&#39;, 25),
+ (&#39;จาก&#39;, 23),
+ (&#39;จะ&#39;, 20),
+ (&#39;ใน&#39;, 17),
+ (&#39;กับ&#39;, 14),
+ (&#39;เหล่า&#39;, 14)]
 </pre></div>
 </div>
 </div>
@@ -534,16 +540,40 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[((&#39;เก็บภาษี&#39;, &#39;มหาเศรษฐี&#39;), 5),
- ((&#39;รถยนต์&#39;, &#39;ไฟฟ้า&#39;), 5),
- ((&#39;อี&#39;, &#39;ลอน&#39;), 3),
- ((&#39;ลอน&#39;, &#39;มัสก์&#39;), 3),
- ((&#39;ภาษี&#39;, &#39;มหาเศรษฐี&#39;), 3),
- ((&#39;ขาย&#39;, &#39;เครดิต&#39;), 2),
- ((&#39;ผู้ผลิต&#39;, &#39;รถยนต์&#39;), 2),
- ((&#39;ล้าน&#39;, &#39;ดอลลาร์&#39;), 2),
- ((&#39;มหาเศรษฐี&#39;, &#39;เงิน&#39;), 2),
- ((&#39;ไม่ต้อง&#39;, &#39;เสียภาษี&#39;), 2)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[((&#39;เก็บ&#39;, &#39;ภาษี&#39;), 8),
+ ((&#39;รถ&#39;, &#39;ยนต์&#39;), 8),
+ ((&#39;ภาษี&#39;, &#39;มหาเศรษฐี&#39;), 7),
+ ((&#39;เหล่า&#39;, &#39;มหาเศรษฐี&#39;), 7),
+ ((&#39;การ&#39;, &#39;เก็บ&#39;), 5),
+ ((&#39;ที่&#39;, &#39;ได้&#39;), 5),
+ ((&#39;ยนต์&#39;, &#39;ไฟฟ้า&#39;), 5),
+ ((&#39;มหาเศรษฐี&#39;, &#39;จะ&#39;), 5),
+ ((&#39;ได้&#39;, &#39;รับ&#39;), 4),
+ ((&#39;ของ&#39;, &#39;รัฐบาล&#39;), 4)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stopset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">pythainlp</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">thai_stopwords</span><span class="p">())</span>
+<span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopset</span><span class="p">]</span>
+<span class="n">filtered_token_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">filtered_tokens</span><span class="p">)</span>
+<span class="n">filtered_token_count</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;ภาษี&#39;, 25),
+ (&#39;มหาเศรษฐี&#39;, 25),
+ (&#39;เงิน&#39;, 11),
+ (&#39;รถ&#39;, 9),
+ (&#39;ยนต์&#39;, 8),
+ (&#39;บริษัท&#39;, 7),
+ (&#39;รัฐบาล&#39;, 7),
+ (&#39;ผลิต&#39;, 7),
+ (&#39;วิธี&#39;, 7),
+ (&#39;Tesla&#39;, 6)]
 </pre></div>
 </div>
 </div>
@@ -575,7 +605,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5ad225987625d457febe9babad1b84f5db6d0c7be156c2b974f8cf12222fc31c.png" src="../../_images/5ad225987625d457febe9babad1b84f5db6d0c7be156c2b974f8cf12222fc31c.png" />
+<img alt="../../_images/8e111f55ad475686f7aacdd740d4640f290e918b8489123de6fc3d0fdfdc9a32.png" src="../../_images/8e111f55ad475686f7aacdd740d4640f290e918b8489123de6fc3d0fdfdc9a32.png" />
 </div>
 </div>
 </section>
