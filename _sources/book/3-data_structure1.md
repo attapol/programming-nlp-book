@@ -1,3 +1,3 @@
-# โครงสร้างข้อมูล (Data Structure I)
+# โครงสร้างข้อมูล I
 ```{tableofcontents}
 ```
