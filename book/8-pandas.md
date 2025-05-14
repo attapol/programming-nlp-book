@@ -1,6 +1,6 @@
-# การจัดการข้อมูลด้วย pandas
+# การจัดการและวิเคราะห์ข้อมูลแบบตาราง
 
-*Under construction*
+
 ```{tableofcontents}
 ```
 

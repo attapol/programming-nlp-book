@@ -1,4 +1,4 @@
-# การคิดเชิงคำนวณ (computational thinking)
+# การเขียนโปรแกรม และการคิดเชิงคำนวณ
 
 ```{tableofcontents}
 ```
